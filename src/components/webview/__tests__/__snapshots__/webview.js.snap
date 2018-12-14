@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WebView Component basic render 1`] = `
+<WebView
+  automaticallyAdjustContentInsets={true}
+  decelerationRate="normal"
+  domStorageEnabled={true}
+  javaScriptEnabled={true}
+  scalesPageToFit={true}
+  source={
+    Object {
+      "uri": "https://www.tuya.com",
+    }
+  }
+  startInLoadingState={true}
+  style={
+    Object {
+      "flex": 1,
+      "height": 1270,
+    }
+  }
+/>
+`;

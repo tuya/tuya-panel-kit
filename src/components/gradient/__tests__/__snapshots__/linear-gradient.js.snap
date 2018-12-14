@@ -1,0 +1,228 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LinearGradient Component LinearGradient render children 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "bottom": 0,
+        "flex": 1,
+        "height": 1334,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "width": 750,
+      },
+      null,
+    ]
+  }
+>
+  <RNSVGSvgView
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        undefined,
+        false,
+        Object {
+          "flex": 0,
+          "height": 1334,
+          "width": 750,
+        },
+      ]
+    }
+  >
+    <RNSVGDefs>
+      <RNSVGLinearGradient
+        gradient={
+          Array [
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+          ]
+        }
+        gradientTransform={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+        gradientUnits={0}
+        name="Gradient"
+        x1="0%"
+        x2="0%"
+        y1="0%"
+        y2="100%"
+      />
+    </RNSVGDefs>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      fill="url(#Gradient)"
+    >
+      111111111111111
+    </Text>
+  </RNSVGSvgView>
+</View>
+`;
+
+exports[`LinearGradient Component LinearGradient setSource 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "bottom": 0,
+        "flex": 1,
+        "height": 1334,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "width": 750,
+      },
+      null,
+    ]
+  }
+>
+  <RNSVGSvgView
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        undefined,
+        false,
+        Object {
+          "flex": 0,
+          "height": 1334,
+          "width": 750,
+        },
+      ]
+    }
+  >
+    <RNSVGDefs>
+      <RNSVGLinearGradient
+        gradient={
+          Array [
+            1,
+            0.49411764705882355,
+            0.2196078431372549,
+            1,
+            1,
+            0.3843137254901961,
+            0.2980392156862745,
+            1,
+            0.02,
+            0.9,
+          ]
+        }
+        gradientTransform={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+        gradientUnits={0}
+        name="Gradient"
+        x1="0%"
+        x2="0%"
+        y1="0%"
+        y2="100%"
+      />
+    </RNSVGDefs>
+  </RNSVGSvgView>
+</View>
+`;
+
+exports[`LinearGradient Component basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "bottom": 0,
+        "flex": 1,
+        "height": 1334,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "width": 750,
+      },
+      null,
+    ]
+  }
+>
+  <RNSVGSvgView
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        undefined,
+        false,
+        Object {
+          "flex": 0,
+          "height": 1334,
+          "width": 750,
+        },
+      ]
+    }
+  >
+    <RNSVGDefs>
+      <RNSVGLinearGradient
+        gradient={
+          Array [
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+          ]
+        }
+        gradientTransform={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+        gradientUnits={0}
+        name="Gradient"
+        x1="0%"
+        x2="0%"
+        y1="0%"
+        y2="100%"
+      />
+    </RNSVGDefs>
+  </RNSVGSvgView>
+</View>
+`;

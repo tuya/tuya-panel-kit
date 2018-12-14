@@ -1,0 +1,264 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToastView Component basic render 1`] = `
+<View
+  pointerEvents="none"
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "bottom": 0,
+        "flex": 1,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "width": 750,
+      },
+      Object {
+        "justifyContent": "flex-end",
+      },
+    ]
+  }
+>
+  <View
+    collapsable={undefined}
+    style={
+      Object {
+        "backgroundColor": "rgba(0, 0, 0, 0.6)",
+        "borderRadius": 20,
+        "marginBottom": 64,
+        "opacity": 0,
+        "paddingBottom": 10,
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "paddingTop": 10,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "fontSize": 16,
+        }
+      }
+    >
+      I'm Iron man
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`ToastView Component should render invisible 1`] = `
+<View
+  pointerEvents="none"
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "bottom": 0,
+        "flex": 1,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "width": 750,
+      },
+      Object {
+        "justifyContent": "flex-end",
+      },
+    ]
+  }
+>
+  <View
+    collapsable={undefined}
+    style={
+      Object {
+        "backgroundColor": "rgba(0, 0, 0, 0.6)",
+        "borderRadius": 20,
+        "marginBottom": 64,
+        "opacity": 0,
+        "paddingBottom": 10,
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "paddingTop": 10,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "fontSize": 16,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`ToastView Component should render position right 1`] = `
+<View
+  pointerEvents="none"
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "bottom": 0,
+        "flex": 1,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "width": 750,
+      },
+      Object {
+        "justifyContent": "flex-start",
+      },
+    ]
+  }
+>
+  <View
+    collapsable={undefined}
+    style={
+      Object {
+        "backgroundColor": "rgba(0, 0, 0, 0.6)",
+        "borderRadius": 20,
+        "marginBottom": 64,
+        "opacity": 0,
+        "paddingBottom": 10,
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "paddingTop": 10,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "fontSize": 16,
+        }
+      }
+    >
+      I'm Iron man
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`ToastView Component should render position right 2`] = `
+<View
+  pointerEvents="none"
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "bottom": 0,
+        "flex": 1,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "width": 750,
+      },
+      Object {
+        "justifyContent": "flex-end",
+      },
+    ]
+  }
+>
+  <View
+    collapsable={undefined}
+    style={
+      Object {
+        "backgroundColor": "rgba(0, 0, 0, 0.6)",
+        "borderRadius": 20,
+        "marginBottom": 64,
+        "opacity": 0,
+        "paddingBottom": 10,
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "paddingTop": 10,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "fontSize": 16,
+        }
+      }
+    >
+      I'm Iron man
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`ToastView Component should render position right 3`] = `
+<View
+  pointerEvents="none"
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "bottom": 0,
+        "flex": 1,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "width": 750,
+      },
+      Object {
+        "justifyContent": "center",
+      },
+    ]
+  }
+>
+  <View
+    collapsable={undefined}
+    style={
+      Object {
+        "backgroundColor": "rgba(0, 0, 0, 0.6)",
+        "borderRadius": 20,
+        "marginBottom": 64,
+        "opacity": 0,
+        "paddingBottom": 10,
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "paddingTop": 10,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "fontSize": 16,
+        }
+      }
+    >
+      I'm Iron man
+    </Text>
+  </View>
+</View>
+`;

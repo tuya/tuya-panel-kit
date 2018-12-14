@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SwitchButton Component SwitchButton render width viewBox 1`] = `
+<View
+  style={
+    Array [
+      undefined,
+      false,
+    ]
+  }
+>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    collapsable={undefined}
+    hasTVPreferredFocus={undefined}
+    hitSlop={undefined}
+    isTVSelectable={true}
+    nativeID={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#44DB5E",
+        "borderColor": "#44DB5E",
+        "borderRadius": 16,
+        "borderWidth": 1.5,
+        "height": 32,
+        "justifyContent": "center",
+        "opacity": 1,
+        "width": 52,
+      }
+    }
+    testID={undefined}
+    tvParallaxProperties={undefined}
+  >
+    <View
+      collapsable={undefined}
+      style={
+        Object {
+          "backgroundColor": "#E5E5E5E5",
+          "borderRadius": 14,
+          "height": 28,
+          "left": 22,
+          "position": "absolute",
+          "width": 28,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`SwitchButton Component basic render 1`] = `
+<View
+  style={
+    Array [
+      undefined,
+      false,
+    ]
+  }
+>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    collapsable={undefined}
+    hasTVPreferredFocus={undefined}
+    hitSlop={undefined}
+    isTVSelectable={true}
+    nativeID={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#44DB5E",
+        "borderColor": "#44DB5E",
+        "borderRadius": 16,
+        "borderWidth": 1.5,
+        "height": 32,
+        "justifyContent": "center",
+        "opacity": 1,
+        "width": 52,
+      }
+    }
+    testID={undefined}
+    tvParallaxProperties={undefined}
+  >
+    <View
+      collapsable={undefined}
+      style={
+        Object {
+          "backgroundColor": "#E5E5E5E5",
+          "borderRadius": 14,
+          "height": 28,
+          "left": 22,
+          "position": "absolute",
+          "width": 28,
+        }
+      }
+    />
+  </View>
+</View>
+`;

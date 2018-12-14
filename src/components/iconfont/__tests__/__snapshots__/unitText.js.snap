@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UnitText Component basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "justifyContent": "center",
+      },
+      Object {
+        "flexDirection": "row",
+      },
+      null,
+    ]
+  }
+>
+  <View>
+    <ARTSurfaceView
+      style={
+        Array [
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            Array [
+              false,
+            ],
+            Object {},
+          ],
+          Object {
+            "height": 96,
+            "width": 96,
+          },
+        ]
+      }
+    >
+      <ARTShape
+        d={
+          Array [
+            0,
+            464.258,
+            650.506,
+            2,
+            359.81399999999996,
+            573.7099999999999,
+            2,
+            359.81399999999996,
+            684.2979999999999,
+            2,
+            464.258,
+            761.0939999999999,
+            2,
+            568.702,
+            761.0939999999999,
+            2,
+            568.702,
+            32.035999999999945,
+            2,
+            464.258,
+            32.035999999999945,
+            1,
+          ]
+        }
+        fill={
+          Array [
+            0,
+            1,
+            1,
+            1,
+            1,
+          ]
+        }
+        opacity={1}
+        stroke={
+          Array [
+            1,
+            1,
+            1,
+            1,
+          ]
+        }
+        strokeCap={1}
+        strokeDash={
+          Array [
+            0,
+            0,
+          ]
+        }
+        strokeJoin={1}
+        strokeWidth={1}
+        transform={
+          Array [
+            0.09375,
+            0,
+            0,
+            -0.09375,
+            0,
+            84,
+          ]
+        }
+      />
+    </ARTSurfaceView>
+  </View>
+</View>
+`;
+
+exports[`UnitText Component basic render 2`] = `null`;

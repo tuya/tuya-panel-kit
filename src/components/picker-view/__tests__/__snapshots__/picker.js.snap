@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Picker Component basic render 1`] = `
+<View
+  style={Object {}}
+>
+  <RCTPicker
+    items={Array []}
+    onChange={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    selectedIndex={0}
+    style={
+      Array [
+        Object {
+          "height": 216,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Picker Component basic render 2`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 216,
+      },
+      undefined,
+    ]
+  }
+>
+  <RCTPicker
+    items={Array []}
+    onChange={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    selectedIndex={0}
+    style={
+      Array [
+        Object {
+          "height": 216,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Picker Component should picker android item render 1`] = `null`;

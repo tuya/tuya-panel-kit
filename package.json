@@ -1,0 +1,78 @@
+{
+  "name": "tuya-panel-kit",
+  "version": "1.0.0",
+  "description": "a functional component library for developing tuya device panels!",
+  "keywords": ["tuya", "react-native", "panel"],
+  "main": "src/index.js",
+  "license": "MIT",
+  "author": "",
+  "scripts": {
+    "test": "jest -u",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "release:major": "./node_modules/.bin/changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags",
+    "release:minor": "./node_modules/.bin/changelog -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags",
+    "release:patch": "./node_modules/.bin/changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags"
+  },
+  "peerDependencies": {
+    "react": "16.0.0",
+    "react-native": "0.51.0"
+  },
+  "dependencies": {
+    "color": "^3.1.0",
+    "events": "^1.1.1",
+    "prop-types": "^15.6.1",
+    "react-addons-shallow-compare": "^15.6.2",
+    "react-native-deprecated-custom-components": "git+https://github.com/facebookarchive/react-native-custom-components.git#83c4fa19ccc9b6cd48ff80e457c493332819b486",
+    "react-native-svg": "5.5.1",
+    "style-equal": "^1.0.0"
+  },
+  "devDependencies": {
+    "react": "16.0.0",
+    "react-native": "0.51.0",
+    "babel-eslint": "^8.2.1",
+    "babel-jest": "^22.1.0",
+    "babel-preset-react-native": "^4.0.0",
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-import-resolver-react-native": "^0.1.0",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.5.1",
+    "eslint-plugin-react-native": "^3.2.1",
+    "generate-changelog": "^1.7.1",
+    "jest": "^22.4.2",
+    "prop-types": "^15.6.1",
+    "react-docgen": "^2.21.0",
+    "react-test-renderer": "^16.6.3",
+    "uglify-es": "^3.3.9"
+  },
+  "jest": {
+    "preset": "react-native",
+    "verbose": true,
+    "moduleNameMapper": {
+      "^image![a-zA-Z0-9$_-]+$": "GlobalImageStub",
+      "^[@./a-zA-Z0-9$_-]+\\.(png|gif)$": "RelativeImageStub"
+    },
+    "coverageDirectory": "./coverage/",
+    "collectCoverageFrom": [
+      "src/components/**/*.js",
+      "!src/components/layout/+(navigator-layout|full-view|offline-view)/*",
+      "!src/components/picker-view/picker/*",
+      "!src/components/color-picker/components/gesture.js",
+      "src/utils/**/*.js",
+      "!src/utils/color.js",
+      "!src/index.js",
+      "!src/helpers/*.js"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/example/node_modules",
+      "<rootDir>/demos"
+    ],
+    "collectCoverage": true,
+    "globals": {
+      "__DEV__": true
+    }
+  }
+}
