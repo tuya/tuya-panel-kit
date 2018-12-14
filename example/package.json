@@ -3,7 +3,7 @@
   "license": "ISC",
   "author": "",
   "pid": [],
-  "uiid": "0000000357",
+  "uiid": "",
   "version": "0.0.1",
   "scripts": {
     "lint": "git status -s | awk '{print $2}' | grep '.js$' | xargs ./node_modules/eslint/bin/eslint.js --ignore-path .eslintignore",
