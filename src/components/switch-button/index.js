@@ -30,7 +30,7 @@ class SwitchButton extends React.PureComponent {
   };
   constructor(props) {
     super(props);
-    this.value = props.value || props.defaultValue;
+    this.value = ('value' in props) ? props.value : props.defaultValue;
     this.CGSize = { width: 52, height: 32, activeSize: 28, margin: 0.5, ...props.size };
     const left = this.calcLeft(this.value);
     this.state = {
@@ -38,7 +38,7 @@ class SwitchButton extends React.PureComponent {
     };
   }
   componentWillReceiveProps(nextProps) {
-    if (this.value === nextProps.value) return;
+    if (!('value' in nextProps) || this.value === nextProps.value) return;
     this.valueChange(nextProps.value);
   }
 
