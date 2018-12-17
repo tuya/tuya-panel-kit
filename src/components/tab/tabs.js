@@ -10,12 +10,11 @@ import {
 
 import TabContent from './tabContent';
 import TabBar from './tabNav';
-import TabPane from './tabPanel';
+import TabPane from './tabPane';
 import Utils from './utils';
 
 class Tabs extends React.Component {
   static TabPane = TabPane;
-  static TabBar = TabBar;
   static defaultProps = {
     swipeable: true,
     animated: true,
