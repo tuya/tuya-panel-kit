@@ -1387,7 +1387,7 @@ exports[`DatePicker Component should render picker which locale is cn 1`] = `
       onChange={[Function]}
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
-      selectedIndex={13}
+      selectedIndex={17}
       style={
         Array [
           Object {
@@ -1854,7 +1854,7 @@ exports[`DatePicker Component should render picker which mode is datetime 1`] = 
       onChange={[Function]}
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
-      selectedIndex={13}
+      selectedIndex={17}
       style={
         Array [
           Object {
@@ -2326,7 +2326,7 @@ exports[`DatePicker Component should render picker which mode is datetime 1`] = 
       onChange={[Function]}
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
-      selectedIndex={17}
+      selectedIndex={10}
       style={
         Array [
           Object {

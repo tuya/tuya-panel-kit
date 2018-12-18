@@ -3,13 +3,14 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import DatePicker from '../index';
 
+const FIX_DATE = new Date(1545102656418);
 describe('DatePicker Component', () => {
   it('basic render', () => {
     const component = renderer.create(<DatePicker />).toJSON();
     expect(component).toMatchSnapshot();
   });
   it('controlled Component', () => {
-    const component = renderer.create(<DatePicker date={new Date()} />);
+    const component = renderer.create(<DatePicker date={FIX_DATE} />);
     const { instance } = component.root;
     component.update(<DatePicker date={new Date('2018/12/20')} />);
     expect(instance.state.date).toEqual(new Date('2018/12/20'));
@@ -19,7 +20,7 @@ describe('DatePicker Component', () => {
   it('should render picker which locale is cn', () => {
     const component = renderer.create(
       <DatePicker
-        defaultDate={new Date()}
+        defaultDate={FIX_DATE}
         locale="cn"
       />
     );
@@ -28,7 +29,7 @@ describe('DatePicker Component', () => {
   it('should render picker which mode is datetime', () => {
     const component = renderer.create(
       <DatePicker
-        defaultDate={new Date()}
+        defaultDate={FIX_DATE}
         mode="datetime"
       />
     );
@@ -37,7 +38,7 @@ describe('DatePicker Component', () => {
   it('should render picker which mode is year', () => {
     const component = renderer.create(
       <DatePicker
-        defaultDate={new Date()}
+        defaultDate={FIX_DATE}
         mode="year"
       />
     );
@@ -46,7 +47,7 @@ describe('DatePicker Component', () => {
   it('should render picker which mode is month', () => {
     const component = renderer.create(
       <DatePicker
-        defaultDate={new Date()}
+        defaultDate={FIX_DATE}
         mode="month"
       />
     );
