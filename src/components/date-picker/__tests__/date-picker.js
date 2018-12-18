@@ -3,7 +3,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import DatePicker from '../index';
 
-const FIX_DATE = new Date(1545102656418);
+const FIX_DATE = new Date(2018, 11, 18, 11, 10, 56);
 describe('DatePicker Component', () => {
   it('basic render', () => {
     const component = renderer.create(<DatePicker />).toJSON();
