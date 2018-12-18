@@ -6,12 +6,11 @@ branches:
   only:
   - master
 cache:
-  directories:
-  - node_modules
-before_install:
-- npm update
+  yarn: true
+# cache:
+#   directories:
+#   - node_modules
 install:
-- npm install
+- yarn
 script:
-- npm test
-- npm run coveralls
+- yarn coveralls
