@@ -60,35 +60,33 @@ exports[`ColorPicker Component basic render 1`] = `
         }
       }
     >
-      <View>
-        <View
-          style={
-            Object {
-              "backgroundColor": "#F8F8F8",
-              "borderColor": "#fff",
-              "borderRadius": 64,
-              "borderWidth": 8,
-              "height": 128,
-              "width": 128,
-            }
+      <View
+        style={
+          Object {
+            "backgroundColor": "#F8F8F8",
+            "borderColor": "#fff",
+            "borderRadius": 64,
+            "borderWidth": 8,
+            "height": 112,
+            "width": 112,
           }
-        />
-        <Image
-          resizeMode="contain"
-          source={1}
-          style={
-            Object {
-              "borderRadius": 64,
-              "height": 128,
-              "left": 0,
-              "opacity": 0,
-              "position": "absolute",
-              "top": 0,
-              "width": 128,
-            }
+        }
+      />
+      <Image
+        resizeMode="contain"
+        source={1}
+        style={
+          Object {
+            "borderRadius": 64,
+            "height": 128,
+            "left": 0,
+            "opacity": 0,
+            "position": "absolute",
+            "top": 0,
+            "width": 128,
           }
-        />
-      </View>
+        }
+      />
     </View>
   </View>
   <View
@@ -206,35 +204,33 @@ exports[`ColorPicker Component component update 1`] = `
         }
       }
     >
-      <View>
-        <View
-          style={
-            Object {
-              "backgroundColor": "#F8F8F8",
-              "borderColor": "#fff",
-              "borderRadius": 64,
-              "borderWidth": 8,
-              "height": 128,
-              "width": 128,
-            }
+      <View
+        style={
+          Object {
+            "backgroundColor": "#F8F8F8",
+            "borderColor": "#fff",
+            "borderRadius": 64,
+            "borderWidth": 8,
+            "height": 112,
+            "width": 112,
           }
-        />
-        <Image
-          resizeMode="contain"
-          source={1}
-          style={
-            Object {
-              "borderRadius": 64,
-              "height": 128,
-              "left": 0,
-              "opacity": 0,
-              "position": "absolute",
-              "top": 0,
-              "width": 128,
-            }
+        }
+      />
+      <Image
+        resizeMode="contain"
+        source={1}
+        style={
+          Object {
+            "borderRadius": 64,
+            "height": 128,
+            "left": 0,
+            "opacity": 0,
+            "position": "absolute",
+            "top": 0,
+            "width": 128,
           }
-        />
-      </View>
+        }
+      />
     </View>
   </View>
   <View
