@@ -280,10 +280,10 @@ export default class ColorPicker extends Component {
 
   getMiddleView = () => {
     const { innerElement, innerRadius, mode, hasInner } = this.props;
-    const Res = {
-      white,
-    };
+    const Res = { white };
     const isColorMode = mode === 'colour';
+    if (!hasInner) return null;
+    if (innerElement) return innerElement;
     return (
       <View
         style={{
@@ -294,33 +294,29 @@ export default class ColorPicker extends Component {
           alignItems: 'center',
         }}
       >
-        { hasInner && !innerElement ? (
-          <View>
-            <View
-              style={{
-                width: innerRadius * 2,
-                height: innerRadius * 2,
-                borderRadius: innerRadius,
-                backgroundColor: '#F8F8F8',
-                borderWidth: convert(4),
-                borderColor: '#fff',
-              }}
-            />
-            <Image
-              source={Res.white}
-              resizeMode="contain"
-              style={{
-                width: innerRadius * 2,
-                height: innerRadius * 2,
-                borderRadius: innerRadius,
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                opacity: isColorMode ? 0 : 1,
-              }}
-            />
-          </View>
-        ) : hasInner ? innerElement : null }
+        <View
+          style={{
+            width: convert(56),
+            height: convert(56),
+            borderRadius: innerRadius,
+            backgroundColor: '#F8F8F8',
+            borderWidth: convert(4),
+            borderColor: '#fff',
+          }}
+        />
+        <Image
+          source={Res.white}
+          resizeMode="contain"
+          style={{
+            width: innerRadius * 2,
+            height: innerRadius * 2,
+            borderRadius: innerRadius,
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            opacity: isColorMode ? 0 : 1,
+          }}
+        />
       </View>
     );
   }
