@@ -32,9 +32,9 @@ describe('RatioUtils', () => {
     expect(result).toEqual(750);
   });
 
-  it('RatioUtils.viewHeight = 1270', () => {
+  it('RatioUtils.viewHeight = 1246', () => {
     const result = RatioUtils.viewHeight;
-    expect(result).toEqual(1270);
+    expect(result).toEqual(1246);
   });
 
   it('RatioUtils.convertX(375) = 750', () => {
@@ -57,8 +57,8 @@ describe('RatioUtils', () => {
     expect(result).toEqual(true);
   });
 
-  it('RatioUtils.topBarHeight = 64', () => {
+  it('RatioUtils.topBarHeight = 88', () => {
     const result = RatioUtils.topBarHeight;
-    expect(result).toEqual(64);
+    expect(result).toEqual(88);
   });
 });

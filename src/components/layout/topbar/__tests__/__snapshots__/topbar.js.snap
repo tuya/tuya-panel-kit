@@ -6,7 +6,7 @@ exports[`TopBar Component basic render 1`] = `
     Array [
       null,
       Object {
-        "height": 64,
+        "height": 88,
       },
     ]
   }
@@ -18,7 +18,7 @@ exports[`TopBar Component basic render 1`] = `
         "flexDirection": "row",
         "height": 44,
         "justifyContent": "space-between",
-        "marginTop": 20,
+        "marginTop": 44,
       }
     }
   >
@@ -357,7 +357,7 @@ exports[`TopBar Component should render only with centerText 1`] = `
     Array [
       null,
       Object {
-        "height": 64,
+        "height": 88,
       },
     ]
   }
@@ -372,7 +372,7 @@ exports[`TopBar Component should render only with centerText 1`] = `
         "left": 70,
         "position": "absolute",
         "right": 70,
-        "top": 20,
+        "top": 44,
         "width": 610,
       }
     }
@@ -409,7 +409,7 @@ exports[`TopBar Component should render only with centerText 1`] = `
         "flexDirection": "row",
         "height": 44,
         "justifyContent": "space-between",
-        "marginTop": 20,
+        "marginTop": 44,
       }
     }
   >
@@ -748,7 +748,7 @@ exports[`TopBar Component should render only with leftImage 1`] = `
     Array [
       null,
       Object {
-        "height": 64,
+        "height": 88,
       },
     ]
   }
@@ -760,7 +760,7 @@ exports[`TopBar Component should render only with leftImage 1`] = `
         "flexDirection": "row",
         "height": 44,
         "justifyContent": "space-between",
-        "marginTop": 20,
+        "marginTop": 44,
       }
     }
   >
@@ -1066,7 +1066,7 @@ exports[`TopBar Component should render with rightImage and rightText 1`] = `
     Array [
       null,
       Object {
-        "height": 64,
+        "height": 88,
       },
     ]
   }
@@ -1078,7 +1078,7 @@ exports[`TopBar Component should render with rightImage and rightText 1`] = `
         "flexDirection": "row",
         "height": 44,
         "justifyContent": "space-between",
-        "marginTop": 20,
+        "marginTop": 44,
       }
     }
   >
