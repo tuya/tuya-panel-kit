@@ -234,8 +234,8 @@ const styles = StyleSheet.create({
   },
 
   offlineStyle: {
-    width: Window.width,
-    height: Window.height - TopBar.TopBarHeight,
+    width: Screen.width,
+    height: Screen.height - TopBar.TopBarHeight,
     position: 'absolute',
     top: TopBar.TopBarHeight,
   },
