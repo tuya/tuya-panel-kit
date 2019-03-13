@@ -16,7 +16,7 @@ exports[`WebView Component basic render 1`] = `
   style={
     Object {
       "flex": 1,
-      "height": 1270,
+      "height": 1246,
     }
   }
 />
