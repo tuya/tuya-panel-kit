@@ -7,7 +7,7 @@ const baseX = Math.sqrt(baseHeight * baseHeight + baseWidth * baseWidth);
 const x = Math.sqrt(height * height + width * width);
 const statusHeight = StatusBar.currentHeight || 0;
 export const isIos = Platform.OS === 'ios';
-export const isIphoneX = isIos && height === 812;
+export const isIphoneX = isIos && height >= 812;
 export const HRatio = width / baseWidth;
 export const VRatio = height / baseHeight;
 export const winWidth = width;
@@ -24,8 +24,8 @@ export const convertX = width => width * HRatio;
 export const convertY = height => height * VRatio;
 export const convert = number => number * ratio;
 
-export const topBarHeight = isIos ? (height === 812 ? 88 : 64) : 56;
-export const statusBarHeight = isIos ? (height === 812 ? 44 : 20) : statusHeight;
+export const topBarHeight = isIos ? (height >= 812 ? 88 : 64) : 56;
+export const statusBarHeight = isIos ? (height >= 812 ? 44 : 20) : statusHeight;
 
 export const isSmallW = width < 375;
 export const isSmallH = height < 667;

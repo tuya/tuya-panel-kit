@@ -16,7 +16,7 @@ import RefText from '../../TYText';
 const { width, height } = Dimensions.get('window');
 
 // iPhone X
-const IphoneX = !!(Platform.OS === 'ios' && height === 812);
+const IphoneX = !!(Platform.OS === 'ios' && height >= 812);
 
 const Res = {
   back: require('./common_back_ios.png'),
