@@ -6,7 +6,6 @@ import { Rect } from 'react-native-svg';
 import TYSdk from '../../../TYNativeApi';
 import Strings from '../../../i18n/strings';
 import TopBar from '../topbar';
-import MaskView from '../../modal-view/mask-view';
 import OfflineView from '../offline-view';
 import { CoreUtils } from '../../../utils';
 
@@ -208,7 +207,6 @@ export default class FullView extends Component {
         {!!background && this.renderBackground()}
         {this.renderTopBar()}
         {this.props.children}
-        <MaskView />
         {this.renderOfflineView()}
       </View>
     );
