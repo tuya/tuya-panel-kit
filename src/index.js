@@ -16,12 +16,6 @@ export { default as NavigatorLayout } from './components/layout/navigator-layout
 
 export { default as TopBar } from './components/layout/topbar';
 
-export { default as CircularPicker } from './components/color-picker/circular-picker';
-
-export { default as ColorPicker } from './components/color-picker/color-picker';
-
-export { default as RectColorPicker } from './components/color-picker/rect-color-picker';
-
 export { default as PickerView } from './components/picker-view';
 
 export { default as LinearGradient } from './components/gradient/linear-gradient';
