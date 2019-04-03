@@ -3,14 +3,22 @@ import { TYSdk, TYFlatList } from 'tuya-panel-kit';
 import { subRouters } from '../../config/routers';
 import Basic from './Basic';
 import WithValue from './WithValue';
-import Item from './Item';
 import Playground from './Playground';
+import CustomItem from './CustomItem';
+import CheckboxItem from './CheckboxItem';
+import InputItem from './InputItem';
+import SliderItem from './SliderItem';
+import SwitchItem from './SwitchItem';
 
 export default class TYSectionListScene extends Component {
   static Basic = Basic;
   static WithValue = WithValue;
-  static Item = Item;
   static Playground = Playground;
+  static CustomItem = CustomItem;
+  static CheckboxItem = CheckboxItem;
+  static InputItem = InputItem;
+  static SliderItem = SliderItem;
+  static SwitchItem = SwitchItem;
 
   get data() {
     return subRouters
@@ -19,16 +27,15 @@ export default class TYSectionListScene extends Component {
         key: id,
         title: id,
         arrow: true,
-        onPress: () => TYSdk.Navigator.push({
-          id,
-          title: id,
-        }),
+        onPress: () =>
+          TYSdk.Navigator.push({
+            id,
+            title: id,
+          }),
       }));
   }
 
   render() {
-    return (
-      <TYFlatList data={this.data} />
-    );
+    return <TYFlatList data={this.data} />;
   }
 }

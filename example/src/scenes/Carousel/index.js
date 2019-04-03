@@ -2,29 +2,26 @@ import React, { Component } from 'react';
 import { TYSdk, TYFlatList } from 'tuya-panel-kit';
 import { subRouters } from '../../config/routers';
 import Basic from './Basic';
-import Playground from './Playground';
 
-export default class ColorPickerScene extends Component {
+export default class CarouselScene extends Component {
   static Basic = Basic;
-  static Playground = Playground;
 
   get data() {
     return subRouters
-      .filter(r => /^ColorPicker\..+/.test(r.id))
+      .filter(r => /^Carousel\..+/.test(r.id))
       .map(({ id }) => ({
         key: id,
         title: id,
         arrow: true,
-        onPress: () => TYSdk.Navigator.push({
-          id,
-          title: id,
-        }),
+        onPress: () =>
+          TYSdk.Navigator.push({
+            id,
+            title: id,
+          }),
       }));
   }
 
   render() {
-    return (
-      <TYFlatList data={this.data} />
-    );
+    return <TYFlatList data={this.data} />;
   }
 }

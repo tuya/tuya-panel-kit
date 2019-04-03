@@ -1,25 +1,23 @@
 import { TYSdk } from 'tuya-panel-kit';
-import { componentsRouters, elementsRouters } from './routers';
+import { componentsRouters } from './routers';
+import ComponentInfo from '../../../package.json';
 
 function dataProducers(router) {
   return router.map(({ id }) => ({
     key: id,
     title: id,
     arrow: true,
-    onPress: () => TYSdk.Navigator.push({
-      id,
-      title: id,
-    }),
+    onPress: () =>
+      TYSdk.Navigator.push({
+        id,
+        title: id,
+      }),
   }));
 }
 
 export default [
   {
-    title: 'Components',
+    title: `${ComponentInfo.name}: ${ComponentInfo.version}`,
     data: dataProducers(componentsRouters),
   },
-  // {
-  //   title: 'Elements',
-  //   data: dataProducers(elementsRouters),
-  // },
 ];

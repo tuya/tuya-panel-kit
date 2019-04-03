@@ -1,14 +1,6 @@
 import React, { Component } from 'react';
-import {
-  View,
-  Text,
-  Image,
-  StyleSheet,
-} from 'react-native';
-import {
-  TYSdk,
-  TYSectionList,
-} from 'tuya-panel-kit';
+import { View, Text, StyleSheet } from 'react-native';
+import { TYSdk, TYSectionList } from 'tuya-panel-kit';
 
 const TYNative = TYSdk.native;
 
@@ -18,36 +10,39 @@ const Res = {
 
 export default class TYSectionListBasicScene extends Component {
   get sections() {
-    const imgStyle = { width: 24, height: 24 };
-    return [{
-      title: null,
-      data: new Array(3).fill(0).map((_, idx) => ({
-        key: idx,
-        title: `S1: title_${idx}`,
-        onPress: this._handleItemPress(idx),
-      })),
-    }, {
-      title: 'With Section Header',
-      data: new Array(10).fill(0).map((_, idx) => ({
-        key: idx,
-        styles: idx === 2 && {
-          container: styles.listItem,
-          title: styles.title,
-          subTitle: styles.subTitle,
-        },
-        title: `S2: title_${idx}`,
-        subTitle: `S2: subTitle_${idx}`,
-        arrow: true,
-        Icon: <Image style={imgStyle} source={Res.hue} />,
-        onPress: this._handleItemPress(idx),
-        renderItem: idx === 1 ? this.renderCustomItem : null,
-      })),
-    }];
+    return [
+      {
+        title: null,
+        data: new Array(3).fill(0).map((_, idx) => ({
+          key: idx,
+          title: `S1: title_${idx}`,
+          onPress: this._handleItemPress(idx),
+        })),
+      },
+      {
+        title: 'With Section Header',
+        data: new Array(10).fill(0).map((_, idx) => ({
+          key: idx,
+          styles: idx === 2 && {
+            container: styles.listItem,
+            title: styles.title,
+            subTitle: styles.subTitle,
+          },
+          title: `S2: title_${idx}`,
+          subTitle: `S2: subTitle_${idx}`,
+          arrow: true,
+          iconSize: 24,
+          Icon: Res.hue,
+          onPress: this._handleItemPress(idx),
+          renderItem: idx === 1 ? this.renderCustomItem : null,
+        })),
+      },
+    ];
   }
 
   _handleItemPress = value => () => {
     TYNative.simpleTipDialog(`Click Item ${value}`, () => {});
-  }
+  };
 
   renderCustomItem = ({ item }) => {
     return (
@@ -57,7 +52,7 @@ export default class TYSectionListBasicScene extends Component {
         </Text>
       </View>
     );
-  }
+  };
 
   render() {
     return (
@@ -80,7 +75,7 @@ const styles = StyleSheet.create({
   title: {
     color: 'rgba(255, 255, 255, 0.9)',
   },
-  
+
   subTitle: {
     color: 'rgba(255, 255, 255, 0.4)',
     marginTop: 4,

@@ -3,12 +3,7 @@ import { StyleSheet } from 'react-native';
 import { TYSectionList } from 'tuya-panel-kit';
 import { sections } from '../config';
 
-const Home = () => (
-  <TYSectionList
-    contentContainerStyle={styles.container}
-    sections={sections}
-  />
-);
+const Home = () => <TYSectionList contentContainerStyle={styles.container} sections={sections} />;
 
 const styles = StyleSheet.create({
   container: {
