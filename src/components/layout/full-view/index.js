@@ -1,12 +1,7 @@
+/* eslint-disable prettier/prettier */
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import {
-  View,
-  Image,
-  Dimensions,
-  StyleSheet,
-  ViewPropTypes,
-} from 'react-native';
+import { View, Image, Dimensions, StyleSheet, ViewPropTypes } from 'react-native';
 import { Rect } from 'react-native-svg';
 import TYSdk from '../../../TYNativeApi';
 import Strings from '../../../i18n/strings';
@@ -37,10 +32,7 @@ export default class FullView extends Component {
     hideTopbar: PropTypes.bool,
     showMenu: PropTypes.bool,
     // backgroundStyle: PropTypes.oneOfType([ViewPropTypes.style, Image.propTypes.style]),
-    background: PropTypes.oneOfType([
-      PropTypes.number,
-      PropTypes.object,
-    ]),
+    background: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
     onBack: PropTypes.func,
   };
 
@@ -69,17 +61,19 @@ export default class FullView extends Component {
         TYNative.back();
       }
     }
-  }
+  };
 
   renderBackground() {
-    const { backgroundStyle, background, } = this.props;
+    const { backgroundStyle, background } = this.props;
     // const { background } = this.state;
 
     if (typeof background === 'number') {
       return (
         <Image
           fadeDuration={0}
-          ref={ref => { this.refBackground = ref; }}
+          ref={ref => {
+            this.refBackground = ref;
+          }}
           style={[styles.background, backgroundStyle]}
           source={background}
         />
@@ -94,7 +88,9 @@ export default class FullView extends Component {
         return (
           <Image
             fadeDuration={0}
-            ref={ref => { this.refBackground = ref; }}
+            ref={ref => {
+              this.refBackground = ref;
+            }}
             style={[styles.background, backgroundStyle]}
             source={{ uri }}
             {...others}
@@ -105,7 +101,9 @@ export default class FullView extends Component {
       if (CoreUtils.isArray(stops)) {
         return (
           <RadialGradient
-            ref={ref => { this.refBackground = ref; }}
+            ref={ref => {
+              this.refBackground = ref;
+            }}
             style={[styles.gradientStyle, backgroundStyle]}
             {...others}
             stops={stops}
@@ -116,7 +114,9 @@ export default class FullView extends Component {
       const { x1, y1, x2, y2, ...ostops } = background;
       return (
         <LinearGradient
-          ref={ref => { this.refBackground = ref; }}
+          ref={ref => {
+            this.refBackground = ref;
+          }}
           style={[styles.gradientStyle, backgroundStyle]}
           stops={ostops}
           x1={x1}
@@ -134,10 +134,12 @@ export default class FullView extends Component {
 
   renderOfflineView() {
     const { appOnline, deviceOnline, showOfflineView } = this.props;
-    const show = !appOnline || (!deviceOnline);
+    const show = !appOnline || !deviceOnline;
     const tipText = !appOnline
       ? Strings.getLang('appoffline')
-      : !deviceOnline ? Strings.getLang('offline') : '';
+      : !deviceOnline
+        ? Strings.getLang('offline')
+        : '';
 
     if (!show) {
       return null;
@@ -152,11 +154,7 @@ export default class FullView extends Component {
     }
 
     return (
-      <OfflineView
-        style={styles.offlineStyle}
-        textStyle={styles.offlineText}
-        text={tipText}
-      />
+      <OfflineView style={styles.offlineStyle} textStyle={styles.offlineText} text={tipText} />
     );
   }
 
@@ -170,7 +168,9 @@ export default class FullView extends Component {
       }
       return (
         <TopBar
-          ref={ref => { this.topBarRef = ref; }}
+          ref={ref => {
+            this.topBarRef = ref;
+          }}
           centerText={title}
           isLeftBack={true}
           alignCenter={true}
@@ -196,14 +196,13 @@ export default class FullView extends Component {
   }
 
   render() {
-    const { style, background, } = this.props;
+    const { style, background } = this.props;
     return (
       <View
-        ref={ref => { this.refRootView = ref; }}
-        style={[
-          styles.container,
-          style,
-        ]}
+        ref={ref => {
+          this.refRootView = ref;
+        }}
+        style={[styles.container, style]}
       >
         {this.renderStatusBar()}
         {!!background && this.renderBackground()}
@@ -247,5 +246,5 @@ const styles = StyleSheet.create({
   gradientStyle: {
     width: Screen.width,
     height: Screen.height,
-  }
+  },
 });

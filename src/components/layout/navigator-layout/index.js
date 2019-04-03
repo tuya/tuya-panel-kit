@@ -2,14 +2,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Navigator } from 'react-native-deprecated-custom-components';
-import {
-  View,
-  StyleSheet,
-  UIManager,
-  BackHandler,
-  Platform,
-} from 'react-native';
+import { View, StyleSheet, UIManager, BackHandler, Platform } from 'react-native';
 import TYSdk from '../../../TYNativeApi';
+import MaskView from '../../modal/portalOut';
 import FullView from '../full-view';
 
 const TYEvent = TYSdk.event;
@@ -37,7 +32,7 @@ BackHandler.addEventListener('hardwareBackPress', () => {
 export default class NavigatorLayout extends Component {
   static propTypes = {
     devInfo: PropTypes.object.isRequired,
-  }
+  };
 
   constructor(props) {
     super(props);
@@ -128,7 +123,10 @@ export default class NavigatorLayout extends Component {
     const { devInfo } = this.props;
     const title = opts.title ? opts.title : devInfo.name;
 
-    let showOfflineView = opts.showOfflineView !== undefined ? opts.showOfflineView : (!devInfo.appOnline || !devInfo.deviceOnline);
+    let showOfflineView =
+      opts.showOfflineView !== undefined
+        ? opts.showOfflineView
+        : !devInfo.appOnline || !devInfo.deviceOnline;
     if (Object.keys(devInfo).length <= 1) {
       showOfflineView = false;
     }
@@ -136,7 +134,9 @@ export default class NavigatorLayout extends Component {
       const CustomFullView = opts.FullView;
       return (
         <CustomFullView
-          ref={ref => { if (ref) this.fullViewRef = ref; }}
+          ref={ref => {
+            if (ref) this.fullViewRef = ref;
+          }}
           title={title}
           onBack={this._onBack}
           appOnline={devInfo.appOnline}
@@ -153,7 +153,9 @@ export default class NavigatorLayout extends Component {
 
     return (
       <FullView
-        ref={ref => { if (ref) this.fullViewRef = ref; }}
+        ref={ref => {
+          if (ref) this.fullViewRef = ref;
+        }}
         title={title}
         style={[styles.container, opts.style]}
         background={opts.background}
@@ -180,13 +182,16 @@ export default class NavigatorLayout extends Component {
 
   render() {
     return (
-      <Navigator
-        initialRoute={{ id: 'main', initialRoute: true }}
-        configureScene={this._sceneConfigs}
-        renderScene={this._renderScene}
-        onDidFocus={this._onDidFocus}
-        onWillFocus={this._onWillFocus}
-      />
+      <View style={{ flex: 1 }}>
+        <Navigator
+          initialRoute={{ id: 'main', initialRoute: true }}
+          configureScene={this._sceneConfigs}
+          renderScene={this._renderScene}
+          onDidFocus={this._onDidFocus}
+          onWillFocus={this._onWillFocus}
+        />
+        <MaskView />
+      </View>
     );
   }
 }
@@ -198,6 +203,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#F8F8F8',
   },
 
-  topbarStyle: {
-  },
+  topbarStyle: {},
 });
