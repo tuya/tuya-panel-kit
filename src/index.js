@@ -4,6 +4,8 @@ export { default as I18N } from './i18n';
 
 export { default as Button } from './components/button';
 
+export { default as Carousel } from './components/carousel';
+
 export { default as Checkbox } from './components/checkbox';
 
 export { default as Collapsible } from './components/collapsible';
