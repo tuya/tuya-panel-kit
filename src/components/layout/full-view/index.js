@@ -33,6 +33,7 @@ export default class FullView extends Component {
     // backgroundStyle: PropTypes.oneOfType([ViewPropTypes.style, Image.propTypes.style]),
     background: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
     onBack: PropTypes.func,
+    devInfo: PropTypes.object.isRequired,
   };
 
   static defaultProps = {
@@ -61,6 +62,17 @@ export default class FullView extends Component {
       }
     }
   };
+
+  get topBarMoreIconName() {
+    const { devInfo = {} } = this.props;
+    return (
+      (devInfo &&
+        devInfo.panelConfig &&
+        devInfo.panelConfig.fun &&
+        devInfo.panelConfig.fun.topBarMoreIconName) ||
+      'pen'
+    );
+  }
 
   renderBackground() {
     const { backgroundStyle, background } = this.props;
@@ -158,25 +170,47 @@ export default class FullView extends Component {
   }
 
   renderTopBar() {
-    const { title, topbarStyle, hideTopbar, renderTopBar, topbarTextStyle } = this.props;
+    const {
+      title,
+      topbarStyle,
+      hideTopbar,
+      renderTopBar,
+      topbarTextStyle,
+      devInfo = {},
+    } = this.props;
     const { isShare } = this.state;
 
     if (!hideTopbar) {
       if (renderTopBar) {
         return renderTopBar();
       }
+      const uiPhase = devInfo.uiPhase || 'release';
+      const { color = '#fff' } = StyleSheet.flatten(topbarTextStyle) || {};
+      const isShowMore = !(isShare || !this.props.showMenu);
+      const actions = [
+        {
+          name: this.topBarMoreIconName,
+          onPress: () => this.onBack('right'),
+        },
+        uiPhase !== 'release' && {
+          style: {
+            backgroundColor: '#57DD43',
+            borderWidth: 1,
+          },
+          contentStyle: { fontSize: 12 },
+          color: '#000',
+          source: 'Preview',
+          disabled: true,
+        },
+      ].filter(v => !!v);
       return (
         <TopBar
-          ref={ref => {
-            this.topBarRef = ref;
-          }}
-          centerText={title}
-          isLeftBack={true}
-          alignCenter={true}
-          isRightMore={!(isShare || !this.props.showMenu)}
           style={topbarStyle}
-          textStyle={topbarTextStyle}
-          onChange={this.onBack}
+          title={title}
+          titleStyle={topbarTextStyle}
+          color={color}
+          actions={isShowMore ? actions : null}
+          onBack={() => this.onBack('left')}
         />
       );
     }
@@ -232,13 +266,13 @@ const styles = StyleSheet.create({
 
   offlineStyle: {
     width: Screen.width,
-    height: Screen.height - TopBar.TopBarHeight,
+    height: Screen.height - TopBar.height,
     position: 'absolute',
-    top: TopBar.TopBarHeight,
+    top: TopBar.height,
   },
 
   offlineText: {
-    paddingBottom: TopBar.TopBarHeight * 2,
+    paddingBottom: TopBar.height * 2,
   },
 
   gradientStyle: {
