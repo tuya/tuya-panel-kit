@@ -25,7 +25,7 @@ export class IconSVG extends React.Component {
     this.setState({
       currentAppState: nextAppState,
     });
-  }
+  };
   render() {
     const { props } = this;
     if (!props.d) return null;
@@ -74,30 +74,28 @@ export class IconSVG extends React.Component {
 
     return (
       <View>
-        {
-          this.state.currentAppState && (
-            <Surface
-              height={height}
-              width={width * count - offset * (count - 1)}
-              style={[{ backgroundColor: 'transparent' }, props.style, transformStyle]}
-            >
-              {d.map((path, i) => {
-                const isSimpleElement = React.isValidElement(path);
-                if (!isSimpleElement) {
-                  return (
-                    <Shape
-                      {...ShapeProps}
-                      key={ShapeKey++}
-                      d={path}
-                      x={i > 0 ? width * i - offset * i : 0}
-                    />
-                  );
-                }
-                return React.cloneElement(path, { ...ShapeProps, ...path.props });
-              })}
-            </Surface>
-          )
-        }
+        {this.state.currentAppState && (
+          <Surface
+            height={height}
+            width={width * count - offset * (count - 1)}
+            style={[{ backgroundColor: 'transparent' }, props.style, transformStyle]}
+          >
+            {d.map((path, i) => {
+              const isSimpleElement = React.isValidElement(path);
+              if (!isSimpleElement) {
+                return (
+                  <Shape
+                    {...ShapeProps}
+                    key={ShapeKey++}
+                    d={path}
+                    x={i > 0 ? width * i - offset * i : 0}
+                  />
+                );
+              }
+              return React.cloneElement(path, { ...ShapeProps, ...path.props });
+            })}
+          </Surface>
+        )}
       </View>
     );
   }
@@ -143,7 +141,6 @@ IconSVG.propTypes = {
   // 多个实体渲染时, 空白间隔偏移量, 可以让渲染更紧凑些
   spaceOffset: PropTypes.number,
 };
-
 
 const IconFont = props => {
   const { color, size } = props;
@@ -222,6 +219,5 @@ IconFont.propTypes = {
   vFlip: PropTypes.bool,
   name: PropTypes.string,
 };
-
 
 export default IconFont;
