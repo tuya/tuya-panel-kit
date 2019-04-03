@@ -1,5 +1,3 @@
-import MaskView from './components/modal-view/mask-view';
-
 export { default as TYSdk } from './TYNativeApi';
 
 export { default as I18N } from './i18n';
@@ -57,6 +55,3 @@ export { default as IconFont } from './components/iconfont';
 export { default as UnitText } from './components/iconfont/unitText';
 
 export { default as Tab } from './components/tab';
-
-const ShowMaskView = MaskView.Show;
-export { ShowMaskView };
