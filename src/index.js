@@ -8,6 +8,8 @@ export { default as Button } from './components/button';
 
 export { default as Checkbox } from './components/checkbox';
 
+export { default as Collapsible } from './components/collapsible';
+
 export { default as NavigatorLayout } from './components/layout/navigator-layout';
 
 export { default as TopBar } from './components/layout/topbar';
