@@ -145,6 +145,7 @@ export default class NavigatorLayout extends Component {
           renderTopBar={opts.renderTopBar}
           hideTopbar={!!opts.hideTopbar}
           showOfflineView={showOfflineView}
+          devInfo={devInfo}
         >
           {contentLayout}
         </CustomFullView>
@@ -170,6 +171,7 @@ export default class NavigatorLayout extends Component {
         hideTopbar={!!opts.hideTopbar}
         showOfflineView={showOfflineView}
         backgroundStyle={opts.backgroundStyle}
+        devInfo={devInfo}
       >
         {contentLayout}
       </FullView>
