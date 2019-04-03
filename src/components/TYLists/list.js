@@ -1,23 +1,21 @@
+/* eslint-disable new-cap */
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import {
-  View,
-  Text,
-  FlatList,
-  StyleSheet,
-  ViewPropTypes,
-} from 'react-native';
+import { View, Text, FlatList, StyleSheet, ViewPropTypes } from 'react-native';
 import ListItem from './list-item';
+import CheckboxItem from './items/checkbox-item';
+import InputItem from './items/input-item';
+import SliderItem from './items/slider-item';
+import SwitchItem from './items/switch-item';
 import SwitchButton from '../switch-button';
-import { RatioUtils } from '../../utils';
 
-const {
-  convertX: cx,
-} = RatioUtils;
-
-/* eslint-disable new-cap */
 export default class TYFlatList extends Component {
   static Item = ListItem;
+  static CheckboxItem = CheckboxItem;
+  static InputItem = InputItem;
+  static SliderItem = SliderItem;
+  static SwitchItem = SwitchItem;
+
   static propTypes = {
     ...FlatList.propTypes,
     /* data 格式
@@ -32,65 +30,42 @@ export default class TYFlatList extends Component {
         ...ListItemProps,
       }]
     */
-    data: PropTypes.arrayOf(PropTypes.shape({
-      renderItem: PropTypes.func,
-      SwitchButtonProps: PropTypes.shape({
-        ...SwitchButton.propTypes,
-      }),
-      ...ListItem.propTypes,
-    })).isRequired,
+    data: PropTypes.arrayOf(
+      PropTypes.shape({
+        renderItem: PropTypes.func,
+        SwitchButtonProps: PropTypes.shape({
+          ...SwitchButton.propTypes,
+        }),
+        ...ListItem.propTypes,
+      })
+    ).isRequired,
     separatorStyle: ViewPropTypes.style,
   };
 
   static defaultProps = {
     separatorStyle: null,
-  }
+  };
 
   renderItem = ({ item, ...otherData }) => {
-    const {
-      value,
-      onValueChange,
-      SwitchButtonProps,
-      renderItem,
-      ...listItemProps
-    } = item;
+    const { value, SwitchButtonProps, renderItem, ...listItemProps } = item;
     if (typeof renderItem === 'function') {
       return renderItem({ item, ...otherData });
     }
     if (typeof value === 'boolean') {
-      return (
-        <ListItem
-          disabled={true}
-          Action={
-            <SwitchButton
-              value={value}
-              onTintColor="#44DB5E"
-              onThumbTintColor="#fff"
-              onValueChange={onValueChange}
-              {...SwitchButtonProps}
-            />
-          }
-          {...listItemProps}
-        />
-      );
+      return <SwitchItem value={value} {...listItemProps} {...SwitchButtonProps} />;
     } else if (typeof value !== 'undefined') {
-      const valueStyle = [
-        styles.valueText,
-        item.styles && item.styles.valueText,
-      ];
+      const valueStyle = [styles.valueText, item.styles && item.styles.valueText];
       return (
         <ListItem
           {...listItemProps}
-          Action={(
+          Action={
             <View style={styles.row}>
               <Text style={valueStyle}>{value}</Text>
-              {
-                typeof listItemProps.Action === 'function'
-                  ? listItemProps.Action()
-                  : listItemProps.Action
-              }
+              {typeof listItemProps.Action === 'function'
+                ? listItemProps.Action()
+                : listItemProps.Action}
             </View>
-          )}
+          }
         />
       );
     }
@@ -98,12 +73,7 @@ export default class TYFlatList extends Component {
   };
 
   render() {
-    const {
-      contentContainerStyle,
-      separatorStyle,
-      data,
-      ...flatListProps
-    } = this.props;
+    const { contentContainerStyle, separatorStyle, data, ...flatListProps } = this.props;
     return (
       <FlatList
         contentContainerStyle={[styles.container, contentContainerStyle]}
@@ -133,8 +103,8 @@ const styles = StyleSheet.create({
   },
 
   valueText: {
-    fontSize: cx(14),
+    fontSize: 14,
     color: '#999',
-    marginRight: cx(6),
+    marginRight: 6,
   },
 });

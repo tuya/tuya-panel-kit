@@ -1,24 +1,23 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import {
-  View,
-  Text,
-  SectionList,
-  StyleSheet,
-  ViewPropTypes,
-} from 'react-native';
+import { View, Text, SectionList, StyleSheet, ViewPropTypes } from 'react-native';
 import ListItem from './list-item';
-import SwitchButton from '../switch-button';
+import CheckboxItem from './items/checkbox-item';
+import InputItem from './items/input-item';
+import SliderItem from './items/slider-item';
+import SwitchItem from './items/switch-item';
 import { RatioUtils } from '../../utils';
 
-const {
-  convertX: cx,
-  convertY: cy,
-} = RatioUtils;
+const { convertX: cx, convertY: cy } = RatioUtils;
 
 /* eslint-disable new-cap */
 export default class TYSectionLists extends Component {
   static Item = ListItem;
+  static CheckboxItem = CheckboxItem;
+  static InputItem = InputItem;
+  static SliderItem = SliderItem;
+  static SwitchItem = SwitchItem;
+
   static propTypes = {
     ...SectionList.propTypes,
     /* sections 格式
@@ -47,7 +46,7 @@ export default class TYSectionLists extends Component {
   static defaultProps = {
     headerStyle: null,
     separatorStyle: null,
-  }
+  };
 
   renderSectionHeader = ({ section: { title } }) => {
     const { headerStyle } = this.props;
@@ -55,53 +54,28 @@ export default class TYSectionLists extends Component {
       return <Text style={[styles.sectionHeader, headerStyle]}>{title}</Text>;
     }
     return null;
-  }
+  };
 
   renderItem = ({ item, ...otherData }) => {
-    const {
-      value,
-      onValueChange,
-      SwitchButtonProps,
-      renderItem,
-      ...listItemProps
-    } = item;
+    const { value, SwitchButtonProps, renderItem, ...listItemProps } = item;
     if (typeof renderItem === 'function') {
       return renderItem({ item, ...otherData });
     }
     if (typeof value === 'boolean') {
-      return (
-        <ListItem
-          disabled={true}
-          Action={
-            <SwitchButton
-              value={value}
-              onTintColor="#44DB5E"
-              onThumbTintColor="#fff"
-              onValueChange={onValueChange}
-              {...SwitchButtonProps}
-            />
-          }
-          {...listItemProps}
-        />
-      );
+      return <SwitchItem value={value} {...listItemProps} {...SwitchButtonProps} />;
     } else if (typeof value !== 'undefined') {
-      const valueStyle = [
-        styles.valueText,
-        item.styles && item.styles.valueText,
-      ];
+      const valueStyle = [styles.valueText, item.styles && item.styles.valueText];
       return (
         <ListItem
           {...listItemProps}
-          Action={(
+          Action={
             <View style={styles.row}>
               <Text style={valueStyle}>{value}</Text>
-              {
-                typeof listItemProps.Action === 'function'
-                  ? listItemProps.Action()
-                  : listItemProps.Action
-              }
+              {typeof listItemProps.Action === 'function'
+                ? listItemProps.Action()
+                : listItemProps.Action}
             </View>
-          )}
+          }
         />
       );
     }
@@ -109,12 +83,7 @@ export default class TYSectionLists extends Component {
   };
 
   render() {
-    const {
-      contentContainerStyle,
-      separatorStyle,
-      sections,
-      ...sectionListProps
-    } = this.props;
+    const { contentContainerStyle, separatorStyle, sections, ...sectionListProps } = this.props;
     return (
       <SectionList
         contentContainerStyle={[styles.container, contentContainerStyle]}
