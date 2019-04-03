@@ -2,7 +2,7 @@ export { default as TYSdk } from './TYNativeApi';
 
 export { default as I18N } from './i18n';
 
-export { default as Button } from './components/button';
+export { default as Button } from './components/button/button';
 
 export { default as Carousel } from './components/carousel';
 
