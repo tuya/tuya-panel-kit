@@ -30,6 +30,8 @@ export { default as Slider } from './components/slider';
 
 export { default as SwitchButton } from './components/switch-button';
 
+export { default as TabBar } from './components/tabbar';
+
 export { default as TYSectionList } from './components/TYLists/lists';
 
 export { default as TYFlatList } from './components/TYLists/list';
