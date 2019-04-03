@@ -10,7 +10,7 @@ const IconScene = () => (
     </View>
     <View style={{ flexDirection: 'row', marginTop: 20, alignItems: 'center' }}>
       <TYText style={{ color: '#333' }}>UnitText: </TYText>
-      <UnitText value="01" size={50} unit="celsius" valueColor="red" unitColor="red" />
+      <UnitText value="99" size={50} unit="celsius" valueColor="red" unitColor="red" />
     </View>
   </View>
 );

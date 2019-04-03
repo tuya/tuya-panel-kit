@@ -1,12 +1,12 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
-// import { Text } from 'react-native';
 import { Tab, TYText } from 'tuya-panel-kit';
 
 class TabScene extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      tab: '1'
+      tab: '1',
     };
   }
   render() {
@@ -16,7 +16,7 @@ class TabScene extends React.PureComponent {
       color: '#333',
       textAlign: 'center',
       lineHeight: 200,
-      backgroundColor: '#fff'
+      backgroundColor: '#fff',
     };
     const tabPanes = tabPaneArr.map(item => (
       <Tab.TabPane key={`${item}`} tab={`${item}`}>
@@ -27,11 +27,13 @@ class TabScene extends React.PureComponent {
       <Tab
         activeKey={this.state.tab}
         onChange={value => this.setState({ tab: value })}
+        tabBarStyle={{ height: 80 }}
+        style={{ backgroundColor: '#fff' }}
+        tabBarPosition="bottom"
       >
-        { tabPanes }
+        {tabPanes}
       </Tab>
     );
   }
 }
-
 export default TabScene;
