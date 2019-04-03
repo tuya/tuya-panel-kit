@@ -1,11 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {
-  StyleSheet,
-  View,
-  ViewPropTypes,
-  I18nManager
-} from 'react-native';
+import { StyleSheet, View, ViewPropTypes, I18nManager } from 'react-native';
 
 import Icon from './index';
 
@@ -22,10 +17,7 @@ export default class UnitText extends React.PureComponent {
     unitColor: PropTypes.string,
     unitPaddingLeft: PropTypes.number,
     unitPaddingTop: PropTypes.number,
-    value: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number,
-    ]).isRequired,
+    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   };
 
   static defaultProps = {
@@ -45,7 +37,7 @@ export default class UnitText extends React.PureComponent {
 
     this.state = {
       value: props.value || '',
-      unit: props.unit
+      unit: props.unit,
     };
   }
 
@@ -69,10 +61,14 @@ export default class UnitText extends React.PureComponent {
   }
   render() {
     const {
-      size, valueSize,
-      valueColor, unitSize,
-      unitColor, unitPaddingLeft,
-      unitPaddingTop, style
+      size,
+      valueSize,
+      valueColor,
+      unitSize,
+      unitColor,
+      unitPaddingLeft,
+      unitPaddingTop,
+      style,
     } = this.props;
     const isRtl = I18nManager.isRTL;
     const { value, unit } = this.state;
@@ -83,9 +79,7 @@ export default class UnitText extends React.PureComponent {
     const needLeft = vSize * (LetterPadding * 2 - 0.05);
     const uNeedLeft = (vSize + uSize) * (LetterPadding - 0.025);
     const marginType = isRtl ? 'marginRight' : 'marginLeft';
-    const unitStyle = [
-      { marginTop: unitPaddingTop, [marginType]: -uNeedLeft + unitPaddingLeft }
-    ];
+    const unitStyle = [{ marginTop: unitPaddingTop, [marginType]: -uNeedLeft + unitPaddingLeft }];
     const wrapperStyle = [
       styles.wrapperStyle,
       { flexDirection: isRtl ? 'row-reverse' : 'row' },
@@ -93,23 +87,19 @@ export default class UnitText extends React.PureComponent {
     ];
     return (
       <View style={wrapperStyle}>
-        {
-          letter.map((l, i) => {
-            const letterStyle = [
-              i !== 0 && { [marginType]: -needLeft }
-            ];
-            return (
-              <Icon
-                name={l}
-                size={vSize}
-                style={letterStyle}
-                key={`TYUnitText_${l}`}
-                color={valueColor}
-              />
-            );
-          })
-        }
-        { unit ? <Icon name={unit} size={uSize} style={unitStyle} color={unitColor} /> : null }
+        {letter.map((l, i) => {
+          const letterStyle = [i !== 0 && { [marginType]: -needLeft }];
+          return (
+            <Icon
+              name={l}
+              size={vSize}
+              style={letterStyle}
+              key={`TYUnitText_${l}_${i + 1}`}
+              color={valueColor}
+            />
+          );
+        })}
+        {unit ? <Icon name={unit} size={uSize} style={unitStyle} color={unitColor} /> : null}
       </View>
     );
   }
@@ -118,5 +108,5 @@ export default class UnitText extends React.PureComponent {
 const styles = StyleSheet.create({
   wrapperStyle: {
     justifyContent: 'center',
-  }
+  },
 });
