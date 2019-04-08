@@ -121,7 +121,7 @@ class Carousel extends React.Component {
         offset: { x: offset, y: 0 },
       },
       () => {
-        if (Platform.OS === 'android' && useViewPagerOnAndroid) {
+        if (Platform.OS === 'android' && !useViewPagerOnAndroid) {
           this.firstScrollTimer = setTimeout(() => {
             this.scrollview.scrollTo({ x: offset, y: 0, animated: false });
           }, 0);
@@ -222,7 +222,7 @@ class Carousel extends React.Component {
   };
 
   _renderSrcoll = pages => {
-    if (Platform.OS === 'android') {
+    if (Platform.OS === 'android' && this.props.useViewPagerOnAndroid) {
       return (
         <ViewPagerAndroid
           ref={ref => {
