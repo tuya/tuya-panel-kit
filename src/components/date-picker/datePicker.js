@@ -26,9 +26,7 @@ const formatColArray = (arrLength, min, labelLocal, isPlusZero) => {
   });
 };
 // get how many days
-const getDaysInMonth = date => (
-  new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate()
-);
+const getDaysInMonth = date => new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
 
 const setMonth = (date, month) => {
   const days = getDaysInMonth(new Date(date.getFullYear(), month));
@@ -40,6 +38,7 @@ class DatePicker extends React.Component {
   static propTypes = {
     locale: PropTypes.string,
     mode: PropTypes.string,
+    loop: PropTypes.bool,
     use12Hours: PropTypes.bool,
     minDate: PropTypes.object,
     maxDate: PropTypes.object,
@@ -49,32 +48,36 @@ class DatePicker extends React.Component {
     date: PropTypes.object,
     defaultDate: PropTypes.object,
     style: ViewPropTypes.style,
+    pickerFontColor: PropTypes.string,
   };
 
   static defaultProps = {
     mode: DATE,
+    loop: false,
     use12Hours: false,
     isAmpmFirst: false,
     locale: 'en',
     minDate: new Date(2000, 0, 1, 0, 0, 0),
     maxDate: new Date(2030, 11, 31, 23, 59, 59),
     onDateChange: () => {},
-    onValueChange: () => {}
+    onValueChange: () => {},
+    pickerFontColor: '#333',
     // disabled: false,
-  }
+  };
 
   constructor(props) {
     super(props);
     this.state = {
       date: props.date || props.defaultDate,
     };
-    this.locale = props.locale === 'cn' ? cnLocale : defaultLocale;
+    this.i18n(props.locale);
   }
 
   componentWillReceiveProps(nextProps) {
     if ('date' in nextProps) {
       this.setState({ date: nextProps.date || nextProps.defaultDate });
     }
+    this.i18n(nextProps.locale);
   }
 
   onValueChange = (value, index, key) => {
@@ -88,7 +91,7 @@ class DatePicker extends React.Component {
     if (this.props.onValueChange) {
       this.props.onValueChange(value, index);
     }
-  }
+  };
 
   // get now date
   getDate() {
@@ -172,7 +175,7 @@ class DatePicker extends React.Component {
       }
     }
     return this.getRealDate(newValue);
-  }
+  };
   // get time data
   getTimeColsData = date => {
     let minMinute = 0;
@@ -221,19 +224,19 @@ class DatePicker extends React.Component {
     let ampmCols = [];
     // todo: minDate and maxDate
     if (use12Hours) {
-    //   let ampm = [];
-    //   if (minHour > 12 && maxHour > 12) {
-    //     ampm.push({ value: '1', label: locale.pm })
-    //   } else if (minHour <= 12 && maxHour <= 12) {
-    //     ampm.push({ value: '0', label: locale.am })
-    //   } else {
-    //     ampm = [{ value: '0', label: locale.am }, { value: '1', label: locale.pm }];
-    //   }
+      //   let ampm = [];
+      //   if (minHour > 12 && maxHour > 12) {
+      //     ampm.push({ value: '1', label: locale.pm })
+      //   } else if (minHour <= 12 && maxHour <= 12) {
+      //     ampm.push({ value: '0', label: locale.am })
+      //   } else {
+      //     ampm = [{ value: '0', label: locale.am }, { value: '1', label: locale.pm }];
+      //   }
       const ampm = [{ value: '0', label: locale.am }, { value: '1', label: locale.pm }];
       ampmCols = [{ key: 'ampm', values: ampm }];
     }
     let hour = [];
-    if (minHour === 0 && maxHour === 0 || minHour !== 0 && maxHour !== 0) {
+    if ((minHour === 0 && maxHour === 0) || (minHour !== 0 && maxHour !== 0)) {
       minHour = this.getRealHour(minHour);
     } else if (minHour === 0 && use12Hours) {
       minHour = 1;
@@ -242,27 +245,28 @@ class DatePicker extends React.Component {
     maxHour = this.getRealHour(maxHour);
     const hours = formatColArray(
       maxHour - minHour + 1,
-      minHour, locale.hour || '',
+      minHour,
+      locale.hour || '',
       locale.hour,
-      true,
+      true
     );
     hour = hour.concat(hours);
     const hourCols = { key: 'hour', values: hour };
     const nowMinute = date.getMinutes();
     const minute = formatColArray(
       maxMinute - minMinute + 1,
-      minMinute, locale.minute || '',
+      minMinute,
+      locale.minute || '',
       locale.minute,
       true
     );
     const minuteCols = { key: 'minute', values: minute };
 
-    const cols = !isAmpmFirst ? [
-      hourCols,
-      minuteCols,
-    ].concat(ampmCols) : ampmCols.concat([hourCols, minuteCols]);
+    const cols = !isAmpmFirst
+      ? [hourCols, minuteCols].concat(ampmCols)
+      : ampmCols.concat([hourCols, minuteCols]);
     return { cols, nowMinute, nowHour };
-  }
+  };
 
   // get the correct date for pciker
   getRealDate = date => {
@@ -284,10 +288,10 @@ class DatePicker extends React.Component {
           const minMinutes = minDate.getMinutes();
           const hour = date.getHours();
           const minutes = date.getMinutes();
-          if (hour < minHour || hour === minHour && minutes < minMinutes) {
+          if (hour < minHour || (hour === minHour && minutes < minMinutes)) {
             return new Date(+minDate);
           }
-          if (hour > maxHour || hour === maxHour && minMinutes > maxMinutes) {
+          if (hour > maxHour || (hour === maxHour && minMinutes > maxMinutes)) {
             return new Date(+maxDate);
           }
         }
@@ -302,7 +306,7 @@ class DatePicker extends React.Component {
         break;
     }
     return date;
-  }
+  };
   // get col data
   getDateColsData = () => {
     const { mode, maxDate, minDate } = this.props;
@@ -348,7 +352,7 @@ class DatePicker extends React.Component {
     const dayCol = { key: 'day', values: day };
 
     return [yearCol, monthCol, dayCol];
-  }
+  };
   // get picker selectItems and currentValue
   getIndexAndCols = () => {
     const { mode, use12Hours, isAmpmFirst } = this.props;
@@ -365,7 +369,7 @@ class DatePicker extends React.Component {
     if (mode === MONTH) {
       return {
         cols: this.getDateColsData(),
-        value: [`${date.getFullYear()}`, `${date.getMonth() + 1}`]
+        value: [`${date.getFullYear()}`, `${date.getMonth() + 1}`],
       };
     }
     if (mode === DATE) {
@@ -378,7 +382,7 @@ class DatePicker extends React.Component {
     let realhour = time.nowHour;
     const timeValue = [`${realhour}`, `${time.nowMinute}`];
     if (use12Hours) {
-      realhour = time.nowHour === 0 ? 12 : (time.nowHour > 12 ? time.nowHour - 12 : time.nowHour);
+      realhour = time.nowHour === 0 ? 12 : time.nowHour > 12 ? time.nowHour - 12 : time.nowHour;
       timeValue[0] = `${realhour}`;
       const ampmStr = `${time.nowHour >= 12 ? 1 : 0}`;
       if (isAmpmFirst) {
@@ -394,25 +398,35 @@ class DatePicker extends React.Component {
           `${date.getFullYear()}`,
           `${date.getMonth() + 1}`,
           `${date.getDate()}`,
-          ...timeValue
+          ...timeValue,
         ],
       };
     }
     if (mode === TIME) {
       return {
         cols: time.cols,
-        value: [...timeValue]
+        value: [...timeValue],
       };
     }
     return {
       cols,
       value,
     };
-  }
+  };
+
+  i18n = locale => {
+    if (typeof locale === 'string') {
+      this.locale = locale === 'cn' ? cnLocale : defaultLocale;
+    } else if (typeof locale === 'object') {
+      this.locale = Object.assign({}, defaultLocale, locale);
+    } else {
+      this.locale = defaultLocale;
+    }
+  };
 
   render() {
     const { value, cols } = this.getIndexAndCols();
-    const { style } = this.props;
+    const { style, loop, pickerFontColor } = this.props;
     const multiStyle = {
       flexDirection: 'row',
       alignItems: 'center',
@@ -423,28 +437,29 @@ class DatePicker extends React.Component {
     };
     return (
       <View style={[multiStyle, style]}>
-        {
-          cols.map((pItem, pindex) => (
-            <Picker
-              style={{ flex: 1 }}
-              key={pItem.key}
-              // disabled={disabled}
-              // itemStyle={itemStyle}
-              selectedValue={value[pindex]}
-              onValueChange={date => this.onValueChange(date, pindex, pItem.key)}
-            >
-              {
-                pItem.values.map(item => (
-                  <Picker.Item key={`${pItem.key}_${item.value}`} value={item.value} label={item.label} />
-                ))
-              }
-            </Picker>
-          ))
-        }
+        {cols.map((pItem, pindex) => (
+          <Picker
+            style={{ flex: 1 }}
+            key={pItem.key}
+            // disabled={disabled}
+            loop={loop}
+            selectedItemTextColor={pickerFontColor}
+            itemStyle={{ color: pickerFontColor }}
+            selectedValue={value[pindex]}
+            onValueChange={date => this.onValueChange(date, pindex, pItem.key)}
+          >
+            {pItem.values.map(item => (
+              <Picker.Item
+                key={`${pItem.key}_${item.value}`}
+                value={item.value}
+                label={item.label}
+              />
+            ))}
+          </Picker>
+        ))}
       </View>
     );
   }
-
 }
 
 export default DatePicker;
