@@ -1,19 +1,18 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
-import {
-  View,
-  StyleSheet,
-} from 'react-native';
-import { PickerView } from 'tuya-panel-kit';
+import { View, StyleSheet } from 'react-native';
+import { Picker } from 'tuya-panel-kit';
 import ExplorerLayout from '../../components/ExplorerLayout';
+import ControlBoolean from '../../components/ControlBoolean';
 import ControlNumber from '../../components/ControlNumber';
 
-export default class PickerViewScene extends Component {
+export default class PickerTimePickerScene extends Component {
   constructor(props) {
     super(props);
     this.hours = _.times(12, n => _.padStart(n === 0 ? 12 : n, 2, '0'));
     this.minutes = _.times(60, n => _.padStart(n, 2, '0'));
     this.state = {
+      loop: false,
       amPm: 'AM',
       hour: '12',
       minute: '00',
@@ -25,46 +24,58 @@ export default class PickerViewScene extends Component {
     this.setState({ [key]: v });
   };
 
+  _handleBoolChange = key => value => {
+    this.setState({ [key]: value });
+  };
+
   renderContent = () => {
     return (
       <View style={styles.pickerContainer}>
-        <PickerView
+        <Picker
           style={[styles.picker, styles.pickerLeft]}
           itemStyle={styles.pickerItem}
+          loop={this.state.loop}
           selectedValue={this.state.amPm}
           onValueChange={this._handleChange('amPm')}
         >
           {['AM', 'PM'].map(value => (
-            <PickerView.Item key={value} value={value} label={value} />
+            <Picker.Item key={value} value={value} label={value} />
           ))}
-        </PickerView>
-        <PickerView
+        </Picker>
+        <Picker
           style={[styles.picker, styles.pickerMiddle]}
           itemStyle={styles.pickerItem}
+          loop={this.state.loop}
           selectedValue={this.state.hour}
           onValueChange={this._handleChange('hour')}
         >
           {this.hours.map(value => (
-            <PickerView.Item key={value} value={value} label={value} />
+            <Picker.Item key={value} value={value} label={value} />
           ))}
-        </PickerView>
-        <PickerView
+        </Picker>
+        <Picker
           style={[styles.picker, styles.pickerRight]}
           itemStyle={styles.pickerItem}
+          loop={this.state.loop}
           selectedValue={this.state.minute}
           onValueChange={this._handleChange('minute')}
         >
           {this.minutes.map(value => (
-            <PickerView.Item key={value} value={value} label={value} />
+            <Picker.Item key={value} value={value} label={value} />
           ))}
-        </PickerView>
+        </Picker>
       </View>
     );
-  }
+  };
 
   renderPlayground = () => {
     return (
       <View>
+        <ControlBoolean
+          title="Toggle Loop"
+          value={this.state.loop}
+          onValueChange={this._handleBoolChange('loop')}
+        />
         <ControlNumber
           min={1}
           max={12}
@@ -85,14 +96,11 @@ export default class PickerViewScene extends Component {
         />
       </View>
     );
-  }
+  };
 
   render() {
     return (
-      <ExplorerLayout
-        renderContent={this.renderContent}
-        renderPlayground={this.renderPlayground}
-      />
+      <ExplorerLayout renderContent={this.renderContent} renderPlayground={this.renderPlayground} />
     );
   }
 }
@@ -125,4 +133,3 @@ const styles = StyleSheet.create({
     marginTop: -30,
   },
 });
-
