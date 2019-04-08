@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import Home from '../scenes/Home';
-import PickerView from '../scenes/PickerView';
+import Picker from '../scenes/Picker';
 import LinearGradient from '../scenes/LinearGradient';
 import RadialGradient from '../scenes/RadialGradient';
 import DatePicker from '../scenes/DatePicker';
@@ -36,8 +36,8 @@ export const componentsRouters = _.sortBy(
       Scene: Button,
     },
     {
-      id: 'PickerView',
-      Scene: PickerView,
+      id: 'Picker',
+      Scene: Picker,
     },
     {
       id: 'LinearGradient',

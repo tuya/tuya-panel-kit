@@ -10,21 +10,20 @@ export default class TYSectionList extends Component {
 
   get datas() {
     return subRouters
-      .filter(r => /^PickerView\..+/.test(r.id))
+      .filter(r => /^Picker\..+/.test(r.id))
       .map(({ id }) => ({
         key: id,
         title: id,
         arrow: true,
-        onPress: () => TYSdk.Navigator.push({
-          id,
-          title: id,
-        }),
+        onPress: () =>
+          TYSdk.Navigator.push({
+            id,
+            title: id,
+          }),
       }));
   }
 
   render() {
-    return (
-      <TYFlatList data={this.datas} />
-    );
+    return <TYFlatList data={this.datas} />;
   }
 }

@@ -18,7 +18,7 @@ export { default as NavigatorLayout } from './components/layout/navigator-layout
 
 export { default as TopBar } from './components/layout/topbar';
 
-export { default as PickerView } from './components/picker-view';
+export { default as Picker } from './components/picker-view';
 
 export { default as LinearGradient } from './components/gradient/linear-gradient';
 
