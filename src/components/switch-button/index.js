@@ -1,10 +1,7 @@
 /* eslint-disable react/require-default-props */
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  Animated, TouchableOpacity,
-  View, ViewPropTypes
-} from 'react-native';
+import { Animated, TouchableOpacity, View, ViewPropTypes } from 'react-native';
 
 class SwitchButton extends React.PureComponent {
   static propTypes = {
@@ -24,14 +21,14 @@ class SwitchButton extends React.PureComponent {
     defaultValue: true,
     disabled: false,
     onTintColor: '#44DB5E',
-    thumbTintColor: '#E5E5E5E5',
-    tintColor: 'transparent',
+    thumbTintColor: '#fff',
+    tintColor: '#E5E5E5',
     borderColor: '#E5E5E5',
   };
   constructor(props) {
     super(props);
-    this.value = ('value' in props) ? props.value : props.defaultValue;
-    this.CGSize = { width: 52, height: 32, activeSize: 28, margin: 0.5, ...props.size };
+    this.value = 'value' in props ? props.value : props.defaultValue;
+    this.CGSize = { width: 52, height: 32, activeSize: 28, margin: 2, ...props.size };
     const left = this.calcLeft(this.value);
     this.state = {
       thumbLeft: new Animated.Value(left),
@@ -50,19 +47,16 @@ class SwitchButton extends React.PureComponent {
       this.valueChange(newValue);
     }
     onValueChange && onValueChange(newValue);
-  }
+  };
 
   calcLeft = value => {
     const { width, activeSize, margin } = this.CGSize;
-    const left = value ? width - (activeSize + margin + 1.5) : margin;
+    const left = value ? width - (activeSize + margin) : margin;
     return left;
-  }
+  };
 
   calcColor = (value, type) => {
-    const {
-      onThumbTintColor, thumbTintColor,
-      onTintColor, tintColor, borderColor
-    } = this.props;
+    const { onThumbTintColor, thumbTintColor, onTintColor, tintColor, borderColor } = this.props;
     if (type === 'thumb') {
       const activeColor = onThumbTintColor || thumbTintColor;
       return value ? activeColor : thumbTintColor;
@@ -71,43 +65,37 @@ class SwitchButton extends React.PureComponent {
       return value ? onTintColor : borderColor;
     }
     return value ? onTintColor : tintColor;
-  }
+  };
 
   valueChange = value => {
     const color = this.calcColor(value);
     const borderColor = this.calcColor(value, 'border');
     const thumbColor = this.calcColor(this.value, 'thumb');
     this._ref.setNativeProps({
-      style: { backgroundColor: color, borderColor }
+      style: { backgroundColor: color, borderColor },
     });
     this.thumb.setNativeProps({
-      style: { backgroundColor: thumbColor }
+      style: { backgroundColor: thumbColor },
     });
     this.value = value;
     const left = this.calcLeft(value);
     this.state.thumbLeft.stopAnimation();
-    Animated.spring(
-      this.state.thumbLeft,
-      { toValue: left, duration: 200 },
-    ).start();
-  }
+    Animated.spring(this.state.thumbLeft, { toValue: left, duration: 200 }).start();
+  };
 
   render() {
     const { style, disabled } = this.props;
     const thumbColor = this.calcColor(this.value, 'thumb');
     const backgroundColor = this.calcColor(this.value);
     const borderColor = this.calcColor(this.value, 'border');
-    const containerStyle = [
-      style,
-      disabled && { opacity: 0.8 },
-    ];
+    const containerStyle = [style, disabled && { opacity: 0.8 }];
     const wrapperStyle = {
       backgroundColor,
       width: this.CGSize.width,
       height: this.CGSize.height,
       borderRadius: this.CGSize.height / 2,
       justifyContent: 'center',
-      borderWidth: 1.5,
+      // borderWidth: 1.5,
       borderColor,
     };
     const thumbStyle = {
@@ -121,11 +109,19 @@ class SwitchButton extends React.PureComponent {
     return (
       <View style={containerStyle}>
         <TouchableOpacity
-          ref={ref => { this._ref = ref; }}
+          ref={ref => {
+            this._ref = ref;
+          }}
+          activeOpacity={0.8}
           onPress={this.onSwitchChange}
           style={wrapperStyle}
         >
-          <Animated.View style={thumbStyle} ref={ref => { this.thumb = ref; }} />
+          <Animated.View
+            style={thumbStyle}
+            ref={ref => {
+              this.thumb = ref;
+            }}
+          />
         </TouchableOpacity>
       </View>
     );
