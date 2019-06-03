@@ -131,7 +131,7 @@ export default class OfflineView extends Component {
     TYNative.simpleConfirmDialog(
       '',
       Strings.getLang('beNotInUseCheck'),
-      () => TYNative.deleteDeviceInfo().then(TYNative.back).catch(() => {
+      () => TYDevice.deleteDeviceInfo().then(TYMobile.back).catch(() => {
         TYNative.simpleTipDialog(Strings.getLang('removeFailed'), () => {});
       }),
       () => {}
