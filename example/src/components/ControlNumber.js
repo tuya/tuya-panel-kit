@@ -1,11 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  ViewPropTypes,
-} from 'react-native';
+import { View, Text, StyleSheet, ViewPropTypes } from 'react-native';
 import { Slider } from 'tuya-panel-kit';
 import { store } from '../main';
 import { startGesture, stopGesture } from '../redux/modules/uiState';
@@ -20,13 +15,13 @@ export default class ControlNumber extends Component {
     onChange: PropTypes.func,
     onComplete: PropTypes.func,
     ...Slider.propTypes,
-  }
+  };
 
   static defaultProps = {
     style: null,
     onChange: null,
     onComplete: null,
-  }
+  };
 
   shouldComponentUpdate(nextProps) {
     return this.props.value !== nextProps.value;
@@ -34,23 +29,15 @@ export default class ControlNumber extends Component {
 
   _handleSlidingStart = () => {
     store.dispatch(startGesture());
-  }
+  };
 
   _handleSlidingComplete = value => {
     store.dispatch(stopGesture());
     this.props.onComplete && this.props.onComplete(value);
-  }
+  };
 
   render() {
-    const {
-      style,
-      min,
-      max,
-      onChange,
-      value,
-      title,
-      ...SliderProps
-    } = this.props;
+    const { style, min, max, onChange, value, title, ...SliderProps } = this.props;
     return (
       <View style={[styles.container, style]}>
         <Text style={styles.text} numberOfLines={1}>

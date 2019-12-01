@@ -10,15 +10,15 @@ export default class SliderPlaygroundScene extends Component {
     canTouchTrack: false,
     onlyMaximumTrack: false,
     value: 0,
-  }
+  };
 
   _handleBoolChange = key => value => {
     this.setState({ [key]: value });
-  }
+  };
 
   _handleComplete = value => {
     this.setState({ value: Math.round(value) });
-  }
+  };
 
   renderContent = () => {
     return (
@@ -49,7 +49,7 @@ export default class SliderPlaygroundScene extends Component {
         />
       </View>
     );
-  }
+  };
 
   renderPlayground = () => {
     return (
@@ -71,7 +71,7 @@ export default class SliderPlaygroundScene extends Component {
         />
       </View>
     );
-  }
+  };
 
   render() {
     return (

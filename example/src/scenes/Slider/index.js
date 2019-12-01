@@ -17,16 +17,15 @@ export default class SliderScene extends Component {
         key: id,
         title: id,
         arrow: true,
-        onPress: () => TYSdk.Navigator.push({
-          id,
-          title: id,
-        }),
+        onPress: () =>
+          TYSdk.Navigator.push({
+            id,
+            title: id,
+          }),
       }));
   }
 
   render() {
-    return (
-      <TYFlatList data={this.data} />
-    );
+    return <TYFlatList contentContainerStyle={{ marginTop: 24 }} data={this.data} />;
   }
 }

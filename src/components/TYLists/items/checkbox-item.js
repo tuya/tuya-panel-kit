@@ -9,6 +9,7 @@ function CheckboxItem({ checked, reverse, disabled, onChange, ...props }) {
   const checkboxProps = omit(props, listItemPropNames);
   return (
     <ListItem
+      styles={{ contentLeft: { alignSelf: 'flex-start', marginTop: 4 } }}
       {...listItemProps}
       Icon={
         reverse ? (
@@ -25,7 +26,7 @@ function CheckboxItem({ checked, reverse, disabled, onChange, ...props }) {
         )
       }
       disabled={disabled}
-      onPress={() => onChange(!checked)}
+      onPress={() => onChange && onChange(!checked)}
     />
   );
 }

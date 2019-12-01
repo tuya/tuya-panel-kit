@@ -22,6 +22,6 @@ export default class CarouselScene extends Component {
   }
 
   render() {
-    return <TYFlatList data={this.data} />;
+    return <TYFlatList contentContainerStyle={{ marginTop: 24 }} data={this.data} />;
   }
 }

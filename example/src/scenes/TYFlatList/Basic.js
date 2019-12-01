@@ -21,7 +21,7 @@ export default class TYFlatListBasicScene extends Component {
       subTitle: `subTitle_${idx}`,
       arrow: true,
       iconSize: 24,
-      Icon: Res.hue,
+      Icon: idx === 0 ? '1' : Res.hue,
       onPress: this._handleItemPress(idx),
       renderItem: idx === 1 ? this.renderCustomItem : null,
     }));

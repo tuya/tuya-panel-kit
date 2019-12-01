@@ -1,14 +1,20 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-import { View, StyleSheet, ViewPropTypes } from 'react-native';
+import { StyleSheet, ViewPropTypes } from 'react-native';
 import { Rect } from 'react-native-svg';
 import TopBarContent from './TopBarContent';
 import TopBarAction from './TopBarAction';
 import RadialGradient from '../../gradient/radial-gradient';
 import LinearGradient from '../../gradient/linear-gradient';
-import { isIos, isIphoneX, winWidth, statusBarHeight } from '../../../utils/ratio';
-
-const HEIGHT = isIos ? (isIphoneX ? 88 : 64) : 56;
+import {
+  StyledTopBarContainer,
+  StyledTopBar,
+  TOPBAR_MARGIN,
+  TOPBAR_HEIGHT,
+  TOPBAR_ACTION_WIDTH,
+  TOPBAR_ACTION_TEXT_WIDTH,
+} from './styled';
+import { RatioUtils } from '../../../utils';
 
 export default class TopBarContainer extends PureComponent {
   static displayName = 'TopBar.Container';
@@ -21,7 +27,7 @@ export default class TopBarContainer extends PureComponent {
 
   static defaultProps = {
     style: null,
-    background: 'transparent',
+    background: null,
     contentStyle: null,
   };
 
@@ -41,7 +47,7 @@ export default class TopBarContainer extends PureComponent {
   renderBackground() {
     const { style, background } = this.props;
     if (background && typeof background === 'object' && background.stops) {
-      const { width = winWidth, height = HEIGHT } = StyleSheet.flatten([style]);
+      const { width = RatioUtils.winWidth, height = TOPBAR_HEIGHT } = StyleSheet.flatten([style]);
       const dimension = { width, height };
       const { x1 = '0%', y1 = '0%', x2 = '0%', y2 = '100%', stops } = background;
       if (Array.isArray(stops)) {
@@ -66,13 +72,23 @@ export default class TopBarContainer extends PureComponent {
     }
     // 适配Actions位置
     if (child.type === TopBarAction) {
-      const { spacing } = child.props;
-      const { width = TopBarAction.width } = StyleSheet.flatten([childStyle]);
+      const { spacing, source } = child.props;
+      const isText = typeof source === 'string';
+      const defaultWidth = isText ? TOPBAR_ACTION_TEXT_WIDTH : TOPBAR_ACTION_WIDTH;
+      const { width = defaultWidth } = StyleSheet.flatten([childStyle]);
       if (!this.hasContent) {
-        childStyle = [{ left: this.leftItemWidth }, childStyle];
+        childStyle = [
+          { left: this.leftItemWidth },
+          isText && { width: null, maxWidth: TOPBAR_ACTION_TEXT_WIDTH },
+          childStyle,
+        ];
         this.leftItemWidth += width + spacing * 2;
       } else {
-        childStyle = [{ right: this.rightItemWidth }, childStyle];
+        childStyle = [
+          { right: this.rightItemWidth },
+          isText && { width: null, maxWidth: TOPBAR_ACTION_TEXT_WIDTH },
+          childStyle,
+        ];
         this.rightItemWidth += width + spacing * 2;
       }
     }
@@ -87,13 +103,13 @@ export default class TopBarContainer extends PureComponent {
     if (child.type === TopBarContent) {
       let spacing = Math.max(this.leftItemWidth, this.rightItemWidth, 70);
       // Content最小宽度为100
-      spacing = Math.min(spacing, winWidth / 2 - 50);
+      spacing = Math.min(spacing, RatioUtils.winWidth / 2 - 50);
       return React.cloneElement(child, {
         ...child.props,
         style: {
           left: spacing,
           right: spacing,
-          width: winWidth - spacing * 2,
+          width: RatioUtils.winWidth - spacing * 2,
           ...child.props.style,
         },
       });
@@ -105,26 +121,14 @@ export default class TopBarContainer extends PureComponent {
     const { style, contentStyle, background, children } = this.props;
     const isColor = typeof background === 'string';
     return (
-      <View style={[{ height: HEIGHT }, isColor && { backgroundColor: background }, style]}>
+      <StyledTopBarContainer style={[isColor && { backgroundColor: background }, style]}>
         {this.renderBackground()}
-        <View style={[styles.wrapper, contentStyle]}>
+        <StyledTopBar style={[{ marginHorizontal: TOPBAR_MARGIN }, contentStyle]}>
           {React.Children.toArray(children)
             .map(this.renderAction)
             .map(this.renderContent)}
-        </View>
-      </View>
+        </StyledTopBar>
+      </StyledTopBarContainer>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  wrapper: {
-    flexDirection: 'row',
-    alignSelf: 'stretch',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    backgroundColor: 'transparent',
-    height: isIos ? HEIGHT - statusBarHeight : HEIGHT,
-    marginTop: isIos ? statusBarHeight : 0,
-  },
-});

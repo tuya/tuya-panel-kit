@@ -6,8 +6,9 @@ let uuid = 0;
 class Portal {
   constructor() {
     uuid += 1;
-    this.uuid = uuid;
+    this.uuid = `portal-direct-${uuid}`;
   }
+
   show = (ele, props) => {
     const userProps = Object.assign({}, { onMaskPress: this.hide }, props);
     TYEvent.emit('registerPortal', {
@@ -18,6 +19,7 @@ class Portal {
     });
     TYEvent.emit('showPortal', { uuid: this.uuid, show: true });
   };
+
   hide = () => {
     TYEvent.emit('showPortal', { uuid: this.uuid, show: false });
     TYEvent.emit('removePortal', this.uuid);

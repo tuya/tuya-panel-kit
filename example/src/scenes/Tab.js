@@ -19,7 +19,7 @@ class TabScene extends React.PureComponent {
       backgroundColor: '#fff',
     };
     const tabPanes = tabPaneArr.map(item => (
-      <Tab.TabPane key={`${item}`} tab={`${item}`}>
+      <Tab.TabPane key={`${item}`} tab={`${item}`} style={{ flex: 1 }}>
         <TYText style={contentStyle}>{`The No.${item} Tab`}</TYText>
       </Tab.TabPane>
     ));

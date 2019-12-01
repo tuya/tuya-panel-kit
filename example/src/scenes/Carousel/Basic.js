@@ -1,30 +1,41 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { Carousel } from 'tuya-panel-kit';
+import { View, StyleSheet, TouchableOpacity } from 'react-native';
+import { Carousel, TYText } from 'tuya-panel-kit';
 
-const CarouselScene = () => {
-  return (
-    <View style={styles.containerStyle}>
-      <Carousel
-        style={{ height: 180 }}
-        selectedIndex={0}
-        autoplay={true}
-        loop={true}
-        carouselChange={index => console.log(index)}
-      >
-        <View style={{ flex: 1, backgroundColor: 'red' }}>
-          <Text>Carousel 1</Text>
-        </View>
-        <View style={{ flex: 1, backgroundColor: 'blue' }}>
-          <Text>Carousel 2</Text>
-        </View>
-        <View style={{ flex: 1, backgroundColor: 'yellow' }}>
-          <Text>Carousel 3</Text>
-        </View>
-      </Carousel>
-    </View>
-  );
-};
+class CarouselScene extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      index: 0,
+    };
+  }
+  render() {
+    return (
+      <View style={styles.containerStyle}>
+        <Carousel
+          style={{ height: 180 }}
+          selectedIndex={this.state.index}
+          autoplay={true}
+          loop={true}
+          carouselChange={index => console.log(index)}
+        >
+          <View style={{ flex: 1, backgroundColor: 'red' }}>
+            <TYText style={{ color: '#333' }}>Carousel 1</TYText>
+          </View>
+          <View style={{ flex: 1, backgroundColor: 'blue' }}>
+            <TYText style={{ color: '#333' }}>Carousel 2</TYText>
+          </View>
+          <View style={{ flex: 1, backgroundColor: 'yellow' }}>
+            <TYText style={{ color: '#333' }}>Carousel 3</TYText>
+          </View>
+        </Carousel>
+        <TouchableOpacity onPress={() => this.setState({ index: 1 })}>
+          <TYText>Click Me!</TYText>
+        </TouchableOpacity>
+      </View>
+    );
+  }
+}
 
 export default CarouselScene;
 

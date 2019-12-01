@@ -7,12 +7,12 @@ class CircleScene extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      radius: 50
+      radius: 50,
     };
   }
   _handleNumberChange = key => value => {
     this.setState({ [key]: Math.round(value) });
-  }
+  };
   render() {
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>

@@ -2,7 +2,7 @@ import React from 'react';
 import { TouchableOpacity, Text, View } from 'react-native';
 import { Collapsible } from 'tuya-panel-kit';
 
-class CollapseScene extends React.PureComponent {
+class CollapseSence extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -32,7 +32,7 @@ class CollapseScene extends React.PureComponent {
             borderBottomWidth: 1,
           }}
         >
-          <Text style={{ color: '#333' }}>Click it</Text>
+          <Text style={{ color: '#333' }}>Click me</Text>
         </TouchableOpacity>
         <Collapsible
           collapsed={this.state.collapsed}
@@ -56,7 +56,7 @@ class CollapseScene extends React.PureComponent {
                 color: '#333',
               }}
             >
-              I am content
+              I am Content
             </Text>
           </View>
         </Collapsible>
@@ -65,4 +65,4 @@ class CollapseScene extends React.PureComponent {
   }
 }
 
-export default CollapseScene;
+export default CollapseSence;

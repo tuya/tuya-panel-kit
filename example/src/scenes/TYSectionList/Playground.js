@@ -1,7 +1,12 @@
 /* eslint-disable prettier/prettier */
 import React, { Component } from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
-import { TYSdk, TYFlatList } from 'tuya-panel-kit';
+import {
+  TYSdk,
+  // TYSectionList,
+  TYFlatList,
+  // TYListItem,
+} from 'tuya-panel-kit';
 import ExplorerLayout from '../../components/ExplorerLayout';
 import ControlBoolean from '../../components/ControlBoolean';
 

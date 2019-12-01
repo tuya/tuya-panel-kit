@@ -1,12 +1,15 @@
 import React from 'react';
 import { View, TouchableOpacity, StyleSheet } from 'react-native';
-import { DatePicker, TYText } from 'tuya-panel-kit';
+import { Button, DatePicker, TYText } from 'tuya-panel-kit';
 
 class DatePickerScene extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
       mode: 'date',
+      use12Hours: false,
+      isAmpmFirst: false,
+      isTimeFirst: false,
     };
   }
 
@@ -35,8 +38,32 @@ class DatePickerScene extends React.PureComponent {
   render() {
     return (
       <View>
-        <DatePicker mode={this.state.mode} />
+        <DatePicker
+          use12Hours={this.state.use12Hours}
+          isAmpmFirst={this.state.isAmpmFirst}
+          isTimeFirst={this.state.isTimeFirst}
+          mode={this.state.mode}
+          dateSortKeys={['month', 'day', 'year']}
+        />
         {this.renderModeSelect()}
+        <Button
+          size="large"
+          text="use12Hours"
+          textStyle={{ color: '#000' }}
+          onPress={() => this.setState({ use12Hours: !this.state.use12Hours })}
+        />
+        <Button
+          size="large"
+          text="isAmpmFirst"
+          textStyle={{ color: '#000' }}
+          onPress={() => this.setState({ isAmpmFirst: !this.state.isAmpmFirst })}
+        />
+        <Button
+          size="large"
+          text="isTimeFirst"
+          textStyle={{ color: '#000' }}
+          onPress={() => this.setState({ isTimeFirst: !this.state.isTimeFirst })}
+        />
       </View>
     );
   }

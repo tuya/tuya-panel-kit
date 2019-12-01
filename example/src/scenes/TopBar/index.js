@@ -6,6 +6,7 @@ import Gradient from './Gradient';
 import CustomContent from './CustomContent';
 import HideStatusBar from './HideStatusBar';
 import MultipleAction from './MultipleAction';
+import ThemedTopBar from './ThemedTopBar';
 
 export default class TopBarScene extends Component {
   static Basic = Basic;
@@ -13,6 +14,7 @@ export default class TopBarScene extends Component {
   static CustomContent = CustomContent;
   static HideStatusBar = HideStatusBar;
   static MultipleAction = MultipleAction;
+  static ThemedTopBar = ThemedTopBar;
 
   get data() {
     return subRouters
@@ -31,6 +33,6 @@ export default class TopBarScene extends Component {
   }
 
   render() {
-    return <TYFlatList data={this.data} />;
+    return <TYFlatList contentContainerStyle={{ marginTop: 24 }} data={this.data} />;
   }
 }

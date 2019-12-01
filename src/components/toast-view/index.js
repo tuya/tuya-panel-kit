@@ -1,37 +1,51 @@
-/* eslint-disable react/require-default-props */
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
   Animated,
   Text,
   View,
+  Image,
   StyleSheet,
   Easing,
-  Dimensions
+  Dimensions,
+  ViewPropTypes,
 } from 'react-native';
 
 const { width } = Dimensions.get('window');
 
 export default class ToastView extends React.PureComponent {
-
   static propTypes = {
+    style: ViewPropTypes.style,
+    contentStyle: ViewPropTypes.style,
+    textStyle: Text.propTypes.style,
+    imageStyle: Image.propTypes.style,
     text: PropTypes.string,
     show: PropTypes.bool.isRequired,
     onFinish: PropTypes.func.isRequired,
     showPosition: PropTypes.oneOf(['top', 'bottom', 'center']),
-  }
+    image: PropTypes.number,
+    children: PropTypes.any,
+  };
+
+  static defaultProps = {
+    style: null,
+    contentStyle: null,
+    textStyle: null,
+    imageStyle: null,
+    text: '',
+    showPosition: 'bottom',
+    image: null,
+    children: null,
+  };
 
   constructor(props) {
     super(props);
+    this._timerId = null;
     this.state = {
       fadeValue: new Animated.Value(0),
       text: props.text,
       show: props.show,
     };
-
-    this.startShowAnimation = this.startShowAnimation.bind(this);
-    this.startHideAnimation = this.startHideAnimation.bind(this);
-    this.timer = this.timer.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -47,39 +61,42 @@ export default class ToastView extends React.PureComponent {
   }
 
   componentWillUnmount() {
-    this.timer && clearTimeout(this.timer);
+    this._timerId && clearTimeout(this._timerId);
   }
 
   startShowAnimation = () => {
     this.state.fadeValue.setValue(0);
-    Animated.timing(
-      this.state.fadeValue,
-      {
-        toValue: 1,
-        duration: 500,
-        easing: Easing.linear
-      }
-    ).start(() => this.timer());
-  }
+    Animated.timing(this.state.fadeValue, {
+      toValue: 1,
+      duration: 500,
+      easing: Easing.linear,
+    }).start(() => this.timer());
+  };
 
-  startHideAnimation() {
+  startHideAnimation = () => {
     this.state.fadeValue.setValue(1);
-    Animated.timing(
-      this.state.fadeValue,
-      {
-        toValue: 0,
-        duration: 500,
-        easing: Easing.linear
-      }
-    ).start();
-  }
+    Animated.timing(this.state.fadeValue, {
+      toValue: 0,
+      duration: 500,
+      easing: Easing.linear,
+    }).start();
+  };
 
-  timer() {
-    setTimeout(() => this.props.onFinish(), 2000);
-  }
+  timer = () => {
+    clearTimeout(this._timerId);
+    this._timerId = setTimeout(() => this.props.onFinish(), 2000);
+  };
 
   render() {
-    const { showPosition = 'bottom' } = this.props;
+    const {
+      style,
+      contentStyle,
+      textStyle,
+      imageStyle,
+      showPosition = 'bottom',
+      image,
+      children,
+    } = this.props;
     let position = { justifyContent: 'flex-end' };
     if (showPosition === 'top') {
       position = { justifyContent: 'flex-start' };
@@ -87,12 +104,18 @@ export default class ToastView extends React.PureComponent {
       position = { justifyContent: 'center' };
     }
     return (
-      <View style={[styles.container, position]} pointerEvents="none">
-        <Animated.View style={[styles.textbg, {
-          opacity: this.state.fadeValue,
-        }]}
+      <View style={[styles.container, style, position]} pointerEvents="none">
+        <Animated.View
+          style={[
+            styles.textBg,
+            contentStyle,
+            {
+              opacity: this.state.fadeValue,
+            },
+          ]}
         >
-          <Text style={styles.text}>{this.state.text}</Text>
+          {typeof image === 'number' && <Image style={[styles.image, imageStyle]} source={image} />}
+          {children || <Text style={[styles.text, textStyle]}>{this.state.text}</Text>}
         </Animated.View>
       </View>
     );
@@ -100,7 +123,6 @@ export default class ToastView extends React.PureComponent {
 }
 
 const styles = StyleSheet.create({
-
   container: {
     flex: 1,
     position: 'absolute',
@@ -112,7 +134,9 @@ const styles = StyleSheet.create({
     top: 0,
   },
 
-  textbg: {
+  textBg: {
+    alignItems: 'center',
+    justifyContent: 'center',
     backgroundColor: `rgba(0, 0, 0, 0.6)`,
     borderRadius: 20,
     marginBottom: 64,
@@ -122,8 +146,12 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
   },
 
+  image: {
+    marginBottom: 6,
+  },
+
   text: {
     fontSize: 16,
     color: '#FFFFFF',
-  }
+  },
 });

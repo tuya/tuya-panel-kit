@@ -8,7 +8,6 @@ const Home = () => <TYSectionList contentContainerStyle={styles.container} secti
 const styles = StyleSheet.create({
   container: {
     alignSelf: 'stretch',
-    paddingTop: 16,
   },
 });
 

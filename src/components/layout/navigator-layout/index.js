@@ -164,8 +164,10 @@ export default class NavigatorLayout extends Component {
         topbarTextStyle={opts.topbarTextStyle}
         appOnline={devInfo.appOnline}
         deviceOnline={devInfo.deviceOnline}
+        capability={devInfo.capability}
         onBack={this._onBack}
         showMenu={route.id === 'main'}
+        isBleOfflineOverlay={opts.isBleOfflineOverlay}
         renderStatusBar={opts.renderStatusBar}
         renderTopBar={opts.renderTopBar}
         hideTopbar={!!opts.hideTopbar}
@@ -202,7 +204,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',
-    backgroundColor: '#F8F8F8',
   },
 
   topbarStyle: {},

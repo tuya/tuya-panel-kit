@@ -1,14 +1,8 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import { Modal } from 'tuya-panel-kit';
 import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
 
 class ManyModal extends React.Component {
-  static propTypes = {
-    text: PropTypes.string.isRequired,
-    changeText: PropTypes.func.isRequired,
-  };
-
   constructor(props) {
     super(props);
     this.state = {

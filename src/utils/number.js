@@ -35,6 +35,7 @@ const toFilledString = (num, count) => {
 };
 
 
+
 /**
  * @example
  * // 17 = 10001(2)
@@ -49,7 +50,6 @@ const toFilledString = (num, count) => {
  * @param {Number} idx, idx is reverse, and it begins 0
  * @returns {Number} a num
  */
-// eslint-disable-next-line
 const getBitValue = (num, idx) => ((num & (1 << idx)) >> idx);
 
 
@@ -67,7 +67,6 @@ const getBitValue = (num, idx) => ((num & (1 << idx)) >> idx);
  * @param {Number} idx, idx is reverse, and it begins 0
  * @returns {Number} a num, which the idx th digit change, 1 to 0, 0 to 1
  */
-// eslint-disable-next-line
 const changeBitValue = (num, idx) => (num ^ (1 << idx));
 
 
@@ -87,7 +86,6 @@ const changeBitValue = (num, idx) => (num ^ (1 << idx));
  */
 const setBitValueWithOne = (num, idx) => {
   const digit = getBitValue(num, idx);
-  // eslint-disable-next-line
   return (num + (1 - digit) * (1 << idx));
 };
 
@@ -108,7 +106,6 @@ const setBitValueWithOne = (num, idx) => {
  */
 const setBitValueWithZero = (num, idx) => {
   const digit = getBitValue(num, idx);
-  // eslint-disable-next-line
   return (num + (-1 * digit) * (1 << idx));
 };
 
@@ -125,9 +122,7 @@ const setBitValueWithZero = (num, idx) => {
  */
 const bytesToHexString = bytes => {
   return bytes.map(x => {
-    // eslint-disable-next-line
     const high = (x >>> 4).toString(16);
-    // eslint-disable-next-line
     const low = (x & 0xF).toString(16);
     return `${high}${low}`;
   }).join('');
@@ -166,7 +161,6 @@ const numToByteNumbers = (num, bytes = 2) => {
   const hex = Number(num).toString(16);
   const hexStr = CoreUtils.toFilled(hex, bytes * 2);
   const len = hexStr.length;
-  // eslint-disable-next-line
   return StringUtils.hexStringToNumber([hexStr, `0${hexStr}`][len & 1]);
 };
 
@@ -183,7 +177,6 @@ const numToByteNumbers = (num, bytes = 2) => {
  * @param {Number} low, a number which stands the low 8 number
  * @returns {Number} a number which converts from the `str` and the `low`
  */
-// eslint-disable-next-line
 const highLowToInt = (high, low) => (low + (high << 8));
 
 
@@ -198,7 +191,6 @@ const highLowToInt = (high, low) => (low + (high << 8));
  * @param {Number} num, a number
  * @returns {Array} a array of number, which the first is the high 8 number, the second is the low 8 number
  */
-// eslint-disable-next-line
 const intToHighLow = num => [num >> 8, num & 0xff];
 
 
@@ -229,7 +221,6 @@ const inMaxMin = (min, max, value) => Math.max(Math.min(max, value), min);
  * @param {Number} value, a number
  * @returns {Number}
  */
-// eslint-disable-next-line
 const scaleNumber = (scale, value) => (value / Math.pow(10, scale)).toFixed(scale).toString();
 
 
@@ -244,16 +235,15 @@ const scaleNumber = (scale, value) => (value / Math.pow(10, scale)).toFixed(scal
  * @returns {Number} Returns the range of numbers.
  */
 const range = (start = 0, end, step = 1) => {
-  let index = -1;
-  let length = Math.max(Math.ceil((end - start) / (step || 1)), 0);
-  const result = new Array(length);
+  let index = -1
+  let length = Math.max(Math.ceil((end - start) / (step || 1)), 0)
+  const result = new Array(length)
 
   while (length--) {
-    result[++index] = start;
-    // eslint-disable-next-line
-    start += step;
+    result[++index] = start
+    start += step
   }
-  return result;
+  return result
   // if ((end - start ) * step < 0) return [];
   // const len = ~~((end - start) / step) + 1;
   // return (new Array(len)).fill(1).map((_, idx) => (start + idx * step));
@@ -274,7 +264,7 @@ const range = (start = 0, end, step = 1) => {
  * @param {Number} max - 原先最大范围
  * @param {Number} newMin - 新最小范围
  * @param {Number} newMax - 新最大范围
- *
+ * 
  * @return {Number} newValue - 新范围内对应的值
  */
 const calcPosition = (value, min, max, newMin, newMax) => {

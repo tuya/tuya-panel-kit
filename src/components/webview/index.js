@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { WebView, StyleSheet } from 'react-native';
-import { viewHeight } from '../../utils/ratio';
+import { RatioUtils } from '../../utils';
+
+const { viewHeight } = RatioUtils;
 
 export default class H5WebView extends Component {
   static propTypes = {
@@ -45,7 +47,6 @@ export default class H5WebView extends Component {
     );
   }
 }
-
 
 const styles = StyleSheet.create({
   webView: {

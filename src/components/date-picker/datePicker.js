@@ -1,6 +1,6 @@
 /* eslint-disable react/require-default-props */
 import React from 'react';
-import { View, ViewPropTypes } from 'react-native';
+import { View, ViewPropTypes, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 import defaultLocale from './locale/en_US';
 import cnLocale from './locale/zh_CN';
@@ -16,6 +16,28 @@ const ONEDAY = 24 * 60 * 60 * 1000;
 function plusZero(n) {
   return n < 10 ? `0${n}` : `${n}`;
 }
+
+const capitalized = str => str.charAt(0).toUpperCase() + str.slice(1); // 首字母大写
+
+const sortColumnsAndValue = (dateSortKeys, cols, value) => {
+  if (!dateSortKeys || !Array.isArray(dateSortKeys) || dateSortKeys.length !== 3) {
+    dateSortKeys &&
+      console.warn(
+        `dateSortKeys: ${JSON.stringify(
+          dateSortKeys
+        )} 不合法，必须为长度为3的数组，且值必须为'year' || 'month' || 'day`
+      );
+    return { cols, value };
+  }
+  const sortedCols = [];
+  const sortedValue = [];
+  dateSortKeys.forEach(k => {
+    const colIndex = cols.findIndex(col => col.key === k);
+    colIndex !== -1 && sortedCols.push(cols[colIndex]);
+    colIndex !== -1 && sortedValue.push(value[colIndex]);
+  });
+  return { cols: sortedCols, value: sortedValue };
+};
 
 const formatColArray = (arrLength, min, labelLocal, isPlusZero) => {
   return Array.from(Array(arrLength), (v, k) => {
@@ -36,7 +58,8 @@ const setMonth = (date, month) => {
 
 class DatePicker extends React.Component {
   static propTypes = {
-    locale: PropTypes.string,
+    accessibilityLabel: PropTypes.string,
+    locale: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     mode: PropTypes.string,
     loop: PropTypes.bool,
     use12Hours: PropTypes.bool,
@@ -44,24 +67,38 @@ class DatePicker extends React.Component {
     maxDate: PropTypes.object,
     onDateChange: PropTypes.func,
     onValueChange: PropTypes.func,
+    /**
+     * `AM / PM` Picker项是否位于 `小时`及`分钟` 之前
+     */
     isAmpmFirst: PropTypes.bool,
+    /**
+     * `小时`及`分钟` Picker项是否位于 `年` `月` `日` 之前
+     */
+    isTimeFirst: PropTypes.bool,
     date: PropTypes.object,
     defaultDate: PropTypes.object,
     style: ViewPropTypes.style,
     pickerFontColor: PropTypes.string,
+    /**
+     * `年` `月` `日` 排序规则，若不提供则默认为年月日
+     */
+    dateSortKeys: PropTypes.array,
   };
 
   static defaultProps = {
+    accessibilityLabel: 'DatePicker',
     mode: DATE,
     loop: false,
     use12Hours: false,
     isAmpmFirst: false,
+    isTimeFirst: false,
     locale: 'en',
     minDate: new Date(2000, 0, 1, 0, 0, 0),
     maxDate: new Date(2030, 11, 31, 23, 59, 59),
     onDateChange: () => {},
     onValueChange: () => {},
     pickerFontColor: '#333',
+    dateSortKeys: null,
     // disabled: false,
   };
 
@@ -355,7 +392,7 @@ class DatePicker extends React.Component {
   };
   // get picker selectItems and currentValue
   getIndexAndCols = () => {
-    const { mode, use12Hours, isAmpmFirst } = this.props;
+    const { mode, use12Hours, isAmpmFirst, isTimeFirst, dateSortKeys } = this.props;
     const date = this.getDate();
     const cols = [];
     const value = [];
@@ -367,16 +404,18 @@ class DatePicker extends React.Component {
       };
     }
     if (mode === MONTH) {
-      return {
-        cols: this.getDateColsData(),
-        value: [`${date.getFullYear()}`, `${date.getMonth() + 1}`],
-      };
+      const unSortDateCols = this.getDateColsData();
+      const unSortDateValue = [`${date.getFullYear()}`, `${date.getMonth() + 1}`];
+      return sortColumnsAndValue(dateSortKeys, unSortDateCols, unSortDateValue);
     }
     if (mode === DATE) {
-      return {
-        cols: this.getDateColsData(),
-        value: [`${date.getFullYear()}`, `${date.getMonth() + 1}`, `${date.getDate()}`],
-      };
+      const unSortDateCols = this.getDateColsData();
+      const unSortDateValue = [
+        `${date.getFullYear()}`,
+        `${date.getMonth() + 1}`,
+        `${date.getDate()}`,
+      ];
+      return sortColumnsAndValue(dateSortKeys, unSortDateCols, unSortDateValue);
     }
     const time = this.getTimeColsData(date);
     let realhour = time.nowHour;
@@ -392,14 +431,20 @@ class DatePicker extends React.Component {
       }
     }
     if (mode === DATETIME) {
+      const unSortDateCols = this.getDateColsData();
+      const unSortDateValue = [
+        `${date.getFullYear()}`,
+        `${date.getMonth() + 1}`,
+        `${date.getDate()}`,
+      ];
+      const { cols: sortDateCols, value: sortDateValue } = sortColumnsAndValue(
+        dateSortKeys,
+        unSortDateCols,
+        unSortDateValue
+      );
       return {
-        cols: this.getDateColsData().concat(time.cols),
-        value: [
-          `${date.getFullYear()}`,
-          `${date.getMonth() + 1}`,
-          `${date.getDate()}`,
-          ...timeValue,
-        ],
+        cols: isTimeFirst ? [...time.cols, ...sortDateCols] : [...sortDateCols, ...time.cols],
+        value: isTimeFirst ? [...timeValue, ...sortDateValue] : [...sortDateValue, ...timeValue],
       };
     }
     if (mode === TIME) {
@@ -426,7 +471,23 @@ class DatePicker extends React.Component {
 
   render() {
     const { value, cols } = this.getIndexAndCols();
-    const { style, loop, pickerFontColor } = this.props;
+    const {
+      locale,
+      mode,
+      use12Hours,
+      minDate,
+      maxDate,
+      onDateChange,
+      onValueChange,
+      isAmpmFirst,
+      date,
+      defaultDate,
+      style,
+      loop,
+      pickerFontColor,
+      accessibilityLabel,
+      ...PickerProps
+    } = this.props;
     const multiStyle = {
       flexDirection: 'row',
       alignItems: 'center',
@@ -439,14 +500,16 @@ class DatePicker extends React.Component {
       <View style={[multiStyle, style]}>
         {cols.map((pItem, pindex) => (
           <Picker
+            {...PickerProps}
             style={{ flex: 1 }}
             key={pItem.key}
+            accessibilityLabel={`${accessibilityLabel}_${capitalized(pItem.key)}`}
             // disabled={disabled}
-            loop={loop}
+            loop={pItem.key !== 'ampm' && loop}
             selectedItemTextColor={pickerFontColor}
-            itemStyle={{ color: pickerFontColor }}
+            itemStyle={StyleSheet.flatten([{ color: pickerFontColor }, PickerProps.itemStyle])}
             selectedValue={value[pindex]}
-            onValueChange={date => this.onValueChange(date, pindex, pItem.key)}
+            onValueChange={dateValue => this.onValueChange(dateValue, pindex, pItem.key)}
           >
             {pItem.values.map(item => (
               <Picker.Item

@@ -1,22 +1,27 @@
 /* eslint-disable new-cap */
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import {
-  View,
-  Text,
-  Image,
-  TouchableOpacity,
-  ColorPropType,
-  StyleSheet,
-  ViewPropTypes,
-} from 'react-native';
+import { Text, TouchableOpacity, ColorPropType, ViewPropTypes } from 'react-native';
 import shallowCompare from 'react-addons-shallow-compare';
-import TYText from '../TYText';
-import IconFont from '../iconfont';
-import defaultSvg from '../iconfont/defaultSvg';
+import svgs from '../iconfont/svg/defaultSvg';
+import svgsART from '../iconfont/art/defaultSvg';
+import { CoreUtils, ThemeUtils } from '../../utils';
+import {
+  StyledItem,
+  StyledItemContent,
+  StyledItemLeft,
+  StyledItemCenter,
+  StyledItemRight,
+  StyledTitle,
+  StyledSubTitle,
+  StyledValueText,
+  StyledIconFont,
+  StyledImage,
+  StyledArrowImage,
+} from './styled';
 
-const DEFAULT_ICON_FONT_SIZE = 28;
-const DEFAULT_ICON_FONT_COLOR = '#8E8E93';
+const { isNil } = CoreUtils;
+const { parseToStyle } = ThemeUtils;
 
 export default class TYListItem extends Component {
   static propTypes = {
@@ -33,6 +38,17 @@ export default class TYListItem extends Component {
         subTitle: Text.propTypes.style,
       }),
     ]),
+    theme: PropTypes.shape({
+      boardBg: ColorPropType,
+      fontColor: ColorPropType,
+      subFontColor: ColorPropType,
+      descFontColor: ColorPropType,
+      cellLine: ColorPropType,
+      cellBg: ColorPropType,
+      cellRadius: PropTypes.number,
+      margin: PropTypes.array,
+      padding: PropTypes.array,
+    }),
     /**
      * 是否在右边栏显示 arrow 图标
      */
@@ -41,6 +57,12 @@ export default class TYListItem extends Component {
      * arrow 图标颜色
      */
     arrowColor: ColorPropType,
+    /**
+     * arrow 是否使用 IconFont 渲染，
+     * 目前 ART 在安卓上若渲染数量过多会导致崩溃，暂时默认不使用 IconFont渲染，
+     * 待后续迁移至 svg 实现可切换。
+     */
+    arrowUseIcon: PropTypes.bool,
     /**
      * 是否禁用列表点击事件，注意: Action点击事件不被此影响
      */
@@ -61,6 +83,11 @@ export default class TYListItem extends Component {
      * 子元素
      */
     children: PropTypes.element,
+    /**
+     * 图片的tintColor是否跟随iconColor，默认为`true`，
+     * 可用于某些图片不需要改变底色的场景
+     */
+    imageFollowIconColor: PropTypes.bool,
     /**
      * 左侧 Icon 类型，默认为 `auto`，根据传递进来的 `Icon` 类型自动判断，
      */
@@ -109,6 +136,10 @@ export default class TYListItem extends Component {
      */
     needUpdate: PropTypes.bool,
     /**
+     * 是否使用 ART 实现版本
+     */
+    useART: PropTypes.bool,
+    /**
      * 列表项点击回调
      */
     onPress: PropTypes.func,
@@ -116,13 +147,16 @@ export default class TYListItem extends Component {
 
   static defaultProps = {
     styles: {},
+    theme: {},
     arrow: false,
-    arrowColor: '#C8C8C8',
+    arrowColor: null,
+    arrowUseIcon: false,
     disabled: false,
     actionDisabled: false,
     title: null,
     subTitle: null,
     children: null,
+    imageFollowIconColor: true,
     iconSize: null,
     iconColor: null,
     iconType: 'auto',
@@ -130,22 +164,9 @@ export default class TYListItem extends Component {
     Icon: null,
     Action: null,
     needUpdate: true,
+    useART: false,
     onPress: null,
   };
-
-  constructor(props) {
-    super(props);
-    this._styles = [
-      'container',
-      'content',
-      'contentLeft',
-      'contentCenter',
-      'contentRight',
-      'title',
-      'subTitle',
-      'valueText',
-    ];
-  }
 
   shouldComponentUpdate(nextProps, nextState) {
     if (!nextProps.needUpdate) {
@@ -154,84 +175,75 @@ export default class TYListItem extends Component {
     return shallowCompare(this, nextProps, nextState);
   }
 
-  // merge style
-  getStyle(key) {
-    const { styles } = this.props;
-    const defaultStyle = defaultStyles[key];
-    const style = styles && styles[key];
-    return [defaultStyle, style];
+  getImageComponent(source) {
+    const { theme, imageFollowIconColor, iconSize, iconColor } = this.props;
+    return (
+      <StyledImage
+        size={iconSize}
+        iconColor={iconColor || theme.iconColor}
+        source={source}
+        imageFollowIconColor={imageFollowIconColor}
+      />
+    );
   }
 
-  renderIcon({ contentLeftStyle, valueTextStyle }) {
-    const { iconSize, iconType, iconColor, Icon } = this.props;
+  getIconComponent(data) {
+    const { theme, iconSize, iconColor, useART } = this.props;
+    const svgMap = useART ? svgsART : svgs;
+    return (
+      <StyledIconFont
+        size={iconSize}
+        name={svgMap[data] ? data : undefined} // 若 name 为undefined，则会使用d
+        d={data}
+        color={iconColor || theme.iconColor}
+        useART={useART}
+      />
+    );
+  }
+
+  getTextComponent(text) {
+    const { styles, theme } = this.props;
+    return (
+      <StyledValueText
+        style={[theme.descFontColor && { color: theme.descFontColor }, styles.valueText]}
+      >
+        {text}
+      </StyledValueText>
+    );
+  }
+
+  renderIcon() {
+    const { styles, iconType, Icon } = this.props;
     if (!Icon) return null;
     let iconComp;
     if (iconType !== 'auto') {
       switch (iconType) {
         case 'image':
-          iconComp = (
-            <Image
-              style={[
-                iconSize && { width: iconSize, height: iconSize },
-                iconColor && { tintColor: iconColor },
-              ]}
-              source={Icon}
-            />
-          );
+          iconComp = this.getImageComponent(Icon);
           break;
         case 'iconfont':
-          iconComp = (
-            <IconFont
-              size={iconSize || DEFAULT_ICON_FONT_SIZE}
-              name={defaultSvg[Icon] ? Icon : undefined} // 若 name 为undefined，则会使用d
-              d={Icon}
-              color={iconColor || DEFAULT_ICON_FONT_COLOR}
-            />
-          );
+          iconComp = this.getIconComponent(Icon);
           break;
         case 'text':
         default:
-          iconComp = <TYText style={valueTextStyle}>{Icon}</TYText>;
+          iconComp = this.getTextComponent(Icon);
           break;
       }
-      return <View style={contentLeftStyle}>{iconComp}</View>;
+      return <StyledItemLeft style={styles.contentLeft}>{iconComp}</StyledItemLeft>;
     }
     switch (typeof Icon) {
       case 'function':
         iconComp = Icon();
         break;
       case 'string':
-        iconComp = (
-          <IconFont
-            size={iconSize || DEFAULT_ICON_FONT_SIZE}
-            name={defaultSvg[Icon] ? Icon : undefined} // 若 name 为undefined，则会使用d
-            d={Icon}
-            color={iconColor || DEFAULT_ICON_FONT_COLOR}
-          />
-        );
+        iconComp = this.getIconComponent(Icon);
         break;
       case 'number':
-        iconComp = (
-          <Image
-            style={[
-              iconSize && { width: iconSize, height: iconSize },
-              iconColor && { tintColor: iconColor },
-            ]}
-            source={Icon}
-          />
-        );
+        iconComp = this.getImageComponent(Icon);
         break;
       case 'object': {
         if (Icon && Icon.uri) {
-          iconComp = (
-            <Image
-              style={[
-                iconSize && { width: iconSize, height: iconSize },
-                iconColor && { tintColor: iconColor },
-              ]}
-              source={Icon}
-            />
-          );
+          iconComp = this.getImageComponent(Icon);
         } else {
           iconComp = Icon;
         }
@@ -241,39 +253,24 @@ export default class TYListItem extends Component {
         iconComp = Icon;
         break;
     }
-    return <View style={contentLeftStyle}>{iconComp}</View>;
+    return <StyledItemLeft style={styles.contentLeft}>{iconComp}</StyledItemLeft>;
   }
 
-  renderAction({ valueTextStyle }) {
-    const { iconSize, actionType, iconColor, Action } = this.props;
+  renderAction() {
+    const { actionType, Action } = this.props;
     if (!Action) return null;
     let actionComp;
     if (actionType !== 'auto') {
       switch (actionType) {
         case 'image':
-          actionComp = (
-            <Image
-              style={[
-                iconSize && { width: iconSize, height: iconSize },
-                iconColor && { tintColor: iconColor },
-              ]}
-              source={Action}
-            />
-          );
+          actionComp = this.getImageComponent(Action);
           break;
         case 'iconfont':
-          actionComp = (
-            <IconFont
-              size={iconSize || DEFAULT_ICON_FONT_SIZE}
-              name={defaultSvg[Action] ? Action : undefined}
-              d={Action}
-              color={iconColor || DEFAULT_ICON_FONT_COLOR}
-            />
-          );
+          actionComp = this.getIconComponent(Action);
           break;
         case 'text':
         default:
-          actionComp = <TYText style={valueTextStyle}>{Action}</TYText>;
+          actionComp = this.getTextComponent(Action);
           break;
       }
       return actionComp;
@@ -283,30 +280,14 @@ export default class TYListItem extends Component {
         actionComp = Action();
         break;
       case 'string':
-        actionComp = <TYText style={valueTextStyle}>{Action}</TYText>;
+        actionComp = this.getTextComponent(Action);
         break;
       case 'number':
-        actionComp = (
-          <Image
-            style={[
-              iconSize && { width: iconSize, height: iconSize },
-              iconColor && { tintColor: iconColor },
-            ]}
-            source={Action}
-          />
-        );
+        actionComp = this.getImageComponent(Action);
         break;
       case 'object': {
         if (Action && Action.uri) {
-          actionComp = (
-            <Image
-              style={[
-                iconSize && { width: iconSize, height: iconSize },
-                iconColor && { tintColor: iconColor },
-              ]}
-              source={Action}
-            />
-          );
+          actionComp = this.getImageComponent(Action);
         } else {
           actionComp = Action;
         }
@@ -319,11 +300,19 @@ export default class TYListItem extends Component {
     return actionComp;
   }
 
+  renderArrow = () => {
+    const { theme, arrow, arrowColor, arrowUseIcon } = this.props;
+    if (!arrow) return null;
+    if (arrowUseIcon) {
+      return <StyledIconFont size={14} name="arrow" color={arrowColor || theme.arrowColor} />;
+    }
+    return <StyledArrowImage color={arrowColor || theme.arrowColor} />;
+  };
+
   render() {
     const {
-      styles, // eslint-disable-line no-unused-vars
-      arrow,
-      arrowColor,
+      styles,
+      theme,
       disabled,
       actionDisabled,
       title,
@@ -333,93 +322,47 @@ export default class TYListItem extends Component {
       onActionPress,
       ...touchProps
     } = this.props;
-    const [
-      containerStyle,
-      contentStyle,
-      contentLeftStyle,
-      contentCenterStyle,
-      contentRightStyle,
-      titleStyle,
-      subTitleStyle,
-      valueTextStyle,
-    ] = this._styles.map(key => this.getStyle(key));
+    // cellRadius can be 0
+    const radiusStyle = !isNil(theme.cellRadius) && { borderRadius: theme.cellRadius };
+    const itemStyle = [
+      radiusStyle,
+      theme.margin && parseToStyle(theme.margin, 'margin'),
+      theme.cellBg && { backgroundColor: theme.cellBg },
+      styles.container,
+    ];
+    const contentStyle = [
+      radiusStyle,
+      theme.padding && parseToStyle(theme.padding, 'padding'),
+      styles.content,
+    ];
+    const titleStyle = [theme.fontColor && { color: theme.fontColor }, styles.title];
+    const subTitleStyle = [theme.subFontColor && { color: theme.subFontColor }, styles.subTitle];
     return (
-      <TouchableOpacity
+      <StyledItem
         activeOpacity={0.8}
-        style={containerStyle}
+        style={itemStyle}
         disabled={disabled}
         onPress={onPress}
         {...touchProps}
       >
-        <View style={contentStyle}>
-          {this.renderIcon({ contentLeftStyle, valueTextStyle })}
-          <View style={contentCenterStyle}>
-            {!!title && (
-              <Text numberOfLines={1} style={titleStyle}>
-                {title}
-              </Text>
-            )}
-            {!!subTitle && <Text style={subTitleStyle}>{subTitle}</Text>}
+        <StyledItemContent style={contentStyle} disabled={disabled}>
+          {this.renderIcon()}
+          <StyledItemCenter style={styles.contentCenter}>
+            {!!title && <StyledTitle style={titleStyle}>{title}</StyledTitle>}
+            {!!subTitle && <StyledSubTitle style={subTitleStyle}>{subTitle}</StyledSubTitle>}
             {children}
-          </View>
-          <TouchableOpacity
+          </StyledItemCenter>
+          <StyledItemRight
             activeOpacity={0.8}
-            style={contentRightStyle}
+            style={styles.contentRight}
             disabled={actionDisabled}
             onPress={onActionPress || onPress}
           >
-            {this.renderAction({ valueTextStyle })}
-            {arrow && <IconFont style={{ marginLeft: 6 }} name="arrow" color={arrowColor} />}
-          </TouchableOpacity>
-        </View>
-      </TouchableOpacity>
+            {this.renderAction()}
+            {this.renderArrow()}
+          </StyledItemRight>
+        </StyledItemContent>
+      </StyledItem>
     );
   }
 }
-
-/* eslint-disable react-native/no-unused-styles */
-const defaultStyles = StyleSheet.create({
-  container: {
-    alignSelf: 'stretch',
-    minHeight: 48,
-    backgroundColor: '#fff',
-  },
-
-  content: {
-    flex: 1,
-    alignItems: 'center',
-    flexDirection: 'row',
-    paddingHorizontal: 16,
-  },
-
-  contentLeft: {
-    justifyContent: 'center',
-    marginRight: 10,
-  },
-
-  contentCenter: {
-    flex: 1,
-    justifyContent: 'center',
-  },
-
-  contentRight: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginLeft: 10,
-  },
-
-  title: {
-    fontSize: 14,
-    color: '#22242C',
-  },
-
-  subTitle: {
-    fontSize: 12,
-    color: '#A2A3AA',
-  },
-
-  valueText: {
-    fontSize: 14,
-    color: '#999',
-  },
-});

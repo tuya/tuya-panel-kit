@@ -12,7 +12,6 @@ const TabPane = props => {
 };
 
 TabPane.propTypes = {
-  key: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   tabWidth: PropTypes.number,
   tab: PropTypes.node,
 }
