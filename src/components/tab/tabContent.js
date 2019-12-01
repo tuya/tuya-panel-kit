@@ -1,6 +1,16 @@
+/* eslint-disable react-native/split-platform-components */
+/* eslint-disable react/require-default-props */
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ScrollView, Animated } from 'react-native';
+import {
+  ScrollView,
+  Animated,
+  Platform,
+  ViewPagerAndroid,
+  View,
+  ViewPropTypes,
+} from 'react-native';
 import Utils from './utils';
 
 const AnimatedScrollView = Animated.createAnimatedComponent(ScrollView);
@@ -8,21 +18,22 @@ const AnimatedScrollView = Animated.createAnimatedComponent(ScrollView);
 class TabContent extends React.Component {
   static defaultProps = {
     distanceToChangeTab: 0.3,
-    onScrollValueChange: () => {},
-    onChange: () => {},
-    animated: true,
     swipeable: true,
-  }
+    animated: true,
+    useViewPagerOnAndroid: true,
+  };
   static propTypes = {
     distanceToChangeTab: PropTypes.number,
-    containerWidth: PropTypes.number.isRequired,
+    containerWidth: PropTypes.number,
     onScrollValueChange: PropTypes.func,
     onChange: PropTypes.func,
-    panels: PropTypes.oneOfType([PropTypes.element, PropTypes.array]).isRequired,
-    activeKey: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-    animated: PropTypes.bool,
     swipeable: PropTypes.bool,
-  }
+    activeKey: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    panels: PropTypes.oneOfType([PropTypes.element, PropTypes.array]),
+    animated: PropTypes.bool,
+    useViewPagerOnAndroid: PropTypes.bool,
+    style: ViewPropTypes.style,
+  };
   constructor(props) {
     super(props);
     const activeIndex = Utils.getActiveIndex(props.panels, props.activeKey);
@@ -32,55 +43,69 @@ class TabContent extends React.Component {
       activeIndex,
     };
     this.nextTab = activeIndex;
+    this.distance = 0;
   }
-
   componentDidMount() {
+    this.prevTab = this.state.activeIndex;
     this.state.scrollX.addListener(({ value }) => {
       const scrollValue = value / this.props.containerWidth;
       this.props.onScrollValueChange(scrollValue);
     });
   }
-
   componentWillReceiveProps(nextProps) {
-    const { panels, activeKey } = nextProps;
-    if (this.props.activeKey !== activeKey && activeKey !== undefined) {
-      this.goToTab(Utils.getActiveIndex(panels, activeKey), true);
+    if (this.props.activeKey !== nextProps.activeKey && nextProps.activeKey !== undefined) {
+      this.goToTab(Utils.getActiveIndex(nextProps.panels, nextProps.activeKey), true);
     }
   }
-
+  componentDidUpdate() {
+    this.prevTab = this.state.activeIndex;
+  }
   onScroll = e => {
     if (e) {
-      Animated.event([{
-        nativeEvent: { contentOffset: { x: this.state.scrollX } }
-      }])(e);
+      if (Platform.OS === 'android') {
+        const { position, offset } = e.nativeEvent;
+        requestAnimationFrame(() => {
+          this.state.scrollX.setValue((position + offset) * this.props.containerWidth);
+        });
+      }
     }
-  }
-
+  };
   onMomentumScrollEnd = e => {
     const offsetX = e.nativeEvent.contentOffset.x;
     const page = this.getOffsetIndex(offsetX, this.props.containerWidth);
     if (this.state.activeIndex !== page) {
       this.goToTab(page, false);
     }
-  }
-
+  };
+  onPageSelected = e => {
+    const index = e.nativeEvent.position;
+    this.setState(
+      {
+        activeIndex: index,
+      },
+      () => {
+        this.props.onChange && this.props.onChange(index);
+      }
+    );
+    this.nextTab = index;
+  };
   setScrollView = scrollView => {
     this.scrollView = scrollView;
-  }
-
+    this.scrollTo(this.state.activeIndex);
+  };
   getTabPanes = () => {
     const { panels, activeKey } = this.props;
-    return React.Children.map(panels, child => {
+    return React.Children.map(panels, (child, index) => {
       if (!child) return;
       const isActive = activeKey === child.key;
-      return React.cloneElement(child, {
+      const pane = React.cloneElement(child, {
         isActive,
         children: child.props.children,
-        style: { width: this.props.containerWidth }
+        style: [child.props.style, { width: this.props.containerWidth }],
       });
+      return <View key={child.key || `tab_${index}`}>{pane}</View>;
     });
-  }
-
+  };
   getOffsetIndex = (current, width, threshold = this.props.distanceToChangeTab) => {
     const ratio = Math.abs(current / width);
     const direction = ratio > this.state.activeIndex ? 'right' : 'left';
@@ -93,7 +118,7 @@ class TabContent extends React.Component {
       default:
         return Math.round(ratio);
     }
-  }
+  };
   goToTab = (index, force) => {
     if (!force && this.nextTab === index) return;
     this.nextTab = index;
@@ -101,46 +126,81 @@ class TabContent extends React.Component {
     if (index >= 0 && index < panels.length) {
       if (!force) {
         onChange && onChange(index);
-        if (this.props.activeKey !== undefined) return;
       }
-      this.setState({
-        activeIndex: index,
-      }, () => {
-        this.scrollTo(this.state.activeIndex, this.props.animated);
-      });
+      this.setState(
+        {
+          activeIndex: index,
+        },
+        () => {
+          requestAnimationFrame(() => {
+            this.scrollTo(this.state.activeIndex, this.props.animated);
+          });
+        }
+      );
     }
-  }
+  };
   scrollTo = (index, animated = true) => {
+    if (Platform.OS === 'android' && this.props.useViewPagerOnAndroid) {
+      if (this.viewPager) {
+        if (animated) {
+          this.viewPager.setPage(index);
+        } else {
+          this.viewPager.setPageWithoutAnimation(index);
+        }
+        return;
+      }
+    }
     const { containerWidth } = this.props;
     if (containerWidth) {
       const offset = index * containerWidth;
-      // eslint-disable-next-line max-len
       if (this.scrollView && this.scrollView._component && this.scrollView._component.scrollTo) {
         this.scrollView._component.scrollTo({ x: offset, animated });
       }
     }
-  }
+  };
   render() {
+    const { swipeable, style, useViewPagerOnAndroid } = this.props;
+    if (Platform.OS === 'android' && useViewPagerOnAndroid) {
+      return (
+        <ViewPagerAndroid
+          key="$content"
+          keyboardDismissMode="on-drag"
+          initialPage={this.state.activeIndex}
+          scrollEnabled={swipeable}
+          onPageScroll={this.onScroll}
+          style={[{ flex: 1 }, style]}
+          onPageSelected={this.onPageSelected}
+          ref={ref => {
+            this.viewPager = ref;
+          }}
+        >
+          {this.getTabPanes()}
+        </ViewPagerAndroid>
+      );
+    }
     return (
       <AnimatedScrollView
         ref={this.setScrollView}
         key="scrollContent"
         horizontal={true}
-        onScroll={this.onScroll}
+        onScroll={Animated.event([{ nativeEvent: { contentOffset: { x: this.state.scrollX } } }], {
+          useNativeDriver: true,
+        })}
         automaticallyAdjustContentInsets={false}
         onMomentumScrollEnd={this.onMomentumScrollEnd}
-        scrollEventThrottle={16}
+        scrollEventThrottle={5}
         scrollsToTop={false}
         showsHorizontalScrollIndicator={false}
-        scrollEnabled={this.props.swipeable}
+        scrollEnabled={swipeable}
+        alwaysBounceVertical={false}
         directionalLockEnabled={true}
         keyboardDismissMode="on-drag"
         pagingEnabled={true}
+        contentContainerStyle={style}
       >
-        { this.getTabPanes() }
+        {this.getTabPanes()}
       </AnimatedScrollView>
     );
   }
 }
-
 export default TabContent;

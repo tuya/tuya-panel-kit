@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View } from 'react-native';
 import { Checkbox } from 'tuya-panel-kit';
 
 export default class CheckboxScene extends Component {
@@ -19,7 +19,6 @@ export default class CheckboxScene extends Component {
     return (
       <View>
         <Checkbox
-          style={styles.checkbox}
           checked={this.state.checked}
           disabled={this.state.disabled}
           onChange={checked => this.setState({ checked })}
@@ -27,7 +26,6 @@ export default class CheckboxScene extends Component {
           点击选中
         </Checkbox>
         <Checkbox
-          style={styles.checkbox}
           color="red"
           checked={this.state.disabled}
           hideOnUnselect={true}
@@ -39,9 +37,3 @@ export default class CheckboxScene extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  checkbox: {
-    backgroundColor: '#fff',
-  },
-});

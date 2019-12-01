@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StatusBar } from 'react-native';
 import { TYSdk, NavigatorLayout } from 'tuya-panel-kit';
 import composeLayout from './composeLayout';
 import configureStore from './redux/configureStore';
@@ -46,21 +46,24 @@ class MainLayout extends NavigatorLayout {
   */
   // eslint-disable-next-line
   hookRoute(route) {
-  //   switch (route.id) {
-  //     case 'main':
-  //       // eslint-disable-next-line
-  //       route.background = background;
-  //       break;
+    //   switch (route.id) {
+    //     case 'main':
+    //       // eslint-disable-next-line
+    //       route.background = background;
+    //       break;
 
-  //     default:
-  //       break;
-  //   }
+    //     default:
+    //       break;
+    //   }
+    const { theme } = this.props;
+    const { type } = theme;
     return {
       ...route,
-      style: styles.fullView,
-      topbarStyle: { backgroundColor: '#ff6024' },
-      showOfflineView: false,
+      showOfflineView: true,
       title: route.id === 'main' ? 'Tuya RN UI Explorer' : route.title,
+      renderStatusBar: () => (
+        <StatusBar barStyle={type === 'light' ? 'default' : 'light-content'} />
+      ),
     };
   }
 
@@ -73,6 +76,11 @@ class MainLayout extends NavigatorLayout {
     if (!_.isEmpty(devInfo)) {
       schema = devInfo.schema || {};
       uiConfig = devInfo.uiConfig || {};
+    }
+
+    if (route.element) {
+      const H5WebView = route.element;
+      return <H5WebView navigator={navigator} {...route} />;
     }
 
     const router = routers.find(r => r.id === route.id);
@@ -92,11 +100,5 @@ class MainLayout extends NavigatorLayout {
     return Scene;
   }
 }
-
-const styles = StyleSheet.create({
-  fullView: {
-    backgroundColor: '#f8f8f8',
-  },
-});
 
 export default composeLayout(store, MainLayout);

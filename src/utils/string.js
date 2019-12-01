@@ -1,5 +1,27 @@
 import CoreUtils from './core';
 
+// codePointAt polyfill
+const codePointAt = (that, pos) => {
+  let s = String(that);
+  const position = parseInt(pos);
+  const size = s.length;
+  let first, second;
+  if (position < 0 || position >= size) return undefined;
+  first = s.charCodeAt(position);
+  return first < 0xd800 || first > 0xdbff || position + 1 === size
+    || (second = s.charCodeAt(position + 1)) < 0xdc00 || second > 0xdfff
+      ? first : (first - 0xd800 << 10) + (second - 0xdc00) + 0x10000;
+};
+
+const hexEncode = (str) => {
+  let result;
+  for (const s of str) {
+    let hex = codePointAt(s, 0).toString(16);
+    result += hex;
+  }
+  return result;
+}
+
 
 /**
  * 等同于原来的 hexToBytes
@@ -60,12 +82,12 @@ const camelize = str => {
     return `${str}`;
   }
 
-  const ret = str.replace(
-    /[-_\s]+(.)?/g,
-    (match, chr) => (chr ? chr.toUpperCase() : ''),
+  str = str.replace(
+    /[\-_\s]+(.)?/g,
+    (match, chr) => chr ? chr.toUpperCase() : '',
   );
   // Ensure 1st char is always lowercase
-  return ret.substr(0, 1).toLowerCase() + ret.substr(1);
+  return str.substr(0, 1).toLowerCase() + str.substr(1);
 };
 
 

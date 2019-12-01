@@ -1,12 +1,17 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable react/no-unused-state */
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  View, ScrollView,
+  View,
+  ScrollView,
   TouchableOpacity,
-  Text, StyleSheet,
-  Dimensions, Animated,
-  Platform, ViewPropTypes
+  Text,
+  StyleSheet,
+  Dimensions,
+  Animated,
+  Platform,
+  ViewPropTypes,
 } from 'react-native';
 import Utils from './utils';
 import { RatioUtils } from '../../utils';
@@ -24,9 +29,11 @@ class TabBar extends React.Component {
     tabBarUnderlineStyle: {},
     tabBarStyle: {},
     tabsContainerStyle: {},
-  }
+    tabBarPosition: 'top',
+  };
 
   static propTypes = {
+    tabNavAccessibilityLabel: PropTypes.string.isRequired,
     onTabClick: PropTypes.func.isRequired,
     scrollValue: PropTypes.object.isRequired,
     tabBarBackgroundColor: PropTypes.string,
@@ -40,7 +47,8 @@ class TabBar extends React.Component {
     tabBarUnderlineStyle: ViewPropTypes.style,
     tabBarStyle: ViewPropTypes.style,
     tabsContainerStyle: ViewPropTypes.style,
-  }
+    tabBarPosition: PropTypes.oneOf(['top', 'bottom']),
+  };
 
   constructor(props) {
     super(props);
@@ -60,19 +68,19 @@ class TabBar extends React.Component {
   onPress = index => {
     const { onTabClick } = this.props;
     onTabClick && onTabClick(index);
-  }
+  };
 
   onTabLayout = (page, event) => {
-    const { x, width, height, } = event.nativeEvent.layout;
+    const { x, width, height } = event.nativeEvent.layout;
     this._tabsMeasurements[page] = { left: x, right: x + width, width, height };
     this.updateView({ value: this.props.scrollValue._value });
-  }
+  };
 
   onContainerLayout = e => {
     this._containerLayout = e.nativeEvent.layout;
     this.setState({ containerWidth: this._containerLayout.width });
     this.updateView({ value: this.props.scrollValue._value });
-  }
+  };
 
   onTabContainerLayout = e => {
     this._tabContainerLayout = e.nativeEvent.layout;
@@ -83,21 +91,26 @@ class TabBar extends React.Component {
     }
     this.setState({ tabContainerWidth: width });
     this.updateView({ value: this.props.scrollValue._value });
-  }
+  };
 
   getTabs = () => {
     const {
-      panels, activeKey,
+      panels,
+      activeKey,
       tabDefaultColor,
-      tabTextStyle, tabStyle,
+      tabTextStyle,
+      tabStyle,
       tabActiveTextStyle,
-      page
+      page,
+      tabNavAccessibilityLabel,
     } = this.props;
     return React.Children.map(panels, (child, index) => {
       if (!child) return;
       const isActive = activeKey === child.key;
       // eslint-disable-next-line max-len
-      const tabWidth = child.props.tabWidth ? child.props.tabWidth : this.state.containerWidth / Math.min(page, panels.length);
+      const tabWidth = child.props.tabWidth
+        ? child.props.tabWidth
+        : this.state.containerWidth / Math.min(page, panels.length);
       const realTabStyle = [styles.tab, tabStyle, { width: tabWidth }];
       const finalTabTextStyle = [
         styles.tabText,
@@ -111,33 +124,35 @@ class TabBar extends React.Component {
           activeOpacity={1}
           onPress={() => this.onPress(index)}
           key={index}
+          accessibilityLabel={`${tabNavAccessibilityLabel}_${index}`}
           style={tabStyle}
           onLayout={e => this.onTabLayout(index, e)}
         >
           <View style={realTabStyle}>
-            {
-              typeof child.props.tab === 'string' ? (
-                <Text numberOfLines={1} style={finalTabTextStyle}>{child.props.tab}</Text>
-              ) : child.props.tab
-            }
+            {typeof child.props.tab === 'string' ? (
+              <Text numberOfLines={1} style={finalTabTextStyle}>
+                {child.props.tab}
+              </Text>
+            ) : (
+              child.props.tab
+            )}
           </View>
         </TouchableOpacity>
       );
     });
-  }
+  };
 
   getUnderLine = () => {
     const { tabBarUnderlineStyle } = this.props;
     const tabUnderlineStyle = [
       { position: 'absolute', bottom: 0 },
       styles.underline,
+      { width: this.state.underlineWidth },
       tabBarUnderlineStyle,
-      { left: this.state.underlineLeft, width: this.state.underlineWidth },
+      { left: this.state.underlineLeft },
     ];
-    return (
-      <Animated.View style={tabUnderlineStyle} />
-    );
-  }
+    return <Animated.View style={tabUnderlineStyle} />;
+  };
 
   updateTabUnderline = (page, offset, count) => {
     const { left, right } = this._tabsMeasurements[page];
@@ -157,13 +172,13 @@ class TabBar extends React.Component {
       this.state.underlineWidth.setValue(newLineRight - newLineLeft);
       this.state.underlineLeft.setValue(newLineLeft);
     }
-  }
+  };
 
   updateTabPanel = (page, offset) => {
     const containerWidth = this._containerLayout.width;
     const tabWidth = this._tabsMeasurements[page].width;
     const nextTabMeasurements = this._tabsMeasurements[page + 1];
-    const nextTabWidth = nextTabMeasurements && nextTabMeasurements.width || 0;
+    const nextTabWidth = (nextTabMeasurements && nextTabMeasurements.width) || 0;
     const tabOffset = this._tabsMeasurements[page].left;
     const absolutePageOffset = offset * tabWidth;
     let newScrollX = tabOffset + absolutePageOffset;
@@ -174,18 +189,23 @@ class TabBar extends React.Component {
       this.scrollView.scrollTo({ x: newScrollX, y: 0, animated: true });
     } else {
       // eslint-disable-next-line max-len
-      const rightBoundScroll = Math.max(this._tabContainerLayout.width - (this._containerLayout.width), 0);
+      const rightBoundScroll = Math.max(
+        this._tabContainerLayout.width - this._containerLayout.width,
+        0
+      );
       newScrollX = newScrollX > rightBoundScroll ? rightBoundScroll : newScrollX;
       this.scrollView.scrollTo({ x: newScrollX, y: 0, animated: true });
     }
-  }
+  };
 
   measureIsReady = (page, isLastTab) => {
-    return this._tabsMeasurements[page] &&
+    return (
+      this._tabsMeasurements[page] &&
       (isLastTab || this._tabsMeasurements[page + 1]) &&
       this._tabContainerLayout &&
-      this._containerLayout;
-  }
+      this._containerLayout
+    );
+  };
 
   updateView = offset => {
     const position = Math.floor(offset.value);
@@ -199,23 +219,35 @@ class TabBar extends React.Component {
       this.updateTabPanel(position, pageOffset);
       this.updateTabUnderline(position, pageOffset, tabCount);
     }
-  }
+  };
 
   render() {
     const {
-      panels, activeKey,
+      panels,
+      activeKey,
       tabBarStyle,
       tabsContainerStyle,
-      tabBarBackgroundColor
+      tabBarBackgroundColor,
+      tabBarPosition,
     } = this.props;
     const page = Utils.getActiveIndex(panels, activeKey);
+    const borderPosition =
+      tabBarPosition === 'top'
+        ? {
+          borderBottomWidth: 1,
+        }
+        : {
+          borderTopWidth: 1,
+        };
     return (
       <View
         onLayout={this.onContainerLayout}
-        style={[styles.container, tabBarStyle]}
+        style={[styles.container, borderPosition, tabBarStyle]}
       >
         <ScrollView
-          ref={scrollView => { this.scrollView = scrollView; }}
+          ref={scrollView => {
+            this.scrollView = scrollView;
+          }}
           horizontal={true}
           showsHorizontalScrollIndicator={false}
           showsVerticalScrollIndicator={false}
@@ -227,10 +259,14 @@ class TabBar extends React.Component {
           <View
             onLayout={this.onTabContainerLayout}
             // eslint-disable-next-line max-len
-            style={[styles.tabContainer, tabsContainerStyle, { backgroundColor: tabBarBackgroundColor }]}
+            style={[
+              styles.tabContainer,
+              tabsContainerStyle,
+              { backgroundColor: tabBarBackgroundColor },
+            ]}
           >
-            { this.getTabs() }
-            { this.getUnderLine() }
+            {this.getTabs()}
+            {this.getUnderLine()}
           </View>
         </ScrollView>
       </View>
@@ -240,38 +276,36 @@ class TabBar extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    height: convert(43.5),
-    borderBottomColor: '#eee',
-    borderBottomWidth: 1,
+    minHeight: convert(43.5),
+    borderColor: '#eee',
   },
   tabContainer: {
     flex: 1,
     flexDirection: 'row',
-    height: convert(43.5),
     backgroundColor: '#fff',
     justifyContent: 'space-around',
   },
   tab: {
-    height: convert(43.5),
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
     paddingTop: 0,
     paddingBottom: 0,
     paddingRight: convert(2),
     paddingLeft: convert(2),
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   tabText: {
     fontSize: convert(15),
     color: '#000',
   },
   activeText: {
-    color: '#108ee9'
+    color: '#108ee9',
   },
   underline: {
     height: convert(2),
     backgroundColor: '#108ee9',
-  }
+  },
 });
 
 export default TabBar;

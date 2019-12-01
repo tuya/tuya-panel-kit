@@ -1,5 +1,5 @@
 import { TYSdk } from 'tuya-panel-kit';
-import { componentsRouters } from './routers';
+import { themeRouter, componentsRouters } from './routers';
 import ComponentInfo from '../../../package.json';
 
 function dataProducers(router) {
@@ -19,5 +19,9 @@ export default [
   {
     title: `${ComponentInfo.name}: ${ComponentInfo.version}`,
     data: dataProducers(componentsRouters),
+  },
+  {
+    title: '测试主题配置',
+    data: dataProducers(themeRouter),
   },
 ];

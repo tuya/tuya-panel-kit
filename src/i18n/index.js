@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable no-param-reassign */
 /* eslint-disable guard-for-in */
 /* eslint-disable max-len, no-restricted-syntax */
@@ -33,30 +34,34 @@ export default class I18N {
 
   forceUpdateNetworkLang(productId) {
     return new Promise((resolve, reject) => {
-      TYSdk.apiRequest({
-        a: 'tuya.m.i18n.get',
-        postData: {
-          productId,
-          moduleName: 'h5',
-          endId: 2,
-          osId: 0
+      TYSdk.apiRequest(
+        {
+          a: 'tuya.m.i18n.get',
+          postData: {
+            productId,
+            moduleName: 'h5',
+            endId: 2,
+            osId: 0,
+          },
+          v: '1.0',
         },
-        v: '1.0'
-      }, d => {
-        const data = JsonUtils.parseJSON(d);
-        if (__DEV__) {
-          console.info('tuya.m.i18n.get', data);
+        d => {
+          const data = JsonUtils.parseJSON(d);
+          if (__DEV__) {
+            console.info('tuya.m.i18n.get', data);
+          }
+          if (data) {
+            this.strings = this.mergeLanguage(this.strings, data);
+            this.buildLanguage(this.language);
+            resolve(data);
+          } else {
+            reject();
+          }
+        },
+        error => {
+          reject(error);
         }
-        if (data) {
-          this.strings = this.mergeLanguage(this.strings, data);
-          this.buildLanguage(this.language);
-          resolve(data);
-        } else {
-          reject();
-        }
-      }, error => {
-        reject(error);
-      });
+      );
     });
   }
 
@@ -167,8 +172,10 @@ export default class I18N {
   }
 
   getLang(key, defaultString) {
-    return typeof this[key] !== 'undefined' ? this[key]
-      : typeof defaultString !== 'undefined' ? defaultString
+    return typeof this[key] !== 'undefined'
+      ? this[key]
+      : typeof defaultString !== 'undefined'
+        ? defaultString
         : `I18N@${key}`;
   }
 

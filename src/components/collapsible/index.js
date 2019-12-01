@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Animated, Easing, ViewPropTypes, StyleSheet } from 'react-native';
@@ -89,7 +90,7 @@ class Collapsible extends React.PureComponent {
 
   measureContent = callback => {
     this.setState({ measuring: true }, () => {
-      window.requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
         if (!this.content) {
           this.setState({ measuring: false }, () => callback(this.props.collapsedHeight));
         } else {

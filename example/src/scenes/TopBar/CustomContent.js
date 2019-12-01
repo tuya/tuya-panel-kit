@@ -1,19 +1,16 @@
 import React from 'react';
-import { View, Text, Platform } from 'react-native';
+import { View, Text } from 'react-native';
 import { TYSdk, TopBar } from 'tuya-panel-kit';
 
 const TYNative = TYSdk.native;
 
 const Res = {
-  back:
-    Platform.OS === 'ios'
-      ? require('./res/common_back_ios.png')
-      : require('./res/common_back_android.png'),
+  back: require('./res/common_back_ios.png'),
 };
 
 export default () => (
   <TopBar.Container background="#000">
-    <TopBar.Action source={Res.back} onPress={TYSdk.Navigator.pop} />
+    <TopBar.Action color="#fff" source={Res.back} onPress={TYSdk.Navigator.pop} />
     <TopBar.Content>
       <View
         style={{
@@ -28,6 +25,7 @@ export default () => (
       </View>
     </TopBar.Content>
     <TopBar.Action
+      color="#fff"
       name="edit"
       onPress={() => {
         TYNative.simpleTipDialog('click edit', () => {});

@@ -10,16 +10,11 @@ module.exports = {
     return [__dirname, path.resolve(__dirname, '..')];
   },
   getProvidesModuleNodeModules() {
-    return [...dependencies, ...peerDependencies];
+    return [...dependencies, ...peerDependencies, 'xmlbuilder', 'simple-plist'];
   },
   getBlacklistRE() {
     return blacklist([
-      new RegExp(
-        `^${escape(path.resolve(__dirname, '..', 'node_modules'))}\\/.*$`
-      ),
-      new RegExp(
-        `^${escape(path.resolve(__dirname, '..', 'demos'))}\\/.*$`
-      ),
+      new RegExp(`^${escape(path.resolve(__dirname, '..', 'node_modules'))}\\/.*$`),
     ]);
   },
 };

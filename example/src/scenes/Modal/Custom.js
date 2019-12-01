@@ -19,7 +19,6 @@ export default class CustomModalScene extends React.Component {
   };
 
   tap = () => {
-    console.log(Modal);
     Modal.render(
       <View>
         <Text style={styles.textStyle}>{this.state.modalText}</Text>

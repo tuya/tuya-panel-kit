@@ -1,0 +1,357 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`bar Group basic render 1`] = `
+<View
+  style={Object {}}
+  wrapperStyle={Object {}}
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+        },
+        Object {
+          "width": 750,
+        },
+        Object {
+          "backgroundColor": "#fff",
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "marginHorizontal": 16,
+            "paddingVertical": 8,
+          },
+          false,
+          Object {},
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "flexDirection": "row",
+            "justifyContent": "space-around",
+          }
+        }
+      >
+        <Button
+          size="normal"
+          text="1"
+        />
+      </View>
+    </View>
+  </View>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+        },
+        Object {
+          "width": 750,
+        },
+        Object {
+          "backgroundColor": "rgba(255, 255, 255, 0.08)",
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "marginHorizontal": 16,
+            "paddingVertical": 8,
+          },
+          false,
+          Object {},
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "flexDirection": "row",
+            "justifyContent": "space-around",
+          }
+        }
+      >
+        <Button
+          size="normal"
+          text="2"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`bar Group divide 1`] = `
+<View
+  style={Object {}}
+  wrapperStyle={Object {}}
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+        },
+        Object {
+          "width": 750,
+        },
+        Object {
+          "backgroundColor": "#fff",
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "marginHorizontal": 16,
+            "paddingVertical": 8,
+          },
+          Object {
+            "borderBottomColor": "#E5EAF3",
+            "borderBottomWidth": 0.5,
+          },
+          Object {},
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "flexDirection": "row",
+            "justifyContent": "space-around",
+          }
+        }
+      >
+        <Button
+          size="normal"
+          text="1"
+        />
+      </View>
+    </View>
+  </View>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+        },
+        Object {
+          "width": 750,
+        },
+        Object {
+          "backgroundColor": "#fff",
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "marginHorizontal": 16,
+            "paddingVertical": 8,
+          },
+          false,
+          Object {},
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "flexDirection": "row",
+            "justifyContent": "space-around",
+          }
+        }
+      >
+        <Button
+          size="normal"
+          text="2"
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`bar Group swiper 1`] = `
+<View
+  style={Object {}}
+  wrapperStyle={Object {}}
+>
+  <Carousel
+    selectIndex={0}
+  >
+    <View
+      onLayout={[Function]}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+          },
+          Object {
+            "width": 750,
+          },
+          Object {
+            "backgroundColor": "#fff",
+          },
+          Object {},
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "marginHorizontal": 16,
+              "paddingVertical": 8,
+            },
+            false,
+            Object {},
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "flexDirection": "row",
+              "justifyContent": "space-around",
+            }
+          }
+        >
+          <Button
+            size="normal"
+            text="1"
+          />
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+          },
+          Object {
+            "width": 750,
+          },
+          Object {
+            "backgroundColor": "#fff",
+          },
+          Object {},
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "marginHorizontal": 16,
+              "paddingVertical": 8,
+            },
+            false,
+            Object {},
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "flexDirection": "row",
+              "justifyContent": "space-around",
+            }
+          }
+        >
+          <Button
+            size="normal"
+            text="2"
+          />
+        </View>
+      </View>
+    </View>
+  </Carousel>
+</View>
+`;
+
+exports[`bar basic render 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+      },
+      Object {
+        "width": 375,
+      },
+      Object {
+        "backgroundColor": "#fff",
+      },
+      Object {},
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "marginHorizontal": 16,
+          "paddingVertical": 8,
+        },
+        false,
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "flexDirection": "row",
+          "justifyContent": "space-around",
+        }
+      }
+    >
+      <Button
+        size="normal"
+        text="1"
+      />
+    </View>
+  </View>
+</View>
+`;

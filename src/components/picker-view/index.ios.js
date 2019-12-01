@@ -1,12 +1,15 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-import Picker from './picker';
+import { StyleSheet, ColorPropType, PickerIOS } from 'react-native';
+import { ThemeUtils } from '../../utils';
+
+const { getTheme, ThemeConsumer } = ThemeUtils;
 
 const MAX_ITEM_NUM = 1260;
 
-export default class PickerView extends PureComponent {
+export class PickerView extends PureComponent {
   static propTypes = {
-    ...Picker.propTypes,
+    ...PickerIOS.propTypes,
     loop: PropTypes.bool,
     children: PropTypes.array.isRequired,
   };
@@ -17,10 +20,11 @@ export default class PickerView extends PureComponent {
 
   constructor(props) {
     super(props);
-    this._loopTimes = Math.round(MAX_ITEM_NUM / (props.children.length || 0));
+    const { children, selectedValue } = props;
+    this._loopTimes = children.length > 0 ? Math.round(MAX_ITEM_NUM / children.length) : 0;
     this.state = {
       loopIdx: Math.floor(this._loopTimes / 2),
-      selectedValue: props.selectedValue,
+      selectedValue,
     };
   }
 
@@ -44,7 +48,7 @@ export default class PickerView extends PureComponent {
   };
 
   render() {
-    const { loop, children, ...resetProps } = this.props;
+    const { loop, children, ...rest } = this.props;
     let pickerItems = this.props.children;
     if (loop) {
       const childArray = React.Children.toArray(children);
@@ -66,11 +70,49 @@ export default class PickerView extends PureComponent {
       ? `${this.state.loopIdx}-${this.state.selectedValue}`
       : this.state.selectedValue;
     return (
-      <Picker {...resetProps} selectedValue={selectedValue} onValueChange={this._handleValueChange}>
+      <PickerIOS {...rest} selectedValue={selectedValue} onValueChange={this._handleValueChange}>
         {pickerItems}
-      </Picker>
+      </PickerIOS>
     );
   }
 }
 
-PickerView.Item = Picker.Item;
+PickerView.Item = PickerIOS.Item;
+
+const ThemedPickerView = props => {
+  const { theme: localTheme, itemStyle, ...rest } = props;
+  return (
+    <ThemeConsumer>
+      {fullTheme => {
+        const theme = {
+          ...fullTheme,
+          picker: { ...fullTheme.picker, ...localTheme },
+        };
+        const propsWithTheme = { theme, ...rest };
+        const fontSize = getTheme(propsWithTheme, 'picker.fontSize');
+        const fontColor = getTheme(propsWithTheme, 'picker.fontColor');
+        const themedItemStyle = StyleSheet.flatten([
+          typeof fontSize === 'number' && { fontSize },
+          fontColor && { color: fontColor },
+          itemStyle,
+        ]);
+        return <PickerView itemStyle={themedItemStyle} {...rest} />;
+      }}
+    </ThemeConsumer>
+  );
+};
+
+ThemedPickerView.Item = PickerIOS.Item;
+
+ThemedPickerView.propTypes = {
+  theme: PropTypes.shape({
+    fontSize: PropTypes.number,
+    fontColor: ColorPropType,
+  }),
+};
+
+ThemedPickerView.defaultProps = {
+  theme: {},
+};
+
+export default ThemedPickerView;

@@ -1,9 +1,8 @@
-import Color from 'color';
+import parseColor from 'color';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { View, TouchableWithoutFeedback, StyleSheet, ViewPropTypes } from 'react-native';
-import TYText from '../../TYText';
-import { isIos } from '../../../utils/ratio';
+import { Text, TouchableWithoutFeedback, ViewPropTypes } from 'react-native';
+import { StyledTopBarContent, StyledTopBarTitle, StyledTopBarSubTitle } from './styled';
 
 const TopBarContent = ({
   style,
@@ -16,34 +15,27 @@ const TopBarContent = ({
   children,
   onPress,
 }) => {
-  const alignItemsMap = {
-    left: 'flex-start',
-    center: 'center',
-    right: 'flex-end',
-  };
   const titleColor = color;
-  // eslint-disable-next-line new-cap
-  const subTitleColor = Color(color)
-    .alpha(0.6)
-    .rgbString();
+  const subTitleColor =
+    titleColor &&
+    parseColor(color)
+      .alpha(0.6)
+      .rgbString();
   return (
-    <TouchableWithoutFeedback onPress={onPress}>
-      <View style={[styles.wrapper, { alignItems: alignItemsMap[position] }, style]}>
+    <TouchableWithoutFeedback accessibilityLabel="TopBar_Btn_Title" onPress={onPress}>
+      <StyledTopBarContent style={style} align={position}>
         {!!title && (
-          <TYText style={[styles.title, { color: titleColor }, titleStyle]} numberOfLines={1}>
+          <StyledTopBarTitle style={titleStyle} color={color} numberOfLines={1}>
             {title}
-          </TYText>
+          </StyledTopBarTitle>
         )}
         {!!subTitle && (
-          <TYText
-            style={[styles.subTitle, { color: subTitleColor }, subTitleStyle]}
-            numberOfLines={1}
-          >
+          <StyledTopBarSubTitle style={subTitleStyle} color={subTitleColor} numberOfLines={1}>
             {subTitle}
-          </TYText>
+          </StyledTopBarSubTitle>
         )}
         {children}
-      </View>
+      </StyledTopBarContent>
     </TouchableWithoutFeedback>
   );
 };
@@ -54,9 +46,9 @@ TopBarContent.propTypes = {
   style: ViewPropTypes.style,
   color: PropTypes.string,
   title: PropTypes.string,
-  titleStyle: TYText.propTypes.style,
+  titleStyle: Text.propTypes.style,
   subTitle: PropTypes.string,
-  subTitleStyle: TYText.propTypes.style,
+  subTitleStyle: Text.propTypes.style,
   position: PropTypes.oneOf(['left', 'center', 'right']),
   children: PropTypes.any,
   onPress: PropTypes.func,
@@ -64,7 +56,7 @@ TopBarContent.propTypes = {
 
 TopBarContent.defaultProps = {
   style: null,
-  color: '#fff',
+  color: null,
   title: '',
   titleStyle: null,
   subTitle: '',
@@ -73,26 +65,5 @@ TopBarContent.defaultProps = {
   children: null,
   onPress: null,
 };
-
-const styles = StyleSheet.create({
-  wrapper: {
-    position: 'absolute',
-    height: '100%',
-    alignSelf: 'center',
-    alignItems: 'center',
-    justifyContent: 'center',
-    zIndex: -1,
-  },
-
-  title: {
-    fontSize: isIos ? 16 : 18,
-    color: '#fff',
-  },
-
-  subTitle: {
-    fontSize: 12,
-    color: 'rgba(255, 255, 255, 0.6)',
-  },
-});
 
 export default TopBarContent;

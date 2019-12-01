@@ -27,9 +27,52 @@ export default class TYSectionListSliderItemScene extends Component {
           },
           {
             key: 1,
-            iconType: 'text',
-            Icon: `value1: ${Math.round(this.state.value1)}`,
-            Action: `value2: ${Math.round(this.state.value2)}`,
+            Icon: require('./res/timer.png'),
+            Action: `${Math.round(this.state.value2)}%`,
+            actionType: 'text',
+            value: this.state.value2,
+            minimumValue: 0,
+            maximumValue: 100,
+            onSlidingComplete: value2 => this.setState({ value2 }),
+          },
+          {
+            key: 2,
+            value: this.state.value2,
+            minimumValue: 0,
+            maximumValue: 100,
+            onSlidingComplete: value2 => this.setState({ value2 }),
+          },
+        ],
+      },
+      {
+        title: '测试本地主题',
+        data: [
+          {
+            key: 0,
+            theme: {
+              iconColor: '#fff',
+              subFontColor: '#ff0000',
+              cellBg: '#000',
+              cellRadius: 14,
+              margin: [14, 14, 14, 14],
+              padding: [6, 6, 6, 6],
+              minimumTrackTintColor: '#00ffff',
+              thumbTintColor: 'red',
+            },
+            actionType: 'iconfont',
+            Icon: 'volume-sharp-off',
+            Action: 'volume-sharp-max',
+            value: this.state.value1,
+            minimumValue: 0,
+            maximumValue: 100,
+            canTouchTrack: true,
+            onSlidingComplete: value1 => this.setState({ value1 }),
+          },
+          {
+            key: 1,
+            Icon: require('./res/timer.png'),
+            Action: `${Math.round(this.state.value2)}%`,
+            rightType: 'text',
             value: this.state.value2,
             minimumValue: 0,
             maximumValue: 100,
@@ -49,7 +92,6 @@ export default class TYSectionListSliderItemScene extends Component {
       <TYSectionList
         style={{ alignSelf: 'stretch' }}
         scrollEnabled={false}
-        contentContainerStyle={{ paddingTop: 16 }}
         sections={this.sections}
         renderItem={this.renderItem}
       />

@@ -8,6 +8,7 @@ import defaultDot from './dot';
 
 class Carousel extends React.Component {
   static propTypes = {
+    accessibilityLabel: PropTypes.string,
     bounces: PropTypes.bool,
     hasDots: PropTypes.bool,
     autoplay: PropTypes.bool,
@@ -19,6 +20,7 @@ class Carousel extends React.Component {
     useViewPagerOnAndroid: PropTypes.bool,
   };
   static defaultProps = {
+    accessibilityLabel: 'Carousel',
     bounces: true,
     hasDots: true,
     autoplay: false,
@@ -46,10 +48,21 @@ class Carousel extends React.Component {
     this.autoplay();
   }
   componentWillReceiveProps(nextProps) {
-    const { children, loop } = nextProps;
+    const { children, loop, selectedIndex, useViewPagerOnAndroid } = nextProps;
+    const { width } = this.state;
+    if (selectedIndex !== this.state.selectedIndex) {
+      const index = this.count > 1 ? Math.min(selectedIndex, this.count - 1) : 0;
+      const changeOffset = width * (index + (loop ? 1 : 0));
+      this.setState(
+        {
+          selectedIndex: index,
+          offset: { x: changeOffset, y: 0 },
+        },
+        () => this.androidScrollTo(changeOffset, useViewPagerOnAndroid)
+      );
+    }
     if (children && React.Children.count(children) === this.count) return;
     this.count = React.Children.count(children) || 1;
-    const { width } = this.state;
     const offset = width * (loop ? 1 : 0);
     this.setState({
       autoplayStop: false,
@@ -114,24 +127,26 @@ class Carousel extends React.Component {
     const { selectedIndex, loop, useViewPagerOnAndroid } = this.props;
     const scrollIndex = this.count > 1 ? Math.min(selectedIndex, this.count - 1) : 0;
     const { width } = e.nativeEvent.layout;
-    const offset = width * (scrollIndex + loop ? 1 : 0);
+    const offset = width * (scrollIndex + (loop ? 1 : 0));
     this.setState(
       {
         width,
         offset: { x: offset, y: 0 },
       },
-      () => {
-        if (Platform.OS === 'android' && !useViewPagerOnAndroid) {
-          this.firstScrollTimer = setTimeout(() => {
-            this.scrollview.scrollTo({ x: offset, y: 0, animated: false });
-          }, 0);
-        }
-      }
+      () => this.androidScrollTo(offset, useViewPagerOnAndroid)
     );
   };
 
   onPageScrollStateChanged = state => {
     if (state === 'dragging') this.onScrollBegin();
+  };
+
+  androidScrollTo = (offset, isViewPager) => {
+    if (Platform.OS === 'android' && !isViewPager) {
+      this.firstScrollTimer = setTimeout(() => {
+        this.scrollview.scrollTo({ x: offset, y: 0, animated: false });
+      }, 0);
+    }
   };
 
   loopJump = () => {
@@ -186,7 +201,7 @@ class Carousel extends React.Component {
     const diff = selectedIndex + 1 + (this.props.loop ? 1 : 0);
     const offsetX = diff * width;
     if (Platform.OS === 'android' && this.props.useViewPagerOnAndroid) {
-      this.scrollview && this.scrollview.setPageWithoutAnimation(diff);
+      this.scrollview && this.scrollview.setPage(diff);
     } else {
       this.scrollview && this.scrollview.scrollTo({ x: offsetX, y: 0 });
     }
@@ -276,7 +291,7 @@ class Carousel extends React.Component {
       : null;
   };
   render() {
-    const { children, hasDots, loop } = this.props;
+    const { children, hasDots, loop, accessibilityLabel } = this.props;
     if (!children) return null;
     let pages;
     const pageWidth = { width: this.state.width };
@@ -287,7 +302,11 @@ class Carousel extends React.Component {
         childrenArray.push(childrenArray[1]);
       }
       pages = childrenArray.map((child, index) => (
-        <View key={`carousel_${index}`} style={pageWidth}>
+        <View
+          key={`carousel_${index}`}
+          accessibilityLabel={`${accessibilityLabel}_${index}`}
+          style={pageWidth}
+        >
           {child}
         </View>
       ));

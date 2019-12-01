@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Image } from 'react-native';
+import {
+  Image,
+} from 'react-native';
 import enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import toJson from 'enzyme-to-json';
@@ -7,6 +9,7 @@ import Divider from '../index';
 
 const sliderHover = require('./res/slider_hover.png');
 enzyme.configure({ adapter: new Adapter() });
+
 
 describe('Divider Component', () => {
   it('basic render', () => {
@@ -32,4 +35,5 @@ describe('Divider Component', () => {
     expect(component.length).toBe(1);
     expect(toJson(component)).toMatchSnapshot();
   });
+
 });

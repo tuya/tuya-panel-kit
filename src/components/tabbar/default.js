@@ -95,9 +95,7 @@ class TabBar extends React.PureComponent {
   componentWillReceiveProps(nextProps) {
     if ('activeKey' in nextProps) {
       if (nextProps.activeKey === this.state.activeKey) return;
-      console.log(nextProps.activeKey);
       this.getActiveIndexByKey(nextProps.activeKey);
-      console.log(this.activeIndex);
       this.setState({ activeKey: nextProps.activeKey }, () => {
         this.updateView(false);
       });

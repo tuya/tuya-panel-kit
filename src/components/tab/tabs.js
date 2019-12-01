@@ -1,12 +1,8 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable react/require-default-props */
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  View, Dimensions,
-  StyleSheet,
-  ViewPropTypes,
-  Animated, Text
-} from 'react-native';
+import { View, Dimensions, StyleSheet, ViewPropTypes, Animated, Text } from 'react-native';
 
 import TabContent from './tabContent';
 import TabBar from './tabNav';
@@ -19,8 +15,11 @@ class Tabs extends React.Component {
     swipeable: true,
     animated: true,
     onChange: () => {},
-    tabDefaultColor: '#333'
-  }
+    tabDefaultColor: '#333',
+    tabBarPosition: 'top',
+    tabNavAccessibilityLabel: 'TabNav',
+    useViewPagerOnAndroid: true,
+  };
 
   static propTypes = {
     swipeable: PropTypes.bool,
@@ -29,6 +28,7 @@ class Tabs extends React.Component {
     defaultActiveKey: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     onChange: PropTypes.func,
     children: PropTypes.oneOfType([PropTypes.element, PropTypes.array]),
+    tabContentStyle: ViewPropTypes.style,
     tabDefaultColor: PropTypes.string,
     tabBarBackgroundColor: PropTypes.string,
     tabBarUnderlineStyle: ViewPropTypes.style,
@@ -38,7 +38,10 @@ class Tabs extends React.Component {
     tabsContainerStyle: ViewPropTypes.style,
     tabStyle: ViewPropTypes.style,
     style: ViewPropTypes.style,
-  }
+    tabBarPosition: PropTypes.oneOf(['top', 'bottom']),
+    tabNavAccessibilityLabel: PropTypes.string,
+    useViewPagerOnAndroid: PropTypes.bool,
+  };
 
   constructor(props) {
     super(props);
@@ -72,7 +75,7 @@ class Tabs extends React.Component {
 
   onScrollValueChange = scrollValue => {
     this.state.scrollValue.setValue(scrollValue);
-  }
+  };
 
   onLayout = e => {
     const { width } = e.nativeEvent.layout;
@@ -80,34 +83,39 @@ class Tabs extends React.Component {
     if (Math.round(width) !== Math.round(this.state.containerWidth)) {
       containerWidth = width;
     }
-    this.setState({
-      containerWidth,
-    }, () => {
-      const index = Utils.getActiveIndex(this.props.children, this.state.activeKey);
-      // eslint-disable-next-line no-undef
-      requestAnimationFrame(() => {
-        this.tabContent.scrollTo(index, false);
-      });
-    });
-  }
+    this.setState(
+      {
+        containerWidth,
+      },
+      () => {
+        const index = Utils.getActiveIndex(this.props.children, this.state.activeKey);
+        // eslint-disable-next-line no-undef
+        requestAnimationFrame(() => {
+          this.tabContent.scrollTo(index, false);
+        });
+      }
+    );
+  };
 
   setActiveTab = activeIndex => {
     const activeKey = Utils.toArray(this.props.children)[activeIndex].key;
     if (this.state.activeKey !== activeKey) {
       if (!('activeKey' in this.props)) {
         this.setState({
-          activeKey
+          activeKey,
         });
       }
       this.props.onChange && this.props.onChange(activeKey);
     }
-  }
+  };
 
   renderTabContent() {
-    const { children, animated, swipeable } = this.props;
+    const { children, animated, swipeable, useViewPagerOnAndroid, tabContentStyle } = this.props;
     return (
       <TabContent
-        ref={content => { this.tabContent = content; }}
+        ref={content => {
+          this.tabContent = content;
+        }}
         key="tabContent"
         panels={children}
         activeKey={this.state.activeKey}
@@ -117,6 +125,8 @@ class Tabs extends React.Component {
         animated={animated}
         swipeable={swipeable}
         scrollValue={this.state.scrollValue}
+        useViewPagerOnAndroid={useViewPagerOnAndroid}
+        style={tabContentStyle}
       />
     );
   }
@@ -131,11 +141,15 @@ class Tabs extends React.Component {
       tabTextStyle,
       tabStyle,
       tabBarStyle,
-      tabActiveTextStyle
+      tabActiveTextStyle,
+      tabBarPosition,
+      tabNavAccessibilityLabel,
     } = this.props;
     return (
       <TabBar
-        ref={bar => { this.tabBar = bar; }}
+        ref={bar => {
+          this.tabBar = bar;
+        }}
         key="tabBar"
         onTabClick={this.setActiveTab}
         panels={children}
@@ -149,15 +163,18 @@ class Tabs extends React.Component {
         tabStyle={tabStyle}
         tabBarStyle={tabBarStyle}
         tabActiveTextStyle={tabActiveTextStyle}
+        tabBarPosition={tabBarPosition}
+        tabNavAccessibilityLabel={tabNavAccessibilityLabel}
       />
     );
   }
 
   render() {
+    const { tabBarPosition } = this.props;
+    const content = [this.renderTabBar(), this.renderTabContent()];
     return (
       <View onLayout={this.onLayout} style={[styles.container, this.props.style]}>
-        { this.renderTabBar() }
-        { this.renderTabContent() }
+        {tabBarPosition === 'top' ? content : content.reverse()}
       </View>
     );
   }
@@ -166,7 +183,7 @@ class Tabs extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  }
+  },
 });
 
 export default Tabs;

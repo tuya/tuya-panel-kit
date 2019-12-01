@@ -1,8 +1,6 @@
 import React from 'react';
-import { View, Platform } from 'react-native';
+import { View } from 'react-native';
 import { TYSdk, TopBar } from 'tuya-panel-kit';
-
-const backIcon = Platform.OS === 'ios' ? 'backIos' : 'backAndroid';
 
 const linearBackground = {
   stops: {
@@ -30,14 +28,15 @@ export default () => (
   <View>
     {/* 拆分版 */}
     <TopBar.Container background={linearBackground}>
-      <TopBar.Action name={backIcon} onPress={TYSdk.Navigator.pop} />
-      <TopBar.Content title="Title" />
+      <TopBar.Action color="#fff" name="backIos" onPress={TYSdk.Navigator.pop} />
+      <TopBar.Content color="#fff" title="Title" />
     </TopBar.Container>
 
     {/* 封装版 */}
     <TopBar
       style={{ marginTop: 24 }}
       background={radialBackground}
+      color="#fff"
       title="Title"
       onBack={TYSdk.Navigator.pop}
     />

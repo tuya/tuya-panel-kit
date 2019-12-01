@@ -7,34 +7,37 @@
     "react-native",
     "panel"
   ],
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "license": "MIT",
   "author": "",
   "scripts": {
     "test": "jest -u",
+    "build": "rimraf lib/* && babel src --ignore __tests__ --out-dir lib --copy-files",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "commit": "git-cz",
-    "release:major:pre": "standard-version --release-as major --prerelease rc --skip.changelog=true --skip.tag=true",
-    "release:major": "standard-version --release-as major",
-    "release:minor:pre": "standard-version --release-as minor --prerelease rc --skip.changelog=true --skip.tag=true",
-    "release:minor": "standard-version --release-as minor",
-    "release:patch:pre": "standard-version --release-as patch --prerelease rc --skip.changelog=true --skip.tag=true",
-    "release:patch": "standard-version --release-as patch"
+    "release:major:pre": "yarn build && standard-version --release-as major --prerelease rc",
+    "release:major": "yarn build && standard-version --release-as major",
+    "release:minor:pre": "yarn build && standard-version --release-as minor --prerelease rc --skip.changelog=true --skip.tag=true",
+    "release:minor": "yarn build && standard-version --release-as minor",
+    "release:patch:pre": "yarn build && standard-version --release-as patch --prerelease rc",
+    "release:patch": "yarn build && standard-version --release-as patch"
   },
   "peerDependencies": {
     "react": "16.0.0",
     "react-native": "0.51.0"
   },
   "dependencies": {
+    "babel-cli": "^6.26.0",
     "color": "^0.11.1",
     "events": "^1.1.1",
     "prop-types": "^15.6.1",
     "react-addons-shallow-compare": "^15.6.2",
     "react-native-deprecated-custom-components": "git+https://github.com/facebookarchive/react-native-custom-components.git#83c4fa19ccc9b6cd48ff80e457c493332819b486",
     "react-native-svg": "5.5.1",
-    "style-equal": "^1.0.0"
+    "style-equal": "^1.0.0",
+    "styled-components": "^3.4.10"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.3.2",

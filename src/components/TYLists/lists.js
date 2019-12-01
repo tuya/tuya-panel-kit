@@ -1,14 +1,24 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { View, Text, SectionList, StyleSheet, ViewPropTypes } from 'react-native';
+import { defaultTheme } from '../theme';
+import { CoreUtils, RatioUtils, ThemeUtils } from '../../utils';
+import {
+  StyledValueText,
+  StyledHeader,
+  StyledHeaderText,
+  StyledFooter,
+  StyledFooterText,
+} from './styled';
 import ListItem from './list-item';
 import CheckboxItem from './items/checkbox-item';
 import InputItem from './items/input-item';
 import SliderItem from './items/slider-item';
 import SwitchItem from './items/switch-item';
-import { RatioUtils } from '../../utils';
 
-const { convertX: cx, convertY: cy } = RatioUtils;
+const { get } = CoreUtils;
+const { convertX: cx } = RatioUtils;
+const { getTheme, ThemeConsumer } = ThemeUtils;
 
 /* eslint-disable new-cap */
 export default class TYSectionLists extends Component {
@@ -41,36 +51,63 @@ export default class TYSectionLists extends Component {
     sections: PropTypes.array.isRequired,
     headerStyle: Text.propTypes.style,
     separatorStyle: ViewPropTypes.style,
+    sectionListRef: PropTypes.func,
+    useART: PropTypes.bool,
   };
 
   static defaultProps = {
     headerStyle: null,
     separatorStyle: null,
+    sectionListRef: null,
+    useART: false,
   };
 
-  renderSectionHeader = ({ section: { title } }) => {
+  renderSectionHeader = ({ section }) => {
+    const { title } = section;
+    const { sections } = this.props;
     const { headerStyle } = this.props;
+    const sectionIdx = sections.findIndex(sec => sec.title === title);
+    const prevSectionHasFooter = !!get(sections, `${sectionIdx - 1}.footer`);
     if (title) {
-      return <Text style={[styles.sectionHeader, headerStyle]}>{title}</Text>;
+      return (
+        <StyledHeader style={[{ marginTop: prevSectionHasFooter ? 0 : 24 }, headerStyle]}>
+          {React.isValidElement(title) ? title : <StyledHeaderText>{title}</StyledHeaderText>}
+        </StyledHeader>
+      );
+    }
+    return <View style={{ marginTop: prevSectionHasFooter ? 0 : 12 }} />;
+  };
+
+  renderSectionFooter = ({ section: { footer } }) => {
+    const { footerStyle } = this.props;
+    if (footer) {
+      return (
+        <StyledFooter style={footerStyle}>
+          {React.isValidElement(footer) ? footer : <StyledFooterText>{footer}</StyledFooterText>}
+        </StyledFooter>
+      );
     }
     return null;
   };
 
   renderItem = ({ item, ...otherData }) => {
+    const { useART } = this.props;
     const { value, SwitchButtonProps, renderItem, ...listItemProps } = item;
     if (typeof renderItem === 'function') {
       return renderItem({ item, ...otherData });
     }
     if (typeof value === 'boolean') {
-      return <SwitchItem value={value} {...listItemProps} {...SwitchButtonProps} />;
+      return <SwitchItem value={value} useART={useART} {...listItemProps} {...SwitchButtonProps} />;
     } else if (typeof value !== 'undefined') {
-      const valueStyle = [styles.valueText, item.styles && item.styles.valueText];
+      const descFontColor = get(item, 'theme.descFontColor');
+      const valueStyle = [descFontColor && { color: descFontColor }, get(item, 'styles.valueText')];
       return (
         <ListItem
+          useART={useART}
           {...listItemProps}
           Action={
-            <View style={styles.row}>
-              <Text style={valueStyle}>{value}</Text>
+            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+              <StyledValueText style={valueStyle}>{value}</StyledValueText>
               {typeof listItemProps.Action === 'function'
                 ? listItemProps.Action()
                 : listItemProps.Action}
@@ -79,52 +116,59 @@ export default class TYSectionLists extends Component {
         />
       );
     }
-    return <ListItem {...listItemProps} />;
+    return <ListItem useART={useART} {...listItemProps} />;
   };
 
   render() {
-    const { contentContainerStyle, separatorStyle, sections, ...sectionListProps } = this.props;
+    const {
+      contentContainerStyle,
+      separatorStyle,
+      sections,
+      sectionListRef,
+      ...sectionListProps
+    } = this.props;
     return (
-      <SectionList
-        contentContainerStyle={[styles.container, contentContainerStyle]}
-        ItemSeparatorComponent={() => <View style={[styles.separator, separatorStyle]} />}
-        renderSectionHeader={this.renderSectionHeader}
-        renderSectionFooter={() => <View style={styles.sectionFooter} />}
-        renderItem={this.renderItem}
-        sections={sections}
-        keyExtractor={item => item.key}
-        stickySectionHeadersEnabled={false}
-        {...sectionListProps}
-      />
+      <ThemeConsumer>
+        {globalTheme => {
+          const propsWithTheme = { ...this.props, theme: globalTheme };
+          const contentStyle = [
+            {
+              backgroundColor: getTheme(
+                propsWithTheme,
+                'list.boardBg',
+                defaultTheme.list.light.boardBg
+              ),
+            },
+            contentContainerStyle,
+          ];
+          const sepStyle = [
+            {
+              marginLeft: cx(16),
+              height: StyleSheet.hairlineWidth,
+              backgroundColor: getTheme(
+                propsWithTheme,
+                'list.cellLine',
+                defaultTheme.list.light.cellLine
+              ),
+            },
+            separatorStyle,
+          ];
+          return (
+            <SectionList
+              contentContainerStyle={contentStyle}
+              ItemSeparatorComponent={() => <View style={sepStyle} />}
+              renderSectionHeader={this.renderSectionHeader}
+              renderSectionFooter={this.renderSectionFooter}
+              renderItem={this.renderItem}
+              sections={sections}
+              keyExtractor={item => item.key}
+              stickySectionHeadersEnabled={false}
+              {...sectionListProps}
+              ref={sectionListRef}
+            />
+          );
+        }}
+      </ThemeConsumer>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#f8f8f8',
-  },
-
-  sectionHeader: {
-    marginLeft: cx(12),
-    marginBottom: cy(6),
-    fontSize: Math.max(12, cx(12)),
-    color: '#c8c8c8',
-    backgroundColor: 'transparent',
-  },
-
-  separator: {
-    height: StyleSheet.hairlineWidth,
-    backgroundColor: '#eee',
-  },
-
-  sectionFooter: {
-    marginTop: cy(16),
-  },
-
-  valueText: {
-    fontSize: cx(14),
-    color: '#999',
-    marginRight: cx(6),
-  },
-});

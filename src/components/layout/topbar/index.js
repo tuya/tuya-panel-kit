@@ -1,60 +1,49 @@
-/* eslint-disable react/no-array-index-key */
+import React from 'react';
 import PropTypes from 'prop-types';
-import React, { PureComponent } from 'react';
-import TopBarContainer from './TopBarContainer';
-import TopBarContent from './TopBarContent';
-import TopBarAction from './TopBarAction';
-import { isIos, isIphoneX } from '../../../utils/ratio';
+import { ColorPropType } from 'react-native';
+import TopBar from './topbar';
+import { ThemeUtils } from '../../../utils';
 
-const HEIGHT = isIos ? (isIphoneX ? 88 : 64) : 56;
+const { getTheme, ThemeConsumer } = ThemeUtils;
 
-export default class TopBar extends PureComponent {
-  static height = HEIGHT;
-  static Container = TopBarContainer;
-  static Content = TopBarContent;
-  static Action = TopBarAction;
+const ThemedTopBar = props => {
+  const { theme: localTheme, ...rest } = props;
+  return (
+    <ThemeConsumer>
+      {globalTheme => {
+        const theme = {
+          ...globalTheme,
+          topbar: { ...globalTheme.topbar, ...localTheme },
+        };
+        const propsWithTheme = { theme, ...rest };
+        const background = getTheme(propsWithTheme, 'topbar.background');
+        const color = getTheme(propsWithTheme, 'topbar.color');
+        return <TopBar background={background} color={color} {...rest} />;
+      }}
+    </ThemeConsumer>
+  );
+};
 
-  static propTypes = {
-    ...TopBarContainer.propTypes,
-    ...TopBarContent.propTypes,
-    color: PropTypes.string,
-    leftActions: PropTypes.oneOfType([
-      PropTypes.shape(TopBarAction.propTypes),
-      PropTypes.arrayOf(PropTypes.shape(TopBarAction.propTypes)),
-    ]),
-    actions: PropTypes.oneOfType([
-      PropTypes.shape(TopBarAction.propTypes),
-      PropTypes.arrayOf(PropTypes.shape(TopBarAction.propTypes)),
-    ]),
-  };
+ThemedTopBar.propTypes = {
+  theme: PropTypes.shape({
+    /**
+     * 头部栏背景颜色
+     */
+    background: ColorPropType,
+    /**
+     * 头部栏主体颜色（包括图标，图片，文字等）
+     */
+    color: ColorPropType,
+  }),
+};
 
-  static defaultProps = {
-    color: '#fff',
-    leftActions: null,
-    actions: null,
-  };
+ThemedTopBar.defaultProps = {
+  theme: null,
+};
 
-  render() {
-    const {
-      style, // from topbar.container
-      contentStyle, // from topbar.container
-      background, // from topbar.container
-      color,
-      leftActions,
-      actions,
-      onBack,
-      ...contentProps
-    } = this.props;
-    return (
-      <TopBar.Container style={style} contentStyle={contentStyle} background={background}>
-        {leftActions ? (
-          leftActions.map((item, k) => <TopBar.Action key={k} color={color} {...item} />)
-        ) : (
-          <TopBar.Action color={color} name={isIos ? 'backIos' : 'backAndroid'} onPress={onBack} />
-        )}
-        <TopBar.Content color={color} {...contentProps} />
-        {actions && actions.map((item, k) => <TopBar.Action key={k} color={color} {...item} />)}
-      </TopBar.Container>
-    );
-  }
-}
+ThemedTopBar.height = TopBar.height;
+ThemedTopBar.Container = TopBar.Container;
+ThemedTopBar.Content = TopBar.Content;
+ThemedTopBar.Action = TopBar.Action;
+
+export default ThemedTopBar;

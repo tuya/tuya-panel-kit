@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { TouchableOpacity, StyleSheet, ColorPropType, ViewPropTypes } from 'react-native';
-import TYText from '../TYText';
-import IconFont from '../iconfont';
+import { View, ColorPropType, ViewPropTypes } from 'react-native';
+import { StyledCheckbox, StyledIcon, StyledText } from './styled';
+import svgs from '../iconfont/svg/defaultSvg';
 
-export default class CheckBox extends Component {
+export default class Checkbox extends Component {
   static propTypes = {
+    accessibilityLabel: PropTypes.string,
     /**
      * CheckBox 容器样式
      */
@@ -19,9 +20,21 @@ export default class CheckBox extends Component {
      */
     disabled: PropTypes.bool,
     /**
+     * 未选中时的图标颜色
+     */
+    disabledColor: ColorPropType,
+    /**
      * 是否选中状态
      */
     checked: PropTypes.bool,
+    /**
+     * 选中状态图标Path
+     */
+    checkedIcon: PropTypes.string,
+    /**
+     * 未选中状态图标Path
+     */
+    unCheckedIcon: PropTypes.string,
     /**
      * 是否翻转图标和子元素位置
      */
@@ -45,13 +58,17 @@ export default class CheckBox extends Component {
   };
 
   static defaultProps = {
+    accessibilityLabel: 'Checkbox',
     style: null,
-    size: 28,
+    size: 17,
     disabled: false,
+    disabledColor: null,
     checked: false,
+    checkedIcon: null,
+    unCheckedIcon: null,
     reverse: false,
     hideOnUnselect: false,
-    color: '#44DB5E',
+    color: null,
     onChange: null,
     children: null,
   };
@@ -62,19 +79,40 @@ export default class CheckBox extends Component {
   };
 
   render() {
-    const { style, size, disabled, checked, reverse, hideOnUnselect, color, children } = this.props;
+    const {
+      accessibilityLabel,
+      style,
+      size,
+      disabled,
+      disabledColor,
+      checked,
+      checkedIcon,
+      unCheckedIcon,
+      reverse,
+      hideOnUnselect,
+      color,
+      children,
+    } = this.props;
+    let iconPath;
+    if (checked) {
+      iconPath = checkedIcon || svgs.selected;
+    } else {
+      iconPath = unCheckedIcon || svgs.unselected;
+    }
     const elements = [
-      <IconFont
+      <StyledIcon
         key="checkIcon"
-        style={[disabled && { opacity: 0.3 }, !checked && hideOnUnselect && { opacity: 0 }]}
-        name={checked ? 'selected-sharp' : 'unselected-sharp'}
-        color={color}
+        style={!checked && hideOnUnselect && { opacity: 0 }}
+        d={iconPath}
+        activeColor={color}
+        disabledColor={disabledColor}
+        disabled={disabled}
         size={size}
       />,
       typeof children === 'string' ? (
-        <TYText key="checkText" style={[styles.text, disabled && { opacity: 0.3 }]}>
+        <StyledText key="checkText" disabled={disabled}>
           {children}
-        </TYText>
+        </StyledText>
       ) : (
         children
       ),
@@ -83,31 +121,17 @@ export default class CheckBox extends Component {
       elements.reverse();
     }
     return (
-      <TouchableOpacity
-        style={[styles.container, style]}
+      <StyledCheckbox
+        accessibilityLabel={accessibilityLabel}
+        style={style}
         activeOpacity={0.8}
         onPress={this._handleToggleCheck}
         disabled={disabled}
       >
-        {elements}
-      </TouchableOpacity>
+        <View style={{ flexDirection: 'row', alignItems: 'center', opacity: disabled ? 0.3 : 1 }}>
+          {elements}
+        </View>
+      </StyledCheckbox>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    minHeight: 48,
-    flexDirection: 'row',
-    alignSelf: 'stretch',
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-    backgroundColor: 'transparent',
-  },
-
-  text: {
-    flex: 1,
-    fontSize: 14,
-    color: '#666',
-  },
-});

@@ -33,6 +33,7 @@ class Group extends React.PureComponent {
     // eslint-disable-next-line react/require-default-props
     activeIndex: PropTypes.number,
     defaultActiveIndex: PropTypes.number,
+    gutter: PropTypes.number,
     onChange: PropTypes.func,
   };
   static defaultProps = {
@@ -40,6 +41,7 @@ class Group extends React.PureComponent {
     wrapperStyle: {},
     activeColor: '',
     defaultActiveIndex: 0,
+    gutter: 2,
     onChange: () => {},
   };
   constructor(props) {
@@ -79,7 +81,8 @@ class Group extends React.PureComponent {
     });
   };
   moveActiveView = index => {
-    const currentLeft = index * this.state.everyWidth + 2;
+    const { gutter } = this.props;
+    const currentLeft = index * this.state.everyWidth + gutter;
     Animated.spring(this.state.activeLeft, {
       toValue: currentLeft,
     }).start();
@@ -105,9 +108,9 @@ class Group extends React.PureComponent {
   };
   completeCalcWidth = () => {
     if (!this.wrapperSize || !this.containerSize) return;
-    const { tabs } = this.props;
+    const { tabs, gutter } = this.props;
     const everyWidth = this.wrapperSize.width / tabs.length;
-    this.state.activeLeft.setValue(2 + everyWidth * this.state.activeIndex);
+    this.state.activeLeft.setValue(gutter + everyWidth * this.state.activeIndex);
     this.setState({
       containerHeight: this.containerSize.height,
       wrapperWidth: this.wrapperSize.width,
@@ -116,14 +119,18 @@ class Group extends React.PureComponent {
     });
   };
   render() {
-    const { style, wrapperStyle, activeColor, tabs } = this.props;
-    const containerPadding = StyleSheet.flatten([styles.containerStyle, style]).borderRadius + 2;
-    const containerStyle = [styles.containerStyle, style, { paddingHorizontal: 2 }];
+    const { style, wrapperStyle, activeColor, tabs, gutter } = this.props;
+    const containerPadding =
+      StyleSheet.flatten([styles.containerStyle, style]).borderRadius + gutter;
+    const containerStyle = [styles.containerStyle, style, { paddingHorizontal: gutter }];
     const customWrapperStyle = [styles.wrapperStyle, wrapperStyle];
     const activeLeft = { left: this.state.activeLeft };
     const activeViewStyle = [
       styles.activeViewStyle,
-      { width: this.state.wrapperWidth / tabs.length, height: this.state.containerHeight - 4 },
+      {
+        width: this.state.wrapperWidth / tabs.length,
+        height: this.state.containerHeight - gutter * 2,
+      },
       activeColor && { backgroundColor: activeColor },
       { borderRadius: containerPadding },
       activeLeft,

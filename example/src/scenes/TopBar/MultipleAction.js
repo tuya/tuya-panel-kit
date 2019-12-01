@@ -1,16 +1,14 @@
 import React from 'react';
-import { View, Platform } from 'react-native';
+import { View } from 'react-native';
 import { TYSdk, TopBar } from 'tuya-panel-kit';
 
 const TYNative = TYSdk.native;
-
-const backIcon = Platform.OS === 'ios' ? 'backIos' : 'backAndroid';
 
 export default () => (
   <View>
     {/* 拆分版 */}
     <TopBar.Container background="blue">
-      <TopBar.Action name={backIcon} onPress={TYSdk.Navigator.pop} />
+      <TopBar.Action name="backIos" onPress={TYSdk.Navigator.pop} />
       <TopBar.Action
         source="定时"
         color="red"
@@ -43,10 +41,11 @@ export default () => (
       background="blue"
       title="Very Very Very Very Very Long Title"
       subTitle="SubTitle"
+      color="#fff"
       onPress={() => TYNative.simpleTipDialog('click title', () => {})}
       leftActions={[
         {
-          name: backIcon,
+          name: 'backIos',
           onPress: TYSdk.Navigator.pop,
         },
         {

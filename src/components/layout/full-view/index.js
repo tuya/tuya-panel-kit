@@ -7,7 +7,7 @@ import TYSdk from '../../../TYNativeApi';
 import Strings from '../../../i18n/strings';
 import TopBar from '../topbar';
 import OfflineView from '../offline-view';
-import { CoreUtils } from '../../../utils';
+import { CoreUtils, ThemeUtils } from '../../../utils';
 
 const TYMobile = TYSdk.mobile;
 const TYNative = TYSdk.native;
@@ -20,11 +20,13 @@ if (TYMobile.verSupported('2.5')) {
   RadialGradient = require('../../gradient/radial-gradient').default;
 }
 
-const Window = Dimensions.get('window');
+const { get } = CoreUtils;
+const { withTheme } = ThemeUtils;
 const Screen = Dimensions.get('screen');
 
-export default class FullView extends Component {
+class FullView extends Component {
   static propTypes = {
+    theme: PropTypes.object,
     title: PropTypes.string,
     style: ViewPropTypes.style,
     topbarStyle: ViewPropTypes.style,
@@ -34,9 +36,15 @@ export default class FullView extends Component {
     background: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
     onBack: PropTypes.func,
     devInfo: PropTypes.object.isRequired,
+    capability: PropTypes.number,
+    /**
+     * 蓝牙离线提示是否覆盖整个面板(除头部栏外)
+     */
+    isBleOfflineOverlay: PropTypes.bool,
   };
 
   static defaultProps = {
+    theme: null,
     title: '',
     style: null,
     topbarStyle: null,
@@ -44,6 +52,8 @@ export default class FullView extends Component {
     showMenu: true,
     background: null,
     onBack: null,
+    capability: 0,
+    isBleOfflineOverlay: true,
   };
 
   constructor(props) {
@@ -74,9 +84,8 @@ export default class FullView extends Component {
     );
   }
 
-  renderBackground() {
-    const { backgroundStyle, background } = this.props;
-    // const { background } = this.state;
+  renderBackground(background) {
+    const { backgroundStyle } = this.props;
 
     if (typeof background === 'number') {
       return (
@@ -144,7 +153,13 @@ export default class FullView extends Component {
   }
 
   renderOfflineView() {
-    const { appOnline, deviceOnline, showOfflineView } = this.props;
+    const {
+      appOnline,
+      deviceOnline,
+      showOfflineView,
+      capability,
+      isBleOfflineOverlay,
+    } = this.props;
     const show = !appOnline || !deviceOnline;
     const tipText = !appOnline
       ? Strings.getLang('appoffline')
@@ -165,7 +180,15 @@ export default class FullView extends Component {
     }
 
     return (
-      <OfflineView style={styles.offlineStyle} textStyle={styles.offlineText} text={tipText} />
+      <OfflineView
+        style={styles.offlineStyle}
+        text={tipText}
+        textStyle={styles.offlineText}
+        appOnline={appOnline}
+        deviceOnline={deviceOnline}
+        capability={capability}
+        isBleOfflineOverlay={isBleOfflineOverlay}
+      />
     );
   }
 
@@ -185,14 +208,16 @@ export default class FullView extends Component {
         return renderTopBar();
       }
       const uiPhase = devInfo.uiPhase || 'release';
-      const { color = '#fff' } = StyleSheet.flatten(topbarTextStyle) || {};
+      const { color } = StyleSheet.flatten(topbarTextStyle) || {};
       const isShowMore = !(isShare || !this.props.showMenu);
       const actions = [
         {
+          accessibilityLabel: 'TopBar_Btn_RightItem',
           name: this.topBarMoreIconName,
           onPress: () => this.onBack('right'),
         },
         uiPhase !== 'release' && {
+          accessibilityLabel: 'TopBar_Preview',
           style: {
             backgroundColor: '#57DD43',
             borderWidth: 1,
@@ -229,16 +254,18 @@ export default class FullView extends Component {
   }
 
   render() {
-    const { style, background } = this.props;
+    const { style, theme } = this.props;
+    const background = this.props.background || get(theme, 'global.background', '#f8f8f8');
+    const isBgColor = typeof background === 'string';
     return (
       <View
         ref={ref => {
           this.refRootView = ref;
         }}
-        style={[styles.container, style]}
+        style={[styles.container, isBgColor && { backgroundColor: background }, style]}
       >
         {this.renderStatusBar()}
-        {!!background && this.renderBackground()}
+        {!isBgColor && this.renderBackground(background)}
         {this.renderTopBar()}
         {this.props.children}
         {this.renderOfflineView()}
@@ -280,3 +307,5 @@ const styles = StyleSheet.create({
     height: Screen.height,
   },
 });
+
+export default withTheme(FullView);

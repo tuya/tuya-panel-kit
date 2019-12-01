@@ -1,4 +1,3 @@
-/* eslint-disable */
 const maxIn = 255;
 
 const parse = (d, len = 2) => {
@@ -19,10 +18,9 @@ class Color {
     if (/^rgb/.test(color)) {
       const matcher =
         color.match(
-          // eslint-disable-next-line
           /rgba?\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*(?:,\s*([\.\d]+))?\)/
         ) || [];
-      rgb = [matcher[1], matcher[2], matcher[3]].map(item => parseInt(item, 10));
+      rgb = [matcher[1], matcher[2], matcher[3]].map(item => parseInt(item));
       let alpha = matcher[4];
       if (alpha !== undefined) {
         alpha = alpha > 1 ? 1 : alpha < 0 ? 0 : alpha;
@@ -31,11 +29,9 @@ class Color {
       return rgb;
     }
 
-    // eslint-disable-next-line
     color = color.replace(/^#/, '');
     const len = color.length;
     if (len !== 6 && len !== 3) {
-      // eslint-disable-next-line
       color = '000000';
     }
     if (len === 3) {
@@ -44,11 +40,8 @@ class Color {
       rgb = color.match(/[0-9a-f]{2}/gi) || [];
     }
     return rgb.map(i => {
-      // eslint-disable-next-line
       i = parseInt(i, 16);
-      // eslint-disable-next-line
       if (i < 0) i = 0;
-      // eslint-disable-next-line
       if (i > maxIn) i = maxIn;
       return i;
     });
@@ -68,7 +61,7 @@ class Color {
     let s;
     let v;
 
-    if (C === 0) h = 0;
+    if (C == 0) h = 0;
     else if (M === r) h = ((g - b) / C) % 6;
     else if (M === g) h = (b - r) / C + 2;
     else h = (r - g) / C + 4;
@@ -106,14 +99,14 @@ class Color {
     let h;
     let l;
     let s;
-    if (d === 0) h = 0;
+    if (d == 0) h = 0;
     else if (M === r) h = ((g - b) / d) % 6;
     else if (M === g) h = (b - r) / d + 2;
     else h = (r - g) / d + 4;
     h *= 60;
     if (h < 0) h += 360;
     l = (M + m) / 2;
-    if (d === 0) s = 0;
+    if (d == 0) s = 0;
     else s = d / (1 - Math.abs(2 * l - 1));
     s *= 100;
     l *= 100;
@@ -167,14 +160,13 @@ class Color {
       let _bit = bit;
       if (_bit) _bit = parseFloat(_bit);
       if (i === 0) {
-        // eslint-disable-next-line
-        return Math.round((_bit %= 360) < 0 ? _bit + 360 : _bit);
+        return (_bit %= 360) < 0 ? _bit + 360 : _bit;
       }
       return limit(Math.round(bit), 0, 100);
     });
 
     const br = Math.round(hsb[2] / 100 * 255);
-    if (hsb[1] === 0) return [br, br, br];
+    if (hsb[1] == 0) return [br, br, br];
 
     const hue = hsb[0];
     const f = hue % 60;
@@ -420,7 +412,7 @@ class Color {
   encodeColorData(rgbhsv) {
     let rgb = rgbhsv.slice(0, 3);
     let hsv = rgbhsv.slice(3);
-    rgb = rgb.map(item => (item < 0 ? 0 : item > 255 ? 255 : item));
+    rgb = rgb.map(item => item < 0 ? 0 : item > 255 ? 255 : item);
     if (hsv.length === 0) {
       hsv = Array(4).fill(0);
     } else {
@@ -471,7 +463,7 @@ class Color {
   encodeColorDataWithPosition(rgbxyve) {
     let rgb = rgbxyve.slice(0, 3);
     let xyve = rgbxyve.slice(3);
-    rgb = rgb.map(item => (item < 0 ? 0 : item > 255 ? 255 : item));
+    rgb = rgb.map(item => item < 0 ? 0 : item > 255 ? 255 : item);
     let len = 4 - xyve.length;
     len = len < 0 ? 0 : len;
     xyve = xyve.concat(Array(len).fill(0));

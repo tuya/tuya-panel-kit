@@ -3,19 +3,21 @@ import ListItem from '../list-item';
 import SwitchButton from '../../switch-button';
 import { pick, omit } from './utils';
 
-function SwitchItem({ value, ...props }) {
+function SwitchItem({ value, disabled, ...props }) {
   const listItemPropNames = Object.keys(ListItem.propTypes);
   const listItemProps = pick(props, listItemPropNames);
   const switchButtonProps = omit(props, listItemPropNames);
   return (
     <ListItem
-      disabled={true}
       {...listItemProps}
+      disabled={disabled}
       Action={
         <SwitchButton
           value={value}
+          disabled={disabled}
           onTintColor="#44DB5E"
           onThumbTintColor="#fff"
+          disabled={disabled}
           {...switchButtonProps}
         />
       }

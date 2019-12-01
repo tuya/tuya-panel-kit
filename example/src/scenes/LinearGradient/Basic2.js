@@ -19,7 +19,8 @@ export default () => (
           '30%': 'blue',
           '100%': 'yellow',
         }}
-      ><Rect {...dimension} />
+      >
+        <Rect {...dimension} />
       </LinearGradient>
     </View>
   </View>
