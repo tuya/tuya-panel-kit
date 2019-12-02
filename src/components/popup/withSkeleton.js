@@ -86,6 +86,7 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
 
     constructor(props) {
       super(props);
+      this.extraParams = [];
       this.state = {
         switchValue: props.switchValue,
       };

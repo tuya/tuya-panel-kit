@@ -152,7 +152,7 @@ const slider = {
     trackHeight: 4, // 滑块高度
     minimumTrackTintColor: getBrandColor, // 最小值颜色
     maximumTrackTintColor: '#e5e5e5', // 最大值颜色
-    thumbSize: 24, // 滑块圆的尺寸
+    thumbSize: 24, // 滑块圆的尺寸（TODO: 是否被宽高替代）
     thumbRadius: 14, // 滑块圆的圆角
     thumbTintColor: '#fff', // 滑块的颜色
     // thumbWidth, // 滑块圆的宽度
