@@ -57,6 +57,7 @@ class ListPopup extends React.Component {
       selected,
       selectedArr,
     };
+    props._onDataChange(props.value);
   }
 
   componentWillReceiveProps(nextProps) {
