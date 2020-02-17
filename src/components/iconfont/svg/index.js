@@ -11,7 +11,7 @@ export default class IconFont extends Component {
     style: ViewPropTypes.style,
     viewBox: PropTypes.string,
     /**
-     * 图标id，会从组件库默认图标里取，优先级大于 d
+     * 图标id，会从组件库默认图标里取，优先级小于 d
      */
     name: PropTypes.string,
     /**
