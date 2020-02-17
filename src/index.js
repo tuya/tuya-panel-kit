@@ -3,7 +3,6 @@ import * as Utils from './utils';
 export { default as TYSdk } from './TYNativeApi';
 
 export { default as I18N } from './i18n';
-
 // 默认主题配置变量
 export { default as defaultTheme } from './components/theme/base';
 
@@ -34,6 +33,8 @@ export { default as Divider } from './components/divider';
 
 export { default as LinearGradient } from './components/gradient/linear-gradient';
 
+export { default as Motion } from './components/motion';
+
 export { default as RadialGradient } from './components/gradient/radial-gradient';
 
 export { default as TYSectionList } from './components/TYLists/lists';
@@ -43,6 +44,8 @@ export { default as TYFlatList } from './components/TYLists/list';
 export { default as TYListItem } from './components/TYLists/list-item';
 
 export { default as Toast } from './components/toast-view';
+
+export { default as Tips } from './components/tips';
 
 export { default as RotationView } from './components/rotation-view';
 
@@ -59,6 +62,8 @@ export { default as Picker } from './components/picker-view';
 export { default as DatePicker } from './components/date-picker';
 
 export { default as Swipeout } from './components/swipeout';
+
+export { Strings } from '@tuya-rn/tuya-native-kit';
 
 export { Utils };
 
@@ -81,5 +86,7 @@ export { default as Popup } from './components/popup';
 export { default as ControllerBar } from './components/controller-bar';
 
 export { default as Notification } from './components/notification';
+
+export { default as NotificationLegacy } from './components/notification-legacy';
 
 export { default as TimerPicker } from './components/timer-picker';
