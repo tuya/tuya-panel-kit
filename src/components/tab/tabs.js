@@ -91,7 +91,7 @@ class Tabs extends React.Component {
         const index = Utils.getActiveIndex(this.props.children, this.state.activeKey);
         // eslint-disable-next-line no-undef
         requestAnimationFrame(() => {
-          this.tabContent.scrollTo(index, false);
+          this.tabContent && this.tabContent.scrollTo(index, false);
         });
       }
     );
