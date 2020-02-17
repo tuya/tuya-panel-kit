@@ -4,6 +4,7 @@ import { ViewPropTypes } from 'react-native';
 import PropTypes from 'prop-types';
 import Modal from '../modal';
 import TYModal from '../modal/TYModal';
+import Motion from '../motion';
 import TYText from '../TYText';
 import {
   StyledContainer,
@@ -15,6 +16,12 @@ import {
   StyledCancelText,
   StyledConfirmText,
 } from './styled';
+
+export const MOTION_TYPES = Object.keys(Motion)
+  .concat('none')
+  .filter(v => {
+    return v !== 'Toast' && v !== 'PushDown';
+  });
 
 /**
  *
@@ -63,6 +70,13 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
       footer: PropTypes.element,
       footerWrapperStyle: ViewPropTypes.style,
       footerType: PropTypes.oneOf(['singleConfirm', 'singleCancel', 'custom', 'both']),
+
+      /**
+       * 动画配置
+       */
+      motionType: PropTypes.oneOf(MOTION_TYPES),
+      motionConfig: PropTypes.object,
+      isAlign: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -82,29 +96,88 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
       footer: null,
       footerWrapperStyle: null,
       footerType: 'both',
+
+      motionType: 'none',
+      motionConfig: {},
+      isAlign: false,
     };
 
     constructor(props) {
       super(props);
+      this.actionTypeFn = null;
       this.extraParams = [];
       this.state = {
+        show: withModal ? props.visible : true,
         switchValue: props.switchValue,
       };
     }
 
-    onDataChange = (data, ...extraParams) => {
-      this.data = data;
-      this.extraParams = extraParams;
-    };
+    componentWillReceiveProps(nextProps) {
+      if (this.props.visible !== nextProps.visible) {
+        this.setState({ show: nextProps.visible });
+      }
+    }
+
+    get hasMotion() {
+      const { motionType } = this.props;
+      return motionType !== 'none' && typeof Motion[motionType] === 'function';
+    }
 
     getData = () => {
       return this.data;
+    };
+
+    _handleDataChange = (data, ...extraParams) => {
+      this.data = data;
+      this.extraParams = extraParams;
     };
 
     _handleSwitchValueChange = switchValue => {
       const { onSwitchValueChange } = this.props;
       this.setState({ switchValue });
       onSwitchValueChange && onSwitchValueChange(switchValue);
+    };
+
+    _handleMaskPress = () => {
+      const { onMaskPress } = this.props;
+      if (this.hasMotion) {
+        this.setState({ show: false });
+        this.actionTypeFn = () => {
+          typeof onMaskPress === 'function' && onMaskPress();
+        };
+      } else {
+        typeof onMaskPress === 'function' && onMaskPress();
+      }
+    };
+
+    _handleCancelPress = () => {
+      const { onCancel } = this.props;
+      if (this.hasMotion) {
+        this.setState({ show: false });
+        this.actionTypeFn = () => {
+          typeof onCancel === 'function' && onCancel();
+        };
+      } else {
+        typeof onCancel === 'function' && onCancel();
+      }
+    };
+
+    _handleConfirmPress = () => {
+      const { onConfirm } = this.props;
+      if (this.hasMotion) {
+        this.setState({ show: false });
+        this.actionTypeFn = () => {
+          typeof onConfirm === 'function' && onConfirm(this.data, ...this.extraParams);
+        };
+      } else {
+        typeof onConfirm === 'function' && onConfirm(this.data, ...this.extraParams);
+      }
+    };
+
+    _handleMotionHide = () => {
+      if (typeof this.actionTypeFn === 'function') {
+        this.actionTypeFn();
+      }
     };
 
     renderTitle = () => {
@@ -136,8 +209,6 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
         footerType,
         cancelText,
         confirmText,
-        onCancel,
-        onConfirm,
         footerWrapperStyle,
         cancelTextStyle,
         confirmTextStyle,
@@ -151,7 +222,7 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
             <StyledButton
               accessibilityLabel={`${accessPrefix}_Cancel`}
               bordered={footerType === 'both'}
-              onPress={onCancel}
+              onPress={this._handleCancelPress}
             >
               <StyledCancelText style={cancelTextStyle} single={footerType === 'singleCancel'}>
                 {cancelText}
@@ -161,7 +232,7 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
           {showConfirm ? (
             <StyledButton
               accessibilityLabel={`${accessPrefix}_Confirm`}
-              onPress={() => onConfirm && onConfirm(this.data, ...this.extraParams)}
+              onPress={this._handleConfirmPress}
             >
               <StyledConfirmText style={confirmTextStyle}>{confirmText}</StyledConfirmText>
             </StyledButton>
@@ -172,7 +243,7 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
 
     render() {
       const {
-        // 以下为 Modal 通用 props
+        // ========= 以下为 Modal 通用 props ========== //
         visible,
         animationType,
         alignContainer,
@@ -182,8 +253,9 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
         onShow,
         onHide,
         onDismiss,
-        // 以上为 Modal 通用 props
-        // 以下为 skeleton 通用 props
+        // =========== 以上为 Modal 通用 props ========= //
+
+        // ========= 以下为 skeleton 通用 props ========== //
         title,
         titleTextStyle,
         titleWrapperStyle,
@@ -194,22 +266,38 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
         footerWrapperStyle,
         cancelTextStyle,
         confirmTextStyle,
-        // 以上为 skeleton 通用 props
+        // ========= 以上为 skeleton 通用 props ========== //
         wrapperStyle,
+        motionType,
+        motionConfig,
+        isAlign,
         ...props
       } = this.props;
       const { switchValue } = this.state;
-      const element = (
+      let element = (
         <StyledContainer style={wrapperStyle}>
           {this.renderTitle()}
           <WrappedComponent
             {...props}
             switchValue={typeof switchValue === 'undefined' ? true : switchValue}
-            _onDataChange={this.onDataChange}
+            _onDataChange={this._handleDataChange}
           />
           {this.renderFooter()}
         </StyledContainer>
       );
+      if (this.hasMotion) {
+        const MotionComp = Motion[motionType];
+        element = (
+          <MotionComp
+            {...motionConfig}
+            show={this.state.show}
+            onHide={this._handleMotionHide}
+            isAlign={isAlign}
+          >
+            {element}
+          </MotionComp>
+        );
+      }
       return withModal ? (
         <Modal
           visible={visible}
@@ -217,7 +305,7 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
           alignContainer={alignContainer}
           mask={mask}
           maskStyle={maskStyle}
-          onMaskPress={onMaskPress}
+          onMaskPress={this._handleMaskPress}
           onShow={onShow}
           onHide={onHide}
           onDismiss={onDismiss}
