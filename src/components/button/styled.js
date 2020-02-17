@@ -50,6 +50,7 @@ const sizeStyles = props => {
     `;
   }
   const size = typeof props.size === 'number' ? props.size : SIZE_MAP[props.size];
+  // TODO: 确认是否能直接将按钮背景改为圆角
   return css`
     width: ${bgWidth || size}px;
     height: ${bgHeight || size}px;
