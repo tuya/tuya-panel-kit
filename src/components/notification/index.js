@@ -6,9 +6,11 @@ import svgs from '../iconfont/svg/defaultSvg';
 import { ThemeUtils } from '../../utils';
 import { StyledNotification, StyledNotificationContent, StyledButton, StyledTitle } from './styled';
 import Motion from '../motion';
-import TYNative from '../TYNative';
+import TYSdk from '../../../TYNativeApi';
 
 const { ThemeConsumer } = ThemeUtils;
+
+const TYEvent = TYSdk.event;
 
 const ICONS = {
   success: svgs.selected,
@@ -216,9 +218,9 @@ const styles = StyleSheet.create({
 });
 
 Notification.show = props => {
-  TYNative.emit('showNotification', { show: true, ...props });
+  TYEvent.emit('showNotification', { show: true, ...props });
 };
 
 Notification.hide = () => {
-  TYNative.emit('hideNotification', { show: false });
+  TYEvent.emit('hideNotification', { show: false });
 };
