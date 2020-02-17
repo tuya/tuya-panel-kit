@@ -11,10 +11,14 @@ import {
   StyledSubTitle,
   StyledCheckboxList,
 } from './styled';
+import withMotion from './withMotion';
+import { ThemeUtils } from '../../utils';
+
+const { getTheme, ThemeConsumer } = ThemeUtils;
 
 const ITEM_HEIGHT = 48;
 
-export default class CheckBoxDialog extends Component {
+class CheckBoxDialog extends Component {
   static propTypes = {
     /**
      * CheckBox 类型: 单选 or 多选
@@ -135,18 +139,31 @@ export default class CheckBoxDialog extends Component {
     const { styles = {}, value, title, ...checkboxProps } = item;
     const isChecked = this.isChecked(value);
     return (
-      <TYFlatList.CheckboxItem
-        styles={{
-          ...styles,
-          container: [{ height: ITEM_HEIGHT }, styles.container],
-          title: [{ fontSize: 16, color: '#333' }, styles.title],
+      <ThemeConsumer>
+        {globalTheme => {
+          const checkItemProps = { theme: { dialog: { ...globalTheme.dialog } } };
+          const itemBackGround = getTheme(checkItemProps, 'dialog.bg');
+          const itemFontColor = getTheme(checkItemProps, 'dialog.titleFontColor');
+          const itemFontSize = getTheme(checkItemProps, 'dialog.titleFontSize');
+          return (
+            <TYFlatList.CheckboxItem
+              styles={{
+                ...styles,
+                container: [
+                  { height: ITEM_HEIGHT, backgroundColor: itemBackGround },
+                  styles.container,
+                ],
+                title: [{ fontSize: itemFontSize, color: itemFontColor }, styles.title],
+              }}
+              color={isChecked ? '#44DB5E' : '#e5e5e5'}
+              {...checkboxProps}
+              title={title || value}
+              checked={isChecked}
+              onChange={checked => this._handleCheckBoxChange(checked, value)}
+            />
+          );
         }}
-        color={isChecked ? '#44DB5E' : '#e5e5e5'}
-        {...checkboxProps}
-        title={title || value}
-        checked={isChecked}
-        onChange={checked => this._handleCheckBoxChange(checked, value)}
-      />
+      </ThemeConsumer>
     );
   };
 
@@ -203,3 +220,5 @@ export default class CheckBoxDialog extends Component {
     );
   }
 }
+
+export default withMotion(CheckBoxDialog);
