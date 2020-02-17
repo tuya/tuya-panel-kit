@@ -4,8 +4,13 @@ import { FlatList, View, StyleSheet, ViewPropTypes } from 'react-native';
 import PropTypes from 'prop-types';
 import TYFlatList from '../TYLists/list';
 import SwitchButton from '../switch-button';
-import IconFont from '../iconfont';
 import withSkeleton from './withSkeleton';
+import { ThemeUtils } from '../../utils';
+import { StyledIconFont, StyledFlatList } from './styled';
+
+const selectedPath =
+  'M288.67 521.63l18.69-25.26a5.217 5.217 0 0 1 7.29-1.09c0.02 0.01 0.04 0.03 0.06 0.04l113.01 86.01a5.216 5.216 0 0 0 6.48-0.13l275.9-228.25a5.22 5.22 0 0 1 6.97 0.29l17.32 16.98a5.212 5.212 0 0 1 0.07 7.37l-0.08 0.08-299.65 292.84a5.221 5.221 0 0 1-7.37-0.08l-0.01-0.01-138.22-142.06a5.206 5.206 0 0 1-0.46-6.73z';
+const { getTheme, ThemeConsumer } = ThemeUtils;
 
 let itemHeight = 48;
 
@@ -41,7 +46,7 @@ class ListPopup extends React.Component {
     maxItemNum: 5,
     selectedIcon: null,
     type: 'radio',
-    iconTintColor: '#44DB5E',
+    iconTintColor: '',
     contentCenter: null,
     value: -1,
     listItemStyle: null,
@@ -108,7 +113,6 @@ class ListPopup extends React.Component {
       <SwitchButton
         useNativeDriver={false} // 与 Modal 共用暂时有bug
         onValueChange={sValue => this.switchValueChange(sValue, value)}
-        size={{ width: 50, height: 30 }}
         defaultValue={this.state.selectedArr.indexOf(value) > -1}
       />
     );
@@ -117,7 +121,7 @@ class ListPopup extends React.Component {
   renderSelectIcon = value => {
     const { selectedIcon, iconTintColor } = this.props;
     if (this.state.selected === value) {
-      return selectedIcon || <IconFont name="selected" color={iconTintColor} size={17} />;
+      return selectedIcon || <StyledIconFont d={selectedPath} color={iconTintColor} />;
     }
     return null;
   };
@@ -145,26 +149,47 @@ class ListPopup extends React.Component {
     } else if (type === 'radio') {
       titleAlign = 'center';
     }
-    const titleColor = type === 'switch' ? '#666' : '#333';
-    const itemStyle = {
-      ...styles,
-      container: [{ ...containerStyle, ...listItemStyle }, styles.container],
-      content: [{ flex: 1, alignItems: 'center' }, styles.content],
-      title: [{ textAlign: titleAlign, fontSize: 16, color: titleColor }, styles.title],
-      contentRight: [
-        { position: 'absolute', right: type === 'switch' ? 16 : 24 },
-        styles.contentRight,
-      ],
-    };
+
     return (
-      <TYFlatList.Item
-        key={`list_${index}`}
-        activeOpacity={type === 'switch' ? 1 : 0.8}
-        styles={itemStyle}
-        Action={this.renderActions(dataSource[index].value)}
-        onPress={() => this.selectRow(dataSource[index].value)}
-        {...item}
-      />
+      <ThemeConsumer>
+        {globalTheme => {
+          const popupTheme = { ...this.props, theme: globalTheme };
+          const cellFontColor = getTheme(popupTheme, 'popup.list.cellFontColor');
+          const cellFontSize = getTheme(popupTheme, 'popup.cellFontSize');
+          let flatItemStyle;
+          if (listItemStyle !== null && listItemStyle.backgroundColor) {
+            flatItemStyle = listItemStyle;
+          } else {
+            flatItemStyle = {
+              ...listItemStyle,
+              backgroundColor: getTheme(popupTheme, 'popup.cellBg'),
+            };
+          }
+          const itemStyle = {
+            ...styles,
+            container: [{ ...containerStyle, ...flatItemStyle }, styles.container],
+            content: [{ flex: 1, alignItems: 'center' }, styles.content],
+            title: [
+              { textAlign: titleAlign, fontSize: cellFontSize, color: cellFontColor },
+              styles.title,
+            ],
+            contentRight: [
+              { position: 'absolute', right: type === 'switch' ? 16 : 24 },
+              styles.contentRight,
+            ],
+          };
+          return (
+            <TYFlatList.Item
+              key={`list_${index}`}
+              activeOpacity={type === 'switch' ? 1 : 0.8}
+              styles={itemStyle}
+              Action={this.renderActions(dataSource[index].value)}
+              onPress={() => this.selectRow(dataSource[index].value)}
+              {...item}
+            />
+          );
+        }}
+      </ThemeConsumer>
     );
   };
 
@@ -191,7 +216,7 @@ class ListPopup extends React.Component {
         style={[listWrapperStyle, !switchValue && { opacity: 0.6 }, { height: totalHeight }]}
         pointerEvents={!switchValue ? 'none' : 'auto'}
       >
-        <TYFlatList data={dataSource} renderItem={this.renderItem} {...FlatListProps} />
+        <StyledFlatList data={dataSource} renderItem={this.renderItem} {...FlatListProps} />
       </View>
     );
   }

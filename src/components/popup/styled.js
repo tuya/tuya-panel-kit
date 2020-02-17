@@ -1,21 +1,31 @@
+import React from 'react';
 import { View, TouchableOpacity, StyleSheet } from 'react-native';
 import styled from 'styled-components/native';
 import { RatioUtils, ThemeUtils } from '../../utils';
 import Button from '../button';
 import TYText from '../TYText';
 import Slider from '../slider';
+import IconFont from '../iconfont';
+import TimerPicker from '../timer-picker';
+import TYFlatList from '../TYLists/list';
+import DatePicker from '../date-picker';
 import SwitchButton from '../switch-button';
 import { defaultTheme } from '../theme';
 import { popup } from '../theme/theme-get';
 
+const DEFAULT_LIST_THEME = defaultTheme.popup.basic;
 const DEFAULT_PICKER_THEME = defaultTheme.picker.light;
 
 const { convertX: cx, isIphoneX } = RatioUtils;
-const { getTheme } = ThemeUtils;
+const { getTheme, ThemeConsumer } = ThemeUtils;
 const {
   cellHeight,
   cellBg,
+  cellFontSize,
+  cellFontColor,
   titleRadius,
+  titleHeight,
+  titleBg,
   footerRadius,
   bottomBg,
   lineColor,
@@ -49,6 +59,8 @@ export const StyledContainer = styled(View)`
 
 export const StyledTitle = styled(Row)`
   justify-content: space-around;
+  height: ${titleHeight}px;
+  background-color: ${titleBg};
   border-top-left-radius: ${titleRadius};
   border-top-right-radius: ${titleRadius};
   border-bottom-color: ${lineColor};
@@ -106,7 +118,7 @@ export const StyledPickerContainer = styled(View)`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  background-color: ${cellBg};
   opacity: ${props => (props.disabled ? 0.6 : 1)};
 `;
 
@@ -118,10 +130,8 @@ export const StyledPickerUnit = styled(View)`
 `;
 
 export const StyledPickerUnitText = styled(TYText)`
-  font-size: ${props => getTheme(props, 'picker.unitFontSize', DEFAULT_PICKER_THEME.unitFontSize)};
-  color: ${props =>
-    props.pickerUnitColor ||
-    getTheme(props, 'picker.unitFontColor', DEFAULT_PICKER_THEME.unitFontColor)};
+  font-size: ${cellFontSize};
+  color: ${props => props.pickerUnitColor || cellFontColor};
 `;
 
 /**
@@ -131,7 +141,7 @@ export const StyledCountdownContainer = styled(View)`
   flex-direction: row;
   align-items: center;
   padding: 1px 0;
-  background-color: #fff;
+  background-color: ${cellBg};
 `;
 
 export const StyledOverview = styled(View)`
@@ -162,6 +172,30 @@ export const StyledSymbolText = styled(TYText)`
   color: ${props => getTheme(props, 'picker.unitFontColor', DEFAULT_PICKER_THEME.unitFontColor)};
 `;
 
+export const StyledTimerPicker = props => {
+  return (
+    <ThemeConsumer>
+      {globalTheme => {
+        const timerPickerTheme = { ...props, theme: globalTheme };
+        const fontColor = getTheme(timerPickerTheme, 'popup.cellFontColor');
+        let timerStyle;
+        /* eslint-disable react/prop-types */
+        if (props.style && props.style.backgroundColor) {
+          timerStyle = props.style;
+        } else if (props.style) {
+          timerStyle = {
+            ...props.style,
+            backgroundColor: getTheme(timerPickerTheme, 'popup.cellBg'),
+          };
+        } else {
+          timerStyle = { backgroundColor: getTheme(timerPickerTheme, 'popup.cellBg') };
+        }
+        return <TimerPicker {...props} pickerFontColor={fontColor} style={timerStyle} />;
+      }}
+    </ThemeConsumer>
+  );
+};
+
 /**
  * Popup.numberSelector
  */
@@ -170,7 +204,7 @@ export const StyledSliderContent = styled(View)`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  background-color: ${cellBg};
 `;
 
 export const StyledSliderContainer = styled(View)`
@@ -181,14 +215,17 @@ export const StyledSliderContainer = styled(View)`
   justify-content: center;
 `;
 
-export const StyledSlider = styled(Slider)`
+export const StyledSlider = styled(Slider).attrs({
+  minimumTrackTintColor: '#0B7CFF',
+  maximumTrackTintColor: props => getTheme(props, 'popup.numberSelector.maximumTrackTintColor'),
+})`
   width: ${cx(220)}px;
   margin: 0 12px;
 `;
 
 export const StyledSliderBtn = styled(Button).attrs({
-  iconColor: '#222',
   iconSize: 26,
+  iconColor: props => getTheme(props, 'popup.numberSelector.cellPlusColor'),
 })`
   opacity: ${props => (props.disabled ? 0.6 : 1)};
 `;
@@ -200,6 +237,78 @@ export const StyledDisplayText = styled(TYText).attrs({
   text-align: center;
   font-weight: 500;
   font-size: 56px;
-  color: #333;
+  color: ${cellFontColor};
   background-color: transparent;
 `;
+
+/**
+ *  DatePicker
+ */
+
+export const StyledDatePicker = props => {
+  return (
+    <ThemeConsumer>
+      {globalTheme => {
+        const datePickerTheme = { ...props, theme: globalTheme };
+        const fontColor = getTheme(datePickerTheme, 'popup.cellFontColor');
+        let dateStyle;
+        /* eslint-disable react/prop-types */
+        if (props.style && props.style.backgroundColor) {
+          dateStyle = props.style;
+        } else if (props.style) {
+          dateStyle = {
+            ...props.style,
+            backgroundColor: getTheme(datePickerTheme, 'popup.cellBg'),
+          };
+        } else {
+          dateStyle = { backgroundColor: getTheme(datePickerTheme, 'popup.cellBg') };
+        }
+        return <DatePicker {...props} pickerFontColor={fontColor} style={dateStyle} />;
+      }}
+    </ThemeConsumer>
+  );
+};
+
+/**
+ * Popup.List
+ */
+
+export const StyledFlatList = props => {
+  return (
+    <ThemeConsumer>
+      {globalTheme => {
+        const listTheme = { ...props, theme: globalTheme };
+        return (
+          <TYFlatList
+            separatorStyle={{
+              backgroundColor: getTheme(listTheme, 'popup.lineColor'),
+              marginLeft: 0,
+            }}
+            {...props}
+          />
+        );
+      }}
+    </ThemeConsumer>
+  );
+};
+
+export const StyledIconFont = props => {
+  const { color, ...rest } = props;
+  return (
+    <ThemeConsumer>
+      {theme => {
+        const propsWithTheme = { ...props, theme };
+        return (
+          <IconFont
+            size={cx(28)}
+            color={
+              color ||
+              getTheme(propsWithTheme, 'popup.checkboxColor', DEFAULT_LIST_THEME.checkboxColor)
+            }
+            {...rest}
+          />
+        );
+      }}
+    </ThemeConsumer>
+  );
+};

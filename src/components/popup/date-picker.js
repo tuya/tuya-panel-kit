@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { View } from 'react-native';
 import DatePicker from '../date-picker';
 import withSkeleton from './withSkeleton';
+import { StyledDatePicker } from './styled';
 
 class DatePickerPopup extends React.Component {
   static propTypes = {
@@ -37,7 +38,7 @@ class DatePickerPopup extends React.Component {
     } = this.props;
     return (
       <View style={!switchValue && { opacity: 0.6 }} pointerEvents={!switchValue ? 'none' : 'auto'}>
-        <DatePicker onDateChange={this.handleDateChange} {...datePickerProps} />
+        <StyledDatePicker onDateChange={this.handleDateChange} {...datePickerProps} />
       </View>
     );
   }

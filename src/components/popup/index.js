@@ -9,6 +9,10 @@ import Picker from './picker';
 import Custom from './custom';
 import Notification from '../notification';
 import Dropdown from './dropdown';
+import Tips from '../tips';
+import { RatioUtils } from '../../utils';
+
+const { convertX: cx } = RatioUtils;
 
 const commonProps = {
   onCancel: Modal.close,
@@ -75,6 +79,27 @@ const Popup = {
     };
     Modal.render(<Notification {...noticeProps} />, modalProps);
   },
+
+  tips: (props, modalOpts) => {
+    const { contentStyle, modalChildStyle, maskStyle, alignContainer } = props;
+    const maskWidth =
+      contentStyle !== undefined && contentStyle.width ? contentStyle.width : cx(64);
+    let modalStyle;
+    if (modalChildStyle !== undefined && modalChildStyle.height) {
+      const { height, ...rest } = modalChildStyle;
+      modalStyle = rest;
+    } else {
+      modalStyle = modalChildStyle;
+    }
+    const modalProps = {
+      ...modalOpts,
+      maskStyle: [{ backgroundColor: 'rgba(0, 0, 0, 0.1)', alignItems: 'center' }, maskStyle],
+      modalChildStyle: [modalStyle, { minWidth: maskWidth }],
+      alignContainer: alignContainer || 'center',
+    };
+    Modal.render(<Tips {...props} />, modalProps);
+  },
+
   dropdown: (props, modalOpts) => {
     const listProps = { ...commonProps, ...props };
     const {

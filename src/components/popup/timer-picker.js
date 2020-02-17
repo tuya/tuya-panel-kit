@@ -3,6 +3,7 @@ import { StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 import TimerPicker from '../timer-picker';
 import withSkeleton from './withSkeleton';
+import { StyledTimerPicker } from './styled';
 
 class TimerPickerPopup extends React.Component {
   static propTypes = {
@@ -29,12 +30,8 @@ class TimerPickerPopup extends React.Component {
   render() {
     const { style, switchValue, ...props } = this.props;
     return (
-      <TimerPicker
-        style={StyleSheet.flatten([
-          { backgroundColor: '#fff' },
-          !switchValue && { opacity: 0.6 },
-          style,
-        ])}
+      <StyledTimerPicker
+        style={StyleSheet.flatten([!switchValue && { opacity: 0.6 }, style])}
         disabled={!switchValue}
         onTimerChange={this.handleTimerChange}
         {...props}
