@@ -17,6 +17,7 @@ class Carousel extends React.Component {
     dots: PropTypes.oneOfType([PropTypes.element, PropTypes.func]),
     dotStyle: ViewPropTypes.style,
     dotActiveStyle: ViewPropTypes.style,
+    pageStyle: ViewPropTypes.style,
     useViewPagerOnAndroid: PropTypes.bool,
   };
   static defaultProps = {
@@ -29,6 +30,7 @@ class Carousel extends React.Component {
     dots: defaultDot,
     dotStyle: {},
     dotActiveStyle: {},
+    pageStyle: {},
     useViewPagerOnAndroid: true,
   };
   constructor(props) {
@@ -236,7 +238,7 @@ class Carousel extends React.Component {
     }, autoplayInterval);
   };
 
-  _renderSrcoll = pages => {
+  _renderScroll = pages => {
     if (Platform.OS === 'android' && this.props.useViewPagerOnAndroid) {
       return (
         <ViewPagerAndroid
@@ -291,10 +293,10 @@ class Carousel extends React.Component {
       : null;
   };
   render() {
-    const { children, hasDots, loop, accessibilityLabel } = this.props;
+    const { children, hasDots, loop, accessibilityLabel, pageStyle } = this.props;
     if (!children) return null;
     let pages;
-    const pageWidth = { width: this.state.width };
+    const pageWidth = [pageStyle, { width: this.state.width }];
     if (this.count > 1) {
       const childrenArray = React.Children.toArray(children);
       if (loop) {
@@ -315,7 +317,7 @@ class Carousel extends React.Component {
     }
     return (
       <View onLayout={this.onLayout}>
-        {this._renderSrcoll(pages)}
+        {this._renderScroll(pages)}
         {hasDots && this._renderDots()}
       </View>
     );
