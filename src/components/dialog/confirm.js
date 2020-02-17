@@ -4,6 +4,7 @@ import { ViewPropTypes } from 'react-native';
 import TYText from '../TYText';
 import Footer from './footer';
 import { StyledContainer, StyledContent, StyledTitle, StyledSubTitle } from './styled';
+import withMotion from './withMotion';
 
 const Confirm = ({
   style,
@@ -26,7 +27,10 @@ const Confirm = ({
   return (
     <StyledContainer style={style}>
       <StyledContent style={contentStyle}>
-        <StyledTitle style={titleStyle} numberOfLines={titleNumberOfLines}>
+        <StyledTitle
+          style={[{ paddingVertical: subTitle ? 0 : 12 }, titleStyle]}
+          numberOfLines={titleNumberOfLines}
+        >
           {title}
         </StyledTitle>
         {!!subTitle && <StyledSubTitle style={subTitleStyle}>{subTitle}</StyledSubTitle>}
@@ -81,4 +85,4 @@ Confirm.defaultProps = {
   onConfirm: null,
 };
 
-export default Confirm;
+export default withMotion(Confirm);
