@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal } from 'tuya-panel-kit';
+import { Modal, Motion } from 'tuya-panel-kit';
 import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
 
 class ManyModal extends React.Component {
@@ -23,13 +23,15 @@ class ManyModal extends React.Component {
           visible={this.state.modalVisible}
           onMaskPress={() => this.setState({ modalVisible: false })}
         >
-          <Text style={styles.textStyle}>{`${this.props.text}222`}</Text>
-          <TouchableOpacity
-            onPress={() => this.props.changeText('hahaha')}
-            style={styles.buttonStyle}
-          >
-            <Text style={styles.textStyle}>Change Text!</Text>
-          </TouchableOpacity>
+          {/* <Text style={styles.textStyle}>{`${this.props.text}222`}</Text> */}
+          <Motion.PullUp show={true}>
+            <TouchableOpacity
+              onPress={() => this.props.changeText('hahaha')}
+              style={styles.buttonStyle}
+            >
+              <Text style={styles.textStyle}>Change Text!</Text>
+            </TouchableOpacity>
+          </Motion.PullUp>
         </Modal>
       </View>
     );

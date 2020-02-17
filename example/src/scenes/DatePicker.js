@@ -10,6 +10,7 @@ class DatePickerScene extends React.PureComponent {
       use12Hours: false,
       isAmpmFirst: false,
       isTimeFirst: false,
+      isPlusZero: true,
     };
   }
 
@@ -42,27 +43,30 @@ class DatePickerScene extends React.PureComponent {
           use12Hours={this.state.use12Hours}
           isAmpmFirst={this.state.isAmpmFirst}
           isTimeFirst={this.state.isTimeFirst}
+          isPlusZero={this.state.isPlusZero}
           mode={this.state.mode}
           dateSortKeys={['month', 'day', 'year']}
         />
         {this.renderModeSelect()}
         <Button
-          size="large"
           text="use12Hours"
-          textStyle={{ color: '#000' }}
+          textStyle={{ paddingTop: 24, color: '#000' }}
           onPress={() => this.setState({ use12Hours: !this.state.use12Hours })}
         />
         <Button
-          size="large"
           text="isAmpmFirst"
-          textStyle={{ color: '#000' }}
+          textStyle={{ paddingTop: 24, color: '#000' }}
           onPress={() => this.setState({ isAmpmFirst: !this.state.isAmpmFirst })}
         />
         <Button
-          size="large"
           text="isTimeFirst"
-          textStyle={{ color: '#000' }}
+          textStyle={{ paddingTop: 24, color: '#000' }}
           onPress={() => this.setState({ isTimeFirst: !this.state.isTimeFirst })}
+        />
+        <Button
+          text="isPlusZero"
+          textStyle={{ paddingTop: 24, color: '#000' }}
+          onPress={() => this.setState({ isPlusZero: !this.state.isPlusZero })}
         />
       </View>
     );
