@@ -2,8 +2,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components/native';
-import { Modal, TouchableOpacity, Animated, StyleSheet, ViewPropTypes, View } from 'react-native';
-import { CoreUtils } from '../../utils';
+import {
+  Modal,
+  TouchableOpacity,
+  Animated,
+  StyleSheet,
+  ViewPropTypes,
+  View,
+  Platform,
+  KeyboardAvoidingView,
+} from 'react-native';
+import { CoreUtils, RatioUtils } from '../../utils';
 
 const { get } = CoreUtils;
 
@@ -12,6 +21,10 @@ const ALIGN = {
   center: 'center',
   bottom: 'flex-end',
 };
+
+const { isIphoneX } = RatioUtils;
+
+const ios = Platform.OS === 'ios';
 
 const StyledMask = styled(TouchableOpacity)`
   background-color: ${props => get(props, 'theme.global.mask', 'rgba(0, 0, 0, 0.7)')};
@@ -22,12 +35,14 @@ class TYModal extends React.Component {
     animationType: PropTypes.oneOf(['fade', 'none']),
     alignContainer: PropTypes.oneOf(['top', 'center', 'bottom']),
     onMaskPress: PropTypes.func,
+    modalChildStyle: ViewPropTypes.style,
     maskStyle: ViewPropTypes.style,
     mask: PropTypes.bool,
     /**
      * 是否只显示最后一个弹出的 modal
      */
     onlyLastModalVisible: PropTypes.bool,
+    useKeyboardView: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -36,11 +51,14 @@ class TYModal extends React.Component {
     onMaskPress: () => {},
     maskStyle: null,
     mask: true,
+    modalChildStyle: null,
     onlyLastModalVisible: true,
+    useKeyboardView: false,
   };
 
   constructor(props) {
     super(props);
+    this._childRef = {};
     this.state = {
       fade: new Animated.Value(0),
     };
@@ -52,6 +70,17 @@ class TYModal extends React.Component {
       toValue: 1,
     }).start();
   }
+
+  _handleMaskPress = () => {
+    const { onMaskPress, children } = this.props;
+    const childMotionType = get(this, `_childRef.${children.length - 1}.props.motionType`, 'none');
+    const childMaskPress = get(this, `_childRef.${children.length - 1}._handleMaskPress`);
+    if (childMotionType !== 'none' && typeof childMaskPress === 'function') {
+      childMaskPress();
+    } else {
+      typeof onMaskPress === 'function' && onMaskPress();
+    }
+  };
 
   renderNoMaskModal = () => {
     const { onlyLastModalVisible, activeIdx, children, animationType, alignContainer } = this.props;
@@ -82,6 +111,8 @@ class TYModal extends React.Component {
       onMaskPress,
       alignContainer,
       maskStyle,
+      modalChildStyle,
+      useKeyboardView,
       ...props
     } = this.props;
     const maskContainer = [
@@ -92,7 +123,7 @@ class TYModal extends React.Component {
     return (
       <Modal
         animationType={animationType}
-        onRequestClose={onMaskPress}
+        onRequestClose={this._handleMaskPress}
         {...props}
         visible={true}
         transparent={true}
@@ -102,14 +133,41 @@ class TYModal extends React.Component {
             maskContainer,
             onlyLastModalVisible && { display: idx === activeIdx ? 'flex' : 'none' },
           ];
+          let modalChild = child;
+          if (!Array.isArray(child)) {
+            modalChild = React.cloneElement(child, {
+              onMaskPress: get(child, 'props.onMaskPress', onMaskPress),
+              ref: ref => {
+                this._childRef[idx] = ref;
+              },
+            });
+          }
           return (
             <StyledMask
-              key={Math.random()}
+              key={idx}
               style={childStyle}
-              onPress={onMaskPress}
+              onPress={this._handleMaskPress}
               activeOpacity={1}
             >
-              <View onStartShouldSetResponder={() => true}>{child}</View>
+              {ios && useKeyboardView ? (
+                <KeyboardAvoidingView
+                  behavior="padding"
+                  style={{
+                    flex: 1,
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    paddingTop: isIphoneX ? 20 : 0,
+                  }}
+                >
+                  <View onStartShouldSetResponder={() => true} style={modalChildStyle}>
+                    {modalChild}
+                  </View>
+                </KeyboardAvoidingView>
+              ) : (
+                <View onStartShouldSetResponder={() => true} style={modalChildStyle}>
+                  {modalChild}
+                </View>
+              )}
             </StyledMask>
           );
         })}
