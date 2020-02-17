@@ -6,7 +6,7 @@ import svgs from '../iconfont/svg/defaultSvg';
 import { ThemeUtils } from '../../utils';
 import { StyledNotification, StyledNotificationContent, StyledButton, StyledTitle } from './styled';
 import Motion from '../motion';
-import TYSdk from '../../../TYNativeApi';
+import TYSdk from '../../TYNativeApi';
 
 const { ThemeConsumer } = ThemeUtils;
 
