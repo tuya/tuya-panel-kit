@@ -7,7 +7,7 @@ export default class CustomModalScene extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // modalVisible: false,
+      modalVisible: false,
       modalText: 'I am a Portal111!!!',
     };
   }
@@ -22,8 +22,8 @@ export default class CustomModalScene extends React.Component {
     Modal.render(
       <View>
         <Text style={styles.textStyle}>{this.state.modalText}</Text>
-        <TouchableOpacity onPress={() => Modal.close()} style={styles.buttonStyle}>
-          <Text style={styles.textStyle}>Change Text!</Text>
+        <TouchableOpacity onPress={() => this.changeText('abc')} style={styles.buttonStyle}>
+          <Text style={styles.textStyle}>changeText</Text>
         </TouchableOpacity>
       </View>
     );

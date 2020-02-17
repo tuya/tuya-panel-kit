@@ -2,7 +2,7 @@ import React from 'react';
 import { TouchableOpacity, View, StyleSheet } from 'react-native';
 import { Toast, TYText } from 'tuya-panel-kit';
 
-class ToastScene extends React.PureComponent {
+class ToastBasicScene extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -33,4 +33,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ToastScene;
+export default ToastBasicScene;
