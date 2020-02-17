@@ -177,6 +177,7 @@ export default class Tabs extends Component {
       onStartShouldSetPanResponderCapture: () => !this.props.disabled,
       onMoveShouldSetPanResponder: () => !this.props.disabled,
       onMoveShouldSetPanResponderCapture: () => !this.props.disabled,
+      // TODO: 确认是否能被终止
       onPanResponderTerminationRequest: () => !this.props.disabled, // 上层的responder是否能中断当前的responder
       onPanResponderGrant: () => {},
       onPanResponderMove: this._handleMove,
