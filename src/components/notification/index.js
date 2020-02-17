@@ -1,13 +1,12 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-import { ColorPropType, ViewPropTypes } from 'react-native';
-import { Rect } from 'react-native-svg';
-import TopBar from '../layout/topbar';
-import LinearGradient from '../gradient/linear-gradient';
+import { ColorPropType, ViewPropTypes, StyleSheet } from 'react-native';
 import IconFont from '../iconfont';
 import svgs from '../iconfont/svg/defaultSvg';
-import { RatioUtils, ThemeUtils } from '../../utils';
+import { ThemeUtils } from '../../utils';
 import { StyledNotification, StyledNotificationContent, StyledButton, StyledTitle } from './styled';
+import Motion from '../motion';
+import TYNative from '../TYNative';
 
 const { ThemeConsumer } = ThemeUtils;
 
@@ -43,7 +42,7 @@ export default class Notification extends PureComponent {
     super(props);
     this._autoCloseId = null;
     this.state = {
-      height: 56,
+      height: 44,
     };
   }
 
@@ -65,7 +64,7 @@ export default class Notification extends PureComponent {
   }
 
   _handleLayout = ({ nativeEvent: { layout } }) => {
-    this.setState({ height: layout.height || 56 });
+    this.setState({ height: layout.height || 44 });
   };
 
   render() {
@@ -79,67 +78,50 @@ export default class Notification extends PureComponent {
       enableClose,
       onClose,
       children,
+      motionConfig,
+      show,
+      motionStyle,
       ...rest
     } = this.props;
     return (
-      <ThemeConsumer>
-        {t => {
-          const iconPath = icon || ICONS[variant] || ICONS.warning;
-          const iconColor =
-            theme.iconColor || theme[`${variant}Icon`] || t.global[variant] || theme.warningIcon;
-          const shadowSize = {
-            width: RatioUtils.winWidth,
-            height: this.state.height + TopBar.height + 40,
-          };
-          const isOneLine = this.state.height === 56;
-          return (
-            <StyledNotification
-              {...rest}
-              style={[shadowSize, style]}
-              accessibilityLabel={accessibilityLabel}
-            >
-              <LinearGradient
-                style={shadowSize}
-                x1="0%"
-                y1="0%"
-                x2="0%"
-                y2="100%"
-                stops={{
-                  '0%': 'rgba(0, 0, 0, 0.6)',
-                  '100%': 'rgba(0, 0, 0, 0)',
-                }}
-              >
-                <Rect {...shadowSize} />
-              </LinearGradient>
-              <StyledNotificationContent
-                style={{
-                  alignItems: isOneLine ? 'center' : 'flex-start',
-                  borderRadius: isOneLine ? 30 : 16,
-                  ...shadowStyles,
-                }}
-                background={theme.background}
-                onLayout={this._handleLayout}
-              >
-                <IconFont d={iconPath} color={iconColor} size={20} />
-                {children || (
-                  <StyledTitle color={theme.text} numberOfLines={3}>
-                    {message}
-                  </StyledTitle>
-                )}
-                {enableClose && (
-                  <StyledButton
-                    accessibilityLabel={`${accessibilityLabel}_Close`}
-                    activeOpacity={0.6}
-                    onPress={onClose}
-                  >
-                    <IconFont name="close" color={theme.closeIcon} size={15} />
-                  </StyledButton>
-                )}
-              </StyledNotificationContent>
-            </StyledNotification>
-          );
-        }}
-      </ThemeConsumer>
+      <Motion.PushDown {...motionConfig} show={show} style={[styles.notification, motionStyle]}>
+        <ThemeConsumer>
+          {t => {
+            const iconPath = icon || ICONS[variant] || ICONS.warning;
+            const iconColor =
+              theme.iconColor || theme[`${variant}Icon`] || t.global[variant] || theme.warningIcon;
+            const isOneLine = this.state.height === 44;
+            return (
+              <StyledNotification {...rest} style={[style]} accessibilityLabel={accessibilityLabel}>
+                <StyledNotificationContent
+                  style={{
+                    alignItems: isOneLine ? 'center' : 'flex-start',
+                    ...shadowStyles,
+                  }}
+                  background={theme.background}
+                  onLayout={this._handleLayout}
+                >
+                  <IconFont d={iconPath} color={iconColor} size={20} />
+                  {children || (
+                    <StyledTitle color={theme.text} numberOfLines={3}>
+                      {message}
+                    </StyledTitle>
+                  )}
+                  {enableClose && (
+                    <StyledButton
+                      accessibilityLabel={`${accessibilityLabel}_Close`}
+                      activeOpacity={0.6}
+                      onPress={onClose}
+                    >
+                      <IconFont name="close" color={theme.closeIcon} size={15} />
+                    </StyledButton>
+                  )}
+                </StyledNotificationContent>
+              </StyledNotification>
+            );
+          }}
+        </ThemeConsumer>
+      </Motion.PushDown>
     );
   }
 }
@@ -167,6 +149,10 @@ Notification.propTypes = {
     radius: PropTypes.number,
   }),
   /**
+   * 是否显示Notification
+   */
+  show: PropTypes.bool,
+  /**
    * Notification 自定义 IconPath
    */
   icon: PropTypes.string,
@@ -190,13 +176,25 @@ Notification.propTypes = {
    * 关闭回调
    */
   onClose: PropTypes.func,
+  /**
+   * Notification 自定义文案内容
+   */
   children: PropTypes.any,
+  /**
+   * Notification 动画配置,参考PushDown属性
+   */
+  motionConfig: PropTypes.object,
+  /**
+   * Notification 样式
+   */
+  motionStyle: ViewPropTypes.style,
 };
 
 Notification.defaultProps = {
   accessibilityLabel: 'Notification',
   style: null,
   theme: DEFAULT_THEME,
+  show: false,
   icon: undefined,
   variant: 'warning',
   enableClose: true,
@@ -204,4 +202,23 @@ Notification.defaultProps = {
   message: '',
   onClose: null,
   children: null,
+  motionConfig: {},
+  motionStyle: null,
+};
+
+const styles = StyleSheet.create({
+  notification: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+  },
+});
+
+Notification.show = props => {
+  TYNative.emit('showNotification', { show: true, ...props });
+};
+
+Notification.hide = () => {
+  TYNative.emit('hideNotification', { show: false });
 };
