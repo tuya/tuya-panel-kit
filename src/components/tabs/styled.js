@@ -29,7 +29,7 @@ export const StyledTabText = styled(TYText).attrs({
   font-size: 14px;
   color: ${props => {
     if (typeof props.color !== 'undefined') {
-      return props.color;
+      return props.isActive ? props.color : getTypedFontColor(props);
     }
     return props.isActive ? getBrandColor(props) : getTypedFontColor(props);
   }};
