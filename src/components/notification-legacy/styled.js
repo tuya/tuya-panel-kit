@@ -1,9 +1,10 @@
 import { View, TouchableOpacity } from 'react-native';
 import styled from 'styled-components/native';
 import { RatioUtils } from '../../utils';
+import TopBar from '../layout/topbar';
 import TYText from '../TYText';
 
-const { viewWidth, convertX: cx } = RatioUtils;
+const { convertX: cx } = RatioUtils;
 
 export const StyledNotification = styled(View)`
   align-self: stretch;
@@ -12,28 +13,28 @@ export const StyledNotification = styled(View)`
 `;
 
 export const StyledNotificationContent = styled(View)`
+  width: ${cx(351)}px;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin: ${`${12}px 0px ${2}px 0px`};
-  padding: ${`10px ${cx(16)}px`};
-  min-height: 24;
-  border-radius: 22;
+  margin: ${`${TopBar.height + 12}px 0px 0px`};
+  padding: ${`6px ${cx(16)}px`};
+  min-height: 56px;
+  border-radius: 28;
   background-color: ${props => props.background};
 `;
 
 export const StyledTitle = styled(TYText)`
-  min-width: ${cx(44)}px;
-  max-width: ${viewWidth - 142}px;
+  flex: 1;
   font-size: 14;
-  line-height: 22;
+  line-height: 20;
   color: ${props => props.color};
-  margin: ${`0px ${cx(30)}px 0px ${cx(8)}px`};
+  margin: ${`2px ${cx(8)}px`};
 `;
 
 export const StyledButton = styled(TouchableOpacity)`
   width: ${cx(24)}px;
-  height: 24;
+  height: ${cx(24)}px;
   align-items: center;
   justify-content: center;
 `;
