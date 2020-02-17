@@ -63,8 +63,6 @@ export { default as DatePicker } from './components/date-picker';
 
 export { default as Swipeout } from './components/swipeout';
 
-export { Strings } from '@tuya-rn/tuya-native-kit';
-
 export { Utils };
 
 export { default as Modal } from './components/modal';
