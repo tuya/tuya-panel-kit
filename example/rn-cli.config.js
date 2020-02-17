@@ -10,7 +10,13 @@ module.exports = {
     return [__dirname, path.resolve(__dirname, '..')];
   },
   getProvidesModuleNodeModules() {
-    return [...dependencies, ...peerDependencies, 'xmlbuilder', 'simple-plist'];
+    return [
+      ...dependencies,
+      ...peerDependencies,
+      'xmlbuilder',
+      'simple-plist',
+      'hoist-non-react-statics',
+    ];
   },
   getBlacklistRE() {
     return blacklist([
