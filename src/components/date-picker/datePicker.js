@@ -41,9 +41,9 @@ const sortColumnsAndValue = (dateSortKeys, cols, value) => {
 
 const formatColArray = (arrLength, min, labelLocal, isPlusZero) => {
   return Array.from(Array(arrLength), (v, k) => {
-    const fianlLabelLocal = `${labelLocal || ''}`;
+    const finalLabelLocal = `${labelLocal || ''}`;
     const finalLabelMain = isPlusZero ? `${plusZero(k + min)}` : `${k + min}`;
-    const label = `${finalLabelMain}${fianlLabelLocal}`;
+    const label = `${finalLabelMain}${finalLabelLocal}`;
     return { value: `${k + min}`, label };
   });
 };
@@ -63,6 +63,10 @@ class DatePicker extends React.Component {
     mode: PropTypes.string,
     loop: PropTypes.bool,
     use12Hours: PropTypes.bool,
+    /**
+     * 月、日、时、分，是否补0显示
+     */
+    isPlusZero: PropTypes.bool,
     minDate: PropTypes.object,
     maxDate: PropTypes.object,
     onDateChange: PropTypes.func,
@@ -90,6 +94,7 @@ class DatePicker extends React.Component {
     mode: DATE,
     loop: false,
     use12Hours: false,
+    isPlusZero: true,
     isAmpmFirst: false,
     isTimeFirst: false,
     locale: 'en',
@@ -219,7 +224,7 @@ class DatePicker extends React.Component {
     let maxMinute = 59;
     let minHour = 0;
     let maxHour = 23;
-    const { mode, use12Hours, isAmpmFirst, minDate, maxDate } = this.props;
+    const { mode, use12Hours, isPlusZero, isAmpmFirst, minDate, maxDate } = this.props;
     const { locale } = this;
     const minDateMinute = minDate.getMinutes();
     const maxDateMinute = maxDate.getMinutes();
@@ -280,13 +285,7 @@ class DatePicker extends React.Component {
       hour.push({ value: '0', label: locale.hour ? `12${locale.hour}` : '12' });
     }
     maxHour = this.getRealHour(maxHour);
-    const hours = formatColArray(
-      maxHour - minHour + 1,
-      minHour,
-      locale.hour || '',
-      locale.hour,
-      true
-    );
+    const hours = formatColArray(maxHour - minHour + 1, minHour, locale.hour || '', isPlusZero);
     hour = hour.concat(hours);
     const hourCols = { key: 'hour', values: hour };
     const nowMinute = date.getMinutes();
@@ -294,8 +293,7 @@ class DatePicker extends React.Component {
       maxMinute - minMinute + 1,
       minMinute,
       locale.minute || '',
-      locale.minute,
-      true
+      isPlusZero
     );
     const minuteCols = { key: 'minute', values: minute };
 
@@ -346,7 +344,7 @@ class DatePicker extends React.Component {
   };
   // get col data
   getDateColsData = () => {
-    const { mode, maxDate, minDate } = this.props;
+    const { mode, maxDate, minDate, isPlusZero } = this.props;
     const { locale } = this;
     const date = this.getDate();
     const nowYear = date.getFullYear();
@@ -371,7 +369,7 @@ class DatePicker extends React.Component {
     if (maxDateYear === nowYear) {
       maxMonth = maxDateMonth;
     }
-    const month = formatColArray(maxMonth - minMonth + 1, minMonth + 1, locale.month, true);
+    const month = formatColArray(maxMonth - minMonth + 1, minMonth + 1, locale.month, isPlusZero);
     const monthCol = { key: 'month', values: month };
     if (mode === MONTH) {
       return [yearCol, monthCol];
@@ -385,7 +383,7 @@ class DatePicker extends React.Component {
     if (maxDateYear === nowYear && maxDateMonth === nowMonth) {
       maxDay = maxDateDay;
     }
-    const day = formatColArray(maxDay - minDay + 1, minDay, locale.day, true);
+    const day = formatColArray(maxDay - minDay + 1, minDay, locale.day, isPlusZero);
     const dayCol = { key: 'day', values: day };
 
     return [yearCol, monthCol, dayCol];
@@ -506,6 +504,7 @@ class DatePicker extends React.Component {
             accessibilityLabel={`${accessibilityLabel}_${capitalized(pItem.key)}`}
             // disabled={disabled}
             loop={pItem.key !== 'ampm' && loop}
+            theme={{ fontColor: pickerFontColor }}
             selectedItemTextColor={pickerFontColor}
             itemStyle={StyleSheet.flatten([{ color: pickerFontColor }, PickerProps.itemStyle])}
             selectedValue={value[pindex]}

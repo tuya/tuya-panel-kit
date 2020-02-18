@@ -31,6 +31,16 @@ export default class extends React.Component {
           value={this.state.value}
           onValueChange={this._handleValueChange}
         />
+        <TYText text="滑块样式(IOS、安卓自适应) ----  渐变" />
+        <SwitchButton
+          value={this.state.value}
+          onValueChange={this._handleValueChange}
+          tintColor="#E5E5E5"
+          onTintColor={{
+            '0%': '#FA709A',
+            '100%': '#FEDD44',
+          }}
+        />
       </View>
     );
   }

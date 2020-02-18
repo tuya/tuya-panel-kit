@@ -1,8 +1,9 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
-import { TYFlatList, Popup } from 'tuya-panel-kit';
+import { TYFlatList, Popup, Utils, TYText } from 'tuya-panel-kit';
 
+const { convertX: cx } = Utils.RatioUtils;
 export default class PopupScene extends Component {
   state = {
     countdown: 60,
@@ -312,6 +313,20 @@ export default class PopupScene extends Component {
               this.setState({ timerPickerValue: [startTime, endTime] });
               Popup.close();
             },
+          });
+        },
+      },
+      {
+        key: 'tips',
+        title: 'Popup.tips',
+        onPress: () => {
+          Popup.tips({
+            show: true,
+            bgColor: '#f0f',
+            cornerPosition: 'bottomLeft',
+            contentStyle: { borderRadius: cx(8) },
+            modalChildStyle: { position: 'absolute', top: cx(60) },
+            children: <TYText text="我是气泡,点击遮罩空白处退出哦" style={{ fontSize: cx(20) }} />,
           });
         },
       },

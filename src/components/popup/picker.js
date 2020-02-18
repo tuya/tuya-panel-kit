@@ -1,12 +1,13 @@
 import React from 'react';
 import { ColorPropType, ViewPropTypes, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
-import { CoreUtils, RatioUtils } from '../../utils';
+import { CoreUtils, RatioUtils, ThemeUtils } from '../../utils';
 import Picker from '../picker-view';
 import withSkeleton from './withSkeleton';
 import { StyledPickerContainer, StyledPickerUnit, StyledPickerUnitText } from './styled';
 
 const { get } = CoreUtils;
+const { getTheme, ThemeConsumer } = ThemeUtils;
 
 class PickerPopup extends React.PureComponent {
   static propTypes = {
@@ -38,8 +39,8 @@ class PickerPopup extends React.PureComponent {
     value: '',
     dataSource: [],
     singlePicker: true,
-    pickerFontColor: '#333',
-    pickerUnitColor: '#333',
+    pickerFontColor: null,
+    pickerUnitColor: null,
     onValueChange: () => {},
     _onDataChange: () => {},
   };
@@ -112,26 +113,34 @@ class PickerPopup extends React.PureComponent {
       ...props
     } = this.props;
     const pickerDatas = singlePicker ? [dataSource] : dataSource;
-    return pickerDatas.map((data, idx) => {
-      return (
-        // eslint-disable-next-line react/no-array-index-key
-        <StyledPickerContainer style={pickerWrapperStyle} key={idx}>
-          {this.renderLabel(data, idx, pickerDatas)}
-          <Picker
-            {...props}
-            theme={{ fontColor: pickerFontColor }}
-            selectedValue={singlePicker ? this.state.value : this.state.value[idx]}
-            onValueChange={v => this.onValueChange(v, idx)}
-            style={StyleSheet.flatten([
-              pickerStyle,
-              { width: (RatioUtils.winWidth - spacing) / pickerDatas.length },
-            ])}
-          >
-            {this.renderPickerItem(data, idx, pickerDatas)}
-          </Picker>
-        </StyledPickerContainer>
-      );
-    });
+    return (
+      <ThemeConsumer>
+        {globalTheme => {
+          const pickerTheme = { ...this.props, theme: globalTheme };
+          const pickerColor = pickerFontColor || getTheme(pickerTheme, 'popup.cellFontColor');
+          return pickerDatas.map((data, idx) => {
+            return (
+              // eslint-disable-next-line react/no-array-index-key
+              <StyledPickerContainer style={pickerWrapperStyle} key={idx}>
+                {this.renderLabel(data, idx, pickerDatas)}
+                <Picker
+                  {...props}
+                  theme={{ fontColor: pickerColor }}
+                  selectedValue={singlePicker ? this.state.value : this.state.value[idx]}
+                  onValueChange={v => this.onValueChange(v, idx)}
+                  style={StyleSheet.flatten([
+                    pickerStyle,
+                    { width: (RatioUtils.winWidth - spacing) / pickerDatas.length },
+                  ])}
+                >
+                  {this.renderPickerItem(data, idx, pickerDatas)}
+                </Picker>
+              </StyledPickerContainer>
+            );
+          });
+        }}
+      </ThemeConsumer>
+    );
   };
 
   render() {

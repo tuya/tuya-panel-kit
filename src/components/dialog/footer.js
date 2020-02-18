@@ -12,6 +12,7 @@ const DialogFooter = ({
   confirmText,
   confirmTextStyle,
   confirmAccessibilityLabel,
+  confirmDisabled,
   onCancel,
   onConfirm,
 }) => {
@@ -27,7 +28,11 @@ const DialogFooter = ({
         </StyledButton>
       )}
       {!!confirmText && (
-        <StyledButton accessibilityLabel={confirmAccessibilityLabel} onPress={onConfirm}>
+        <StyledButton
+          accessibilityLabel={confirmAccessibilityLabel}
+          onPress={onConfirm}
+          disabled={confirmDisabled}
+        >
           <StyledConfirmText style={confirmTextStyle}>{confirmText}</StyledConfirmText>
         </StyledButton>
       )}
@@ -45,6 +50,7 @@ DialogFooter.propTypes = {
   confirmAccessibilityLabel: PropTypes.string,
   onCancel: PropTypes.func,
   onConfirm: PropTypes.func,
+  confirmDisabled: PropTypes.bool,
 };
 
 DialogFooter.defaultProps = {
@@ -57,6 +63,7 @@ DialogFooter.defaultProps = {
   confirmAccessibilityLabel: 'Dialog.Confirm',
   onCancel: null,
   onConfirm: null,
+  confirmDisabled: false,
 };
 
 export default DialogFooter;

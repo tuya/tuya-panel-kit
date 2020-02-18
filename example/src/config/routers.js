@@ -12,16 +12,18 @@ import TYSectionList from '../scenes/TYSectionList';
 import Swipeout from '../scenes/Swipeout';
 import RotationView from '../scenes/RotationView';
 import Circle from '../scenes/CircleView';
-import Toast from '../scenes/ToastView';
+import Toast from '../scenes/Toast';
 import IconFont from '../scenes/IconFont';
 import TopBar from '../scenes/TopBar';
 import Button from '../scenes/Button';
 import ButtonBrick from '../scenes/ButtonBrick';
 import Switch from '../scenes/Switch';
 import Modal from '../scenes/Modal';
+import Motion from '../scenes/Motion';
 import Tab from '../scenes/Tab';
 import Tabs from '../scenes/Tabs';
 import TabBar from '../scenes/TabBar';
+import Tips from '../scenes/Tips';
 import Collapsible from '../scenes/Collapse';
 import Checkbox from '../scenes/Checkbox';
 import Carousel from '../scenes/Carousel';
@@ -30,6 +32,7 @@ import Dialog from '../scenes/Dialog';
 import Popup from '../scenes/Popup';
 import TimerPicker from '../scenes/TimerPicker';
 import Notification from '../scenes/Notification';
+import NotificationLegacy from '../scenes/NotificationLegacy';
 import UnitText from '../scenes/UnitText';
 
 const mainRouter = [
@@ -69,6 +72,10 @@ export const componentsRouters = _.sortBy(
       Scene: RadialGradient,
     },
     {
+      id: 'Motion',
+      Scene: Motion,
+    },
+    {
       id: 'DatePicker',
       Scene: DatePicker,
     },
@@ -87,6 +94,10 @@ export const componentsRouters = _.sortBy(
     {
       id: 'TYSectionList',
       Scene: TYSectionList,
+    },
+    {
+      id: 'Tips',
+      Scene: Tips,
     },
     {
       id: 'Swipeout',
@@ -163,6 +174,10 @@ export const componentsRouters = _.sortBy(
     {
       id: 'Notification',
       Scene: Notification,
+    },
+    {
+      id: 'NotificationLegacy',
+      Scene: NotificationLegacy,
     },
     {
       id: 'UnitText',

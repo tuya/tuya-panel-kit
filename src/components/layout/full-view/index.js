@@ -1,16 +1,18 @@
 /* eslint-disable prettier/prettier */
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { View, Image, Dimensions, StyleSheet, ViewPropTypes } from 'react-native';
+import { View, Image, Dimensions, StyleSheet, ViewPropTypes, Platform } from 'react-native';
 import { Rect } from 'react-native-svg';
 import TYSdk from '../../../TYNativeApi';
 import Strings from '../../../i18n/strings';
 import TopBar from '../topbar';
 import OfflineView from '../offline-view';
-import { CoreUtils, ThemeUtils } from '../../../utils';
+import { CoreUtils, ThemeUtils, RatioUtils } from '../../../utils';
+import Notification from '../../notification';
 
 const TYMobile = TYSdk.mobile;
 const TYNative = TYSdk.native;
+const TYEvent = TYSdk.event;
 
 let LinearGradient = View;
 let RadialGradient = View;
@@ -22,7 +24,10 @@ if (TYMobile.verSupported('2.5')) {
 
 const { get } = CoreUtils;
 const { withTheme } = ThemeUtils;
+const { isIphoneX } = RatioUtils;
 const Screen = Dimensions.get('screen');
+const isIos = Platform.OS === 'ios';
+const dropHeight = isIos ? (isIphoneX ? 88 : 64) : 56;
 
 class FullView extends Component {
   static propTypes = {
@@ -60,7 +65,20 @@ class FullView extends Component {
     super(props);
     this.state = {
       // background: props.background,
+      showNotification: false,
+      information: {},
+      motionStyle: {},
     };
+  }
+
+  componentDidMount() {
+    TYEvent.on('showNotification', this.showNotification);
+    TYEvent.on('hideNotification', this.hideNotification);
+  }
+
+  componentWillUnmount() {
+    TYEvent.off('showNotification', this.showNotification);
+    TYEvent.off('hideNotification', this.hideNotification);
   }
 
   onBack = tab => {
@@ -83,6 +101,14 @@ class FullView extends Component {
       'pen'
     );
   }
+
+  showNotification = data => {
+    const { motionStyle, ...rest } = data;
+    this.setState({ showNotification: true, information: rest, motionStyle });
+  };
+  hideNotification = () => {
+    this.setState({ showNotification: false });
+  };
 
   renderBackground(background) {
     const { backgroundStyle } = this.props;
@@ -192,6 +218,19 @@ class FullView extends Component {
     );
   }
 
+  // 渲染Notification
+  renderNotification() {
+    return (
+      <Notification
+        onClose={() => this.setState({ showNotification: false })}
+        motionConfig={{ dropHeight }}
+        {...this.state.information}
+        show={this.state.showNotification}
+        motionStyle={[{ zIndex: 99 }, this.state.motionStyle]}
+      />
+    );
+  }
+
   renderTopBar() {
     const {
       title,
@@ -230,7 +269,7 @@ class FullView extends Component {
       ].filter(v => !!v);
       return (
         <TopBar
-          style={topbarStyle}
+          style={[{ zIndex: 999 }, topbarStyle]}
           title={title}
           titleStyle={topbarTextStyle}
           color={color}
@@ -266,6 +305,7 @@ class FullView extends Component {
       >
         {this.renderStatusBar()}
         {!isBgColor && this.renderBackground(background)}
+        {this.renderNotification()}
         {this.renderTopBar()}
         {this.props.children}
         {this.renderOfflineView()}
