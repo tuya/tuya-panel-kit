@@ -24,6 +24,10 @@
     "release:patch:pre": "yarn build && standard-version --release-as patch --prerelease rc",
     "release:patch": "yarn build && standard-version --release-as patch"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TuyaInc/tuya-panel-kit.git"
+  },
   "peerDependencies": {
     "react": "16.0.0",
     "react-native": "0.51.0"
