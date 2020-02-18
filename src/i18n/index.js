@@ -175,8 +175,8 @@ export default class I18N {
     return typeof this[key] !== 'undefined'
       ? this[key]
       : typeof defaultString !== 'undefined'
-        ? defaultString
-        : `I18N@${key}`;
+      ? defaultString
+      : `I18N@${key}`;
   }
 
   get dps() {

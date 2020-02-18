@@ -12,8 +12,9 @@ import {
   StyledTitle,
   StyledSubTitle,
 } from './styled';
+import withMotion from './withMotion';
 
-export default class Prompt extends Component {
+class Prompt extends Component {
   static propTypes = {
     ...TextInput.propTypes,
     /**
@@ -77,6 +78,7 @@ export default class Prompt extends Component {
     this._value = props.defaultValue;
     this.state = {
       value: props.value,
+      unControlledValue: props.defaultValue,
     };
   }
 
@@ -85,12 +87,14 @@ export default class Prompt extends Component {
     if (typeof defaultValue !== 'undefined') {
       this._value = text;
       typeof onChangeText === 'function' && onChangeText(this._value);
+      this.setState({ unControlledValue: this._value });
     } else if (typeof value !== 'undefined') {
       // 如果为受控组件且有返回值则在此处刷新内容
       const ret = typeof onChangeText === 'function' ? onChangeText(text) : undefined;
       typeof ret !== 'undefined' && this.setState({ value: ret });
     } else {
       this._value = text;
+      this.setState({ unControlledValue: this._value });
       typeof onChangeText === 'function' && onChangeText(this._value);
     }
   };
@@ -105,13 +109,14 @@ export default class Prompt extends Component {
     } else if (typeof value !== 'undefined') {
       onConfirm(this.state.value);
     } else {
-      onConfirm();
+      onConfirm(this._value);
     }
   };
 
   render() {
     const {
       value,
+      defaultValue,
       showHelp,
       onHelpPress,
       style,
@@ -130,10 +135,12 @@ export default class Prompt extends Component {
       cancelText,
       cancelTextStyle,
       cancelAccessibilityLabel,
-      onConfirm,
       onCancel,
       ...TextInputProps
     } = this.props;
+    const confirmDisabled =
+      (typeof value !== 'undefined' && this.state.value) ||
+      (typeof defaultValue !== 'undefined' && this.state.unControlledValue);
     return (
       <StyledContainer style={style}>
         <StyledContent style={contentStyle}>
@@ -146,6 +153,9 @@ export default class Prompt extends Component {
               style={inputStyle}
               {...TextInputProps}
               value={typeof value !== 'undefined' ? this.state.value : undefined}
+              defaultValue={
+                typeof defaultValue !== 'undefined' ? this.state.unControlledValue : undefined
+              }
               onChangeText={this._handleChangeText}
             />
             {showHelp && (
@@ -162,15 +172,18 @@ export default class Prompt extends Component {
         <Footer
           style={footerWrapperStyle}
           cancelTextStyle={cancelTextStyle}
-          confirmTextStyle={confirmTextStyle}
+          confirmTextStyle={[{ opacity: confirmDisabled ? 1 : 0.4 }, confirmTextStyle]}
           cancelText={cancelText}
           confirmText={confirmText}
           cancelAccessibilityLabel={cancelAccessibilityLabel}
           confirmAccessibilityLabel={confirmAccessibilityLabel}
           onCancel={onCancel}
           onConfirm={this._handleConfirm}
+          confirmDisabled={!confirmDisabled}
         />
       </StyledContainer>
     );
   }
 }
+
+export default withMotion(Prompt);

@@ -85,18 +85,18 @@ const topbar = {
  */
 const switchButton = {
   light: {
-    width: 50, // 按钮宽度
+    width: 51, // 按钮宽度
     height: Platform.select({
       web: 28,
       ios: 28,
       android: 14,
     }), // 按钮宽度
-    thumbSize: 26, // 滑块宽高尺寸
+    thumbSize: 24, // 滑块宽高尺寸
     // thumbWidth, // 滑块圆的宽度
     // thumbHeight, // 滑块圆的高度
     margin: Platform.select({
-      web: 1,
-      ios: 1,
+      web: 2,
+      ios: 2,
       android: 0,
     }), // 滑块四周边距
     tintColor: '#e5e5e5', // 关闭情况下背景色，不开放
@@ -105,19 +105,19 @@ const switchButton = {
     onThumbTintColor: '#fff', // 开启情况下滑块背景色
   },
   dark: {
-    width: 50, // 按钮宽度
+    width: 51, // 按钮宽度
     height: Platform.select({
       web: 28,
       ios: 28,
       android: 14,
     }), // 按钮宽度
-    thumbSize: 26, // 滑块宽高尺寸
+    thumbSize: 24, // 滑块宽高尺寸
     margin: Platform.select({
-      web: 1,
-      ios: 1,
+      web: 2,
+      ios: 2,
       android: 0,
     }), // 滑块四周边距
-    tintColor: '#e5e5e5', // 关闭情况下背景色
+    tintColor: 'rgba(255,255,255,0.3)', // 关闭情况下背景色
     onTintColor: '#4CD964', // 开启情况下背景色
     thumbTintColor: '#fff', // 关闭情况下滑块背景色
     onThumbTintColor: '#fff', // 开启情况下滑块背景色
@@ -283,10 +283,23 @@ const brickButton = {
 };
 
 /**
+ * Tips 气泡
+ */
+
+const tips = {
+  light: {
+    bgColor: '#fff',
+  },
+  dark: {
+    bgColor: '#4A4A4A',
+  },
+};
+
+/**
  * Dialog 弹窗
  */
 const dialog = {
-  type: 'basic', // Enum: basic | system
+  type: 'basic', // Enum: basic | dark | system
 
   /**
    * @desc 默认风格
@@ -310,6 +323,30 @@ const dialog = {
       radius: cx(4), // 输入框圆角
       padding: '12px 16px', // 输入框边距
       placeholder: '#d6d6de', // 占位符字体颜色
+    },
+  },
+  /**
+   * @desc 黑色主题
+   */
+  dark: {
+    width: cx(315), // 弹窗容器宽度
+    bg: '#1a1a1a', // 弹窗背景色
+    radius: cx(8), // 弹窗容器圆角
+    cellHeight: 56, // 列表高度（头部、底部）
+    lineColor: '#404040', // 分隔线颜色
+    titleFontSize: 18, // 标题字体大小
+    titleFontColor: '#FFF', // 头部栏标题颜色
+    subTitleFontSize: 16, // 副标题字体大小
+    subTitleFontColor: '#ccc', // 头部栏副标题颜色
+    cancelFontSize: 16,
+    cancelFontColor: '#999', // 底部栏取消字体颜色
+    confirmFontSize: 16,
+    confirmFontColor: '#fff', // 底部栏确认字体颜色
+    prompt: {
+      bg: '#262626', // 输入框背景色
+      radius: cx(4), // 输入框圆角
+      padding: '12px 16px', // 输入框边距
+      placeholder: '#666', // 占位符字体颜色
     },
   },
 
@@ -343,20 +380,58 @@ const dialog = {
  * Popup 弹出层
  */
 const popup = {
-  type: 'basic', // Enum: basic | ...
+  type: 'basic', // Enum: basic| dark | ...
   basic: {
     cellHeight: 48,
     cellBg: '#fff', // 列表底色
+    cellFontColor: '#333', // 列表字体颜色
+    cellFontSize: 16, // 列表字体大小
     titleRadius: cx(8), // 头部圆角
+    titleBg: '#ffffff', // 头部背景色
+    titleHeight: 48, // 头部高度
     footerRadius: 0, // 底部圆角
     bottomBg: '#f5f5f5', // 底部栏底色
     lineColor: '#e5e5e5', // 分隔线颜色
     titleFontSize: 14,
+    checkboxColor: '#44db5e', // 选中icon颜色
     titleFontColor: '#999', // 头部栏标题颜色
     cancelFontSize: 16,
     cancelFontColor: '#666', // 底部栏取消字体颜色
     confirmFontSize: 16,
     confirmFontColor: '#333', // 底部栏确认字体颜色
+    numberSelector: {
+      cellPlusColor: '#666', // Number-selector的加减颜色
+      maximumTrackTintColor: '#D8D8D8', // 大于当前值的轨道颜色
+    },
+    list: {
+      cellFontColor: '#666',
+    },
+  },
+  dark: {
+    cellHeight: 48,
+    cellBg: '#262626', // 列表底色
+    cellFontColor: '#fff', // 列表字体颜色
+    cellFontSize: 16, // 列表字体大小
+    titleRadius: cx(8), // 头部圆角
+    titleBg: '#262626', // 头部背景色
+    titleHeight: 48, // 头部高度
+    footerRadius: 0, // 底部圆角
+    bottomBg: '#1a1a1a', // 底部栏底色
+    lineColor: '#404040', // 分隔线颜色
+    titleFontSize: 14,
+    checkboxColor: '#44db5e', // 选中icon颜色
+    titleFontColor: '#ccc', // 头部栏标题颜色
+    cancelFontSize: 16,
+    cancelFontColor: '#ccc', // 底部栏取消字体颜色
+    confirmFontSize: 16,
+    confirmFontColor: '#fff', // 底部栏确认字体颜
+    numberSelector: {
+      cellPlusColor: '#FFF', // Number-selector的加减颜色
+      maximumTrackTintColor: '#1A1A1A', // 大于当前值的轨道颜色
+    },
+    list: {
+      cellFontColor: '#fff', // List内容字体颜色
+    },
   },
 };
 
@@ -372,6 +447,7 @@ export default {
   checkbox,
   list,
   brickButton,
+  tips,
   dialog,
   popup,
 };

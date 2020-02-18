@@ -33,7 +33,7 @@ const Dialog = {
 
   prompt: (props, modalOpts) => {
     const promptProps = { ...commonProps, ...props };
-    const modalProps = { ...commonModalProps, ...modalOpts };
+    const modalProps = { ...commonModalProps, ...modalOpts, useKeyboardView: true };
     Modal.render(<Prompt {...promptProps} />, modalProps);
   },
 

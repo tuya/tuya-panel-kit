@@ -408,9 +408,14 @@ class CircleBtn extends React.PureComponent {
   };
 
   render() {
-    const { stretch, onLayout, wrapperStyle } = this.props;
+    const { stretch, onLayout, wrapperStyle, wrapperProps = {} } = this.props;
     return (
-      <StyledBtnWrapper style={wrapperStyle} onLayout={onLayout} stretch={stretch}>
+      <StyledBtnWrapper
+        {...wrapperProps}
+        style={wrapperStyle}
+        onLayout={onLayout}
+        stretch={stretch}
+      >
         {this.renderButton()}
       </StyledBtnWrapper>
     );

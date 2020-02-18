@@ -4,8 +4,9 @@ import { ViewPropTypes } from 'react-native';
 import TYText from '../TYText';
 import Footer from './footer';
 import { StyledContainer, StyledHeader, StyledTitle, StyledSubTitle } from './styled';
+import withMotion from './withMotion';
 
-export default class CustomDialog extends Component {
+class CustomDialog extends Component {
   static propTypes = {
     /**
      * 自定义 Dialog Content
@@ -122,3 +123,5 @@ export default class CustomDialog extends Component {
     );
   }
 }
+
+export default withMotion(CustomDialog);

@@ -11,16 +11,7 @@ function SwitchItem({ value, disabled, ...props }) {
     <ListItem
       {...listItemProps}
       disabled={disabled}
-      Action={
-        <SwitchButton
-          value={value}
-          disabled={disabled}
-          onTintColor="#44DB5E"
-          onThumbTintColor="#fff"
-          disabled={disabled}
-          {...switchButtonProps}
-        />
-      }
+      Action={<SwitchButton value={value} disabled={disabled} {...switchButtonProps} />}
     />
   );
 }
