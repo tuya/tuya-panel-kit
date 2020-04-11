@@ -10,18 +10,18 @@ export default class OnlyTabsScene extends React.PureComponent {
       activeKey1: '1',
       activeKey2: '3',
       d1: [
-        { value: '1', label: '探测器' },
-        { value: '2', label: '遥控器' },
+        { value: '1', label: '探测器', disabled: true },
+        { value: '2', label: '遥控器', disabled: true },
         { value: '3', label: 'RFID' },
-        { value: '4', label: '有限探测器' },
+        { value: '4', label: '卫生间', disabled: true },
       ],
       d2: [
-        { value: '1', label: '1' },
-        { value: '2', label: '22' },
-        { value: '3', label: '333' },
-        { value: '4', label: '有限探测器' },
-        { value: '5', label: '55555' },
-        { value: '6', label: '666666' },
+        { value: '1', label: '所有设备' },
+        { value: '2', label: '卧室' },
+        { value: '3', label: '厨房' },
+        { value: '4', label: '卫生间' },
+        { value: '5', label: '客厅' },
+        { value: '6', label: '书房' },
         { value: '7', label: '7777777' },
         { value: '8', label: '88888888' },
       ],
@@ -50,6 +50,9 @@ export default class OnlyTabsScene extends React.PureComponent {
           activeKey={this.state.activeKey2}
           dataSource={this.state.d2}
           onChange={this._handleD2Change}
+          background="transparent"
+          maxItem={3}
+          extraSpace={50}
         />
         <TesterTitle title="基础Tabs（无状态组件）" />
         <Tabs dataSource={this.state.d1} />
