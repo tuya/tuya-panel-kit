@@ -7,7 +7,7 @@ import NumberSelector from './number-selector';
 import List from './list';
 import Picker from './picker';
 import Custom from './custom';
-import Notification from '../notification';
+import Notification from '../notification-legacy';
 import Dropdown from './dropdown';
 import Tips from '../tips';
 import { RatioUtils } from '../../utils';
@@ -68,6 +68,9 @@ const Popup = {
   },
 
   toast: (props, modalOpts) => {
+    if (__DEV__) {
+      console.warn('Popup.toast 已废弃，可能将会在后续版本中移除，请考虑使用 Notification.show');
+    }
     const noticeProps = {
       onClose: Modal.close,
       ...props,
