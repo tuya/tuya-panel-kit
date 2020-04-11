@@ -386,6 +386,7 @@ const popup = {
     cellBg: '#fff', // 列表底色
     cellFontColor: '#333', // 列表字体颜色
     cellFontSize: 16, // 列表字体大小
+    subTitleFontColor: '#999', // 头部栏副标题颜色
     titleRadius: cx(8), // 头部圆角
     titleBg: '#ffffff', // 头部背景色
     titleHeight: 48, // 头部高度
@@ -394,7 +395,7 @@ const popup = {
     lineColor: '#e5e5e5', // 分隔线颜色
     titleFontSize: 14,
     checkboxColor: '#44db5e', // 选中icon颜色
-    titleFontColor: '#999', // 头部栏标题颜色
+    titleFontColor: '#333', // 头部栏标题颜色
     cancelFontSize: 16,
     cancelFontColor: '#666', // 底部栏取消字体颜色
     confirmFontSize: 16,
@@ -413,6 +414,7 @@ const popup = {
     cellBg: '#262626', // 列表底色
     cellFontColor: '#fff', // 列表字体颜色
     cellFontSize: 16, // 列表字体大小
+    subTitleFontColor: '#ccc', // 头部栏副标题颜色
     titleRadius: cx(8), // 头部圆角
     titleBg: '#262626', // 头部背景色
     titleHeight: 48, // 头部高度
@@ -421,12 +423,13 @@ const popup = {
     lineColor: '#404040', // 分隔线颜色
     titleFontSize: 14,
     checkboxColor: '#44db5e', // 选中icon颜色
-    titleFontColor: '#ccc', // 头部栏标题颜色
+    titleFontColor: '#fff', // 头部栏标题颜色
     cancelFontSize: 16,
     cancelFontColor: '#ccc', // 底部栏取消字体颜色
     confirmFontSize: 16,
     confirmFontColor: '#fff', // 底部栏确认字体颜色
     tintColor: 'rgba(255, 255, 255, 0.3)', // SwitchButton 关闭情况下背景色，popup 需要独立
+    backIconColor: '#fff', // 返回文案和按钮颜色
     numberSelector: {
       cellPlusColor: '#FFF', // Number-selector的加减颜色
       maximumTrackTintColor: '#1A1A1A', // 大于当前值的轨道颜色

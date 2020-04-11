@@ -16,6 +16,9 @@ import { popup } from '../theme/theme-get';
 const DEFAULT_LIST_THEME = defaultTheme.popup.basic;
 const DEFAULT_PICKER_THEME = defaultTheme.picker.light;
 
+export const backIcon =
+  'M770.673778 21.959111a56.888889 56.888889 0 0 1 0 80.440889l-402.204445 402.318222 402.204445 402.204445a56.888889 56.888889 0 0 1-80.440889 80.497777L247.751111 544.938667a56.888889 56.888889 0 0 1 0-80.497778L690.232889 21.959111a56.888889 56.888889 0 0 1 80.440889 0z';
+
 const { convertX: cx, isIphoneX } = RatioUtils;
 const { getTheme, ThemeConsumer } = ThemeUtils;
 const {
@@ -35,6 +38,8 @@ const {
   cancelFontColor,
   confirmFontSize,
   confirmFontColor,
+  subTitleFontColor,
+  backIconColor,
 } = popup;
 
 /**
@@ -112,6 +117,59 @@ export const StyledConfirmText = styled(TYText)`
   font-size: ${confirmFontSize};
   color: ${confirmFontColor};
 `;
+
+export const StyledSubTitleText = styled(TYText)`
+  font-size: ${props => {
+    const size = getTheme(props, 'popup.titleFontSize', DEFAULT_LIST_THEME.titleFontSize);
+    return (size * 6) / 7;
+  }};
+  color: ${subTitleFontColor};
+  margin-top: ${cx(5)}px;
+`;
+
+export const StyledBackView = styled(View)`
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 12px;
+`;
+
+export const StyledTouchView = styled(TouchableOpacity).attrs({
+  touchableOpacity: 0.8,
+})`
+  width: ${cx(19)}px;
+  height: ${cx(18)}px;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const StyledBackText = styled(TYText).attrs({
+  color: backIconColor,
+  size: titleFontSize,
+})``;
+
+export const StyledBackIcon = props => {
+  /* eslint-disable react/prop-types */
+  const { color, ...rest } = props;
+  return (
+    <ThemeConsumer>
+      {theme => {
+        const propsWithTheme = { ...props, theme };
+        return (
+          <IconFont
+            size={cx(18)}
+            color={
+              color ||
+              getTheme(propsWithTheme, 'popup.backIconColor', DEFAULT_LIST_THEME.backIconColor)
+            }
+            {...rest}
+          />
+        );
+      }}
+    </ThemeConsumer>
+  );
+};
 
 /**
  * Popup.picker
