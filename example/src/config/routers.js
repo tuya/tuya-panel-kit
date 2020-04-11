@@ -34,6 +34,7 @@ import TimerPicker from '../scenes/TimerPicker';
 import Notification from '../scenes/Notification';
 import NotificationLegacy from '../scenes/NotificationLegacy';
 import UnitText from '../scenes/UnitText';
+import Progress from '../scenes/Progress';
 
 const mainRouter = [
   {
@@ -166,6 +167,10 @@ export const componentsRouters = _.sortBy(
     {
       id: 'Popup',
       Scene: Popup,
+    },
+    {
+      id: 'Progress',
+      Scene: Progress,
     },
     {
       id: 'TimerPicker',
