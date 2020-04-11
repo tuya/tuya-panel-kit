@@ -304,10 +304,11 @@ export default class Tabs extends Component {
     }
   };
 
-  _handleRelease = (e, { x0, dx, dy, vx }) => {
+  _handleRelease = ({ nativeEvent }, { dx, dy, vx }) => {
     const isPress = isValidPress(dx, dy);
     if (isPress) {
-      const deltaX = Math.abs(this._curDeltaX) + Math.abs(x0);
+      const { locationX } = nativeEvent;
+      const deltaX = Math.abs(this._curDeltaX) + Math.abs(locationX);
       const idx = getIndexByDeltaX(deltaX, this._tabWidth);
       this._handleTabChange(this.props.dataSource[idx], idx);
     } else if (this.isMultiScreen) {
@@ -509,7 +510,11 @@ export default class Tabs extends Component {
           underlineStyle,
           {
             width: this.state.underlineWidth,
-            transform: [{ translateX: Animated.add(this.state.scrollX, this.state.underlineLeft) }],
+            transform: [
+              {
+                translateX: Animated.add(this.state.scrollX, this.state.underlineLeft),
+              },
+            ],
           },
         ]}
         color={backgroundColor || activeColor}
@@ -538,6 +543,7 @@ export default class Tabs extends Component {
       <StyledTab
         key="Tabs"
         style={[style, { backgroundColor: background }]}
+        pointerEvents="box-only"
         {...this._panResponder.panHandlers}
       >
         {this._renderTabs()}
