@@ -27,7 +27,7 @@ export default class RadialGradient extends Component {
 
   static defaultProps = {
     style: null,
-    gradientId: 'grad',
+    gradientId: null,
     cx: '50%',
     cy: '50%',
     rx: '50%',
@@ -48,8 +48,20 @@ export default class RadialGradient extends Component {
     ],
   };
 
+  constructor(props) {
+    super(props);
+    this._gradientId = Math.random()
+      .toString(36)
+      .substring(7);
+  }
+
+  get gradientId() {
+    return this.props.gradientId || this._gradientId;
+  }
+
   render() {
-    const { style, cx, cy, rx, ry, fx, fy, stops, gradientId } = this.props;
+    const { style, cx, cy, rx, ry, fx, fy, stops } = this.props;
+    const { gradientId } = this;
     const { height, width } = StyleSheet.flatten([styles.container, style]);
     return (
       <View style={[styles.container, style]}>
