@@ -88,3 +88,5 @@ export { default as Notification } from './components/notification';
 export { default as NotificationLegacy } from './components/notification-legacy';
 
 export { default as TimerPicker } from './components/timer-picker';
+
+export { default as Progress } from './components/progress';
