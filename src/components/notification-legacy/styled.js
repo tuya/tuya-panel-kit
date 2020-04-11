@@ -6,7 +6,7 @@ import TYText from '../TYText';
 
 const { convertX: cx } = RatioUtils;
 
-export const StyledNotification = styled(View)`
+export const StyledNotification = styled(TouchableOpacity)`
   align-self: stretch;
   align-items: center;
   justify-content: space-between;
