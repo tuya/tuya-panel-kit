@@ -27,12 +27,12 @@ export default {
   popup: {
     type: 'dark',
   },
-  switchButton: {
-    light: {
-      tintColor: '#e5e5e5', // 关闭情况下背景色，不开放
-      onTintColor: '#00f', // 开启情况下背景色
-      thumbTintColor: '#000', // 关闭情况下滑块背景色
-      onThumbTintColor: '#fff', // 开启情况下滑块背景色
-    },
-  },
+  // switchButton: {
+  //   light: {
+  //     tintColor: '#e5e5e5', // 关闭情况下背景色，不开放
+  //     onTintColor: '#00f', // 开启情况下背景色
+  //     thumbTintColor: '#000', // 关闭情况下滑块背景色
+  //     onThumbTintColor: '#fff', // 开启情况下滑块背景色
+  //   },
+  // },
 };

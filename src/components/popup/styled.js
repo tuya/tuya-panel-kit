@@ -72,7 +72,9 @@ export const StyledTitleText = styled(TYText)`
   color: ${titleFontColor};
 `;
 
-export const StyledSwitch = styled(SwitchButton)`
+export const StyledSwitch = styled(SwitchButton).attrs({
+  tintColor: props => getTheme(props, 'popup.tintColor', '#e5e5e5'),
+})`
   position: absolute;
   right: ${cx(16)}px;
 `;
