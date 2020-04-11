@@ -52,4 +52,6 @@ export const popup = {
   cancelFontColor: props => getTheme(props, 'popup.cancelFontColor', d2.cancelFontColor),
   confirmFontSize: props => getTheme(props, 'popup.confirmFontSize', d2.confirmFontSize),
   confirmFontColor: props => getTheme(props, 'popup.confirmFontColor', d2.confirmFontColor),
+  subTitleFontColor: props => getTheme(props, 'popup.subTitleFontColor', d2.subTitleFontColor),
+  backIconColor: props => getTheme(props, 'popup.backIconColor', d2.backIconColor),
 };

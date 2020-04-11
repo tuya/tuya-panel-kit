@@ -15,6 +15,12 @@ import {
   StyledButton,
   StyledCancelText,
   StyledConfirmText,
+  StyledSubTitleText,
+  StyledBackView,
+  StyledBackIcon,
+  StyledTouchView,
+  backIcon,
+  StyledBackText,
 } from './styled';
 
 export const MOTION_TYPES = Object.keys(Motion)
@@ -50,6 +56,10 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
         PropTypes.string,
         PropTypes.element,
       ]),
+      /**
+       * Popup头部副标题
+       */
+      subTitle: PropTypes.string,
       titleTextStyle: TYText.propTypes.style,
       titleWrapperStyle: ViewPropTypes.style,
 
@@ -77,6 +87,18 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
       motionType: PropTypes.oneOf(MOTION_TYPES),
       motionConfig: PropTypes.object,
       isAlign: PropTypes.bool,
+      /**
+       * 返回Icon颜色
+       */
+      backIconColor: PropTypes.string,
+      /**
+       * 返回回调函数
+       */
+      onBack: PropTypes.func,
+      /**
+       * 返回文案
+       */
+      backText: PropTypes.string,
     };
 
     static defaultProps = {
@@ -84,7 +106,7 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
       titleTextStyle: null,
       titleWrapperStyle: null,
       wrapperStyle: null,
-
+      subTitle: '',
       switchValue: undefined,
       onSwitchValueChange: null,
       onCancel: () => {},
@@ -96,10 +118,12 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
       footer: null,
       footerWrapperStyle: null,
       footerType: 'both',
-
       motionType: 'none',
       motionConfig: {},
       isAlign: false,
+      backIconColor: null,
+      onBack: null,
+      backText: '返回',
     };
 
     constructor(props) {
@@ -181,16 +205,38 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
     };
 
     renderTitle = () => {
-      const { title, titleTextStyle, titleWrapperStyle } = this.props;
+      const {
+        title,
+        titleTextStyle,
+        titleWrapperStyle,
+        subTitle,
+        backIconColor,
+        onBack,
+        backText,
+      } = this.props;
       if (React.isValidElement(title)) return title;
       const titleArray = Array.isArray(title) ? title : [title];
       return (
-        <StyledTitle style={titleWrapperStyle}>
+        <StyledTitle
+          style={[
+            titleWrapperStyle,
+            subTitle && { flexDirection: 'column', justifyContent: 'center' },
+          ]}
+        >
+          {typeof onBack === 'function' && (
+            <StyledBackView>
+              <StyledTouchView onPress={onBack}>
+                <StyledBackIcon d={backIcon} color={backIconColor} />
+              </StyledTouchView>
+              <StyledBackText text={backText} />
+            </StyledBackView>
+          )}
           {titleArray.map((t, idx) => (
             <StyledTitleText key={idx} style={titleTextStyle}>
               {t}
             </StyledTitleText>
           ))}
+          {!!subTitle && <StyledSubTitleText>{subTitle}</StyledSubTitleText>}
           {typeof this.state.switchValue === 'boolean' && (
             <StyledSwitch
               accessibilityLabel={`${accessPrefix}_Switch`}
