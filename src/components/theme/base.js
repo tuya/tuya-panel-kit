@@ -399,8 +399,9 @@ const popup = {
     cancelFontSize: 16,
     cancelFontColor: '#666', // 底部栏取消字体颜色
     confirmFontSize: 16,
-    confirmFontColor: '#333', // 底部栏确认字体颜色,
-    tintColor: '#e5e5e5', // SwitchButton 关闭情况下背景色，popup 需要独立,
+    confirmFontColor: '#333', // 底部栏确认字体颜色
+    backIconColor: '#000', // 返回文案和按钮颜色
+    tintColor: '#e5e5e5', // SwitchButton 关闭情况下背景色，popup 需要独立
     numberSelector: {
       cellPlusColor: '#666', // Number-selector的加减颜色
       maximumTrackTintColor: '#D8D8D8', // 大于当前值的轨道颜色
@@ -427,15 +428,15 @@ const popup = {
     cancelFontSize: 16,
     cancelFontColor: '#ccc', // 底部栏取消字体颜色
     confirmFontSize: 16,
-    confirmFontColor: '#fff', // 底部栏确认字体颜色
-    tintColor: 'rgba(255, 255, 255, 0.3)', // SwitchButton 关闭情况下背景色，popup 需要独立
+    confirmFontColor: '#fff', // 底部栏确认字体颜
     backIconColor: '#fff', // 返回文案和按钮颜色
+    tintColor: 'rgba(255, 255, 255, 0.3)', // SwitchButton 关闭情况下背景色，popup 需要独立
     numberSelector: {
-      cellPlusColor: '#FFF', // Number-selector的加减颜色
+      cellPlusColor: '#fff', // Number-selector的加减颜色
       maximumTrackTintColor: '#1A1A1A', // 大于当前值的轨道颜色
     },
     list: {
-      cellFontColor: '#fff', // List内容字体颜色
+      cellFontColor: '#fff', // List 内容字体颜色
     },
   },
 };

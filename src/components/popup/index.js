@@ -84,7 +84,7 @@ const Popup = {
   },
 
   tips: (props, modalOpts) => {
-    const { contentStyle, modalChildStyle, maskStyle, alignContainer } = props;
+    const { contentStyle, modalChildStyle, maskStyle, alignContainer, onMaskPress } = props;
     const maskWidth =
       contentStyle !== undefined && contentStyle.width ? contentStyle.width : cx(64);
     let modalStyle;
@@ -99,6 +99,7 @@ const Popup = {
       maskStyle: [{ backgroundColor: 'rgba(0, 0, 0, 0.1)', alignItems: 'center' }, maskStyle],
       modalChildStyle: [modalStyle, { minWidth: maskWidth }],
       alignContainer: alignContainer || 'center',
+      onMaskPress,
     };
     Modal.render(<Tips {...props} />, modalProps);
   },
