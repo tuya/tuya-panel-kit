@@ -35,6 +35,7 @@ import Notification from '../scenes/Notification';
 import NotificationLegacy from '../scenes/NotificationLegacy';
 import UnitText from '../scenes/UnitText';
 import Progress from '../scenes/Progress';
+import GlobalToast from '../scenes/GlobalToast';
 
 const mainRouter = [
   {
@@ -187,6 +188,10 @@ export const componentsRouters = _.sortBy(
     {
       id: 'UnitText',
       Scene: UnitText,
+    },
+    {
+      id: 'GlobalToast',
+      Scene: GlobalToast,
     },
   ],
   'id'
