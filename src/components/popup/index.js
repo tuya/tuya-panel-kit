@@ -7,7 +7,7 @@ import NumberSelector from './number-selector';
 import List from './list';
 import Picker from './picker';
 import Custom from './custom';
-import Notification from '../notification';
+import Notification from '../notification-legacy';
 import Dropdown from './dropdown';
 import Tips from '../tips';
 import { RatioUtils } from '../../utils';
@@ -68,6 +68,9 @@ const Popup = {
   },
 
   toast: (props, modalOpts) => {
+    if (__DEV__) {
+      console.warn('Popup.toast 已废弃，可能将会在后续版本中移除，请考虑使用 Notification.show');
+    }
     const noticeProps = {
       onClose: Modal.close,
       ...props,
@@ -81,7 +84,7 @@ const Popup = {
   },
 
   tips: (props, modalOpts) => {
-    const { contentStyle, modalChildStyle, maskStyle, alignContainer } = props;
+    const { contentStyle, modalChildStyle, maskStyle, alignContainer, onMaskPress } = props;
     const maskWidth =
       contentStyle !== undefined && contentStyle.width ? contentStyle.width : cx(64);
     let modalStyle;
@@ -96,6 +99,7 @@ const Popup = {
       maskStyle: [{ backgroundColor: 'rgba(0, 0, 0, 0.1)', alignItems: 'center' }, maskStyle],
       modalChildStyle: [modalStyle, { minWidth: maskWidth }],
       alignContainer: alignContainer || 'center',
+      onMaskPress,
     };
     Modal.render(<Tips {...props} />, modalProps);
   },

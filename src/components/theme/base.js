@@ -99,7 +99,7 @@ const switchButton = {
       ios: 2,
       android: 0,
     }), // 滑块四周边距
-    tintColor: '#e5e5e5', // 关闭情况下背景色，不开放
+    tintColor: '#e5e5e5', // 关闭情况下背景色
     onTintColor: '#4CD964', // 开启情况下背景色
     thumbTintColor: '#fff', // 关闭情况下滑块背景色
     onThumbTintColor: '#fff', // 开启情况下滑块背景色
@@ -196,8 +196,8 @@ const list = {
     descFontColor: 'rgba(255, 255, 255, 0.5)',
     cellLine: 'rgba(255, 255, 255, 0.02)',
     cellBg: 'rgba(255, 255, 255, 0.02)',
-    cellRadius: cx(14),
-    margin: [6, cx(12), 6, cx(12)],
+    cellRadius: 0,
+    margin: [0, 0, 0, 0],
     padding: [12, cx(16), 12, cx(16)],
   },
 };
@@ -382,10 +382,11 @@ const dialog = {
 const popup = {
   type: 'basic', // Enum: basic| dark | ...
   basic: {
-    cellHeight: 48,
+    cellHeight: 48, // 列表高度
     cellBg: '#fff', // 列表底色
     cellFontColor: '#333', // 列表字体颜色
     cellFontSize: 16, // 列表字体大小
+    subTitleFontColor: '#999', // 头部栏副标题颜色
     titleRadius: cx(8), // 头部圆角
     titleBg: '#ffffff', // 头部背景色
     titleHeight: 48, // 头部高度
@@ -394,24 +395,27 @@ const popup = {
     lineColor: '#e5e5e5', // 分隔线颜色
     titleFontSize: 14,
     checkboxColor: '#44db5e', // 选中icon颜色
-    titleFontColor: '#999', // 头部栏标题颜色
+    titleFontColor: '#333', // 头部栏标题颜色
     cancelFontSize: 16,
     cancelFontColor: '#666', // 底部栏取消字体颜色
     confirmFontSize: 16,
     confirmFontColor: '#333', // 底部栏确认字体颜色
+    backIconColor: '#000', // 返回文案和按钮颜色
+    tintColor: '#e5e5e5', // SwitchButton 关闭情况下背景色，popup 需要独立
     numberSelector: {
       cellPlusColor: '#666', // Number-selector的加减颜色
       maximumTrackTintColor: '#D8D8D8', // 大于当前值的轨道颜色
     },
     list: {
-      cellFontColor: '#666',
+      cellFontColor: '#666', // List 内容字体颜色
     },
   },
   dark: {
-    cellHeight: 48,
+    cellHeight: 48, // 列表高度
     cellBg: '#262626', // 列表底色
     cellFontColor: '#fff', // 列表字体颜色
     cellFontSize: 16, // 列表字体大小
+    subTitleFontColor: '#ccc', // 头部栏副标题颜色
     titleRadius: cx(8), // 头部圆角
     titleBg: '#262626', // 头部背景色
     titleHeight: 48, // 头部高度
@@ -420,17 +424,19 @@ const popup = {
     lineColor: '#404040', // 分隔线颜色
     titleFontSize: 14,
     checkboxColor: '#44db5e', // 选中icon颜色
-    titleFontColor: '#ccc', // 头部栏标题颜色
+    titleFontColor: '#fff', // 头部栏标题颜色
     cancelFontSize: 16,
     cancelFontColor: '#ccc', // 底部栏取消字体颜色
     confirmFontSize: 16,
     confirmFontColor: '#fff', // 底部栏确认字体颜
+    backIconColor: '#fff', // 返回文案和按钮颜色
+    tintColor: 'rgba(255, 255, 255, 0.3)', // SwitchButton 关闭情况下背景色，popup 需要独立
     numberSelector: {
-      cellPlusColor: '#FFF', // Number-selector的加减颜色
+      cellPlusColor: '#fff', // Number-selector的加减颜色
       maximumTrackTintColor: '#1A1A1A', // 大于当前值的轨道颜色
     },
     list: {
-      cellFontColor: '#fff', // List内容字体颜色
+      cellFontColor: '#fff', // List 内容字体颜色
     },
   },
 };

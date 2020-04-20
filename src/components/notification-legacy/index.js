@@ -79,8 +79,10 @@ export default class NotificationLegacy extends PureComponent {
       enableClose,
       onClose,
       children,
+      onPress,
       ...rest
     } = this.props;
+    const disable = typeof onPress === 'function';
     return (
       <ThemeConsumer>
         {t => {
@@ -94,9 +96,12 @@ export default class NotificationLegacy extends PureComponent {
           const isOneLine = this.state.height === 56;
           return (
             <StyledNotification
+              disabled={!disable}
               {...rest}
               style={[shadowSize, style]}
               accessibilityLabel={accessibilityLabel}
+              activeOpacity={1}
+              onPress={onPress}
             >
               <LinearGradient
                 style={shadowSize}
@@ -194,6 +199,10 @@ NotificationLegacy.propTypes = {
    * NotificationLegacy 文案自定义内容
    */
   children: PropTypes.any,
+  /**
+   * 点击整块区域触发的函数
+   */
+  onPress: PropTypes.func,
 };
 
 NotificationLegacy.defaultProps = {
@@ -207,4 +216,5 @@ NotificationLegacy.defaultProps = {
   message: '',
   onClose: null,
   children: null,
+  onPress: null,
 };

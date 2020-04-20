@@ -14,6 +14,11 @@ export default class TabContent extends Component {
   static propTypes = {
     style: ViewPropTypes.style,
     activeIndex: PropTypes.number.isRequired,
+    /**
+     * 加速度阈值，滑动速率超过该阈值直接判断为下一页
+     */
+    velocityThreshold: PropTypes.number,
+
     disabled: PropTypes.bool,
     preload: PropTypes.bool,
     preloadTimeout: PropTypes.number,
@@ -35,6 +40,7 @@ export default class TabContent extends Component {
     disabled: false,
     preload: true,
     preloadTimeout: 375,
+    velocityThreshold: 0.5,
     onMove: undefined,
     onRelease: undefined,
     renderPlaceholder: () => <ActivityIndicator />,
@@ -162,10 +168,17 @@ export default class TabContent extends Component {
   };
 
   _handleRelease = (e, gestureState) => {
-    const { onRelease } = this.props;
-    const { dx } = gestureState;
+    const { velocityThreshold, children, onRelease } = this.props;
+    const { dx, vx } = gestureState;
     const deltaX = this._moveTo(dx);
-    const index = getNearestIndexByDeltaX(deltaX, winWidth);
+    let extraDeltaX = deltaX;
+    if (Math.abs(vx) > velocityThreshold) {
+      // 避免滑动超出最后一项
+      const maxDeltaX = (children.length - 1) * -winWidth;
+      extraDeltaX = Math.max(deltaX + (dx > 0 ? winWidth : -winWidth) * 0.5, maxDeltaX);
+    }
+    const index = getNearestIndexByDeltaX(extraDeltaX, winWidth);
+
     this.scrollToIndex(index);
     if (typeof onRelease === 'function') {
       const ratio = Math.abs(deltaX) / winWidth;

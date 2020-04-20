@@ -28,6 +28,7 @@ export default class NotificationLegacyScene extends Component {
             // variant="warning"
             message="警告提示框"
             onClose={this._handleClose}
+            onPress={() => console.log('kkkk')}
           />
         )}
         {!this.state.visible && (

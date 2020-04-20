@@ -194,6 +194,7 @@ export default class PopupScene extends Component {
             title: '多选',
             cancelText: '取消',
             confirmText: '确认',
+            subTitle: '副标题',
             value: this.state.listValues,
             onConfirm: value => {
               console.log('switch value :', value);
@@ -222,6 +223,7 @@ export default class PopupScene extends Component {
             cancelText: '取消',
             confirmText: '确认',
             value: this.state.pickerValue,
+            onBack: () => console.log('////'),
             label: 'haha',
             onConfirm: (value, idx) => {
               this.setState({ pickerValue: value });
