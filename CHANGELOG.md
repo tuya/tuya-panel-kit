@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [2.0.0-rc.2](https://github.com/TuyaInc/tuya-panel-kit/compare/v2.0.0-rc.1...v2.0.0-rc.2) (2020-04-20)
+
+
+### Bug Fixes
+
+* **Popup.list:** 修复在 global dark / popup light 情况下列表显示问题 ([993b8f6](https://github.com/TuyaInc/tuya-panel-kit/commit/993b8f662effee53665a8ace1bfa3b2ad9f7a553))
+* **Popup.list:** 修复每次更新 props 都会重新计算选中值的 bug ([459ad8b](https://github.com/TuyaInc/tuya-panel-kit/commit/459ad8b13ac46ef948fedb098a766fddb21037a2))
+* **Popup.toast:** 修复Popup.toast 无效 bug 并提示即将废弃 ([470a13d](https://github.com/TuyaInc/tuya-panel-kit/commit/470a13d35fbdf56b97691316906ccbe75f179305))
+
+
+### Features
+
+* **GlobalToast:** 新增Toast挂在全局-GlobalToast ([7d62276](https://github.com/TuyaInc/tuya-panel-kit/commit/7d62276cba5a2afc1079e803f13fb9b780e82355))
+* **Gradient:** 径向/放射渐变内部随机生成gradientId ([15c6f6f](https://github.com/TuyaInc/tuya-panel-kit/commit/15c6f6f623fb1a146acc6eac8da808ef813c0dd5))
+* **Navigator:** 接入信号强度提醒 ([cef73cc](https://github.com/TuyaInc/tuya-panel-kit/commit/cef73cc00d43d9513d20cc3dafac649aabff2f78))
+* **NOtification:** Notification调整、增加onPress属性 ([9393c3e](https://github.com/TuyaInc/tuya-panel-kit/commit/9393c3e6f83bad2f4e29fe51b46331cb94f025d6))
+* **NotificationLegacy:** 新增全局点击OnPress ([b717d4a](https://github.com/TuyaInc/tuya-panel-kit/commit/b717d4a3e37bb87c02e0e6dcbcf82f67f801fdbf))
+* **Popup:** 头部栏添加返回按钮或者副标题 ([9de2f91](https://github.com/TuyaInc/tuya-panel-kit/commit/9de2f9126ead014bbab7d9e7c366e3fec19927d1))
+* **Progress:** 新增进度条 ([b3e53e9](https://github.com/TuyaInc/tuya-panel-kit/commit/b3e53e984f49b493611242b47c1502e2abf50c39))
+* **Tabs:** 兼容web端 ([47a5972](https://github.com/TuyaInc/tuya-panel-kit/commit/47a59722e0b541cccd2113b306f93b9f733344aa))
+* **Tabs:** 支持控制TabContent加速度阈值、配置右侧额外留白、允许禁用单个项 ([4427f3c](https://github.com/TuyaInc/tuya-panel-kit/commit/4427f3ced44b608f9c42bc195d92a4cca4ca7c2b))
+* **Tips:** 新增属性可选择不显示角标 ([9429727](https://github.com/TuyaInc/tuya-panel-kit/commit/9429727c49a4cacda2bdb7331a6016113898f309))
+* **Toast:** Toast支持创建完成可直接显示内容 ([1e51adc](https://github.com/TuyaInc/tuya-panel-kit/commit/1e51adcf01a8fb16a766d3f0c1463e8446ebe581))
+
+
+
 # [2.0.0-rc.1](https://github.com/TuyaInc/tuya-panel-kit/compare/v2.0.0-rc.0...v2.0.0-rc.1) (2020-02-18)
 
 
