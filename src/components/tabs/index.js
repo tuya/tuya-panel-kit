@@ -100,11 +100,19 @@ export default class Tabs extends Component {
      */
     preloadTimeout: PropTypes.number,
     /**
+     * TabContent 的加速度阈值，滑动速率超过该阈值直接判断为下一页
+     */
+    velocityThreshold: PropTypes.number,
+    /**
      * 按需完毕之前的占位元素
      */
     renderPlaceholder: PropTypes.func,
     onChange: PropTypes.func,
     children: PropTypes.array,
+    /**
+     * 右边额外的留白距离
+     */
+    extraSpace: PropTypes.number,
     animationConfig: PropTypes.shape({
       duration: PropTypes.number,
       easing: PropTypes.func,
@@ -136,8 +144,10 @@ export default class Tabs extends Component {
     onChange: undefined,
     preload: true,
     preloadTimeout: 375,
+    velocityThreshold: 0.5,
     renderPlaceholder: undefined,
     children: undefined,
+    extraSpace: 0,
     animationConfig: {
       duration: 200,
       easing: Easing.linear,
@@ -163,7 +173,7 @@ export default class Tabs extends Component {
       underlineWidth: new Animated.Value(0),
     };
     const styleObj = StyleSheet.flatten([props.style]);
-    this._tabsWidth = styleObj.width || winWidth;
+    this._tabsWidth = (styleObj.width || winWidth) - props.extraSpace;
     this._tabWidth = getTabWidth(props.maxItem, this._tabsWidth);
     this._bounds = [0, -this._tabWidth * props.dataSource.length + this._tabsWidth]; // x轴左右边界坐标
     this._curDeltaX = 0; // 当前的x轴偏移量
@@ -304,23 +314,23 @@ export default class Tabs extends Component {
     }
   };
 
-  _handleRelease = (e, { x0, dx, dy, vx }) => {
+  _handleRelease = ({ nativeEvent }, { dx, dy, vx }) => {
     const isPress = isValidPress(dx, dy);
     if (isPress) {
-      const deltaX = Math.abs(this._curDeltaX) + Math.abs(x0);
+      const { locationX } = nativeEvent;
+      const deltaX = Math.abs(this._curDeltaX) + Math.abs(locationX);
       const idx = getIndexByDeltaX(deltaX, this._tabWidth);
       this._handleTabChange(this.props.dataSource[idx], idx);
     } else if (this.isMultiScreen) {
-      const { dataSource } = this.props;
+      const [leftBound, rightBound] = this._bounds;
+      const { dataSource, maxItem } = this.props;
       const deltaX = this._moveTo(dx);
-      const minIdx = 0;
-      const maxIdx = Math.floor(dataSource.length / 2);
-      const idx = getNearestIndexByDeltaX(deltaX, this._tabWidth, maxIdx);
-      if ((dx > 0 && idx === minIdx) || (dx < 0 && idx === maxIdx)) {
+      const maxIdx = Math.max(dataSource.length - maxItem, 0);
+      if ((dx > 0 && deltaX >= leftBound) || (dx < 0 && deltaX <= rightBound)) {
+        const idx = getNearestIndexByDeltaX(deltaX, this._tabWidth, maxIdx);
         this.scrollToIndex(idx);
       } else if (isValidSwipe(vx, dx)) {
         this.state.scrollX.addListener(({ value }) => {
-          const [leftBound, rightBound] = this._bounds;
           if (value > leftBound) {
             this._curDeltaX = leftBound;
             this.state.scrollX.stopAnimation();
@@ -358,7 +368,7 @@ export default class Tabs extends Component {
 
   _handleTabChange = (tab, idx) => {
     const { dataSource, activeKey, onChange } = this.props;
-    if (idx > dataSource.length - 1) {
+    if (idx > dataSource.length - 1 || tab.disabled) {
       return;
     }
     if (typeof activeKey === 'undefined') {
@@ -457,7 +467,7 @@ export default class Tabs extends Component {
       <Center
         key={idx}
         accessibilityLabel={`${accessibilityLabel}_${idx}`}
-        style={{ width: this._tabWidth }}
+        style={[{ width: this._tabWidth }, tab.disabled && { opacity: 0.3 }]}
       >
         <StyledTabBtn
           style={[isFixedWidth && { width: underlineWidth }, tabStyle, isActive && tabActiveStyle]}
@@ -501,15 +511,22 @@ export default class Tabs extends Component {
   };
 
   _renderUnderline = () => {
-    const { activeColor, underlineStyle } = this.props;
+    const { activeColor, underlineStyle, dataSource } = this.props;
+    const { activeIndex } = this.state;
     const { backgroundColor } = StyleSheet.flatten([underlineStyle]);
+    const disabled = get(dataSource, `${activeIndex}.disabled`, false);
     return (
       <AnimatedUnderline
         style={[
           underlineStyle,
+          disabled && { opacity: 0.3 },
           {
             width: this.state.underlineWidth,
-            transform: [{ translateX: Animated.add(this.state.scrollX, this.state.underlineLeft) }],
+            transform: [
+              {
+                translateX: Animated.add(this.state.scrollX, this.state.underlineLeft),
+              },
+            ],
           },
         ]}
         color={backgroundColor || activeColor}
@@ -530,6 +547,7 @@ export default class Tabs extends Component {
       background,
       preload,
       preloadTimeout,
+      velocityThreshold,
       renderPlaceholder,
       children,
     } = this.props;
@@ -537,7 +555,8 @@ export default class Tabs extends Component {
     const tabsComponent = (
       <StyledTab
         key="Tabs"
-        style={[style, { backgroundColor: background }]}
+        style={[style, { width: this._tabsWidth, backgroundColor: background }]}
+        pointerEvents="box-only"
         {...this._panResponder.panHandlers}
       >
         {this._renderTabs()}
@@ -556,6 +575,7 @@ export default class Tabs extends Component {
           disabled={!swipeable}
           preload={preload}
           preloadTimeout={preloadTimeout}
+          velocityThreshold={velocityThreshold}
           renderPlaceholder={renderPlaceholder}
           onMove={this._handleTabContentMove}
           onRelease={this._handleTabContentRelease}

@@ -21,7 +21,7 @@ export default class LinearGradient extends Component {
   };
 
   static defaultProps = {
-    gradientId: 'Gradient',
+    gradientId: null,
     style: null,
     children: null,
     stops: {
@@ -36,6 +36,9 @@ export default class LinearGradient extends Component {
 
   constructor(props) {
     super(props);
+    this._gradientId = Math.random()
+      .toString(36)
+      .substring(7);
     this.setSource = this.setSource.bind(this);
     this.state = {
       stops: props.stops,
@@ -67,6 +70,10 @@ export default class LinearGradient extends Component {
     );
   }
 
+  get gradientId() {
+    return this.props.gradientId || this._gradientId;
+  }
+
   setSource(background) {
     const { x1, y1, x2, y2, stops, ...fstops } = background;
     const st = stops || fstops;
@@ -81,7 +88,8 @@ export default class LinearGradient extends Component {
   }
 
   render() {
-    const { style, gradientId } = this.props;
+    const { style } = this.props;
+    const { gradientId } = this;
     const { stops, x1, x2, y1, y2 } = this.state;
     const { height, width } = StyleSheet.flatten([styles.container, style]);
     const stopView = [];

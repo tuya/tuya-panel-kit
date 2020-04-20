@@ -9,6 +9,7 @@ import TopBar from '../topbar';
 import OfflineView from '../offline-view';
 import { CoreUtils, ThemeUtils, RatioUtils } from '../../../utils';
 import Notification from '../../notification';
+import GlobalToast from '../../global-toast';
 
 const TYMobile = TYSdk.mobile;
 const TYNative = TYSdk.native;
@@ -68,17 +69,24 @@ class FullView extends Component {
       showNotification: false,
       information: {},
       motionStyle: {},
+      showToast: false,
+      successInformation: {},
+      successStyle: {},
     };
   }
 
   componentDidMount() {
     TYEvent.on('showNotification', this.showNotification);
     TYEvent.on('hideNotification', this.hideNotification);
+    TYEvent.on('showToast', this.showToast);
+    TYEvent.on('hideToast', this.hideToast);
   }
 
   componentWillUnmount() {
     TYEvent.off('showNotification', this.showNotification);
     TYEvent.off('hideNotification', this.hideNotification);
+    TYEvent.off('showToast', this.showToast);
+    TYEvent.off('hideToast', this.hideToast);
   }
 
   onBack = tab => {
@@ -106,8 +114,18 @@ class FullView extends Component {
     const { motionStyle, ...rest } = data;
     this.setState({ showNotification: true, information: rest, motionStyle });
   };
+
+  showToast = data => {
+    const { style, ...rest } = data;
+    this.setState({ showToast: true, successInformation: rest, successStyle: style });
+  };
+
   hideNotification = () => {
     this.setState({ showNotification: false });
+  };
+
+  hideToast = () => {
+    this.setState({ showToast: false });
   };
 
   renderBackground(background) {
@@ -190,8 +208,8 @@ class FullView extends Component {
     const tipText = !appOnline
       ? Strings.getLang('appoffline')
       : !deviceOnline
-        ? Strings.getLang('offline')
-        : '';
+      ? Strings.getLang('offline')
+      : '';
 
     if (!show) {
       return null;
@@ -227,6 +245,18 @@ class FullView extends Component {
         {...this.state.information}
         show={this.state.showNotification}
         motionStyle={[{ zIndex: 99 }, this.state.motionStyle]}
+      />
+    );
+  }
+
+  // 渲染全局成功Toast
+  renderGlobalToast() {
+    return (
+      <GlobalToast
+        onFinish={() => this.setState({ showToast: false })}
+        {...this.state.successInformation}
+        show={this.state.showToast}
+        style={[{ zIndex: 999 }, this.state.successStyle]}
       />
     );
   }
@@ -307,6 +337,7 @@ class FullView extends Component {
         {!isBgColor && this.renderBackground(background)}
         {this.renderNotification()}
         {this.renderTopBar()}
+        {this.renderGlobalToast()}
         {this.props.children}
         {this.renderOfflineView()}
       </View>

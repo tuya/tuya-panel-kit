@@ -2,10 +2,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Navigator } from 'react-native-deprecated-custom-components';
-import { View, StyleSheet, UIManager, BackHandler, Platform } from 'react-native';
+import { View, StyleSheet, UIManager, BackHandler, Platform, AppState } from 'react-native';
 import TYSdk from '../../../TYNativeApi';
 import MaskView from '../../modal/portalOut';
 import FullView from '../full-view';
+import Notification from '../../notification';
+import TYNativeModules, { getRssi } from '../api';
+import AnimatedModal from '../detect-net-modal';
+import Strings from '../../../i18n/strings';
 
 const TYEvent = TYSdk.event;
 const TYMobile = TYSdk.mobile;
@@ -18,6 +22,11 @@ const SceneConfigs = {
     },
   },
 };
+
+const moreIcon =
+  'M353.152 237.76a52.736 52.736 0 0 0 1.28 75.776l210.432 196.352-204.16 202.944a52.928 52.928 0 0 0-0.64 74.496 51.712 51.712 0 0 0 73.6 0.512l230.144-229.568a64 64 0 0 0-0.256-90.88l-232.96-229.888a54.912 54.912 0 0 0-77.44 0.256z';
+
+const Res = require('../../res/wifi.png');
 
 let _navigator;
 
@@ -43,9 +52,9 @@ export default class NavigatorLayout extends Component {
     this._onWillFocus = this.__onWillFocus.bind(this);
     this._onBack = this.onBack.bind(this);
 
-    // this.state = {
-    //   initialized: false,
-    // };
+    this.state = {
+      modalVisible: false,
+    };
 
     if (UIManager.setLayoutAnimationEnabledExperimental) {
       UIManager.setLayoutAnimationEnabledExperimental(true);
@@ -53,6 +62,11 @@ export default class NavigatorLayout extends Component {
   }
 
   componentDidMount() {
+    TYNativeModules.receiverMqttData(23);
+    TYNativeModules.sendMqttData(22);
+
+    TYSdk.DeviceEventEmitter.addListener('receiveMqttData', this._handleMqttSignal);
+    AppState.addEventListener('change', this._handleAppStateChange);
     if (Platform.OS === 'android') {
       BackHandler.addEventListener('hardwareBackPress', this._onBack);
     }
@@ -62,6 +76,10 @@ export default class NavigatorLayout extends Component {
     if (Platform.OS === 'android') {
       BackHandler.removeEventListener('hardwareBackPress', this._onBack);
     }
+    Notification.hide();
+    this.timer && clearTimeout(this.timer);
+    TYSdk.DeviceEventEmitter.removeListener('receiveMqttData', this._handleMqttSignal);
+    AppState.removeEventListener('change', this._handleAppStateChange);
   }
 
   // 可重写此方法实现具体页面渲染
@@ -105,6 +123,47 @@ export default class NavigatorLayout extends Component {
     return {};
   }
 
+  _handleAppStateChange = nextAppState => {
+    if (nextAppState === 'background') {
+      Notification.hide();
+    }
+  };
+
+  _handleMqttSignal = ({ data = {}, protocol } = {}) => {
+    if (protocol === 23) {
+      const { data: result } = data;
+      const { signal } = result;
+      getRssi().then(res => {
+        if (!res) {
+          return;
+        }
+        const { value: rssi } = res;
+        if (signal < rssi && AppState.currentState === 'active') {
+          this.timer && clearTimeout(this.timer);
+
+          Notification.show({
+            message: Strings.getLang('location'),
+            backIcon: moreIcon,
+            onClose: this._handleToDetail,
+            onPress: this._handleToDetail,
+            enableImage: true,
+            backIconSize: 20,
+            backIconCenter: true,
+            imageSource: Res,
+          });
+          this.timer = setTimeout(() => {
+            Notification.hide();
+          }, 3000);
+        }
+      });
+    }
+  };
+
+  _handleToDetail = () => {
+    this.setState({
+      modalVisible: true,
+    });
+  };
   dispatchRoute(route, navigator) {
     let contentLayout = null;
     const opts = this.hookRoute(route);
@@ -185,6 +244,7 @@ export default class NavigatorLayout extends Component {
   }
 
   render() {
+    const { modalVisible } = this.state;
     return (
       <View style={{ flex: 1 }}>
         <Navigator
@@ -194,6 +254,7 @@ export default class NavigatorLayout extends Component {
           onDidFocus={this._onDidFocus}
           onWillFocus={this._onWillFocus}
         />
+        {modalVisible && <AnimatedModal onClose={() => this.setState({ modalVisible: false })} />}
         <MaskView />
       </View>
     );

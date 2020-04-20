@@ -1,14 +1,23 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-import { ColorPropType, ViewPropTypes, StyleSheet } from 'react-native';
+import { ColorPropType, ViewPropTypes, StyleSheet, TouchableOpacity } from 'react-native';
 import IconFont from '../iconfont';
 import svgs from '../iconfont/svg/defaultSvg';
-import { ThemeUtils } from '../../utils';
-import { StyledNotification, StyledNotificationContent, StyledButton, StyledTitle } from './styled';
+import { ThemeUtils, RatioUtils } from '../../utils';
+import {
+  StyledNotification,
+  StyledNotificationContent,
+  StyledTitle,
+  StyledIconFont,
+  StyledImage,
+} from './styled';
 import Motion from '../motion';
 import TYSdk from '../../TYNativeApi';
 
 const { ThemeConsumer } = ThemeUtils;
+const { convertX: cx } = RatioUtils;
+const closeIcon =
+  'M329.557333 281.9072a32.8704 32.8704 0 0 1 0.887467 0.853333l177.527467 178.449067 161.6896-171.281067a33.1776 33.1776 0 0 1 47.581866-0.682666l0.682667 0.682666a34.133333 34.133333 0 0 1 0.682667 47.581867l-162.474667 172.100267 162.269867 163.157333a34.133333 34.133333 0 0 1 0.750933 47.377067l-0.853333 0.9216a32.8704 32.8704 0 0 1-46.455467 1.604266l-0.887467-0.853333-161.6896-162.577067-155.7504 165.034667a33.1776 33.1776 0 0 1-46.865066 1.365333l-1.365334-1.365333a34.133333 34.133333 0 0 1-0.682666-47.581867l156.501333-165.853866L282.999467 331.776a34.133333 34.133333 0 0 1-0.750934-47.342933l0.853334-0.9216a32.8704 32.8704 0 0 1 46.455466-1.604267z';
 
 const TYEvent = TYSdk.event;
 
@@ -83,8 +92,15 @@ export default class Notification extends PureComponent {
       motionConfig,
       show,
       motionStyle,
+      backIcon,
+      onPress,
+      imageSource,
+      imageStyle,
+      backIconSize,
+      backIconCenter,
       ...rest
     } = this.props;
+    const disable = typeof onPress === 'function';
     return (
       <Motion.PushDown {...motionConfig} show={show} style={[styles.notification, motionStyle]}>
         <ThemeConsumer>
@@ -94,29 +110,45 @@ export default class Notification extends PureComponent {
               theme.iconColor || theme[`${variant}Icon`] || t.global[variant] || theme.warningIcon;
             const isOneLine = this.state.height === 44;
             return (
-              <StyledNotification {...rest} style={[style]} accessibilityLabel={accessibilityLabel}>
+              <StyledNotification
+                disabled={!disable}
+                {...rest}
+                style={style}
+                accessibilityLabel={accessibilityLabel}
+                activeOpacity={1}
+                onPress={onPress}
+              >
                 <StyledNotificationContent
                   style={{
-                    alignItems: isOneLine ? 'center' : 'flex-start',
+                    alignItems: isOneLine ? 'center' : backIconCenter ? 'center' : 'flex-start',
                     ...shadowStyles,
                   }}
                   background={theme.background}
                   onLayout={this._handleLayout}
                 >
-                  <IconFont d={iconPath} color={iconColor} size={20} />
+                  {imageSource ? (
+                    <StyledImage source={imageSource} style={imageStyle} />
+                  ) : (
+                    <StyledIconFont d={iconPath} color={iconColor} size={20} />
+                  )}
                   {children || (
-                    <StyledTitle color={theme.text} numberOfLines={3}>
+                    <StyledTitle
+                      color={theme.text}
+                      numberOfLines={3}
+                      backIconCenter={backIconCenter}
+                    >
                       {message}
                     </StyledTitle>
                   )}
                   {enableClose && (
-                    <StyledButton
+                    <TouchableOpacity
                       accessibilityLabel={`${accessibilityLabel}_Close`}
                       activeOpacity={0.6}
                       onPress={onClose}
+                      style={backIconCenter ? styles.center : styles.touchStyle}
                     >
-                      <IconFont name="close" color={theme.closeIcon} size={15} />
-                    </StyledButton>
+                      <IconFont d={backIcon} color={theme.closeIcon} size={backIconSize} />
+                    </TouchableOpacity>
                   )}
                 </StyledNotificationContent>
               </StyledNotification>
@@ -159,6 +191,10 @@ Notification.propTypes = {
    */
   icon: PropTypes.string,
   /**
+   * Notification 文案后面的 IconPath
+   */
+  backIcon: PropTypes.string,
+  /**
    * Notification类型
    */
   variant: PropTypes.oneOf(['success', 'warning', 'error']),
@@ -190,6 +226,26 @@ Notification.propTypes = {
    * Notification 样式
    */
   motionStyle: ViewPropTypes.style,
+  /**
+   * 点击整块区域触发的函数
+   */
+  onPress: PropTypes.func,
+  /**
+   * 图片资源
+   */
+  imageSource: PropTypes.number,
+  /**
+   * 图片样式
+   */
+  imageStyle: ViewPropTypes.style,
+  /**
+   * 文案后面图标大小
+   */
+  backIconSize: PropTypes.number,
+  /**
+   * 文案后面图标是否垂直居中
+   */
+  backIconCenter: PropTypes.bool,
 };
 
 Notification.defaultProps = {
@@ -198,6 +254,7 @@ Notification.defaultProps = {
   theme: DEFAULT_THEME,
   show: false,
   icon: undefined,
+  backIcon: closeIcon,
   variant: 'warning',
   enableClose: true,
   autoCloseTime: 1500,
@@ -206,6 +263,11 @@ Notification.defaultProps = {
   children: null,
   motionConfig: {},
   motionStyle: null,
+  onPress: null,
+  imageSource: null,
+  imageStyle: null,
+  backIconSize: 24,
+  backIconCenter: false,
 };
 
 const styles = StyleSheet.create({
@@ -214,6 +276,21 @@ const styles = StyleSheet.create({
     top: 0,
     left: 0,
     right: 0,
+  },
+  center: {
+    width: cx(24),
+    height: cx(24),
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  touchStyle: {
+    width: cx(24),
+    height: cx(24),
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'absolute',
+    top: 10,
+    right: 16,
   },
 });
 

@@ -16,6 +16,14 @@ const lang = {
     bluetoothShare: 'Bluetooth Sharing',
     bluetoothOfflineTip: 'Please turn on "Bluetooth"',
     bluetoothShareTip: 'Limited functionality, please turn on "Bluetooth Sharing"',
+    wifiBadTitle: 'Device Wi-Fi signal is weak',
+    detectPlease: 'Please check:',
+    internetAccess:
+      '1. Whether the router connected to the device works normally and the network is smooth.',
+    obstructions:
+      '2. Is the device too far away from the router, partition wall or other obstructions?',
+    retest: 'Retest the network',
+    location: 'The device Wi-Fi signal is weak, please change the device location.',
   },
   zh: {
     offline: '设备暂时不可操作\n请稍后再试',
@@ -32,6 +40,12 @@ const lang = {
     bluetoothShare: '蓝牙权限',
     bluetoothOfflineTip: '请开启“蓝牙”',
     bluetoothShareTip: '功能受限，请开启“蓝牙共享”',
+    wifiBadTitle: '设备Wi-Fi信号弱',
+    detectPlease: '请检查:',
+    internetAccess: '1.设备连接的路由器是否正常工作，网络通畅',
+    obstructions: '2.设备是否与路由器距离过远、隔墙或有其他遮挡物',
+    retest: '重新检测网络',
+    location: '设备Wi-Fi信号弱，请更换设备位置',
   },
 };
 

@@ -1,11 +1,12 @@
-import { View, TouchableOpacity } from 'react-native';
+import { View, TouchableOpacity, Image } from 'react-native';
 import styled from 'styled-components/native';
 import { RatioUtils } from '../../utils';
 import TYText from '../TYText';
+import IconFont from '../iconfont';
 
 const { viewWidth, convertX: cx } = RatioUtils;
 
-export const StyledNotification = styled(View)`
+export const StyledNotification = styled(TouchableOpacity)`
   align-self: stretch;
   align-items: center;
   justify-content: space-between;
@@ -28,12 +29,26 @@ export const StyledTitle = styled(TYText)`
   font-size: 14;
   line-height: 22;
   color: ${props => props.color};
-  margin: ${`0px ${cx(30)}px 0px ${cx(8)}px`};
+  margin: ${props =>
+    props.backIconCenter ? `0px ${cx(30)}px 0px ${cx(32)}px` : `0px ${cx(54)}px 0px ${cx(32)}px`};
 `;
 
 export const StyledButton = styled(TouchableOpacity)`
   width: ${cx(24)}px;
   height: 24;
-  align-items: center;
   justify-content: center;
+`;
+
+export const StyledIconFont = styled(IconFont)`
+  position: absolute;
+  top: ${cx(10)}px;
+  left: ${cx(16)}px;
+`;
+
+export const StyledImage = styled(Image)`
+  position: absolute;
+  top: ${cx(10)}px;
+  left: ${cx(16)}px;
+  height: ${cx(21)}px;
+  width: ${cx(24)}px;
 `;

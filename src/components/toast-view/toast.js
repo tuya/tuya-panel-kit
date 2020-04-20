@@ -48,6 +48,16 @@ class ToastView extends React.PureComponent {
     };
   }
 
+  componentDidMount() {
+    const { show, text } = this.props;
+    if (typeof show !== 'undefined') {
+      this.setState({ show, text });
+      if (show) {
+        this.startShowAnimation();
+      }
+    }
+  }
+
   componentWillReceiveProps(nextProps) {
     const { show, text } = nextProps;
     if (typeof show !== 'undefined' && show !== this.state.show) {

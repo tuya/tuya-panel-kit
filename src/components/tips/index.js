@@ -20,11 +20,33 @@ const path = {
 
 class Tips extends PureComponent {
   static propTypes = {
-    contentStyle: ViewPropTypes.style, // 气泡的大小
-    tipStyle: ViewPropTypes.style, // 气泡的位置
+    /**
+     * 气泡的样式
+     */
+    contentStyle: ViewPropTypes.style,
+    /**
+     * 气泡位置
+     */
+    tipStyle: ViewPropTypes.style,
+    /**
+     * 气泡背景颜色
+     */
     bgColor: ColorPropType,
+    /**
+     * 是否显示气泡
+     */
     show: PropTypes.bool,
+    /**
+     * 嵌套子元素
+     */
     children: PropTypes.element,
+    /**
+     * 是否显示角标
+     */
+    showCorner: PropTypes.bool,
+    /**
+     * 角标位置
+     */
     cornerPosition: PropTypes.oneOf([
       'topLeft',
       'topCenter',
@@ -33,13 +55,20 @@ class Tips extends PureComponent {
       'bottomCenter',
       'bottomRight',
     ]),
+    /**
+     * 气泡动画类型
+     */
     motionType: PropTypes.oneOf(MOTION_TYPES),
+    /**
+     * 动画配置
+     */
     motionConfig: PropTypes.object,
   };
   static defaultProps = {
     children: null,
     show: false,
     bgColor: '#fff',
+    showCorner: true,
     contentStyle: undefined,
     tipStyle: null,
     motionType: 'ScaleFadeIn',
@@ -97,6 +126,7 @@ class Tips extends PureComponent {
       cornerPosition,
       motionType,
       bgColor,
+      showCorner,
       motionConfig,
       tipStyle,
     } = this.props;
@@ -110,7 +140,9 @@ class Tips extends PureComponent {
         style={[{ alignItems: 'center', justifyContent: 'center' }, tipStyle]}
       >
         <View style={{ borderRadius: cx(5) }}>
-          {isTop && <StyledIconFont style={iconPosition} color={bgColor} d={path.top} />}
+          {showCorner && isTop && (
+            <StyledIconFont style={iconPosition} color={bgColor} d={path.top} />
+          )}
           <StyledViewChildren
             style={[
               contentStyle,
@@ -119,7 +151,9 @@ class Tips extends PureComponent {
           >
             {children}
           </StyledViewChildren>
-          {!isTop && <StyledIconFont style={iconPosition} color={bgColor} d={path.bottom} />}
+          {!isTop && showCorner && (
+            <StyledIconFont style={iconPosition} color={bgColor} d={path.bottom} />
+          )}
         </View>
       </MotionComp>
     );
