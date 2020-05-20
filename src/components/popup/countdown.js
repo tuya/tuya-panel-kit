@@ -15,22 +15,73 @@ const { getTheme, ThemeConsumer } = ThemeUtils;
 
 class CountdownPopup extends React.Component {
   static propTypes = {
+    /**
+     * 外部样式
+     */
     countdownWrapperStyle: ViewPropTypes.style,
+    /**
+     * 按钮开关值
+     */
     switchValue: PropTypes.bool.isRequired,
+    /**
+     * 倒计时具体值
+     */
     value: PropTypes.number.isRequired,
+    /**
+     * 是否只显示分钟
+     */
     onlyone: PropTypes.bool,
+    /**
+     * 最大值
+     */
     max: PropTypes.number,
+    /**
+     * 最小值
+     */
     min: PropTypes.number,
+    /**
+     * 步长
+     */
     step: PropTypes.number,
+    /**
+     * picker字体颜色
+     */
     pickerFontColor: ColorPropType,
+    /**
+     * picker单位颜色
+     */
     pickerUnitColor: ColorPropType,
+    /**
+     * 小时文案
+     */
     hourText: PropTypes.string,
+    /**
+     * 分钟文案
+     */
     minuteText: PropTypes.string,
+    /**
+     * 倒计时更改值回调
+     */
     onValueChange: PropTypes.func,
+    /**
+     * 数据更改值回调
+     */
     _onDataChange: PropTypes.func,
+    /**
+     * 小时picker样式
+     */
     hourPickerStyle: ViewPropTypes.style,
+    /**
+     * 小时单位样式
+     */
     hourUnitStyle: Text.propTypes.style,
+    /**
+     * 分钟picker样式
+     */
     minutePickerStyle: ViewPropTypes.style,
+    /**
+     * 分钟单位样式
+     */
     minuteUnitStyle: Text.propTypes.style,
   };
 
@@ -56,12 +107,13 @@ class CountdownPopup extends React.Component {
     super(props);
     if (props.onlyone) {
       this.Hours = [];
-      this.Minutes = range(0, props.max, props.step);
+      this.Minutes = range(props.min, props.max + 1, props.step);
     } else {
       const remainMinutes = props.max % 60;
       const shiftMinutes = props.min % 60;
       this.Hours = range(parseInt(props.min / 60, 10), parseInt(props.max / 60, 10) + 1);
       this.Minutes = range(0, 60, props.step);
+      this.EqualMinutes = range(shiftMinutes, remainMinutes + 1, props.step); // 当最大小时与最小小时相等的分钟
       this.RemainMinutes = range(0, remainMinutes + 1, props.step); // 选中最大小时时剩余的分钟
       this.shiftMinutes = range(shiftMinutes, 60, props.step); // 选中最小小时时剩余的分钟
     }
@@ -201,11 +253,16 @@ class CountdownPopup extends React.Component {
     } = this.props;
     const isMaxHour = this.state.hour === parseInt(max / 60, 10);
     const isMinHour = this.state.hour === parseInt(min / 60, 10);
-    const minuteValues = isMaxHour
-      ? this.RemainMinutes
-      : isMinHour
-        ? this.shiftMinutes
-        : this.Minutes;
+    let minuteValues;
+    if (isMaxHour && isMinHour) {
+      minuteValues = this.EqualMinutes;
+    } else if (isMaxHour && !isMinHour) {
+      minuteValues = this.RemainMinutes;
+    } else if (isMinHour && !isMaxHour) {
+      minuteValues = this.shiftMinutes;
+    } else {
+      minuteValues = this.Minutes;
+    }
     return (
       <ThemeConsumer>
         {globalTheme => {
