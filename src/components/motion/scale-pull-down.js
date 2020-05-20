@@ -14,15 +14,45 @@ const DEFAULT_ANIMATION_CONFIG = {
 class ScalePullDown extends PureComponent {
   static displayName = 'Motion.ScalePullDown';
   static propTypes = {
+    /**
+     * 内容样式
+     */
     style: ViewPropTypes.style,
+    /**
+     * 是否显示内容
+     */
     show: PropTypes.bool,
+    /**
+     * 初始缩放倍数
+     */
     initScale: PropTypes.number,
+    /**
+     * 动画显示时长
+     */
     showDuration: PropTypes.number,
+    /**
+     * 动画隐藏时长
+     */
     hideDuration: PropTypes.number,
+    /**
+     * 自定义内容
+     */
     children: PropTypes.element.isRequired,
+    /**
+     * 动画显示回调
+     */
     onShow: PropTypes.func,
+    /**
+     * 是否竖直居中
+     */
     isAlign: PropTypes.bool,
+    /**
+     * 动画隐藏回调
+     */
     onHide: PropTypes.func,
+    /**
+     * 动画配置参数
+     */
     animationConfig: PropTypes.shape({
       duration: PropTypes.number,
       delay: PropTypes.number,
@@ -63,7 +93,7 @@ class ScalePullDown extends PureComponent {
 
   componentWillReceiveProps(nextProps) {
     const { show } = nextProps;
-    if (!this.state.isAnimating && typeof show !== 'undefined' && show !== this.state.show) {
+    if (typeof show !== 'undefined' && show !== this.state.show) {
       this.startAnimation(show);
     }
   }
@@ -71,6 +101,7 @@ class ScalePullDown extends PureComponent {
   componentWillUnmount() {
     this.state.scale.stopAnimation();
     this.state.opacity.stopAnimation();
+    this.state.dropHeight.stopAnimation();
   }
 
   startAnimation = show => {
@@ -129,6 +160,7 @@ class ScalePullDown extends PureComponent {
     ]).start(({ finished }) => {
       if (finished) {
         this.setState({ show: false, isAnimating: false }, () => {
+          this.state.dropHeight.setValue(0);
           typeof onHide === 'function' && onHide();
         });
       }
