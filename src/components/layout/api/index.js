@@ -1,10 +1,13 @@
 /* eslint-disable import/prefer-default-export */
 import { NativeModules } from 'react-native';
 import TYSdk from '../../../TYNativeApi';
-import { JsonUtils } from '../../../utils';
+import { JsonUtils, CoreUtils } from '../../../utils';
 
 const ESPNative = Object.assign({}, NativeModules.TYRCTMqttManager);
 const TYNative = TYSdk.native;
+
+const requireRnVersion = '5.21';
+const { compareVersion, get } = CoreUtils;
 
 export const getRssi = () => {
   return new Promise((resolve, reject) => {
@@ -37,7 +40,9 @@ export const getRssi = () => {
  * @param {Function} error
  */
 const sendMqttData = (param, protocol, success, error) => {
-  if (!NativeModules.TYRCTMqttManager) return;
+  const appRnVersion = get(TYNative, 'mobileInfo.appRnVersion');
+  const isGreater = appRnVersion && compareVersion(appRnVersion, requireRnVersion); // 获取的版本是否比要求的版本高
+  if (isGreater === undefined || !NativeModules.TYRCTMqttManager || isGreater === -1) return;
   ESPNative.sendMqttData(protocol, param, success, error);
 };
 
@@ -49,7 +54,9 @@ const sendMqttData = (param, protocol, success, error) => {
  * @param {Function} error
  */
 const receiverMqttData = protocol => {
-  if (!NativeModules.TYRCTMqttManager) return;
+  const appRnVersion = get(TYNative, 'mobileInfo.appRnVersion');
+  const isGreater = appRnVersion && compareVersion(appRnVersion, requireRnVersion); // 获取的版本是否比要求的版本高
+  if (isGreater === undefined || !NativeModules.TYRCTMqttManager || isGreater === -1) return;
   ESPNative.receiverMqttData(protocol);
 };
 
