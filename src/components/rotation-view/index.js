@@ -8,11 +8,29 @@ import { StyleSheet, ViewPropTypes, Animated, Easing } from 'react-native';
  */
 export default class RotationView extends Component {
   static propTypes = {
+    /**
+     * 测试标志
+     */
     accessibilityLabel: PropTypes.string,
+    /**
+     * 内容样式
+     */
     style: ViewPropTypes.style,
+    /**
+     * 嵌套子元素
+     */
     children: PropTypes.node,
+    /**
+     * 是否开启旋转动画
+     */
     active: PropTypes.bool,
+    /**
+     * 旋转动画一圈的时间, 单位是ms
+     */
     duration: PropTypes.number,
+    /**
+     * 是否使用原生动画驱动, 一般在安卓低端机上会比较有用
+     */
     useNativeDriver: PropTypes.bool,
   };
 

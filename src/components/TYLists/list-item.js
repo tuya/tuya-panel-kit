@@ -26,6 +26,9 @@ const { parseToStyle } = ThemeUtils;
 export default class TYListItem extends Component {
   static propTypes = {
     ...TouchableOpacity.propTypes,
+    /**
+     * 你可以通过该props定义_Item_的所有样式
+     */
     styles: PropTypes.oneOfType([
       PropTypes.bool,
       PropTypes.shape({
@@ -38,6 +41,9 @@ export default class TYListItem extends Component {
         subTitle: Text.propTypes.style,
       }),
     ]),
+    /**
+     * 主题
+     */
     theme: PropTypes.shape({
       boardBg: ColorPropType,
       fontColor: ColorPropType,

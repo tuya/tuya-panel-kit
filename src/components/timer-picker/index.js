@@ -25,17 +25,53 @@ const TIME_PICKER_PROPS = [
 
 export default class TimerPicker extends Component {
   static propTypes = {
+    /**
+     * 测试标志
+     */
     accessibilityLabel: PropTypes.string,
+    /**
+     * 内容样式
+     */
     style: ViewPropTypes.style,
+    /**
+     * picker 是否支持手势
+     */
     disabled: PropTypes.bool,
-    startTime: PropTypes.number, // minutes(0 - 1440)
-    endTime: PropTypes.number, // minutes(0 - 1440)
+    /**
+     * 开始时间,minutes(0 - 1440)
+     */
+    startTime: PropTypes.number,
+    /**
+     * 结束时间,minutes(0 - 1440)
+     */
+    endTime: PropTypes.number,
+    /**
+     * 时间段更改回调
+     */
     onTimerChange: PropTypes.func,
-    is12Hours: PropTypes.bool, // 是否是12小时制
-    singlePicker: PropTypes.bool, // 是否只需要一个picker
+    /**
+     * 是否为 12 小时制
+     */
+    is12Hours: PropTypes.bool,
+    /**
+     * 是否只需要一个picker
+     */
+    singlePicker: PropTypes.bool,
+    /**
+     * 前缀位置（即 AMPM 位置）
+     */
     prefixPosition: PropTypes.oneOfType([PropTypes.array, PropTypes.oneOf(['left', 'right'])]),
+    /**
+     * picker 字体颜色
+     */
     pickerFontColor: PropTypes.string,
+    /**
+     * 前缀字符
+     */
     symbol: PropTypes.string,
+    /**
+     * 是否支持 picker 循环滚动
+     */
     loop: PropTypes.bool,
   };
 

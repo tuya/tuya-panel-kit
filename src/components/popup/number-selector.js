@@ -15,15 +15,45 @@ const { scaleNumber, inMaxMin } = NumberUtils;
 
 class NumberSelectorPopup extends Component {
   static propTypes = {
+    /**
+     * numberSelector弹框样式
+     */
     numberSelectorWrapperStyle: ViewPropTypes.style,
+    /**
+     * 按钮值
+     */
     switchValue: PropTypes.bool.isRequired,
+    /**
+     * 数值选择弹出层类型
+     */
     type: PropTypes.oneOf(['basic', 'slider']),
+    /**
+     * 具体值
+     */
     value: PropTypes.number.isRequired,
+    /**
+     * 最大值
+     */
     max: PropTypes.number,
+    /**
+     * 最小值
+     */
     min: PropTypes.number,
+    /**
+     * 步长
+     */
     step: PropTypes.number,
+    /**
+     * 倍数
+     */
     scale: PropTypes.number,
+    /**
+     * 值变更事件
+     */
     onValueChange: PropTypes.func,
+    /**
+     * 数据更改回调
+     */
     _onDataChange: PropTypes.func,
   };
 

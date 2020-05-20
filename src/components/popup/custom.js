@@ -8,6 +8,9 @@ function CustomPopup({ content }) {
 CustomPopup.displayName = 'Custom';
 
 CustomPopup.PropTypes = {
+  /**
+   * 自定义内容
+   */
   content: PropTypes.any.isRequired,
 };
 

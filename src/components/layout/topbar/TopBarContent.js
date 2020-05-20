@@ -43,14 +43,41 @@ const TopBarContent = ({
 TopBarContent.displayName = 'TopBar.Content';
 
 TopBarContent.propTypes = {
+  /**
+   * TopBar.Content的样式。
+   */
   style: ViewPropTypes.style,
+  /**
+   * TopBar.Content标题及副标题颜色，副标题颜色为该颜色加0.6透明度
+   */
   color: PropTypes.string,
+  /**
+   * TopBar.Content的标题
+   */
   title: PropTypes.string,
+  /**
+   * TopBar.Content的标题样式
+   */
   titleStyle: Text.propTypes.style,
+  /**
+   * TopBar.Content的副标题
+   */
   subTitle: PropTypes.string,
+  /**
+   * TopBar.Content的副标题样式
+   */
   subTitleStyle: Text.propTypes.style,
+  /**
+   * TopBar.Content的位置，可为左对齐、居中对齐和右对齐
+   */
   position: PropTypes.oneOf(['left', 'center', 'right']),
+  /**
+   * TopBar.Content的子元素
+   */
   children: PropTypes.any,
+  /**
+   * 点击事件
+   */
   onPress: PropTypes.func,
 };
 

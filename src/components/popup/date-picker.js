@@ -8,8 +8,17 @@ import { StyledDatePicker } from './styled';
 class DatePickerPopup extends React.Component {
   static propTypes = {
     ...DatePicker.propTypes,
+    /**
+     * 按钮开关值
+     */
     switchValue: PropTypes.bool.isRequired,
+    /**
+     * 日期更改回调
+     */
     onDateChange: PropTypes.func,
+    /**
+     * 数据更改回调
+     */
     _onDataChange: PropTypes.func,
   };
 

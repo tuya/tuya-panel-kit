@@ -23,15 +23,45 @@ class TabContent extends React.Component {
     useViewPagerOnAndroid: true,
   };
   static propTypes = {
+    /**
+     * 切换tab的距离
+     */
     distanceToChangeTab: PropTypes.number,
+    /**
+     * 内容宽度
+     */
     containerWidth: PropTypes.number,
+    /**
+     * 滚动改变回调函数
+     */
     onScrollValueChange: PropTypes.func,
+    /**
+     * 切换视图的回调
+     */
     onChange: PropTypes.func,
+    /**
+     * 是否可滑动视图
+     */
     swipeable: PropTypes.bool,
+    /**
+     * 所激活视图的key
+     */
     activeKey: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    /**
+     * tab内容源
+     */
     panels: PropTypes.oneOfType([PropTypes.element, PropTypes.array]),
+    /**
+     * 切换视图是否有动画
+     */
     animated: PropTypes.bool,
+    /**
+     * 是否在安卓上使用viewPager
+     */
     useViewPagerOnAndroid: PropTypes.bool,
+    /**
+     * 包裹tab的容器样式
+     */
     style: ViewPropTypes.style,
   };
   constructor(props) {

@@ -132,8 +132,17 @@ class CircleBtn extends React.PureComponent {
      * 是否使用 ART 实现版本
      */
     useART: PropTypes.bool,
+    /**
+     * 测试标志
+     */
     textAccessibilityLabel: PropTypes.string,
+    /**
+     * 测试标志
+     */
     badgeAccessibilityLabel: PropTypes.string,
+    /**
+     * 测试标志
+     */
     badgeTextAccessibilityLabel: PropTypes.string,
   };
 

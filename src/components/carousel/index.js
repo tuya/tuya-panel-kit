@@ -8,16 +8,49 @@ import defaultDot from './dot';
 
 class Carousel extends React.Component {
   static propTypes = {
+    /**
+     * 测试标志
+     */
     accessibilityLabel: PropTypes.string,
+    /**
+     * 当内容范围比滚动视图本身大时，是否弹性拉动一截
+     */
     bounces: PropTypes.bool,
+    /**
+     * 是否有指示点
+     */
     hasDots: PropTypes.bool,
+    /**
+     * 是否自动播放
+     */
     autoplay: PropTypes.bool,
+    /**
+     * 自动播放间隔时间(ms)
+     */
     autoplayInterval: PropTypes.number,
+    /**
+     * 当前激活的索引
+     */
     selectedIndex: PropTypes.number,
+    /**
+     * 自定义指示点
+     */
     dots: PropTypes.oneOfType([PropTypes.element, PropTypes.func]),
+    /**
+     * 指示点样式
+     */
     dotStyle: ViewPropTypes.style,
+    /**
+     * 当前激活的指示点样式
+     */
     dotActiveStyle: ViewPropTypes.style,
+    /**
+     * 轮播页样式
+     */
     pageStyle: ViewPropTypes.style,
+    /**
+     * 安卓的实现机制是否使用viewPager
+     */
     useViewPagerOnAndroid: PropTypes.bool,
   };
   static defaultProps = {

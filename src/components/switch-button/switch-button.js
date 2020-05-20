@@ -26,23 +26,78 @@ const EXTRA_HEIGHT = 3;
 
 export default class SwitchButton extends React.PureComponent {
   static propTypes = {
+    /**
+     * 测试标志
+     */
     accessibilityLabel: PropTypes.string,
+    /**
+     * 容器样式
+     */
     style: ViewPropTypes.style,
+    /**
+     * 是否禁用
+     */
     disabled: PropTypes.bool,
+    /**
+     * 当前选中的值，设置了该属性即为受控组件
+     */
     value: PropTypes.bool,
+    /**
+     * 默认选中的值
+     */
     defaultValue: PropTypes.bool,
+    /**
+     * 设置switchButton的大小
+     */
     size: PropTypes.object,
+    /**
+     * 改变switchButton值时执行此回调
+     */
     onValueChange: PropTypes.func,
+    /**
+     * 设置当switchButton的value为false时背景颜色
+     */
     tintColor: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+    /**
+     * 设置当switchButton的value为true时颜色
+     */
     onTintColor: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+    /**
+     * 设置当switchButton的value为false时thumb颜色
+     */
     thumbTintColor: PropTypes.string,
+    /**
+     * 设置当switchButton的value为true时thumb颜色，若没有设置则为thumbTintColor的值
+     */
     onThumbTintColor: PropTypes.string,
+    /**
+     * 设置当switchButton的value为false时边框颜色
+     *当switchButton的value为true时边框颜色等于onTintColor
+     */
     borderColor: PropTypes.string,
+    /**
+     * 指定thumb的样式
+     */
     thumbStyle: ViewPropTypes.style,
+    /**
+     * 是否使用Native Driver
+     */
     useNativeDriver: PropTypes.bool,
+    /**
+     * switchButton的value值为false时左侧显示的字符,超过3个字符则显示显示2个字符，其余显示…
+     */
     onText: PropTypes.string,
+    /**
+     * switchButton的value值为true时右侧显示的字符，超过3个字符则显示显示2个字符，其余显示…
+     */
     offText: PropTypes.string,
+    /**
+     * switchButton的value值为false时左侧显示的字符样式
+     */
     onTextStyle: ViewPropTypes.style,
+    /**
+     * switchButton的value值为true时右侧显示的字符样式
+     */
     offTextStyle: ViewPropTypes.style,
   };
   static defaultProps = {

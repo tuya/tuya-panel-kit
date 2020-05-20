@@ -22,24 +22,81 @@ class Tabs extends React.Component {
   };
 
   static propTypes = {
+    /**
+     * 是否可滑动视图
+     */
     swipeable: PropTypes.bool,
+    /**
+     * 切换视图是否有动画
+     */
     animated: PropTypes.bool,
+    /**
+     * 所激活视图的key
+     */
     activeKey: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    /**
+     * 默认激活视图的key
+     */
     defaultActiveKey: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    /**
+     * 切换视图的回调
+     */
     onChange: PropTypes.func,
+    /**
+     * 嵌套子元素
+     */
     children: PropTypes.oneOfType([PropTypes.element, PropTypes.array]),
+    /**
+     * 设置tabContent的样式
+     */
     tabContentStyle: ViewPropTypes.style,
+    /**
+     * tab默认颜色
+     */
     tabDefaultColor: PropTypes.string,
+    /**
+     * 设置tabBar的背景颜色
+     */
     tabBarBackgroundColor: PropTypes.string,
+    /**
+     * 设置tabBar的下划线样式
+     */
     tabBarUnderlineStyle: ViewPropTypes.style,
+    /**
+     * 设置tabBar的样式
+     */
     tabBarStyle: ViewPropTypes.style,
+    /**
+     * 设置tab内文字样式
+     */
     tabTextStyle: Text.propTypes.style,
+    /**
+     * 设置激活的tab内文字样式
+     */
     tabActiveTextStyle: Text.propTypes.style,
+    /**
+     * 设置包裹tabBar的容器样式
+     */
     tabsContainerStyle: ViewPropTypes.style,
+    /**
+     * 设置每个tab的样式
+     */
     tabStyle: ViewPropTypes.style,
+    /**
+     * 包裹tab的容器样式
+     */
     style: ViewPropTypes.style,
+    /**
+     * tabBar的位置
+     */
     tabBarPosition: PropTypes.oneOf(['top', 'bottom']),
+    /**
+     * 测试标志
+     */
     tabNavAccessibilityLabel: PropTypes.string,
+    /**
+     * 是否在安卓上使用viewPager
+     */
     useViewPagerOnAndroid: PropTypes.bool,
   };
 
