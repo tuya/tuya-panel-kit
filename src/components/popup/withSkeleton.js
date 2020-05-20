@@ -50,7 +50,13 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
   return class WrapperComponent extends React.Component {
     static propTypes = {
       ...TYModal.propTypes,
+      /**
+       * 容器样式
+       */
       wrapperStyle: ViewPropTypes.style,
+      /**
+       * Popup头部标题
+       */
       title: PropTypes.oneOfType([
         PropTypes.arrayOf(PropTypes.string),
         PropTypes.string,
@@ -60,9 +66,14 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
        * Popup头部副标题
        */
       subTitle: PropTypes.string,
+      /**
+       * Popup头部标题样式
+       */
       titleTextStyle: TYText.propTypes.style,
+      /**
+       * Popup头部样式
+       */
       titleWrapperStyle: ViewPropTypes.style,
-
       /**
        * 头部栏 Switch 值
        */
@@ -71,21 +82,53 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
        * 头部栏 Switch Change事件，不用onValueChange的原因是避免props重复
        */
       onSwitchValueChange: PropTypes.func,
+      /**
+       * 取消点击回调
+       */
       onCancel: PropTypes.func,
+      /**
+       * 确认点击回调
+       */
       onConfirm: PropTypes.func,
+      /**
+       * 取消文案
+       */
       cancelText: PropTypes.string,
+      /**
+       * 确认文案
+       */
       confirmText: PropTypes.string,
+      /**
+       * 取消文字样式
+       */
       cancelTextStyle: TYText.propTypes.style,
+      /**
+       * 确认文字样式
+       */
       confirmTextStyle: TYText.propTypes.style,
+      /**
+       * 自定义footer
+       */
       footer: PropTypes.element,
+      /**
+       * footer容器样式
+       */
       footerWrapperStyle: ViewPropTypes.style,
+      /**
+       * footer容器显示状态
+       */
       footerType: PropTypes.oneOf(['singleConfirm', 'singleCancel', 'custom', 'both']),
-
+      /**
+       * 动画类型
+       */
+      motionType: PropTypes.oneOf(MOTION_TYPES),
       /**
        * 动画配置
        */
-      motionType: PropTypes.oneOf(MOTION_TYPES),
       motionConfig: PropTypes.object,
+      /**
+       * 是否竖直居中
+       */
       isAlign: PropTypes.bool,
       /**
        * 返回Icon颜色
@@ -118,7 +161,7 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
       footer: null,
       footerWrapperStyle: null,
       footerType: 'both',
-      motionType: 'none',
+      motionType: 'PullUp',
       motionConfig: {},
       isAlign: false,
       backIconColor: null,
