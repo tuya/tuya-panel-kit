@@ -10,7 +10,13 @@ const MAX_ITEM_NUM = 1260;
 export class PickerView extends PureComponent {
   static propTypes = {
     ...PickerIOS.propTypes,
+    /**
+     * Picker是否循环滚动
+     */
     loop: PropTypes.bool,
+    /**
+     * 自定义内容
+     */
     children: PropTypes.array.isRequired,
   };
 

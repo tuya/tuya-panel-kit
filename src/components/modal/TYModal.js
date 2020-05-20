@@ -32,16 +32,37 @@ const StyledMask = styled(TouchableOpacity)`
 
 class TYModal extends React.Component {
   static propTypes = {
+    /**
+     * modal出现的动画效果
+     */
     animationType: PropTypes.oneOf(['fade', 'none']),
+    /**
+     * modal默认出现的位置
+     */
     alignContainer: PropTypes.oneOf(['top', 'center', 'bottom']),
+    /**
+     * 点击遮罩回调
+     */
     onMaskPress: PropTypes.func,
+    /**
+     * modal弹出内容的样式
+     */
     modalChildStyle: ViewPropTypes.style,
+    /**
+     * 遮罩层样式
+     */
     maskStyle: ViewPropTypes.style,
+    /**
+     * 是否有遮罩层
+     */
     mask: PropTypes.bool,
     /**
      * 是否只显示最后一个弹出的 modal
      */
     onlyLastModalVisible: PropTypes.bool,
+    /**
+     * 是否弹出键盘自适应
+     */
     useKeyboardView: PropTypes.bool,
   };
 

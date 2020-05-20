@@ -59,17 +59,41 @@ export default class Tabs extends Component {
      * 单个激活 Tab 的样式
      */
     tabActiveStyle: ViewPropTypes.style,
+    /**
+     * 未激活的文本样式
+     */
     tabTextStyle: TYText.propTypes.style,
+    /**
+     * 激活的文本样式
+     */
     tabActiveTextStyle: TYText.propTypes.style,
+    /**
+     * 存在 TabContent 时才有效，TabContent 的样式
+     */
     tabContentStyle: ViewPropTypes.style,
+    /**
+     * 下划线的样式
+     */
     underlineStyle: ViewPropTypes.style,
     /**
      * 下环线的宽度，不设置则默认跟随文字大小
      */
     underlineWidth: PropTypes.number,
+    /**
+     * 默认的激活值，想成为非受控组件时使用
+     */
     defaultActiveKey: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    /**
+     * 激活值，如果给定了则成为受控组件，需搭配 onChange 使用
+     */
     activeKey: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    /**
+     * 数据源
+     */
     dataSource: PropTypes.array.isRequired,
+    /**
+     * 是否禁用 Tabs 标签页（注意只针对 Tabs，不针对 TabContent）
+     */
     disabled: PropTypes.bool,
     /**
      * 一屏下最多可存在的tab数量
@@ -107,12 +131,21 @@ export default class Tabs extends Component {
      * 按需完毕之前的占位元素
      */
     renderPlaceholder: PropTypes.func,
+    /**
+     * Tab变更回调
+     */
     onChange: PropTypes.func,
+    /**
+     * Tab 的子元素，一般为 TabContent
+     */
     children: PropTypes.array,
     /**
      * 右边额外的留白距离
      */
     extraSpace: PropTypes.number,
+    /**
+     * 动画配置
+     */
     animationConfig: PropTypes.shape({
       duration: PropTypes.number,
       easing: PropTypes.func,
@@ -522,11 +555,7 @@ export default class Tabs extends Component {
           disabled && { opacity: 0.3 },
           {
             width: this.state.underlineWidth,
-            transform: [
-              {
-                translateX: Animated.add(this.state.scrollX, this.state.underlineLeft),
-              },
-            ],
+            transform: [{ translateX: Animated.add(this.state.scrollX, this.state.underlineLeft) }],
           },
         ]}
         color={backgroundColor || activeColor}

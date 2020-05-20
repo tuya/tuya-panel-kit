@@ -29,7 +29,45 @@ const styles = StyleSheet.create({
 });
 
 class ControllerBar extends React.PureComponent {
-  static Group = Group;
+  static propTypes = {
+    /**
+     * 按钮背景类型
+     */
+    type: PropTypes.oneOf(['primary', 'normal']),
+    /**
+     * 按钮大小
+     */
+    size: PropTypes.oneOfType([PropTypes.oneOf(['large', 'normal', 'small']), PropTypes.number]),
+    /**
+     * 按钮是否拉伸，跟随父容器
+     */
+    stretch: PropTypes.bool,
+    /**
+     * 背景是否为半透明
+     */
+    backgroundType: PropTypes.oneOf(['alpha', 'pure']),
+    /**
+     * 背景颜色
+     */
+    backgroundColor: ColorPropType,
+    /**
+     * 底部是否有边框
+     */
+    hasBottomBorder: PropTypes.bool,
+    /**
+     * 容器样式
+     */
+    style: ViewPropTypes.style,
+    /**
+     * controllerBar 内的按钮
+     */
+    button: PropTypes.array.isRequired,
+    /**
+     * 按钮样式
+     */
+    wrapperStyle: ViewPropTypes.style,
+  };
+
   static defaultProps = {
     type: 'normal',
     size: 'normal',
@@ -41,17 +79,7 @@ class ControllerBar extends React.PureComponent {
     wrapperStyle: {},
   };
 
-  static propTypes = {
-    type: PropTypes.oneOf(['primary', 'normal']),
-    size: PropTypes.oneOfType([PropTypes.oneOf(['large', 'normal', 'small']), PropTypes.number]),
-    stretch: PropTypes.bool,
-    backgroundType: PropTypes.oneOf(['alpha', 'pure']),
-    backgroundColor: ColorPropType,
-    hasBottomBorder: PropTypes.bool,
-    style: ViewPropTypes.style,
-    button: PropTypes.array.isRequired,
-    wrapperStyle: ViewPropTypes.style,
-  };
+  static Group = Group;
 
   renderControllerBar = () => {
     const { stretch, button, type, size } = this.props;

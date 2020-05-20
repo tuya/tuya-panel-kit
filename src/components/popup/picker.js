@@ -11,23 +11,62 @@ const { getTheme, ThemeConsumer } = ThemeUtils;
 
 class PickerPopup extends React.PureComponent {
   static propTypes = {
+    /**
+     * 按钮值
+     */
     switchValue: PropTypes.bool.isRequired,
+    /**
+     * 单位标志
+     */
     label: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+    /**
+     * picker弹框边距
+     */
     spacing: PropTypes.number,
+    /**
+     * 单位标志相对位置
+     */
     labelOffset: PropTypes.number,
+    /**
+     * picker弹框样式
+     */
     pickerWrapperStyle: ViewPropTypes.style,
+    /**
+     * picker内容样式
+     */
     pickerStyle: ViewPropTypes.style,
+    /**
+     * 具体值
+     */
     value: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number,
       PropTypes.bool,
       PropTypes.array,
     ]),
+    /**
+     * 数据源
+     */
     dataSource: PropTypes.array,
-    singlePicker: PropTypes.bool, // 是否只需要一个picker
+    /**
+     * 是否只需要一个picker
+     */
+    singlePicker: PropTypes.bool,
+    /**
+     * picker字体颜色
+     */
     pickerFontColor: ColorPropType,
+    /**
+     * picker单位颜色
+     */
     pickerUnitColor: ColorPropType,
+    /**
+     * 值更改回调
+     */
     onValueChange: PropTypes.func,
+    /**
+     * 数据更改回调
+     */
     _onDataChange: PropTypes.func,
   };
   static defaultProps = {

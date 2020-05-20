@@ -11,13 +11,37 @@ const DEFAULT_ANIMATION_CONFIG = {
 
 class MotionToast extends PureComponent {
   static propTypes = {
+    /**
+     * 内容样式
+     */
     style: ViewPropTypes.style,
+    /**
+     * 初始缩放倍数
+     */
     initScale: PropTypes.number,
+    /**
+     * 是否显示内容
+     */
     show: PropTypes.bool.isRequired,
+    /**
+     * 动画结束回调
+     */
     onFinish: PropTypes.func.isRequired,
+    /**
+     * 自定义内容
+     */
     children: PropTypes.element.isRequired,
+    /**
+     * 动画显示时长
+     */
     showDuration: PropTypes.number,
+    /**
+     * 动画隐藏时长
+     */
     hideDuration: PropTypes.number,
+    /**
+     * 动画配置参数
+     */
     animationConfig: PropTypes.shape({
       duration: PropTypes.number,
       delay: PropTypes.number,

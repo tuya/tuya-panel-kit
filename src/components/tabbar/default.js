@@ -10,14 +10,12 @@ import {
   StyleSheet,
   TouchableOpacity,
   Text,
-  Dimensions,
 } from 'react-native';
 import { RatioUtils } from '../../utils';
 import TYText from '../TYText';
 import wrapper from './tabHoc';
 
-const { convertX } = RatioUtils;
-const WIDTH = Dimensions.get('window').width;
+const { convertX, winWidth } = RatioUtils;
 
 const styles = StyleSheet.create({
   underlineStyle: {
@@ -52,20 +50,54 @@ const styles = StyleSheet.create({
 
 class TabBar extends React.PureComponent {
   static propTypes = {
+    /**
+     * 下划线的样式
+     */
     underlineStyle: ViewPropTypes.style,
+    /**
+     * 每个tab的样式
+     */
     tabStyle: ViewPropTypes.style,
+    /**
+     * 高亮tab的样式
+     */
     tabActiveStyle: ViewPropTypes.style,
+    /**
+     * 每个tab内文字的样式
+     */
     tabTextStyle: Text.propTypes.style,
+    /**
+     * 高亮tab的文字样式
+     */
     tabActiveTextStyle: Text.propTypes.style,
+    /**
+     * tab内层容器样式
+     */
     wrapperStyle: ViewPropTypes.style,
+    /**
+     * tab外层容器样式
+     */
     style: ViewPropTypes.style,
-
+    /**
+     * 高亮tab的key
+     */
     // eslint-disable-next-line react/require-default-props
     activeKey: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    /**
+     * 默认高亮tab的key
+     */
     defaultActiveKey: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    /**
+     * tab数据
+     */
     tabs: PropTypes.array,
+    /**
+     * 下划线是否居中
+     */
     isUnderlineCenter: PropTypes.bool,
-
+    /**
+     * tab切换的回调
+     */
     onChange: PropTypes.func,
   };
   static defaultProps = {
@@ -181,7 +213,7 @@ class TabBar extends React.PureComponent {
   updateScrollView = isSysUpdate => {
     const { left, width } = this.tab[this.activeIndex];
     const tempWidth = this.tabBarContainerWidth - width;
-    const newScrollX = Math.max(Math.min(left - tempWidth / 2, this.tabBar.width - WIDTH), 0);
+    const newScrollX = Math.max(Math.min(left - tempWidth / 2, this.tabBar.width - winWidth), 0);
     this.scrollView.scrollTo({ x: newScrollX, y: 0, animated: !isSysUpdate });
   };
   updateUnderline = isSysUpdate => {

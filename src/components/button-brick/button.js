@@ -33,24 +33,81 @@ const styles = StyleSheet.create({
 
 export default class BrickButton extends React.PureComponent {
   static propTypes = {
+    /**
+     * 容器样式
+     */
     style: ViewPropTypes.style,
+    /**
+     * 点击事件
+     */
     onPress: PropTypes.func,
+    /**
+     * 事件监听
+     */
     onChange: PropTypes.func,
+    /**
+     * loading状态
+     */
     loading: PropTypes.bool,
+    /**
+     * 按钮文字
+     */
     text: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+    /**
+     * 按钮文字样式
+     */
     textStyle: Text.propTypes.style,
+    /**
+     * 按钮类型
+     */
     type: PropTypes.oneOf(['primary', 'primaryGradient', 'primaryBorder', 'normal', 'small']),
+    /**
+     * 按钮内部包裹内容样式
+     */
     wrapperStyle: ViewPropTypes.style,
+    /**
+     * 按下背景色
+     */
     backgroundColorTouched: ColorPropType,
+    /**
+     * 是否可以点击
+     */
     disabled: PropTypes.bool,
+    /**
+     * 按钮点按时的颜色
+     */
     underlayColor: ColorPropType,
+    /**
+     * 按钮按下透明度
+     */
     activeOpacity: PropTypes.number,
+    /**
+     * 是否显示按钮点击时的颜色
+     */
     showUnderlay: PropTypes.bool,
+    /**
+     * loading组件主颜色
+     */
     loadingColor: ColorPropType,
+    /**
+     * loading背景颜色
+     */
     loadingBackground: ColorPropType,
+    /**
+     * loading大小
+     */
     loadingSize: PropTypes.oneOfType([PropTypes.oneOf(['small', 'large']), PropTypes.number]),
+    /**
+     * loading样式
+     */
     loadingStyle: ViewPropTypes.style,
+    /**
+     * loading外边框粗细
+     */
     loadingStrokeWidth: PropTypes.number,
+    /**
+     * 渐变背景
+     */
     background: PropTypes.object,
   };
 

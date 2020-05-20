@@ -64,16 +64,49 @@ class Swipeout extends React.Component {
   };
 
   static propTypes = {
+    /**
+     * 测试标志
+     */
     accessibilityLabel: PropTypes.string,
+    /**
+     * 是否禁用swipeout所提供的侧滑操作
+     */
     disabled: PropTypes.bool,
+    /**
+     * 往左滑出现的按钮
+     */
     left: PropTypes.array,
+    /**
+     * 往右滑出现的按钮
+     */
     right: PropTypes.array,
+    /**
+     * 侧滑之后出现按钮的宽度
+     */
     buttonWidth: PropTypes.number,
+    /**
+     * 任意一侧按钮全显示的回调
+     */
     onOpen: PropTypes.func,
+    /**
+     * 任意一侧按钮全隐藏的回调
+     */
     onClose: PropTypes.func,
+    /**
+     * 侧滑的距离
+     */
     sensitivity: PropTypes.number,
+    /**
+     * 滑动回调函数
+     */
     scroll: PropTypes.func,
+    /**
+     * 容器样式
+     */
     style: ViewPropTypes.style,
+    /**
+     * 当close从false变为true时，会隐藏所有侧滑操作按钮。反过来true变为false无任何变化。
+     */
     close: PropTypes.bool,
   };
 

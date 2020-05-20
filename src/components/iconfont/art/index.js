@@ -123,28 +123,73 @@ IconSVG.defaultProps = {
   strokeJoin: 'round',
   strokeCap: 'round',
   strokeDash: [0, 0],
-  opacity: 1,
   spaceOffset: 0,
 };
 
 IconSVG.propTypes = {
+  /**
+   * 图标宽度，默认为 size 的值
+   */
   width: PropTypes.number,
+  /**
+   * 图标高度，默认为 size 的值
+   */
   height: PropTypes.number,
+  /**
+   * 图标起始横坐标
+   */
   x: PropTypes.number,
+  /**
+   * 图标起始纵坐标
+   */
   y: PropTypes.number,
+  /**
+   * 图标宽度倍数
+   */
   scaleX: PropTypes.number,
+  /**
+   * 图标高度倍数
+   */
   scaleY: PropTypes.number,
+  /**
+   * 图标大小倍数
+   */
   scale: PropTypes.number,
+  /**
+   * 图标 path，svg 的 path
+   */
   d: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+  /**
+   * 填充色，若传递该值 color 会被忽略
+   */
   fill: PropTypes.string,
+  /**
+   * 描边色
+   */
   stroke: PropTypes.string,
+  /**
+   * 描边宽度
+   */
   strokeWidth: PropTypes.number,
+  /**
+   * 容器样式
+   */
   style: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
+  /**
+   * 连接处形状
+   */
   strokeJoin: PropTypes.oneOf(['round', 'miter', 'bevel']),
+  /**
+   * 首尾端形状：
+   */
   strokeCap: PropTypes.oneOf(['round', 'butt', 'square']),
+  /**
+   * 实虚线，数组内第一个元素为一段虚线的长度，第二个为间距
+   */
   strokeDash: PropTypes.arrayOf(PropTypes.number),
-  opacity: PropTypes.number,
-  // 多个实体渲染时, 空白间隔偏移量, 可以让渲染更紧凑些
+  /**
+   * 多个实体渲染时, 空白间隔偏移量, 可以让渲染更紧凑些
+   */
   spaceOffset: PropTypes.number,
 };
 

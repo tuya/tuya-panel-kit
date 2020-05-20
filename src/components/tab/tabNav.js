@@ -33,20 +33,65 @@ class TabBar extends React.Component {
   };
 
   static propTypes = {
+    /**
+     * 测试标志
+     */
     tabNavAccessibilityLabel: PropTypes.string.isRequired,
+    /**
+     * tab点击回调
+     */
     onTabClick: PropTypes.func.isRequired,
+    /**
+     * tab滚动数据源
+     */
     scrollValue: PropTypes.object.isRequired,
+    /**
+     * 设置tabBar的背景颜色
+     */
     tabBarBackgroundColor: PropTypes.string,
+    /**
+     * tab页
+     */
     page: PropTypes.number,
+    /**
+     * tab内容源
+     */
     panels: PropTypes.oneOfType([PropTypes.element, PropTypes.array]).isRequired,
+    /**
+     * 所激活视图的key
+     */
     activeKey: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    /**
+     * tab默认颜色
+     */
     tabDefaultColor: PropTypes.string,
+    /**
+     * 设置tab内文字样式
+     */
     tabTextStyle: Text.propTypes.style,
+    /**
+     * 设置激活的tab内文字样式
+     */
     tabActiveTextStyle: Text.propTypes.style,
+    /**
+     * 设置每个tab的样式
+     */
     tabStyle: ViewPropTypes.style,
+    /**
+     * 设置tabBar的下划线样式
+     */
     tabBarUnderlineStyle: ViewPropTypes.style,
+    /**
+     * 设置tabBar的样式
+     */
     tabBarStyle: ViewPropTypes.style,
+    /**
+     * 设置包裹tabBar的容器样式
+     */
     tabsContainerStyle: ViewPropTypes.style,
+    /**
+     * tabBar的位置
+     */
     tabBarPosition: PropTypes.oneOf(['top', 'bottom']),
   };
 

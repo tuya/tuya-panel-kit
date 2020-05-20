@@ -8,7 +8,13 @@ import svgs from './defaultSvg';
 
 export default class IconFont extends Component {
   static propTypes = {
+    /**
+     * 容器样式
+     */
     style: ViewPropTypes.style,
+    /**
+     * svg 视口
+     */
     viewBox: PropTypes.string,
     /**
      * 图标id，会从组件库默认图标里取，优先级小于 d
@@ -30,14 +36,41 @@ export default class IconFont extends Component {
      * 垂直翻转
      */
     vFlip: PropTypes.bool,
+    /**
+     * 图标 path，svg 的 path
+     */
     d: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+    /**
+     * 图标宽度，默认为 size 的值
+     */
     width: PropTypes.number,
+    /**
+     * 图标高度，默认为 size 的值
+     */
     height: PropTypes.number,
+    /**
+     * 填充色，若传递该值 color 会被忽略
+     */
     fill: ColorPropType,
+    /**
+     * 描边色
+     */
     stroke: ColorPropType,
+    /**
+     * 描边宽度
+     */
     strokeWidth: PropTypes.number,
+    /**
+     * 连接处形状
+     */
     strokeJoin: PropTypes.oneOf(['round', 'miter', 'bevel']),
+    /**
+     * 首尾端形状：
+     */
     strokeCap: PropTypes.oneOf(['round', 'butt', 'square']),
+    /**
+     * 实虚线，数组内第一个元素为一段虚线的长度，第二个为间距
+     */
     strokeDash: PropTypes.arrayOf(PropTypes.number),
   };
 
@@ -103,7 +136,7 @@ export default class IconFont extends Component {
             width: width * count,
             height,
           },
-          transform.length > 0 && transform,
+          transform.length > 0 && { transform },
           style,
         ]}
       >

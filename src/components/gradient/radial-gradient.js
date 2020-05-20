@@ -8,14 +8,41 @@ const Window = Dimensions.get('window');
 // eslint-disable-next-line react/prefer-stateless-function
 export default class RadialGradient extends Component {
   static propTypes = {
+    /**
+     * 容器样式
+     */
     style: ViewPropTypes.style,
+    /**
+     * 渐变 id
+     */
     gradientId: PropTypes.string,
+    /**
+     * 最外侧圆的x轴坐标点
+     */
     cx: PropTypes.string,
+    /**
+     * 最外侧圆的y轴坐标点
+     */
     cy: PropTypes.string,
+    /**
+     * 最内侧圆的x轴坐标点(渐变中心点)
+     */
     fx: PropTypes.string,
+    /**
+     * 最内侧圆的y轴坐标点(渐变中心点)
+     */
     fy: PropTypes.string,
+    /**
+     * 最内侧圆水平方向的半径(渐变长度)
+     */
     rx: PropTypes.string,
+    /**
+     * 最内侧圆垂直方向的半径(渐变高度)
+     */
     ry: PropTypes.string,
+    /**
+     * 渐变梯度停点
+     */
     stops: PropTypes.arrayOf(
       PropTypes.shape({
         offset: PropTypes.string.isRequired,
@@ -60,8 +87,8 @@ export default class RadialGradient extends Component {
   }
 
   render() {
-    const { style, cx, cy, rx, ry, fx, fy, stops } = this.props;
     const { gradientId } = this;
+    const { style, cx, cy, rx, ry, fx, fy, stops } = this.props;
     const { height, width } = StyleSheet.flatten([styles.container, style]);
     return (
       <View style={[styles.container, style]}>

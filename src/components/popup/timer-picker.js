@@ -8,7 +8,13 @@ import { StyledTimerPicker } from './styled';
 class TimerPickerPopup extends React.Component {
   static propTypes = {
     ...TimerPicker.propTypes,
+    /**
+     * 按钮值
+     */
     switchValue: PropTypes.bool.isRequired,
+    /**
+     * 数据更改回调
+     */
     _onDataChange: PropTypes.func,
   };
 

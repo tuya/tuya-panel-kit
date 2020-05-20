@@ -13,13 +13,37 @@ const EASING_PREFIX = ['EaseInOut', 'EaseIn', 'EaseOut'];
 
 class Collapsible extends React.PureComponent {
   static propTypes = {
+    /**
+     * 子元素对齐方式
+     */
     align: PropTypes.oneOf(['top', 'center', 'bottom']),
+    /**
+     * 是否折叠
+     */
     collapsed: PropTypes.bool,
+    /**
+     * 需要折叠的高度
+     */
     collapsedHeight: PropTypes.number,
+    /**
+     * 折叠动画时长
+     */
     duration: PropTypes.number,
+    /**
+     * 动画缓动函数
+     */
     easing: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+    /**
+     * 容器样式
+     */
     style: ViewPropTypes.style,
+    /**
+     * 变更回调函数
+     */
     onChange: PropTypes.func,
+    /**
+     * 嵌套子元素
+     */
     children: PropTypes.node,
   };
   static defaultProps = {

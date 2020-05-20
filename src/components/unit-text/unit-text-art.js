@@ -9,16 +9,50 @@ const LetterPadding = (1 - LetterWidth) / 2;
 
 export default class UnitTextART extends React.PureComponent {
   static propTypes = {
+    /**
+     * 内容样式
+     */
     style: ViewPropTypes.style,
+    /**
+     * 字体尺寸大小，valueSize 或 unitSize 的缩写版
+     * 其中 valueSize 将会和与 size  相同，unitSize  将会为 size  值的一半。
+     */
     size: PropTypes.number,
+    /**
+     * 单位的大小
+     */
     valueSize: PropTypes.number,
+    /**
+     * 可以用来定制每个值的颜色
+     */
     valueColors: PropTypes.array,
+    /**
+     * 值的颜色
+     */
     valueColor: PropTypes.string,
+    /**
+     * 单位，字符串为内置的 svg name
+     */
     unit: PropTypes.string,
+    /**
+     * 单位的大小
+     */
     unitSize: PropTypes.number,
+    /**
+     * 单位的颜色
+     */
     unitColor: PropTypes.string,
+    /**
+     * 单位的左边距
+     */
     unitPaddingLeft: PropTypes.number,
+    /**
+     * 单位的上边距
+     */
     unitPaddingTop: PropTypes.number,
+    /**
+     * 值
+     */
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   };
 

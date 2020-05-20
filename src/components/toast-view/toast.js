@@ -1,29 +1,51 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  Animated,
-  Text,
-  View,
-  Image,
-  StyleSheet,
-  Easing,
-  Dimensions,
-  ViewPropTypes,
-} from 'react-native';
+import { Animated, Text, View, Image, StyleSheet, Easing, ViewPropTypes } from 'react-native';
+import { RatioUtils } from '../../utils';
 
-const { width } = Dimensions.get('window');
+const { winWidth } = RatioUtils;
 
 class ToastView extends React.PureComponent {
   static propTypes = {
+    /**
+     * toast样式
+     */
     style: ViewPropTypes.style,
+    /**
+     * toast内容样式
+     */
     contentStyle: ViewPropTypes.style,
+    /**
+     * toast文字样式
+     */
     textStyle: Text.propTypes.style,
+    /**
+     * toast图标样式
+     */
     imageStyle: Image.propTypes.style,
+    /**
+     * 提示文字
+     */
     text: PropTypes.string,
+    /**
+     * 是否显示
+     */
     show: PropTypes.bool.isRequired,
+    /**
+     * 即将消失的回调
+     */
     onFinish: PropTypes.func.isRequired,
+    /**
+     * 显示位置
+     */
     showPosition: PropTypes.oneOf(['top', 'bottom', 'center']),
+    /**
+     * 图标
+     */
     image: PropTypes.number,
+    /**
+     * 嵌套子元素
+     */
     children: PropTypes.any,
   };
 
@@ -142,7 +164,7 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     alignItems: 'center',
-    width,
+    width: winWidth,
     top: 0,
   },
 
