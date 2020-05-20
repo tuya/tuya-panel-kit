@@ -49,8 +49,13 @@ export default class BleOfflineView extends Component {
     this.showOverlayModal();
   }
 
-  componentDidUpdate() {
-    this.showOverlayModal();
+  componentDidUpdate(prevProps) {
+    if (
+      prevProps.deviceOnline !== this.props.deviceOnline ||
+      prevProps.bluetoothValue !== this.props.bluetoothValue
+    ) {
+      this.showOverlayModal();
+    }
   }
 
   componentWillUnmount() {
