@@ -20,7 +20,7 @@ const ALIGN_ITEMS_MAP = {
 export const TOPBAR_MARGIN = 6;
 export const TOPBAR_HEIGHT = isIos ? (isIphoneX ? 88 : 64) : 56;
 export const TOPBAR_ACTION_WIDTH = 17;
-export const TOPBAR_ACTION_TEXT_WIDTH = 70;
+export const TOPBAR_ACTION_TEXT_WIDTH = 78;
 
 export const StyledTopBarContainer = styled(View)`
   align-self: stretch;
@@ -47,7 +47,7 @@ export const StyledTopBarContent = styled(View)`
 
 export const StyledTopBarTitle = styled(TYText).attrs({
   type: 'title',
-  size: 'normal',
+  size: 17,
 })`
   font-weight: 500;
   color: ${props => props.color || getTheme(props, 'topbar.color', DEFAULT_THEME.color)};
@@ -69,7 +69,7 @@ export const StyledTopBarAction = styled(TouchableOpacity)`
 `;
 
 export const StyledTopBarText = styled(TYText)`
-  font-size: 14px;
+  font-size: 16px;
   color: ${props => props.color || getTheme(props, 'topbar.color', DEFAULT_THEME.color)};
 `;
 
