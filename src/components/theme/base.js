@@ -86,19 +86,11 @@ const topbar = {
 const switchButton = {
   light: {
     width: 51, // 按钮宽度
-    height: Platform.select({
-      web: 28,
-      ios: 28,
-      android: 14,
-    }), // 按钮宽度
+    height: 28, // 按钮宽度
     thumbSize: 24, // 滑块宽高尺寸
     // thumbWidth, // 滑块圆的宽度
     // thumbHeight, // 滑块圆的高度
-    margin: Platform.select({
-      web: 2,
-      ios: 2,
-      android: 0,
-    }), // 滑块四周边距
+    margin: 2, // 滑块四周边距
     tintColor: '#e5e5e5', // 关闭情况下背景色
     onTintColor: '#4CD964', // 开启情况下背景色
     thumbTintColor: '#fff', // 关闭情况下滑块背景色
@@ -106,17 +98,9 @@ const switchButton = {
   },
   dark: {
     width: 51, // 按钮宽度
-    height: Platform.select({
-      web: 28,
-      ios: 28,
-      android: 14,
-    }), // 按钮宽度
+    height: 28, // 按钮宽度
     thumbSize: 24, // 滑块宽高尺寸
-    margin: Platform.select({
-      web: 2,
-      ios: 2,
-      android: 0,
-    }), // 滑块四周边距
+    margin: 2, // 滑块四周边距
     tintColor: 'rgba(255,255,255,0.3)', // 关闭情况下背景色
     onTintColor: '#4CD964', // 开启情况下背景色
     thumbTintColor: '#fff', // 关闭情况下滑块背景色

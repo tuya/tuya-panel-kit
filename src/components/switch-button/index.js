@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ColorPropType, Platform } from 'react-native';
+import { ColorPropType } from 'react-native';
 import SwitchButton from './switch-button';
 import { ThemeUtils } from '../../utils';
 
@@ -18,15 +18,12 @@ const ThemedSwitchButton = props => {
         const propsWithTheme = { theme, ...rest };
         const { onTintColor } = rest;
         const isGradient = onTintColor && typeof onTintColor === 'object';
-        const ios = Platform.OS === 'ios';
         const themedProps = {
           size: {
             width: isGradient
               ? getTheme(propsWithTheme, 'switchButton.width') + 7
               : getTheme(propsWithTheme, 'switchButton.width'),
-            height: ios
-              ? getTheme(propsWithTheme, 'switchButton.height')
-              : getTheme(propsWithTheme, 'switchButton.height') + 4,
+            height: getTheme(propsWithTheme, 'switchButton.height'),
             activeSize: getTheme(propsWithTheme, 'switchButton.thumbSize'),
             margin: getTheme(propsWithTheme, 'switchButton.margin'),
           },
