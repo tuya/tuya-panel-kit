@@ -63,12 +63,10 @@ class ScaleFadeIn extends PureComponent {
     }),
     /**
      * 向左平移的距离，tips气泡模拟transform-origin属性
-     * @version 3.1.3
      */
     width: PropTypes.number,
     /**
      * 向上平移的距离，tips气泡模拟transform-origin属性
-     * @version 3.1.3
      */
     height: PropTypes.number,
   };

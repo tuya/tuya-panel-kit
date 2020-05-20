@@ -99,9 +99,8 @@ const Popup = {
       maskStyle: [{ backgroundColor: 'rgba(0, 0, 0, 0.1)', alignItems: 'center' }, maskStyle],
       modalChildStyle: [modalStyle, { minWidth: maskWidth }],
       alignContainer: alignContainer || 'center',
-      onMaskPress,
     };
-    Modal.render(<Tips {...props} />, modalProps);
+    Modal.render(<Tips {...props} withModal={true} />, modalProps);
   },
 
   dropdown: (props, modalOpts) => {
