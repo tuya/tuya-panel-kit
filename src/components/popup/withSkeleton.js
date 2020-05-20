@@ -239,6 +239,7 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
           {!!subTitle && <StyledSubTitleText>{subTitle}</StyledSubTitleText>}
           {typeof this.state.switchValue === 'boolean' && (
             <StyledSwitch
+              style={{ position: 'absolute', right: 16 }}
               accessibilityLabel={`${accessPrefix}_Switch`}
               useNativeDriver={false} // 与 Modal 共用暂时有bug
               value={this.state.switchValue}
