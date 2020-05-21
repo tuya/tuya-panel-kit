@@ -20,7 +20,7 @@ const { convertX: cx } = RatioUtils;
 
 const { height } = Dimensions.get('screen');
 
-const { compareVersion } = CoreUtils;
+const { compareVersion, get } = CoreUtils;
 const TYNative = TYSdk.native;
 const Res = {
   close: require('../../res/x.png'),
@@ -82,8 +82,9 @@ export default class DetectNetModal extends PureComponent {
   render() {
     const { maskColor, style, animatedStyle } = this.props;
     const { value } = this.state;
-    const { appRnVersion } = TYNative.mobileInfo;
-    const isRequire = compareVersion(appRnVersion, requireRnVersion);
+    const appRnVersion = get(TYNative, 'mobileInfo.appRnVersion');
+    const isGreater = appRnVersion && compareVersion(appRnVersion, requireRnVersion);
+    const isShow = isGreater === 0 || isGreater === 1;
     return (
       <View style={[styles.modal, style]}>
         <Animated.View
@@ -108,7 +109,7 @@ export default class DetectNetModal extends PureComponent {
                   <TYText text={Strings.getLang('internetAccess')} style={styles.text} />
                   <TYText text={Strings.getLang('obstructions')} style={styles.text} />
 
-                  {isRequire !== -1 && (
+                  {isShow && (
                     <TouchableOpacity activeOpacity={0.8} onPress={this.handleToDetect}>
                       <TYText
                         text={Strings.getLang('retest')}

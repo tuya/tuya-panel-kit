@@ -55,3 +55,8 @@ export const popup = {
   subTitleFontColor: props => getTheme(props, 'popup.subTitleFontColor', d2.subTitleFontColor),
   backIconColor: props => getTheme(props, 'popup.backIconColor', d2.backIconColor),
 };
+
+export default {
+  dialog,
+  popup,
+};

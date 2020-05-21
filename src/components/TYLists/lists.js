@@ -49,9 +49,21 @@ export default class TYSectionLists extends Component {
       }]
     */
     sections: PropTypes.array.isRequired,
+    /**
+     * 头部样式
+     */
     headerStyle: Text.propTypes.style,
+    /**
+     * 分割线样式
+     */
     separatorStyle: ViewPropTypes.style,
+    /**
+     * 列表项实例
+     */
     sectionListRef: PropTypes.func,
+    /**
+     * 是否使用 ART 实现版本
+     */
     useART: PropTypes.bool,
   };
 

@@ -20,21 +20,69 @@ class CustomDialog extends Component {
      * 自定义 Dialog Footer
      */
     footer: PropTypes.oneOfType([PropTypes.element, PropTypes.func]),
+    /**
+     * 容器样式
+     */
     style: ViewPropTypes.style,
+    /**
+     * 头部样式
+     */
     headerStyle: ViewPropTypes.style,
+    /**
+     * 标题超过多少行显示省略号
+     */
     titleNumberOfLines: PropTypes.number,
+    /**
+     * 标题
+     */
     title: PropTypes.string.isRequired,
+    /**
+     * 标题样式
+     */
     titleStyle: TYText.propTypes.style,
+    /**
+     * 副标题
+     */
     subTitle: PropTypes.string,
+    /**
+     * 副标题样式
+     */
     subTitleStyle: TYText.propTypes.style,
+    /**
+     * footer容器样式
+     */
     footerWrapperStyle: ViewPropTypes.style,
+    /**
+     * 取消文案
+     */
     cancelText: PropTypes.string.isRequired,
+    /**
+     * 取消文案样式
+     */
     cancelTextStyle: TYText.propTypes.style,
+    /**
+     * 取消按钮测试标示
+     */
     cancelAccessibilityLabel: PropTypes.string,
+    /**
+     * 确认文案
+     */
     confirmText: PropTypes.string.isRequired,
+    /**
+     * 确认文案样式
+     */
     confirmTextStyle: TYText.propTypes.style,
+    /**
+     * 确认按钮测试标示
+     */
     confirmAccessibilityLabel: PropTypes.string,
+    /**
+     * 取消回调函数
+     */
     onCancel: PropTypes.func,
+    /**
+     * 确认回调函数
+     */
     onConfirm: PropTypes.func,
   };
 

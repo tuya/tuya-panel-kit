@@ -12,20 +12,49 @@ const { winWidth } = RatioUtils;
 
 export default class TabContent extends Component {
   static propTypes = {
+    /**
+     * TabContent样式
+     */
     style: ViewPropTypes.style,
+    /**
+     * 当前激活所处的索引
+     */
     activeIndex: PropTypes.number.isRequired,
+    /**
+     * 是否禁用 TabContent
+     */
+    disabled: PropTypes.bool,
+    /**
+     * TabContent 是否需要预加载
+     */
+    preload: PropTypes.bool,
+    /**
+     * TabContent 预加载延时时间
+     */
+    preloadTimeout: PropTypes.number,
     /**
      * 加速度阈值，滑动速率超过该阈值直接判断为下一页
      */
     velocityThreshold: PropTypes.number,
-
-    disabled: PropTypes.bool,
-    preload: PropTypes.bool,
-    preloadTimeout: PropTypes.number,
+    /**
+     * TabContent 滑动回调
+     */
     onMove: PropTypes.func,
+    /**
+     * TabContent 滑动结束时回调
+     */
     onRelease: PropTypes.func,
+    /**
+     * 自定义渲染预加载中的占位容器
+     */
     renderPlaceholder: PropTypes.func,
+    /**
+     * 嵌套子元素
+     */
     children: PropTypes.array.isRequired,
+    /**
+     * 动画配置
+     */
     animationConfig: PropTypes.shape({
       duration: PropTypes.number,
       easing: PropTypes.func,
@@ -178,7 +207,6 @@ export default class TabContent extends Component {
       extraDeltaX = Math.max(deltaX + (dx > 0 ? winWidth : -winWidth) * 0.5, maxDeltaX);
     }
     const index = getNearestIndexByDeltaX(extraDeltaX, winWidth);
-
     this.scrollToIndex(index);
     if (typeof onRelease === 'function') {
       const ratio = Math.abs(deltaX) / winWidth;

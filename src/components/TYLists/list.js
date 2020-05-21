@@ -25,8 +25,8 @@ export default class TYFlatList extends Component {
 
   static propTypes = {
     ...FlatList.propTypes,
-    /* data 格式
-      [{
+    /* data 数据
+     [{
         styles: [Object],
         title: [string],
         value: [bool, string],
@@ -35,8 +35,8 @@ export default class TYFlatList extends Component {
         Icon: [Func | Element],
         Action: [Func | Element],
         ...ListItemProps,
-      }]
-    */
+     }]
+     */
     data: PropTypes.arrayOf(
       PropTypes.shape({
         renderItem: PropTypes.func,
@@ -46,8 +46,17 @@ export default class TYFlatList extends Component {
         ...ListItem.propTypes,
       })
     ).isRequired,
+    /**
+     * 分割线样式
+     */
     separatorStyle: ViewPropTypes.style,
+    /**
+     * 列表项实例
+     */
     flatListRef: PropTypes.func,
+    /**
+     * 是否使用 ART 实现版本
+     */
     useART: PropTypes.bool,
   };
 

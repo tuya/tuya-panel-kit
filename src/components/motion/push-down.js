@@ -93,7 +93,7 @@ class PushDown extends PureComponent {
 
   componentWillReceiveProps(nextProps) {
     const { show } = nextProps;
-    if (!this.state.isAnimating && typeof show !== 'undefined' && show !== this.state.show) {
+    if (typeof show !== 'undefined' && show !== this.state.show) {
       this.startAnimation(show);
     }
   }

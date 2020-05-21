@@ -12,22 +12,63 @@ const DEFAULT_ANIMATION_CONFIG = {
 class ScaleFadeIn extends PureComponent {
   static displayName = 'Motion.ScaleFadeIn';
   static propTypes = {
+    /**
+     * 内容样式
+     */
     style: ViewPropTypes.style,
+    /**
+     * 是否显示内容
+     */
     show: PropTypes.bool,
+    /**
+     * 初始缩放倍数
+     */
     initScale: PropTypes.number,
+    /**
+     * 动画结束缩放倍数
+     */
     finalScale: PropTypes.number,
+    /**
+     * 动画显示时长
+     */
     showDuration: PropTypes.number,
+    /**
+     * 动画隐藏时长
+     */
     hideDuration: PropTypes.number,
+    /**
+     * 自定义内容
+     */
     children: PropTypes.element.isRequired,
+    /**
+     * 是否竖直居中
+     */
     isAlign: PropTypes.bool,
+    /**
+     * 动画显示回调
+     */
     onShow: PropTypes.func,
+    /**
+     * 动画隐藏回调
+     */
     onHide: PropTypes.func,
+    /**
+     * 动画配置参数
+     */
     animationConfig: PropTypes.shape({
       duration: PropTypes.number,
       delay: PropTypes.number,
       isInteraction: PropTypes.bool,
       useNativeDriver: PropTypes.bool,
     }),
+    /**
+     * 向左平移的距离，tips气泡模拟transform-origin属性
+     */
+    width: PropTypes.number,
+    /**
+     * 向上平移的距离，tips气泡模拟transform-origin属性
+     */
+    height: PropTypes.number,
   };
 
   static defaultProps = {
@@ -41,6 +82,8 @@ class ScaleFadeIn extends PureComponent {
     onShow: () => {},
     onHide: () => {},
     animationConfig: DEFAULT_ANIMATION_CONFIG,
+    width: null,
+    height: null,
   };
 
   constructor(props) {
@@ -50,6 +93,8 @@ class ScaleFadeIn extends PureComponent {
       scale: new Animated.Value(props.initScale),
       opacity: new Animated.Value(0),
       isAnimating: false,
+      translateX: new Animated.Value(0),
+      translateY: new Animated.Value(0),
     };
   }
 
@@ -60,8 +105,12 @@ class ScaleFadeIn extends PureComponent {
   }
 
   componentWillReceiveProps(nextProps) {
-    const { show } = nextProps;
-    if (!this.state.isAnimating && typeof show !== 'undefined' && show !== this.state.show) {
+    const { show, width, height } = nextProps;
+    if (width !== this.props.width || height !== this.props.height) {
+      this.width = width;
+      this.height = height;
+    }
+    if (typeof show !== 'undefined' && show !== this.state.show) {
       this.startAnimation(show);
     }
   }
@@ -84,6 +133,18 @@ class ScaleFadeIn extends PureComponent {
     const animationConfig = { ...DEFAULT_ANIMATION_CONFIG, ...this.props.animationConfig };
     Animated.parallel([
       Animated.timing(this.state.scale, {
+        toValue: 1,
+        ...animationConfig,
+        duration: showDuration,
+        easing: Easing.bezier(0, 0, 0.25, 1),
+      }),
+      Animated.timing(this.state.translateX, {
+        toValue: 1,
+        ...animationConfig,
+        duration: showDuration,
+        easing: Easing.bezier(0, 0, 0.25, 1),
+      }),
+      Animated.timing(this.state.translateY, {
         toValue: 1,
         ...animationConfig,
         duration: showDuration,
@@ -114,6 +175,18 @@ class ScaleFadeIn extends PureComponent {
         duration: hideDuration,
         easing: Easing.bezier(0.42, 0, 1, 1),
       }),
+      Animated.timing(this.state.translateX, {
+        toValue: 1,
+        ...animationConfig,
+        duration: hideDuration,
+        easing: Easing.bezier(0.42, 0, 1, 1),
+      }),
+      Animated.timing(this.state.translateY, {
+        toValue: 1,
+        ...animationConfig,
+        duration: hideDuration,
+        easing: Easing.bezier(0.42, 0, 1, 1),
+      }),
       Animated.timing(this.state.opacity, {
         toValue: 0,
         ...animationConfig,
@@ -134,6 +207,7 @@ class ScaleFadeIn extends PureComponent {
     if (!this.state.show || !React.isValidElement(children)) {
       return null;
     }
+    const isFormCorner = this.width && this.height;
     return (
       <Animated.View
         renderToHardwareTextureAndroid={this.state.isAnimating}
@@ -145,6 +219,25 @@ class ScaleFadeIn extends PureComponent {
             transform: [
               {
                 scale: this.state.scale,
+              },
+            ],
+          },
+          isFormCorner && {
+            transform: [
+              {
+                scale: this.state.scale,
+              },
+              {
+                translateX: this.state.translateX.interpolate({
+                  inputRange: [0, 1],
+                  outputRange: [0, this.width],
+                }),
+              },
+              {
+                translateY: this.state.translateY.interpolate({
+                  inputRange: [0, 1],
+                  outputRange: [0, this.height],
+                }),
               },
             ],
           },

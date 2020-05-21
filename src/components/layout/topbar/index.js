@@ -25,6 +25,9 @@ const ThemedTopBar = props => {
 };
 
 ThemedTopBar.propTypes = {
+  /**
+   * 头部栏主题
+   */
   theme: PropTypes.shape({
     /**
      * 头部栏背景颜色

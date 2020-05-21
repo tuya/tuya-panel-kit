@@ -94,14 +94,19 @@ export default class OfflineView extends Component {
       部分老的面板未用NavigatorLayout，继续走老的离线提示
       分享的设备不支持删除操作
     */
-    const { appOnline, capability } = this.props;
+    const { appOnline, deviceOnline, capability } = this.props;
+    const isBle = !!NumberUtils.getBitValue(capability, 10);
+    const isBleMesh = !!NumberUtils.getBitValue(capability, 11);
+    const isSigMesh = !!NumberUtils.getBitValue(capability, 15);
+    const isBleDevice = isBle || isBleMesh || isSigMesh;
+
+    // 如果是蓝牙设备，设备在线，但网络离线时不需要显示遮罩
+    if (deviceOnline && isBleDevice) {
+      return null;
+    }
 
     if (appOnline && OFFLINE_API_SUPPORT && TYSdk.Navigator && TYSdk.Navigator.push) {
       const isWifiDevice = capability === 1;
-      const isBle = !!NumberUtils.getBitValue(capability, 10);
-      const isBleMesh = !!NumberUtils.getBitValue(capability, 11);
-      const isSigMesh = !!NumberUtils.getBitValue(capability, 15);
-      const isBleDevice = isBle || isBleMesh || isSigMesh;
       if (isWifiDevice || !appOnline) {
         return this.renderOldView();
       } else if (isBleDevice) {

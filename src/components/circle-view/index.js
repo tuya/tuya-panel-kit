@@ -36,11 +36,29 @@ const CircleView = props => {
 };
 
 CircleView.propTypes = {
+  /**
+   * 圆形视图的样式
+   */
   style: ViewPropTypes.style,
+  /**
+   * 嵌套子元素
+   */
   children: PropTypes.node,
+  /**
+   * 圆形视图的背景色
+   */
   color: ColorPropType,
+  /**
+   * 圆形视图边框的背景色
+   */
   borderColor: ColorPropType,
+  /**
+   * 圆形视图边框的尺寸
+   */
   borderWidth: PropTypes.number,
+  /**
+   * 圆形视图的半径
+   */
   radius: PropTypes.number.isRequired,
 };
 

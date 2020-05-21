@@ -1,7 +1,7 @@
 const JsonUtil = {
   parseJSON(str) {
     let rst;
-    if (str && ({}).toString.call(str) === '[object String]') {
+    if (str && {}.toString.call(str) === '[object String]') {
       // 当JSON字符串解析
       try {
         rst = JSON.parse(str);
@@ -16,7 +16,7 @@ const JsonUtil = {
         }
       }
     } else {
-      rst = str || {};
+      rst = typeof str === 'undefined' ? {} : str;
     }
 
     return rst;

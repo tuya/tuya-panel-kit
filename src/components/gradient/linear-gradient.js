@@ -10,13 +10,37 @@ const Window = Dimensions.get('window');
 
 export default class LinearGradient extends Component {
   static propTypes = {
+    /**
+     * 该子节点会被添加渐变效果，一般为 Rect
+     */
     children: PropTypes.any,
+    /**
+     * 渐变 id
+     */
     gradientId: PropTypes.string,
+    /**
+     * 渐变梯度停点
+     */
     stops: PropTypes.object,
+    /**
+     * 容器样式
+     */
     style: ViewPropTypes.style,
+    /**
+     * 起始点的x轴坐标
+     */
     x1: PropTypes.string,
+    /**
+     * 终点的x轴坐标
+     */
     x2: PropTypes.string,
+    /**
+     * 起始点的y轴坐标
+     */
     y1: PropTypes.string,
+    /**
+     * 终点的y轴坐标
+     */
     y2: PropTypes.string,
   };
 
@@ -88,8 +112,8 @@ export default class LinearGradient extends Component {
   }
 
   render() {
-    const { style } = this.props;
     const { gradientId } = this;
+    const { style } = this.props;
     const { stops, x1, x2, y1, y2 } = this.state;
     const { height, width } = StyleSheet.flatten([styles.container, style]);
     const stopView = [];

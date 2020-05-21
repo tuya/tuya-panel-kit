@@ -19,9 +19,24 @@ import { RatioUtils } from '../../../utils';
 export default class TopBarContainer extends PureComponent {
   static displayName = 'TopBar.Container';
   static propTypes = {
+    /**
+     * TopBar.Container的容器样式
+     * 内部处理了IOS、IPhoneX及安卓端三种StatusBar的情况，如果不需要StatusBar可以自行定义样式。
+     */
     style: ViewPropTypes.style,
+    /**
+     * TopBar.Container容器主体的样式
+     */
     contentStyle: ViewPropTypes.style,
+    /**
+     * TopBar.Container容器的背景，
+     * 可为颜色或者渐变，渐变的格式可参考LinearGradient 或 RadialGradient
+     */
     background: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+    /**
+     * TopBar.Container容器的子元素，
+     * 一般为TopBar.Action和TopBar.Content，TopBar.Container会对这两个组件进行自动适配位置。
+     */
     children: PropTypes.array.isRequired,
   };
 

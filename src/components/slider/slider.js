@@ -14,9 +14,7 @@ import {
 } from 'react-native';
 
 // import Utils from '../../utils';
-import {
-  NumberUtils,
-} from '../../utils';
+import { NumberUtils } from '../../utils';
 
 const shallowCompare = require('react-addons-shallow-compare');
 const styleEqual = require('style-equal');
@@ -49,10 +47,7 @@ class Rect {
   }
 
   containsPoint(x, y) {
-    return x >= this.x
-            && y >= this.y
-            && x <= this.x + this.width
-            && y <= this.y + this.height;
+    return x >= this.x && y >= this.y && x <= this.x + this.width && y <= this.y + this.height;
   }
 }
 
@@ -61,37 +56,121 @@ class Rect {
 export default class Slider extends Component {
   /* eslint-disable react/require-default-props */
   static propTypes = {
+    /**
+     * 测试标志
+     */
     accessibilityLabel: PropTypes.string,
+    /**
+     * onLayout回调
+     */
     onLayout: PropTypes.func,
+    /**
+     * 当前值
+     */
     value: PropTypes.number,
+    /**
+     * 是否禁用
+     */
     disabled: PropTypes.bool,
+    /**
+     * 最小值
+     */
     minimumValue: PropTypes.number,
+    /**
+     * 最大值
+     */
     maximumValue: PropTypes.number,
+    /**
+     * 步长，取值必须大于 0，并且可被 (max - min) 整除
+     */
     stepValue: PropTypes.number,
+    /**
+     * 是否翻转数值
+     */
     reverseValue: PropTypes.bool, // eslint-disable-line
+    /**
+     * 小于当前值的轨道颜色
+     */
     minimumTrackTintColor: ColorPropType,
+    /**
+     * 大于当前值的轨道颜色
+     */
     maximumTrackTintColor: ColorPropType,
+    /**
+     * 滑块颜色
+     */
     thumbTintColor: ColorPropType,
-    thumbTouchSize: PropTypes.shape(
-      { width: PropTypes.number, height: PropTypes.number },
-    ),
+    /**
+     * 滑块大小
+     */
+    thumbTouchSize: PropTypes.shape({ width: PropTypes.number, height: PropTypes.number }),
+    /**
+     * 滑动值变更回调
+     */
     onValueChange: PropTypes.func,
+    /**
+     * 滑动开始回调
+     */
     onSlidingStart: PropTypes.func, // eslint-disable-line
+    /**
+     * 滑动结束回调
+     */
     onSlidingComplete: PropTypes.func, // eslint-disable-line
+    /**
+     * 滑动事件
+     */
     onScrollEvent: PropTypes.func,
+    /**
+     * 容器样式
+     */
     style: ViewPropTypes.style,
+    /**
+     * 通用的轨道样式
+     */
     trackStyle: ViewPropTypes.style,
+    /**
+     * 滑块样式
+     */
     thumbStyle: ViewPropTypes.style,
+    /**
+     * 是否开启调试区域
+     */
     debugTouchArea: PropTypes.bool,
+    /**
+     * 是否只显示大于当前值的轨道颜色
+     */
     onlyMaximumTrack: PropTypes.bool,
+    /**
+     * 触摸轨道是否可以更改值
+     */
     canTouchTrack: PropTypes.bool,
-    // stepTransitions: PropTypes.bool,
+    /**
+     * 是否添加动画滑动效果
+     */
     animateTransitions: PropTypes.bool,
+    /**
+     * 动画类型，spring 弹性动画或 timing 线性动画
+     */
     animationType: PropTypes.oneOf(['spring', 'timing']),
+    /**
+     * 动画配置
+     */
     animationConfig: PropTypes.object,
+    /**
+     * 定制渲染小于当前值的轨道
+     */
     renderMinimumTrack: PropTypes.func,
+    /**
+     * 定制渲染大于当前值的轨道
+     */
     renderMaximumTrack: PropTypes.func,
+    /**
+     * 定制渲染滑块
+     */
     renderThumb: PropTypes.func,
+    /**
+     * 是否为水平方向
+     */
     horizontal: PropTypes.bool,
   };
 
@@ -108,7 +187,6 @@ export default class Slider extends Component {
     thumbTouchSize: { width: 40, height: 40 },
     canTouchTrack: false,
     animateTransitions: false,
-    // stepTransitions: false,
     debugTouchArea: false,
     animationType: 'timing',
     horizontal: true,
@@ -159,14 +237,17 @@ export default class Slider extends Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    return shallowCompare(
-      { props: this._getPropsForComponentUpdate(this.props), state: this.state },
-      this._getPropsForComponentUpdate(nextProps),
-      nextState,
-    ) || !styleEqual(this.props.style, nextProps.style)
-      || !styleEqual(this.props.trackStyle, nextProps.trackStyle)
-      || !styleEqual(this.props.thumbStyle, nextProps.thumbStyle)
-      || !styleEqual(this.props.thumbTouchSize, nextProps.thumbTouchSize);
+    return (
+      shallowCompare(
+        { props: this._getPropsForComponentUpdate(this.props), state: this.state },
+        this._getPropsForComponentUpdate(nextProps),
+        nextState
+      ) ||
+      !styleEqual(this.props.style, nextProps.style) ||
+      !styleEqual(this.props.trackStyle, nextProps.trackStyle) ||
+      !styleEqual(this.props.thumbStyle, nextProps.thumbStyle) ||
+      !styleEqual(this.props.thumbTouchSize, nextProps.thumbTouchSize)
+    );
   }
 
   setValue(value) {
@@ -321,8 +402,8 @@ export default class Slider extends Component {
 
   _getValueByGestureEvent(e) {
     const thumbLeft = this.props.horizontal
-      ? e.nativeEvent.locationX - (this.props.thumbTouchSize.width / 2)
-      : e.nativeEvent.locationY - (this.props.thumbTouchSize.height / 2);
+      ? e.nativeEvent.locationX - this.props.thumbTouchSize.width / 2
+      : e.nativeEvent.locationY - this.props.thumbTouchSize.height / 2;
     return this.__getValue(thumbLeft);
   }
 
@@ -340,18 +421,24 @@ export default class Slider extends Component {
     const ratio = thumbLeft / length;
 
     if (this.props.stepValue) {
-      return Math.max(this.props.minimumValue,
-        Math.min(this.props.maximumValue,
+      return Math.max(
+        this.props.minimumValue,
+        Math.min(
+          this.props.maximumValue,
           Math.round(
-            ratio * (this.props.maximumValue - this.props.minimumValue) / this.props.stepValue,
-          ) * this.props.stepValue + this.props.minimumValue,
-        ),
+            (ratio * (this.props.maximumValue - this.props.minimumValue)) / this.props.stepValue
+          ) *
+            this.props.stepValue +
+            this.props.minimumValue
+        )
       );
     }
-    return Math.max(this.props.minimumValue,
-      Math.min(this.props.maximumValue,
-        ratio * (this.props.maximumValue - this.props.minimumValue) + this.props.minimumValue,
-      ),
+    return Math.max(
+      this.props.minimumValue,
+      Math.min(
+        this.props.maximumValue,
+        ratio * (this.props.maximumValue - this.props.minimumValue) + this.props.minimumValue
+      )
     );
   }
 
@@ -369,7 +456,7 @@ export default class Slider extends Component {
       {},
       DEFAULT_ANIMATION_CONFIGS[animationType],
       this.props.animationConfig,
-      { toValue: value },
+      { toValue: value }
     );
 
     Animated[animationType](this.state.value, animationConfig).start();
@@ -451,40 +538,43 @@ export default class Slider extends Component {
     const { state, props } = this;
     const touchOverflowSize = this._getTouchOverflowSize();
 
-    const rect = this.props.horizontal ?
-      new Rect(
-        touchOverflowSize.width / 2
-           + this._getThumbLeft(this._getCurrentValue())
-           + (state.thumbSize.width - props.thumbTouchSize.width) / 2,
-        touchOverflowSize.height / 2
-           + (state.containerSize.height - props.thumbTouchSize.height) / 2,
+    const rect = this.props.horizontal
+      ? new Rect(
+        touchOverflowSize.width / 2 +
+            this._getThumbLeft(this._getCurrentValue()) +
+            (state.thumbSize.width - props.thumbTouchSize.width) / 2,
+        touchOverflowSize.height / 2 +
+            (state.containerSize.height - props.thumbTouchSize.height) / 2,
         props.thumbTouchSize.width,
-        props.thumbTouchSize.height,
-      ) : new Rect(
-        touchOverflowSize.width / 2
-           + (state.containerSize.width - props.thumbTouchSize.width) / 2,
-        touchOverflowSize.height / 2
-           + this._getThumbLeft(this._getCurrentValue())
-           + (state.thumbSize.height - props.thumbTouchSize.height) / 2,
+        props.thumbTouchSize.height
+      )
+      : new Rect(
+        touchOverflowSize.width / 2 +
+            (state.containerSize.width - props.thumbTouchSize.width) / 2,
+        touchOverflowSize.height / 2 +
+            this._getThumbLeft(this._getCurrentValue()) +
+            (state.thumbSize.height - props.thumbTouchSize.height) / 2,
         props.thumbTouchSize.width,
-        props.thumbTouchSize.height,
+        props.thumbTouchSize.height
       );
     return rect;
   }
 
   _renderDebugThumbTouchRect(thumbLeft) {
     const thumbTouchRect = this._getThumbTouchRect();
-    const positionStyle = this.props.horizontal ? {
-      left: thumbLeft,
-      top: thumbTouchRect.y,
-      width: thumbTouchRect.width,
-      height: thumbTouchRect.height,
-    } : {
-      left: thumbTouchRect.x,
-      top: thumbLeft,
-      width: thumbTouchRect.width,
-      height: thumbTouchRect.height,
-    };
+    const positionStyle = this.props.horizontal
+      ? {
+        left: thumbLeft,
+        top: thumbTouchRect.y,
+        width: thumbTouchRect.width,
+        height: thumbTouchRect.height,
+      }
+      : {
+        left: thumbTouchRect.x,
+        top: thumbLeft,
+        width: thumbTouchRect.width,
+        height: thumbTouchRect.height,
+      };
 
     return (
       <Animated.View
@@ -528,11 +618,13 @@ export default class Slider extends Component {
           inputRange: [minimumValue, maximumValue],
           outputRange: [0, containerSize.width - thumbSize.width],
         });
-        thumbTransformStyle = { transform: [
-          { translateX: thumbTranslate },
-          // 暂时注释 Y 轴 transform 保证基础样式渲染正常，不知什么原因
-          // { translateY: -(trackSize.height + thumbSize.height) / 2 },
-        ] };
+        thumbTransformStyle = {
+          transform: [
+            { translateX: thumbTranslate },
+            // 暂时注释 Y 轴 transform 保证基础样式渲染正常，不知什么原因
+            // { translateY: -(trackSize.height + thumbSize.height) / 2 },
+          ],
+        };
         if (!onlyMaximumTrack) {
           minimumTrackStyle = {
             width: Animated.add(thumbTranslate, thumbSize.width / 2),
@@ -547,10 +639,12 @@ export default class Slider extends Component {
           inputRange: [minimumValue, maximumValue],
           outputRange: [0, containerSize.height - thumbSize.height],
         });
-        thumbTransformStyle = { transform: [
-          { translateY: thumbTranslate },
-          // { translateX: -(trackSize.width + thumbSize.width) / 2 },
-        ] };
+        thumbTransformStyle = {
+          transform: [
+            { translateY: thumbTranslate },
+            // { translateX: -(trackSize.width + thumbSize.width) / 2 },
+          ],
+        };
         if (!onlyMaximumTrack) {
           minimumTrackStyle = {
             overflow: 'hidden',
@@ -588,13 +682,15 @@ export default class Slider extends Component {
           <Animated.View
             style={[
               { overflow: 'hidden', position: 'absolute', backgroundColor: minimumTrackTintColor },
-              mainStyles.track, trackStyle, minimumTrackStyle, valueVisibleStyle,
+              mainStyles.track,
+              trackStyle,
+              minimumTrackStyle,
+              valueVisibleStyle,
             ]}
           >
             {!!renderMinimumTrack && renderMinimumTrack()}
           </Animated.View>
-        )
-        }
+        )}
         <Animated.View
           renderToHardwareTextureAndroid={true}
           style={[
@@ -620,21 +716,10 @@ export default class Slider extends Component {
 }
 
 Slider.Vertical = _props => (
-  <Slider
-    {..._props}
-    ref={_props.sliderRef}
-    horizontal={false}
-    styles={verticalStyles}
-  />
+  <Slider {..._props} ref={_props.sliderRef} horizontal={false} styles={verticalStyles} />
 );
 
-Slider.Horizontal = _props => (
-  <Slider
-    {..._props}
-    ref={_props.sliderRef}
-    horizontal={true}
-  />
-);
+Slider.Horizontal = _props => <Slider {..._props} ref={_props.sliderRef} horizontal={true} />;
 
 Slider.dpView = WrappedComponent => _props => (
   <WrappedComponent
