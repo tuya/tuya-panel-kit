@@ -12,7 +12,9 @@
   "author": "",
   "scripts": {
     "test": "jest -u",
-    "build": "rimraf lib/* && babel src --ignore __tests__ --out-dir lib --copy-files",
+    "prebuild": "rimraf lib/*",
+    "build": "babel src --ignore __tests__ --out-dir lib --copy-files",
+    "dev": "babel src --watch --ignore __tests__ --out-dir lib --copy-files",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
