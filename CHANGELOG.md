@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [2.0.0-rc.3](https://github.com/TuyaInc/tuya-panel-kit/compare/v2.0.0-rc.2...v2.0.0-rc.3) (2020-05-21)
+
+
+### Bug Fixes
+
+* **Motion:** allow startAnimation when animating ([9084cfd](https://github.com/TuyaInc/tuya-panel-kit/commit/9084cfd8798a0baadffd6eaa5ed265dfe2b713c9))
+* do not request mqtt data below version 5.21 ([416ffb6](https://github.com/TuyaInc/tuya-panel-kit/commit/416ffb6a04ac97cf00d60e2d102b952434c49f25))
+* **OfflineView:** 允许蓝牙设备在网络离线设备在线的情况下操作 ([99cc363](https://github.com/TuyaInc/tuya-panel-kit/commit/99cc363b8e4f21662a820556d07db1576cc8c120))
+* **parseJSON:** 修复传入 false 返回空对象 ([fb2e4c4](https://github.com/TuyaInc/tuya-panel-kit/commit/fb2e4c412e944973dbea05c7b285c66d9d893c57))
+* **Popup.countdown:** fix min prop ([ed5a7ef](https://github.com/TuyaInc/tuya-panel-kit/commit/ed5a7eff9d28a3a6741ee04142a53df14337a071))
+* **Popup.list:** 修复 Popup.list 在安卓上无法正常显示 Switch ([d8ecb51](https://github.com/TuyaInc/tuya-panel-kit/commit/d8ecb5190ca1a794fdc40e79b33fdc4703beb078))
+
+
+### Features
+
+* **Dialog:** Dialog 默认添加动效 ScaleFadeIn（放大淡入 / 缩小淡出 ([4795a85](https://github.com/TuyaInc/tuya-panel-kit/commit/4795a85bdaf813e18b79aa57fcc53b3528c9bc49))
+* **Popup:** Popup 添加默认动效 PullUp (上拉下滑） ([d50d1bc](https://github.com/TuyaInc/tuya-panel-kit/commit/d50d1bc8a298b8c2e8e9c0163fb837a3e36380c3))
+
+
+
 # [2.0.0-rc.2](https://github.com/TuyaInc/tuya-panel-kit/compare/v2.0.0-rc.1...v2.0.0-rc.2) (2020-04-20)
 
 
