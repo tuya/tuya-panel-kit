@@ -44,17 +44,53 @@ const Alert = ({
 };
 
 Alert.propTypes = {
+  /**
+   * 容器样式
+   */
   style: ViewPropTypes.style,
+  /**
+   * 内容样式
+   */
   contentStyle: ViewPropTypes.style,
+  /**
+   * 标题超过多少行显示省略号
+   */
   titleNumberOfLines: PropTypes.number,
+  /**
+   * 标题
+   */
   title: PropTypes.string.isRequired,
+  /**
+   * 标题样式
+   */
   titleStyle: TYText.propTypes.style,
+  /**
+   * 副标题
+   */
   subTitle: PropTypes.string,
+  /**
+   * 副标题样式
+   */
   subTitleStyle: TYText.propTypes.style,
+  /**
+   * footer容器样式
+   */
   footerWrapperStyle: ViewPropTypes.style,
+  /**
+   * 确认文案
+   */
   confirmText: PropTypes.string.isRequired,
+  /**
+   * 确认文案样式
+   */
   confirmTextStyle: TYText.propTypes.style,
+  /**
+   * 测试标志
+   */
   confirmAccessibilityLabel: PropTypes.string,
+  /**
+   * 确认回调
+   */
   onConfirm: PropTypes.func,
 };
 

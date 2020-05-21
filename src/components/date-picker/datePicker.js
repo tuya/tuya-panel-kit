@@ -58,18 +58,45 @@ const setMonth = (date, month) => {
 
 class DatePicker extends React.Component {
   static propTypes = {
+    /**
+     * 测试标志
+     */
     accessibilityLabel: PropTypes.string,
+    /**
+     * 多语言设置
+     */
     locale: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+    /**
+     * 选择器的选择类型
+     */
     mode: PropTypes.string,
+    /**
+     * 选择picker是否可循环
+     */
     loop: PropTypes.bool,
+    /**
+     * 是否为12小时制
+     */
     use12Hours: PropTypes.bool,
     /**
      * 月、日、时、分，是否补0显示
      */
     isPlusZero: PropTypes.bool,
+    /**
+     * 设置最小可选择的值
+     */
     minDate: PropTypes.object,
+    /**
+     * 设置最大可选择的值
+     */
     maxDate: PropTypes.object,
+    /**
+     * 某一项被选中时执行此回调
+     */
     onDateChange: PropTypes.func,
+    /**
+     * 某一项被选中时执行此回调
+     */
     onValueChange: PropTypes.func,
     /**
      * `AM / PM` Picker项是否位于 `小时`及`分钟` 之前
@@ -79,9 +106,21 @@ class DatePicker extends React.Component {
      * `小时`及`分钟` Picker项是否位于 `年` `月` `日` 之前
      */
     isTimeFirst: PropTypes.bool,
+    /**
+     * 当前选中的值，设置了该属性即为受控组件
+     */
     date: PropTypes.object,
+    /**
+     * 默认选中的值
+     */
     defaultDate: PropTypes.object,
+    /**
+     * 容器样式
+     */
     style: ViewPropTypes.style,
+    /**
+     * picker里字体颜色
+     */
     pickerFontColor: PropTypes.string,
     /**
      * `年` `月` `日` 排序规则，若不提供则默认为年月日

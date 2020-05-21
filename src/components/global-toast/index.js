@@ -16,7 +16,6 @@ class GlobalToast extends React.PureComponent {
   static propTypes = {
     /**
      * 提示文字
-     * @version 3.1.1
      */
     text: PropTypes.string,
     /**

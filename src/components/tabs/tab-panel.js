@@ -9,7 +9,13 @@ const TabPanel = ({ style, background, ...props }) => (
 );
 
 TabPanel.propTypes = {
+  /**
+   *  内容样式
+   */
   style: ViewPropTypes.style,
+  /**
+   *  背景色
+   */
   background: ColorPropType,
 };
 

@@ -20,6 +20,9 @@ const { parseToStyle } = ThemeUtils;
 export default class SliderItem extends Component {
   static propTypes = {
     ...Slider.propTypes,
+    /**
+     * 主题
+     */
     theme: PropTypes.shape({
       iconColor: ColorPropType,
       descFontColor: ColorPropType,
@@ -59,11 +62,29 @@ export default class SliderItem extends Component {
       PropTypes.bool,
       PropTypes.object,
     ]),
+    /**
+     * 左侧图标栏尺寸
+     */
     iconSize: PropTypes.number,
+    /**
+     * 左侧图标栏尺寸颜色
+     */
     iconColor: ColorPropType,
+    /**
+     * 列表样式
+     */
     style: ViewPropTypes.style,
+    /**
+     * 内容样式
+     */
     contentStyle: ViewPropTypes.style,
+    /**
+     * 字体样式
+     */
     textStyle: Text.propTypes.style,
+    /**
+     * 滑动条样式
+     */
     sliderStyle: ViewPropTypes.style,
     /**
      * 图片的tintColor是否跟随iconColor，默认为`true`，

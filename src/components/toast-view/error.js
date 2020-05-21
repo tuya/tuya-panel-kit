@@ -11,12 +11,33 @@ const { convertX: cx, convertY: cy } = RatioUtils;
 
 class Error extends React.PureComponent {
   static propTypes = {
+    /**
+     * 提示文字
+     */
     text: PropTypes.string,
+    /**
+     * 图标大小
+     */
     size: PropTypes.number,
+    /**
+     * 图标路径
+     */
     d: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+    /**
+     * 图标样式
+     */
     iconfontStyle: ViewPropTypes.style,
+    /**
+     * 内容样式
+     */
     contentStyle: ViewPropTypes.style,
+    /**
+     * 显示位置
+     */
     showPosition: PropTypes.string,
+    /**
+     * 图标颜色
+     */
     color: PropTypes.string,
   };
 

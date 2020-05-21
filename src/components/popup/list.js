@@ -16,8 +16,17 @@ let itemHeight = 48;
 class ListPopup extends React.Component {
   static propTypes = {
     ...FlatList.propTypes,
+    /**
+     * 按钮开关值
+     */
     switchValue: PropTypes.bool.isRequired,
+    /**
+     * 列表弹窗样式
+     */
     listWrapperStyle: ViewPropTypes.style,
+    /**
+     * 数据源
+     */
     dataSource: PropTypes.arrayOf(
       PropTypes.shape({
         styles: PropTypes.object,
@@ -26,16 +35,41 @@ class ListPopup extends React.Component {
         value: PropTypes.any.isRequired,
       })
     ),
-
+    /**
+     * 最大列表数量
+     */
     maxItemNum: PropTypes.number,
+    /**
+     * 设置type为radio时选中的图标
+     */
     selectedIcon: PropTypes.element,
+    /**
+     * 列表选择弹出层的类型
+     */
     type: PropTypes.oneOf(['switch', 'radio']),
+    /**
+     * 设置type为radio时选中图标的颜色
+     */
     iconTintColor: PropTypes.string,
+    /**
+     * 内容是否居中
+     */
     contentCenter: PropTypes.bool,
+    /**
+     * 选中的值
+     */
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
+    /**
+     * 设置每个listItem的样式
+     */
     listItemStyle: ViewPropTypes.style,
-
+    /**
+     * 选中事件的回调
+     */
     onSelect: PropTypes.func,
+    /**
+     * 数据更改回调
+     */
     _onDataChange: PropTypes.func,
   };
 

@@ -9,13 +9,37 @@ const { convertX: cx, convertY: cy } = RatioUtils;
 
 class Loading extends React.PureComponent {
   static propTypes = {
+    /**
+     * 内容样式
+     */
     contentStyle: ViewPropTypes.style,
+    /**
+     * 图标颜色
+     */
     color: ColorPropType,
+    /**
+     * 显示位置
+     */
     showPosition: PropTypes.string,
+    /**
+     * 图标大小
+     */
     size: PropTypes.number,
+    /**
+     * 图标是否转动
+     */
     loading: PropTypes.bool,
+    /**
+     * 图标填充宽度
+     */
     strokeWidth: PropTypes.number,
+    /**
+     * loading图标样式
+     */
     loadingStyle: ViewPropTypes.style,
+    /**
+     * loading背景颜色
+     */
     loadingBackgroundColor: ColorPropType,
   };
 

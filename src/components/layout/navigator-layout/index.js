@@ -130,6 +130,7 @@ export default class NavigatorLayout extends Component {
   };
 
   _handleMqttSignal = ({ data = {}, protocol } = {}) => {
+    if (!data) return;
     if (protocol === 23) {
       const { data: result } = data;
       const { signal } = result;
@@ -167,8 +168,8 @@ export default class NavigatorLayout extends Component {
   dispatchRoute(route, navigator) {
     let contentLayout = null;
     const opts = this.hookRoute(route);
-
-    if (!!opts.gesture || opts.id === 'main') {
+    const { enablePopGesture = true } = opts;
+    if ((!!opts.gesture || opts.id === 'main') && enablePopGesture) {
       TYMobile.enablePopGesture();
     } else {
       TYMobile.disablePopGesture();

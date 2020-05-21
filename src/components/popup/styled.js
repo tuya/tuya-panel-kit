@@ -79,10 +79,7 @@ export const StyledTitleText = styled(TYText)`
 
 export const StyledSwitch = styled(SwitchButton).attrs({
   tintColor: props => getTheme(props, 'popup.tintColor', '#e5e5e5'),
-})`
-  position: absolute;
-  right: ${cx(16)}px;
-`;
+})``;
 
 export const StyledFooter = styled(Row)`
   padding-bottom: ${isIphoneX ? 20 : 0};
@@ -170,7 +167,6 @@ export const StyledBackIcon = props => {
     </ThemeConsumer>
   );
 };
-
 /**
  * Popup.picker
  */

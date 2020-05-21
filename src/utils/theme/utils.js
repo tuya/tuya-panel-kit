@@ -36,6 +36,9 @@ export const deepMerge = (target, ...sources) => {
  * @param {String} key - 样式key，如margin、padding等
  */
 export const parseToStyle = (values, key) => {
+  if (!values || !Array.isArray(values)) {
+    return {};
+  }
   const [top, right, bottom, left] = values;
   return {
     [`${key}Top`]: top,
@@ -52,6 +55,9 @@ export const parseToStyle = (values, key) => {
  * @param {String} key - 样式key，如margin、padding等
  */
 export const parseToCss = (values, key) => {
+  if (!values || !Array.isArray(values)) {
+    return [];
+  }
   const [top, right, bottom, left] = values;
   const cssStyle = css`
     ${key}-top: ${top}px;

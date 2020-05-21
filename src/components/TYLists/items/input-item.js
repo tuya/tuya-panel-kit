@@ -26,8 +26,17 @@ function InputItem({ style, title, titleStyle, inputStyle, ...textInputProps }) 
 InputItem.propTypes = {
   ...ListItem.propTypes,
   ...TextInput.propTypes,
+  /**
+   * 列表项的标题
+   */
   title: PropTypes.string.isRequired,
+  /**
+   * 标题样式
+   */
   titleStyle: Text.propTypes.style,
+  /**
+   * TextInput样式
+   */
   inputStyle: ViewPropTypes.style,
 };
 

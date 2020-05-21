@@ -14,14 +14,41 @@ const DEFAULT_ANIMATION_CONFIG = {
 class PullUp extends PureComponent {
   static displayName = 'Motion.PullUp';
   static propTypes = {
+    /**
+     * 内容样式
+     */
     style: ViewPropTypes.style,
+    /**
+     * 是否显示内容
+     */
     show: PropTypes.bool,
+    /**
+     * 动画下降高度
+     */
     dropHeight: PropTypes.number,
+    /**
+     * 自定义内容
+     */
     children: PropTypes.element.isRequired,
+    /**
+     * 动画显示时长
+     */
     showDuration: PropTypes.number,
+    /**
+     * 动画隐藏时长
+     */
     hideDuration: PropTypes.number,
+    /**
+     * 动画显示回调
+     */
     onShow: PropTypes.func,
+    /**
+     * 动画隐藏回调
+     */
     onHide: PropTypes.func,
+    /**
+     * 动画配置参数
+     */
     animationConfig: PropTypes.shape({
       duration: PropTypes.number,
       easing: PropTypes.func,
@@ -44,7 +71,6 @@ class PullUp extends PureComponent {
 
   constructor(props) {
     super(props);
-    this._isAnimating = false;
     this.state = {
       show: props.show,
       animatedY: new Animated.Value(0),
@@ -63,7 +89,7 @@ class PullUp extends PureComponent {
       return;
     }
     const { show } = nextProps;
-    if (!this._isAnimating && typeof show !== 'undefined' && show !== this.state.show) {
+    if (typeof show !== 'undefined' && show !== this.state.show) {
       this.startAnimation(show);
     }
   }
@@ -81,7 +107,6 @@ class PullUp extends PureComponent {
   };
 
   startShowAnimation = () => {
-    this._isAnimating = true;
     const { onShow, showDuration } = this.props;
     const animationConfig = { ...DEFAULT_ANIMATION_CONFIG, ...this.props.animationConfig };
     Animated.timing(this.state.animatedY, {
@@ -91,14 +116,12 @@ class PullUp extends PureComponent {
       duration: showDuration,
     }).start(({ finished }) => {
       if (finished) {
-        this._isAnimating = false;
         typeof onShow === 'function' && onShow();
       }
     });
   };
 
   startHideAnimation = () => {
-    this._isAnimating = true;
     const { onHide, hideDuration } = this.props;
     const animationConfig = { ...DEFAULT_ANIMATION_CONFIG, ...this.props.animationConfig };
     Animated.timing(this.state.animatedY, {
@@ -109,7 +132,6 @@ class PullUp extends PureComponent {
     }).start(({ finished }) => {
       if (finished) {
         this.setState({ show: false }, () => {
-          this._isAnimating = false;
           typeof onHide === 'function' && onHide();
         });
       }

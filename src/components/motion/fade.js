@@ -12,14 +12,41 @@ const DEFAULT_ANIMATION_CONFIG = {
 class Fade extends PureComponent {
   static displayName = 'Motion.Fade';
   static propTypes = {
+    /**
+     * 内容样式
+     */
     style: ViewPropTypes.style,
+    /**
+     * 是否显示内容
+     */
     show: PropTypes.bool,
+    /**
+     * 动画不透明度
+     */
     fadeOpacity: PropTypes.number,
+    /**
+     * 自定义内容
+     */
     children: PropTypes.element.isRequired,
+    /**
+     * 动画显示时长
+     */
     showDuration: PropTypes.number,
+    /**
+     * 动画隐藏时长
+     */
     hideDuration: PropTypes.number,
+    /**
+     * 动画显示回调
+     */
     onShow: PropTypes.func,
+    /**
+     * 动画隐藏回调
+     */
     onHide: PropTypes.func,
+    /**
+     * 动画配置参数
+     */
     animationConfig: PropTypes.shape({
       duration: PropTypes.number,
       delay: PropTypes.number,
@@ -41,7 +68,6 @@ class Fade extends PureComponent {
 
   constructor(props) {
     super(props);
-    this._isAnimating = false;
     this.state = {
       show: props.show,
       opacity: new Animated.Value(0),
@@ -57,7 +83,7 @@ class Fade extends PureComponent {
 
   componentWillReceiveProps(nextProps) {
     const { show } = nextProps;
-    if (!this.state.isAnimating && typeof show !== 'undefined' && show !== this.state.show) {
+    if (typeof show !== 'undefined' && show !== this.state.show) {
       this.startAnimation(show);
     }
   }
@@ -75,7 +101,6 @@ class Fade extends PureComponent {
   };
 
   startShowAnimation = () => {
-    this._isAnimating = true;
     const { fadeOpacity, onShow, showDuration } = this.props;
     const animationConfig = { ...DEFAULT_ANIMATION_CONFIG, ...this.props.animationConfig };
     Animated.timing(this.state.opacity, {
@@ -93,7 +118,6 @@ class Fade extends PureComponent {
   };
 
   startHideAnimation = () => {
-    this._isAnimating = true;
     const { onHide, hideDuration } = this.props;
     const animationConfig = { ...DEFAULT_ANIMATION_CONFIG, ...this.props.animationConfig };
     Animated.timing(this.state.opacity, {

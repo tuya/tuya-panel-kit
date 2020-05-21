@@ -29,11 +29,29 @@ function Divider(props) {
 }
 
 Divider.propTypes = {
+  /**
+   * 分隔线样式
+   */
   style: ViewPropTypes.style,
+  /**
+   * 主轴方向
+   */
   flexDirection: PropTypes.oneOf(['row', 'column']),
+  /**
+   * 是否显示
+   */
   visible: PropTypes.bool,
+  /**
+   * 分隔线颜色
+   */
   color: ColorPropType,
+  /**
+   * 分隔线宽
+   */
   width: PropTypes.number,
+  /**
+   * 分隔线高
+   */
   height: PropTypes.number,
 };
 

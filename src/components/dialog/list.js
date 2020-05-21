@@ -13,15 +13,45 @@ const ITEM_HEIGHT = 56;
 
 export default class List extends Component {
   static propTypes = {
+    /**
+     * 数据源超出多少可滚动
+     */
     maxItemNum: PropTypes.number,
+    /**
+     * 数据源
+     */
     dataSource: PropTypes.array.isRequired,
+    /**
+     * 容器样式
+     */
     style: ViewPropTypes.style,
+    /**
+     * 内容样式
+     */
     contentStyle: ViewPropTypes.style,
+    /**
+     * 列表样式
+     */
     listStyle: ViewPropTypes.style,
+    /**
+     * 标题超过多少行显示省略号
+     */
     titleNumberOfLines: PropTypes.number,
+    /**
+     * 标题
+     */
     title: PropTypes.string.isRequired,
+    /**
+     * 标题样式
+     */
     titleStyle: TYText.propTypes.style,
+    /**
+     * 副标题
+     */
     subTitle: PropTypes.string,
+    /**
+     * 副标题样式
+     */
     subTitleStyle: TYText.propTypes.style,
   };
 
