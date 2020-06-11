@@ -229,16 +229,18 @@ export default class Progress extends Gesture {
   }
 
   shouldSetResponder(x0, y0) {
-    const { scaleHeight, disabled } = this.props;
+    const { scaleHeight, disabled, thumbRadius } = this.props;
     if (disabled) {
       return false;
     }
     const { r } = this.getCircleInfo();
     const { x, y } = this.getXYRelativeCenter(x0, y0);
-    const len = Math.sqrt(x * x + y * y);
+    const len = Math.sqrt(
+      (x - thumbRadius) * (x - thumbRadius) + (y - thumbRadius) * (y - thumbRadius)
+    );
     const innerR = r - scaleHeight;
     const should = this.shouldUpdateScale(x0, y0);
-    const finalShould = should && len <= r && len >= innerR - 2;
+    const finalShould = should && len <= r + thumbRadius && len >= innerR - thumbRadius;
     return finalShould;
   }
 
@@ -342,7 +344,8 @@ export default class Progress extends Gesture {
   }
 
   getDegRelativeCenter(x, y) {
-    const { x: _x, y: _y } = this.getXYRelativeCenter(x, y);
+    const { thumbRadius } = this.props;
+    const { x: _x, y: _y } = this.getXYRelativeCenter(x - thumbRadius, y - thumbRadius);
     let deg = (Math.atan2(_y, _x) * 180) / Math.PI;
     if (deg < 0) {
       deg += 360;
@@ -380,7 +383,6 @@ export default class Progress extends Gesture {
 
   // 计算路径路径
   createSvgPath(deltaDeg = 0) {
-    if (deltaDeg === 0) return '';
     const { r } = this.getCircleInfo();
     const { startDegree } = this;
     const { scaleHeight } = this.props;
@@ -444,14 +446,19 @@ export default class Progress extends Gesture {
       <View
         {...responder}
         style={[
-          {
-            width: 125,
-            height: 125,
-          },
           style,
+          {
+            width: size + 2 * thumbRadius,
+            height: size + 2 * thumbRadius,
+          },
         ]}
       >
-        <Svg width={size} height={size}>
+        <Svg
+          viewBox={`${-thumbRadius} ${-thumbRadius} ${size + 2 * thumbRadius} ${size +
+            2 * thumbRadius}`}
+          width={size + 2 * thumbRadius}
+          height={size + 2 * thumbRadius}
+        >
           <Path
             d={this.backScalePath}
             x="0"
