@@ -10,6 +10,7 @@
   "main": "lib/index.js",
   "license": "MIT",
   "author": "",
+  "typings": "@types/index.d.ts",
   "scripts": {
     "test": "jest -u",
     "prebuild": "rimraf lib/*",
