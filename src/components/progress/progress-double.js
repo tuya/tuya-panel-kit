@@ -279,8 +279,8 @@ export default class ProgressDouble extends Gesture {
     const { startDegree, endDegree } = this;
     const { thumbRadius } = this.props;
     // 鼠标点击的坐标
-    const deg = this.getDegRelativeCenter(locationX, locationY);
-    if (this.shouldUpdateScale(locationX, locationY)) {
+    const deg = this.getDegRelativeCenter(locationX - thumbRadius, locationY - thumbRadius);
+    if (this.shouldUpdateScale(locationX - thumbRadius, locationY - thumbRadius)) {
       // 最小值对应的角度
       const startDeg = this.getDegRelativeCenter(this.progressStartX, this.progressStartY);
       // 最大值对应的角度
@@ -319,10 +319,12 @@ export default class ProgressDouble extends Gesture {
         this.foreScalePath
       );
       const locationToEnd = Math.sqrt(
-        (this.progressX - locationX) ** 2 + (this.progressY - locationY) ** 2
+        (this.progressX - (locationX - thumbRadius)) ** 2 +
+          (this.progressY - (locationY - thumbRadius)) ** 2
       );
       const locationToStart = Math.sqrt(
-        (this.progressStartX - locationX) ** 2 + (this.progressStartY - locationY) ** 2
+        (this.progressStartX - (locationX - thumbRadius)) ** 2 +
+          (this.progressStartY - (locationY - thumbRadius)) ** 2
       );
       if (locationToStart >= locationToEnd || value < minValue) {
         if (value < minValue) {
