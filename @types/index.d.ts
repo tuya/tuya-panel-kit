@@ -137,16 +137,8 @@ declare module 'tuya-panel-kit' {
     backgroundType?: 'alpha' | 'pure';
     backgroundColor?: string;
     hasBottomBorder?: boolean;
-    button: ControlButtonProps[];
+    button: ButtonProps[];
     wrapperStyle?: StyleProp<ViewStyle>;
-  }
-
-  interface ControlButtonProps extends ButtonProps {
-    key?: string;
-    text: string;
-    type: 'primary' | 'normal';
-    disabled?: boolean;
-    onPress?: () => void;
   }
 
   interface BarGroupProps {
@@ -1011,7 +1003,7 @@ declare module 'tuya-panel-kit' {
     velocityThreshold?: number;
     renderPlaceholder?: () => void;
     onChange?: (tab?: string, idx?: number) => void;
-    children?: TabContentArr[];
+    children?: React.ReactElement[];
     extraSpace?: number;
     animationConfig?: {
       duration: number;
@@ -1023,23 +1015,21 @@ declare module 'tuya-panel-kit' {
   }
 
   interface TabDateArr {
-    [index: number]: {
-      value: string;
-      label: string;
-    };
-  }
-  interface TabContentArr {
-    [index: number]: React.ElementType<any>;
+    value: string;
+    label: string;
   }
 
   interface TabContentProps extends TabsProps {
     activeIndex: number;
     onMove?: (gestureState?: {}, index?: number, percent?: number) => void;
     onRelease?: (gestureState?: {}, index?: number, percent?: number) => void;
-    children: TabContentArr[];
+    children: React.ReactElement[];
   }
 
-  interface TabPanelProps extends TabsProps {}
+  interface TabPanelProps {
+    style?: StyleProp<ViewStyle>;
+    background?: string;
+  }
 
   export class Tabs extends React.Component<TabsProps> {
     static TabContent: React.ElementType<TabContentProps>;
