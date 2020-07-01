@@ -7,8 +7,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
-* **panel-kit:** fix TYNativeApi中 apiRequest 解析崩溃 && showLoading对内对外保持统一 ([30fd8f2](https://github.com/TuyaInc/tuya-panel-kit/commit/30fd8f2627d5ac596766f6cd0bdfd73e1887267e))
-* **Progress:** 修复thumb过大被截 ([4579450](https://github.com/TuyaInc/tuya-panel-kit/commit/4579450730d37ef98989189bbc0432ef1e1cfe41))
+修复 apiRequest 解析基础数据类型崩溃 ([30fd8f2](https://github.com/TuyaInc/tuya-panel-kit/commit/30fd8f2627d5ac596766f6cd0bdfd73e1887267e))
+* **Progress:** 修复 thumb 过大被截 ([4579450](https://github.com/TuyaInc/tuya-panel-kit/commit/4579450730d37ef98989189bbc0432ef1e1cfe41))
 
 
 ### Features
