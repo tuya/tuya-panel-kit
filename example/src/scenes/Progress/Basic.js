@@ -16,7 +16,7 @@ class ProgressScene extends React.PureComponent {
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <Progress scaleHeight={2} />
         <Progress
-          style={{ marginTop: 30 }}
+          style={{ marginTop: 30, width: 240, height: 240 }}
           foreColor={{
             '0%': '#1381FB',
             '100%': '#00C36C',
@@ -28,6 +28,7 @@ class ProgressScene extends React.PureComponent {
           startDegree={135}
           andDegree={270}
           stepValue={10}
+          thumbRadius={13}
           onValueChange={v => {
             console.log(v);
             this.setState({ value: v });
