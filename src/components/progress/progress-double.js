@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import PropTypes from 'prop-types';
 import React from 'react';
 import Svg, { Path } from 'react-native-svg';
@@ -7,7 +8,7 @@ import PathCustom from './path-custom';
 import Gradient from './gradient';
 import ProgressCircle from './circle';
 
-export default class Progress extends Gesture {
+export default class ProgressDouble extends Gesture {
   static propTypes = {
     ...Gesture.propTypes,
     /**
@@ -19,9 +20,13 @@ export default class Progress extends Gesture {
      */
     style: ViewPropTypes.style,
     /**
-     * 具体值
+     * 最大具体值
      */
-    value: PropTypes.number,
+    maxValue: PropTypes.number,
+    /**
+     * 最小具体值
+     */
+    minValue: PropTypes.number,
     /**
      * 开始角度
      */
@@ -31,11 +36,11 @@ export default class Progress extends Gesture {
      */
     andDegree: PropTypes.number,
     /**
-     * 最小值
+     * 进度条始端最小值
      */
     min: PropTypes.number,
     /**
-     * 最大值
+     * 进度条末端最大值
      */
     max: PropTypes.number,
     /**
@@ -65,25 +70,17 @@ export default class Progress extends Gesture {
     /**
      * 小于具体值的颜色
      */
-    foreColor: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.object,
-      PropTypes.arrayOf(
-        PropTypes.shape({
-          offset: PropTypes.string.isRequired,
-          stopColor: PropTypes.string.isRequired,
-          stopOpacity: PropTypes.string.isRequired,
-        })
-      ),
-    ]),
+    foreColor: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     /**
      * 值改变的回调
-     * @param {number} value - 具体值
+     * @param {number} minValue - 最小具体值
+     * @param {number} maxValue - 最大具体值
      */
     onValueChange: PropTypes.func,
     /**
      * 滑动结束的回调
-     * @param {number} value - 具体值
+     * @param {number} minValue - 最小具体值
+     * @param {number} maxValue - 最大具体值
      */
     onSlidingComplete: PropTypes.func,
     /**
@@ -103,7 +100,7 @@ export default class Progress extends Gesture {
      */
     y2: PropTypes.string,
     /**
-     * thumb小圆球的填充色
+     * 结束端thumb小圆球的填充色
      */
     thumbFill: PropTypes.string,
     /**
@@ -111,7 +108,7 @@ export default class Progress extends Gesture {
      */
     thumbStrokeWidth: PropTypes.number,
     /**
-     * thumb小圆球的边框色
+     * 结束端thumb小圆球的边框色
      */
     thumbStroke: PropTypes.string,
     /**
@@ -119,19 +116,19 @@ export default class Progress extends Gesture {
      */
     thumbRadius: PropTypes.number,
     /**
-     * 是否需要最大值的thumb
+     * 开始端thumb小圆球的填充色
      */
-    needMaxCircle: PropTypes.bool,
+    minThumbFill: PropTypes.string,
     /**
-     * 是否需要最小值的thumb
+     * 开始端thumb小圆球的边框色
      */
-    needMinCircle: PropTypes.bool,
+    minThumbStroke: PropTypes.string,
     /**
      * 轨道不满360度开始的圆环颜色
      */
     startColor: PropTypes.string,
     /**
-     * 轨道不满360度开始的圆环颜色
+     * 轨道不满360度结束的圆环颜色
      */
     endColor: PropTypes.string,
     /**
@@ -142,10 +139,11 @@ export default class Progress extends Gesture {
 
   static defaultProps = {
     ...Gesture.defaultProps,
-    gradientId: 'Progress',
-    value: 50,
-    startDegree: 135,
-    andDegree: 270,
+    gradientId: 'Double',
+    maxValue: 25,
+    minValue: 0,
+    startDegree: 0,
+    andDegree: 450,
     min: 0,
     max: 100,
     stepValue: 0,
@@ -163,12 +161,12 @@ export default class Progress extends Gesture {
     x2: '100%',
     y2: '0%',
     thumbFill: '#fff',
-    thumbStroke: '#fff',
+    thumbStroke: '#FF4800',
     thumbStrokeWidth: 2,
-    thumbRadius: 2,
-    needMaxCircle: false,
-    needMinCircle: false,
-    startColor: '#FF4800',
+    thumbRadius: 3.5,
+    minThumbFill: '#fff',
+    minThumbStroke: '#FF4800',
+    startColor: '#E5E5E5',
     endColor: '#E5E5E5',
     renderCenterView: null,
   };
@@ -177,7 +175,8 @@ export default class Progress extends Gesture {
     super(props);
     this.fixDegreeAndBindToInstance(props);
     this.state = {
-      value: props.value,
+      minValue: props.minValue,
+      maxValue: props.maxValue,
     };
   }
 
@@ -186,7 +185,7 @@ export default class Progress extends Gesture {
   }
 
   fixDegreeAndBindToInstance(props) {
-    const { startDegree, andDegree, value } = props;
+    const { startDegree, andDegree, maxValue, minValue } = props;
     this.startDegree = startDegree % 360;
     if (andDegree >= 360) {
       this.andDegree = 360;
@@ -212,16 +211,17 @@ export default class Progress extends Gesture {
     this.endX = endX;
     this.endY = endY;
     // 具体值对应的角度
-    const deltaDeg = this.mapValueToDeltaDeg(value);
+    const deltaDeg = this.mapValueToDeltaDeg(maxValue);
+    const minDeltaDeg = this.mapValueToDeltaDeg(minValue);
     // 小于具体值的路径
-    this.foreScalePath = this.createSvgPath(deltaDeg);
+    this.foreScalePath = this.createSvgPath(deltaDeg, minDeltaDeg);
     const { progressStartX, progressStartY, progressX, progressY } = this.getCirclePosition(
       this.foreScalePath
     );
-    this.startProgressX = progressStartX;
-    this.startProgressY = progressStartY;
     this.progressX = progressX;
     this.progressY = progressY;
+    this.progressStartY = progressStartY;
+    this.progressStartX = progressStartX;
   }
 
   onStartShouldSetResponder({ nativeEvent: { locationX, locationY } }) {
@@ -239,7 +239,7 @@ export default class Progress extends Gesture {
       (x - thumbRadius) * (x - thumbRadius) + (y - thumbRadius) * (y - thumbRadius)
     );
     const innerR = r - scaleHeight;
-    const should = this.shouldUpdateScale(x0, y0);
+    const should = this.shouldUpdateScale(x0 - thumbRadius, y0 - thumbRadius);
     const finalShould = should && len <= r + thumbRadius && len >= innerR - thumbRadius;
     return finalShould;
   }
@@ -248,10 +248,10 @@ export default class Progress extends Gesture {
     const { startDegree, endDegree } = this;
     const deg = this.getDegRelativeCenter(x, y);
     let should;
-    if (startDegree < endDegree) {
-      should = deg >= startDegree && deg <= endDegree;
+    if (endDegree <= startDegree) {
+      should = (deg >= startDegree && deg > endDegree) || (deg < startDegree && deg <= endDegree);
     } else {
-      should = deg >= startDegree || deg <= endDegree % 360;
+      should = (deg >= startDegree && deg < endDegree) || (deg > startDegree && deg <= endDegree);
     }
     return should;
   }
@@ -276,27 +276,97 @@ export default class Progress extends Gesture {
   }
 
   eventHandle({ locationX, locationY }, fn) {
-    const { startDegree } = this;
-    const { needMaxCircle } = this.props;
-    const deg = this.getDegRelativeCenter(locationX, locationY);
-    if (this.shouldUpdateScale(locationX, locationY)) {
-      let deltaDeg = deg - startDegree;
-      if (deltaDeg < 0) {
-        deltaDeg = deg + 360 - startDegree;
-      }
-      const value = this.mapDeltaDegToValue(deltaDeg);
+    const { startDegree, endDegree } = this;
+    const { thumbRadius } = this.props;
+    // 鼠标点击的坐标
+    const deg = this.getDegRelativeCenter(locationX - thumbRadius, locationY - thumbRadius);
+    if (this.shouldUpdateScale(locationX - thumbRadius, locationY - thumbRadius)) {
+      // 最小值对应的角度
+      const startDeg = this.getDegRelativeCenter(this.progressStartX, this.progressStartY);
+      // 最大值对应的角度
+      const endDeg = this.getDegRelativeCenter(this.progressX, this.progressY);
+      // 最小值距离基础圆环最小值的角度
+      const startToStart = this.startCompareToStart(startDegree, endDegree, startDeg);
+      // 最大值距离基础圆环最小值的角度
+      const endToStart = endDeg >= startDegree ? endDeg - startDegree : 360 + endDeg - startDegree;
+      const minValue = this.mapDeltaDegToValue(startToStart);
+      const maxValue = this.mapDeltaDegToValue(endToStart);
+      // 鼠标点击的位置与初始位置的角度
+      const deltaDegree = deg >= startDegree ? deg - startDegree : deg + 360 - startDegree;
+      const value = this.mapDeltaDegToValue(deltaDegree);
 
-      this.foreScalePath = this.createSvgPath(deltaDeg);
-      const { progressX, progressY } = this.getCirclePosition(this.foreScalePath);
-      if (needMaxCircle) {
-        this.progressX = progressX;
-        this.progressY = progressY;
-      }
-      this.setState({
-        value,
-      });
+      // 点击的角度与渲染圆环最小值的距离
+      const degToStartDeg = this.degCompareToStartDeg(deg, startDeg, startDegree);
 
-      if (typeof fn === 'function') fn(value);
+      // 点击的角度与渲染圆环最大值的距离
+      const degToEndDeg = this.compareDeg(startDegree, endDegree, deg, endDeg);
+      // 最大值与基础圆环最小值的角度
+      const endDegToStartDegree =
+        endDeg >= startDegree ? endDeg - startDegree : 360 + endDeg - startDegree;
+      // 最小值与基础圆环最小值的角度
+      const startDegToStartDegree =
+        startDeg >= startDegree
+          ? startDeg - startDegree
+          : startDeg > endDegree
+          ? startDegree - startDeg
+          : 360 - startDegree + startDeg;
+      if (degToStartDeg >= degToEndDeg) {
+        this.foreScalePath = this.createSvgPath(deltaDegree, startDegToStartDegree);
+      } else {
+        this.foreScalePath = this.createSvgPath(endDegToStartDegree, deltaDegree);
+      }
+      const { progressStartX, progressStartY, progressX, progressY } = this.getCirclePosition(
+        this.foreScalePath
+      );
+      const locationToEnd = Math.sqrt(
+        (this.progressX - (locationX - thumbRadius)) ** 2 +
+          (this.progressY - (locationY - thumbRadius)) ** 2
+      );
+      const locationToStart = Math.sqrt(
+        (this.progressStartX - (locationX - thumbRadius)) ** 2 +
+          (this.progressStartY - (locationY - thumbRadius)) ** 2
+      );
+      if (locationToStart >= locationToEnd || value < minValue) {
+        if (value < minValue) {
+          this.progressStartX = progressStartX;
+          this.progressStartY = progressStartY;
+
+          if (typeof fn === 'function') fn({ minValue: value, maxValue });
+          this.setState({
+            minValue: value,
+            maxValue,
+          });
+        } else {
+          this.progressX = progressX;
+          this.progressY = progressY;
+
+          if (typeof fn === 'function') fn({ minValue, maxValue: value });
+          this.setState({
+            minValue,
+            maxValue: value,
+          });
+        }
+      } else if (locationToStart < locationToEnd || value > maxValue) {
+        if (value > maxValue) {
+          this.progressX = progressX;
+          this.progressY = progressY;
+
+          if (typeof fn === 'function') fn({ minValue, maxValue: value });
+          this.setState({
+            minValue,
+            maxValue: value,
+          });
+        } else {
+          this.progressStartX = progressStartX;
+          this.progressStartY = progressStartY;
+
+          if (typeof fn === 'function') fn({ minValue: value, maxValue });
+          this.setState({
+            minValue: value,
+            maxValue,
+          });
+        }
+      }
     }
   }
 
@@ -344,8 +414,7 @@ export default class Progress extends Gesture {
   }
 
   getDegRelativeCenter(x, y) {
-    const { thumbRadius } = this.props;
-    const { x: _x, y: _y } = this.getXYRelativeCenter(x - thumbRadius, y - thumbRadius);
+    const { x: _x, y: _y } = this.getXYRelativeCenter(x, y);
     let deg = (Math.atan2(_y, _x) * 180) / Math.PI;
     if (deg < 0) {
       deg += 360;
@@ -355,10 +424,81 @@ export default class Progress extends Gesture {
 
   // 进度条渲染线目的角度
   mapDeltaDegToScaleCount(deltaDeg) {
-    if (deltaDeg >= this.andDegree) {
+    if (deltaDeg > this.andDegree) {
       return this.andDegree;
     }
     return deltaDeg;
+  }
+
+  startCompareToStart(startDegree, endDegree, startDeg) {
+    // 当渲染的圆环的开始角度大于基础圆环的开始角度时
+    if (startDeg >= startDegree) {
+      return startDeg - startDegree;
+    }
+    // 当基础圆环的开始角度大于渲染圆环的角度时
+    if (startDegree >= startDeg) {
+      // 当基础圆环的开始角度大于渲染圆环的结束角度时
+      if (startDegree >= endDegree) {
+        return 360 + startDeg - startDegree;
+      }
+      return startDegree - startDeg;
+    }
+    return 360 + startDeg - startDegree;
+  }
+  degCompareToStartDeg(deg, startDeg, startDegree) {
+    // 当点击角度大于渲染圆环的开始角度
+    if (deg >= startDeg) {
+      // 当渲染圆环的开始角度大于基础圆环的开始角度
+      if (startDeg >= startDegree) {
+        return deg - startDeg;
+      }
+      // 当点击角度大于基础圆环的开始角度
+      if (deg >= startDegree) {
+        return 360 - deg + startDeg;
+      }
+      return deg - startDeg;
+    }
+    // 当基础圆环的开始角度大于渲染圆环的开始角度
+    if (startDegree > startDeg) {
+      return startDeg - deg;
+    }
+    // 当点击角度大于基础圆环的开始角度
+    if (deg >= startDegree) {
+      return startDeg - deg;
+    }
+    return 360 - startDeg + deg;
+  }
+
+  compareDeg(startDegree, endDegree, deg, endDeg) {
+    // 当基础圆环的结束角度大于开始角度时
+    if (endDegree > startDegree) {
+      // 当前点击的角度大于渲染圆环的结束角度时
+      if (deg > endDeg) {
+        return deg - endDeg;
+      }
+      return endDeg - deg;
+    }
+    // 当基础圆环的结束角度小于开始角度，当前点击的角度大于渲染圆环的结束角度时
+    if (deg > endDeg) {
+      // 渲染圆环的结束角度大于基础圆环的结束角度时
+      if (endDeg > endDegree) {
+        return deg - endDeg;
+      }
+      // 当前点击的角度小于基础圆环结束角度
+      if (deg < endDegree) {
+        return deg - endDeg;
+      }
+      return 360 + endDeg - deg;
+    }
+    // 渲染圆环的结束角度大于基础圆环的结束角度
+    if (endDeg > endDegree) {
+      // 当前点击的角度小于基础圆环的结束角度
+      if (deg < endDegree) {
+        return 360 - endDeg + deg;
+      }
+      return endDeg - deg;
+    }
+    return endDeg - deg;
   }
 
   mapDeltaDegToValue(deltaDeg) {
@@ -382,22 +522,23 @@ export default class Progress extends Gesture {
   }
 
   // 计算路径路径
-  createSvgPath(deltaDeg = 0) {
+  createSvgPath(deltaDeg = 0, minDeltaDeg = 0) {
     const { r } = this.getCircleInfo();
     const { startDegree } = this;
     const { scaleHeight } = this.props;
     const innerRadius = r - scaleHeight;
     const countDegree = this.mapDeltaDegToScaleCount(deltaDeg);
     const endDegree = (countDegree + startDegree) % 360;
-    const startAngle = ((startDegree % 360) * Math.PI) / 180;
+    const startAngle = (((startDegree + minDeltaDeg) % 360) * Math.PI) / 180;
     const endAngle = (endDegree * Math.PI) / 180;
     const _x1 = r + innerRadius * Math.cos(startAngle);
     const _y1 = r + innerRadius * Math.sin(startAngle);
     const _x2 = r + innerRadius * Math.cos(endAngle);
     const _y2 = r + innerRadius * Math.sin(endAngle);
-    const num = countDegree;
-    if (countDegree === 360) {
-      const middleDegree = (this.mapDeltaDegToScaleCount(startDegree + 180) * Math.PI) / 180;
+    const num = countDegree - minDeltaDeg;
+    if (countDegree - minDeltaDeg === 360) {
+      const middleDegree =
+        (this.mapDeltaDegToScaleCount(startDegree + minDeltaDeg + 180) * Math.PI) / 180;
       const middleX = r + innerRadius * Math.cos(middleDegree);
       const middleY = r + innerRadius * Math.sin(middleDegree);
       const path = `M${_x1} ${_y1} A${innerRadius} ${innerRadius} 0 ${
@@ -431,17 +572,15 @@ export default class Progress extends Gesture {
       thumbStrokeWidth,
       thumbStroke,
       thumbRadius,
-      needMaxCircle,
-      needMinCircle,
+      minThumbFill,
+      minThumbStroke,
       startColor,
       endColor,
       renderCenterView,
-      min,
     } = this.props;
     const { r } = this.getCircleInfo();
     const size = r * 2;
     const isGradient = foreColor && typeof foreColor === 'object';
-    const greater = this.state.value !== min;
     return (
       <View
         {...responder}
@@ -486,44 +625,43 @@ export default class Progress extends Gesture {
               stroke={endColor}
             />
           )}
-          {isGradient && greater && (
+          {isGradient && (
             <Gradient
               gradientId={gradientId}
               x1={x1}
               x2={x2}
               y1={y1}
               y2={y2}
+              isGradient={isGradient}
               foreColor={foreColor}
             />
           )}
           <PathCustom
             isGradient={isGradient}
             path={this.foreScalePath}
+            gradientId={gradientId}
             strokeOpacity={foreStrokeOpacity}
             strokeWidth={scaleHeight}
-            gradientId={gradientId}
             foreColor={foreColor}
           />
-          {needMaxCircle && (
-            <ProgressCircle
-              cx={this.progressX}
-              cy={this.progressY}
-              r={thumbRadius}
-              fill={thumbFill}
-              strokeWidth={thumbStrokeWidth}
-              stroke={thumbStroke}
-            />
-          )}
-          {needMinCircle && (
-            <ProgressCircle
-              cx={this.startProgressX}
-              cy={this.startProgressY}
-              r={thumbRadius}
-              fill={foreColor}
-              strokeWidth={thumbStrokeWidth}
-              stroke={foreColor}
-            />
-          )}
+
+          <ProgressCircle
+            cx={this.progressStartX}
+            cy={this.progressStartY}
+            r={thumbRadius}
+            fill={minThumbFill}
+            strokeWidth={thumbStrokeWidth}
+            stroke={minThumbStroke}
+          />
+
+          <ProgressCircle
+            cx={this.progressX}
+            cy={this.progressY}
+            r={thumbRadius}
+            fill={thumbFill}
+            strokeWidth={thumbStrokeWidth}
+            stroke={thumbStroke}
+          />
         </Svg>
         {renderCenterView}
       </View>
