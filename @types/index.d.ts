@@ -1,5 +1,12 @@
 declare module 'tuya-panel-kit' {
-  import { StyleProp, ViewStyle, TextStyle, TextProps, TouchableOpacityProps } from 'react-native';
+  import {
+    StyleProp,
+    ViewStyle,
+    TextStyle,
+    TextProps,
+    TouchableOpacityProps,
+    ScrollViewProps,
+  } from 'react-native';
 
   // Button
   export interface ButtonProps {
@@ -23,7 +30,7 @@ declare module 'tuya-panel-kit' {
     style?: StyleProp<ViewStyle>;
     wrapperStyle?: StyleProp<ViewStyle>;
     border?: string | boolean | number;
-    textStyle?: StyleProp<ViewStyle>;
+    textStyle?: StyleProp<TextStyle>;
     badgeStyle?: StyleProp<ViewStyle>;
     onPress?: () => void;
     onLayout?: () => void;
@@ -35,6 +42,9 @@ declare module 'tuya-panel-kit' {
       bgWidth?: number;
       bgHeight?: number;
       bgColor?: string;
+      margin?: number[];
+      iconColor?: string;
+      bgRadius?: number;
     };
   }
 
@@ -46,7 +56,7 @@ declare module 'tuya-panel-kit' {
     onChange?: (eventName: string, ...args: any) => void;
     loading?: boolean;
     text?: string;
-    textStyle?: StyleProp<ViewStyle>;
+    textStyle?: StyleProp<TextStyle>;
     type?: 'primary' | 'primaryGradient' | 'primaryBorder' | 'normal' | 'small';
     wrapperStyle?: StyleProp<ViewStyle>;
     backgroundColorTouched?: string;
@@ -83,8 +93,8 @@ declare module 'tuya-panel-kit' {
 
   export class Carousel extends React.Component<CarouselProps> {}
 
-  // Checkout
-  export interface CheckoutProps {
+  // Checkbox
+  export interface CheckboxProps {
     style?: StyleProp<ViewStyle>;
     size?: number;
     disabled?: boolean;
@@ -99,7 +109,7 @@ declare module 'tuya-panel-kit' {
     children?: any;
   }
 
-  export class Checkout extends React.Component<CheckoutProps> {}
+  export class Checkbox extends React.Component<CheckboxProps> {}
 
   // CircleView
 
@@ -167,6 +177,7 @@ declare module 'tuya-panel-kit' {
     isTimeFirst?: boolean;
     date?: Date;
     defaultDate?: Date;
+    dateSortKeys?: string[];
     style?: StyleProp<ViewStyle>;
     pickerFontColor?: string;
   }
@@ -182,49 +193,67 @@ declare module 'tuya-panel-kit' {
     titleStyle?: StyleProp<ViewStyle>;
     subTitle?: string;
     subTitleStyle?: StyleProp<ViewStyle>;
+    motionType?: 'none' | 'ScaleFadeIn' | 'Fade' | 'PullUp' | 'ScalePullDown';
+    onConfirm?: (data: any, args: { close: () => void }) => void;
+    motionConfig?: {
+      initScale?: number;
+      finalScale?: number;
+      showDuration?: number;
+      hideDuration?: number;
+    };
+  }
+
+  interface DialogElse {
+    onShow?: () => void;
+    onHide?: () => void;
+    onDismiss?: () => void;
   }
 
   interface DialogAlertProps extends DialogProps {
     footerWrapperStyle?: StyleProp<ViewStyle>;
     confirmText: string;
-    confirmTextStyle?: StyleProp<ViewStyle>;
-    onConfirm?: () => void;
+    confirmTextStyle?: StyleProp<TextStyle>;
   }
 
   interface DialogCheckboxProps extends DialogProps {
     type?: 'radio' | 'switch';
-    value: string | number | undefined;
+    value: string | number | string[];
     maxItemNum?: number;
     dataSource: DialogCheckbox[];
     onChange?: (value: string | number) => void;
     headerStyle?: StyleProp<ViewStyle>;
     cancelText: string;
-    cancelTextStyle?: StyleProp<ViewStyle>;
+    cancelTextStyle?: StyleProp<TextStyle>;
     onCancel?: () => void;
     footerWrapperStyle?: StyleProp<ViewStyle>;
     confirmText: string;
-    confirmTextStyle?: StyleProp<ViewStyle>;
-    onConfirm?: (value: string | number) => void;
+    confirmTextStyle?: StyleProp<TextStyle>;
   }
   interface DialogCheckbox {
     value?: string | number;
     title?: string;
+    iconSize?: number;
+    reverse?: boolean;
+    Icon?: string;
+    hideOnUnselect?: boolean;
   }
 
   interface DialogConfirmProps extends DialogProps {
     cancelText: string;
-    cancelTextStyle?: StyleProp<ViewStyle>;
+    cancelTextStyle?: StyleProp<TextStyle>;
     onCancel?: () => void;
     footerWrapperStyle?: StyleProp<ViewStyle>;
     confirmText: string;
-    confirmTextStyle?: StyleProp<ViewStyle>;
-    onConfirm?: () => void;
+    confirmTextStyle?: StyleProp<TextStyle>;
   }
 
   interface DialogListProps extends DialogProps {
     maxItemNum?: number;
     dataSource: DialogList[];
     listStyle?: StyleProp<ViewStyle>;
+    cancelText?: string;
+    confirmText: string;
+    onCancel?: () => void;
   }
 
   interface DialogList {
@@ -239,11 +268,14 @@ declare module 'tuya-panel-kit' {
     footerWrapperStyle?: StyleProp<ViewStyle>;
     textContentType?: string;
     cancelText: string;
-    cancelTextStyle?: StyleProp<ViewStyle>;
+    cancelTextStyle?: StyleProp<TextStyle>;
     onCancel?: () => void;
     confirmText: string;
-    confirmTextStyle?: StyleProp<ViewStyle>;
-    onConfirm?: (value: string | number) => void;
+    value?: string;
+    defaultValue?: string;
+    placeholder?: string;
+    confirmTextStyle?: StyleProp<TextStyle>;
+    onChangeText?: (text: string) => void;
   }
 
   interface DialogCustomProps extends DialogProps {
@@ -253,20 +285,19 @@ declare module 'tuya-panel-kit' {
     headerStyle?: StyleProp<ViewStyle>;
     footerWrapperStyle?: StyleProp<ViewStyle>;
     cancelText: string;
-    cancelTextStyle?: StyleProp<ViewStyle>;
+    cancelTextStyle?: StyleProp<TextStyle>;
     onCancel?: () => void;
     confirmText: string;
-    confirmTextStyle?: StyleProp<ViewStyle>;
-    onConfirm?: () => void;
+    confirmTextStyle?: StyleProp<TextStyle>;
   }
 
   export class Dialog extends React.Component<DialogProps> {
-    static alert: (option: DialogAlertProps) => void;
-    static checkbox: (option: DialogCheckboxProps) => void;
-    static confirm: (option: DialogConfirmProps) => void;
-    static list: (option: DialogListProps) => void;
-    static prompt: (option: DialogPromptProps) => void;
-    static custom: (option: DialogCustomProps) => void;
+    static alert: (option: DialogAlertProps, option2?: DialogElse) => void;
+    static checkbox: (option: DialogCheckboxProps, option2?: DialogElse) => void;
+    static confirm: (option: DialogConfirmProps, option2?: DialogElse) => void;
+    static list: (option: DialogListProps, option2?: DialogElse) => void;
+    static prompt: (option: DialogPromptProps, option2?: DialogElse) => void;
+    static custom: (option: DialogCustomProps, option2?: DialogElse) => void;
     static close: () => void;
   }
 
@@ -287,10 +318,17 @@ declare module 'tuya-panel-kit' {
     text?: string;
     size?: number;
     d?: string | undefined;
+    style?: StyleProp<ViewStyle>;
+    textStyle?: StyleProp<TextStyle>;
     iconfontStyle?: StyleProp<ViewStyle>;
     contentStyle?: StyleProp<ViewStyle>;
+    imageStyle?: StyleProp<ViewStyle>;
     showPosition?: string;
+    image?: number;
     color?: string;
+    showIcon?: boolean;
+    children?: any;
+    onFinish?: () => void;
   }
 
   export class GlobalToast extends React.Component<GlobalToastProps> {
@@ -347,27 +385,87 @@ declare module 'tuya-panel-kit' {
     onShow?: () => void;
     onHide?: () => void;
     // 高阶
-    titleTextStyle?: StyleProp<ViewStyle>;
+    titleTextStyle?: StyleProp<TextStyle>;
     titleWrapperStyle?: StyleProp<ViewStyle>;
     title?: string;
     cancelText?: string;
     confirmText?: string;
-    cancelTextStyle?: StyleProp<ViewStyle>;
-    confirmTextStyle?: StyleProp<ViewStyle>;
+    cancelTextStyle?: StyleProp<TextStyle>;
+    confirmTextStyle?: StyleProp<TextStyle>;
     footerWrapperStyle?: StyleProp<ViewStyle>;
     footer?: React.ElementType<any>;
+    onDismiss?: () => void;
     onCancel?: () => void;
-    onConfirm?: () => void;
+    onConfirm?: (value?: {}) => void;
   }
 
-  export class Modal extends React.Component<ModalProps> {}
+  interface ModalListProps extends ModalProps {
+    listWrapperStyle?: StyleProp<ViewStyle>;
+    dataSource?: ListDate[];
+    type?: 'radio' | 'switch';
+    maxItemNum?: number;
+    selectedIcon?: React.ElementType<any> | null;
+    iconTintColor?: string;
+    contentCenter?: boolean;
+    subTitle?: string;
+    value?: string | number | string[] | number[];
+    listItemStyle?: StyleProp<ViewStyle>;
+    onSelect?: (value: string | number) => void;
+  }
+
+  interface ListDate {
+    styles?: StyleProp<ViewStyle>;
+    title?: string;
+    Icon?: React.ElementType<any>;
+    value: any;
+  }
+
+  interface ModalCountdownProps extends ModalProps {
+    hourText?: string;
+    minuteText?: string;
+    onValueChange?: () => void;
+  }
+
+  interface ModalDatePickerProps extends ModalProps, DatePickerProps {
+    onDateChange?: (date: Date) => void;
+    hourText?: string;
+    minuteText?: string;
+  }
+
+  interface ModalPickerProps extends ModalProps {
+    label?: string | undefined | string[];
+    spacing?: number;
+    labelOffset?: number;
+    pickerWrapperStyle?: StyleProp<ViewStyle>;
+    pickerStyle?: StyleProp<ViewStyle>;
+    value?: string | number | boolean | undefined | string[];
+    dataSource?: PickerDataProps[][] | PickerDataProps[];
+    singlePicker?: boolean;
+    pickerFontColor?: string;
+    pickerUnitColor?: string;
+    onValueChange?: (newValue?: string | number, idx?: number) => void;
+    onBack?: () => void;
+  }
+
+  interface PickerDataProps {
+    label: string;
+    value: string;
+  }
+
+  export class Modal extends React.Component<ModalProps> {
+    static Countdown: React.ElementType<ModalCountdownProps>;
+    static DatePicker: React.ElementType<ModalDatePickerProps>;
+    static List: React.ElementType<ModalListProps>;
+    static Picker: React.ElementType<ModalPickerProps>;
+    static render: (option: React.ReactNode) => void;
+  }
 
   // Motion
 
   export interface MotionProps {
-    style?: StyleProp<ViewStyle>;
+    style?: StyleProp<ViewStyle> | {};
     show?: boolean;
-    children?: React.ElementType<any>;
+    children?: React.ReactNode;
     showDuration?: number;
     hideDuration?: number;
     onShow?: () => void;
@@ -385,6 +483,7 @@ declare module 'tuya-panel-kit' {
   }
 
   interface MotionPullUpProps extends MotionProps {
+    style?: {};
     dropHeight?: number;
     fadeOpacity?: number;
   }
@@ -438,7 +537,7 @@ declare module 'tuya-panel-kit' {
     icon?: string;
     backIcon?: string;
     variant?: string;
-    enableClose?: string;
+    enableClose?: boolean;
     autoCloseTime?: number;
     message: string;
     onClose?: () => void;
@@ -476,6 +575,7 @@ declare module 'tuya-panel-kit' {
 
   // PickerView
   export interface PickerViewProps {
+    itemStyle?: StyleProp<ViewStyle>;
     style?: StyleProp<ViewStyle>;
     loop?: boolean;
     children: React.ReactNode;
@@ -498,8 +598,8 @@ declare module 'tuya-panel-kit' {
   // Popup
   export interface PopupProps {
     wrapperStyle?: any;
-    title?: string;
-    titleTextStyle?: StyleProp<ViewStyle>;
+    title?: string | string[];
+    titleTextStyle?: StyleProp<TextStyle>;
     titleWrapperStyle?: StyleProp<ViewStyle>;
     switchValue?: boolean;
     onSwitchValueChange?: (v: boolean) => void;
@@ -512,11 +612,14 @@ declare module 'tuya-panel-kit' {
     backIconColor?: string;
     backText?: string;
     cancelText?: string;
-    cancelTextStyle?: StyleProp<ViewStyle>;
+    cancelTextStyle?: StyleProp<TextStyle>;
     confirmText?: string;
-    confirmTextStyle?: StyleProp<ViewStyle>;
+    confirmTextStyle?: StyleProp<TextStyle>;
+    showBack?: boolean;
+    onBack?: (args: { close: () => void }) => void;
     onCancel?: () => void;
-    onConfirm?: (data: any, ...extraParams: any[]) => void;
+    onMaskPress?: (args: { close: () => void }) => void;
+    onConfirm?: (data: any, args: { close: () => void }) => void;
   }
 
   interface PopUpListProps extends PopupProps {
@@ -527,7 +630,8 @@ declare module 'tuya-panel-kit' {
     selectedIcon?: React.ElementType<any> | null;
     iconTintColor?: string;
     contentCenter?: boolean;
-    value?: string | number;
+    subTitle?: string;
+    value?: string | number | string[] | number[];
     listItemStyle?: StyleProp<ViewStyle>;
     onSelect?: (value: string | number) => void;
   }
@@ -552,9 +656,9 @@ declare module 'tuya-panel-kit' {
     minuteText?: string;
     onValueChange?: (data?: valueChangeProps) => void;
     hourPickerStyle?: StyleProp<ViewStyle>;
-    hourUnitStyle?: StyleProp<ViewStyle>;
+    hourUnitStyle?: StyleProp<TextStyle>;
     minutePickerStyle?: StyleProp<ViewStyle>;
-    minuteUnitStyle?: StyleProp<ViewStyle>;
+    minuteUnitStyle?: StyleProp<TextStyle>;
   }
   interface valueChangeProps {
     hour?: number;
@@ -564,6 +668,8 @@ declare module 'tuya-panel-kit' {
 
   interface PopupDatePickerProps extends PopupProps, DatePickerProps {
     onDateChange?: (date: Date) => void;
+    hourText?: string;
+    minuteText?: string;
   }
 
   interface PopupNumberSelectorProps extends PopupProps {
@@ -577,18 +683,20 @@ declare module 'tuya-panel-kit' {
     onValueChange?: (value?: number) => void;
   }
 
-  interface PopupPickerProps extends PopupProps {
-    label?: string | undefined;
+  interface PopupPickerProps extends Omit<PopupProps, 'onConfirm'> {
+    label?: string | undefined | string[];
     spacing?: number;
     labelOffset?: number;
     pickerWrapperStyle?: StyleProp<ViewStyle>;
     pickerStyle?: StyleProp<ViewStyle>;
-    value?: string | number | boolean | undefined;
-    dataSource?: PickerDataProps[];
+    value?: string | number | boolean | undefined | string[];
+    dataSource?: PickerDataProps[][] | PickerDataProps[];
     singlePicker?: boolean;
     pickerFontColor?: string;
     pickerUnitColor?: string;
     onValueChange?: (newValue?: string | number, idx?: number) => void;
+    onBack?: () => void;
+    onConfirm?: (data: any, idx: number, args: { close: () => void }) => void;
   }
 
   interface PickerDataProps {
@@ -602,15 +710,45 @@ declare module 'tuya-panel-kit' {
     content: any;
   }
 
+  interface PopupTipsProps extends TipsProps {
+    modalChildStyle?: StyleProp<ViewStyle>;
+  }
+
+  interface PopupToastProps {
+    message?: string;
+  }
+
+  interface PopupDropdownProps {
+    data: {
+      key?: string;
+      title?: string;
+      value?: string;
+    }[];
+    onSelect?: (value?: number | string) => void;
+    cornerSize?: string;
+    customCornerSize?: string;
+    cornerDirection?: string;
+    cornerDirectionValue?: string;
+    cornerColor?: string;
+    corner?: boolean;
+    listStyle?: StyleProp<ViewStyle>;
+    cornerStyle?: StyleProp<ViewStyle>;
+    touchViewStyle?: StyleProp<ViewStyle>;
+    textStyle?: StyleProp<TextStyle>;
+  }
+
   export class Popup extends React.Component<PopupProps> {
-    static list: (option: PopUpListProps) => void;
-    static countdown: (option: PopUpCountdownProps) => void;
-    static numberSelector: (option: PopupNumberSelectorProps) => void;
+    static list: (option: PopUpListProps, option2?: DialogElse) => void;
+    static countdown: (option: PopUpCountdownProps, option2?: DialogElse) => void;
+    static numberSelector: (option: PopupNumberSelectorProps, option2?: DialogElse) => void;
     static close: () => void;
-    static datePicker: (option: PopupDatePickerProps) => void;
-    static timerPicker: (option: PopupTimerPickerProps) => void;
-    static picker: (option: PopupPickerProps) => void;
-    static custom: (option: PopupCustomProps) => void;
+    static datePicker: (option: PopupDatePickerProps, option2?: DialogElse) => void;
+    static timerPicker: (option: PopupTimerPickerProps, option2?: DialogElse) => void;
+    static picker: (option: PopupPickerProps, option2?: DialogElse) => void;
+    static custom: (option: PopupCustomProps, option2?: DialogElse) => void;
+    static tips: (option: PopupTipsProps) => void;
+    static toast: (option: PopupToastProps) => void;
+    static dropdown: (option: PopupDropdownProps) => void;
   }
 
   // Progress
@@ -632,13 +770,8 @@ declare module 'tuya-panel-kit' {
       | string
       | StopsProps[]
       | {
-          x1: string;
-          x2: string;
-          y1: string;
-          y2: string;
+          [key: string]: string;
         };
-    onValueChange?: (value?: number) => void;
-    onSlidingComplete?: (value?: number) => void;
     x1?: string;
     x2?: string;
     y1?: string;
@@ -655,13 +788,16 @@ declare module 'tuya-panel-kit' {
     pointerEvents?: 'box-none' | 'none' | 'box-only' | 'auto';
   }
 
-  interface SpaceProps extends ProgressProps {}
+  interface SpaceProps extends ProgressProps {
+    onValueChange?: (value?: number) => void;
+    onSlidingComplete?: (value?: number) => void;
+  }
 
   interface DoubleProps extends ProgressProps {
     maxValue?: number;
     minValue?: number;
-    onValueChange?: (minValue?: number, maxValue?: number) => void;
-    onSlidingComplete?: (minValue?: number, maxValue?: number) => void;
+    onValueChange?: (argus: { minValue?: number; maxValue?: number }) => void;
+    onSlidingComplete?: (argus: { minValue?: number; maxValue?: number }) => void;
     minThumbFill?: string;
     minThumbStroke?: string;
   }
@@ -677,15 +813,15 @@ declare module 'tuya-panel-kit' {
     reduceDegree2?: number;
     min2?: number;
     max2?: number;
-    onValueChange?: (value1: number, value2?: number) => void;
-    onSlidingComplete?: (value1?: number, value2?: number) => void;
+    onValueChange?: (argus: { value1: number; value2?: number }) => void;
+    onSlidingComplete?: (argus: { value1?: number; value2?: number }) => void;
     thumbRadius1?: number;
     thumbRadius2?: number;
     needCircle1?: boolean;
     needCircle2?: boolean;
   }
 
-  export class Progress extends React.Component<ProgressProps> {
+  export class Progress extends React.Component<SpaceProps> {
     static Space: React.ElementType<SpaceProps>;
     static Double: React.ElementType<DoubleProps>;
     static Compose: React.ElementType<ComposeProps>;
@@ -725,6 +861,16 @@ declare module 'tuya-panel-kit' {
 
   // Slider
   export interface SliderProps {
+    theme?: {
+      width: number;
+      trackRadius: number;
+      trackHeight: number;
+      minimumTrackTintColor: string;
+      maximumTrackTintColor: string;
+      thumbSize: number;
+      thumbRadius: number;
+      thumbTintColor: string;
+    };
     onLayout?: (x?: number) => void;
     value?: number;
     disabled?: boolean;
@@ -764,7 +910,10 @@ declare module 'tuya-panel-kit' {
     horizontal?: boolean;
   }
 
-  export class Slider extends React.Component<SliderProps> {}
+  export class Slider extends React.Component<SliderProps> {
+    static Horizontal: React.ElementType<SliderProps>;
+    static Vertical: React.ElementType<SliderProps>;
+  }
 
   // Swipeout
   export interface SwipeoutProps {
@@ -798,8 +947,12 @@ declare module 'tuya-panel-kit' {
       width?: number;
       height?: number;
       thumbSize?: number;
-      margin?: number;
-      tintColor?: string;
+      margin?: number | [];
+      tintColor?:
+        | string
+        | {
+            [key: string]: string;
+          };
       onTintColor?: string;
       thumbTintColor?: string;
       onThumbTintColor?: string;
@@ -814,12 +967,13 @@ declare module 'tuya-panel-kit' {
     tintColor?:
       | string
       | {
-          x1: string;
-          x2: string;
-          y1: string;
-          y2: string;
+          [key: string]: string;
         };
-    onTintColor?: string | {};
+    onTintColor?:
+      | string
+      | {
+          [key: string]: string;
+        };
     thumbTintColor?: string;
     onThumbTintColor?: string;
     borderColor?: string;
@@ -827,8 +981,8 @@ declare module 'tuya-panel-kit' {
     useNativeDriver?: boolean;
     onText?: string;
     offText?: string;
-    onTextStyle?: StyleProp<ViewStyle>;
-    offTextStyle?: StyleProp<ViewStyle>;
+    onTextStyle?: StyleProp<TextStyle>;
+    offTextStyle?: StyleProp<TextStyle>;
   }
 
   export class SwitchButton extends React.Component<SwitchButtonProps> {}
@@ -838,8 +992,11 @@ declare module 'tuya-panel-kit' {
     style?: StyleProp<ViewStyle>;
     data: DataProps[];
     separatorStyle?: StyleProp<ViewStyle>;
+    contentContainerStyle?: StyleProp<ViewStyle>;
     flatListRef?: () => void;
     useART?: boolean;
+    renderItem?: any;
+    scrollEnabled?: boolean;
   }
   interface DataProps {
     key?: string | number;
@@ -849,7 +1006,16 @@ declare module 'tuya-panel-kit' {
     checked?: boolean;
     onChange?: () => void;
   }
-  export class TYFlatList extends React.Component<TYFlatListProps> {}
+
+  interface TYFlatListCheckbox extends TYFlatListProps, CheckboxProps {}
+
+  export class TYFlatList extends React.Component<TYFlatListProps> {
+    static CheckboxItem: React.ElementType<TYFlatListCheckbox>;
+    static Item: React.ElementType<TYSectionItemProps>;
+    static InputItem: React.ElementType<TYSectionInputProps>;
+    static SliderItem: React.ElementType<TYSectionSliderProps>;
+    static SwitchItem: React.ElementType<TYSectionListProps>;
+  }
 
   // TYListItem
   export interface TYListItemProps extends TouchableOpacityProps {
@@ -893,26 +1059,101 @@ declare module 'tuya-panel-kit' {
 
   export class TYListItem extends React.Component<TYListItemProps> {}
 
-  interface SectionProps {
-    title?: string;
-    data: DataProps[];
-  }
-
   // TYSectionList
   export interface TYSectionListProps {
+    scrollEnabled?: boolean;
     style?: StyleProp<ViewStyle>;
-    sections: SectionProps[];
+    sections: {
+      key?: string;
+      title?: string;
+      value?: string | number | boolean;
+      disabled?: boolean;
+      footer?: any;
+      theme?: { descFontColor?: any };
+      data?: {
+        key?: string | number;
+        value?: string | number | boolean;
+        Action?: any;
+        title?: string | number;
+        subTitle?: string;
+        arrow?: boolean;
+        checked?: boolean;
+        disabled?: boolean;
+        onPress?: (idx: number) => void;
+        onValueChange?: (value: string) => void;
+      }[];
+    }[];
     headerStyle?: StyleProp<ViewStyle>;
+    contentContainerStyle?: StyleProp<ViewStyle>;
+    contentContainStyle?: StyleProp<ViewStyle>;
     separatorStyle?: StyleProp<ViewStyle>;
+    ListHeaderComponent?: React.ReactNode;
     sectionListRef?: () => void;
     useART?: boolean;
+    renderItem?: any;
   }
-  export class TYSectionList extends React.Component<TYSectionListProps> {}
+
+  interface TYSectionItemProps {
+    styles?:
+      | {
+          container?: StyleProp<ViewStyle>;
+          contentLeft?: StyleProp<ViewStyle>;
+          contentCenter?: StyleProp<ViewStyle>;
+          contentRight?: StyleProp<ViewStyle>;
+          title?: StyleProp<TextStyle>;
+          subTitle?: StyleProp<TextStyle>;
+        }
+      | boolean;
+    theme?: {
+      boardBg: string;
+      fontColor: string;
+      subFontColor: string;
+      descFontColor: string;
+      cellLine: string;
+      cellBg: string;
+      cellRadius: number;
+      margin: [];
+      padding: [];
+    };
+    arrow?: boolean;
+    subTitle?: string;
+    iconSize?: number;
+    Icon?: any;
+    Action?: any;
+    arrowUseIcon?: boolean;
+    onPress?: () => void;
+    arrowColor?: string;
+    disabled?: boolean;
+    actionDisabled?: boolean;
+    title?: string;
+    children?: any;
+    imageFollowIconColor?: boolean;
+    iconType?: 'auto' | 'image' | 'iconfont' | 'text';
+    actionType?: 'auto' | 'image' | 'iconfont' | 'text';
+    needUpdate?: boolean;
+    useART?: boolean;
+  }
+
+  interface TYSectionInputProps extends TYSectionListProps {
+    title: string;
+    titleStyle?: StyleProp<TextStyle>;
+    inputStyle?: StyleProp<ViewStyle>;
+  }
+
+  interface TYSectionSliderProps extends SliderProps, TYSectionListProps {}
+
+  export class TYSectionList extends React.Component<TYSectionListProps> {
+    static CheckboxItem: React.ElementType<TYSectionListProps>;
+    static Item: React.ElementType<TYSectionItemProps>;
+    static InputItem: React.ElementType<TYSectionInputProps>;
+    static SliderItem: React.ElementType<TYSectionSliderProps>;
+    static SwitchItem: React.ElementType<TYSectionListProps>;
+  }
 
   // TYText
   export interface TYTextProps extends TextProps {
-    style?: StyleProp<ViewStyle>;
-    type?: 'heading' | 'title' | 'paragraph';
+    style?: StyleProp<TextStyle>;
+    type?: 'heading' | 'title' | 'paragraph' | string;
     size?: string | number;
     text?: string;
     align?: 'left' | 'center' | 'right';
@@ -929,14 +1170,14 @@ declare module 'tuya-panel-kit' {
     activeKey?: string | number;
     defaultActiveKey?: string | number;
     onChange?: (activeKey?: number | string) => void;
-    children?: React.ElementType<any>;
+    children?: any;
     tabContentStyle?: StyleProp<ViewStyle>;
     tabDefaultColor?: string;
     tabBarBackgroundColor?: string;
     tabBarUnderlineStyle?: StyleProp<ViewStyle>;
     tabBarStyle?: StyleProp<ViewStyle>;
-    tabTextStyle?: StyleProp<ViewStyle>;
-    tabActiveTextStyle?: StyleProp<ViewStyle>;
+    tabTextStyle?: StyleProp<TextStyle>;
+    tabActiveTextStyle?: StyleProp<TextStyle>;
     tabsContainerStyle?: StyleProp<ViewStyle>;
     tabStyle?: StyleProp<ViewStyle>;
     style?: StyleProp<ViewStyle>;
@@ -955,11 +1196,12 @@ declare module 'tuya-panel-kit' {
 
   // TabBar
   export interface TabBarProps {
+    type?: string;
     underlineStyle?: StyleProp<ViewStyle>;
     tabStyle?: StyleProp<ViewStyle>;
     tabActiveStyle?: StyleProp<ViewStyle>;
-    tabTextStyle?: StyleProp<ViewStyle>;
-    tabActiveTextStyle?: StyleProp<ViewStyle>;
+    tabTextStyle?: StyleProp<TextStyle>;
+    tabActiveTextStyle?: StyleProp<TextStyle>;
     wrapperStyle?: StyleProp<ViewStyle>;
     style?: StyleProp<ViewStyle>;
     activeKey?: string | number;
@@ -985,13 +1227,18 @@ declare module 'tuya-panel-kit' {
     wrapperStyle?: StyleProp<ViewStyle>;
     tabStyle?: StyleProp<ViewStyle>;
     tabActiveStyle?: StyleProp<ViewStyle>;
-    tabTextStyle?: StyleProp<ViewStyle>;
-    tabActiveTextStyle?: StyleProp<ViewStyle>;
+    tabTextStyle?: StyleProp<TextStyle>;
+    tabActiveTextStyle?: StyleProp<TextStyle>;
     tabContentStyle?: StyleProp<ViewStyle>;
     underlineStyle?: StyleProp<ViewStyle>;
     underlineWidth?: number;
     activeKey?: number | string;
-    dataSource: TabDateArr[];
+    dataSource: {
+      value: string;
+      label?: string;
+      disabled?: boolean;
+      renderTab?: any;
+    }[];
     disabled?: boolean;
     maxItem?: number;
     tabPosition?: 'top' | 'bottom';
@@ -1014,16 +1261,24 @@ declare module 'tuya-panel-kit' {
     };
   }
 
-  interface TabDateArr {
-    value: string;
-    label: string;
-  }
-
-  interface TabContentProps extends TabsProps {
+  interface TabContentProps {
+    children?: React.ReactElement[];
+    style?: StyleProp<ViewStyle>;
+    disabled?: boolean;
     activeIndex: number;
+    preload?: boolean;
+    preloadTimeout?: number;
+    velocityThreshold?: number;
     onMove?: (gestureState?: {}, index?: number, percent?: number) => void;
     onRelease?: (gestureState?: {}, index?: number, percent?: number) => void;
-    children: React.ReactElement[];
+    renderPlaceholder?: () => void;
+    animationConfig?: {
+      duration: number;
+      easing: () => void;
+      delay: number;
+      isInteraction: boolean;
+      useNativeDriver: boolean;
+    };
   }
 
   interface TabPanelProps {
@@ -1034,6 +1289,7 @@ declare module 'tuya-panel-kit' {
   export class Tabs extends React.Component<TabsProps> {
     static TabContent: React.ElementType<TabContentProps>;
     static TabPanel: React.ElementType<TabPanelProps>;
+    static TabScrollView: React.ElementType<ScrollViewProps>;
   }
 
   // TimerPicker
@@ -1059,7 +1315,7 @@ declare module 'tuya-panel-kit' {
     tipStyle?: StyleProp<ViewStyle>;
     bgColor?: string;
     show?: boolean;
-    children?: React.ElementType<any>;
+    children?: any;
     showCorner?: boolean;
     motionType?: string;
     cornerPosition?:
@@ -1079,7 +1335,7 @@ declare module 'tuya-panel-kit' {
   export interface ToastProps {
     style?: StyleProp<ViewStyle>;
     contentStyle?: StyleProp<ViewStyle>;
-    textStyle?: StyleProp<ViewStyle>;
+    textStyle?: StyleProp<TextStyle>;
     imageStyle?: StyleProp<ViewStyle>;
     text?: string;
     show: boolean;
@@ -1126,15 +1382,39 @@ declare module 'tuya-panel-kit' {
     static Loading: React.ElementType<ToastLoadingProps>;
   }
 
+  // Stepper
+  export interface StepperProps {
+    style?: StyleProp<ViewStyle>;
+    buttonStyle?: StyleProp<ViewStyle>;
+    inputStyle?: StyleProp<ViewStyle>;
+    buttonType?: 'ellipse' | 'triangle';
+    min?: number;
+    max?: number;
+    value?: number;
+    stepValue?: number;
+    editable?: boolean;
+    ellipseIconColor?: string;
+    triangleIconColor?: string;
+    selectionColor?: string;
+    iconMinusPath?: string;
+    iconPlusPath?: string;
+    onValueChange?: (value: number) => void;
+  }
+
+  export class Stepper extends React.Component<StepperProps> {}
+
   // TopBar
-  export interface TopBarProps {
+  export interface TopBarProps extends TopBarContainerProps, TopBarContentProps {
     theme?: {
       background?: string;
       color?: string;
     };
+    actions?: TopBarActionProps[];
+    leftActions?: TopBarActionProps[];
+    onBack?: () => void;
   }
 
-  export interface TopBarContainerProps extends TopBarProps {
+  export interface TopBarContainerProps {
     style?: StyleProp<ViewStyle>;
     contentStyle?: StyleProp<ViewStyle>;
     background?:
@@ -1145,15 +1425,20 @@ declare module 'tuya-panel-kit' {
           y1?: string;
           y2?: string;
           stops?: StopsProps[];
+        }
+      | {
+          [stops: string]: {
+            [value: string]: string;
+          };
         };
   }
 
-  interface TopBarContentProps extends TopBarProps {
+  interface TopBarContentProps {
     color?: string;
     title?: string;
-    titleStyle?: StyleProp<ViewStyle>;
+    titleStyle?: StyleProp<TextStyle>;
     subTitle?: string;
-    subTitleStyle?: StyleProp<ViewStyle>;
+    subTitleStyle?: StyleProp<TextStyle>;
     position?: 'left' | 'center' | 'right';
     onPress?: () => void;
   }
@@ -1172,10 +1457,12 @@ declare module 'tuya-panel-kit' {
     static Container: React.ElementType<TopBarContainerProps>;
     static Content: React.ElementType<TopBarContentProps>;
     static Action: React.ElementType<TopBarActionProps>;
+    static height: number;
   }
 
   // UnitText
   export interface UnitTextProps {
+    useART?: boolean;
     style?: StyleProp<ViewStyle>;
     size?: number;
     valueSize?: number;
@@ -1198,6 +1485,17 @@ declare module 'tuya-panel-kit' {
   }
 
   export class UnitText extends React.Component<UnitTextProps> {}
+
+  interface ThemeProps {
+    theme: {};
+    children: React.ReactNode;
+  }
+
+  export class Theme extends React.Component<ThemeProps> {}
+
+  // imageUpload
+
+  export let imageUpload;
 
   export let Utils: {
     CoreUtils: {
@@ -1223,21 +1521,39 @@ declare module 'tuya-panel-kit' {
       width: number;
       height: number;
       isIos: boolean;
+      isWeb: boolean;
       statusBarHeight: number;
-      convert(d: any): number;
-      convertX(d: any): number;
-      convertY(d: any): number;
+      convert(d: number): number;
+      convertX(d: number): number;
+      convertY(d: number): number;
       winWidth: number;
       winHeight: number;
       viewWidth: number;
       viewHeight: number;
+      HRatio: number;
+      VRatio: number;
+      topBarHeight: number;
+      isSmallW: boolean;
+      isSmallH: boolean;
     };
     ColorUtils: {
       color: {
+        hex2hsb(hex: string): number[];
+        hex2hsv(hex: string): number[];
+        hex2hsl(hex: string): number[];
+        hex2yuv(hex: string): number[];
+        rgb2hex(r: number, g: number, b: number): string;
+        yuv2rgb(y: number, u: number, v: number, a: number): number[];
+        hsv2rgb(h: number, s: number, v: number, a: number): number[];
+        hsb2rgb(h: number, s: number, v: number, a: number): number[];
         hex2RgbString(hex: string, alpha?: number): string;
         hsb2hex(h: number, s: number, v: number): string;
+        hsv2hex(h: number, s: number, v: number): string;
         kelvin2rgb(kelvin: number): number[];
         rgb2hsv(...args: number[]): number[];
+        hsb2hex(h: number, s: number, b: number): string;
+        rgb2hsl(r: number, g: number, b: number): number[];
+        hsl2rgb(h: number, s: number, l: number, a: number): number[];
         temp2rgb(
           kelvin: number,
           option?: { temperatureMin?: number; temperatureMax?: number }
@@ -1251,7 +1567,34 @@ declare module 'tuya-panel-kit' {
         bright2Opacity(bright: number, option: { min?: number; max?: number }): number;
         hsv2rgba(h: number, s: number, v: number): string;
         brightKelvin2rgba(bright: number, kelvin: number): string;
+        hsl2hex(h: number, s: number, l: number): string;
+        randomRgb(min: number, max: number): number[];
+        randomHsb(): number[];
+        complement(color: string): string;
+        reversed(color: string): string;
+        hsv2RgbString(h: number, s: number, v: number, a: number): string;
+        hsl2RgbString(h: number, s: number, l: number, a: number): string;
+        yuv2RgbString(y: number, u: number, v: number, a: number): string;
+        encodeColorData(rgbhsv: string): string;
+        decodeColorData(data: string): number[];
+        decodeColorDataWithPosition(data: string): number[];
+        decodeColorDataWithPosition(rgbxyve: string): number[];
       };
+      hsvToRgb(h: number, s: number, v: number): { r: number; g: number; b: number };
+      rgbToHsv(r: number, g: number, b: number): { h: number; s: number; v: number };
+      hslToRgb(h: number, s: number, l: number): { r: number; g: number; b: number };
+      rgbToHsl(rr: number, gg: number, bb: number): { h: number; s: number; v: number };
+    };
+    ThemeUtils: {
+      ThemeProvider: React.ReactNode;
+      ThemeConsumer: React.ReactNode;
+      deepMerge(target: object, ...args: object[]): object;
+      withTheme<P extends { theme?: T }, T>(
+        component: React.ComponentType<P>
+      ): React.ComponentType<P>;
+      parseToCss: (values: number[], key: string) => { [styleKey: string]: number };
+      parseToStyle: (values: number[], key: string) => { [styleKey: string]: number };
+      getTheme: (props: object, type: string, defaultValue: any) => any;
     };
     NumberUtils: {
       toFixedString(num: number, count: number): string;
@@ -1270,40 +1613,36 @@ declare module 'tuya-panel-kit' {
       range(start: number, end: number, step: number): number;
       calcPosition(value: number, min: number, max: number, newMin: number, newMax: number): number;
       calcPercent(min: number, max: number, value: number, offset: number): number;
-    };
-    ThemeUtils: {
-      ThemeConsumer: any;
-      deepMerge(target: object, ...args: object[]): object;
-      withTheme<P extends { theme?: T }, T>(
-        component: React.ComponentType<P>
-      ): React.ComponentType<P>;
-      parseToCss: (values: number[], key: string) => { [styleKey: string]: number };
-      parseToStyle: (values: number[], key: string) => { [styleKey: string]: number };
-      getTheme: (props: object, type: string, defaultValue: any) => any;
-    };
-    TemperatureUtils: {
-      c2f(value: number): number;
-      f2c(value: number): number;
-    };
-    TimeUtils: {
-      parseSecond(t: number, n?: number): [];
-      parseTimer(second: number): [];
-      parseTimers(second: number): [];
-      parseHour12(second: number): [];
-      stringToSecond(timeStr: string): number;
-      dateToTimer(dateString: string): number;
-      dateFormat(mt: string, date: string): string;
-      timezone(): string;
+      add(value1: number, value2: number): number;
+      subtract(value1: number, value2: number): number;
     };
     JsonUtils: {
       parseJSON(value: string): object;
     };
     StringUtils: {
-      codePointAt();
+      hexStringToNumber(str: string): number[];
+      hexStringToBinString(str: string): string;
+      strToHexString(str: string): string;
+      camelize(str: string): string;
+    };
+    TemperatureUtils: {
+      c2f(vale: number): number;
+      f2c(value: number): number;
+    };
+    TimeUtils: {
+      parseSecond(time: number, n: number): string[];
+      parseTimer(second: number): string;
+      parseTimers(second: number): string;
+      parseHour12(second: number): string;
+      stringToSecond(timeStr: string): number;
+      dateToTimer(timeStr: string): number;
+      dateFormat(fmt: string, date: Date): number;
+      timezone(): string;
     };
   };
 
   export let defaultTheme: { [key: string]: any };
+
 
   export let TYSdk: {
     DeviceEventEmitter: {
