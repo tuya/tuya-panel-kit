@@ -47,10 +47,19 @@ const weightStyle = css`
   font-weight: ${props => props.weight};
 `;
 
+const fontFamilyStyle = css`
+  font-family: ${props => {
+    return get(props.theme, 'global.fontFamily', defaultTheme.global.fontFamily);
+  }};
+`;
+
 export default styled(Text)`
   ${colorStyle};
   ${props => props.align && textAlignStyle};
   ${props => props.weight && weightStyle};
   ${props => sizeStyles(props)};
   background-color: transparent;
+  ${props =>
+    typeof get(props.theme, 'global.fontFamily', defaultTheme.global.fontFamily) === 'string' &&
+    fontFamilyStyle}
 `;
