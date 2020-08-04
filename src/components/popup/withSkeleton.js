@@ -16,7 +16,6 @@ import {
   StyledCancelText,
   StyledConfirmText,
   StyledSubTitleText,
-  StyledBackView,
   StyledBackIcon,
   StyledTouchView,
   backIcon,
@@ -142,6 +141,10 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
        * 返回文案
        */
       backText: PropTypes.string,
+      /**
+       * 是否显示返回按钮
+       */
+      showBack: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -167,6 +170,7 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
       backIconColor: null,
       onBack: null,
       backText: '返回',
+      showBack: false,
     };
 
     constructor(props) {
@@ -208,12 +212,18 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
     _handleMaskPress = () => {
       const { onMaskPress } = this.props;
       if (this.hasMotion) {
-        this.setState({ show: false });
-        this.actionTypeFn = () => {
-          typeof onMaskPress === 'function' && onMaskPress();
-        };
+        // 将关闭弹框内容函数暴露出去，开发者根据需求是否调用close来决定是否关闭弹框
+        typeof onMaskPress === 'function' &&
+          onMaskPress({
+            close: () => {
+              this.setState({ show: false });
+              this.actionTypeFn = () => {
+                Modal.close();
+              };
+            },
+          });
       } else {
-        typeof onMaskPress === 'function' && onMaskPress();
+        typeof onMaskPress === 'function' && onMaskPress({ close: () => Modal.close() });
       }
     };
 
@@ -229,15 +239,42 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
       }
     };
 
+    _handleBack = () => {
+      const { onBack } = this.props;
+      if (this.hasMotion) {
+        // 将关闭弹框内容函数暴露出去，开发者根据需求是否调用close来决定是否关闭弹框
+        typeof onBack === 'function' &&
+          onBack({
+            close: () => {
+              this.setState({ show: false });
+              this.actionTypeFn = () => {
+                Modal.close();
+              };
+            },
+          });
+      } else {
+        typeof onBack === 'function' && onBack({ close: () => Modal.close() });
+      }
+    };
+
     _handleConfirmPress = () => {
       const { onConfirm } = this.props;
       if (this.hasMotion) {
-        this.setState({ show: false });
-        this.actionTypeFn = () => {
-          typeof onConfirm === 'function' && onConfirm(this.data, ...this.extraParams);
-        };
+        // 将关闭弹框内容函数暴露出去，开发者根据需求是否调用close来决定是否关闭弹框
+        typeof onConfirm === 'function' &&
+          onConfirm(this.data, ...this.extraParams, {
+            close: () => {
+              this.setState({ show: false });
+              this.actionTypeFn = () => {
+                Modal.close();
+              };
+            },
+          });
       } else {
-        typeof onConfirm === 'function' && onConfirm(this.data, ...this.extraParams);
+        typeof onConfirm === 'function' &&
+          onConfirm(this.data, ...this.extraParams, {
+            close: () => Modal.close(),
+          });
       }
     };
 
@@ -254,7 +291,7 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
         titleWrapperStyle,
         subTitle,
         backIconColor,
-        onBack,
+        showBack,
         backText,
       } = this.props;
       if (React.isValidElement(title)) return title;
@@ -266,13 +303,11 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
             subTitle && { flexDirection: 'column', justifyContent: 'center' },
           ]}
         >
-          {typeof onBack === 'function' && (
-            <StyledBackView>
-              <StyledTouchView onPress={onBack}>
-                <StyledBackIcon d={backIcon} color={backIconColor} />
-              </StyledTouchView>
+          {showBack && (
+            <StyledTouchView onPress={this._handleBack}>
+              <StyledBackIcon d={backIcon} color={backIconColor} />
               <StyledBackText text={backText} />
-            </StyledBackView>
+            </StyledTouchView>
           )}
           {titleArray.map((t, idx) => (
             <StyledTitleText key={idx} style={titleTextStyle}>
