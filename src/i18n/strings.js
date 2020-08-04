@@ -1,3 +1,5 @@
+/* eslint-disable quotes */
+
 import I18N from './index';
 
 const lang = {
@@ -24,6 +26,17 @@ const lang = {
       '2. Is the device too far away from the router, partition wall or other obstructions?',
     retest: 'Retest the network',
     location: 'The device Wi-Fi signal is weak, please change the device location.',
+    offline_alreadyOffline: 'Device offline',
+    offline_pleaseCheck: 'Please check in turn:',
+    offline_moreHelp: 'More Help',
+    offline_checkHelps: 'The device is offline. Please check the help',
+    offline_textLinkBefore:
+      '1. Please check whether your device has power or not\n2. Whether the router connected to your device works normally',
+    offline_linkFront:
+      "3. Check whether the router's name or password has been changed, you can try ",
+    offline_link: 'reconnection',
+    offline_textLinkAfter: '4. Is your device too far away from the router, poor signal or blocked',
+    offline_textLinkMore: '5.',
   },
   zh: {
     offline: '设备暂时不可操作\n请稍后再试',
@@ -46,6 +59,15 @@ const lang = {
     obstructions: '2.设备是否与路由器距离过远、隔墙或有其他遮挡物',
     retest: '重新检测网络',
     location: '设备Wi-Fi信号弱，请更换设备位置',
+    offline_alreadyOffline: '设备已离线',
+    offline_pleaseCheck: '请依次检查：',
+    offline_moreHelp: '更多帮助',
+    offline_checkHelps: '设备已离线，请查看帮助',
+    offline_textLinkBefore: '1. 请检查您的设备是否有电\n2. 您的设备连接的路由器是否正常工作',
+    offline_linkFront: '3. 检查是否修改了路由器的名称或密码，可以尝试',
+    offline_link: '重新连接',
+    offline_textLinkAfter: '4. 您的设备是否里路由器过远、信号较差或有遮挡物',
+    offline_textLinkMore: '5.',
   },
 };
 
