@@ -45,12 +45,13 @@ export default class WithContentTabsScene extends React.PureComponent {
         {/* https://github.com/facebook/react-native/issues/11206 */}
         <TesterTitle title="一屏存在可滚动内容的Tabs" />
         <Tabs
+          wrapperStyle={{ width: 300, alignSelf: 'center' }}
           activeKey={this.state.activeKey1}
           dataSource={this.state.d1}
           swipeable={true}
           onChange={this._handleD1Change}
         >
-          <Tabs.TabPanel>
+          <Tabs.TabPanel style={{ width: 300 }}>
             <Tabs.TabScrollView>
               {_.times(10, n => (
                 // <TYListItem key={n} title={`测试_${n}`} />
@@ -58,13 +59,13 @@ export default class WithContentTabsScene extends React.PureComponent {
               ))}
             </Tabs.TabScrollView>
           </Tabs.TabPanel>
-          <Tabs.TabPanel>
+          <Tabs.TabPanel style={{ width: 300 }}>
             <TYListItem title="第二页" />
           </Tabs.TabPanel>
-          <Tabs.TabPanel>
+          <Tabs.TabPanel style={{ width: 300 }}>
             <TYListItem title="第三页" />
           </Tabs.TabPanel>
-          <Tabs.TabPanel>
+          <Tabs.TabPanel style={{ width: 300 }}>
             <TYListItem title="第四页" />
           </Tabs.TabPanel>
         </Tabs>
