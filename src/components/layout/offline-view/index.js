@@ -1,22 +1,28 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Image, View, StyleSheet, ViewPropTypes } from 'react-native';
+import { Image, View, StyleSheet, ViewPropTypes, ColorPropType } from 'react-native';
 import TYSdk from '../../../TYNativeApi';
 import RefText from '../../TYText';
-import { RatioUtils, NumberUtils } from '../../../utils';
+import { RatioUtils, NumberUtils, CoreUtils } from '../../../utils';
 import BleOfflineView from './ble-offline-view';
+import NewOfflineView from './new-offline-view';
 
 const TYEvent = TYSdk.event;
 const TYMobile = TYSdk.mobile;
 const TYDevice = TYSdk.device;
+const TYNative = TYSdk.native;
 
 const { convert } = RatioUtils;
+
+const { compareVersion, get } = CoreUtils;
 
 const OFFLINE_API_SUPPORT = TYMobile.verSupported('2.91');
 
 const Res = {
   offline: require('../../res/offline.png'),
 };
+
+const requireRnVersion = '5.23';
 
 export default class OfflineView extends Component {
   static propTypes = {
@@ -28,6 +34,8 @@ export default class OfflineView extends Component {
     deviceOnline: PropTypes.bool,
     capability: PropTypes.number,
     isBleOfflineOverlay: PropTypes.bool,
+    showDeviceImg: PropTypes.bool,
+    maskColor: ColorPropType,
   };
 
   static defaultProps = {
@@ -39,10 +47,13 @@ export default class OfflineView extends Component {
     deviceOnline: true,
     capability: 1,
     isBleOfflineOverlay: true,
+    showDeviceImg: true,
+    maskColor: 'rgba(0, 0, 0, 0.8)',
   };
 
   state = {
     bluetoothStatus: null,
+    show: true,
   };
 
   async componentDidMount() {
@@ -63,6 +74,24 @@ export default class OfflineView extends Component {
     this.setState({ bluetoothStatus });
   };
 
+  _handleLinkPress = () => {
+    this.setState({
+      show: false,
+    });
+  };
+
+  _handleMoreHelp = () => {
+    TYMobile.jumpSubPage(
+      { uiId: '000000cg8b' },
+      {
+        textLinkStyle: {
+          textDecorationLine: 'none',
+          color: '#999',
+        },
+      }
+    );
+  };
+
   renderBleView() {
     const { deviceOnline, capability, isBleOfflineOverlay } = this.props;
     // 在蓝牙状态未获取到之前不渲染该页面
@@ -80,7 +109,22 @@ export default class OfflineView extends Component {
   }
 
   renderOldView() {
-    return (
+    const { showDeviceImg, maskColor } = this.props;
+    const { show } = this.state;
+    const appRnVersion = get(TYNative, 'mobileInfo.appRnVersion');
+    // app版本大于3.16 →  appRNVersion >= 5.23才会显示新离线弹框
+    const isGreater = appRnVersion && compareVersion(appRnVersion, requireRnVersion);
+    const isShowNewOffline = isGreater === 0 || isGreater === 1;
+    return isShowNewOffline ? (
+      <NewOfflineView
+        show={show}
+        showDeviceImg={showDeviceImg}
+        onLinkPress={this._handleLinkPress}
+        onConfirm={this._handleConfirm}
+        onHelpPress={this._handleMoreHelp}
+        maskColor={maskColor}
+      />
+    ) : (
       <View accessibilityLabel="OfflineView_Wifi" style={[styles.container, this.props.style]}>
         <Image style={styles.icon} source={Res.offline} />
         <RefText style={[styles.tip, this.props.textStyle]}>{this.props.text}</RefText>
