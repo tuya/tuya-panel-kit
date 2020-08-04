@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ViewPropTypes, ColorPropType } from 'react-native';
+import { ViewPropTypes, ColorPropType, StyleSheet } from 'react-native';
 import Toast from './toast';
 import { RatioUtils } from '../../utils';
 import LoadingCircle from '../button-brick/loading';
@@ -44,12 +44,7 @@ class Loading extends React.PureComponent {
   };
 
   static defaultProps = {
-    contentStyle: {
-      width: cx(120),
-      height: cx(120),
-      backgroundColor: 'rgba(0,0,0,.7)',
-      borderRadius: cx(8),
-    },
+    contentStyle: null,
     showPosition: 'center',
     size: cx(28),
     color: '#FFF',
@@ -75,7 +70,7 @@ class Loading extends React.PureComponent {
       <Toast
         {...toastProps}
         showPosition={showPosition}
-        contentStyle={[{ paddingVertical: cy(27) }, contentStyle]}
+        contentStyle={[styles.contentStyle, contentStyle]}
       >
         <LoadingCircle
           size={size}
@@ -90,3 +85,13 @@ class Loading extends React.PureComponent {
   }
 }
 export default Loading;
+
+const styles = StyleSheet.create({
+  contentStyle: {
+    paddingVertical: cy(27),
+    width: cx(120),
+    height: cx(120),
+    backgroundColor: 'rgba(0,0,0,.7)',
+    borderRadius: cx(8),
+  },
+});
