@@ -42,6 +42,11 @@ class GlobalToast extends React.PureComponent {
      * 图标颜色
      */
     color: PropTypes.string,
+    /**
+     * 是否显示图标
+     * @version 2.0.0-rc.6
+     */
+    showIcon: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -49,14 +54,10 @@ class GlobalToast extends React.PureComponent {
     size: cx(40),
     d: iconfont.correct,
     iconfontStyle: null,
-    contentStyle: {
-      width: cx(120),
-      height: cx(120),
-      backgroundColor: 'rgba(0,0,0,.7)',
-      borderRadius: cx(8),
-    },
+    contentStyle: {},
     showPosition: 'center',
     color: '#fff',
+    showIcon: true,
   };
 
   render() {
@@ -68,6 +69,7 @@ class GlobalToast extends React.PureComponent {
       d,
       size,
       iconfontStyle,
+      showIcon,
       ...props
     } = this.props;
     const toastPropNames = Object.keys(Toast.propTypes);
@@ -78,15 +80,26 @@ class GlobalToast extends React.PureComponent {
         {...toastProps}
         text={text}
         showPosition={showPosition}
-        contentStyle={[{ paddingVertical: cy(27) }, contentStyle]}
+        contentStyle={[
+          showIcon && {
+            paddingVertical: cy(27),
+            width: cx(120),
+            height: cx(120),
+            backgroundColor: 'rgba(0,0,0,.7)',
+            borderRadius: cx(8),
+          },
+          contentStyle,
+        ]}
       >
-        <IconFont
-          {...iconProps}
-          d={d}
-          size={size}
-          color={color}
-          style={[{ marginBottom: cy(8) }, iconfontStyle]}
-        />
+        {showIcon && (
+          <IconFont
+            {...iconProps}
+            d={d}
+            size={size}
+            color={color}
+            style={[{ marginBottom: cy(8) }, iconfontStyle]}
+          />
+        )}
       </Toast>
     );
   }
