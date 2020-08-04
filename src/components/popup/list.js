@@ -99,7 +99,7 @@ class ListPopup extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.state.selected === nextProps.value) return;
+    if (this.state.selected === nextProps.value || this.props.value === nextProps.value) return;
     const { selected, selectedArr } = this.calcSelected(nextProps);
     this.setState({ selected, selectedArr });
   }

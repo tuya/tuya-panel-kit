@@ -4,6 +4,7 @@ import React from 'react';
 import { View } from 'react-native';
 import hoistNonReactStatics from 'hoist-non-react-statics';
 import Motion from '../motion/index';
+import Modal from '../modal';
 
 export const MOTION_TYPES = Object.keys(Motion)
   .concat('none')
@@ -57,8 +58,16 @@ const withMotion = WrapperComponent => {
 
     _handleConfirm = value => {
       const { onConfirm } = this.props;
-      this.setState({ show: false });
-      this.actionFn = () => typeof onConfirm === 'function' && onConfirm(value);
+      // 将关闭弹框内容函数暴露出去，开发者根据需求是否调用close来决定是否关闭弹框
+      typeof onConfirm === 'function' &&
+        onConfirm(value, {
+          close: () => {
+            this.setState({ show: false });
+            this.actionFn = () => {
+              Modal.close();
+            };
+          },
+        });
     };
 
     render() {

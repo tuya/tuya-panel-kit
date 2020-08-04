@@ -16,10 +16,10 @@ class MotionPromptScene extends React.PureComponent {
       confirmText: '确认',
       defaultValue: this.state.promptUnControlled,
       placeholder: 'Password',
-      onConfirm: text => {
+      onConfirm: (text, { close }) => {
         console.log('uncontrolled text :', text);
         this.setState({ promptUnControlled: text });
-        Dialog.close();
+        close();
       },
       motionType: 'ScaleFadeIn',
       motionConfig: {
