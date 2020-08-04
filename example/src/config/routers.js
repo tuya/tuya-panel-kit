@@ -36,6 +36,7 @@ import NotificationLegacy from '../scenes/NotificationLegacy';
 import UnitText from '../scenes/UnitText';
 import Progress from '../scenes/Progress';
 import GlobalToast from '../scenes/GlobalToast';
+import Stepper from '../scenes/Stepper';
 
 const mainRouter = [
   {
@@ -192,6 +193,10 @@ export const componentsRouters = _.sortBy(
     {
       id: 'GlobalToast',
       Scene: GlobalToast,
+    },
+    {
+      id: 'Stepper',
+      Scene: Stepper,
     },
   ],
   'id'
