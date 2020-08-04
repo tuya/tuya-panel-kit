@@ -205,7 +205,7 @@ export default class Tabs extends Component {
       underlineLeft: new Animated.Value(0),
       underlineWidth: new Animated.Value(0),
     };
-    const styleObj = StyleSheet.flatten([props.style]);
+    const styleObj = StyleSheet.flatten([props.wrapperStyle, props.style]);
     this._tabsWidth = (styleObj.width || winWidth) - props.extraSpace;
     this._tabWidth = getTabWidth(props.maxItem, this._tabsWidth);
     this._bounds = [0, -this._tabWidth * props.dataSource.length + this._tabsWidth]; // x轴左右边界坐标
@@ -485,7 +485,7 @@ export default class Tabs extends Component {
       activeColor,
       underlineWidth,
     } = this.props;
-    const { label, renderTab } = tab;
+    const { label, renderTab, ...rest } = tab;
     const isActive = idx === this.state.activeIndex;
     const isFixedWidth = typeof underlineWidth === 'number';
     const TabText = (
@@ -499,6 +499,7 @@ export default class Tabs extends Component {
     return (
       <Center
         key={idx}
+        {...rest}
         accessibilityLabel={`${accessibilityLabel}_${idx}`}
         style={[{ width: this._tabWidth }, tab.disabled && { opacity: 0.3 }]}
       >
@@ -599,7 +600,7 @@ export default class Tabs extends Component {
         <TabContent
           key="TabContent"
           accessibilityLabel={accessibilityLabel}
-          style={tabContentStyle}
+          style={[tabContentStyle, { width: this._tabsWidth }]}
           activeIndex={this.state.activeIndex}
           disabled={!swipeable}
           preload={preload}
@@ -613,7 +614,13 @@ export default class Tabs extends Component {
         </TabContent>,
       ];
       if (tabPosition === 'bottom') content.reverse();
-      return <View style={[{ flex: 1 }, wrapperStyle]}>{content}</View>;
+      return (
+        <View
+          style={[{ flex: 1, overflow: 'hidden', backgroundColor: 'transparent' }, wrapperStyle]}
+        >
+          {content}
+        </View>
+      );
     }
     return tabsComponent;
   }
