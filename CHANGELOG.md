@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [2.0.0-rc.5](https://github.com/TuyaInc/tuya-panel-kit/compare/v2.0.0-rc.4...v2.0.0-rc.5) (2020-07-01)
+
+
+### Bug Fixes
+
+* **nativeApi:** spell error ([deb7507](https://github.com/TuyaInc/tuya-panel-kit/commit/deb7507c5192acdf59aefc9297e6516beb119066))
+
+
+
+# [2.0.0-rc.4](https://github.com/TuyaInc/tuya-panel-kit/compare/v2.0.0-rc.3...v2.0.0-rc.4) (2020-07-01)
+
+
+### Bug Fixes
+
+修复 apiRequest 解析基础数据类型崩溃 ([30fd8f2](https://github.com/TuyaInc/tuya-panel-kit/commit/30fd8f2627d5ac596766f6cd0bdfd73e1887267e))
+* **Progress:** 修复 thumb 过大被截 ([4579450](https://github.com/TuyaInc/tuya-panel-kit/commit/4579450730d37ef98989189bbc0432ef1e1cfe41))
+
+
+### Features
+
+* **Progress:** add Progress-double and Progress-compose ([c7eec55](https://github.com/TuyaInc/tuya-panel-kit/commit/c7eec5522b2b24fe267aaa444b50c430a00a25f1))
+
+
+
 # [2.0.0-rc.3](https://github.com/TuyaInc/tuya-panel-kit/compare/v2.0.0-rc.2...v2.0.0-rc.3) (2020-05-21)
 
 
