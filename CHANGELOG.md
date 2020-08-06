@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [2.0.0-rc.6](https://github.com/TuyaInc/tuya-panel-kit/compare/v2.0.0-rc.5...v2.0.0-rc.6) (2020-08-06)
+
+
+### Bug Fixes
+
+* **Modal:** 修复 Modal 在 unmount 时无法移除 ([5dd58c7](https://github.com/TuyaInc/tuya-panel-kit/commit/5dd58c7ebf1b904e66974f1a4974648967e1fb66))
+
+
+### Features
+
+* **GlobalToast:** GlobalToast新增属性可支持原Toast方法调用 ([4dfb6a3](https://github.com/TuyaInc/tuya-panel-kit/commit/4dfb6a3de4bb909c0795a1ea6ffa9213691edf68))
+* **MQTT:** 新增属性和后台配置字段hideSignalPop控制弱网提醒 ([bda7d3a](https://github.com/TuyaInc/tuya-panel-kit/commit/bda7d3af2a3c20390e468285590b299cb128689b))
+* **Offline:** add new Offline ([0d87aa7](https://github.com/TuyaInc/tuya-panel-kit/commit/0d87aa74882fe84da6353a9f0fd229f8a388b84b))
+* **Popup&Dialog:** 修复点击确认动画不生效问题 & Popup.list 和Dialog.checkbox值跳转问题 ([72ba25f](https://github.com/TuyaInc/tuya-panel-kit/commit/72ba25f39af58894ef05d0fdff9d5761263fcd10))
+* **Stepper:** add Stepper ([7d0cbe6](https://github.com/TuyaInc/tuya-panel-kit/commit/7d0cbe6d784be000b6c474fb8b3c645e2aac09cd))
+* **SwtichButton:** adjust size && fix size&theme conflict ([9918c59](https://github.com/TuyaInc/tuya-panel-kit/commit/9918c599b11aab1b342c9bfe809736b526ef2f6c))
+* **Tabs:** 支持设置通过wrapperStyle设置TabContent的宽度 ([f93d54e](https://github.com/TuyaInc/tuya-panel-kit/commit/f93d54e4c01488825b820795dff4084991b11e05))
+* **Toast:** Toast support adaptation ([a87cfe5](https://github.com/TuyaInc/tuya-panel-kit/commit/a87cfe532972ed47d7bf70dcc6f7cdb55a366a8c))
+* **typeScript:** 接入ts ([6485d5f](https://github.com/TuyaInc/tuya-panel-kit/commit/6485d5f691d3f861644457fe545d3f3391014359))
+
+
+
 # [2.0.0-rc.5](https://github.com/TuyaInc/tuya-panel-kit/compare/v2.0.0-rc.4...v2.0.0-rc.5) (2020-07-01)
 
 
