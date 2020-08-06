@@ -60,7 +60,7 @@ class PortalOut extends React.Component {
 
   remove = uuid => {
     if (!this.node[`${uuid}`]) return;
-    const hasRegistered = this.state.uuidList.find(id => id === uuid) > -1;
+    const hasRegistered = this.state.uuidList.findIndex(id => id === uuid) > -1;
     if (hasRegistered) {
       this.show({ uuid, show: false }, true);
     }

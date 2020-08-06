@@ -15,6 +15,7 @@ const global = {
   success: '#00C800',
   warning: '#FAAE17',
   error: '#F4182C',
+  fontFamily: undefined,
   // info, // 信息色
   // disabled, // 禁用透明度
   mask: 'rgba(0, 0, 0, 0.7)', // 遮罩颜色
@@ -371,7 +372,7 @@ const popup = {
     cellFontColor: '#333', // 列表字体颜色
     cellFontSize: 16, // 列表字体大小
     subTitleFontColor: '#999', // 头部栏副标题颜色
-    titleRadius: cx(8), // 头部圆角
+    titleRadius: 8, // 头部圆角
     titleBg: '#ffffff', // 头部背景色
     titleHeight: 48, // 头部高度
     footerRadius: 0, // 底部圆角
@@ -400,7 +401,7 @@ const popup = {
     cellFontColor: '#fff', // 列表字体颜色
     cellFontSize: 16, // 列表字体大小
     subTitleFontColor: '#ccc', // 头部栏副标题颜色
-    titleRadius: cx(8), // 头部圆角
+    titleRadius: 8, // 头部圆角
     titleBg: '#262626', // 头部背景色
     titleHeight: 48, // 头部高度
     footerRadius: 0, // 底部圆角

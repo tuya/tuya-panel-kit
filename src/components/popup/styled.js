@@ -124,7 +124,9 @@ export const StyledSubTitleText = styled(TYText)`
   margin-top: ${cx(5)}px;
 `;
 
-export const StyledBackView = styled(View)`
+export const StyledTouchView = styled(TouchableOpacity).attrs({
+  activeOpacity: 0.8,
+})`
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -132,19 +134,12 @@ export const StyledBackView = styled(View)`
   left: 12px;
 `;
 
-export const StyledTouchView = styled(TouchableOpacity).attrs({
-  touchableOpacity: 0.8,
-})`
-  width: ${cx(19)}px;
-  height: ${cx(18)}px;
-  align-items: center;
-  justify-content: center;
-`;
-
 export const StyledBackText = styled(TYText).attrs({
   color: backIconColor,
   size: titleFontSize,
-})``;
+})`
+  margin-left: 2px;
+`;
 
 export const StyledBackIcon = props => {
   /* eslint-disable react/prop-types */

@@ -83,10 +83,16 @@ export default class PopupScene extends Component {
               value: this.state.countdown,
               switchValue: this.state.countdownSwitchValue,
               onSwitchValueChange: value => this.setState({ countdownSwitchValue: value }),
-              onConfirm: data => {
-                console.log('data', data);
+              onMaskPress: ({ close }) => {
+                close();
+              },
+              onConfirm: (data, { close }) => {
                 this.setState({ countdown: data.value });
-                Popup.close();
+                if (data.value < 100) {
+                  console.log('return', data.value);
+                  return;
+                }
+                close();
               },
             },
             {
@@ -111,9 +117,12 @@ export default class PopupScene extends Component {
             mode: 'datetime',
             minDate: new Date(1918, 0, 1, 0, 0, 0),
             maxDate: new Date(2018, 11, 31, 23, 59, 59),
-            onConfirm: date => {
+            onMaskPress: ({ close }) => {
+              close();
+            },
+            onConfirm: (date, { close }) => {
               this.setState({ date });
-              Popup.close();
+              close();
             },
           });
         },
@@ -129,9 +138,12 @@ export default class PopupScene extends Component {
             value: this.state.numberValue,
             min: 0,
             max: 50,
-            onConfirm: value => {
+            onMaskPress: ({ close }) => {
+              close();
+            },
+            onConfirm: (value, { close }) => {
               this.setState({ numberValue: value });
-              Popup.close();
+              close();
             },
           });
         },
@@ -148,9 +160,19 @@ export default class PopupScene extends Component {
             value: this.state.numberValue,
             min: 0,
             max: 50,
-            onConfirm: value => {
+            onMaskPress: ({ close }) => {
+              close();
+            },
+            onConfirm: (value, { close }) => {
               this.setState({ numberValue: value });
-              Popup.close();
+              // 符合预期条件，关闭弹框内容
+              if (value < 20) {
+                // sureCloseMotion为true,即为真正想要执行Popup.close的时候，否则仅为内部判断
+                close();
+                // 不符合预期条件，不关闭弹框内容
+              } else {
+                return false;
+              }
             },
           });
         },
@@ -170,12 +192,20 @@ export default class PopupScene extends Component {
             title: ['单选', '测试'],
             cancelText: '取消',
             confirmText: '确认',
+            showBack: true,
+            onBack: ({ close }) => {
+              console.log('I am Popup.list.radio');
+              close();
+            },
             value: this.state.listValue,
             footerType: 'singleCancel',
-            onConfirm: value => {
+            onMaskPress: ({ close }) => {
+              close();
+            },
+            onConfirm: (value, { close }) => {
               console.log('radio value :', value);
               this.setState({ listValue: value });
-              Popup.close();
+              close();
             },
           });
         },
@@ -196,10 +226,13 @@ export default class PopupScene extends Component {
             confirmText: '确认',
             subTitle: '副标题',
             value: this.state.listValues,
-            onConfirm: value => {
+            onMaskPress: ({ close }) => {
+              close();
+            },
+            onConfirm: (value, { close }) => {
               console.log('switch value :', value);
               this.setState({ listValues: value });
-              Popup.close();
+              close();
             },
           });
         },
@@ -225,9 +258,12 @@ export default class PopupScene extends Component {
             value: this.state.pickerValue,
             onBack: () => console.log('////'),
             label: 'haha',
-            onConfirm: (value, idx) => {
+            onMaskPress: ({ close }) => {
+              close();
+            },
+            onConfirm: (value, idx, { close }) => {
               this.setState({ pickerValue: value });
-              Popup.close();
+              close();
             },
           });
         },
@@ -290,11 +326,14 @@ export default class PopupScene extends Component {
             onValueChange: (value, idx) => {
               console.log('onValueChange :', value, idx);
             },
-            onConfirm: (value, idx) => {
+            onMaskPress: ({ close }) => {
+              close();
+            },
+            onConfirm: (value, idx, { close }) => {
               console.log('value :', value);
               console.log('idx :', idx);
               this.setState({ pickerValues: value });
-              Popup.close();
+              close();
             },
           });
         },
@@ -311,9 +350,12 @@ export default class PopupScene extends Component {
             startTime: this.state.timerPickerValue[0],
             endTime: this.state.timerPickerValue[1],
             is12Hours: true,
-            onConfirm: ({ startTime, endTime }) => {
+            onMaskPress: ({ close }) => {
+              close();
+            },
+            onConfirm: ({ startTime, endTime }, { close }) => {
               this.setState({ timerPickerValue: [startTime, endTime] });
-              Popup.close();
+              close();
             },
           });
         },
@@ -352,8 +394,11 @@ export default class PopupScene extends Component {
             title: 'Custom',
             cancelText: '取消',
             confirmText: '确认',
-            onConfirm: () => {
-              Popup.close();
+            onMaskPress: ({ close }) => {
+              close();
+            },
+            onConfirm: (date, { close }) => {
+              close();
             },
           });
         },

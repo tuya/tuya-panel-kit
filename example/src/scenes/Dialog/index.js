@@ -21,6 +21,9 @@ export default class DialogScene extends Component {
               title: '标题',
               subTitle: '副标题',
               confirmText: '确认',
+              onConfirm: (data, { close }) => {
+                close();
+              },
             },
             {
               onShow: () => console.log('onShow'),
@@ -42,6 +45,9 @@ export default class DialogScene extends Component {
               '这是内容这是内容这是内容这是内容这这是内容这是内容是内容这是内容这是内容这是内容这是内容这这是内容这是内容是内容这是内容这是内容这是内容这是内容这这是内容这是内容是内容',
             cancelText: '取消',
             confirmText: '确认',
+            onConfirm: (data, { close }) => {
+              close();
+            },
           });
         },
       },
@@ -81,10 +87,13 @@ export default class DialogScene extends Component {
                 return text;
               }
             },
-            onConfirm: text => {
+            onConfirm: (text, { close }) => {
               console.log('controlled text :', text);
               this.setState({ promptControlled: text });
-              Dialog.close();
+              if (text.length < 2) {
+                return;
+              }
+              close();
             },
           });
         },
@@ -117,9 +126,9 @@ export default class DialogScene extends Component {
                 hideOnUnselect: true,
               },
             ],
-            onConfirm: value => {
+            onConfirm: (value, { close }) => {
               this.setState({ checkValueRadio: value });
-              Dialog.close();
+              close();
             },
           });
         },
@@ -165,9 +174,9 @@ export default class DialogScene extends Component {
                 reverse: true,
               },
             ],
-            onConfirm: value => {
+            onConfirm: (value, { close }) => {
               this.setState({ checkValueSwitch: value });
-              Dialog.close();
+              close();
             },
           });
         },
@@ -188,8 +197,8 @@ export default class DialogScene extends Component {
             })),
             cancelText: '取消',
             confirmText: '确认',
-            onConfirm: () => {
-              Dialog.close();
+            onConfirm: (value, { close }) => {
+              close();
             },
           });
         },
@@ -221,8 +230,8 @@ export default class DialogScene extends Component {
                 <Text style={{ fontSize: 32, color: '#000' }}>自定义内容</Text>
               </View>
             ),
-            onConfirm: () => {
-              Dialog.close();
+            onConfirm: (value, { close }) => {
+              close();
             },
           });
         },

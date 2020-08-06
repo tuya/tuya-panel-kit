@@ -7,7 +7,7 @@ import { ThemeUtils } from '../../utils';
 const { getTheme, ThemeConsumer } = ThemeUtils;
 
 const ThemedSwitchButton = props => {
-  const { theme: localTheme, ...rest } = props;
+  const { theme: localTheme, size, ...rest } = props;
   return (
     <ThemeConsumer>
       {globalTheme => {
@@ -18,14 +18,24 @@ const ThemedSwitchButton = props => {
         const propsWithTheme = { theme, ...rest };
         const { onTintColor } = rest;
         const isGradient = onTintColor && typeof onTintColor === 'object';
+        // 1、在 满足isGradient为true的情况下，传onText、offText属性，且不为空。
+        // 2、在 满足isGradient为true的情况下，没传onText、offText属性，使用默认。
+        const hasText =
+          (rest.onText !== undefined &&
+            rest.offText !== undefined &&
+            !!rest.onText &&
+            !!rest.offText) ||
+          (rest.onText === undefined && rest.offText === undefined);
         const themedProps = {
           size: {
-            width: isGradient
-              ? getTheme(propsWithTheme, 'switchButton.width') + 7
-              : getTheme(propsWithTheme, 'switchButton.width'),
+            width:
+              isGradient && hasText
+                ? getTheme(propsWithTheme, 'switchButton.width') + 9
+                : getTheme(propsWithTheme, 'switchButton.width'),
             height: getTheme(propsWithTheme, 'switchButton.height'),
             activeSize: getTheme(propsWithTheme, 'switchButton.thumbSize'),
             margin: getTheme(propsWithTheme, 'switchButton.margin'),
+            ...size,
           },
         };
 

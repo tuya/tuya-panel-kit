@@ -62,20 +62,43 @@ export default class NavigatorLayout extends Component {
   }
 
   componentDidMount() {
+    const { devInfo = {} } = this.props;
+    const { hideSignalPop: hideSignalPopProps = false } = this.opts;
+
+    const hideSignalPop =
+      devInfo &&
+      devInfo.panelConfig &&
+      devInfo.panelConfig.fun &&
+      devInfo.panelConfig.fun.hideSignalPop;
+
+    if (Platform.OS === 'android') {
+      BackHandler.addEventListener('hardwareBackPress', this._onBack);
+    }
+
+    if (hideSignalPop || hideSignalPopProps) return;
+
     TYNativeModules.receiverMqttData(23);
     TYNativeModules.sendMqttData(22);
 
     TYSdk.DeviceEventEmitter.addListener('receiveMqttData', this._handleMqttSignal);
     AppState.addEventListener('change', this._handleAppStateChange);
-    if (Platform.OS === 'android') {
-      BackHandler.addEventListener('hardwareBackPress', this._onBack);
-    }
   }
 
   componentWillUnmount() {
+    const { hideSignalPop: hideSignalPopProps = false } = this.opts;
+
+    const hideSignalPop =
+      devInfo &&
+      devInfo.panelConfig &&
+      devInfo.panelConfig.fun &&
+      devInfo.panelConfig.fun.hideSignalPop;
+
     if (Platform.OS === 'android') {
       BackHandler.removeEventListener('hardwareBackPress', this._onBack);
     }
+
+    if (hideSignalPop || hideSignalPopProps) return;
+
     Notification.hide();
     this.timer && clearTimeout(this.timer);
     TYSdk.DeviceEventEmitter.removeListener('receiveMqttData', this._handleMqttSignal);
@@ -168,6 +191,7 @@ export default class NavigatorLayout extends Component {
   dispatchRoute(route, navigator) {
     let contentLayout = null;
     const opts = this.hookRoute(route);
+    this.opts = opts;
     const { enablePopGesture = true } = opts;
     if ((!!opts.gesture || opts.id === 'main') && enablePopGesture) {
       TYMobile.enablePopGesture();
