@@ -7,7 +7,7 @@ import LinearGradient from '../gradient/linear-gradient';
 import TYText from '../TYText';
 
 const DEFAULT_SIZE = {
-  width: 51,
+  width: 48,
   height: 28,
   activeSize: 24,
   margin: 2,
@@ -127,7 +127,7 @@ export default class SwitchButton extends React.PureComponent {
   // eslint-disable-next-line react/sort-comp
   get CGSize() {
     this.isGradient = this.props.onTintColor && typeof this.props.onTintColor === 'object';
-    if (this.isGradient) {
+    if (this.isGradient && !!this.props.onText && !!this.props.offText) {
       return { ...DEFAULT_GRADIENT_SIZE, ...this.props.size };
     }
 

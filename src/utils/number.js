@@ -296,6 +296,38 @@ const calcPercent = (min, max, value, offset = 0) => {
   return calcPosition(val, min, max, newMin, newMax) / 100;
 };
 
+const calNumLength = (number1, number2) => {
+  const hasPoint1 = number1.toString().indexOf('.') !== -1;
+  const hasPoint2 = number2.toString().indexOf('.') !== -1;
+  const idxPoint1 = hasPoint1 ? number1.toString().split('.')[1].length : 0;
+  const idxPoint2 = hasPoint2 ? number2.toString().split('.')[1].length : 0;
+  const maxLength = Math.pow(10, Math.max(idxPoint1, idxPoint2));
+  return maxLength;
+};
+
+/**
+ * @description 两数相加数据精度问题可通过该函数处理
+ * @param {Number} value1 值
+ * @param {Number} value2  值
+ * @returns {Number}  相加结果
+ */
+
+const add = (number1, number2) => {
+  const maxLength = calNumLength(number1, number2);
+  return (number1 * maxLength + number2 * maxLength) / maxLength;
+};
+
+/** 两数相减数据精度问题可通过该函数处理
+ * @param {Number} value1 值
+ * @param {Number} value2  值
+ * @returns {Number}  相减结果
+ */
+
+const subtract = (number1, number2) => {
+  const maxLength = calNumLength(number1, number2);
+  return (number1 * maxLength - number2 * maxLength) / maxLength;
+};
+
 const NumberUtil = {
   toFixedString,
   toFilledString,
@@ -313,6 +345,8 @@ const NumberUtil = {
   range,
   calcPosition,
   calcPercent,
+  add,
+  subtract,
 };
 
 

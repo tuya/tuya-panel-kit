@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ViewPropTypes } from 'react-native';
+import { ViewPropTypes, StyleSheet } from 'react-native';
 import iconfont from '../res/iconfont.json';
 import Toast from './toast';
 import IconFont from '../iconfont/svg';
@@ -46,12 +46,7 @@ class Warning extends React.PureComponent {
     size: cx(40),
     d: iconfont.warning,
     iconfontStyle: null,
-    contentStyle: {
-      width: cx(120),
-      height: cx(120),
-      backgroundColor: 'rgba(0,0,0,.7)',
-      borderRadius: cx(8),
-    },
+    contentStyle: null,
     showPosition: 'center',
     color: '#fff',
   };
@@ -75,7 +70,7 @@ class Warning extends React.PureComponent {
         {...toastProps}
         text={text}
         showPosition={showPosition}
-        contentStyle={[{ paddingVertical: cy(27) }, contentStyle]}
+        contentStyle={[styles.contentStyle, contentStyle]}
       >
         <IconFont
           {...iconProps}
@@ -89,3 +84,14 @@ class Warning extends React.PureComponent {
   }
 }
 export default Warning;
+
+const styles = StyleSheet.create({
+  contentStyle: {
+    paddingVertical: cy(27),
+    paddingHorizontal: cx(18),
+    backgroundColor: 'rgba(0,0,0,.7)',
+    borderRadius: cx(8),
+    maxWidth: cx(122),
+    minWidth: cx(120),
+  },
+});

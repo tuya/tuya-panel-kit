@@ -78,3 +78,4 @@ typings/
 __tests__/build/*
 
 build
+lib
