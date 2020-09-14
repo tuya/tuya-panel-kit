@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Navigator } from 'react-native-deprecated-custom-components';
-import { View, StyleSheet, UIManager, BackHandler, Platform, AppState } from 'react-native';
+import { View, StyleSheet, UIManager, BackHandler, Platform, AppState, Text } from 'react-native';
 import TYSdk from '../../../TYNativeApi';
 import MaskView from '../../modal/portalOut';
 import FullView from '../full-view';
@@ -10,9 +10,24 @@ import Notification from '../../notification';
 import TYNativeModules, { getRssi } from '../api';
 import AnimatedModal from '../detect-net-modal';
 import Strings from '../../../i18n/strings';
+import { RatioUtils } from '../../../utils';
+
+const { isIos } = RatioUtils;
 
 const TYEvent = TYSdk.event;
 const TYMobile = TYSdk.mobile;
+
+// 处理Text在某种机型某种字体下宽度被截断的问题,
+if (Platform.OS !== 'web') {
+  const originRender = Text.render || Text.prototype.render;
+  const parent = Text.render ? Text : Text.prototype;
+  parent.render = function(...args) {
+    const origin = originRender.call(this, ...args);
+    return React.cloneElement(origin, {
+      style: [!isIos && { fontFamily: '' }, origin.props.style],
+    });
+  };
+}
 
 const SceneConfigs = {
   ...Navigator.SceneConfigs.HorizontalSwipeJump,
@@ -85,6 +100,8 @@ export default class NavigatorLayout extends Component {
   }
 
   componentWillUnmount() {
+    const { devInfo = {} } = this.props;
+
     const { hideSignalPop: hideSignalPopProps = false } = this.opts;
 
     const hideSignalPop =
