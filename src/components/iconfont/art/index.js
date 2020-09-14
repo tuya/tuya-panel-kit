@@ -1,8 +1,10 @@
 /* eslint-disable no-plusplus */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyleSheet, ART, Platform, View, AppState } from 'react-native';
+import { StyleSheet, ART, Platform, View, AppState, ScrollView } from 'react-native';
 import DefaultSvgs from './defaultSvg';
+
+const ReactNativeVersion = require('react-native/Libraries/Core/ReactNativeVersion');
 
 const { Surface, Shape } = ART;
 let ShapeKey = 0;
@@ -78,8 +80,21 @@ export class IconSVG extends React.Component {
       transformStyle,
     ]);
 
+    const containerStyle = { height, width: width * count - offset * (count - 1) };
+    let Container = ({ children }) => <View style={containerStyle}>{children}</View>;
+    if (
+      Platform.OS === 'android' &&
+      ReactNativeVersion.version.major * 1000 + ReactNativeVersion.version.minor >= 58
+    ) {
+      Container = ({ children }) => (
+        <View style={containerStyle}>
+          <ScrollView scrollEnabled={false}>{children}</ScrollView>
+        </View>
+      );
+    }
+
     return (
-      <View>
+      <Container>
         {this.state.currentAppState && (
           <Surface
             height={height}
@@ -102,7 +117,7 @@ export class IconSVG extends React.Component {
             })}
           </Surface>
         )}
-      </View>
+      </Container>
     );
   }
 }
