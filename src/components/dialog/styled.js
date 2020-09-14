@@ -38,7 +38,6 @@ export const StyledContainer = styled(View)`
 
 export const StyledHeader = styled(View)`
   align-self: stretch;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
   border-bottom-width: ${StyleSheet.hairlineWidth};

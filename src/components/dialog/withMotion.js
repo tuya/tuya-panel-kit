@@ -61,10 +61,11 @@ const withMotion = WrapperComponent => {
       // 将关闭弹框内容函数暴露出去，开发者根据需求是否调用close来决定是否关闭弹框
       typeof onConfirm === 'function' &&
         onConfirm(value, {
-          close: () => {
+          close: callBack => {
             this.setState({ show: false });
             this.actionFn = () => {
               Modal.close();
+              typeof callBack === 'function' && callBack();
             };
           },
         });
