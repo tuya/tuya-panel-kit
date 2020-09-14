@@ -30,7 +30,7 @@ export default class StepperScene extends PureComponent {
           }}
         >
           <TYText size={16} text="乘客人数" style={{ marginRight: 16 }} />
-          <Stepper value={0} />
+          <Stepper disabled={true} value={0} />
         </View>
         <View
           style={{
