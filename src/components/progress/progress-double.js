@@ -182,6 +182,17 @@ export default class ProgressDouble extends Gesture {
 
   componentWillReceiveProps(nextProps) {
     this.fixDegreeAndBindToInstance(nextProps);
+    if (this.state.minValue !== nextProps.minValue) {
+      this.setState({
+        minValue: nextProps.minValue,
+      });
+    }
+
+    if (this.state.maxValue !== nextProps.maxValue) {
+      this.setState({
+        maxValue: nextProps.maxValue,
+      });
+    }
   }
 
   fixDegreeAndBindToInstance(props) {
