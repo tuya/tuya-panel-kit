@@ -64,6 +64,12 @@ class TYModal extends React.Component {
      * 是否弹出键盘自适应
      */
     useKeyboardView: PropTypes.bool,
+    /**
+     * Modal 组件销毁回调事件，一般用于在弹窗销毁后跳转新的 native 页面
+     * @version 2.0.0-rc.7
+     * @platform iOS
+     */
+    onDismiss: PropTypes.func,
   };
 
   static defaultProps = {
@@ -125,6 +131,8 @@ class TYModal extends React.Component {
 
   renderMaskModal = () => {
     const {
+      visible,
+      onDismiss,
       onlyLastModalVisible,
       activeIdx,
       children,
@@ -145,8 +153,9 @@ class TYModal extends React.Component {
       <Modal
         animationType={animationType}
         onRequestClose={this._handleMaskPress}
+        visible={onlyLastModalVisible ? visible : true}
+        onDismiss={onDismiss}
         {...props}
-        visible={true}
         transparent={true}
       >
         {children.map((child, idx) => {
