@@ -25,7 +25,6 @@ export const TOPBAR_ACTION_TEXT_WIDTH = 78;
 export const StyledTopBarContainer = styled(View)`
   align-self: stretch;
   height: ${TOPBAR_HEIGHT}px;
-  background-color: ${props => getTheme(props, 'topbar.background', DEFAULT_THEME.background)};
 `;
 
 export const StyledTopBar = styled(View)`
