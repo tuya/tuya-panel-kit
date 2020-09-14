@@ -78,6 +78,11 @@ export default class Stepper extends PureComponent {
      * @param {number} value - 具体值
      */
     onValueChange: PropTypes.func,
+    /**
+     * 是否禁用
+     * @version 2.0.0-rc.7
+     */
+    disabled: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -96,6 +101,7 @@ export default class Stepper extends PureComponent {
     iconPlusPath: dPlus,
     triangleIconColor: '#FF4800',
     onValueChange: () => {},
+    disabled: false,
   };
 
   constructor(props) {
@@ -212,6 +218,7 @@ export default class Stepper extends PureComponent {
       selectionColor,
       inputStyle,
       editable,
+      disabled,
       ...textInputProps
     } = this.props;
     const { value } = this.state;
@@ -219,37 +226,37 @@ export default class Stepper extends PureComponent {
       <BigButton style={style}>
         <TouchableOpacityView
           style={buttonStyle}
-          disabled={value === min}
+          disabled={disabled || value === min}
           onPressOut={this._handlePressOut}
           onPressIn={this._handlePressIn(true)}
         >
           <StyledIconFont
             fill={ellipseIconColor}
-            fillOpacity={value === min ? 0.4 : 1}
+            fillOpacity={disabled || value === min ? 0.4 : 1}
             name="minus"
           />
         </TouchableOpacityView>
         <StyledInput
           maxLength={4}
           {...textInputProps}
-          style={inputStyle}
+          style={[disabled && { color: 'rgba(51,51,51,.4)' }, inputStyle]}
           onEndEditing={this._handleEndText}
           value={value.toString()}
           onChangeText={this._handleChangeText}
           keyboardType="numeric"
           selectionColor={selectionColor}
           enablesReturnKeyAutomatically={true}
-          editable={editable}
+          editable={!disabled && editable}
         />
         <TouchableOpacityView
           style={buttonStyle}
-          disabled={value === max}
+          disabled={disabled || value === max}
           onPressOut={this._handlePressOut}
           onPressIn={this._handlePressIn(false)}
         >
           <StyledIconFont
             fill={ellipseIconColor}
-            fillOpacity={value === max ? 0.4 : 1}
+            fillOpacity={disabled || value === max ? 0.4 : 1}
             name="plus"
           />
         </TouchableOpacityView>
@@ -269,6 +276,7 @@ export default class Stepper extends PureComponent {
       iconPlusPath,
       inputStyle,
       editable,
+      disabled,
       ...textInputProps
     } = this.props;
     const { value } = this.state;
@@ -276,21 +284,21 @@ export default class Stepper extends PureComponent {
       <RightView style={style}>
         <TouchableThreeView
           style={buttonStyle}
-          disabled={value === min}
+          disabled={disabled || value === min}
           onPressOut={this._handlePressOut}
           onPressIn={this._handlePressIn(true)}
         >
           <StyledIconFont
             fill={triangleIconColor}
-            fillOpacity={value === min ? 0.4 : 1}
+            fillOpacity={disabled || value === min ? 0.4 : 1}
             d={iconMinusPath}
           />
         </TouchableThreeView>
         <StyledInput
           maxLength={4}
           {...textInputProps}
-          editable={editable}
-          style={inputStyle}
+          editable={!disabled && editable}
+          style={[disabled && { color: 'rgba(51,51,51,.4)' }, inputStyle]}
           onEndEditing={this._handleEndText}
           value={value.toString()}
           onChangeText={this._handleChangeText}
@@ -300,13 +308,13 @@ export default class Stepper extends PureComponent {
         />
         <TouchableThreeView
           style={buttonStyle}
-          disabled={value === max}
+          disabled={disabled || value === max}
           onPressOut={this._handlePressOut}
           onPressIn={this._handlePressIn(false)}
         >
           <StyledIconFont
             fill={triangleIconColor}
-            fillOpacity={value === max ? 0.4 : 1}
+            fillOpacity={disabled || value === max ? 0.4 : 1}
             d={iconPlusPath}
           />
         </TouchableThreeView>

@@ -1,4 +1,3 @@
-import React from 'react';
 import { View, TouchableOpacity, TextInput, StyleSheet } from 'react-native';
 import styled from 'styled-components/native';
 import IconFont from '../iconfont';
@@ -58,7 +57,7 @@ export const StyledInput = styled(TextInput).attrs({
   underlineColorAndroid: 'transparent',
 })`
   font-size: 16;
-  color: #000;
+  color: #333;
   width: ${cx(22)};
   height: ${cx(22)};
   align-items: center;
