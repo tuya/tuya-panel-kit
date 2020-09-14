@@ -202,7 +202,7 @@ export default class PopupScene extends Component {
             onMaskPress: ({ close }) => {
               close();
             },
-            onConfirm: (value, { close }) => {
+            onSelect: (value, { close }) => {
               console.log('radio value :', value);
               this.setState({ listValue: value });
               close();

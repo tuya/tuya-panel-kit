@@ -180,12 +180,16 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
       this.state = {
         show: withModal ? props.visible : true,
         switchValue: props.switchValue,
+        visible: withModal ? props.visible : true,
       };
     }
 
     componentWillReceiveProps(nextProps) {
       if (this.props.visible !== nextProps.visible) {
         this.setState({ show: nextProps.visible });
+      }
+      if (nextProps.visible) {
+        this.setState({ visible: true });
       }
     }
 
@@ -203,6 +207,34 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
       this.extraParams = extraParams;
     };
 
+    // 针对Popup.list
+    _handleSelect = (value, sValue) => {
+      const { type, onSelect } = this.props;
+      if (this.hasMotion) {
+        if (type === 'radio') {
+          typeof onSelect === 'function' &&
+            onSelect(value, {
+              close: this._handleModalClose,
+            });
+        } else if (type === 'switch') {
+          typeof onSelect === 'function' &&
+            onSelect(value, sValue, {
+              close: this._handleModalClose,
+            });
+        }
+      } else if (type === 'radio') {
+        typeof onSelect === 'function' &&
+          onSelect(value, {
+            close: this._handleModalClose,
+          });
+      } else if (type === 'switch') {
+        typeof onSelect === 'function' &&
+          onSelect(value, sValue, {
+            close: this._handleModalClose,
+          });
+      }
+    };
+
     _handleSwitchValueChange = switchValue => {
       const { onSwitchValueChange } = this.props;
       this.setState({ switchValue });
@@ -215,15 +247,10 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
         // 将关闭弹框内容函数暴露出去，开发者根据需求是否调用close来决定是否关闭弹框
         typeof onMaskPress === 'function' &&
           onMaskPress({
-            close: () => {
-              this.setState({ show: false });
-              this.actionTypeFn = () => {
-                Modal.close();
-              };
-            },
+            close: this._handleModalClose,
           });
       } else {
-        typeof onMaskPress === 'function' && onMaskPress({ close: () => Modal.close() });
+        typeof onMaskPress === 'function' && onMaskPress({ close: this._handleModalClose });
       }
     };
 
@@ -245,15 +272,10 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
         // 将关闭弹框内容函数暴露出去，开发者根据需求是否调用close来决定是否关闭弹框
         typeof onBack === 'function' &&
           onBack({
-            close: () => {
-              this.setState({ show: false });
-              this.actionTypeFn = () => {
-                Modal.close();
-              };
-            },
+            close: this._handleModalClose,
           });
       } else {
-        typeof onBack === 'function' && onBack({ close: () => Modal.close() });
+        typeof onBack === 'function' && onBack({ close: this._handleModalClose });
       }
     };
 
@@ -263,17 +285,12 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
         // 将关闭弹框内容函数暴露出去，开发者根据需求是否调用close来决定是否关闭弹框
         typeof onConfirm === 'function' &&
           onConfirm(this.data, ...this.extraParams, {
-            close: () => {
-              this.setState({ show: false });
-              this.actionTypeFn = () => {
-                Modal.close();
-              };
-            },
+            close: this._handleModalClose,
           });
       } else {
         typeof onConfirm === 'function' &&
           onConfirm(this.data, ...this.extraParams, {
-            close: () => Modal.close(),
+            close: this._handleModalClose,
           });
       }
     };
@@ -281,6 +298,19 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
     _handleMotionHide = () => {
       if (typeof this.actionTypeFn === 'function') {
         this.actionTypeFn();
+      }
+      this.setState({ visible: false });
+    };
+
+    // 关闭弹框函数抽离
+    _handleModalClose = () => {
+      if (this.hasMotion) {
+        this.setState({ show: false });
+        this.actionTypeFn = () => {
+          Modal.close();
+        };
+      } else {
+        Modal.close();
       }
     };
 
@@ -369,7 +399,6 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
     render() {
       const {
         // ========= 以下为 Modal 通用 props ========== //
-        visible,
         animationType,
         alignContainer,
         mask,
@@ -398,7 +427,7 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
         isAlign,
         ...props
       } = this.props;
-      const { switchValue } = this.state;
+      const { switchValue, visible } = this.state;
       let element = (
         <StyledContainer style={wrapperStyle}>
           {this.renderTitle()}
@@ -406,6 +435,7 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
             {...props}
             switchValue={typeof switchValue === 'undefined' ? true : switchValue}
             _onDataChange={this._handleDataChange}
+            onSelect={this._handleSelect}
           />
           {this.renderFooter()}
         </StyledContainer>

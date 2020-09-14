@@ -53,7 +53,9 @@ export const Row = styled(View)`
   background-color: ${cellBg};
 `;
 
-export const StyledContainer = styled(View)`
+export const StyledContainer = styled(TouchableOpacity).attrs({
+  activeOpacity: 1,
+})`
   /* bottom: -100%; */
   border-top-left-radius: ${titleRadius};
   border-top-right-radius: ${titleRadius};
