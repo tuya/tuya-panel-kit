@@ -1,6 +1,6 @@
 import React from 'react';
 import { Modal, Utils } from 'tuya-panel-kit';
-import Alert from 'tuya-panel-kit/lib/components/dialog/alert'; // eslint-disable-line
+// import Alert from 'tuya-panel-kit/lib/components/dialog/alert'; // eslint-disable-line
 import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
 
 const { winWidth, winHeight } = Utils.RatioUtils;
@@ -29,7 +29,9 @@ class NestedModal extends React.Component {
 
   _hideModal2 = () => this.setState({ visible2: false });
 
-  _hideDialog = () => this.setState({ dialogVisible: false });
+  _hideDialog = (data, { close }) => {
+    close(() => this.setState({ dialogVisible: false }));
+  };
 
   _hidePopup = () => this.setState({ popupVisible: false });
 
@@ -56,13 +58,14 @@ class NestedModal extends React.Component {
           onlyLastModalVisible={this.state.onlyLastModalVisible}
           onShow={() => console.log('第一个弹窗显示了')}
           onHide={() => console.log('第一个弹窗消失了')}
+          onDismiss={() => console.log('弹窗 Dismiss 了')}
         >
           <TouchableOpacity onPress={this._hideModal1} style={styles.buttonStyle}>
             <Text style={styles.textStyle}>点击我或者点击蒙层关闭这个Modal</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={this._showDialog} style={styles.buttonStyle}>
+          {/* <TouchableOpacity onPress={this._showDialog} style={styles.buttonStyle}>
             <Text style={styles.textStyle}>点击我测试Dialog</Text>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
           <TouchableOpacity onPress={this._showPopup} style={styles.buttonStyle}>
             <Text style={styles.textStyle}>点击我测试Popup</Text>
           </TouchableOpacity>
@@ -88,7 +91,7 @@ class NestedModal extends React.Component {
           </View>
         </Modal>
 
-        <Modal
+        {/* <Modal
           visible={this.state.dialogVisible}
           onlyLastModalVisible={this.state.onlyLastModalVisible}
           onShow={() => console.log('Dialog显示了')}
@@ -97,7 +100,7 @@ class NestedModal extends React.Component {
           <View style={{ width: winWidth, height: winHeight, justifyContent: 'center' }}>
             <Alert title="标题" subTitle="副标题" confirmText="确认" onConfirm={this._hideDialog} />
           </View>
-        </Modal>
+        </Modal> */}
         <Modal.Countdown
           visible={this.state.popupVisible}
           onlyLastModalVisible={this.state.onlyLastModalVisible}

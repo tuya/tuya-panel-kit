@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
-import { TYFlatList, Dialog } from 'tuya-panel-kit';
+import { TYFlatList, Dialog, TYSdk } from 'tuya-panel-kit';
 
 export default class DialogScene extends Component {
   state = {
@@ -28,7 +28,10 @@ export default class DialogScene extends Component {
             {
               onShow: () => console.log('onShow'),
               onHide: () => console.log('onHide'),
-              onDismiss: () => console.log('onDismiss'),
+              onDismiss: () => {
+                console.log('onDismiss');
+                TYSdk.mobile.jumpTo('https://www.baidu.com');
+              },
             }
           );
         },
