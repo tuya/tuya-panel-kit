@@ -14,6 +14,12 @@ class PortalOut extends React.Component {
       uuidList: [],
     };
     this.node = {};
+    /**
+     * 待移除的结点配置信息，
+     * 增加这个的原因是因为需要让内部的 Modal 结点 onDismiss 能够触发,
+     * 否则在 Modal 未被销毁的情况下，IOS 无法跳转 native 相关页面
+     */
+    this.pendingDeleteNode = {};
     this._timerId = null;
   }
 
@@ -33,11 +39,11 @@ class PortalOut extends React.Component {
   show = (config, isDismiss = false) => {
     const { uuid, show } = config;
     if (!this.node[`${uuid}`]) return;
-    const { onShow, onHide, onDismiss } = this.node[`${uuid}`].props;
+    const { onShow, onHide } = this.node[`${uuid}`].props;
     if (show) onShow && onShow();
     if (!show) {
       if (isDismiss) {
-        typeof onDismiss === 'function' && onDismiss();
+        // typeof onDismiss === 'function' && onDismiss();
       } else {
         typeof onHide === 'function' && onHide();
       }
@@ -64,25 +70,36 @@ class PortalOut extends React.Component {
     if (hasRegistered) {
       this.show({ uuid, show: false }, true);
     }
+    this.pendingDeleteNode = this.node[`${uuid}`];
     delete this.node[`${uuid}`];
   };
 
   render() {
     const { uuidList } = this.state;
     const hasNode = uuidList.some(uuid => !!this.node[`${uuid}`]);
-    if (!uuidList || uuidList.length === 0 || !hasNode) return null;
     const lastUuid = uuidList[uuidList.length - 1];
-    const { props } = this.node[`${lastUuid}`];
+    const { props = {} } = this.node[`${lastUuid}`] || this.pendingDeleteNode || {};
     // eslint-disable-next-line no-unused-vars
     const { onShow, onHide, onDismiss, ...needProps } = props;
     let activeIdx = 0;
-    const nodes = uuidList.map((key, idx) => {
-      activeIdx = idx;
-      const { node } = this.node[`${key}`];
-      return React.isValidElement(node) ? React.cloneElement(node, { key }) : node;
-    });
+    const nodes =
+      Object.keys(this.node || {}).length > 0
+        ? uuidList.map((key, idx) => {
+            activeIdx = idx;
+            const { node } = this.node[`${key}`];
+            return React.isValidElement(node) ? React.cloneElement(node, { key }) : node;
+          })
+        : [];
     return (
-      <TYModal activeIdx={activeIdx} {...needProps}>
+      <TYModal
+        visible={hasNode}
+        activeIdx={activeIdx}
+        onDismiss={() => {
+          this.pendingDeleteNode = {};
+          typeof onDismiss === 'function' && onDismiss();
+        }}
+        {...needProps}
+      >
         {nodes}
       </TYModal>
     );
