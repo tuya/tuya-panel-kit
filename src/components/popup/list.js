@@ -117,14 +117,12 @@ class ListPopup extends React.Component {
   selectRow = value => {
     const { onSelect, type, _onDataChange } = this.props;
     if (type === 'switch') return;
-    const { selected } = this.state;
-    const isUnselect = selected === value;
-    if (isUnselect) return;
-    this.setState({ selected: isUnselect ? -1 : value });
+    this.setState({ selected: value });
     onSelect && onSelect(value);
     _onDataChange && _onDataChange(value);
   };
 
+  // sValue: 布尔值   value: 索引值
   switchValueChange = (sValue, value) => {
     const { onSelect, _onDataChange } = this.props;
     const { selectedArr } = this.state;
