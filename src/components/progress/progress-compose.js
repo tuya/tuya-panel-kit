@@ -180,6 +180,16 @@ export default class ProgressSimple extends Gesture {
 
   componentWillReceiveProps(nextProps) {
     this.fixDegreeAndBindToInstance(nextProps);
+    if (this.state.value1 !== nextProps.value1) {
+      this.setState({
+        value1: nextProps.value1,
+      });
+    }
+    if (this.state.value2 !== nextProps.value2) {
+      this.setState({
+        value2: nextProps.value2,
+      });
+    }
   }
 
   fixDegreeAndBindToInstance(props) {

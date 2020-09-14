@@ -183,6 +183,11 @@ export default class Progress extends Gesture {
 
   componentWillReceiveProps(nextProps) {
     this.fixDegreeAndBindToInstance(nextProps);
+    if (this.state.value !== nextProps.value) {
+      this.setState({
+        value: nextProps.value,
+      });
+    }
   }
 
   fixDegreeAndBindToInstance(props) {
