@@ -203,13 +203,14 @@ class FullView extends Component {
       showOfflineView,
       capability,
       isBleOfflineOverlay,
+      devInfo = {},
     } = this.props;
     const show = !appOnline || !deviceOnline;
     const tipText = !appOnline
       ? Strings.getLang('appoffline')
       : !deviceOnline
-      ? Strings.getLang('offline')
-      : '';
+        ? Strings.getLang('offline')
+        : '';
 
     if (!show) {
       return null;
@@ -232,6 +233,7 @@ class FullView extends Component {
         deviceOnline={deviceOnline}
         capability={capability}
         isBleOfflineOverlay={isBleOfflineOverlay}
+        devInfo={devInfo}
       />
     );
   }

@@ -16,13 +16,13 @@ import TYSdk from '../../../TYNativeApi';
 import Motion from '../../motion';
 import RefText from '../../TYText';
 import Strings from '../../../i18n/strings';
-import { RatioUtils, CoreUtils } from '../../../utils';
+import { RatioUtils } from '../../../utils';
 import IconFont from '../../iconfont/svg';
 
 const { convert, winWidth, isIos, isIphoneX } = RatioUtils;
-const { get } = CoreUtils;
 
 const TYNative = TYSdk.native;
+const TYDevice = TYSdk.device;
 
 export default class NewOfflineView extends PureComponent {
   static propTypes = {
@@ -34,6 +34,7 @@ export default class NewOfflineView extends PureComponent {
     show: PropTypes.bool,
     onLinkPress: PropTypes.func,
     onHelpPress: PropTypes.func,
+    devInfo: PropTypes.object.isRequired,
   };
 
   static defaultProps = {
@@ -102,15 +103,28 @@ export default class NewOfflineView extends PureComponent {
   };
 
   render() {
-    const { maskColor, style, animatedStyle, showDeviceImg, onLinkPress, onHelpPress } = this.props;
+    const {
+      maskColor,
+      style,
+      animatedStyle,
+      showDeviceImg,
+      onLinkPress,
+      onHelpPress,
+      devInfo = {},
+    } = this.props;
     const { value, show } = this.state;
     const textLineBefore = Strings.getLang('offline_textLinkBefore');
     const textLink = Strings.getLang('offline_link');
     const textLineAfter = Strings.getLang('offline_textLinkAfter');
     const textLineMore = Strings.getLang('offline_textLinkMore');
     const linkBeforeArr = this.cropString(textLineBefore, []);
-    const imgUrl =
-      Platform.OS === 'ios' ? get(TYNative, 'devInfo.iconUrl') : get(TYNative, 'devInfo.icon');
+    const imgUrl = Platform.OS === 'ios' ? devInfo && devInfo.iconUrl : devInfo && devInfo.icon;
+    const topBarMoreIconName =
+      (devInfo &&
+        devInfo.panelConfig &&
+        devInfo.panelConfig.fun &&
+        devInfo.panelConfig.fun.topBarMoreIconName) ||
+      'pen';
     return (
       <View style={[show && styles.modal, style]}>
         <Animated.View
@@ -121,7 +135,9 @@ export default class NewOfflineView extends PureComponent {
             <View
               style={[
                 styles.oldOfflineWrapper,
-                { paddingTop: showDeviceImg && !!imgUrl ? convert(24) : convert(32) },
+                {
+                  paddingTop: showDeviceImg && !!imgUrl ? convert(24) : convert(32),
+                },
               ]}
             >
               {showDeviceImg && !!imgUrl && (
@@ -177,6 +193,13 @@ export default class NewOfflineView extends PureComponent {
           onPress={() => TYNative.back()}
         >
           <IconFont name="backIos" color="#fff" size={18} />
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.moreBlack}
+          activeOpacity={0.8}
+          onPress={() => TYDevice.showDeviceMenu()}
+        >
+          <IconFont name={topBarMoreIconName} color="#fff" size={18} />
         </TouchableOpacity>
       </View>
     );
@@ -241,5 +264,16 @@ const styles = StyleSheet.create({
   confirmText: {
     fontSize: 16,
     color: '#FF4800',
+  },
+  moreBlack: {
+    width: convert(36),
+    height: convert(36),
+    borderRadius: convert(18),
+    backgroundColor: '#000',
+    position: 'absolute',
+    top: isIos ? (isIphoneX ? 44 : 20) : 10,
+    right: convert(6),
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });

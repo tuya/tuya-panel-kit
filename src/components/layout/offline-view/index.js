@@ -26,6 +26,7 @@ const requireRnVersion = '5.23';
 
 export default class OfflineView extends Component {
   static propTypes = {
+    devInfo: PropTypes.object.isRequired,
     style: ViewPropTypes.style,
     textStyle: ViewPropTypes.style,
     text: PropTypes.string,
@@ -109,13 +110,18 @@ export default class OfflineView extends Component {
   }
 
   renderOldView() {
-    const { showDeviceImg, maskColor } = this.props;
+    const { showDeviceImg, maskColor, devInfo = {} } = this.props;
     const { show } = this.state;
     const appRnVersion = get(TYNative, 'mobileInfo.appRnVersion');
     // app版本大于3.16 →  appRNVersion >= 5.23才会显示新离线弹框
     const isGreater = appRnVersion && compareVersion(appRnVersion, requireRnVersion);
     const isShowNewOffline = isGreater === 0 || isGreater === 1;
-    return isShowNewOffline ? (
+    const showOldOffline =
+      devInfo &&
+      devInfo.panelConfig &&
+      devInfo.panelConfig.fun &&
+      devInfo.panelConfig.fun.showOldOffline;
+    return !showOldOffline && isShowNewOffline ? (
       <NewOfflineView
         show={show}
         showDeviceImg={showDeviceImg}
@@ -123,6 +129,7 @@ export default class OfflineView extends Component {
         onConfirm={this._handleConfirm}
         onHelpPress={this._handleMoreHelp}
         maskColor={maskColor}
+        devInfo={devInfo}
       />
     ) : (
       <View accessibilityLabel="OfflineView_Wifi" style={[styles.container, this.props.style]}>
