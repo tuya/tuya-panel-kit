@@ -1399,6 +1399,7 @@ declare module 'tuya-panel-kit' {
     iconMinusPath?: string;
     iconPlusPath?: string;
     onValueChange?: (value: number) => void;
+    disabled?: boolean;
   }
 
   export class Stepper extends React.Component<StepperProps> {}
@@ -1643,13 +1644,14 @@ declare module 'tuya-panel-kit' {
 
   export let defaultTheme: { [key: string]: any };
 
-
   export let TYSdk: {
     DeviceEventEmitter: {
       addListener: (type: string, cb: Function) => void;
       removeListener: (type: string, cb: Function) => void;
       removeAllListeners: (type: string) => void;
     };
+
+    apiRequest(a: string, postData: any, v?: string): any;
 
     event: {
       on(event: string, callback: (d: any) => any): void;
@@ -1666,13 +1668,70 @@ declare module 'tuya-panel-kit' {
       isWifiDevice(): boolean;
       getDeviceInfo(): any;
       formatDps(data: any): any;
+      checkDpExist(idOrCode: number | string): any;
+      checkDpValueType(idOrCode: number | string, val: any): any;
+      getBleManagerState(): any;
+      getBluetoothState(): any;
+      getDpCodes(): any;
+      getDpDataFromDevice(idOrCode: number | string): any;
+      getDpSchema(code: number | string): any;
+      getGState(dp: any): any;
+      getState(dp: any): any;
+      gotoBlePermissions(): any;
+      gotoDeviceWifiNetworkMonitor(): any;
+      initDevice(): any;
+      isBleDevice(): boolean;
+      isLocalLAN(): boolean;
+      isMeshWifiDevice(): boolean;
+      isShareDevice(): boolean;
+      isSigMeshDevice(): boolean;
+      putDeviceData(data: any): void;
+      putLocalDpData(data: any): void;
+      setDevState(state: any): any;
+      setDeviceInfo(data: any): void;
+      setGState(dp: any, val: any): any;
+      setState(dp: any, val: any): void;
+      showDeviceMenu(): void;
     };
 
     mobile: {
+      back(): void;
+      bottomListDialog(itemList: [], selected: number, onConfirmed: () => void): void;
+      simpleTipDialog(msg: string, onConfirmed: () => void): void;
+      hideLoading(): void;
+      showLoading(title?: string): void;
+      is24Hour(): boolean;
+      jumpTo(routeId: string): void;
+      jumpSubPage(uiIdParams: { uiId: number }, pageParams: any): void;
+      disablePopGesture(): void;
+      enablePopGesture(): void;
       getMobileInfo(): any;
-      showLoading(): void;
+      getNetworkState(): void;
+      getWiFiSsid(): void;
+      shareMsg(map: any): void;
+      verSupported(version: string): void;
+      simpleConfirmDialog(
+        title: string,
+        msg: string,
+        confirm: () => void,
+        cancel: () => void
+      ): void;
+      showPromptDialog(
+        confirmText: string,
+        cancelText: string,
+        title: string,
+        message: string,
+        defaultValue: string,
+        onConfirmed: () => void,
+        onCanceled: () => void
+      ): void;
+      showEditDialog(
+        title: string,
+        editString: string,
+        onConfirmed: () => void,
+        onCanceled: () => void
+      ): void;
     };
-
     native: {
       apiRNRequest(
         data: { a: string; postData: any; v: string },
@@ -1723,9 +1782,12 @@ declare module 'tuya-panel-kit' {
       is24Hour(): boolean;
       jumpTo(routeId: string): void;
       back(): void;
+      mobileInfo(): any;
       disablePopGesture(): void;
       enablePopGesture(): void;
     };
+
+    applyNavigator: any;
 
     Navigator: {
       pop(): void;
