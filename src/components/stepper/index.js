@@ -83,6 +83,11 @@ export default class Stepper extends PureComponent {
      * @version 2.0.0-rc.7
      */
     disabled: PropTypes.bool,
+    /**
+     * 获取TextInput 实例ref
+     * @version 2.0.0-rc.7
+     */
+    getTextInputRef: PropTypes.func,
   };
 
   static defaultProps = {
@@ -102,6 +107,7 @@ export default class Stepper extends PureComponent {
     triangleIconColor: '#FF4800',
     onValueChange: () => {},
     disabled: false,
+    getTextInputRef: () => {},
   };
 
   constructor(props) {
@@ -109,6 +115,11 @@ export default class Stepper extends PureComponent {
     this.state = {
       value: inMaxMin(props.min, props.max, props.value),
     };
+  }
+
+  componentDidMount() {
+    const { getTextInputRef } = this.props;
+    getTextInputRef && getTextInputRef(this.TextInputRef);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -237,6 +248,9 @@ export default class Stepper extends PureComponent {
           />
         </TouchableOpacityView>
         <StyledInput
+          ref={ref => {
+            this.TextInputRef = ref;
+          }}
           maxLength={4}
           {...textInputProps}
           style={[disabled && { color: 'rgba(51,51,51,.4)' }, inputStyle]}
@@ -295,6 +309,9 @@ export default class Stepper extends PureComponent {
           />
         </TouchableThreeView>
         <StyledInput
+          ref={ref => {
+            this.TextInputRef = ref;
+          }}
           maxLength={4}
           {...textInputProps}
           editable={!disabled && editable}
