@@ -681,6 +681,8 @@ declare module 'tuya-panel-kit' {
     scale?: number;
     value: number;
     onValueChange?: (value?: number) => void;
+    valueChangeTime?: number;
+    isValueChangeUniform?: boolean;
   }
 
   interface PopupPickerProps extends Omit<PopupProps, 'onConfirm'> {
@@ -1400,6 +1402,7 @@ declare module 'tuya-panel-kit' {
     iconPlusPath?: string;
     onValueChange?: (value: number) => void;
     disabled?: boolean;
+    getTextInputRef?: any;
   }
 
   export class Stepper extends React.Component<StepperProps> {}
