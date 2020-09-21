@@ -209,7 +209,7 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
 
     // 针对Popup.list
     _handleSelect = (value, sValue) => {
-      const { type, onSelect } = this.props;
+      const { type = 'radio', onSelect } = this.props;
       if (this.hasMotion) {
         if (type === 'radio') {
           typeof onSelect === 'function' &&

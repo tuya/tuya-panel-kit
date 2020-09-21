@@ -135,6 +135,7 @@ export default class PopupScene extends Component {
             title: '温度调节 (℃)',
             cancelText: '取消',
             confirmText: '确认',
+            isValueChangeUniform: true,
             value: this.state.numberValue,
             min: 0,
             max: 50,
