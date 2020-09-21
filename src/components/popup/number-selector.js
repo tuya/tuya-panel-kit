@@ -55,6 +55,16 @@ class NumberSelectorPopup extends Component {
      * 数据更改回调
      */
     _onDataChange: PropTypes.func,
+    /**
+     * 长按 + - 时每隔多久改变一次值（单位 ms）
+     * @version 2.0.0-rc.7
+     */
+    valueChangeTime: PropTypes.number,
+    /**
+     * 是否匀速加减值
+     * @version 2.0.0-rc.7
+     */
+    isValueChangeUniform: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -66,6 +76,8 @@ class NumberSelectorPopup extends Component {
     scale: 0,
     onValueChange: () => {},
     _onDataChange: () => {},
+    valueChangeTime: 250,
+    isValueChangeUniform: false,
   };
 
   constructor(props) {
@@ -136,6 +148,7 @@ class NumberSelectorPopup extends Component {
   };
 
   _handlePressIn = isAdd => () => {
+    const { valueChangeTime, isValueChangeUniform } = this.props;
     const runner = () => {
       if (isAdd) {
         this._handleAdd();
@@ -152,10 +165,10 @@ class NumberSelectorPopup extends Component {
       } else {
         let level = Math.floor((now - this._pressInTime) / 100);
         level = inMaxMin(1, 20, level);
-        this._stepLevel = level;
+        this._stepLevel = isValueChangeUniform ? 1 : level;
       }
       runner();
-    }, 100);
+    }, valueChangeTime);
   };
 
   _handlePressOut = () => {
@@ -171,9 +184,9 @@ class NumberSelectorPopup extends Component {
       <StyledSliderBtn
         icon="minus"
         disabled={disabled}
+        {...props}
         onPressIn={this._handlePressIn(false)}
         onPressOut={this._handlePressOut}
-        {...props}
       />
     );
   }
@@ -185,9 +198,9 @@ class NumberSelectorPopup extends Component {
       <StyledSliderBtn
         icon="plus"
         disabled={disabled}
+        {...props}
         onPressIn={this._handlePressIn(true)}
         onPressOut={this._handlePressOut}
-        {...props}
       />
     );
   }
