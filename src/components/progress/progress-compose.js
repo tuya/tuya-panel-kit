@@ -245,11 +245,11 @@ export default class ProgressSimple extends Gesture {
     this.endX2 = endX2;
     this.endY2 = endY2;
     // 具体值对应的角度
-    const deltaDeg1 = this.mapValueToDeltaDeg(value1, true);
+    const deltaDeg1 = this.mapValueToDeltaDeg(value1, true, props);
     // 小于具体值的路径
     this.foreScalePath1 = this.createSvgPath(deltaDeg1);
     // 具体值对应的角度
-    const deltaDeg2 = this.mapValueToDeltaDeg(value2, false);
+    const deltaDeg2 = this.mapValueToDeltaDeg(value2, false, props);
     // 小于具体值的路径
     this.foreScalePath2 = this.createSvgPath(deltaDeg2, false);
     const { progressX: progressX1, progressY: progressY1 } = this.getCirclePosition(
@@ -459,8 +459,8 @@ export default class ProgressSimple extends Gesture {
   }
 
   // 具体值对应的角度
-  mapValueToDeltaDeg(value, bool) {
-    const { min1, max1, min2, max2 } = this.props;
+  mapValueToDeltaDeg(value, bool, props) {
+    const { min1, max1, min2, max2 } = props;
     return bool
       ? ((value - min1) * this.andDegree1) / (max1 - min1)
       : ((value - min2) * this.andDegree2) / (max2 - min2);

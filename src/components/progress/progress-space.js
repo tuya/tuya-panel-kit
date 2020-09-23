@@ -156,7 +156,7 @@ export default class ProgressSpace extends Gesture {
     // 基础圆环路径
     this.backScalePath = this.createSvgPath(andDegree);
     // 具体值对应的角度
-    const deltaDeg = this.mapValueToDeltaDeg(value);
+    const deltaDeg = this.mapValueToDeltaDeg(props);
     // 小于具体值的路径
     this.foreScalePath = this.createSvgPath(deltaDeg);
   }
@@ -291,8 +291,9 @@ export default class ProgressSpace extends Gesture {
   }
 
   // 具体值对应的角度
-  mapValueToDeltaDeg(value) {
-    const { min, max, andDegree } = this.props;
+  mapValueToDeltaDeg(props) {
+    const { andDegree } = this.props;
+    const { min, max, value } = props;
     return ((value - min) * andDegree) / (max - min);
   }
 
