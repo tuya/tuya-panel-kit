@@ -1,6 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Animated, Text, View, Image, StyleSheet, Easing, ViewPropTypes } from 'react-native';
+import {
+  Animated,
+  Text,
+  View,
+  Image,
+  StyleSheet,
+  Easing,
+  ViewPropTypes,
+  Platform,
+} from 'react-native';
 import { RatioUtils } from '../../utils';
 
 const { winWidth } = RatioUtils;
@@ -137,7 +146,10 @@ class ToastView extends React.PureComponent {
       position = { justifyContent: 'center' };
     }
     return (
-      <View style={[styles.container, style, position]} pointerEvents="none">
+      <View
+        style={[Platform.OS === 'web' && { width: winWidth }, styles.container, style, position]}
+        pointerEvents="none"
+      >
         <Animated.View
           style={[
             styles.textBg,
@@ -164,7 +176,6 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     alignItems: 'center',
-    width: winWidth,
     top: 0,
   },
 
