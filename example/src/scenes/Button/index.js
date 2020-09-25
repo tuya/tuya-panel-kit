@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, ScrollView } from 'react-native';
-import { Button, imageUpload } from 'tuya-panel-kit';
+import { Button } from 'tuya-panel-kit';
 import TesterTitle from '../../components/TesterTitle';
 
 const linearBackground = {
@@ -41,7 +41,6 @@ class ButtonScene extends React.PureComponent {
 
   tapBtn = () => {
     this.setState({ icon: '6' });
-    imageUpload();
   };
 
   render() {
