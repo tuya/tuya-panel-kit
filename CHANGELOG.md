@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [2.0.0-rc.7](https://github.com/TuyaInc/tuya-panel-kit/compare/v2.0.0-rc.6...v2.0.0-rc.7) (2020-09-25)
+
+
+### Bug Fixes
+
+* **ART:** 修复在rn0.59 ART,需要嵌套ScrollView才能生效的bug ([92d12a7](https://github.com/TuyaInc/tuya-panel-kit/commit/92d12a73bf45e5887ac367443882baaa55f0a098))
+* **Modal:** 修复Modal组件点击确认和遮罩动画失效 ([61a8f09](https://github.com/TuyaInc/tuya-panel-kit/commit/61a8f098a0857a2a8b4216090ba73712ec66af13))
+* **Modal:** 修复安卓双击或多击Modal的内容框会关闭遮罩问题 ([a8ef09f](https://github.com/TuyaInc/tuya-panel-kit/commit/a8ef09ff2ae80c822959b651283f71d9fdfa038e))
+* **Modal:** 修复潜在内部 nodes 结点取不到的问题 ([b48c966](https://github.com/TuyaInc/tuya-panel-kit/commit/b48c9661206ab003af9a632d51ab26f26d6fe51f))
+* **Progress:** 修复进度条在非手势动作下渐变色无法正常渲染问题 ([297ce5a](https://github.com/TuyaInc/tuya-panel-kit/commit/297ce5a652426b9c683e453c5c5066706a9b38e6))
+* **Progress:** 更新最大值max和最小值min ([c5042ee](https://github.com/TuyaInc/tuya-panel-kit/commit/c5042ee092e84e683cbc13a8dac229283a5449d4))
+* **Text:** 修复Text在某些安卓机型被截断的问题 ([1f843eb](https://github.com/TuyaInc/tuya-panel-kit/commit/1f843eb71c869ef6760c96650bfcaeaf84196659))
+* **Toast:** 修复Toast组件横屏状态下不居中问题 ([bb6f1ab](https://github.com/TuyaInc/tuya-panel-kit/commit/bb6f1abc135300186d75287f9447239eaeefee4d))
+* **TopBar:** 修复 TopBar里 background重复导致崩溃 ([2a4e1e1](https://github.com/TuyaInc/tuya-panel-kit/commit/2a4e1e1196dec2013f6c4599679d85a48fa68848))
+
+
+### Features
+
+* **Offline:** add showOldOffline to decide whether to use the old version offline ([ceb9f42](https://github.com/TuyaInc/tuya-panel-kit/commit/ceb9f42e72e2b198e4bcfe69bc118f444d2c14a6))
+* **Popup:** Popup.numberSlider支持按钮加减 ([15b07b7](https://github.com/TuyaInc/tuya-panel-kit/commit/15b07b7a5cce43329786a3beee3e2d897983e386))
+* **Stepper:** 支持禁用 ([bc37d7c](https://github.com/TuyaInc/tuya-panel-kit/commit/bc37d7c724dd0cf686e65977e70f6717d0165398))
+* **Stepper:** 暴露实例对象 ([57dfd08](https://github.com/TuyaInc/tuya-panel-kit/commit/57dfd08208cd4db1919bea3b9ad73a98d74b6e24))
+* **Toast:** toast动画时间调整 ([1f49cf4](https://github.com/TuyaInc/tuya-panel-kit/commit/1f49cf45d8bc6d42f7cb49bb7cb69dfcd1e6c72e))
+
+
+
 # [2.0.0-rc.6](https://github.com/TuyaInc/tuya-panel-kit/compare/v2.0.0-rc.5...v2.0.0-rc.6) (2020-08-06)
 
 
