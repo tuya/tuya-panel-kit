@@ -180,6 +180,7 @@ declare module 'tuya-panel-kit' {
     dateSortKeys?: string[];
     style?: StyleProp<ViewStyle>;
     pickerFontColor?: string;
+    visibleItemCount?: number;
   }
 
   export class DatePicker extends React.Component<DatePickerProps> {}
@@ -276,6 +277,7 @@ declare module 'tuya-panel-kit' {
     placeholder?: string;
     confirmTextStyle?: StyleProp<TextStyle>;
     onChangeText?: (text: string) => void;
+    autoFocus?: boolean;
   }
 
   interface DialogCustomProps extends DialogProps {
@@ -445,6 +447,7 @@ declare module 'tuya-panel-kit' {
     pickerUnitColor?: string;
     onValueChange?: (newValue?: string | number, idx?: number) => void;
     onBack?: () => void;
+    visibleItemCount?: number;
   }
 
   interface PickerDataProps {
@@ -919,6 +922,8 @@ declare module 'tuya-panel-kit' {
 
   // Swipeout
   export interface SwipeoutProps {
+    accessibilityLabel?: string;
+    backgroundColor?: string;
     autoClose?: boolean;
     disabled?: boolean;
     left?: SwipeoutAction[];
@@ -939,6 +944,7 @@ declare module 'tuya-panel-kit' {
       fontSize: number;
       color: string;
     };
+    onPress?: () => void;
   }
 
   export class Swipeout extends React.Component<SwipeoutProps> {}
@@ -1002,7 +1008,7 @@ declare module 'tuya-panel-kit' {
   }
   interface DataProps {
     key?: string | number;
-    Action?: string;
+    Action?: any;
     title?: string;
     subTitle?: string;
     checked?: boolean;
@@ -1037,7 +1043,7 @@ declare module 'tuya-panel-kit' {
       descFontColor?: string;
       cellLine?: string;
       cellBg?: string;
-      cellRadius?: string;
+      cellRadius?: number;
     };
     arrow?: boolean;
     arrowColor?: string;
@@ -1307,6 +1313,7 @@ declare module 'tuya-panel-kit' {
     pickerFontColor?: string;
     symbol?: string;
     loop?: boolean;
+    visibleItemCount?: number;
   }
 
   export class TimerPicker extends React.Component<TimerPickerProps> {}
@@ -1497,9 +1504,17 @@ declare module 'tuya-panel-kit' {
 
   export class Theme extends React.Component<ThemeProps> {}
 
-  // imageUpload
+  export let NavigatorLayout: any;
 
-  export let imageUpload;
+  interface ThemeProviderProps {
+    children: React.ReactNode;
+    theme: any;
+  }
+
+  interface ThemeConsumerProps {
+    children?: React.ReactNode;
+    theme?: any;
+  }
 
   export let Utils: {
     CoreUtils: {
@@ -1590,8 +1605,8 @@ declare module 'tuya-panel-kit' {
       rgbToHsl(rr: number, gg: number, bb: number): { h: number; s: number; v: number };
     };
     ThemeUtils: {
-      ThemeProvider: React.ReactNode;
-      ThemeConsumer: React.ReactNode;
+      ThemeProvider: React.ElementType<ThemeProviderProps>;
+      ThemeConsumer: React.ElementType<ThemeConsumerProps>;
       deepMerge(target: object, ...args: object[]): object;
       withTheme<P extends { theme?: T }, T>(
         component: React.ComponentType<P>
@@ -1614,7 +1629,7 @@ declare module 'tuya-panel-kit' {
       intToHighLow(num: number): [];
       inMaxMin(min: number, max: number, value: number): number;
       scaleNumber(scale: number, value: number): number;
-      range(start: number, end: number, step: number): number;
+      range(start: number, end: number, step: number): number[];
       calcPosition(value: number, min: number, max: number, newMin: number, newMax: number): number;
       calcPercent(min: number, max: number, value: number, offset: number): number;
       add(value1: number, value2: number): number;
