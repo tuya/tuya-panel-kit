@@ -125,7 +125,7 @@ class ToastView extends React.PureComponent {
 
   timer = () => {
     clearTimeout(this._timerId);
-    this._timerId = setTimeout(() => this.props.onFinish(), 2000);
+    this._timerId = setTimeout(() => this.props.onFinish(), 1200);
   };
 
   render() {
