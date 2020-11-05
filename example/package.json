@@ -15,6 +15,7 @@
   "description": "",
   "dependencies": {
     "events": "^1.1.1",
+    "hoist-non-react-statics": "^3.3.0",
     "lodash": "^4.17.5",
     "moment": "^2.20.1",
     "prop-types": "^15.6.1",
@@ -32,10 +33,11 @@
     "rxjs": "^6.3.1",
     "rxjs-compat": "^6.3.1",
     "style-equal": "^1.0.0",
-    "styled-components": "^3.4.10",
-    "hoist-non-react-statics": "^3.3.0"
+    "styled-components": "^3.4.10"
   },
   "devDependencies": {
+    "@types/react": "^16.9.55",
+    "@types/react-native": "^0.63.32",
     "babel-eslint": "^8.2.1",
     "babel-jest": "^22.1.0",
     "babel-plugin-module-resolver": "^3.1.1",
