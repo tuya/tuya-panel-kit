@@ -32,8 +32,8 @@
     "url": "https://github.com/TuyaInc/tuya-panel-kit.git"
   },
   "peerDependencies": {
-    "react": "16.0.0",
-    "react-native": "0.51.0"
+    "react": "^16.14.0",
+    "react-native": "^0.59.10"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
@@ -50,6 +50,8 @@
   "devDependencies": {
     "@commitlint/cli": "^7.3.2",
     "@commitlint/config-conventional": "^7.3.1",
+    "@types/react": "^16.9.55",
+    "@types/react-native": "^0.63.32",
     "babel-eslint": "^8.2.1",
     "babel-jest": "^22.1.0",
     "babel-preset-react-native": "^4.0.0",
@@ -73,10 +75,9 @@
     "prop-types": "^15.6.1",
     "react": "16.0.0",
     "react-docgen": "^2.21.0",
-    "react-native": "0.51.0",
+    "react-native": "0.59.10",
     "react-test-renderer": "^16.6.3",
-    "standard-version": "^5.0.2",
-    "uglify-es": "^3.3.9"
+    "standard-version": "^5.0.2"
   },
   "config": {
     "commitizen": {
