@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RotationView Component basic render 1`] = `
+<View
+  accessibilityLabel="RotationView"
+  style={
+    Object {
+      "transform": Array [
+        Object {
+          "rotate": "0deg",
+        },
+      ],
+    }
+  }
+/>
+`;
+
+exports[`RotationView Component basic render 2`] = `
+<View
+  accessibilityLabel="RotationView"
+  style={
+    Object {
+      "transform": Array [
+        Object {
+          "rotate": "0deg",
+        },
+      ],
+    }
+  }
+/>
+`;

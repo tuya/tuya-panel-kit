@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Swipeout Component basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#dbddde",
+        "overflow": "hidden",
+      },
+      undefined,
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+        },
+      ],
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "left": 0,
+      }
+    }
+  >
+    <View
+      accessibilityLabel="Swipeout"
+      onLayout={[Function]}
+      onMoveShouldSetResponder={[Function]}
+      onMoveShouldSetResponderCapture={[Function]}
+      onResponderEnd={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderReject={[Function]}
+      onResponderRelease={[Function]}
+      onResponderStart={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+    >
+      <View />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Swipeout Component onPress 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#dbddde",
+        "overflow": "hidden",
+      },
+      undefined,
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+        },
+      ],
+    ]
+  }
+>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {},
+        Object {
+          "left": 0,
+        },
+      ]
+    }
+  >
+    <View
+      accessibilityLabel="Swipeout"
+      onLayout={[Function]}
+      onMoveShouldSetResponder={[Function]}
+      onMoveShouldSetResponderCapture={[Function]}
+      onResponderEnd={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderReject={[Function]}
+      onResponderRelease={[Function]}
+      onResponderStart={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+    />
+  </AnimatedComponent>
+</View>
+`;
+
+exports[`Swipeout Component onPress 2`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#dbddde",
+        "overflow": "hidden",
+      },
+      undefined,
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+        },
+      ],
+    ]
+  }
+>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {},
+        Object {
+          "left": 0,
+        },
+      ]
+    }
+  >
+    <View
+      accessibilityLabel="Swipeout"
+      onLayout={[Function]}
+      onMoveShouldSetResponder={[Function]}
+      onMoveShouldSetResponderCapture={[Function]}
+      onResponderEnd={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderReject={[Function]}
+      onResponderRelease={[Function]}
+      onResponderStart={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+    />
+  </AnimatedComponent>
+</View>
+`;

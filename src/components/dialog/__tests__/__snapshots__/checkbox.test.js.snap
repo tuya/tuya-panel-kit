@@ -1,0 +1,2483 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox Component basic render radio 1`] = `
+<Motion.ScaleFadeIn
+  animationConfig={
+    Object {
+      "delay": 0,
+      "duration": 250,
+      "isInteraction": true,
+      "useNativeDriver": true,
+    }
+  }
+  finalScale={0}
+  height={null}
+  hideDuration={250}
+  initScale={0.5}
+  isAlign={true}
+  onHide={[Function]}
+  onShow={[Function]}
+  show={true}
+  showDuration={250}
+  style={null}
+  width={null}
+>
+  <CheckBoxDialog
+    cancelAccessibilityLabel="Dialog.Cancel"
+    cancelText="取消"
+    cancelTextStyle={null}
+    confirmAccessibilityLabel="Dialog.Confirm"
+    confirmText="确认"
+    confirmTextStyle={null}
+    contentStyle={null}
+    dataSource={
+      Array [
+        Object {
+          "title": "传感器选择",
+          "value": "code1",
+        },
+        Object {
+          "title": "房间传感器校准",
+          "value": "code2",
+        },
+        Object {
+          "Icon": "warning",
+          "hideOnUnselect": true,
+          "iconSize": 24,
+          "reverse": true,
+          "title": "地板传感器校准",
+          "value": "code3",
+        },
+      ]
+    }
+    footerWrapperStyle={null}
+    headerStyle={null}
+    maxItemNum={5}
+    motionConfig={
+      Object {
+        "initScale": 0.5,
+      }
+    }
+    motionType="ScaleFadeIn"
+    onCancel={[Function]}
+    onChange={null}
+    onConfirm={[Function]}
+    style={null}
+    subTitle="副标题"
+    subTitleStyle={null}
+    title="标题"
+    titleNumberOfLines={2}
+    titleStyle={null}
+    type="radio"
+    value="code1"
+  />
+</Motion.ScaleFadeIn>
+`;
+
+exports[`Checkbox Component basic render switch 1`] = `
+<View
+  renderToHardwareTextureAndroid={false}
+  style={
+    Object {
+      "alignItems": "center",
+      "justifyContent": "center",
+      "opacity": 0,
+      "transform": Array [
+        Object {
+          "scale": 0.5,
+        },
+      ],
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "#fff",
+          "borderRadius": 16,
+          "justifyContent": "center",
+          "width": 630,
+        },
+        null,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "borderBottomColor": "#e5e5e5",
+            "borderBottomWidth": 0.5,
+            "height": 56,
+            "justifyContent": "center",
+          },
+          null,
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        numberOfLines={2}
+        size={18}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 18,
+            },
+            Array [
+              Object {
+                "color": "#333",
+                "fontSize": 18,
+                "fontWeight": "500",
+                "textAlign": "center",
+              },
+              null,
+            ],
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        标题
+      </Text>
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        size={16}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 16,
+            },
+            Array [
+              Object {
+                "color": "#999",
+                "fontSize": 16,
+                "marginTop": 7,
+                "textAlign": "center",
+              },
+              null,
+            ],
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        副标题
+      </Text>
+    </View>
+    <RCTScrollView
+      ItemSeparatorComponent={[Function]}
+      contentContainerStyle={
+        Array [
+          Object {
+            "backgroundColor": "#f8f8f8",
+          },
+          undefined,
+        ]
+      }
+      data={
+        Array [
+          Object {
+            "title": "传感器选择",
+            "value": "code1",
+          },
+          Object {
+            "title": "房间传感器校准",
+            "value": "code2",
+          },
+          Object {
+            "Icon": "warning",
+            "hideOnUnselect": true,
+            "iconSize": 24,
+            "reverse": true,
+            "title": "地板传感器校准",
+            "value": "code3",
+          },
+        ]
+      }
+      disableVirtualization={false}
+      getItem={[Function]}
+      getItemCount={[Function]}
+      horizontal={false}
+      initialNumToRender={10}
+      keyExtractor={[Function]}
+      maxToRenderPerBatch={10}
+      motionConfig={
+        Object {
+          "initScale": 0.5,
+        }
+      }
+      motionType="ScaleFadeIn"
+      numColumns={1}
+      onChange={null}
+      onConfirm={[Function]}
+      onContentSizeChange={[Function]}
+      onEndReachedThreshold={2}
+      onLayout={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      renderItem={[Function]}
+      scrollEnabled={false}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={Array []}
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#fff",
+          },
+          Array [
+            null,
+            Object {
+              "maxHeight": 240,
+            },
+          ],
+        ]
+      }
+      type="switch"
+      updateCellsBatchingPeriod={50}
+      useART={false}
+      value={
+        Array [
+          "code1",
+        ]
+      }
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignSelf": "stretch",
+                "backgroundColor": undefined,
+                "borderRadius": 0,
+                "flexGrow": 0,
+                "height": 48,
+                "marginBottom": 0,
+                "marginLeft": 0,
+                "marginRight": 0,
+                "marginTop": 0,
+                "minHeight": 48,
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              disabled={false}
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "borderRadius": 0,
+                    "flexDirection": "row",
+                    "opacity": 1,
+                    "paddingBottom": 12,
+                    "paddingLeft": 32,
+                    "paddingRight": 32,
+                    "paddingTop": 12,
+                  },
+                  Array [
+                    false,
+                    undefined,
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "justifyContent": "center",
+                      "marginRight": 20,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                <View
+                  accessibilityLabel="Checkbox"
+                  accessible={true}
+                  isTVSelectable={true}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "alignSelf": "stretch",
+                      "backgroundColor": "transparent",
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "opacity": 1,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "flexDirection": "row",
+                        "opacity": 1,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "flexDirection": "row",
+                          },
+                          Object {
+                            "height": 17,
+                            "width": 17,
+                          },
+                          false,
+                          Array [
+                            Object {},
+                            false,
+                          ],
+                        ]
+                      }
+                    >
+                      <RNSVGSvgView
+                        align="xMidYMid"
+                        meetOrSlice={0}
+                        minX={0}
+                        minY={0}
+                        style={
+                          Array [
+                            Object {
+                              "backgroundColor": "transparent",
+                            },
+                            undefined,
+                            false,
+                            Object {
+                              "flex": 0,
+                              "height": 17,
+                              "width": 17,
+                            },
+                          ]
+                        }
+                        vbHeight={1024}
+                        vbWidth={1024}
+                      >
+                        <RNSVGPath
+                          d="M512 0c282.7776 0 512 229.2224 512 512s-229.2224 512-512 512S0 794.7776 0 512 229.2224 0 512 0z m279.04 362.8032a51.2 51.2 0 0 0-72.3968 0l-253.44 253.3888-108.6464-108.544a51.2 51.2 0 0 0-72.3968 72.3456l144.2304 144.1792 0.6144 0.6656a51.2 51.2 0 0 0 72.3968 0L791.04 435.2a51.2 51.2 0 0 0 0-72.3968z"
+                          fill={
+                            Array [
+                              0,
+                              0.26666666666666666,
+                              0.8588235294117647,
+                              0.3686274509803922,
+                              1,
+                            ]
+                          }
+                          fillOpacity={1}
+                          fillRule={1}
+                          matrix={
+                            Array [
+                              1,
+                              0,
+                              0,
+                              1,
+                              0,
+                              0,
+                            ]
+                          }
+                          opacity={1}
+                          propList={
+                            Array [
+                              "stroke",
+                              "strokeWidth",
+                              "fill",
+                            ]
+                          }
+                          stroke={
+                            Array [
+                              0,
+                              0.26666666666666666,
+                              0.8588235294117647,
+                              0.3686274509803922,
+                              1,
+                            ]
+                          }
+                          strokeDasharray={null}
+                          strokeDashoffset={null}
+                          strokeLinecap={0}
+                          strokeLinejoin={0}
+                          strokeMiterlimit={4}
+                          strokeOpacity={1}
+                          strokeWidth={1}
+                        />
+                      </RNSVGSvgView>
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "flexBasis": 0,
+                      "flexGrow": 1,
+                      "flexShrink": 1,
+                      "justifyContent": "center",
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                <Text
+                  accessible={true}
+                  align={null}
+                  allowFontScaling={false}
+                  color={null}
+                  ellipsizeMode="tail"
+                  size="small"
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "transparent",
+                        "color": "#333",
+                        "fontSize": 17,
+                        "lineHeight": 24,
+                      },
+                      Array [
+                        Object {
+                          "color": "#333",
+                        },
+                        Array [
+                          undefined,
+                          Array [
+                            Object {
+                              "color": undefined,
+                              "fontSize": undefined,
+                            },
+                            undefined,
+                          ],
+                        ],
+                      ],
+                    ]
+                  }
+                  type="title"
+                  weight={null}
+                >
+                  传感器选择
+                </Text>
+              </View>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "marginLeft": 20,
+                    "opacity": 1,
+                  }
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "rgba(51, 51, 51, 0.1)",
+                  "height": 0.5,
+                  "marginLeft": 32,
+                },
+                null,
+              ]
+            }
+          />
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignSelf": "stretch",
+                "backgroundColor": undefined,
+                "borderRadius": 0,
+                "flexGrow": 0,
+                "height": 48,
+                "marginBottom": 0,
+                "marginLeft": 0,
+                "marginRight": 0,
+                "marginTop": 0,
+                "minHeight": 48,
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              disabled={false}
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "borderRadius": 0,
+                    "flexDirection": "row",
+                    "opacity": 1,
+                    "paddingBottom": 12,
+                    "paddingLeft": 32,
+                    "paddingRight": 32,
+                    "paddingTop": 12,
+                  },
+                  Array [
+                    false,
+                    undefined,
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "justifyContent": "center",
+                      "marginRight": 20,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                <View
+                  accessibilityLabel="Checkbox"
+                  accessible={true}
+                  isTVSelectable={true}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "alignSelf": "stretch",
+                      "backgroundColor": "transparent",
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "opacity": 1,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "flexDirection": "row",
+                        "opacity": 1,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "flexDirection": "row",
+                          },
+                          Object {
+                            "height": 17,
+                            "width": 17,
+                          },
+                          false,
+                          Array [
+                            Object {},
+                            false,
+                          ],
+                        ]
+                      }
+                    >
+                      <RNSVGSvgView
+                        align="xMidYMid"
+                        meetOrSlice={0}
+                        minX={0}
+                        minY={0}
+                        style={
+                          Array [
+                            Object {
+                              "backgroundColor": "transparent",
+                            },
+                            undefined,
+                            false,
+                            Object {
+                              "flex": 0,
+                              "height": 17,
+                              "width": 17,
+                            },
+                          ]
+                        }
+                        vbHeight={1024}
+                        vbWidth={1024}
+                      >
+                        <RNSVGPath
+                          d="M512 0c282.752 0 512 229.248 512 512s-229.248 512-512 512S0 794.752 0 512 229.248 0 512 0z m0 85.333333C276.352 85.333333 85.333333 276.352 85.333333 512s191.018667 426.666667 426.666667 426.666667 426.666667-191.018667 426.666667-426.666667S747.648 85.333333 512 85.333333z"
+                          fill={
+                            Array [
+                              0,
+                              0.8980392156862745,
+                              0.8980392156862745,
+                              0.8980392156862745,
+                              1,
+                            ]
+                          }
+                          fillOpacity={1}
+                          fillRule={1}
+                          matrix={
+                            Array [
+                              1,
+                              0,
+                              0,
+                              1,
+                              0,
+                              0,
+                            ]
+                          }
+                          opacity={1}
+                          propList={
+                            Array [
+                              "stroke",
+                              "strokeWidth",
+                              "fill",
+                            ]
+                          }
+                          stroke={
+                            Array [
+                              0,
+                              0.8980392156862745,
+                              0.8980392156862745,
+                              0.8980392156862745,
+                              1,
+                            ]
+                          }
+                          strokeDasharray={null}
+                          strokeDashoffset={null}
+                          strokeLinecap={0}
+                          strokeLinejoin={0}
+                          strokeMiterlimit={4}
+                          strokeOpacity={1}
+                          strokeWidth={1}
+                        />
+                      </RNSVGSvgView>
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "flexBasis": 0,
+                      "flexGrow": 1,
+                      "flexShrink": 1,
+                      "justifyContent": "center",
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                <Text
+                  accessible={true}
+                  align={null}
+                  allowFontScaling={false}
+                  color={null}
+                  ellipsizeMode="tail"
+                  size="small"
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "transparent",
+                        "color": "#333",
+                        "fontSize": 17,
+                        "lineHeight": 24,
+                      },
+                      Array [
+                        Object {
+                          "color": "#333",
+                        },
+                        Array [
+                          undefined,
+                          Array [
+                            Object {
+                              "color": undefined,
+                              "fontSize": undefined,
+                            },
+                            undefined,
+                          ],
+                        ],
+                      ],
+                    ]
+                  }
+                  type="title"
+                  weight={null}
+                >
+                  房间传感器校准
+                </Text>
+              </View>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "marginLeft": 20,
+                    "opacity": 1,
+                  }
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "rgba(51, 51, 51, 0.1)",
+                  "height": 0.5,
+                  "marginLeft": 32,
+                },
+                null,
+              ]
+            }
+          />
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignSelf": "stretch",
+                "backgroundColor": undefined,
+                "borderRadius": 0,
+                "flexGrow": 0,
+                "height": 48,
+                "marginBottom": 0,
+                "marginLeft": 0,
+                "marginRight": 0,
+                "marginTop": 0,
+                "minHeight": 48,
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              disabled={false}
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "borderRadius": 0,
+                    "flexDirection": "row",
+                    "opacity": 1,
+                    "paddingBottom": 12,
+                    "paddingLeft": 32,
+                    "paddingRight": 32,
+                    "paddingTop": 12,
+                  },
+                  Array [
+                    false,
+                    undefined,
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "justifyContent": "center",
+                      "marginRight": 20,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "flexDirection": "row",
+                      },
+                      Object {
+                        "height": 24,
+                        "width": 24,
+                      },
+                      false,
+                      null,
+                    ]
+                  }
+                >
+                  <RNSVGSvgView
+                    align="xMidYMid"
+                    meetOrSlice={0}
+                    minX={0}
+                    minY={0}
+                    style={
+                      Array [
+                        Object {
+                          "backgroundColor": "transparent",
+                        },
+                        undefined,
+                        false,
+                        Object {
+                          "flex": 0,
+                          "height": 24,
+                          "width": 24,
+                        },
+                      ]
+                    }
+                    vbHeight={1024}
+                    vbWidth={1024}
+                  >
+                    <RNSVGPath
+                      d="M512 0c282.7776 0 512 229.2224 512 512s-229.2224 512-512 512S0 794.7776 0 512 229.2224 0 512 0z m0 665.6a76.8 76.8 0 1 0 0 153.6 76.8 76.8 0 0 0 0-153.6z m0-460.8a72.192 72.192 0 0 0-71.9872 76.6464l17.6128 281.856a54.4768 54.4768 0 0 0 108.7488 0l17.6128-281.856A72.192 72.192 0 0 0 512 204.8z"
+                      fill={
+                        Array [
+                          0,
+                          0.2,
+                          0.2,
+                          0.2,
+                          0.5,
+                        ]
+                      }
+                      fillOpacity={1}
+                      fillRule={1}
+                      matrix={
+                        Array [
+                          1,
+                          0,
+                          0,
+                          1,
+                          0,
+                          0,
+                        ]
+                      }
+                      opacity={1}
+                      propList={
+                        Array [
+                          "stroke",
+                          "strokeWidth",
+                          "fill",
+                        ]
+                      }
+                      stroke={
+                        Array [
+                          0,
+                          0.2,
+                          0.2,
+                          0.2,
+                          0.5,
+                        ]
+                      }
+                      strokeDasharray={null}
+                      strokeDashoffset={null}
+                      strokeLinecap={0}
+                      strokeLinejoin={0}
+                      strokeMiterlimit={4}
+                      strokeOpacity={1}
+                      strokeWidth={1}
+                    />
+                  </RNSVGSvgView>
+                </View>
+              </View>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "flexBasis": 0,
+                      "flexGrow": 1,
+                      "flexShrink": 1,
+                      "justifyContent": "center",
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                <Text
+                  accessible={true}
+                  align={null}
+                  allowFontScaling={false}
+                  color={null}
+                  ellipsizeMode="tail"
+                  size="small"
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "transparent",
+                        "color": "#333",
+                        "fontSize": 17,
+                        "lineHeight": 24,
+                      },
+                      Array [
+                        Object {
+                          "color": "#333",
+                        },
+                        Array [
+                          undefined,
+                          Array [
+                            Object {
+                              "color": undefined,
+                              "fontSize": undefined,
+                            },
+                            undefined,
+                          ],
+                        ],
+                      ],
+                    ]
+                  }
+                  type="title"
+                  weight={null}
+                >
+                  地板传感器校准
+                </Text>
+              </View>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "marginLeft": 20,
+                    "opacity": 1,
+                  }
+                }
+              >
+                <View
+                  accessibilityLabel="Checkbox"
+                  accessible={true}
+                  isTVSelectable={true}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "alignSelf": "stretch",
+                      "backgroundColor": "transparent",
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "opacity": 1,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "flexDirection": "row",
+                        "opacity": 1,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "flexDirection": "row",
+                          },
+                          Object {
+                            "height": 17,
+                            "width": 17,
+                          },
+                          false,
+                          Array [
+                            Object {},
+                            Object {
+                              "opacity": 0,
+                            },
+                          ],
+                        ]
+                      }
+                    >
+                      <RNSVGSvgView
+                        align="xMidYMid"
+                        meetOrSlice={0}
+                        minX={0}
+                        minY={0}
+                        style={
+                          Array [
+                            Object {
+                              "backgroundColor": "transparent",
+                            },
+                            undefined,
+                            false,
+                            Object {
+                              "flex": 0,
+                              "height": 17,
+                              "width": 17,
+                            },
+                          ]
+                        }
+                        vbHeight={1024}
+                        vbWidth={1024}
+                      >
+                        <RNSVGPath
+                          d="M512 0c282.752 0 512 229.248 512 512s-229.248 512-512 512S0 794.752 0 512 229.248 0 512 0z m0 85.333333C276.352 85.333333 85.333333 276.352 85.333333 512s191.018667 426.666667 426.666667 426.666667 426.666667-191.018667 426.666667-426.666667S747.648 85.333333 512 85.333333z"
+                          fill={
+                            Array [
+                              0,
+                              0.8980392156862745,
+                              0.8980392156862745,
+                              0.8980392156862745,
+                              1,
+                            ]
+                          }
+                          fillOpacity={1}
+                          fillRule={1}
+                          matrix={
+                            Array [
+                              1,
+                              0,
+                              0,
+                              1,
+                              0,
+                              0,
+                            ]
+                          }
+                          opacity={1}
+                          propList={
+                            Array [
+                              "stroke",
+                              "strokeWidth",
+                              "fill",
+                            ]
+                          }
+                          stroke={
+                            Array [
+                              0,
+                              0.8980392156862745,
+                              0.8980392156862745,
+                              0.8980392156862745,
+                              1,
+                            ]
+                          }
+                          strokeDasharray={null}
+                          strokeDashoffset={null}
+                          strokeLinecap={0}
+                          strokeLinejoin={0}
+                          strokeMiterlimit={4}
+                          strokeOpacity={1}
+                          strokeWidth={1}
+                        />
+                      </RNSVGSvgView>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+    <View
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "borderTopColor": "#e5e5e5",
+            "borderTopWidth": 0.5,
+            "flexDirection": "row",
+            "height": 56,
+          },
+          null,
+        ]
+      }
+    >
+      <View
+        accessibilityLabel="Dialog.Cancel"
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "borderRightColor": "#e5e5e5",
+            "borderRightWidth": 0.5,
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          align={null}
+          allowFontScaling={false}
+          color={null}
+          ellipsizeMode="tail"
+          size={16}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#333",
+                "fontSize": 16,
+              },
+              Array [
+                Object {
+                  "color": "#666",
+                  "fontSize": 16,
+                  "textAlign": "center",
+                },
+                null,
+              ],
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          取消
+        </Text>
+      </View>
+      <View
+        accessibilityLabel="Dialog.Confirm"
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "borderRightColor": "#e5e5e5",
+            "borderRightWidth": 0,
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          align={null}
+          allowFontScaling={false}
+          color={null}
+          ellipsizeMode="tail"
+          size={16}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#333",
+                "fontSize": 16,
+              },
+              Array [
+                Object {
+                  "color": "#333",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                },
+                null,
+              ],
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          确认
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Checkbox Component basic render switch 2`] = `
+<View
+  renderToHardwareTextureAndroid={false}
+  style={
+    Object {
+      "alignItems": "center",
+      "justifyContent": "center",
+      "opacity": 0,
+      "transform": Array [
+        Object {
+          "scale": 0.5,
+        },
+      ],
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "#fff",
+          "borderRadius": 16,
+          "justifyContent": "center",
+          "width": 630,
+        },
+        null,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "borderBottomColor": "#e5e5e5",
+            "borderBottomWidth": 0.5,
+            "height": 56,
+            "justifyContent": "center",
+          },
+          null,
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        numberOfLines={2}
+        size={18}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 18,
+            },
+            Array [
+              Object {
+                "color": "#333",
+                "fontSize": 18,
+                "fontWeight": "500",
+                "textAlign": "center",
+              },
+              null,
+            ],
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        标题
+      </Text>
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        size={16}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 16,
+            },
+            Array [
+              Object {
+                "color": "#999",
+                "fontSize": 16,
+                "marginTop": 7,
+                "textAlign": "center",
+              },
+              null,
+            ],
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        副标题
+      </Text>
+    </View>
+    <RCTScrollView
+      ItemSeparatorComponent={[Function]}
+      contentContainerStyle={
+        Array [
+          Object {
+            "backgroundColor": "#f8f8f8",
+          },
+          undefined,
+        ]
+      }
+      data={
+        Array [
+          Object {
+            "title": "传感器选择",
+            "value": "code1",
+          },
+          Object {
+            "title": "房间传感器校准",
+            "value": "code2",
+          },
+          Object {
+            "Icon": "warning",
+            "hideOnUnselect": true,
+            "iconSize": 24,
+            "reverse": true,
+            "title": "地板传感器校准",
+            "value": "code3",
+          },
+        ]
+      }
+      disableVirtualization={false}
+      getItem={[Function]}
+      getItemCount={[Function]}
+      horizontal={false}
+      initialNumToRender={10}
+      keyExtractor={[Function]}
+      maxToRenderPerBatch={10}
+      motionConfig={
+        Object {
+          "initScale": 0.5,
+        }
+      }
+      motionType="ScaleFadeIn"
+      numColumns={1}
+      onChange={null}
+      onConfirm={[Function]}
+      onContentSizeChange={[Function]}
+      onEndReachedThreshold={2}
+      onLayout={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      renderItem={[Function]}
+      scrollEnabled={false}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={Array []}
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#fff",
+          },
+          Array [
+            null,
+            Object {
+              "maxHeight": 240,
+            },
+          ],
+        ]
+      }
+      type="switch"
+      updateCellsBatchingPeriod={50}
+      useART={false}
+      value={
+        Array [
+          "code2",
+        ]
+      }
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignSelf": "stretch",
+                "backgroundColor": undefined,
+                "borderRadius": 0,
+                "flexGrow": 0,
+                "height": 48,
+                "marginBottom": 0,
+                "marginLeft": 0,
+                "marginRight": 0,
+                "marginTop": 0,
+                "minHeight": 48,
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              disabled={false}
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "borderRadius": 0,
+                    "flexDirection": "row",
+                    "opacity": 1,
+                    "paddingBottom": 12,
+                    "paddingLeft": 32,
+                    "paddingRight": 32,
+                    "paddingTop": 12,
+                  },
+                  Array [
+                    false,
+                    undefined,
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "justifyContent": "center",
+                      "marginRight": 20,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                <View
+                  accessibilityLabel="Checkbox"
+                  accessible={true}
+                  isTVSelectable={true}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "alignSelf": "stretch",
+                      "backgroundColor": "transparent",
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "opacity": 1,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "flexDirection": "row",
+                        "opacity": 1,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "flexDirection": "row",
+                          },
+                          Object {
+                            "height": 17,
+                            "width": 17,
+                          },
+                          false,
+                          Array [
+                            Object {},
+                            false,
+                          ],
+                        ]
+                      }
+                    >
+                      <RNSVGSvgView
+                        align="xMidYMid"
+                        meetOrSlice={0}
+                        minX={0}
+                        minY={0}
+                        style={
+                          Array [
+                            Object {
+                              "backgroundColor": "transparent",
+                            },
+                            undefined,
+                            false,
+                            Object {
+                              "flex": 0,
+                              "height": 17,
+                              "width": 17,
+                            },
+                          ]
+                        }
+                        vbHeight={1024}
+                        vbWidth={1024}
+                      >
+                        <RNSVGPath
+                          d="M512 0c282.752 0 512 229.248 512 512s-229.248 512-512 512S0 794.752 0 512 229.248 0 512 0z m0 85.333333C276.352 85.333333 85.333333 276.352 85.333333 512s191.018667 426.666667 426.666667 426.666667 426.666667-191.018667 426.666667-426.666667S747.648 85.333333 512 85.333333z"
+                          fill={
+                            Array [
+                              0,
+                              0.8980392156862745,
+                              0.8980392156862745,
+                              0.8980392156862745,
+                              1,
+                            ]
+                          }
+                          fillOpacity={1}
+                          fillRule={1}
+                          matrix={
+                            Array [
+                              1,
+                              0,
+                              0,
+                              1,
+                              0,
+                              0,
+                            ]
+                          }
+                          opacity={1}
+                          propList={
+                            Array [
+                              "stroke",
+                              "strokeWidth",
+                              "fill",
+                            ]
+                          }
+                          stroke={
+                            Array [
+                              0,
+                              0.8980392156862745,
+                              0.8980392156862745,
+                              0.8980392156862745,
+                              1,
+                            ]
+                          }
+                          strokeDasharray={null}
+                          strokeDashoffset={null}
+                          strokeLinecap={0}
+                          strokeLinejoin={0}
+                          strokeMiterlimit={4}
+                          strokeOpacity={1}
+                          strokeWidth={1}
+                        />
+                      </RNSVGSvgView>
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "flexBasis": 0,
+                      "flexGrow": 1,
+                      "flexShrink": 1,
+                      "justifyContent": "center",
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                <Text
+                  accessible={true}
+                  align={null}
+                  allowFontScaling={false}
+                  color={null}
+                  ellipsizeMode="tail"
+                  size="small"
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "transparent",
+                        "color": "#333",
+                        "fontSize": 17,
+                        "lineHeight": 24,
+                      },
+                      Array [
+                        Object {
+                          "color": "#333",
+                        },
+                        Array [
+                          undefined,
+                          Array [
+                            Object {
+                              "color": undefined,
+                              "fontSize": undefined,
+                            },
+                            undefined,
+                          ],
+                        ],
+                      ],
+                    ]
+                  }
+                  type="title"
+                  weight={null}
+                >
+                  传感器选择
+                </Text>
+              </View>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "marginLeft": 20,
+                    "opacity": 1,
+                  }
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "rgba(51, 51, 51, 0.1)",
+                  "height": 0.5,
+                  "marginLeft": 32,
+                },
+                null,
+              ]
+            }
+          />
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignSelf": "stretch",
+                "backgroundColor": undefined,
+                "borderRadius": 0,
+                "flexGrow": 0,
+                "height": 48,
+                "marginBottom": 0,
+                "marginLeft": 0,
+                "marginRight": 0,
+                "marginTop": 0,
+                "minHeight": 48,
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              disabled={false}
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "borderRadius": 0,
+                    "flexDirection": "row",
+                    "opacity": 1,
+                    "paddingBottom": 12,
+                    "paddingLeft": 32,
+                    "paddingRight": 32,
+                    "paddingTop": 12,
+                  },
+                  Array [
+                    false,
+                    undefined,
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "justifyContent": "center",
+                      "marginRight": 20,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                <View
+                  accessibilityLabel="Checkbox"
+                  accessible={true}
+                  isTVSelectable={true}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "alignSelf": "stretch",
+                      "backgroundColor": "transparent",
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "opacity": 1,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "flexDirection": "row",
+                        "opacity": 1,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "flexDirection": "row",
+                          },
+                          Object {
+                            "height": 17,
+                            "width": 17,
+                          },
+                          false,
+                          Array [
+                            Object {},
+                            false,
+                          ],
+                        ]
+                      }
+                    >
+                      <RNSVGSvgView
+                        align="xMidYMid"
+                        meetOrSlice={0}
+                        minX={0}
+                        minY={0}
+                        style={
+                          Array [
+                            Object {
+                              "backgroundColor": "transparent",
+                            },
+                            undefined,
+                            false,
+                            Object {
+                              "flex": 0,
+                              "height": 17,
+                              "width": 17,
+                            },
+                          ]
+                        }
+                        vbHeight={1024}
+                        vbWidth={1024}
+                      >
+                        <RNSVGPath
+                          d="M512 0c282.7776 0 512 229.2224 512 512s-229.2224 512-512 512S0 794.7776 0 512 229.2224 0 512 0z m279.04 362.8032a51.2 51.2 0 0 0-72.3968 0l-253.44 253.3888-108.6464-108.544a51.2 51.2 0 0 0-72.3968 72.3456l144.2304 144.1792 0.6144 0.6656a51.2 51.2 0 0 0 72.3968 0L791.04 435.2a51.2 51.2 0 0 0 0-72.3968z"
+                          fill={
+                            Array [
+                              0,
+                              0.26666666666666666,
+                              0.8588235294117647,
+                              0.3686274509803922,
+                              1,
+                            ]
+                          }
+                          fillOpacity={1}
+                          fillRule={1}
+                          matrix={
+                            Array [
+                              1,
+                              0,
+                              0,
+                              1,
+                              0,
+                              0,
+                            ]
+                          }
+                          opacity={1}
+                          propList={
+                            Array [
+                              "stroke",
+                              "strokeWidth",
+                              "fill",
+                            ]
+                          }
+                          stroke={
+                            Array [
+                              0,
+                              0.26666666666666666,
+                              0.8588235294117647,
+                              0.3686274509803922,
+                              1,
+                            ]
+                          }
+                          strokeDasharray={null}
+                          strokeDashoffset={null}
+                          strokeLinecap={0}
+                          strokeLinejoin={0}
+                          strokeMiterlimit={4}
+                          strokeOpacity={1}
+                          strokeWidth={1}
+                        />
+                      </RNSVGSvgView>
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "flexBasis": 0,
+                      "flexGrow": 1,
+                      "flexShrink": 1,
+                      "justifyContent": "center",
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                <Text
+                  accessible={true}
+                  align={null}
+                  allowFontScaling={false}
+                  color={null}
+                  ellipsizeMode="tail"
+                  size="small"
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "transparent",
+                        "color": "#333",
+                        "fontSize": 17,
+                        "lineHeight": 24,
+                      },
+                      Array [
+                        Object {
+                          "color": "#333",
+                        },
+                        Array [
+                          undefined,
+                          Array [
+                            Object {
+                              "color": undefined,
+                              "fontSize": undefined,
+                            },
+                            undefined,
+                          ],
+                        ],
+                      ],
+                    ]
+                  }
+                  type="title"
+                  weight={null}
+                >
+                  房间传感器校准
+                </Text>
+              </View>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "marginLeft": 20,
+                    "opacity": 1,
+                  }
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "rgba(51, 51, 51, 0.1)",
+                  "height": 0.5,
+                  "marginLeft": 32,
+                },
+                null,
+              ]
+            }
+          />
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignSelf": "stretch",
+                "backgroundColor": undefined,
+                "borderRadius": 0,
+                "flexGrow": 0,
+                "height": 48,
+                "marginBottom": 0,
+                "marginLeft": 0,
+                "marginRight": 0,
+                "marginTop": 0,
+                "minHeight": 48,
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              disabled={false}
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "borderRadius": 0,
+                    "flexDirection": "row",
+                    "opacity": 1,
+                    "paddingBottom": 12,
+                    "paddingLeft": 32,
+                    "paddingRight": 32,
+                    "paddingTop": 12,
+                  },
+                  Array [
+                    false,
+                    undefined,
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "justifyContent": "center",
+                      "marginRight": 20,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "flexDirection": "row",
+                      },
+                      Object {
+                        "height": 24,
+                        "width": 24,
+                      },
+                      false,
+                      null,
+                    ]
+                  }
+                >
+                  <RNSVGSvgView
+                    align="xMidYMid"
+                    meetOrSlice={0}
+                    minX={0}
+                    minY={0}
+                    style={
+                      Array [
+                        Object {
+                          "backgroundColor": "transparent",
+                        },
+                        undefined,
+                        false,
+                        Object {
+                          "flex": 0,
+                          "height": 24,
+                          "width": 24,
+                        },
+                      ]
+                    }
+                    vbHeight={1024}
+                    vbWidth={1024}
+                  >
+                    <RNSVGPath
+                      d="M512 0c282.7776 0 512 229.2224 512 512s-229.2224 512-512 512S0 794.7776 0 512 229.2224 0 512 0z m0 665.6a76.8 76.8 0 1 0 0 153.6 76.8 76.8 0 0 0 0-153.6z m0-460.8a72.192 72.192 0 0 0-71.9872 76.6464l17.6128 281.856a54.4768 54.4768 0 0 0 108.7488 0l17.6128-281.856A72.192 72.192 0 0 0 512 204.8z"
+                      fill={
+                        Array [
+                          0,
+                          0.2,
+                          0.2,
+                          0.2,
+                          0.5,
+                        ]
+                      }
+                      fillOpacity={1}
+                      fillRule={1}
+                      matrix={
+                        Array [
+                          1,
+                          0,
+                          0,
+                          1,
+                          0,
+                          0,
+                        ]
+                      }
+                      opacity={1}
+                      propList={
+                        Array [
+                          "stroke",
+                          "strokeWidth",
+                          "fill",
+                        ]
+                      }
+                      stroke={
+                        Array [
+                          0,
+                          0.2,
+                          0.2,
+                          0.2,
+                          0.5,
+                        ]
+                      }
+                      strokeDasharray={null}
+                      strokeDashoffset={null}
+                      strokeLinecap={0}
+                      strokeLinejoin={0}
+                      strokeMiterlimit={4}
+                      strokeOpacity={1}
+                      strokeWidth={1}
+                    />
+                  </RNSVGSvgView>
+                </View>
+              </View>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "flexBasis": 0,
+                      "flexGrow": 1,
+                      "flexShrink": 1,
+                      "justifyContent": "center",
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                <Text
+                  accessible={true}
+                  align={null}
+                  allowFontScaling={false}
+                  color={null}
+                  ellipsizeMode="tail"
+                  size="small"
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "transparent",
+                        "color": "#333",
+                        "fontSize": 17,
+                        "lineHeight": 24,
+                      },
+                      Array [
+                        Object {
+                          "color": "#333",
+                        },
+                        Array [
+                          undefined,
+                          Array [
+                            Object {
+                              "color": undefined,
+                              "fontSize": undefined,
+                            },
+                            undefined,
+                          ],
+                        ],
+                      ],
+                    ]
+                  }
+                  type="title"
+                  weight={null}
+                >
+                  地板传感器校准
+                </Text>
+              </View>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "marginLeft": 20,
+                    "opacity": 1,
+                  }
+                }
+              >
+                <View
+                  accessibilityLabel="Checkbox"
+                  accessible={true}
+                  isTVSelectable={true}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "alignSelf": "stretch",
+                      "backgroundColor": "transparent",
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "opacity": 1,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "flexDirection": "row",
+                        "opacity": 1,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "flexDirection": "row",
+                          },
+                          Object {
+                            "height": 17,
+                            "width": 17,
+                          },
+                          false,
+                          Array [
+                            Object {},
+                            Object {
+                              "opacity": 0,
+                            },
+                          ],
+                        ]
+                      }
+                    >
+                      <RNSVGSvgView
+                        align="xMidYMid"
+                        meetOrSlice={0}
+                        minX={0}
+                        minY={0}
+                        style={
+                          Array [
+                            Object {
+                              "backgroundColor": "transparent",
+                            },
+                            undefined,
+                            false,
+                            Object {
+                              "flex": 0,
+                              "height": 17,
+                              "width": 17,
+                            },
+                          ]
+                        }
+                        vbHeight={1024}
+                        vbWidth={1024}
+                      >
+                        <RNSVGPath
+                          d="M512 0c282.752 0 512 229.248 512 512s-229.248 512-512 512S0 794.752 0 512 229.248 0 512 0z m0 85.333333C276.352 85.333333 85.333333 276.352 85.333333 512s191.018667 426.666667 426.666667 426.666667 426.666667-191.018667 426.666667-426.666667S747.648 85.333333 512 85.333333z"
+                          fill={
+                            Array [
+                              0,
+                              0.8980392156862745,
+                              0.8980392156862745,
+                              0.8980392156862745,
+                              1,
+                            ]
+                          }
+                          fillOpacity={1}
+                          fillRule={1}
+                          matrix={
+                            Array [
+                              1,
+                              0,
+                              0,
+                              1,
+                              0,
+                              0,
+                            ]
+                          }
+                          opacity={1}
+                          propList={
+                            Array [
+                              "stroke",
+                              "strokeWidth",
+                              "fill",
+                            ]
+                          }
+                          stroke={
+                            Array [
+                              0,
+                              0.8980392156862745,
+                              0.8980392156862745,
+                              0.8980392156862745,
+                              1,
+                            ]
+                          }
+                          strokeDasharray={null}
+                          strokeDashoffset={null}
+                          strokeLinecap={0}
+                          strokeLinejoin={0}
+                          strokeMiterlimit={4}
+                          strokeOpacity={1}
+                          strokeWidth={1}
+                        />
+                      </RNSVGSvgView>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+    <View
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "borderTopColor": "#e5e5e5",
+            "borderTopWidth": 0.5,
+            "flexDirection": "row",
+            "height": 56,
+          },
+          null,
+        ]
+      }
+    >
+      <View
+        accessibilityLabel="Dialog.Cancel"
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "borderRightColor": "#e5e5e5",
+            "borderRightWidth": 0.5,
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          align={null}
+          allowFontScaling={false}
+          color={null}
+          ellipsizeMode="tail"
+          size={16}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#333",
+                "fontSize": 16,
+              },
+              Array [
+                Object {
+                  "color": "#666",
+                  "fontSize": 16,
+                  "textAlign": "center",
+                },
+                null,
+              ],
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          取消
+        </Text>
+      </View>
+      <View
+        accessibilityLabel="Dialog.Confirm"
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "borderRightColor": "#e5e5e5",
+            "borderRightWidth": 0,
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          align={null}
+          allowFontScaling={false}
+          color={null}
+          ellipsizeMode="tail"
+          size={16}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#333",
+                "fontSize": 16,
+              },
+              Array [
+                Object {
+                  "color": "#333",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                },
+                null,
+              ],
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          确认
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;

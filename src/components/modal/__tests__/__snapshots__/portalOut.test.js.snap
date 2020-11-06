@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PortalOut Component render correctly 1`] = `
+<TYModal
+  activeIdx={0}
+  alignContainer="bottom"
+  animationType="fade"
+  mask={true}
+  maskStyle={null}
+  modalChildStyle={null}
+  onDismiss={[Function]}
+  onMaskPress={[Function]}
+  onlyLastModalVisible={true}
+  useKeyboardView={false}
+  visible={false}
+/>
+`;
+
+exports[`PortalOut Component render correctly 2`] = `""`;
