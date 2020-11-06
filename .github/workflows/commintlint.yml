@@ -1,0 +1,19 @@
+name: Lint Commit Messages
+on: [pull_request]
+
+jobs:
+  commitlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+      - run: npm install
+      - name: Add dependencies for commitlint action
+        # $GITHUB_WORKSPACE is the path to your repository
+        run: echo "::set-env name=NODE_PATH::$GITHUB_WORKSPACE/node_modules"
+      # Now the commitlint action will run considering its own dependencies and yours as well 🚀
+      - uses: wagoid/commitlint-github-action@v2
