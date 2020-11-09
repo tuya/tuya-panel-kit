@@ -3,6 +3,11 @@ import PropTypes from 'prop-types';
 import { Text, ColorPropType, StyleSheet } from 'react-native';
 import StyledText from './styled';
 
+/**
+ * TODO:
+ * 1. Text 三类 heading title paragraph，通过 props 去做还是通过不同组件去做;
+ * 2. 是否还有更多属性需要暴露;
+ */
 class TYText extends React.Component {
   static propTypes = {
     /**

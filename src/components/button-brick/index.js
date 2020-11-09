@@ -32,12 +32,9 @@ const ThemedBrickButton = props => {
           brickButton: { ...globalTheme.brickButton, ...localTheme },
         };
         const propsWithTheme = { theme, ...rest };
-        const {
-          type,
-          theme: {
-            global: { brand },
-          },
-        } = propsWithTheme;
+        const { type } = propsWithTheme;
+        const newGlobal = { ...globalTheme.global };
+        const { brand } = newGlobal;
         const isBorderType = type === 'primaryBorder';
         const themedProps = {
           wrapperStyle: {

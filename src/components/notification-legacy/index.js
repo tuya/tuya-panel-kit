@@ -83,10 +83,11 @@ export default class NotificationLegacy extends PureComponent {
       ...rest
     } = this.props;
     const disable = typeof onPress === 'function';
+    const { warning } = ICONS;
     return (
       <ThemeConsumer>
         {t => {
-          const iconPath = icon || ICONS[variant] || ICONS.warning;
+          const iconPath = icon || ICONS[variant] || warning;
           const iconColor =
             theme.iconColor || theme[`${variant}Icon`] || t.global[variant] || theme.warningIcon;
           const shadowSize = {

@@ -275,9 +275,11 @@ class Carousel extends React.Component {
     if (Platform.OS === 'android' && this.props.useViewPagerOnAndroid) {
       return (
         <ViewPagerAndroid
-          ref={ref => {
-            this.scrollview = ref;
-          }}
+          ref={
+            /* istanbul ignore next */ ref => {
+              this.scrollview = ref;
+            }
+          }
           {...this.props}
           initialPage={this.props.loop ? this.state.selectedIndex + 1 : this.state.selectedIndex}
           onPageScrollStateChanged={this.onPageScrollStateChanged}
@@ -293,9 +295,11 @@ class Carousel extends React.Component {
       <ScrollView
         {...this.props}
         horizontal={true}
-        ref={ref => {
-          this.scrollview = ref;
-        }}
+        ref={
+          /* istanbul ignore next */ ref => {
+            this.scrollview = ref;
+          }
+        }
         showsHorizontalScrollIndicator={false}
         showsVerticalScrollIndicator={false}
         pagingEnabled={true}
@@ -317,12 +321,12 @@ class Carousel extends React.Component {
     const { dotStyle, dotActiveStyle, dots, dotWrapperStyle } = this.props;
     return dots
       ? dots({
-        dotStyle,
-        dotWrapperStyle,
-        dotActiveStyle,
-        currentIndex: this.state.selectedIndex,
-        count: this.count,
-      })
+          dotStyle,
+          dotWrapperStyle,
+          dotActiveStyle,
+          currentIndex: this.state.selectedIndex,
+          count: this.count,
+        })
       : null;
   };
   render() {

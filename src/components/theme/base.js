@@ -86,7 +86,7 @@ const topbar = {
  */
 const switchButton = {
   light: {
-    width: 51, // 按钮宽度
+    width: 48, // 按钮宽度
     height: 28, // 按钮宽度
     thumbSize: 24, // 滑块宽高尺寸
     // thumbWidth, // 滑块圆的宽度
@@ -98,7 +98,7 @@ const switchButton = {
     onThumbTintColor: '#fff', // 开启情况下滑块背景色
   },
   dark: {
-    width: 51, // 按钮宽度
+    width: 48, // 按钮宽度
     height: 28, // 按钮宽度
     thumbSize: 24, // 滑块宽高尺寸
     margin: 2, // 滑块四周边距

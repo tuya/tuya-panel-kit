@@ -1,0 +1,241 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Confirm Component basic render 1`] = `
+<View
+  renderToHardwareTextureAndroid={false}
+  style={
+    Object {
+      "alignItems": "center",
+      "justifyContent": "center",
+      "opacity": 0,
+      "transform": Array [
+        Object {
+          "scale": 0.5,
+        },
+      ],
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "#fff",
+          "borderRadius": 16,
+          "justifyContent": "center",
+          "width": 630,
+        },
+        null,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "justifyContent": "center",
+            "paddingBottom": 32,
+            "paddingLeft": 32,
+            "paddingRight": 32,
+            "paddingTop": 32,
+          },
+          null,
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        numberOfLines={2}
+        size={18}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 18,
+            },
+            Array [
+              Object {
+                "color": "#333",
+                "fontSize": 18,
+                "fontWeight": "500",
+                "textAlign": "center",
+              },
+              Array [
+                Object {
+                  "paddingVertical": 0,
+                },
+                null,
+              ],
+            ],
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        标题
+      </Text>
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        size={16}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 16,
+            },
+            Array [
+              Object {
+                "color": "#999",
+                "fontSize": 16,
+                "marginTop": 7,
+                "textAlign": "center",
+              },
+              null,
+            ],
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        副标题
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "borderTopColor": "#e5e5e5",
+            "borderTopWidth": 0.5,
+            "flexDirection": "row",
+            "height": 56,
+          },
+          null,
+        ]
+      }
+    >
+      <View
+        accessibilityLabel="Dialog.Cancel"
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "borderRightColor": "#e5e5e5",
+            "borderRightWidth": 0.5,
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          align={null}
+          allowFontScaling={false}
+          color={null}
+          ellipsizeMode="tail"
+          size={16}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#333",
+                "fontSize": 16,
+              },
+              Array [
+                Object {
+                  "color": "#666",
+                  "fontSize": 16,
+                  "textAlign": "center",
+                },
+                null,
+              ],
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          取消
+        </Text>
+      </View>
+      <View
+        accessibilityLabel="Dialog.Confirm"
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "borderRightColor": "#e5e5e5",
+            "borderRightWidth": 0,
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          align={null}
+          allowFontScaling={false}
+          color={null}
+          ellipsizeMode="tail"
+          size={16}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#333",
+                "fontSize": 16,
+              },
+              Array [
+                Object {
+                  "color": "#333",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                },
+                null,
+              ],
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          确认
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;

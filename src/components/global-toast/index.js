@@ -6,7 +6,7 @@ import Toast from '../toast-view/toast';
 import IconFont from '../iconfont/svg';
 import { RatioUtils } from '../../utils';
 import { pick, omit } from '../TYLists/items/utils';
-import TYSdk from '../../TYNativeApi';
+import { TYSdk } from '../../TYNativeApi';
 
 const TYEvent = TYSdk.event;
 

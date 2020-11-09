@@ -26,6 +26,7 @@ const { isIphoneX } = RatioUtils;
 
 const ios = Platform.OS === 'ios';
 
+/* istanbul ignore next */
 const StyledMask = styled(TouchableOpacity)`
   background-color: ${props => get(props, 'theme.global.mask', 'rgba(0, 0, 0, 0.7)')};
 `;
@@ -64,9 +65,9 @@ class TYModal extends React.Component {
      * 是否弹出键盘自适应
      */
     useKeyboardView: PropTypes.bool,
+
     /**
      * Modal 组件销毁回调事件，一般用于在弹窗销毁后跳转新的 native 页面
-     * @version 2.0.0-rc.7
      * @platform iOS
      */
     onDismiss: PropTypes.func,
@@ -103,6 +104,7 @@ class TYModal extends React.Component {
     const childMotionType = get(this, `_childRef.${children.length - 1}.props.motionType`, 'none');
     const childMaskPress = get(this, `_childRef.${children.length - 1}._handleMaskPress`);
     if (childMotionType !== 'none' && typeof childMaskPress === 'function') {
+      /* istanbul ignore next */
       childMaskPress();
     } else {
       typeof onMaskPress === 'function' && onMaskPress();
@@ -167,7 +169,7 @@ class TYModal extends React.Component {
           if (!Array.isArray(child)) {
             modalChild = React.cloneElement(child, {
               onMaskPress: get(child, 'props.onMaskPress', onMaskPress),
-              ref: ref => {
+              ref: /* istanbul ignore next */ ref => {
                 this._childRef[idx] = ref;
               },
             });

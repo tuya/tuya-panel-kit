@@ -349,5 +349,4 @@ const NumberUtil = {
   subtract,
 };
 
-
 export default NumberUtil;

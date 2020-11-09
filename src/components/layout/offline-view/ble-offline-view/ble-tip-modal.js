@@ -3,8 +3,8 @@ import React, { PureComponent } from 'react';
 import { View, Image, TouchableOpacity, ColorPropType, StyleSheet, Animated } from 'react-native';
 import TopBar from '../../../layout/topbar';
 import TYText from '../../../TYText';
-import Strings from '../../../../i18n/strings';
 import { RatioUtils } from '../../../../utils';
+import { Strings } from '../../../../TYNativeApi';
 
 const { convertX: cx, isIphoneX } = RatioUtils;
 

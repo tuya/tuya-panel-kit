@@ -27,7 +27,8 @@ export class PickerView extends PureComponent {
   constructor(props) {
     super(props);
     const { children, selectedValue } = props;
-    this._loopTimes = children.length > 0 ? Math.round(MAX_ITEM_NUM / children.length) : 0;
+    this._loopTimes =
+      children && children.length > 0 ? Math.round(MAX_ITEM_NUM / children.length) : 0;
     this.state = {
       loopIdx: Math.floor(this._loopTimes / 2),
       selectedValue,

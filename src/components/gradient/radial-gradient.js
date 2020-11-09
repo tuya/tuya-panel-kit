@@ -54,7 +54,7 @@ export default class RadialGradient extends Component {
 
   static defaultProps = {
     style: null,
-    gradientId: null,
+    gradientId: 'radial-gradient',
     cx: '50%',
     cy: '50%',
     rx: '50%',
@@ -77,9 +77,7 @@ export default class RadialGradient extends Component {
 
   constructor(props) {
     super(props);
-    this._gradientId = Math.random()
-      .toString(36)
-      .substring(7);
+    this._gradientId = Math.random().toString(36).substring(7);
   }
 
   get gradientId() {

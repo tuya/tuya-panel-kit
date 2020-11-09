@@ -99,6 +99,10 @@ export default class ProgressSpace extends Gesture {
      * 圆环中心自定义内容
      */
     renderCenterView: PropTypes.element,
+    /**
+     * 进度条块状的宽度
+     */
+    strokeWidth: PropTypes.number,
   };
 
   static defaultProps = {
@@ -125,6 +129,7 @@ export default class ProgressSpace extends Gesture {
     x2: '100%',
     y2: '0%',
     renderCenterView: null,
+    strokeWidth: 0,
   };
 
   constructor(props) {
@@ -145,7 +150,7 @@ export default class ProgressSpace extends Gesture {
   }
 
   fixDegreeAndBindToInstance(props) {
-    const { startDegree, andDegree, value } = props;
+    const { startDegree, andDegree } = props;
     this.startDegree = startDegree;
     this.endDegree = startDegree + andDegree;
     // 当初始度数大于360度时
@@ -207,13 +212,14 @@ export default class ProgressSpace extends Gesture {
 
   onRelease(e, gestureState) {
     const { onSlidingComplete } = this.props;
-    this.eventHandle(gestureState, onSlidingComplete);
+    this.eventHandle(gestureState, onSlidingComplete, true);
   }
 
-  eventHandle({ locationX, locationY }, fn) {
+  eventHandle({ locationX, locationY }, fn, isRelease = false) {
     const { startDegree } = this;
     const deg = this.getDegRelativeCenter(locationX, locationY);
-    if (this.shouldUpdateScale(locationX, locationY)) {
+    const isInArea = this.shouldUpdateScale(locationX, locationY);
+    if (isInArea) {
       let deltaDeg = deg - startDegree;
       if (deltaDeg < 0) {
         deltaDeg = deg + 360 - startDegree;
@@ -224,6 +230,10 @@ export default class ProgressSpace extends Gesture {
       this.setState({
         value,
       });
+    }
+    if (isRelease && !isInArea) {
+      const { value } = this.state;
+      if (typeof fn === 'function') fn(value);
     }
   }
 
@@ -330,6 +340,7 @@ export default class ProgressSpace extends Gesture {
       foreStrokeOpacity,
       foreColor,
       style,
+      strokeWidth,
       gradientId,
       x1,
       x2,
@@ -361,6 +372,7 @@ export default class ProgressSpace extends Gesture {
             fill="none"
             stroke={backColor}
             strokeOpacity={backStrokeOpacity}
+            strokeWidth={strokeWidth}
           />
           {isGradient && greater && (
             <Gradient
@@ -377,7 +389,7 @@ export default class ProgressSpace extends Gesture {
             isGradient={isGradient}
             path={this.foreScalePath}
             strokeOpacity={foreStrokeOpacity}
-            strokeWidth={0}
+            strokeWidth={strokeWidth}
             gradientId={gradientId}
             foreColor={foreColor}
           />

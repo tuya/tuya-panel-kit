@@ -72,6 +72,10 @@ ThemedButton.propTypes = {
      * 按钮的背景颜色
      */
     bgColor: ColorPropType,
+    /**
+     * 按钮的背景圆角
+     */
+    bgRadius: PropTypes.number,
   }),
 };
 

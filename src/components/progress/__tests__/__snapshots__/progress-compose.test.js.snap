@@ -1,0 +1,639 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Compose Component panel render 1`] = `
+<View
+  onLayout={[Function]}
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  pointerEvents="box-only"
+  style={
+    Array [
+      Object {
+        "height": 100,
+        "width": 100,
+      },
+      Object {
+        "height": 110,
+        "width": 110,
+      },
+    ]
+  }
+>
+  <Svg
+    height={110}
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="-5 -5 110 110"
+    width={110}
+  >
+    <Path
+      d="M10.397041122148202 60.611580849203364 A41 41 0 1 1 10.397041122148202 60.611580849203364"
+      fill="none"
+      stroke="#E5E5E5"
+      strokeOpacity={1}
+      strokeWidth={9}
+      x="0"
+      y="0"
+    />
+    <ProgressCircle
+      cx={10.397041122148202}
+      cy={60.611580849203364}
+      fill="#1381FB"
+      r={3.5}
+      stroke="#1381FB"
+      strokeWidth={2}
+    />
+    <ProgressCircle
+      cx={10.397041122148202}
+      cy={60.611580849203364}
+      fill="#E5E5E5"
+      r={3.5}
+      stroke="#E5E5E5"
+      strokeWidth={2}
+    />
+    <Path
+      d="M18.592177832121905 76.35429199714812 A41 41 0 1 0 18.592177832121898 76.35429199714811"
+      fill="none"
+      stroke="#E5E5E5"
+      strokeOpacity={1}
+      strokeWidth={4}
+      x="0"
+      y="0"
+    />
+    <ProgressCircle
+      cx={18.592177832121905}
+      cy={76.35429199714812}
+      fill="#1381FB"
+      r={1}
+      stroke="#1381FB"
+      strokeWidth={2}
+    />
+    <ProgressCircle
+      cx={18.592177832121898}
+      cy={76.35429199714811}
+      fill="#1381FB"
+      r={1}
+      stroke="#E5E5E5"
+      strokeWidth={2}
+    />
+    <PathCustom
+      foreColor="#1381FB"
+      gradientId="Gradient"
+      isGradient={false}
+      path="M10.397041122148202 60.611580849203364 A41 41 0 0 1 11.72320251361473 35.30691406864268"
+      strokeOpacity={1}
+      strokeWidth={9}
+    />
+    <PathCustom
+      foreColor="#1381FB"
+      gradientId="Gradient"
+      isGradient={false}
+      path="M18.592177832121905 76.35429199714812 A41 41 0 0 0 NaN NaN"
+      strokeOpacity={1}
+      strokeWidth={4}
+    />
+    <ProgressCircle
+      cx={11.72320251361473}
+      cy={35.30691406864268}
+      fill="#fff"
+      r={5}
+      stroke="#fff"
+      strokeWidth={2}
+    />
+    <ProgressCircle
+      cx={NaN}
+      cy={NaN}
+      fill="#fff"
+      r={2}
+      stroke="#fff"
+      strokeWidth={2}
+    />
+  </Svg>
+</View>
+`;
+
+exports[`Progress-Compose Component basic.render 1`] = `[Function]`;
+
+exports[`Progress-Compose Component basic.render with foreColor 1`] = `[Function]`;
+
+exports[`Progress-Compose Component basic.render with update 1`] = `
+<View
+  onLayout={[Function]}
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  pointerEvents="box-only"
+  style={
+    Array [
+      Object {
+        "height": 100,
+        "width": 100,
+      },
+      Object {
+        "height": 110,
+        "width": 110,
+      },
+    ]
+  }
+>
+  <RNSVGSvgView
+    align="xMidYMid"
+    meetOrSlice={0}
+    minX={-5}
+    minY={-5}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        undefined,
+        false,
+        Object {
+          "flex": 0,
+          "height": 110,
+          "width": 110,
+        },
+      ]
+    }
+    vbHeight={110}
+    vbWidth={110}
+  >
+    <RNSVGPath
+      d="M21.008621971351555 78.99137802864846 A41 41 0 1 1 90.37711787350052 42.88042471565582"
+      fill={null}
+      fillOpacity={1}
+      fillRule={1}
+      matrix={
+        Array [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+        ]
+      }
+      opacity={1}
+      propList={
+        Array [
+          "stroke",
+          "strokeWidth",
+          "strokeOpacity",
+          "fill",
+        ]
+      }
+      stroke={
+        Array [
+          0,
+          0.8980392156862745,
+          0.8980392156862745,
+          0.8980392156862745,
+          1,
+        ]
+      }
+      strokeDasharray={null}
+      strokeDashoffset={null}
+      strokeLinecap={0}
+      strokeLinejoin={0}
+      strokeMiterlimit={4}
+      strokeOpacity={1}
+      strokeWidth={9}
+    />
+    <RNSVGCircle
+      cx="21.008621971351555"
+      cy="78.99137802864846"
+      fill={
+        Array [
+          0,
+          0.07450980392156863,
+          0.5058823529411764,
+          0.984313725490196,
+          1,
+        ]
+      }
+      fillOpacity={1}
+      fillRule={1}
+      matrix={
+        Array [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+        ]
+      }
+      opacity={1}
+      propList={
+        Array [
+          "stroke",
+          "strokeWidth",
+          "fill",
+        ]
+      }
+      r="3.5"
+      stroke={
+        Array [
+          0,
+          0.07450980392156863,
+          0.5058823529411764,
+          0.984313725490196,
+          1,
+        ]
+      }
+      strokeDasharray={null}
+      strokeDashoffset={null}
+      strokeLinecap={0}
+      strokeLinejoin={0}
+      strokeMiterlimit={4}
+      strokeOpacity={1}
+      strokeWidth={2}
+    />
+    <RNSVGCircle
+      cx="90.37711787350052"
+      cy="42.88042471565582"
+      fill={
+        Array [
+          0,
+          0.8980392156862745,
+          0.8980392156862745,
+          0.8980392156862745,
+          1,
+        ]
+      }
+      fillOpacity={1}
+      fillRule={1}
+      matrix={
+        Array [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+        ]
+      }
+      opacity={1}
+      propList={
+        Array [
+          "stroke",
+          "strokeWidth",
+          "fill",
+        ]
+      }
+      r="3.5"
+      stroke={
+        Array [
+          0,
+          0.8980392156862745,
+          0.8980392156862745,
+          0.8980392156862745,
+          1,
+        ]
+      }
+      strokeDasharray={null}
+      strokeDashoffset={null}
+      strokeLinecap={0}
+      strokeLinejoin={0}
+      strokeMiterlimit={4}
+      strokeOpacity={1}
+      strokeWidth={2}
+    />
+    <RNSVGPath
+      d="M18.592177832121905 76.35429199714812 A41 41 0 0 0 81.4078221678781 76.35429199714811"
+      fill={null}
+      fillOpacity={1}
+      fillRule={1}
+      matrix={
+        Array [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+        ]
+      }
+      opacity={1}
+      propList={
+        Array [
+          "stroke",
+          "strokeWidth",
+          "strokeOpacity",
+          "fill",
+        ]
+      }
+      stroke={
+        Array [
+          0,
+          0.8980392156862745,
+          0.8980392156862745,
+          0.8980392156862745,
+          1,
+        ]
+      }
+      strokeDasharray={null}
+      strokeDashoffset={null}
+      strokeLinecap={0}
+      strokeLinejoin={0}
+      strokeMiterlimit={4}
+      strokeOpacity={1}
+      strokeWidth={4}
+    />
+    <RNSVGCircle
+      cx="18.592177832121905"
+      cy="76.35429199714812"
+      fill={
+        Array [
+          0,
+          0.07450980392156863,
+          0.5058823529411764,
+          0.984313725490196,
+          1,
+        ]
+      }
+      fillOpacity={1}
+      fillRule={1}
+      matrix={
+        Array [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+        ]
+      }
+      opacity={1}
+      propList={
+        Array [
+          "stroke",
+          "strokeWidth",
+          "fill",
+        ]
+      }
+      r="1"
+      stroke={
+        Array [
+          0,
+          0.07450980392156863,
+          0.5058823529411764,
+          0.984313725490196,
+          1,
+        ]
+      }
+      strokeDasharray={null}
+      strokeDashoffset={null}
+      strokeLinecap={0}
+      strokeLinejoin={0}
+      strokeMiterlimit={4}
+      strokeOpacity={1}
+      strokeWidth={2}
+    />
+    <RNSVGCircle
+      cx="81.4078221678781"
+      cy="76.35429199714811"
+      fill={
+        Array [
+          0,
+          0.07450980392156863,
+          0.5058823529411764,
+          0.984313725490196,
+          1,
+        ]
+      }
+      fillOpacity={1}
+      fillRule={1}
+      matrix={
+        Array [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+        ]
+      }
+      opacity={1}
+      propList={
+        Array [
+          "stroke",
+          "strokeWidth",
+          "fill",
+        ]
+      }
+      r="1"
+      stroke={
+        Array [
+          0,
+          0.8980392156862745,
+          0.8980392156862745,
+          0.8980392156862745,
+          1,
+        ]
+      }
+      strokeDasharray={null}
+      strokeDashoffset={null}
+      strokeLinecap={0}
+      strokeLinejoin={0}
+      strokeMiterlimit={4}
+      strokeOpacity={1}
+      strokeWidth={2}
+    />
+    <RNSVGPath
+      d="M21.008621971351555 78.99137802864846 A41 41 0 0 1 12.400536950209919 66.34871182593511"
+      fill={null}
+      fillOpacity={1}
+      fillRule={1}
+      matrix={
+        Array [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+        ]
+      }
+      opacity={1}
+      propList={
+        Array [
+          "stroke",
+          "strokeWidth",
+          "strokeOpacity",
+          "fill",
+        ]
+      }
+      stroke={
+        Array [
+          1,
+          "Gradient",
+        ]
+      }
+      strokeDasharray={null}
+      strokeDashoffset={null}
+      strokeLinecap={0}
+      strokeLinejoin={0}
+      strokeMiterlimit={4}
+      strokeOpacity={1}
+      strokeWidth={9}
+    />
+    <RNSVGPath
+      d="M18.592177832121905 76.35429199714812 A41 41 0 0 0 42.880424715655856 90.37711787350054"
+      fill={null}
+      fillOpacity={1}
+      fillRule={1}
+      matrix={
+        Array [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+        ]
+      }
+      opacity={1}
+      propList={
+        Array [
+          "stroke",
+          "strokeWidth",
+          "strokeOpacity",
+          "fill",
+        ]
+      }
+      stroke={
+        Array [
+          1,
+          "Gradient",
+        ]
+      }
+      strokeDasharray={null}
+      strokeDashoffset={null}
+      strokeLinecap={0}
+      strokeLinejoin={0}
+      strokeMiterlimit={4}
+      strokeOpacity={1}
+      strokeWidth={4}
+    />
+    <RNSVGCircle
+      cx="12.400536950209919"
+      cy="66.34871182593511"
+      fill={
+        Array [
+          0,
+          1,
+          1,
+          1,
+          1,
+        ]
+      }
+      fillOpacity={1}
+      fillRule={1}
+      matrix={
+        Array [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+        ]
+      }
+      opacity={1}
+      propList={
+        Array [
+          "stroke",
+          "strokeWidth",
+          "fill",
+        ]
+      }
+      r="5"
+      stroke={
+        Array [
+          0,
+          1,
+          1,
+          1,
+          1,
+        ]
+      }
+      strokeDasharray={null}
+      strokeDashoffset={null}
+      strokeLinecap={0}
+      strokeLinejoin={0}
+      strokeMiterlimit={4}
+      strokeOpacity={1}
+      strokeWidth={2}
+    />
+    <RNSVGCircle
+      cx="42.880424715655856"
+      cy="90.37711787350054"
+      fill={
+        Array [
+          0,
+          1,
+          1,
+          1,
+          1,
+        ]
+      }
+      fillOpacity={1}
+      fillRule={1}
+      matrix={
+        Array [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+        ]
+      }
+      opacity={1}
+      propList={
+        Array [
+          "stroke",
+          "strokeWidth",
+          "fill",
+        ]
+      }
+      r="4"
+      stroke={
+        Array [
+          0,
+          1,
+          1,
+          1,
+          1,
+        ]
+      }
+      strokeDasharray={null}
+      strokeDashoffset={null}
+      strokeLinecap={0}
+      strokeLinejoin={0}
+      strokeMiterlimit={4}
+      strokeOpacity={1}
+      strokeWidth={2}
+    />
+  </RNSVGSvgView>
+</View>
+`;

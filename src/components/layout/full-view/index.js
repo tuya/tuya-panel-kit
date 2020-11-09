@@ -3,20 +3,19 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { View, Image, Dimensions, StyleSheet, ViewPropTypes, Platform } from 'react-native';
 import { Rect } from 'react-native-svg';
-import TYSdk from '../../../TYNativeApi';
-import Strings from '../../../i18n/strings';
+import { TYSdk, Strings } from '../../../TYNativeApi';
 import TopBar from '../topbar';
 import OfflineView from '../offline-view';
 import { CoreUtils, ThemeUtils, RatioUtils } from '../../../utils';
 import Notification from '../../notification';
 import GlobalToast from '../../global-toast';
 
-const TYMobile = TYSdk.mobile;
-const TYNative = TYSdk.native;
-const TYEvent = TYSdk.event;
-
 let LinearGradient = View;
 let RadialGradient = View;
+
+const TYNative = TYSdk.native;
+const TYMobile = TYSdk.mobile;
+const TYEvent = TYSdk.event;
 
 if (TYMobile.verSupported('2.5')) {
   LinearGradient = require('../../gradient/linear-gradient').default;
@@ -41,7 +40,6 @@ class FullView extends Component {
     // backgroundStyle: PropTypes.oneOfType([ViewPropTypes.style, Image.propTypes.style]),
     background: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
     onBack: PropTypes.func,
-    devInfo: PropTypes.object.isRequired,
     capability: PropTypes.number,
     /**
      * 蓝牙离线提示是否覆盖整个面板(除头部栏外)
@@ -67,9 +65,9 @@ class FullView extends Component {
     this.state = {
       // background: props.background,
       showNotification: false,
+      showToast: false,
       information: {},
       motionStyle: {},
-      showToast: false,
       successInformation: {},
       successStyle: {},
     };
@@ -100,12 +98,10 @@ class FullView extends Component {
   };
 
   get topBarMoreIconName() {
-    const { devInfo = {} } = this.props;
     return (
-      (devInfo &&
-        devInfo.panelConfig &&
-        devInfo.panelConfig.fun &&
-        devInfo.panelConfig.fun.topBarMoreIconName) ||
+      (TYSdk.devInfo.panelConfig &&
+        TYSdk.devInfo.panelConfig.fun &&
+        TYSdk.devInfo.panelConfig.fun.topBarMoreIconName) ||
       'pen'
     );
   }
@@ -203,14 +199,13 @@ class FullView extends Component {
       showOfflineView,
       capability,
       isBleOfflineOverlay,
-      devInfo = {},
     } = this.props;
     const show = !appOnline || !deviceOnline;
     const tipText = !appOnline
       ? Strings.getLang('appoffline')
       : !deviceOnline
-        ? Strings.getLang('offline')
-        : '';
+      ? Strings.getLang('offline')
+      : '';
 
     if (!show) {
       return null;
@@ -233,7 +228,6 @@ class FullView extends Component {
         deviceOnline={deviceOnline}
         capability={capability}
         isBleOfflineOverlay={isBleOfflineOverlay}
-        devInfo={devInfo}
       />
     );
   }
@@ -264,21 +258,14 @@ class FullView extends Component {
   }
 
   renderTopBar() {
-    const {
-      title,
-      topbarStyle,
-      hideTopbar,
-      renderTopBar,
-      topbarTextStyle,
-      devInfo = {},
-    } = this.props;
+    const { title, topbarStyle, hideTopbar, renderTopBar, topbarTextStyle } = this.props;
     const { isShare } = this.state;
 
     if (!hideTopbar) {
       if (renderTopBar) {
         return renderTopBar();
       }
-      const uiPhase = devInfo.uiPhase || 'release';
+      const uiPhase = TYSdk.devInfo.uiPhase || 'release';
       const { color } = StyleSheet.flatten(topbarTextStyle) || {};
       const isShowMore = !(isShare || !this.props.showMenu);
       const actions = [

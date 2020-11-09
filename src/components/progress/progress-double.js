@@ -283,15 +283,16 @@ export default class ProgressDouble extends Gesture {
 
   onRelease(e, gestureState) {
     const { onSlidingComplete } = this.props;
-    this.eventHandle(gestureState, onSlidingComplete);
+    this.eventHandle(gestureState, onSlidingComplete, true);
   }
 
-  eventHandle({ locationX, locationY }, fn) {
+  eventHandle({ locationX, locationY }, fn, isRelease = false) {
     const { startDegree, endDegree } = this;
     const { thumbRadius } = this.props;
     // 鼠标点击的坐标
     const deg = this.getDegRelativeCenter(locationX - thumbRadius, locationY - thumbRadius);
-    if (this.shouldUpdateScale(locationX - thumbRadius, locationY - thumbRadius)) {
+    const isInArea = this.shouldUpdateScale(locationX - thumbRadius, locationY - thumbRadius);
+    if (isInArea) {
       // 最小值对应的角度
       const startDeg = this.getDegRelativeCenter(this.progressStartX, this.progressStartY);
       // 最大值对应的角度
@@ -378,6 +379,10 @@ export default class ProgressDouble extends Gesture {
           });
         }
       }
+    }
+    if (isRelease && !isInArea) {
+      const { minValue, maxValue } = this.state;
+      if (typeof fn === 'function') fn({ minValue, maxValue });
     }
   }
 
@@ -604,8 +609,9 @@ export default class ProgressDouble extends Gesture {
         ]}
       >
         <Svg
-          viewBox={`${-thumbRadius} ${-thumbRadius} ${size + 2 * thumbRadius} ${size +
-            2 * thumbRadius}`}
+          viewBox={`${-thumbRadius} ${-thumbRadius} ${size + 2 * thumbRadius} ${
+            size + 2 * thumbRadius
+          }`}
           width={size + 2 * thumbRadius}
           height={size + 2 * thumbRadius}
         >

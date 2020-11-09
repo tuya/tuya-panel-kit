@@ -3,11 +3,9 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { StyleSheet, Text, ViewPropTypes, View, StatusBar } from 'react-native';
-import TYSdk from '../../../TYNativeApi';
+import { TYSdk } from '../../../TYNativeApi';
 import WebView from '../../webview';
 import TopBar from '../topbar';
-
-const TYNative = TYSdk.native;
 
 class OfflineWebView extends Component {
   static propTypes = {
@@ -33,7 +31,7 @@ class OfflineWebView extends Component {
     const { navigator } = this.props;
     if (!this.props.onBack || !this.props.onBack()) {
       if (tab === 'right') {
-        TYNative.showDeviceMenu();
+        TYSdk.native.showDeviceMenu();
       } else {
         if (navigator && navigator.getCurrentRoutes().length > 1) {
           navigator.pop();

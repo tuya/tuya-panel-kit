@@ -1,5 +1,4 @@
 /* eslint-disable quotes */
-
 import I18N from './index';
 
 const lang = {
@@ -15,6 +14,8 @@ const lang = {
     deviceOffline: 'Unable to Connect',
     deviceOfflineHelp:
       '① Make sure that the equipment is powered on normally (or the battery is sufficient).\n② Keep the cell phone as close as possible to the device.\n③ If the device has been connected by other mobile phones, please disconnect the connection first.',
+    deviceOfflineHelpNew:
+      '① Make sure that the equipment is powered on normally (or the battery is sufficient).\n② Keep the cell phone as close as possible to the device.\n③ If the device has been connected by other mobile phones, please disconnect the connection first, go on ',
     bluetoothShare: 'Bluetooth Sharing',
     bluetoothOfflineTip: 'Please turn on "Bluetooth"',
     bluetoothShareTip: 'Limited functionality, please turn on "Bluetooth Sharing"',
@@ -31,12 +32,13 @@ const lang = {
     offline_moreHelp: 'More Help',
     offline_checkHelps: 'The device is offline. Please check the help',
     offline_textLinkBefore:
-      '1. Please check whether your device has power or not\n2. Whether the router connected to your device works normally',
+      '1. Please check whether your device has power or not.\n2. Whether the router connected to your device works normally.',
     offline_linkFront:
       "3. Check whether the router's name or password has been changed, you can try ",
-    offline_link: 'reconnection',
-    offline_textLinkAfter: '4. Is your device too far away from the router, poor signal or blocked',
-    offline_textLinkMore: '5.',
+    offline_link: 'reconnection.',
+    offline_textLinkAfter:
+      '4. Is your device too far away from the router, poor signal or blocked.',
+    offline_textLinkMore: '',
   },
   zh: {
     offline: '设备暂时不可操作\n请稍后再试',
@@ -50,6 +52,8 @@ const lang = {
     deviceOffline: '设备连接失败',
     deviceOfflineHelp:
       '① 确保设备通电正常（或电池电量充足）\n② 将手机尽量贴近设备\n③ 若设备曾被其他手机连接过，请先断开连接。',
+    deviceOfflineHelpNew:
+      '① 确保设备通电正常（或电池电量充足）\n② 将手机尽量贴近设备\n③ 若设备曾被其他手机连接过，请先断开，再进行',
     bluetoothShare: '蓝牙权限',
     bluetoothOfflineTip: '请开启“蓝牙”',
     bluetoothShareTip: '功能受限，请开启“蓝牙共享”',
@@ -67,7 +71,7 @@ const lang = {
     offline_linkFront: '3. 检查是否修改了路由器的名称或密码，可以尝试',
     offline_link: '重新连接',
     offline_textLinkAfter: '4. 您的设备是否里路由器过远、信号较差或有遮挡物',
-    offline_textLinkMore: '5.',
+    offline_textLinkMore: '',
   },
 };
 

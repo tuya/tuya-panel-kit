@@ -4,8 +4,12 @@ import { withTheme } from 'styled-components/native';
 
 class ThemeConsumer extends React.Component {
   static propTypes = {
-    theme: PropTypes.object.isRequired,
+    theme: PropTypes.object,
     children: PropTypes.func.isRequired,
+  };
+
+  static defaultProps = {
+    theme: null,
   };
 
   render() {

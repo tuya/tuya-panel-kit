@@ -137,7 +137,7 @@ class Swipeout extends React.Component {
       onPanResponderMove: this.handlePanResponderMove,
       onPanResponderRelease: this.handlePanResponderEnd,
       onPanResponderTerminate: this.handlePanResponderEnd,
-      onShouldBlockNativeResponder: () => false,
+      onShouldBlockNativeResponder: /* istanbul ignore next */ () => false,
       onPanResponderTerminationRequest: () => false,
     });
     this.state.contentDot.addListener(obj => {

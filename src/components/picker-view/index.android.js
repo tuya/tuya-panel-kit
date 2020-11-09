@@ -2,8 +2,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { StyleSheet, ViewPropTypes, ColorPropType } from 'react-native';
-import { ThemeUtils } from '../../utils';
 import Picker from './picker';
+import { ThemeUtils } from '../../utils';
 
 const { getTheme, ThemeConsumer } = ThemeUtils;
 
@@ -23,14 +23,41 @@ class Item extends Component {
 export class PickerView extends Component {
   static propTypes = {
     ...ViewPropTypes,
+    /**
+     * 测试标示
+     */
     accessibilityLabel: PropTypes.string,
+    /**
+     * Picker选项的文字颜色
+     */
     itemTextColor: ColorPropType,
+    /**
+     * Picker选项选中的文字颜色
+     */
     selectedItemTextColor: ColorPropType,
+    /**
+     * Picker选项分割线颜色
+     */
     dividerColor: ColorPropType,
+    /**
+     * Picker可视区域项目个数
+     */
     visibleItemCount: PropTypes.number,
+    /**
+     * 数值改变回调
+     */
     onValueChange: PropTypes.func,
+    /**
+     * 选中的数值
+     */
     selectedValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
+    /**
+     * 自定义内容
+     */
     children: PropTypes.node.isRequired,
+    /**
+     * Picker是否循环滚动
+     */
     loop: PropTypes.bool,
   };
 

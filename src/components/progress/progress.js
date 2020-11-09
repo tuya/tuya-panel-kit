@@ -166,10 +166,10 @@ export default class Progress extends Gesture {
     thumbStroke: '#fff',
     thumbStrokeWidth: 2,
     thumbRadius: 2,
-    needMaxCircle: false,
+    needMaxCircle: true,
     needMinCircle: false,
-    startColor: '#FF4800',
-    endColor: '#E5E5E5',
+    startColor: null,
+    endColor: null,
     renderCenterView: null,
   };
 
@@ -191,7 +191,7 @@ export default class Progress extends Gesture {
   }
 
   fixDegreeAndBindToInstance(props) {
-    const { startDegree, andDegree, value } = props;
+    const { startDegree, andDegree } = props;
     this.startDegree = startDegree % 360;
     if (andDegree >= 360) {
       this.andDegree = 360;
@@ -277,14 +277,15 @@ export default class Progress extends Gesture {
 
   onRelease(e, gestureState) {
     const { onSlidingComplete } = this.props;
-    this.eventHandle(gestureState, onSlidingComplete);
+    this.eventHandle(gestureState, onSlidingComplete, true);
   }
 
-  eventHandle({ locationX, locationY }, fn) {
+  eventHandle({ locationX, locationY }, fn, isRelease = false) {
     const { startDegree } = this;
     const { needMaxCircle } = this.props;
     const deg = this.getDegRelativeCenter(locationX, locationY);
-    if (this.shouldUpdateScale(locationX, locationY)) {
+    const isInArea = this.shouldUpdateScale(locationX, locationY);
+    if (isInArea) {
       let deltaDeg = deg - startDegree;
       if (deltaDeg < 0) {
         deltaDeg = deg + 360 - startDegree;
@@ -300,7 +301,10 @@ export default class Progress extends Gesture {
       this.setState({
         value,
       });
-
+      if (typeof fn === 'function') fn(value);
+    }
+    if (isRelease && !isInArea) {
+      const { value } = this.state;
       if (typeof fn === 'function') fn(value);
     }
   }
@@ -442,11 +446,21 @@ export default class Progress extends Gesture {
       endColor,
       renderCenterView,
       min,
+      max,
     } = this.props;
+    const { value } = this.state;
     const { r } = this.getCircleInfo();
     const size = r * 2;
     const isGradient = foreColor && typeof foreColor === 'object';
     const greater = this.state.value !== min;
+    const minCircleColor =
+      value === min ? backColor : isGradient ? Object.values(foreColor)[0] : foreColor;
+    const maxCircleColor =
+      value === max
+        ? isGradient
+          ? Object.values(foreColor)[Object.values(foreColor).length - 1]
+          : foreColor
+        : backColor;
     return (
       <View
         {...responder}
@@ -459,8 +473,9 @@ export default class Progress extends Gesture {
         ]}
       >
         <Svg
-          viewBox={`${-thumbRadius} ${-thumbRadius} ${size + 2 * thumbRadius} ${size +
-            2 * thumbRadius}`}
+          viewBox={`${-thumbRadius} ${-thumbRadius} ${size + 2 * thumbRadius} ${
+            size + 2 * thumbRadius
+          }`}
           width={size + 2 * thumbRadius}
           height={size + 2 * thumbRadius}
         >
@@ -478,8 +493,8 @@ export default class Progress extends Gesture {
               cx={this.startX}
               cy={this.startY}
               r={scaleHeight / 2 - 1}
-              fill={startColor}
-              stroke={startColor}
+              fill={startColor || minCircleColor}
+              stroke={startColor || minCircleColor}
             />
           )}
           {this.andDegree < 360 && (
@@ -487,8 +502,8 @@ export default class Progress extends Gesture {
               cx={this.endX}
               cy={this.endY}
               r={scaleHeight / 2 - 1}
-              fill={endColor}
-              stroke={endColor}
+              fill={endColor || maxCircleColor}
+              stroke={endColor || maxCircleColor}
             />
           )}
           {isGradient && greater && (
@@ -524,9 +539,9 @@ export default class Progress extends Gesture {
               cx={this.startProgressX}
               cy={this.startProgressY}
               r={thumbRadius}
-              fill={foreColor}
+              fill={thumbFill}
               strokeWidth={thumbStrokeWidth}
-              stroke={foreColor}
+              stroke={thumbStroke}
             />
           )}
         </Svg>

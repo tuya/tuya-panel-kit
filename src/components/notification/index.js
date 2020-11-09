@@ -12,7 +12,7 @@ import {
   StyledImage,
 } from './styled';
 import Motion from '../motion';
-import TYSdk from '../../TYNativeApi';
+import { TYSdk } from '../../TYNativeApi';
 
 const { ThemeConsumer } = ThemeUtils;
 const { convertX: cx } = RatioUtils;
@@ -58,11 +58,22 @@ export default class Notification extends PureComponent {
   }
 
   componentDidMount() {
-    const { enableClose, autoCloseTime, onClose } = this.props;
-    if (!enableClose) {
+    const { enableClose, autoCloseTime, onClose, show } = this.props;
+    if (!enableClose && show) {
       this._autoCloseId = setTimeout(() => {
         typeof onClose === 'function' && onClose();
       }, autoCloseTime);
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const { enableClose, autoCloseTime, onClose, show } = nextProps;
+    if (show !== this.props.show && show) {
+      if (!enableClose) {
+        this._autoCloseId = setTimeout(() => {
+          typeof onClose === 'function' && onClose();
+        }, autoCloseTime);
+      }
     }
   }
 
@@ -107,7 +118,10 @@ export default class Notification extends PureComponent {
           {t => {
             const iconPath = icon || ICONS[variant] || ICONS.warning;
             const iconColor =
-              theme.iconColor || theme[`${variant}Icon`] || t.global[variant] || theme.warningIcon;
+              theme.iconColor ||
+              theme[`${variant}Icon`] ||
+              (t.global && t.global[variant]) ||
+              theme.warningIcon;
             const isOneLine = this.state.height === 44;
             return (
               <StyledNotification

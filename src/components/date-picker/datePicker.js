@@ -313,7 +313,10 @@ class DatePicker extends React.Component {
       //   } else {
       //     ampm = [{ value: '0', label: locale.am }, { value: '1', label: locale.pm }];
       //   }
-      const ampm = [{ value: '0', label: locale.am }, { value: '1', label: locale.pm }];
+      const ampm = [
+        { value: '0', label: locale.am },
+        { value: '1', label: locale.pm },
+      ];
       ampmCols = [{ key: 'ampm', values: ampm }];
     }
     let hour = [];

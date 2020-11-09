@@ -1,21 +1,19 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Image, View, StyleSheet, ViewPropTypes, ColorPropType } from 'react-native';
-import TYSdk from '../../../TYNativeApi';
+import { TYSdk } from '../../../TYNativeApi';
 import RefText from '../../TYText';
 import { RatioUtils, NumberUtils, CoreUtils } from '../../../utils';
 import BleOfflineView from './ble-offline-view';
 import NewOfflineView from './new-offline-view';
 
-const TYEvent = TYSdk.event;
 const TYMobile = TYSdk.mobile;
-const TYDevice = TYSdk.device;
 const TYNative = TYSdk.native;
+const TYDevice = TYSdk.device;
+const TYEvent = TYSdk.event;
 
 const { convert } = RatioUtils;
-
 const { compareVersion, get } = CoreUtils;
-
 const OFFLINE_API_SUPPORT = TYMobile.verSupported('2.91');
 
 const Res = {
@@ -24,13 +22,13 @@ const Res = {
 
 const requireRnVersion = '5.23';
 
+const requireWifiRnVersion = '5.30';
+
 export default class OfflineView extends Component {
   static propTypes = {
-    devInfo: PropTypes.object.isRequired,
     style: ViewPropTypes.style,
     textStyle: ViewPropTypes.style,
     text: PropTypes.string,
-    // isShare: PropTypes.bool,
     appOnline: PropTypes.bool,
     deviceOnline: PropTypes.bool,
     capability: PropTypes.number,
@@ -43,7 +41,6 @@ export default class OfflineView extends Component {
     style: null,
     textStyle: null,
     text: null,
-    // isShare: false,
     appOnline: true,
     deviceOnline: true,
     capability: 1,
@@ -76,25 +73,48 @@ export default class OfflineView extends Component {
   };
 
   _handleLinkPress = () => {
-    this.setState({
-      show: false,
-    });
+    const { devId } = TYSdk.devInfo;
+    const isJumpToWifi = this._handleVersionToJump();
+    if (isJumpToWifi) {
+      TYNative.jumpTo(`tuyaSmart://device_offline_reconnect?device_id=${devId}`);
+    }
+  };
+
+  // 判断App RN版本是否为3.21及以上，且身份符合条件才可跳转至配网页面
+  _handleVersionToJump = () => {
+    const appRnVersion = get(TYNative, 'mobileInfo.appRnVersion');
+    const role = get(TYSdk, 'devInfo.role');
+    const isGreater = appRnVersion && compareVersion(appRnVersion, requireWifiRnVersion);
+    const isJumpToWifi = isGreater === 0 || isGreater === 1;
+    // role = 1: 家庭管理员  role = 2: 家庭超级管理员
+    return isJumpToWifi && (role === 1 || role === 2);
   };
 
   _handleMoreHelp = () => {
+    const isJumpToWifi = this._handleVersionToJump();
+    let linkJumpStyle;
+    if (isJumpToWifi) {
+      linkJumpStyle = {
+        color: '#FF4800',
+        textDecorationLine: 'underline',
+      };
+    } else {
+      linkJumpStyle = {
+        textDecorationLine: 'none',
+        color: '#999',
+      };
+    }
     TYMobile.jumpSubPage(
       { uiId: '000000cg8b' },
       {
-        textLinkStyle: {
-          textDecorationLine: 'none',
-          color: '#999',
-        },
+        textLinkStyle: linkJumpStyle,
       }
     );
   };
 
   renderBleView() {
     const { deviceOnline, capability, isBleOfflineOverlay } = this.props;
+    const isJumpToWifi = this._handleVersionToJump();
     // 在蓝牙状态未获取到之前不渲染该页面
     if (typeof this.state.bluetoothStatus !== 'boolean') {
       return null;
@@ -105,22 +125,21 @@ export default class OfflineView extends Component {
         deviceOnline={deviceOnline}
         capability={capability}
         isBleOfflineOverlay={isBleOfflineOverlay}
+        isJumpToWifi={isJumpToWifi}
+        onLinkPress={this._handleLinkPress}
       />
     );
   }
 
   renderOldView() {
-    const { showDeviceImg, maskColor, devInfo = {} } = this.props;
+    const { showDeviceImg, maskColor } = this.props;
     const { show } = this.state;
     const appRnVersion = get(TYNative, 'mobileInfo.appRnVersion');
     // app版本大于3.16 →  appRNVersion >= 5.23才会显示新离线弹框
     const isGreater = appRnVersion && compareVersion(appRnVersion, requireRnVersion);
     const isShowNewOffline = isGreater === 0 || isGreater === 1;
-    const showOldOffline =
-      devInfo &&
-      devInfo.panelConfig &&
-      devInfo.panelConfig.fun &&
-      devInfo.panelConfig.fun.showOldOffline;
+    const showOldOffline = get(TYSdk, 'devInfo.panelConfig.fun.showOldOffline', false);
+    const isJumpToWifi = this._handleVersionToJump();
     return !showOldOffline && isShowNewOffline ? (
       <NewOfflineView
         show={show}
@@ -129,7 +148,7 @@ export default class OfflineView extends Component {
         onConfirm={this._handleConfirm}
         onHelpPress={this._handleMoreHelp}
         maskColor={maskColor}
-        devInfo={devInfo}
+        isJumpToWifi={isJumpToWifi}
       />
     ) : (
       <View accessibilityLabel="OfflineView_Wifi" style={[styles.container, this.props.style]}>
