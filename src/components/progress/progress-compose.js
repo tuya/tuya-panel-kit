@@ -133,6 +133,18 @@ export default class ProgressSimple extends Gesture {
      * 轨道结束的圆环颜色
      */
     endColor: PropTypes.string,
+    /**
+     * 进度条2 Thumb小圆球的填充色
+     */
+    thumbFill2: PropTypes.string,
+    /**
+     * 进度条2 Thumb小圆球边框宽度
+     */
+    thumbStrokeWidth2: PropTypes.number,
+    /**
+     * 进度条2 Thumb小圆球的边框色
+     */
+    thumbStroke2: PropTypes.string,
   };
 
   static defaultProps = {
@@ -167,6 +179,9 @@ export default class ProgressSimple extends Gesture {
     needCircle2: true,
     startColor: '#FF4800',
     endColor: '#E5E5E5',
+    thumbFill2: '#fff',
+    thumbStrokeWidth2: 2,
+    thumbStroke2: '#fff',
   };
 
   constructor(props) {
@@ -313,10 +328,10 @@ export default class ProgressSimple extends Gesture {
 
   onRelease(e, gestureState) {
     const { onSlidingComplete } = this.props;
-    this.eventHandle(gestureState, onSlidingComplete);
+    this.eventHandle(gestureState, onSlidingComplete, true);
   }
 
-  eventHandle({ locationX, locationY }, fn) {
+  eventHandle({ locationX, locationY }, fn, isRelease = false) {
     const { startDegree1, endDegree1, startDegree2 } = this;
     const { needCircle1, needCircle2, value1, value2 } = this.props;
     const deg = this.getDegRelativeCenter(locationX, locationY);
@@ -324,7 +339,8 @@ export default class ProgressSimple extends Gesture {
       endDegree1 >= startDegree1
         ? deg >= startDegree1 && deg <= endDegree1
         : deg >= startDegree1 || deg <= endDegree1;
-    if (this.shouldUpdateScale(locationX, locationY)) {
+    const isInArea = this.shouldUpdateScale(locationX, locationY);
+    if (isInArea) {
       let deltaDeg;
       if (compareDeg) {
         deltaDeg = deg - startDegree1;
@@ -364,6 +380,10 @@ export default class ProgressSimple extends Gesture {
           value2: value,
         });
       }
+    }
+    if (isRelease && !isInArea) {
+      const { value1: stateValue1, value2: stateValue2 } = this.state;
+      if (typeof fn === 'function') fn({ value1: stateValue1, value2: stateValue2 });
     }
   }
 
@@ -424,12 +444,12 @@ export default class ProgressSimple extends Gesture {
   // 进度条渲染线目的角度
   mapDeltaDegToScaleCount(deltaDeg, back = true) {
     if (back) {
-      if (deltaDeg > this.andDegree1) {
+      if (deltaDeg >= this.andDegree1) {
         return this.andDegree1;
       }
       return deltaDeg;
     }
-    if (deltaDeg > this.andDegree2) {
+    if (deltaDeg >= this.andDegree2) {
       return this.andDegree2;
     }
     return deltaDeg;
@@ -468,7 +488,6 @@ export default class ProgressSimple extends Gesture {
 
   // 计算路径路径
   createSvgPath(deltaDeg = 0, back = true) {
-    if (deltaDeg === 0) return '';
     const { r } = this.getCircleInfo();
     const { startDegree1, startDegree2 } = this;
     const { scaleHeight1 } = this.props;
@@ -504,6 +523,9 @@ export default class ProgressSimple extends Gesture {
       thumbFill,
       thumbStrokeWidth,
       thumbStroke,
+      thumbFill2,
+      thumbStrokeWidth2,
+      thumbStroke2,
       thumbRadius1,
       thumbRadius2,
       needCircle1,
@@ -608,9 +630,9 @@ export default class ProgressSimple extends Gesture {
               cx={this.progressX2}
               cy={this.progressY2}
               r={thumbRadius2}
-              fill={thumbFill}
-              strokeWidth={thumbStrokeWidth}
-              stroke={thumbStroke}
+              fill={thumbFill2}
+              strokeWidth={thumbStrokeWidth2}
+              stroke={thumbStroke2}
             />
           )}
         </Svg>

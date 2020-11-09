@@ -13,8 +13,11 @@ const ThemeProvider = ({ theme, children }) => {
 };
 
 ThemeProvider.propTypes = {
-  theme: PropTypes.object.isRequired,
+  theme: PropTypes.object,
   children: PropTypes.element.isRequired,
+};
+ThemeProvider.defaultProps = {
+  theme: null,
 };
 
 export default ThemeProvider;

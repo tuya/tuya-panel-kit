@@ -251,7 +251,8 @@ export default class Tabs extends Component {
    */
   getCurActiveIndex = props => {
     const { activeKey, defaultActiveKey } = props;
-    const activeIndex = this.props.dataSource.findIndex(
+    const { dataSource } = this.props;
+    const activeIndex = dataSource.findIndex(
       d => d.value === activeKey || d.value === defaultActiveKey
     );
     return activeIndex === -1 ? 0 : activeIndex;
@@ -401,7 +402,7 @@ export default class Tabs extends Component {
 
   _handleTabChange = (tab, idx) => {
     const { dataSource, activeKey, onChange } = this.props;
-    if (idx > dataSource.length - 1 || tab.disabled) {
+    if (idx > dataSource.length - 1 || (tab && tab.disabled)) {
       return;
     }
     if (typeof activeKey === 'undefined') {

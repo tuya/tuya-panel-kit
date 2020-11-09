@@ -1,34 +1,32 @@
 /* eslint-disable import/prefer-default-export */
 import { NativeModules } from 'react-native';
-import TYSdk from '../../../TYNativeApi';
+import { TYSdk } from '../../../TYNativeApi';
 import { JsonUtils, CoreUtils } from '../../../utils';
 
 const ESPNative = Object.assign({}, NativeModules.TYRCTMqttManager);
-const TYNative = TYSdk.native;
 
 const requireRnVersion = '5.21';
 const { compareVersion, get } = CoreUtils;
 
+const TYNative = TYSdk.native;
+
 export const getRssi = () => {
   return new Promise((resolve, reject) => {
-    TYSdk.device.getDeviceInfo().then(result => {
-      if (!result) return;
-      const { devId } = result;
-      TYNative.apiRNRequest(
-        {
-          a: 'tuya.m.device.upgrade.rssi.info.query',
-          devId,
-          v: '1.0',
-        },
-        d => {
-          const data = JsonUtils.parseJSON(d);
-          resolve(data);
-        },
-        e => {
-          reject(e);
-        }
-      );
-    });
+    const { devId } = TYSdk.devInfo;
+    TYNative.apiRNRequest(
+      {
+        a: 'tuya.m.device.upgrade.rssi.info.query',
+        devId,
+        v: '1.0',
+      },
+      d => {
+        const data = JsonUtils.parseJSON(d);
+        resolve(data);
+      },
+      e => {
+        reject(e);
+      }
+    );
   });
 };
 
@@ -70,7 +68,6 @@ TYNative.sendMqttData = protocol => {
         resolve(JsonUtils.parseJSON(data));
       },
       error => {
-        console.log(error, 'eee');
         reject(error);
       }
     );

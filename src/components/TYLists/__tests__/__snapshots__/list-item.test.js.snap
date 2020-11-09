@@ -1,0 +1,3034 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItem Component basic render 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "backgroundColor": "#fff",
+      "borderRadius": 0,
+      "flexGrow": 0,
+      "marginBottom": 0,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "marginTop": 0,
+      "minHeight": 48,
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    disabled={false}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 0,
+          "flexDirection": "row",
+          "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "paddingTop": 12,
+        },
+        Array [
+          false,
+          undefined,
+          undefined,
+        ],
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginLeft": 20,
+          "opacity": 1,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`ListItem Component should not update 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "backgroundColor": "#fff",
+      "borderRadius": 0,
+      "flexGrow": 0,
+      "marginBottom": 0,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "marginTop": 0,
+      "minHeight": 48,
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    disabled={false}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 0,
+          "flexDirection": "row",
+          "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "paddingTop": 12,
+        },
+        Array [
+          false,
+          undefined,
+          undefined,
+        ],
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        size="small"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 17,
+              "lineHeight": 24,
+            },
+            Array [
+              Object {
+                "color": "#333",
+              },
+              Array [
+                undefined,
+                undefined,
+              ],
+            ],
+          ]
+        }
+        type="title"
+        weight={null}
+      >
+        No Subtitle
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginLeft": 20,
+          "opacity": 1,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`ListItem Component should render with Action 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "backgroundColor": "#fff",
+      "borderRadius": 0,
+      "flexGrow": 0,
+      "marginBottom": 0,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "marginTop": 0,
+      "minHeight": 48,
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    disabled={false}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 0,
+          "flexDirection": "row",
+          "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "paddingTop": 12,
+        },
+        Array [
+          false,
+          undefined,
+          undefined,
+        ],
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginLeft": 20,
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Component
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ListItem Component should render with Action 2`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "backgroundColor": "#fff",
+      "borderRadius": 0,
+      "flexGrow": 0,
+      "marginBottom": 0,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "marginTop": 0,
+      "minHeight": 48,
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    disabled={false}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 0,
+          "flexDirection": "row",
+          "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "paddingTop": 12,
+        },
+        Array [
+          false,
+          undefined,
+          undefined,
+        ],
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginLeft": 20,
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Function
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ListItem Component should render with Action 3`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "backgroundColor": "#fff",
+      "borderRadius": 0,
+      "flexGrow": 0,
+      "marginBottom": 0,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "marginTop": 0,
+      "minHeight": 48,
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    disabled={false}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 0,
+          "flexDirection": "row",
+          "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "paddingTop": 12,
+        },
+        Array [
+          false,
+          undefined,
+          undefined,
+        ],
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginLeft": 20,
+          "opacity": 1,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`ListItem Component should render with Action 4`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "backgroundColor": "#fff",
+      "borderRadius": 0,
+      "flexGrow": 0,
+      "marginBottom": 0,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "marginTop": 0,
+      "minHeight": 48,
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    disabled={false}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 0,
+          "flexDirection": "row",
+          "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "paddingTop": 12,
+        },
+        Array [
+          false,
+          undefined,
+          undefined,
+        ],
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginLeft": 20,
+          "opacity": 1,
+        }
+      }
+    >
+      <Image
+        imageFollowIconColor={true}
+        size={null}
+        source={
+          Object {
+            "uri": "../../color-picker/color-picker.png",
+          }
+        }
+        style={
+          Array [
+            null,
+            Object {
+              "tintColor": "rgba(51, 51, 51, 0.5)",
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ListItem Component should render with Action 5`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "backgroundColor": "#fff",
+      "borderRadius": 0,
+      "flexGrow": 0,
+      "marginBottom": 0,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "marginTop": 0,
+      "minHeight": 48,
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    disabled={false}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 0,
+          "flexDirection": "row",
+          "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "paddingTop": 12,
+        },
+        Array [
+          false,
+          undefined,
+          undefined,
+        ],
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginLeft": 20,
+          "opacity": 1,
+        }
+      }
+    >
+      <Image
+        imageFollowIconColor={true}
+        size={null}
+        source={4}
+        style={
+          Array [
+            null,
+            Object {
+              "tintColor": "rgba(51, 51, 51, 0.5)",
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ListItem Component should render with Action 6`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "backgroundColor": "#fff",
+      "borderRadius": 0,
+      "flexGrow": 0,
+      "marginBottom": 0,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "marginTop": 0,
+      "minHeight": 48,
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    disabled={false}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 0,
+          "flexDirection": "row",
+          "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "paddingTop": 12,
+        },
+        Array [
+          false,
+          undefined,
+          undefined,
+        ],
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginLeft": 20,
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        size="large"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 17,
+              "lineHeight": 24,
+            },
+            Array [
+              Object {
+                "color": "rgba(51, 51, 51, 0.5)",
+              },
+              Array [
+                undefined,
+                undefined,
+              ],
+            ],
+          ]
+        }
+        type="paragraph"
+        weight={null}
+      >
+        tuya
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ListItem Component should render with Icon 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "backgroundColor": "#fff",
+      "borderRadius": 0,
+      "flexGrow": 0,
+      "marginBottom": 0,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "marginTop": 0,
+      "minHeight": 48,
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    disabled={false}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 0,
+          "flexDirection": "row",
+          "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "paddingTop": 12,
+        },
+        Array [
+          false,
+          undefined,
+          undefined,
+        ],
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "justifyContent": "center",
+            "marginRight": 20,
+          },
+          undefined,
+        ]
+      }
+    >
+      <Image
+        source={1}
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginLeft": 20,
+          "opacity": 1,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`ListItem Component should render with Icon 2`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "backgroundColor": "#fff",
+      "borderRadius": 0,
+      "flexGrow": 0,
+      "marginBottom": 0,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "marginTop": 0,
+      "minHeight": 48,
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    disabled={false}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 0,
+          "flexDirection": "row",
+          "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "paddingTop": 12,
+        },
+        Array [
+          false,
+          undefined,
+          undefined,
+        ],
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "justifyContent": "center",
+            "marginRight": 20,
+          },
+          undefined,
+        ]
+      }
+    >
+      <Image
+        source={1}
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginLeft": 20,
+          "opacity": 1,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`ListItem Component should render with Icon 3`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "backgroundColor": "#fff",
+      "borderRadius": 0,
+      "flexGrow": 0,
+      "marginBottom": 0,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "marginTop": 0,
+      "minHeight": 48,
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    disabled={false}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 0,
+          "flexDirection": "row",
+          "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "paddingTop": 12,
+        },
+        Array [
+          false,
+          undefined,
+          undefined,
+        ],
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "justifyContent": "center",
+            "marginRight": 20,
+          },
+          undefined,
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginLeft": 20,
+          "opacity": 1,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`ListItem Component should render with Icon 4`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "backgroundColor": "#fff",
+      "borderRadius": 0,
+      "flexGrow": 0,
+      "marginBottom": 0,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "marginTop": 0,
+      "minHeight": 48,
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    disabled={false}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 0,
+          "flexDirection": "row",
+          "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "paddingTop": 12,
+        },
+        Array [
+          false,
+          undefined,
+          undefined,
+        ],
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "justifyContent": "center",
+            "marginRight": 20,
+          },
+          undefined,
+        ]
+      }
+    >
+      <Image
+        imageFollowIconColor={true}
+        size={null}
+        source={
+          Object {
+            "uri": "../../color-picker/color-picker.png",
+          }
+        }
+        style={
+          Array [
+            null,
+            Object {
+              "tintColor": "rgba(51, 51, 51, 0.5)",
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginLeft": 20,
+          "opacity": 1,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`ListItem Component should render with Icon 5`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "backgroundColor": "#fff",
+      "borderRadius": 0,
+      "flexGrow": 0,
+      "marginBottom": 0,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "marginTop": 0,
+      "minHeight": 48,
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    disabled={false}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 0,
+          "flexDirection": "row",
+          "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "paddingTop": 12,
+        },
+        Array [
+          false,
+          undefined,
+          undefined,
+        ],
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "justifyContent": "center",
+            "marginRight": 20,
+          },
+          undefined,
+        ]
+      }
+    >
+      <Image
+        imageFollowIconColor={true}
+        size={null}
+        source={4}
+        style={
+          Array [
+            null,
+            Object {
+              "tintColor": "rgba(51, 51, 51, 0.5)",
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginLeft": 20,
+          "opacity": 1,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`ListItem Component should render with Icon 6`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "backgroundColor": "#fff",
+      "borderRadius": 0,
+      "flexGrow": 0,
+      "marginBottom": 0,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "marginTop": 0,
+      "minHeight": 48,
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    disabled={false}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 0,
+          "flexDirection": "row",
+          "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "paddingTop": 12,
+        },
+        Array [
+          false,
+          undefined,
+          undefined,
+        ],
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "justifyContent": "center",
+            "marginRight": 20,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            Object {
+              "height": 28,
+              "width": 28,
+            },
+            false,
+            null,
+          ]
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+              false,
+              Object {
+                "flex": 0,
+                "height": 28,
+                "width": 28,
+              },
+            ]
+          }
+          vbHeight={1024}
+          vbWidth={1024}
+        >
+          <RNSVGPath
+            d="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+            fill={
+              Array [
+                0,
+                0.2,
+                0.2,
+                0.2,
+                0.5,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            propList={
+              Array [
+                "stroke",
+                "strokeWidth",
+                "fill",
+              ]
+            }
+            stroke={
+              Array [
+                0,
+                0.2,
+                0.2,
+                0.2,
+                0.5,
+              ]
+            }
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+          />
+        </RNSVGSvgView>
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginLeft": 20,
+          "opacity": 1,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`ListItem Component should render with actionType 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "backgroundColor": "#fff",
+      "borderRadius": 0,
+      "flexGrow": 0,
+      "marginBottom": 0,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "marginTop": 0,
+      "minHeight": 48,
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    disabled={false}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 0,
+          "flexDirection": "row",
+          "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "paddingTop": 12,
+        },
+        Array [
+          false,
+          undefined,
+          undefined,
+        ],
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginLeft": 20,
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        size="large"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 17,
+              "lineHeight": 24,
+            },
+            Array [
+              Object {
+                "color": "rgba(51, 51, 51, 0.5)",
+              },
+              Array [
+                undefined,
+                undefined,
+              ],
+            ],
+          ]
+        }
+        type="paragraph"
+        weight={null}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+        >
+          Component
+        </Text>
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ListItem Component should render with actionType 2`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "backgroundColor": "#fff",
+      "borderRadius": 0,
+      "flexGrow": 0,
+      "marginBottom": 0,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "marginTop": 0,
+      "minHeight": 48,
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    disabled={false}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 0,
+          "flexDirection": "row",
+          "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "paddingTop": 12,
+        },
+        Array [
+          false,
+          undefined,
+          undefined,
+        ],
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginLeft": 20,
+          "opacity": 1,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`ListItem Component should render with actionType 3`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "backgroundColor": "#fff",
+      "borderRadius": 0,
+      "flexGrow": 0,
+      "marginBottom": 0,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "marginTop": 0,
+      "minHeight": 48,
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    disabled={false}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 0,
+          "flexDirection": "row",
+          "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "paddingTop": 12,
+        },
+        Array [
+          false,
+          undefined,
+          undefined,
+        ],
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginLeft": 20,
+          "opacity": 1,
+        }
+      }
+    >
+      <Image
+        imageFollowIconColor={true}
+        size={null}
+        source={
+          Object {
+            "uri": "../../color-picker/color-picker.png",
+          }
+        }
+        style={
+          Array [
+            null,
+            Object {
+              "tintColor": "rgba(51, 51, 51, 0.5)",
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ListItem Component should render with arrow 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "backgroundColor": "#fff",
+      "borderRadius": 0,
+      "flexGrow": 0,
+      "marginBottom": 0,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "marginTop": 0,
+      "minHeight": 48,
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    disabled={false}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 0,
+          "flexDirection": "row",
+          "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "paddingTop": 12,
+        },
+        Array [
+          false,
+          undefined,
+          undefined,
+        ],
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginLeft": 20,
+          "opacity": 1,
+        }
+      }
+    >
+      <Image
+        imageFollowIconColor={true}
+        source={1}
+        style={
+          Array [
+            undefined,
+            Object {
+              "tintColor": "rgba(51, 51, 51, 0.5)",
+            },
+            Object {
+              "marginLeft": 12,
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ListItem Component should render with arrowUseIcon 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "backgroundColor": "#fff",
+      "borderRadius": 0,
+      "flexGrow": 0,
+      "marginBottom": 0,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "marginTop": 0,
+      "minHeight": 48,
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    disabled={false}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 0,
+          "flexDirection": "row",
+          "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "paddingTop": 12,
+        },
+        Array [
+          false,
+          undefined,
+          undefined,
+        ],
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginLeft": 20,
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            Object {
+              "height": 14,
+              "width": 14,
+            },
+            false,
+            null,
+          ]
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+              false,
+              Object {
+                "flex": 0,
+                "height": 14,
+                "width": 14,
+              },
+            ]
+          }
+          vbHeight={1024}
+          vbWidth={1024}
+        >
+          <RNSVGPath
+            d="M213.333333 85.333333l426.666667 426.666667-426.666667 426.666667 85.333334 85.333333 512-512-512-512z"
+            fill={
+              Array [
+                0,
+                1,
+                0,
+                1,
+                1,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            propList={
+              Array [
+                "stroke",
+                "strokeWidth",
+                "fill",
+              ]
+            }
+            stroke={
+              Array [
+                0,
+                1,
+                0,
+                1,
+                1,
+              ]
+            }
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+          />
+        </RNSVGSvgView>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ListItem Component should render with iconType 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "backgroundColor": "#fff",
+      "borderRadius": 0,
+      "flexGrow": 0,
+      "marginBottom": 0,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "marginTop": 0,
+      "minHeight": 48,
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    disabled={false}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 0,
+          "flexDirection": "row",
+          "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "paddingTop": 12,
+        },
+        Array [
+          false,
+          undefined,
+          undefined,
+        ],
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "justifyContent": "center",
+            "marginRight": 20,
+          },
+          undefined,
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        size="large"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 17,
+              "lineHeight": 24,
+            },
+            Array [
+              Object {
+                "color": "rgba(51, 51, 51, 0.5)",
+              },
+              Array [
+                undefined,
+                undefined,
+              ],
+            ],
+          ]
+        }
+        type="paragraph"
+        weight={null}
+      >
+        power
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginLeft": 20,
+          "opacity": 1,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`ListItem Component should render with iconType 2`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "backgroundColor": "#fff",
+      "borderRadius": 0,
+      "flexGrow": 0,
+      "marginBottom": 0,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "marginTop": 0,
+      "minHeight": 48,
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    disabled={false}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 0,
+          "flexDirection": "row",
+          "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "paddingTop": 12,
+        },
+        Array [
+          false,
+          undefined,
+          undefined,
+        ],
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "justifyContent": "center",
+            "marginRight": 20,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            Object {
+              "height": 28,
+              "width": 28,
+            },
+            false,
+            null,
+          ]
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+              false,
+              Object {
+                "flex": 0,
+                "height": 28,
+                "width": 28,
+              },
+            ]
+          }
+          vbHeight={1024}
+          vbWidth={1024}
+        >
+          <RNSVGPath
+            d="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+            fill={
+              Array [
+                0,
+                0.2,
+                0.2,
+                0.2,
+                0.5,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            propList={
+              Array [
+                "stroke",
+                "strokeWidth",
+                "fill",
+              ]
+            }
+            stroke={
+              Array [
+                0,
+                0.2,
+                0.2,
+                0.2,
+                0.5,
+              ]
+            }
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+          />
+        </RNSVGSvgView>
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginLeft": 20,
+          "opacity": 1,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`ListItem Component should render with iconType 3`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "backgroundColor": "#fff",
+      "borderRadius": 0,
+      "flexGrow": 0,
+      "marginBottom": 0,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "marginTop": 0,
+      "minHeight": 48,
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    disabled={false}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 0,
+          "flexDirection": "row",
+          "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "paddingTop": 12,
+        },
+        Array [
+          false,
+          undefined,
+          undefined,
+        ],
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "justifyContent": "center",
+            "marginRight": 20,
+          },
+          undefined,
+        ]
+      }
+    >
+      <Image
+        imageFollowIconColor={true}
+        size={null}
+        source="power"
+        style={
+          Array [
+            null,
+            Object {
+              "tintColor": "rgba(51, 51, 51, 0.5)",
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginLeft": 20,
+          "opacity": 1,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`ListItem Component should render with iconType 4`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "backgroundColor": "#fff",
+      "borderRadius": 0,
+      "flexGrow": 0,
+      "marginBottom": 0,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "marginTop": 0,
+      "minHeight": 48,
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    disabled={false}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 0,
+          "flexDirection": "row",
+          "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "paddingTop": 12,
+        },
+        Array [
+          false,
+          undefined,
+          undefined,
+        ],
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "justifyContent": "center",
+            "marginRight": 20,
+          },
+          undefined,
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        size="large"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 17,
+              "lineHeight": 24,
+            },
+            Array [
+              Object {
+                "color": "rgba(51, 51, 51, 0.5)",
+              },
+              Array [
+                undefined,
+                undefined,
+              ],
+            ],
+          ]
+        }
+        type="paragraph"
+        weight={null}
+      >
+        power
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginLeft": 20,
+          "opacity": 1,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`ListItem Component should render with styles 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "backgroundColor": "#fff",
+      "borderRadius": 0,
+      "flexGrow": 0,
+      "height": 64,
+      "marginBottom": 0,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "marginTop": 0,
+      "minHeight": 48,
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    disabled={false}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 0,
+          "flexDirection": "row",
+          "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "paddingTop": 12,
+        },
+        Array [
+          false,
+          undefined,
+          Object {
+            "backgroundColor": "red",
+          },
+        ],
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+          },
+          Object {
+            "backgroundColor": "blue",
+          },
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        size="small"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 17,
+              "lineHeight": 24,
+            },
+            Array [
+              Object {
+                "color": "#333",
+              },
+              Array [
+                undefined,
+                Object {
+                  "color": "yellow",
+                },
+              ],
+            ],
+          ]
+        }
+        type="title"
+        weight={null}
+      >
+        title
+      </Text>
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        size="large"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 17,
+              "lineHeight": 24,
+            },
+            Array [
+              Object {
+                "color": "rgba(51, 51, 51, 0.5)",
+                "marginTop": 4,
+              },
+              Array [
+                undefined,
+                Object {
+                  "color": "#000",
+                },
+              ],
+            ],
+          ]
+        }
+        type="paragraph"
+        weight={null}
+      >
+        subTitle
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "height": 48,
+          "marginLeft": 20,
+          "opacity": 1,
+          "width": 48,
+        }
+      }
+    >
+      <Image
+        imageFollowIconColor={true}
+        source={1}
+        style={
+          Array [
+            undefined,
+            Object {
+              "tintColor": "rgba(51, 51, 51, 0.5)",
+            },
+            Object {
+              "marginLeft": 12,
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ListItem Component should render with title and subTitle 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "backgroundColor": "#fff",
+      "borderRadius": 0,
+      "flexGrow": 0,
+      "marginBottom": 0,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "marginTop": 0,
+      "minHeight": 48,
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    disabled={false}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 0,
+          "flexDirection": "row",
+          "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "paddingTop": 12,
+        },
+        Array [
+          false,
+          undefined,
+          undefined,
+        ],
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        size="small"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 17,
+              "lineHeight": 24,
+            },
+            Array [
+              Object {
+                "color": "#333",
+              },
+              Array [
+                undefined,
+                undefined,
+              ],
+            ],
+          ]
+        }
+        type="title"
+        weight={null}
+      >
+        title
+      </Text>
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        size="large"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 17,
+              "lineHeight": 24,
+            },
+            Array [
+              Object {
+                "color": "rgba(51, 51, 51, 0.5)",
+                "marginTop": 4,
+              },
+              Array [
+                undefined,
+                undefined,
+              ],
+            ],
+          ]
+        }
+        type="paragraph"
+        weight={null}
+      >
+        subTitle
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginLeft": 20,
+          "opacity": 1,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`ListItem Component should update 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "stretch",
+      "backgroundColor": "#fff",
+      "borderRadius": 0,
+      "flexGrow": 0,
+      "marginBottom": 0,
+      "marginLeft": 0,
+      "marginRight": 0,
+      "marginTop": 0,
+      "minHeight": 48,
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    disabled={false}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 0,
+          "flexDirection": "row",
+          "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "paddingTop": 12,
+        },
+        Array [
+          false,
+          undefined,
+          undefined,
+        ],
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        size="small"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 17,
+              "lineHeight": 24,
+            },
+            Array [
+              Object {
+                "color": "#333",
+              },
+              Array [
+                undefined,
+                undefined,
+              ],
+            ],
+          ]
+        }
+        type="title"
+        weight={null}
+      >
+        Has Subtitle
+      </Text>
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        size="large"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 17,
+              "lineHeight": 24,
+            },
+            Array [
+              Object {
+                "color": "rgba(51, 51, 51, 0.5)",
+                "marginTop": 4,
+              },
+              Array [
+                undefined,
+                undefined,
+              ],
+            ],
+          ]
+        }
+        type="paragraph"
+        weight={null}
+      >
+        subTitle
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginLeft": 20,
+          "opacity": 1,
+        }
+      }
+    />
+  </View>
+</View>
+`;

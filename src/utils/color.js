@@ -531,6 +531,7 @@ class Color {
     // b 白光亮度 t白光色温
     // x,y为坐标
     const arr = data.match(/[a-z\d]{2}/gi);
+    console.log(arr, 'arr');
     const [l, t, f, c, ...d] = arr;
     const ltfc = [l, t, f, c].map(item => parseInt(item, 16));
     const mrgbhsvbt = [];
@@ -791,17 +792,17 @@ function _gcd(a, b) {
   return !b ? a : _gcd(b, a % b);
 };
 
-function _gcdEx(a, b) {
-  let ref,
-      ref1,
-      x,
-      y;
-  if (b === 0) {
-    return [1, 0];
-  }
-  ref = _gcdEx(b, a % b), x = ref[0], y = ref[1];
-  return ref1 = [y, x - Math.floor(a / b) * y], x = ref1[0], y = ref1[1], ref1;
-};
+// function _gcdEx(a, b) {
+//   let ref,
+//       ref1,
+//       x,
+//       y;
+//   if (b === 0) {
+//     return [1, 0];
+//   }
+//   ref = _gcdEx(b, a % b), x = ref[0], y = ref[1];
+//   return ref1 = [y, x - Math.floor(a / b) * y], x = ref1[0], y = ref1[1], ref1;
+// };
 
 function getSolutionOfLinearConguenceEquation(a, b, n) {
   let d,
@@ -815,22 +816,23 @@ function getSolutionOfLinearConguenceEquation(a, b, n) {
     return false;
   }
   d = _gcd(a, n);
-  if (d % b === 0 && b !== 1) {
-    ref = _gcdEx(a, n), r = ref[0], s = ref[1];
-    x0 = r * (b / d);
-    return ((function () {
-      let i,
-        ref1,
-        results;
-      results = [];
-      for (k = i = 0, ref1 = n; 0 <= ref1 ? i < ref1 : i > ref1; k = 0 <= ref1 ? ++i : --i) {
-        if (x = x0 + k * Math.floor(n / d) > 0) {
-          results.push(x);
-        }
-      }
-      return results;
-    })()).slice(0, d);
-  }
+  // a 和 n的数值都是固定的 1 和 6, 所以 d 固定为 1, 要想满足条件, b 必须为 1
+  // if (d % b === 0 && b !== 1) {
+  //   ref = _gcdEx(a, n), r = ref[0], s = ref[1];
+  //   x0 = r * (b / d);
+  //   return ((function () {
+  //     let i,
+  //       ref1,
+  //       results;
+  //     results = [];
+  //     for (k = i = 0, ref1 = n; 0 <= ref1 ? i < ref1 : i > ref1; k = 0 <= ref1 ? ++i : --i) {
+  //       if (x = x0 + k * Math.floor(n / d) > 0) {
+  //         results.push(x);
+  //       }
+  //     }
+  //     return results;
+  //   })()).slice(0, d);
+  // }
   return [b];
 
 };

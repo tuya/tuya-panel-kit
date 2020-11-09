@@ -1,21 +1,20 @@
 import * as Utils from './utils';
 
-export { default as TYSdk } from './TYNativeApi';
-
-export { default as I18N } from './i18n';
 // 默认主题配置变量
 export { default as defaultTheme } from './components/theme/base';
 
 // 主题配置Provider组件
 export { default as Theme } from './components/theme';
 
-export { default as NavigatorLayout } from './components/layout/navigator-layout';
+export { default as createNavigator } from './components/layout/react-navigation';
 
 export { default as FullView } from './components/layout/full-view';
 
-export { default as TopBar } from './components/layout/topbar';
+export { default as NavigatorLayout } from './components/layout/navigator-layout';
 
 export { default as OfflineView } from './components/layout/offline-view';
+
+export { default as TopBar } from './components/layout/topbar';
 
 export { default as CircleView } from './components/circle-view';
 
@@ -41,6 +40,8 @@ export { default as TYSectionList } from './components/TYLists/lists';
 
 export { default as TYFlatList } from './components/TYLists/list';
 
+export { default as Stepper } from './components/stepper';
+
 export { default as TYListItem } from './components/TYLists/list-item';
 
 export { default as Toast } from './components/toast-view';
@@ -55,13 +56,15 @@ export { default as UnitText } from './components/unit-text';
 
 export { default as TYText } from './components/TYText';
 
-export { default as WebView } from './components/webview';
-
 export { default as Picker } from './components/picker-view';
 
 export { default as DatePicker } from './components/date-picker';
 
 export { default as Swipeout } from './components/swipeout';
+
+export { default as I18N } from './components/i18n';
+
+export { Strings, TYSdk } from '@tuya-rn/tuya-native-kit';
 
 export { Utils };
 
@@ -92,5 +95,3 @@ export { default as TimerPicker } from './components/timer-picker';
 export { default as Progress } from './components/progress';
 
 export { default as GlobalToast } from './components/global-toast';
-
-export { default as Stepper } from './components/stepper';

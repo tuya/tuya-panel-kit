@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { StyleSheet, View, ViewPropTypes, I18nManager } from 'react-native';
 import IconART from '../iconfont/art';
+import TYText from '../TYText';
 import svgsART from '../iconfont/art/defaultSvg';
 
 const LetterWidth = 0.37;
@@ -51,6 +52,10 @@ export default class UnitTextART extends React.PureComponent {
      */
     unitPaddingTop: PropTypes.number,
     /**
+     * 单位的类型
+     */
+    unitType: PropTypes.oneOf(['icon', 'text']),
+    /**
      * 值
      */
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
@@ -67,6 +72,7 @@ export default class UnitTextART extends React.PureComponent {
     unitColor: 'white',
     unitPaddingLeft: 0,
     unitPaddingTop: 0,
+    unitType: 'icon',
   };
 
   constructor(props) {
@@ -86,13 +92,14 @@ export default class UnitTextART extends React.PureComponent {
       });
     }
   }
-
+  // TODO:
+  /* istanbul ignore next */
   setValue(value) {
     if (value !== this.state.value) {
       this.setState({ value: `${value}` });
     }
   }
-
+  /* istanbul ignore next */
   setUnit(unit) {
     if (unit !== this.state.unit) {
       this.setState({ unit: `${unit}` });
@@ -100,7 +107,15 @@ export default class UnitTextART extends React.PureComponent {
   }
 
   renderUnit() {
-    const { unitSize, valueSize, size, unitColor, unitPaddingLeft, unitPaddingTop } = this.props;
+    const {
+      unitSize,
+      unitType,
+      valueSize,
+      size,
+      unitColor,
+      unitPaddingLeft,
+      unitPaddingTop,
+    } = this.props;
     const { unit } = this.state;
     if (!unit) {
       return null;
@@ -111,7 +126,21 @@ export default class UnitTextART extends React.PureComponent {
     const vSize = valueSize || size;
     const uNeedLeft = (vSize + uSize) * (LetterPadding - 0.025);
     const unitStyle = [{ marginTop: unitPaddingTop, [marginType]: -uNeedLeft + unitPaddingLeft }];
-    return <IconART d={svgsART[unit] || unit} size={uSize} style={unitStyle} color={unitColor} />;
+    return unitType === 'icon' ? (
+      <IconART d={svgsART[unit] || unit} size={uSize} style={unitStyle} color={unitColor} />
+    ) : (
+      <TYText
+        style={[
+          {
+            fontSize: uSize,
+            color: unitColor,
+          },
+          unitStyle,
+        ]}
+      >
+        {unit}
+      </TYText>
+    );
   }
 
   render() {

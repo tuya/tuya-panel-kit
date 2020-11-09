@@ -1,0 +1,1036 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List Component basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "backgroundColor": "#fff",
+        "borderRadius": 16,
+        "justifyContent": "center",
+        "width": 630,
+      },
+      null,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "alignSelf": "stretch",
+          "justifyContent": "center",
+          "paddingBottom": 32,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "paddingTop": 32,
+        },
+        Array [
+          Object {
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+          },
+          null,
+        ],
+      ]
+    }
+  >
+    <Text
+      accessible={true}
+      align={null}
+      allowFontScaling={false}
+      color={null}
+      ellipsizeMode="tail"
+      numberOfLines={2}
+      size={18}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#333",
+            "fontSize": 18,
+          },
+          Array [
+            Object {
+              "color": "#333",
+              "fontSize": 18,
+              "fontWeight": "500",
+              "textAlign": "center",
+            },
+            Array [
+              Object {
+                "paddingVertical": 0,
+              },
+              null,
+            ],
+          ],
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      标题
+    </Text>
+    <Text
+      accessible={true}
+      align={null}
+      allowFontScaling={false}
+      color={null}
+      ellipsizeMode="tail"
+      size={16}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#333",
+            "fontSize": 16,
+          },
+          Array [
+            Object {
+              "color": "#999",
+              "fontSize": 16,
+              "marginTop": 7,
+              "textAlign": "center",
+            },
+            null,
+          ],
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      副标题
+    </Text>
+    <RCTScrollView
+      ItemSeparatorComponent={[Function]}
+      cancelText="取消"
+      confirmText="确认"
+      contentContainerStyle={
+        Array [
+          Object {
+            "backgroundColor": "#f8f8f8",
+          },
+          undefined,
+        ]
+      }
+      data={
+        Array [
+          Object {
+            "onPress": [MockFunction],
+            "title": "点我关闭",
+          },
+          Object {
+            "onPress": [MockFunction],
+            "title": "选项1",
+          },
+          Object {
+            "onPress": [MockFunction],
+            "title": "选项2",
+          },
+          Object {
+            "onPress": [MockFunction],
+            "title": "选项3",
+          },
+          Object {
+            "onPress": [MockFunction],
+            "title": "选项4",
+          },
+          Object {
+            "onPress": [MockFunction],
+            "title": "选项5",
+          },
+        ]
+      }
+      disableVirtualization={false}
+      getItem={[Function]}
+      getItemCount={[Function]}
+      horizontal={false}
+      initialNumToRender={10}
+      keyExtractor={[Function]}
+      maxToRenderPerBatch={10}
+      numColumns={1}
+      onContentSizeChange={[Function]}
+      onEndReachedThreshold={2}
+      onLayout={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      renderItem={[Function]}
+      scrollEnabled={true}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={Array []}
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "backgroundColor": "#fff",
+            "borderBottomLeftRadius": 16,
+            "borderBottomRightRadius": 16,
+            "borderTopColor": "#e5e5e5",
+            "borderTopWidth": 0.5,
+            "marginTop": 32,
+          },
+          Array [
+            null,
+            Object {
+              "maxHeight": 312,
+            },
+          ],
+        ]
+      }
+      updateCellsBatchingPeriod={50}
+      useART={false}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignSelf": "stretch",
+                "backgroundColor": undefined,
+                "borderRadius": 0,
+                "flexGrow": 0,
+                "height": 56,
+                "justifyContent": "center",
+                "marginBottom": 0,
+                "marginLeft": 0,
+                "marginRight": 0,
+                "marginTop": 0,
+                "minHeight": 48,
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              disabled={false}
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "borderRadius": 0,
+                    "flexDirection": "row",
+                    "opacity": 1,
+                    "paddingBottom": 12,
+                    "paddingLeft": 32,
+                    "paddingRight": 32,
+                    "paddingTop": 12,
+                  },
+                  Array [
+                    false,
+                    undefined,
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "flexBasis": 0,
+                      "flexGrow": 1,
+                      "flexShrink": 1,
+                      "justifyContent": "center",
+                    },
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                      },
+                      undefined,
+                    ],
+                  ]
+                }
+              >
+                <Text
+                  accessible={true}
+                  align={null}
+                  allowFontScaling={false}
+                  color={null}
+                  ellipsizeMode="tail"
+                  size="small"
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "transparent",
+                        "color": "#333",
+                        "fontSize": 17,
+                        "lineHeight": 24,
+                      },
+                      Array [
+                        Object {
+                          "color": "#333",
+                        },
+                        Array [
+                          undefined,
+                          Array [
+                            Object {
+                              "color": undefined,
+                              "fontSize": undefined,
+                              "fontWeight": "500",
+                            },
+                            undefined,
+                          ],
+                        ],
+                      ],
+                    ]
+                  }
+                  type="title"
+                  weight={null}
+                >
+                  点我关闭
+                </Text>
+              </View>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "marginLeft": 20,
+                    "opacity": 1,
+                  }
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "rgba(51, 51, 51, 0.1)",
+                  "height": 0.5,
+                  "marginLeft": 32,
+                },
+                null,
+              ]
+            }
+          />
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignSelf": "stretch",
+                "backgroundColor": undefined,
+                "borderRadius": 0,
+                "flexGrow": 0,
+                "height": 56,
+                "justifyContent": "center",
+                "marginBottom": 0,
+                "marginLeft": 0,
+                "marginRight": 0,
+                "marginTop": 0,
+                "minHeight": 48,
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              disabled={false}
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "borderRadius": 0,
+                    "flexDirection": "row",
+                    "opacity": 1,
+                    "paddingBottom": 12,
+                    "paddingLeft": 32,
+                    "paddingRight": 32,
+                    "paddingTop": 12,
+                  },
+                  Array [
+                    false,
+                    undefined,
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "flexBasis": 0,
+                      "flexGrow": 1,
+                      "flexShrink": 1,
+                      "justifyContent": "center",
+                    },
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                      },
+                      undefined,
+                    ],
+                  ]
+                }
+              >
+                <Text
+                  accessible={true}
+                  align={null}
+                  allowFontScaling={false}
+                  color={null}
+                  ellipsizeMode="tail"
+                  size="small"
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "transparent",
+                        "color": "#333",
+                        "fontSize": 17,
+                        "lineHeight": 24,
+                      },
+                      Array [
+                        Object {
+                          "color": "#333",
+                        },
+                        Array [
+                          undefined,
+                          Array [
+                            Object {
+                              "color": undefined,
+                              "fontSize": undefined,
+                              "fontWeight": "500",
+                            },
+                            undefined,
+                          ],
+                        ],
+                      ],
+                    ]
+                  }
+                  type="title"
+                  weight={null}
+                >
+                  选项1
+                </Text>
+              </View>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "marginLeft": 20,
+                    "opacity": 1,
+                  }
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "rgba(51, 51, 51, 0.1)",
+                  "height": 0.5,
+                  "marginLeft": 32,
+                },
+                null,
+              ]
+            }
+          />
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignSelf": "stretch",
+                "backgroundColor": undefined,
+                "borderRadius": 0,
+                "flexGrow": 0,
+                "height": 56,
+                "justifyContent": "center",
+                "marginBottom": 0,
+                "marginLeft": 0,
+                "marginRight": 0,
+                "marginTop": 0,
+                "minHeight": 48,
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              disabled={false}
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "borderRadius": 0,
+                    "flexDirection": "row",
+                    "opacity": 1,
+                    "paddingBottom": 12,
+                    "paddingLeft": 32,
+                    "paddingRight": 32,
+                    "paddingTop": 12,
+                  },
+                  Array [
+                    false,
+                    undefined,
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "flexBasis": 0,
+                      "flexGrow": 1,
+                      "flexShrink": 1,
+                      "justifyContent": "center",
+                    },
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                      },
+                      undefined,
+                    ],
+                  ]
+                }
+              >
+                <Text
+                  accessible={true}
+                  align={null}
+                  allowFontScaling={false}
+                  color={null}
+                  ellipsizeMode="tail"
+                  size="small"
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "transparent",
+                        "color": "#333",
+                        "fontSize": 17,
+                        "lineHeight": 24,
+                      },
+                      Array [
+                        Object {
+                          "color": "#333",
+                        },
+                        Array [
+                          undefined,
+                          Array [
+                            Object {
+                              "color": undefined,
+                              "fontSize": undefined,
+                              "fontWeight": "500",
+                            },
+                            undefined,
+                          ],
+                        ],
+                      ],
+                    ]
+                  }
+                  type="title"
+                  weight={null}
+                >
+                  选项2
+                </Text>
+              </View>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "marginLeft": 20,
+                    "opacity": 1,
+                  }
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "rgba(51, 51, 51, 0.1)",
+                  "height": 0.5,
+                  "marginLeft": 32,
+                },
+                null,
+              ]
+            }
+          />
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignSelf": "stretch",
+                "backgroundColor": undefined,
+                "borderRadius": 0,
+                "flexGrow": 0,
+                "height": 56,
+                "justifyContent": "center",
+                "marginBottom": 0,
+                "marginLeft": 0,
+                "marginRight": 0,
+                "marginTop": 0,
+                "minHeight": 48,
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              disabled={false}
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "borderRadius": 0,
+                    "flexDirection": "row",
+                    "opacity": 1,
+                    "paddingBottom": 12,
+                    "paddingLeft": 32,
+                    "paddingRight": 32,
+                    "paddingTop": 12,
+                  },
+                  Array [
+                    false,
+                    undefined,
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "flexBasis": 0,
+                      "flexGrow": 1,
+                      "flexShrink": 1,
+                      "justifyContent": "center",
+                    },
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                      },
+                      undefined,
+                    ],
+                  ]
+                }
+              >
+                <Text
+                  accessible={true}
+                  align={null}
+                  allowFontScaling={false}
+                  color={null}
+                  ellipsizeMode="tail"
+                  size="small"
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "transparent",
+                        "color": "#333",
+                        "fontSize": 17,
+                        "lineHeight": 24,
+                      },
+                      Array [
+                        Object {
+                          "color": "#333",
+                        },
+                        Array [
+                          undefined,
+                          Array [
+                            Object {
+                              "color": undefined,
+                              "fontSize": undefined,
+                              "fontWeight": "500",
+                            },
+                            undefined,
+                          ],
+                        ],
+                      ],
+                    ]
+                  }
+                  type="title"
+                  weight={null}
+                >
+                  选项3
+                </Text>
+              </View>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "marginLeft": 20,
+                    "opacity": 1,
+                  }
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "rgba(51, 51, 51, 0.1)",
+                  "height": 0.5,
+                  "marginLeft": 32,
+                },
+                null,
+              ]
+            }
+          />
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignSelf": "stretch",
+                "backgroundColor": undefined,
+                "borderRadius": 0,
+                "flexGrow": 0,
+                "height": 56,
+                "justifyContent": "center",
+                "marginBottom": 0,
+                "marginLeft": 0,
+                "marginRight": 0,
+                "marginTop": 0,
+                "minHeight": 48,
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              disabled={false}
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "borderRadius": 0,
+                    "flexDirection": "row",
+                    "opacity": 1,
+                    "paddingBottom": 12,
+                    "paddingLeft": 32,
+                    "paddingRight": 32,
+                    "paddingTop": 12,
+                  },
+                  Array [
+                    false,
+                    undefined,
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "flexBasis": 0,
+                      "flexGrow": 1,
+                      "flexShrink": 1,
+                      "justifyContent": "center",
+                    },
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                      },
+                      undefined,
+                    ],
+                  ]
+                }
+              >
+                <Text
+                  accessible={true}
+                  align={null}
+                  allowFontScaling={false}
+                  color={null}
+                  ellipsizeMode="tail"
+                  size="small"
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "transparent",
+                        "color": "#333",
+                        "fontSize": 17,
+                        "lineHeight": 24,
+                      },
+                      Array [
+                        Object {
+                          "color": "#333",
+                        },
+                        Array [
+                          undefined,
+                          Array [
+                            Object {
+                              "color": undefined,
+                              "fontSize": undefined,
+                              "fontWeight": "500",
+                            },
+                            undefined,
+                          ],
+                        ],
+                      ],
+                    ]
+                  }
+                  type="title"
+                  weight={null}
+                >
+                  选项4
+                </Text>
+              </View>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "marginLeft": 20,
+                    "opacity": 1,
+                  }
+                }
+              />
+            </View>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "rgba(51, 51, 51, 0.1)",
+                  "height": 0.5,
+                  "marginLeft": 32,
+                },
+                null,
+              ]
+            }
+          />
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignSelf": "stretch",
+                "backgroundColor": undefined,
+                "borderRadius": 0,
+                "flexGrow": 0,
+                "height": 56,
+                "justifyContent": "center",
+                "marginBottom": 0,
+                "marginLeft": 0,
+                "marginRight": 0,
+                "marginTop": 0,
+                "minHeight": 48,
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              disabled={false}
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "borderRadius": 0,
+                    "flexDirection": "row",
+                    "opacity": 1,
+                    "paddingBottom": 12,
+                    "paddingLeft": 32,
+                    "paddingRight": 32,
+                    "paddingTop": 12,
+                  },
+                  Array [
+                    false,
+                    undefined,
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "flexBasis": 0,
+                      "flexGrow": 1,
+                      "flexShrink": 1,
+                      "justifyContent": "center",
+                    },
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                      },
+                      undefined,
+                    ],
+                  ]
+                }
+              >
+                <Text
+                  accessible={true}
+                  align={null}
+                  allowFontScaling={false}
+                  color={null}
+                  ellipsizeMode="tail"
+                  size="small"
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "transparent",
+                        "color": "#333",
+                        "fontSize": 17,
+                        "lineHeight": 24,
+                      },
+                      Array [
+                        Object {
+                          "color": "#333",
+                        },
+                        Array [
+                          undefined,
+                          Array [
+                            Object {
+                              "color": undefined,
+                              "fontSize": undefined,
+                              "fontWeight": "500",
+                            },
+                            undefined,
+                          ],
+                        ],
+                      ],
+                    ]
+                  }
+                  type="title"
+                  weight={null}
+                >
+                  选项5
+                </Text>
+              </View>
+              <View
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "marginLeft": 20,
+                    "opacity": 1,
+                  }
+                }
+              />
+            </View>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+</View>
+`;

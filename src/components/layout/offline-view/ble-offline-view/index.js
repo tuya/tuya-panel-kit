@@ -1,20 +1,23 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { StyleSheet } from 'react-native';
-import TYSdk from '../../../../TYNativeApi';
-import Strings from '../../../../i18n/strings';
+import { StyleSheet, Text, View } from 'react-native';
+import { TYSdk } from '../../../../TYNativeApi';
 import Modal from '../../../modal';
 import H5WebView from '../webview';
 import BleToast from './ble-toast';
 import BleToastModal from './ble-toast-modal'; // 安卓开启蓝牙Toast提示框
 import BleTipModal from './ble-tip-modal'; // IOS开启蓝牙弹窗提示框
 import BleOfflineModal from './ble-offline-modal';
+import Strings from '../../../i18n/strings';
 import { CoreUtils, RatioUtils } from '../../../../utils';
-
-const TYNative = TYSdk.native;
+import { StyledTitle, StyledCancelText } from './styled';
+import { StyledFooter, StyledButton, StyledConfirmText } from '../../../dialog/styled';
 
 const { get } = CoreUtils;
 const { isIos } = RatioUtils;
+
+const TYDevice = TYSdk.device;
+const TYNative = TYSdk.native;
 
 const Res = {
   arrow: require('../../../res/arrow.png'),
@@ -37,12 +40,22 @@ export default class BleOfflineView extends Component {
      * 蓝牙离线提示是否覆盖全页面（除头部栏外）
      */
     isBleOfflineOverlay: PropTypes.bool,
+    /**
+     * @description 判断App RN版本是否为3.21及以上，符合条件才可跳转至配网页面
+     */
+    isJumpToWifi: PropTypes.bool,
+    /**
+     * 跳转链接
+     */
+    onLinkPress: PropTypes.func,
   };
 
   static defaultProps = {
     deviceOnline: true,
     bluetoothValue: true,
     isBleOfflineOverlay: true,
+    isJumpToWifi: false,
+    onLinkPress: () => {},
   };
 
   componentDidMount() {
@@ -96,11 +109,11 @@ export default class BleOfflineView extends Component {
             disabled={true}
             text={Strings.getLang('bluetoothOfflineTip')}
             image={Res.arrow}
-            onPress={() => TYNative.gotoBlePermissions()}
+            onPress={() => TYDevice.gotoBlePermissions()}
           />,
           { mask: false }
         );
-        TYNative.gotoBlePermissions();
+        TYDevice.gotoBlePermissions();
       }
     } else if (!deviceOnline) {
       const routes =
@@ -114,20 +127,63 @@ export default class BleOfflineView extends Component {
   };
 
   showBleOfflineModal = () => {
-    const { isBleOfflineOverlay } = this.props;
+    const { isBleOfflineOverlay, onLinkPress, isJumpToWifi } = this.props;
     Modal.render(
       <BleOfflineModal
         disabled={true}
         title={Strings.getLang('deviceOffline')}
-        subTitle={Strings.getLang('deviceOfflineHelp')}
-        cancelText={Strings.getLang(isBleOfflineOverlay ? 'backToHome' : 'alreadyKnow')}
-        confirmText={Strings.getLang('checkHelp')}
-        onCancel={() => {
-          Modal.close();
-          isBleOfflineOverlay && TYNative.back();
-        }}
-        onConfirm={this.openH5HelpWebView}
+        cancelText=""
+        confirmText=""
+        content={
+          <View style={{ paddingBottom: 24, paddingHorizontal: 30 }}>
+            <StyledTitle
+              style={{
+                fontSize: 13,
+                textAlign: 'left',
+                lineHeight: 20,
+              }}
+            >
+              {Strings.getLang('deviceOfflineHelpNew')}
+              <StyledTitle
+                style={[
+                  {
+                    fontSize: 13,
+                    lineHeight: 20,
+                  },
+                  isJumpToWifi && {
+                    color: '#FF4800',
+                    textDecorationLine: 'underline',
+                  },
+                ]}
+                onPress={onLinkPress}
+              >
+                {Strings.getLang('offline_link')}
+              </StyledTitle>
+            </StyledTitle>
+          </View>
+        }
         onClose={Modal.close}
+        footer={
+          <StyledFooter>
+            <StyledButton
+              bordered={true}
+              onPress={() => {
+                Modal.close();
+                isBleOfflineOverlay && TYNative.back();
+              }}
+            >
+              <StyledCancelText style={{ fontWeight: '400' }}>
+                {Strings.getLang(isBleOfflineOverlay ? 'backToHome' : 'alreadyKnow')}
+              </StyledCancelText>
+            </StyledButton>
+
+            <StyledButton onPress={this.openH5HelpWebView} disabled={false}>
+              <StyledConfirmText style={{ fontWeight: '400' }}>
+                {Strings.getLang('checkHelp')}
+              </StyledConfirmText>
+            </StyledButton>
+          </StyledFooter>
+        }
       />,
       { mask: false }
     );
@@ -158,7 +214,7 @@ export default class BleOfflineView extends Component {
       if (isIos) {
         Modal.render(<BleTipModal onClose={Modal.close} />, { mask: false });
       } else {
-        TYNative.gotoBlePermissions();
+        TYDevice.gotoBlePermissions();
       }
     } else if (!deviceOnline) {
       this.showBleOfflineModal(true);

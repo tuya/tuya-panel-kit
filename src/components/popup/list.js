@@ -65,6 +65,7 @@ class ListPopup extends React.Component {
     listItemStyle: ViewPropTypes.style,
     /**
      * 选中事件的回调
+     * @param {(value: string | number | string[] | number[], switchValue?: boolean) => void}
      */
     onSelect: PropTypes.func,
     /**
@@ -83,7 +84,7 @@ class ListPopup extends React.Component {
     contentCenter: null,
     value: -1,
     listItemStyle: null,
-    onSelect: () => {},
+    onSelect: (value, switchValue) => {},
     _onDataChange: () => {},
   };
 
@@ -122,7 +123,7 @@ class ListPopup extends React.Component {
     _onDataChange && _onDataChange(value);
   };
 
-  // sValue: 布尔值   value: 索引值
+  // sValue: 布尔值， value： 索引值
   switchValueChange = (sValue, value) => {
     const { onSelect, _onDataChange } = this.props;
     const { selectedArr } = this.state;

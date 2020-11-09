@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Motion Render basic render 1`] = `
+<View
+  renderToHardwareTextureAndroid={false}
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "justifyContent": "center",
+      "opacity": 0,
+      "position": "absolute",
+      "transform": Array [
+        Object {
+          "scale": 0,
+        },
+      ],
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "height": 48,
+        "width": 120,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Motion Render invisible render 1`] = `null`;
+
+exports[`Motion Render onHide render 1`] = `
+<View
+  renderToHardwareTextureAndroid={false}
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "justifyContent": "center",
+      "opacity": 0,
+      "position": "absolute",
+      "transform": Array [
+        Object {
+          "scale": 0,
+        },
+      ],
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "height": 48,
+        "width": 120,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Motion Render onHide render 2`] = `null`;
+
+exports[`Motion Render onShow render 1`] = `null`;
+
+exports[`Motion Render onShow render 2`] = `null`;

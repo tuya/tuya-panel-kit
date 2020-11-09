@@ -12,17 +12,17 @@ import {
   Image,
   Easing,
 } from 'react-native';
-import TYSdk from '../../../TYNativeApi';
+import { TYSdk } from '../../../TYNativeApi';
 import Motion from '../../motion';
 import RefText from '../../TYText';
-import Strings from '../../../i18n/strings';
-import { RatioUtils } from '../../../utils';
+import Strings from '../../i18n/strings';
+import { RatioUtils, CoreUtils } from '../../../utils';
 import IconFont from '../../iconfont/svg';
 
 const { convert, winWidth, isIos, isIphoneX } = RatioUtils;
+const { get } = CoreUtils;
 
 const TYNative = TYSdk.native;
-const TYDevice = TYSdk.device;
 
 export default class NewOfflineView extends PureComponent {
   static propTypes = {
@@ -34,7 +34,11 @@ export default class NewOfflineView extends PureComponent {
     show: PropTypes.bool,
     onLinkPress: PropTypes.func,
     onHelpPress: PropTypes.func,
-    devInfo: PropTypes.object.isRequired,
+    /**
+     * @description 判断App RN版本是否为3.21及以上，符合条件才可跳转至配网页面
+     */
+
+    isJumpToWifi: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -46,6 +50,7 @@ export default class NewOfflineView extends PureComponent {
     show: true,
     onLinkPress: () => {},
     onHelpPress: () => {},
+    isJumpToWifi: false,
   };
 
   constructor(props) {
@@ -110,7 +115,7 @@ export default class NewOfflineView extends PureComponent {
       showDeviceImg,
       onLinkPress,
       onHelpPress,
-      devInfo = {},
+      isJumpToWifi,
     } = this.props;
     const { value, show } = this.state;
     const textLineBefore = Strings.getLang('offline_textLinkBefore');
@@ -118,13 +123,9 @@ export default class NewOfflineView extends PureComponent {
     const textLineAfter = Strings.getLang('offline_textLinkAfter');
     const textLineMore = Strings.getLang('offline_textLinkMore');
     const linkBeforeArr = this.cropString(textLineBefore, []);
-    const imgUrl = Platform.OS === 'ios' ? devInfo && devInfo.iconUrl : devInfo && devInfo.icon;
-    const topBarMoreIconName =
-      (devInfo &&
-        devInfo.panelConfig &&
-        devInfo.panelConfig.fun &&
-        devInfo.panelConfig.fun.topBarMoreIconName) ||
-      'pen';
+    const imgUrl =
+      Platform.OS === 'ios' ? get(TYSdk, 'devInfo.iconUrl') : get(TYSdk, 'devInfo.icon');
+    const topBarMoreIconName = get(TYSdk, 'devInfo.panelConfig.fun.topBarMoreIconName', 'pen');
     return (
       <View style={[show && styles.modal, style]}>
         <Animated.View
@@ -162,8 +163,16 @@ export default class NewOfflineView extends PureComponent {
                   <View style={{ flexDirection: 'row' }}>
                     <Text style={styles.firstLine}>
                       {Strings.getLang('offline_linkFront')}
-                      {/* TODO:跳转颜色连接 */}
-                      <Text style={styles.firstLine} onPress={onLinkPress}>
+                      <Text
+                        style={[
+                          styles.firstLine,
+                          isJumpToWifi && {
+                            color: '#FF4800',
+                            textDecorationLine: 'underline',
+                          },
+                        ]}
+                        onPress={onLinkPress}
+                      >
                         {textLink}
                       </Text>
                     </Text>
@@ -197,7 +206,7 @@ export default class NewOfflineView extends PureComponent {
         <TouchableOpacity
           style={styles.moreBlack}
           activeOpacity={0.8}
-          onPress={() => TYDevice.showDeviceMenu()}
+          onPress={() => TYNative.showDeviceMenu()}
         >
           <IconFont name={topBarMoreIconName} color="#fff" size={18} />
         </TouchableOpacity>
@@ -214,13 +223,6 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     zIndex: 10000,
-  },
-  moreHelp: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: convert(17),
-    marginBottom: convert(15),
   },
   circleBlack: {
     width: convert(36),

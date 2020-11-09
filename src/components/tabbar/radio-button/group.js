@@ -36,6 +36,7 @@ class Group extends React.PureComponent {
     gutter: PropTypes.number,
     onChange: PropTypes.func,
   };
+
   static defaultProps = {
     style: {},
     wrapperStyle: {},
@@ -44,6 +45,7 @@ class Group extends React.PureComponent {
     gutter: 2,
     onChange: () => {},
   };
+
   constructor(props) {
     super(props);
     const activeIndex =
@@ -56,11 +58,13 @@ class Group extends React.PureComponent {
     this.containerSize = null;
     this.wrapperSize = null;
   }
+
   componentWillReceiveProps(nextProps) {
     if ('activeIndex' in nextProps) {
       this.moveActiveView(nextProps.activeIndex);
     }
   }
+
   getItem = () => {
     const { tabs } = this.props;
     const buttonStyle = [{ width: this.state.wrapperWidth / tabs.length }];
@@ -90,6 +94,7 @@ class Group extends React.PureComponent {
       activeIndex: index,
     });
   };
+
   changeTab = (index, item, func) => {
     if (func) func(index);
     if (index === this.state.activeIndex) return;
@@ -98,14 +103,17 @@ class Group extends React.PureComponent {
     if ('activeIndex' in this.props) return;
     this.moveActiveView(index);
   };
+
   containerLayout = e => {
     this.containerSize = e.nativeEvent.layout;
     this.completeCalcWidth();
   };
+
   wrapperLayout = e => {
     this.wrapperSize = e.nativeEvent.layout;
     this.completeCalcWidth();
   };
+
   completeCalcWidth = () => {
     if (!this.wrapperSize || !this.containerSize) return;
     const { tabs, gutter } = this.props;
@@ -118,6 +126,7 @@ class Group extends React.PureComponent {
       everyWidth,
     });
   };
+
   render() {
     const { style, wrapperStyle, activeColor, tabs, gutter } = this.props;
     const containerPadding =

@@ -53,6 +53,7 @@ export const Row = styled(View)`
   background-color: ${cellBg};
 `;
 
+// 为了处理安卓 Modal 在内容框内同时双击会出现Modal关闭问题
 export const StyledContainer = styled(TouchableOpacity).attrs({
   activeOpacity: 1,
 })`
@@ -127,7 +128,7 @@ export const StyledSubTitleText = styled(TYText)`
 `;
 
 export const StyledTouchView = styled(TouchableOpacity).attrs({
-  activeOpacity: 0.8,
+  activeOpacity: 0.7,
 })`
   flex-direction: row;
   align-items: center;

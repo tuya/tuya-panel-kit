@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { StyleSheet, View, ViewPropTypes, I18nManager } from 'react-native';
 import IconFont from '../iconfont/svg';
+import TYText from '../TYText';
 import svgs from '../iconfont/svg/defaultSvg';
 
 export default class UnitTextSvg extends React.PureComponent {
@@ -48,6 +49,10 @@ export default class UnitTextSvg extends React.PureComponent {
      */
     unitPaddingTop: PropTypes.number,
     /**
+     * 单位的类型
+     */
+    unitType: PropTypes.oneOf(['icon', 'text']),
+    /**
      * 值
      */
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
@@ -84,6 +89,7 @@ export default class UnitTextSvg extends React.PureComponent {
     symbolWidth: 0.35,
     symbols: ['.', ':', ','],
     svgMap: {},
+    unitType: 'icon',
   };
 
   getLetterPadding(letterWidth) {
@@ -102,6 +108,7 @@ export default class UnitTextSvg extends React.PureComponent {
       unitPaddingTop,
       letterWidth,
       svgMap,
+      unitType,
     } = this.props;
     if (!unit) {
       return null;
@@ -114,7 +121,21 @@ export default class UnitTextSvg extends React.PureComponent {
     const uNeedLeft = (vSize + uSize) * (letterPadding - 0.025);
     const unitStyle = [{ marginTop: unitPaddingTop, [marginType]: -uNeedLeft + unitPaddingLeft }];
     const allSvgs = { ...svgs, ...svgMap };
-    return <IconFont d={allSvgs[unit] || unit} size={uSize} style={unitStyle} color={unitColor} />;
+    return unitType === 'icon' ? (
+      <IconFont d={allSvgs[unit] || unit} size={uSize} style={unitStyle} color={unitColor} />
+    ) : (
+      <TYText
+        style={[
+          {
+            fontSize: uSize,
+            color: unitColor,
+          },
+          unitStyle,
+        ]}
+      >
+        {unit}
+      </TYText>
+    );
   }
 
   render() {

@@ -144,6 +144,8 @@ class CircleBtn extends React.PureComponent {
      * 测试标志
      */
     badgeTextAccessibilityLabel: PropTypes.string,
+    children: PropTypes.element,
+    wrapperProps: PropTypes.any,
   };
 
   static defaultProps = {
@@ -176,6 +178,8 @@ class CircleBtn extends React.PureComponent {
     textAccessibilityLabel: 'Button_Text',
     badgeAccessibilityLabel: 'Button_Badge',
     badgeTextAccessibilityLabel: 'Button_Badge_Text',
+    children: null,
+    wrapperProps: {},
   };
 
   constructor(props) {
@@ -186,8 +190,8 @@ class CircleBtn extends React.PureComponent {
     };
     this.badgePosition = null;
   }
-
-  getBorderStyle = () => {
+  // TODO
+  getBorderStyle = /* istanbul ignore next */ () => {
     const { border } = this.props;
     if (!border) {
       // border: false; border: 0; border: ''; border: undefined, mean no border
@@ -250,7 +254,7 @@ class CircleBtn extends React.PureComponent {
     let hasChild = true;
     let child = null;
     if (childCount > 1) {
-      throw new Error('only contain one elements');
+      /* istanbul ignore next */ throw new Error('only contain one elements');
     } else if (childCount === 1) {
       child = children;
     } else if (icon || image || iconPath) {
@@ -290,7 +294,8 @@ class CircleBtn extends React.PureComponent {
     return { hasChild, child };
   };
 
-  borderLayout = e => {
+  // TODO
+  borderLayout = /* istanbul ignore next */ e => {
     this.setState({
       borderLayout: e.nativeEvent.layout,
     });

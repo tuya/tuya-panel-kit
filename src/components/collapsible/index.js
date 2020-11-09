@@ -52,7 +52,7 @@ class Collapsible extends React.PureComponent {
     collapsedHeight: 0,
     duration: 300,
     easing: 'EaseOutCubic',
-    onChange: () => null,
+    onChange: () => {},
     children: null,
     style: null,
   };
@@ -116,6 +116,8 @@ class Collapsible extends React.PureComponent {
     this.setState({ measuring: true }, () => {
       requestAnimationFrame(() => {
         if (!this.content) {
+          /* istanbul ignore next */
+          // TODO: 不可能走到这里
           this.setState({ measuring: false }, () => callback(this.props.collapsedHeight));
         } else {
           this.content.getNode().measure((x, y, width, height) => {
@@ -167,7 +169,7 @@ class Collapsible extends React.PureComponent {
         finalEasing = Easing[easing];
       }
       if (!finalEasing) {
-        throw new Error(`Invalid easing type "${this.props.easing}"`);
+        /* istanbul ignore next */ throw new Error(`Invalid easing type "${this.props.easing}"`);
       }
       if (this.animation) {
         this.animation.stop();
@@ -177,11 +179,12 @@ class Collapsible extends React.PureComponent {
         toValue: height,
         duration,
         easing: finalEasing,
+        useNativeDriver: false,
       });
       this.animation.start(() => {
-        if (this.unmounted) return;
+        if (this.unmounted) /* istanbul ignore next */ return;
         this.setState({ animating: false }, () => {
-          if (this.unmounted) return;
+          if (this.unmounted) /* istanbul ignore next */ return;
           this.props.onChange();
         });
       });
@@ -198,8 +201,9 @@ class Collapsible extends React.PureComponent {
     ) {
       return;
     }
-
+    /* istanbul ignore next */
     this.state.height.setValue(contentHeight);
+    /* istanbul ignore next */
     this.setState({ contentHeight });
   };
 

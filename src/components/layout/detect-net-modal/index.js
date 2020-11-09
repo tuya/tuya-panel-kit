@@ -10,18 +10,21 @@ import {
   Image,
   Dimensions,
 } from 'react-native';
+import { TYSdk } from '../../../TYNativeApi';
 import { RatioUtils, CoreUtils } from '../../../utils';
-import TYSdk from '../../../TYNativeApi';
 import TYText from '../../TYText';
 import Tips from '../../tips';
-import Strings from '../../../i18n/strings';
+import Strings from '../../i18n/strings';
 
 const { convertX: cx } = RatioUtils;
 
 const { height } = Dimensions.get('screen');
 
-const { compareVersion, get } = CoreUtils;
 const TYNative = TYSdk.native;
+const TYMobile = TYSdk.mobile;
+
+const { compareVersion, get } = CoreUtils;
+
 const Res = {
   close: require('../../res/x.png'),
   wifi: require('../../res/wifi.png'),
@@ -56,11 +59,8 @@ export default class DetectNetModal extends PureComponent {
   }
 
   handleToDetect = () => {
-    TYSdk.device.getDeviceInfo().then(result => {
-      if (!result) return;
-      const { devId } = result;
-      TYNative.jumpTo(`tuyaSmart://dev_network_check?devId=${devId}`);
-    });
+    const { devId } = TYSdk.devInfo;
+    TYMobile.jumpTo(`tuyaSmart://dev_network_check?devId=${devId}`);
   };
 
   show = () => {

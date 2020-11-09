@@ -1,4 +1,4 @@
-import TYSdk from '../../TYNativeApi';
+import { TYSdk } from '../../TYNativeApi';
 
 const TYEvent = TYSdk.event;
 

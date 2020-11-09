@@ -169,7 +169,7 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
       isAlign: false,
       backIconColor: null,
       onBack: null,
-      backText: '返回',
+      backText: 'Back',
       showBack: false,
     };
 
@@ -188,6 +188,7 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
       if (this.props.visible !== nextProps.visible) {
         this.setState({ show: nextProps.visible });
       }
+
       if (nextProps.visible) {
         this.setState({ visible: true });
       }
@@ -321,8 +322,8 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
         titleWrapperStyle,
         subTitle,
         backIconColor,
-        showBack,
         backText,
+        showBack,
       } = this.props;
       if (React.isValidElement(title)) return title;
       const titleArray = Array.isArray(title) ? title : [title];
@@ -399,6 +400,7 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
     render() {
       const {
         // ========= 以下为 Modal 通用 props ========== //
+
         animationType,
         alignContainer,
         mask,
@@ -427,7 +429,7 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
         isAlign,
         ...props
       } = this.props;
-      const { switchValue, visible } = this.state;
+      const { visible, switchValue } = this.state;
       let element = (
         <StyledContainer style={wrapperStyle}>
           {this.renderTitle()}

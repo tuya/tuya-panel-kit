@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import { TouchableOpacity, ColorPropType, StyleSheet, Animated } from 'react-native';
 import TopBar from '../../topbar';
-import Confirm from '../../../dialog/confirm';
+import Custom from '../../../dialog/custom';
 import { RatioUtils } from '../../../../utils';
 
 const { convertX: cx, convertY: cy } = RatioUtils;
@@ -51,18 +51,9 @@ export default class BleOfflineModal extends PureComponent {
     const { disabled, maskColor, ...confirmProps } = this.props;
     const { value } = this.state;
     const confirmStyle = {
-      style: { borderRadius: cx(16) },
-      contentStyle: { paddingTop: 32, paddingBottom: 24 },
-      titleStyle: { fontSize: cx(16), color: '#22242C', fontWeight: '500' },
-      subTitleStyle: {
-        fontSize: cx(13),
-        textAlign: 'left',
-        color: '#495054',
-        marginTop: 20,
-        lineHeight: 20,
-      },
-      cancelTextStyle: { color: '#495054', fontWeight: '400' },
-      confirmTextStyle: { color: '#495054', fontWeight: '400' },
+      style: { borderRadius: cx(16), paddingTop: cx(24) },
+      headerStyle: { borderBottomWidth: 0 },
+      titleStyle: { fontSize: cx(16), fontWeight: '500' },
     };
     return (
       <TouchableOpacity
@@ -75,7 +66,7 @@ export default class BleOfflineModal extends PureComponent {
           style={[StyleSheet.absoluteFill, { backgroundColor: maskColor, opacity: value }]}
         />
         <Animated.View style={{ marginTop: cy(153), opacity: this.state.value }}>
-          <Confirm {...confirmStyle} {...confirmProps} />
+          <Custom {...confirmStyle} {...confirmProps} />
         </Animated.View>
       </TouchableOpacity>
     );

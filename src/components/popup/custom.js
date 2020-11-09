@@ -7,7 +7,7 @@ function CustomPopup({ content }) {
 
 CustomPopup.displayName = 'Custom';
 
-CustomPopup.PropTypes = {
+CustomPopup.propTypes = {
   /**
    * 自定义内容
    */

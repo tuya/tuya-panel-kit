@@ -1,5 +1,6 @@
 import React from 'react';
-import TYSdk from '../../TYNativeApi';
+import { Platform } from 'react-native';
+import { TYSdk } from '../../TYNativeApi';
 import TYModal from './TYModal';
 
 const TYEvent = TYSdk.event;
@@ -39,11 +40,11 @@ class PortalOut extends React.Component {
   show = (config, isDismiss = false) => {
     const { uuid, show } = config;
     if (!this.node[`${uuid}`]) return;
-    const { onShow, onHide } = this.node[`${uuid}`].props;
+    const { onShow, onHide, onDismiss } = this.node[`${uuid}`].props;
     if (show) onShow && onShow();
     if (!show) {
       if (isDismiss) {
-        // typeof onDismiss === 'function' && onDismiss();
+        Platform.OS === 'android' && typeof onDismiss === 'function' && onDismiss();
       } else {
         typeof onHide === 'function' && onHide();
       }

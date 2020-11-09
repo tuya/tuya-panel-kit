@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import TYSdk from '../../TYNativeApi';
+import { TYSdk } from '../../TYNativeApi';
 import PortalFun from './portal-direct';
 import { ListModal } from '../popup/list';
 import { PickerModal } from '../popup/picker';
 import { CountdownModal } from '../popup/countdown';
 import { DatePickerModal } from '../popup/date-picker';
 
-const TYEvent = TYSdk.event;
-
 let uuid = 0;
+
+const TYEvent = TYSdk.event;
 
 class Portal extends React.Component {
   static List = ListModal;
@@ -62,6 +62,7 @@ class Portal extends React.Component {
   hidePortal = () => {
     TYEvent.emit('showPortal', { uuid: this.uuid, show: false });
   };
+
   removePortal = () => {
     TYEvent.emit('removePortal', this.uuid);
   };

@@ -120,6 +120,7 @@ export const StyledBadgeText = styled(TYText)`
 `;
 
 export const StyledIconFont = props => {
+  // eslint-disable-next-line react/prop-types
   const { size, color, ...rest } = props;
   return (
     <ThemeConsumer>

@@ -1,0 +1,1337 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThemeSlider Component  render width allMeasured 1`] = `
+<View
+  accessibilityLabel="Slider"
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "flexDirection": "column",
+        "justifyContent": "center",
+      },
+      Object {
+        "flexDirection": "column",
+        "height": 40,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#b3b3b3",
+          "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
+          "height": 4,
+        },
+        undefined,
+      ]
+    }
+  />
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#3f3f3f",
+          "overflow": "hidden",
+          "position": "absolute",
+        },
+        Object {
+          "borderRadius": 2,
+          "height": 4,
+        },
+        undefined,
+        Object {
+          "width": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <AnimatedComponent
+    onLayout={[Function]}
+    renderToHardwareTextureAndroid={true}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#343434",
+          "position": "absolute",
+        },
+        Object {
+          "borderRadius": 10,
+          "elevation": 2,
+          "height": 20,
+          "shadowColor": "rgba(0,0,0,0.3)",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 2,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 2,
+          "width": 20,
+        },
+        undefined,
+        Object {
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {
+          "marginBottom": -20,
+          "marginLeft": -20,
+          "marginRight": -20,
+          "marginTop": -20,
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`ThemeSlider Component  render width allMeasured 2`] = `
+<View
+  accessibilityLabel="Slider"
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "flexDirection": "column",
+        "justifyContent": "center",
+      },
+      Object {
+        "flexDirection": "row",
+        "width": 40,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#b3b3b3",
+          "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
+          "height": 4,
+        },
+        undefined,
+      ]
+    }
+  />
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#3f3f3f",
+          "overflow": "hidden",
+          "position": "absolute",
+        },
+        Object {
+          "borderRadius": 2,
+          "height": 4,
+        },
+        undefined,
+        Object {
+          "height": 0,
+          "overflow": "hidden",
+          "position": "absolute",
+        },
+        Object {},
+      ]
+    }
+  />
+  <AnimatedComponent
+    onLayout={[Function]}
+    renderToHardwareTextureAndroid={true}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#343434",
+          "position": "absolute",
+        },
+        Object {
+          "borderRadius": 10,
+          "elevation": 2,
+          "height": 20,
+          "shadowColor": "rgba(0,0,0,0.3)",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 2,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 2,
+          "width": 20,
+        },
+        undefined,
+        Object {
+          "transform": Array [
+            Object {
+              "translateY": 0,
+            },
+          ],
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {
+          "marginBottom": -20,
+          "marginLeft": -20,
+          "marginRight": -20,
+          "marginTop": -20,
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`ThemeSlider Component  render width animateTransitions 1`] = `
+<View
+  accessibilityLabel="Slider"
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "flexDirection": "column",
+        "justifyContent": "center",
+      },
+      Object {
+        "flexDirection": "column",
+        "height": 40,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#b3b3b3",
+          "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
+          "height": 4,
+        },
+        undefined,
+      ]
+    }
+  />
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#3f3f3f",
+          "overflow": "hidden",
+          "position": "absolute",
+        },
+        Object {
+          "borderRadius": 2,
+          "height": 4,
+        },
+        undefined,
+        Object {
+          "width": 50,
+        },
+        Object {},
+      ]
+    }
+  />
+  <AnimatedComponent
+    onLayout={[Function]}
+    renderToHardwareTextureAndroid={true}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#343434",
+          "position": "absolute",
+        },
+        Object {
+          "borderRadius": 10,
+          "elevation": 2,
+          "height": 20,
+          "shadowColor": "rgba(0,0,0,0.3)",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 2,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 2,
+          "width": 20,
+        },
+        undefined,
+        Object {
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {
+          "marginBottom": -20,
+          "marginLeft": -0,
+          "marginRight": -0,
+          "marginTop": -20,
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`ThemeSlider Component  render width canTouchTrack 1`] = `
+<View
+  accessibilityLabel="Slider"
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "flexDirection": "column",
+        "justifyContent": "center",
+      },
+      Object {
+        "flexDirection": "column",
+        "height": 40,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#b3b3b3",
+          "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
+          "height": 4,
+        },
+        undefined,
+      ]
+    }
+  />
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#3f3f3f",
+          "overflow": "hidden",
+          "position": "absolute",
+        },
+        Object {
+          "borderRadius": 2,
+          "height": 4,
+        },
+        undefined,
+        Object {},
+        Object {
+          "opacity": 0,
+        },
+      ]
+    }
+  />
+  <AnimatedComponent
+    onLayout={[Function]}
+    renderToHardwareTextureAndroid={true}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#343434",
+          "position": "absolute",
+        },
+        Object {
+          "borderRadius": 10,
+          "elevation": 2,
+          "height": 20,
+          "shadowColor": "rgba(0,0,0,0.3)",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 2,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 2,
+          "width": 20,
+        },
+        undefined,
+        Object {},
+        Object {
+          "opacity": 0,
+        },
+      ]
+    }
+  />
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`ThemeSlider Component basic render 1`] = `
+<View
+  accessibilityLabel="Slider"
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "flexDirection": "column",
+        "justifyContent": "center",
+      },
+      Object {
+        "flexDirection": "column",
+        "height": 40,
+      },
+      null,
+    ]
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#b3b3b3",
+          "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
+          "height": 4,
+        },
+        Object {
+          "borderRadius": undefined,
+          "height": undefined,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "#3f3f3f",
+        "borderRadius": undefined,
+        "height": undefined,
+        "opacity": 0,
+        "overflow": "hidden",
+        "position": "absolute",
+      }
+    }
+  />
+  <View
+    onLayout={[Function]}
+    renderToHardwareTextureAndroid={true}
+    style={
+      Object {
+        "backgroundColor": "#343434",
+        "borderRadius": undefined,
+        "elevation": 2,
+        "height": undefined,
+        "opacity": 0,
+        "position": "absolute",
+        "shadowColor": "rgba(0,0,0,0.3)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 2,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 2,
+        "width": undefined,
+      }
+    }
+  />
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`ThemeSlider Component basic render 2`] = `
+<View
+  accessibilityLabel="Slider"
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "flexDirection": "column",
+        "justifyContent": "center",
+      },
+      Object {
+        "flexDirection": "row",
+        "width": 40,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#b3b3b3",
+          "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
+          "height": 4,
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "red",
+          "height": 20,
+        }
+      }
+    />
+  </View>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#3f3f3f",
+          "overflow": "hidden",
+          "position": "absolute",
+        },
+        Object {
+          "borderRadius": 2,
+          "height": 4,
+        },
+        undefined,
+        Object {},
+        Object {
+          "opacity": 0,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "blue",
+          "height": 20,
+        }
+      }
+    />
+  </AnimatedComponent>
+  <AnimatedComponent
+    onLayout={[Function]}
+    renderToHardwareTextureAndroid={true}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#343434",
+          "position": "absolute",
+        },
+        Object {
+          "borderRadius": 10,
+          "elevation": 2,
+          "height": 20,
+          "shadowColor": "rgba(0,0,0,0.3)",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 2,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 2,
+          "width": 20,
+        },
+        undefined,
+        Object {},
+        Object {
+          "opacity": 0,
+        },
+      ]
+    }
+  />
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {
+          "backgroundColor": "orange",
+          "opacity": 0.5,
+        },
+      ]
+    }
+  >
+    <AnimatedComponent
+      pointerEvents="none"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "green",
+            "opacity": 0.5,
+            "position": "absolute",
+          },
+          Object {
+            "height": 40,
+            "left": NaN,
+            "top": 0,
+            "width": 40,
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`ThemeSlider Component basic render 3`] = `
+<Slider
+  accessibilityLabel="Slider"
+  animateTransitions={false}
+  animationType="timing"
+  canTouchTrack={true}
+  debugTouchArea={false}
+  horizontal={true}
+  maximumTrackTintColor="#b3b3b3"
+  maximumValue={100}
+  minimumTrackTintColor="#3f3f3f"
+  minimumValue={0}
+  onlyMaximumTrack={false}
+  reverseValue={false}
+  stepValue={0}
+  style={
+    Object {
+      "height": 48,
+      "width": 300,
+    }
+  }
+  thumbTintColor="#343434"
+  thumbTouchSize={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+  trackStyle={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "transparent",
+      "height": 30,
+      "justifyContent": "center",
+      "top": 36,
+      "width": 300,
+    }
+  }
+  value={24}
+/>
+`;
+
+exports[`ThemeSlider Component basic render 4`] = `
+<Slider
+  accessibilityLabel="Slider"
+  animateTransitions={false}
+  animationType="timing"
+  canTouchTrack={true}
+  debugTouchArea={false}
+  horizontal={false}
+  maximumTrackTintColor="#b3b3b3"
+  maximumValue={100}
+  minimumTrackTintColor="#3f3f3f"
+  minimumValue={0}
+  onlyMaximumTrack={false}
+  reverseValue={false}
+  stepValue={0}
+  style={
+    Object {
+      "height": 48,
+      "width": 300,
+    }
+  }
+  styles={
+    Object {
+      "container": Object {
+        "flexDirection": "row",
+        "justifyContent": "center",
+      },
+      "thumb": Object {
+        "borderRadius": 10,
+        "elevation": 2,
+        "height": 20,
+        "shadowColor": "rgba(0,0,0,0.3)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 2,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 2,
+        "width": 20,
+      },
+      "track": Object {
+        "borderRadius": 2,
+        "width": 4,
+      },
+    }
+  }
+  thumbTintColor="#343434"
+  thumbTouchSize={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+  trackStyle={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "transparent",
+      "height": 30,
+      "justifyContent": "center",
+      "top": 36,
+      "width": 300,
+    }
+  }
+  value={24}
+/>
+`;
+
+exports[`ThemeSlider Component basic render 5`] = `
+<View
+  maximumValue={100}
+  minimumValue={0}
+  style={
+    Object {
+      "height": 48,
+      "width": 300,
+    }
+  }
+  trackStyle={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "transparent",
+      "height": 30,
+      "justifyContent": "center",
+      "top": 36,
+      "width": 300,
+    }
+  }
+  value={24}
+/>
+`;
+
+exports[`ThemeSlider Component dpView render 1`] = `
+<View
+  maximumValue={100}
+  minimumValue={0}
+  style={
+    Object {
+      "height": 48,
+      "width": 300,
+    }
+  }
+  trackStyle={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "transparent",
+      "height": 30,
+      "justifyContent": "center",
+      "top": 36,
+      "width": 300,
+    }
+  }
+  value={24}
+/>
+`;
+
+exports[`ThemeSlider Component horizontal render 1`] = `
+<View
+  accessibilityLabel="Slider"
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "flexDirection": "column",
+        "justifyContent": "center",
+      },
+      Object {
+        "flexDirection": "column",
+        "height": 40,
+      },
+      Object {
+        "height": 48,
+        "width": 300,
+      },
+    ]
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#50E3C2",
+          "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
+          "height": 4,
+        },
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "height": 30,
+          "justifyContent": "center",
+          "top": 36,
+          "width": 300,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "borderRadius": 2,
+        "height": 30,
+        "justifyContent": "center",
+        "opacity": 0,
+        "overflow": "hidden",
+        "position": "absolute",
+        "top": 36,
+        "width": 300,
+      }
+    }
+  />
+  <View
+    onLayout={[Function]}
+    renderToHardwareTextureAndroid={true}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "borderRadius": 10,
+        "elevation": 2,
+        "height": 30,
+        "justifyContent": "center",
+        "opacity": 0,
+        "position": "absolute",
+        "shadowColor": "rgba(0,0,0,0.3)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 2,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 2,
+        "top": 36,
+        "width": 300,
+      }
+    }
+  >
+    <Image
+      source={1}
+    />
+  </View>
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`ThemeSlider Component onlyMaximumTrack render 1`] = `
+<View
+  accessibilityLabel="Slider"
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "flexDirection": "column",
+        "justifyContent": "center",
+      },
+      Object {
+        "flexDirection": "column",
+        "height": 40,
+      },
+      null,
+    ]
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#b3b3b3",
+          "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
+          "height": 4,
+        },
+        Object {
+          "borderRadius": undefined,
+          "height": undefined,
+        },
+      ]
+    }
+  />
+  <View
+    onLayout={[Function]}
+    renderToHardwareTextureAndroid={true}
+    style={
+      Object {
+        "backgroundColor": "#343434",
+        "borderRadius": undefined,
+        "elevation": 2,
+        "height": undefined,
+        "opacity": 0,
+        "position": "absolute",
+        "shadowColor": "rgba(0,0,0,0.3)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 2,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 2,
+        "width": undefined,
+      }
+    }
+  />
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`ThemeSlider Component should update 1`] = `
+<View
+  accessibilityLabel="Slider"
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "flexDirection": "column",
+        "justifyContent": "center",
+      },
+      Object {
+        "flexDirection": "column",
+        "height": 40,
+      },
+      Object {
+        "height": 48,
+        "width": 300,
+      },
+    ]
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#50E3C2",
+          "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
+          "height": 4,
+        },
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "height": 30,
+          "justifyContent": "center",
+          "top": 36,
+          "width": 300,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "borderRadius": 2,
+        "height": 30,
+        "justifyContent": "center",
+        "opacity": 0,
+        "overflow": "hidden",
+        "position": "absolute",
+        "top": 36,
+        "width": 300,
+      }
+    }
+  />
+  <View
+    onLayout={[Function]}
+    renderToHardwareTextureAndroid={true}
+    style={
+      Object {
+        "backgroundColor": "#343434",
+        "borderRadius": undefined,
+        "elevation": 2,
+        "height": undefined,
+        "opacity": 0,
+        "position": "absolute",
+        "shadowColor": "rgba(0,0,0,0.3)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 2,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 2,
+        "width": undefined,
+      }
+    }
+  />
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`ThemeSlider Component vertical render 1`] = `
+<View
+  accessibilityLabel="Slider"
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "center",
+      },
+      Object {
+        "flexDirection": "row",
+        "width": 40,
+      },
+      Object {
+        "height": 48,
+        "width": 300,
+      },
+    ]
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#50E3C2",
+          "overflow": "hidden",
+        },
+        Object {
+          "borderRadius": 2,
+          "width": 4,
+        },
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "height": 30,
+          "justifyContent": "center",
+          "top": 36,
+          "width": 300,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "borderRadius": 2,
+        "height": 30,
+        "justifyContent": "center",
+        "opacity": 0,
+        "overflow": "hidden",
+        "position": "absolute",
+        "top": 36,
+        "width": 300,
+      }
+    }
+  />
+  <View
+    onLayout={[Function]}
+    renderToHardwareTextureAndroid={true}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "borderRadius": 10,
+        "elevation": 2,
+        "height": 30,
+        "justifyContent": "center",
+        "opacity": 0,
+        "position": "absolute",
+        "shadowColor": "rgba(0,0,0,0.3)",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 2,
+        },
+        "shadowOpacity": 1,
+        "shadowRadius": 2,
+        "top": 36,
+        "width": 300,
+      }
+    }
+  >
+    <Image
+      source={1}
+    />
+  </View>
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+</View>
+`;
