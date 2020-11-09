@@ -1,5 +1,8 @@
 blank_issues_enabled: false
 contact_links:
-  - name: 联系我们
-    url: https://www.tuya.com/cn/contact
-    about: Please ask and answer questions here.
+  - name: 创建工单
+    url: https://iot.tuya.com/council/chat/
+    about: 请点击 「Open」 按钮打开新链接创建 工单
+  - name: 问题反馈
+    url: https://work-order.tuya-inc.com:7799/add-order
+    about: 请点击 「Open」 按钮打开新链接反馈 问题
