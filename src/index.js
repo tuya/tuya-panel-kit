@@ -64,7 +64,7 @@ export { default as Swipeout } from './components/swipeout';
 
 export { default as I18N } from './components/i18n';
 
-export { Strings, TYSdk } from '@tuya-rn/tuya-native-kit';
+export { Strings, TYSdk } from './TYNativeApi';
 
 export { Utils };
 
