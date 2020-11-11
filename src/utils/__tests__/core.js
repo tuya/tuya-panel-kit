@@ -1,6 +1,5 @@
 import CoreUtils from '../core';
 
-
 describe('CoreUtils toFixedString', () => {
   it('CoreUtils.toFixed("111", 5) = "00111"', () => {
     const result = CoreUtils.toFixed('111', 5);
@@ -12,7 +11,6 @@ describe('CoreUtils toFixedString', () => {
     expect(result).toEqual('22222');
   });
 });
-
 
 describe('CoreUtils toFilled', () => {
   it('CoreUtils.toFilled("111", 5) = "00111"', () => {
@@ -26,7 +24,6 @@ describe('CoreUtils toFilled', () => {
   });
 });
 
-
 describe('CoreUtils partition', () => {
   it('CoreUtils.partition("111", 5) = ["111"]', () => {
     const result = CoreUtils.partition('111', 5);
@@ -38,7 +35,6 @@ describe('CoreUtils partition', () => {
     expect(result).toEqual(['22222', '2222']);
   });
 });
-
 
 describe('CoreUtils isObject', () => {
   it('CoreUtils.isObject({}) = true', () => {

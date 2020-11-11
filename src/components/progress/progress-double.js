@@ -609,9 +609,8 @@ export default class ProgressDouble extends Gesture {
         ]}
       >
         <Svg
-          viewBox={`${-thumbRadius} ${-thumbRadius} ${size + 2 * thumbRadius} ${
-            size + 2 * thumbRadius
-          }`}
+          viewBox={`${-thumbRadius} ${-thumbRadius} ${size + 2 * thumbRadius} ${size +
+            2 * thumbRadius}`}
           width={size + 2 * thumbRadius}
           height={size + 2 * thumbRadius}
         >

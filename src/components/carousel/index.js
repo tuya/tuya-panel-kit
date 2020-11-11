@@ -321,12 +321,12 @@ class Carousel extends React.Component {
     const { dotStyle, dotActiveStyle, dots, dotWrapperStyle } = this.props;
     return dots
       ? dots({
-          dotStyle,
-          dotWrapperStyle,
-          dotActiveStyle,
-          currentIndex: this.state.selectedIndex,
-          count: this.count,
-        })
+        dotStyle,
+        dotWrapperStyle,
+        dotActiveStyle,
+        currentIndex: this.state.selectedIndex,
+        count: this.count,
+      })
       : null;
   };
   render() {

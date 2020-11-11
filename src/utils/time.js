@@ -23,11 +23,7 @@ const parseSecond = (t, n = 2) => {
   const h = parseInt(t / 3600, 10);
   const m = parseInt(t / 60 - h * 60, 10);
   const s = parseInt(t - h * 3600 - m * 60, 10);
-  return [
-    CoreUtils.toFixed(h, 2),
-    CoreUtils.toFixed(m, 2),
-    CoreUtils.toFixed(s, 2),
-  ];
+  return [CoreUtils.toFixed(h, 2), CoreUtils.toFixed(m, 2), CoreUtils.toFixed(s, 2)];
 };
 
 /**
@@ -41,7 +37,7 @@ const parseSecond = (t, n = 2) => {
  * @param {Number} second, is a number stands second
  * @returns {Array} a Array of String which each item is a string which length is 2
  */
-const parseTimer = (second) => {
+const parseTimer = second => {
   const t = second % 86400;
   const h = parseInt(t / 3600, 10);
   const m = parseInt(t / 60 - h * 60, 10);
@@ -60,7 +56,7 @@ const parseTimer = (second) => {
  * @param {Number} second, is a number stands second
  * @returns {Array} a Array of String which each item is a string which length is 2
  */
-const parseTimers = (second) => {
+const parseTimers = second => {
   const t = second % 86400;
   const h = parseInt(t / 3600, 10);
   const m = parseInt(t / 60 - h * 60, 10);
@@ -68,7 +64,6 @@ const parseTimers = (second) => {
 
   return `${CoreUtils.toFixed(h, 2)}:${CoreUtils.toFixed(m, 2)}:${CoreUtils.toFixed(s, 2)}`;
 };
-
 
 /**
  * 等同于原来的 parseHour12
@@ -95,7 +90,6 @@ const parseHour12 = second => {
   ].join(':');
 };
 
-
 /**
  * 等同于原来的 stringToTimer, 但是有区别的
  * @example
@@ -107,10 +101,8 @@ const parseHour12 = second => {
  * @param {String} timeStr, is a string stands time
  * @returns {Number} a number convert from the `timeStr`
  */
-const stringToSecond = timeStr => timeStr.split(':')
-  .reduce((sum, item) => (sum * 60 + (parseInt(item))), 0);
-
-
+const stringToSecond = timeStr =>
+  timeStr.split(':').reduce((sum, item) => sum * 60 + parseInt(item), 0);
 
 /**
  * 等同于原来的 dateToTimer
@@ -133,7 +125,6 @@ const dateToTimer = dateString => {
   return Date.parse(date) / 1000;
 };
 
-
 // 对Date的扩展，将 Date 转化为指定格式的String
 // 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符，
 // 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字)
@@ -152,10 +143,7 @@ const dateFormat = (fmt, date) => {
   };
   // eslint-disable-next-line
   if (/(y+)/.test(fmt)) {
-    fmt = fmt.replace(
-      RegExp.$1,
-      `${date.getFullYear()}`.substr(4 - RegExp.$1.length),
-    );
+    fmt = fmt.replace(RegExp.$1, `${date.getFullYear()}`.substr(4 - RegExp.$1.length));
   }
   // eslint-disable-next-line
   for (const k in o) {
@@ -163,7 +151,7 @@ const dateFormat = (fmt, date) => {
       // eslint-disable-next-line
       fmt = fmt.replace(
         RegExp.$1,
-        RegExp.$1.length === 1 ? o[k] : `00${o[k]}`.substr(`${o[k]}`.length),
+        RegExp.$1.length === 1 ? o[k] : `00${o[k]}`.substr(`${o[k]}`.length)
       );
     }
   }
@@ -181,8 +169,7 @@ const timezone = () => {
   const strHour = `${hour}:${minute}`;
   const zone = offset > 0 ? `-${strHour}` : `+${strHour}`;
   return zone;
-}
-
+};
 
 const TimeUtils = {
   parseSecond,
@@ -192,7 +179,7 @@ const TimeUtils = {
   stringToSecond,
   dateToTimer,
   dateFormat,
-  timezone
+  timezone,
 };
 
 export default TimeUtils;

@@ -2,7 +2,6 @@ import { I18N, TYSdk } from '../../TYNativeApi';
 import NumberUtil from '../../utils/number';
 
 class I18NWrapper extends I18N {
-
   getRangeStrings(dpCode) {
     const result = {};
     const schema = TYSdk.device.getDpSchema(dpCode);

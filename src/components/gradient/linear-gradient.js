@@ -60,7 +60,9 @@ export default class LinearGradient extends Component {
 
   constructor(props) {
     super(props);
-    this._gradientId = Math.random().toString(36).substring(7);
+    this._gradientId = Math.random()
+      .toString(36)
+      .substring(7);
     this.setSource = this.setSource.bind(this);
     this.state = {
       stops: props.stops,

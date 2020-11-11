@@ -1,6 +1,5 @@
 import RatioUtils from '../ratio';
 
-
 describe('RatioUtils', () => {
   it('RatioUtils.ratio = 2', () => {
     const result = RatioUtils.ratio;

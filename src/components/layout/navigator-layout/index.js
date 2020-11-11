@@ -28,7 +28,7 @@ const TYNative = TYSdk.native;
 if (Platform.OS !== 'web') {
   const originRender = Text.render || Text.prototype.render;
   const parent = Text.render ? Text : Text.prototype;
-  parent.render = function (...args) {
+  parent.render = function(...args) {
     const origin = originRender.call(this, ...args);
     return React.cloneElement(origin, {
       style: [!isIos && { fontFamily: '' }, origin.props.style],

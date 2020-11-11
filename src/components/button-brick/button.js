@@ -211,8 +211,8 @@ export default class BrickButton extends React.PureComponent {
       wrapper,
       type === 'primaryBorder' &&
         disabled && {
-          borderColor: STYLES[`${type}`].borderColorDisabled,
-        },
+        borderColor: STYLES[`${type}`].borderColorDisabled,
+      },
     ]);
     const textColor = contentTextStyle.color;
     const backgroundColor =
@@ -280,7 +280,7 @@ export default class BrickButton extends React.PureComponent {
     return (
       <Loading
         size={size}
-        style={[text && (type !== 'small' && !isWrapperSmall) && styles.loading, loadingStyle]}
+        style={[text && type !== 'small' && !isWrapperSmall && styles.loading, loadingStyle]}
         color={loadingColor}
         loading={loading}
         backgroundColor={loadingBackground}
@@ -315,8 +315,8 @@ export default class BrickButton extends React.PureComponent {
     const fill =
       type === 'primaryBorder'
         ? color(wrapper.borderColor)
-            .alpha(0.1)
-            .rgbString()
+          .alpha(0.1)
+          .rgbString()
         : 'rgba(0,0,0,.1)';
     return (
       <TouchableHighlight
