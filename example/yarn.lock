@@ -247,7 +247,7 @@
 
 "@types/react@*", "@types/react@^16.9.55":
   version "16.9.56"
-  resolved "https://registry.npm.taobao.org/@types/react/download/@types/react-16.9.56.tgz?cache=0&sync_timestamp=1604651667761&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Freact%2Fdownload%2F%40types%2Freact-16.9.56.tgz#ea25847b53c5bec064933095fc366b1462e2adf0"
+  resolved "https://registry.npm.taobao.org/@types/react/download/@types/react-16.9.56.tgz#ea25847b53c5bec064933095fc366b1462e2adf0"
   integrity sha1-6iWEe1PFvsBkkzCV/DZrFGLirfA=
   dependencies:
     "@types/prop-types" "*"
@@ -698,7 +698,7 @@ babel-core@^6.0.0, babel-core@^6.24.1, babel-core@^6.26.0, babel-core@^6.7.2:
 
 babel-eslint@^8.2.1:
   version "8.2.6"
-  resolved "https://registry.npm.taobao.org/babel-eslint/download/babel-eslint-8.2.6.tgz?cache=0&sync_timestamp=1592843220988&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fbabel-eslint%2Fdownload%2Fbabel-eslint-8.2.6.tgz#6270d0c73205628067c0f7ae1693a9e797acefd9"
+  resolved "https://registry.npm.taobao.org/babel-eslint/download/babel-eslint-8.2.6.tgz#6270d0c73205628067c0f7ae1693a9e797acefd9"
   integrity sha1-YnDQxzIFYoBnwPeuFpOp55es79k=
   dependencies:
     "@babel/code-frame" "7.0.0-beta.44"
@@ -2426,7 +2426,7 @@ eslint-plugin-import@^2.8.0:
 
 eslint-plugin-jsx-a11y@^6.0.3:
   version "6.4.1"
-  resolved "https://registry.npm.taobao.org/eslint-plugin-jsx-a11y/download/eslint-plugin-jsx-a11y-6.4.1.tgz?cache=0&sync_timestamp=1603729445122&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Feslint-plugin-jsx-a11y%2Fdownload%2Feslint-plugin-jsx-a11y-6.4.1.tgz#a2d84caa49756942f42f1ffab9002436391718fd"
+  resolved "https://registry.npm.taobao.org/eslint-plugin-jsx-a11y/download/eslint-plugin-jsx-a11y-6.4.1.tgz#a2d84caa49756942f42f1ffab9002436391718fd"
   integrity sha1-othMqkl1aUL0Lx/6uQAkNjkXGP0=
   dependencies:
     "@babel/runtime" "^7.11.2"
@@ -2456,7 +2456,7 @@ eslint-plugin-react-native@^3.2.1:
 
 eslint-plugin-react@^7.5.1:
   version "7.21.5"
-  resolved "https://registry.npm.taobao.org/eslint-plugin-react/download/eslint-plugin-react-7.21.5.tgz?cache=0&sync_timestamp=1603161641645&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Feslint-plugin-react%2Fdownload%2Feslint-plugin-react-7.21.5.tgz#50b21a412b9574bfe05b21db176e8b7b3b15bff3"
+  resolved "https://registry.npm.taobao.org/eslint-plugin-react/download/eslint-plugin-react-7.21.5.tgz#50b21a412b9574bfe05b21db176e8b7b3b15bff3"
   integrity sha1-ULIaQSuVdL/gWyHbF26LezsVv/M=
   dependencies:
     array-includes "^3.1.1"
@@ -2499,7 +2499,7 @@ eslint-visitor-keys@^1.0.0:
 
 eslint@^4.15.0:
   version "4.19.1"
-  resolved "https://registry.npm.taobao.org/eslint/download/eslint-4.19.1.tgz?cache=0&sync_timestamp=1604714764157&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Feslint%2Fdownload%2Feslint-4.19.1.tgz#32d1d653e1d90408854bfb296f076ec7e186a300"
+  resolved "https://registry.npm.taobao.org/eslint/download/eslint-4.19.1.tgz#32d1d653e1d90408854bfb296f076ec7e186a300"
   integrity sha1-MtHWU+HZBAiFS/spbwdux+GGowA=
   dependencies:
     ajv "^5.3.0"
@@ -4285,12 +4285,12 @@ lodash.sortby@^4.7.0:
 
 lodash@^3.5.0:
   version "3.10.1"
-  resolved "https://registry.npm.taobao.org/lodash/download/lodash-3.10.1.tgz?cache=0&sync_timestamp=1597336082988&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flodash%2Fdownload%2Flodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
+  resolved "https://registry.npm.taobao.org/lodash/download/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
   integrity sha1-W/Rejkm6QYnhfUgnid/RW9FAt7Y=
 
 lodash@^4.16.6, lodash@^4.17.14, lodash@^4.17.19, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.0, lodash@^4.3.0, lodash@^4.6.1:
   version "4.17.20"
-  resolved "https://registry.npm.taobao.org/lodash/download/lodash-4.17.20.tgz?cache=0&sync_timestamp=1597336082988&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flodash%2Fdownload%2Flodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
+  resolved "https://registry.npm.taobao.org/lodash/download/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
   integrity sha1-tEqbYpe8tpjxxRo1RaKzs2jVnFI=
 
 loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.3.1, loose-envify@^1.4.0:
@@ -4541,7 +4541,7 @@ mkdirp@^0.5.1:
 
 moment@^2.20.1:
   version "2.29.1"
-  resolved "https://registry.npm.taobao.org/moment/download/moment-2.29.1.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fmoment%2Fdownload%2Fmoment-2.29.1.tgz#b2be769fa31940be9eeea6469c075e35006fa3d3"
+  resolved "https://registry.npm.taobao.org/moment/download/moment-2.29.1.tgz#b2be769fa31940be9eeea6469c075e35006fa3d3"
   integrity sha1-sr52n6MZQL6e7qZGnAdeNQBvo9M=
 
 morgan@~1.6.1:
@@ -5367,7 +5367,7 @@ react-redux@^5.0.7:
 
 react-test-renderer@^16.2.0:
   version "16.14.0"
-  resolved "https://registry.npm.taobao.org/react-test-renderer/download/react-test-renderer-16.14.0.tgz?cache=0&sync_timestamp=1603367571389&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-test-renderer%2Fdownload%2Freact-test-renderer-16.14.0.tgz#e98360087348e260c56d4fe2315e970480c228ae"
+  resolved "https://registry.npm.taobao.org/react-test-renderer/download/react-test-renderer-16.14.0.tgz#e98360087348e260c56d4fe2315e970480c228ae"
   integrity sha1-6YNgCHNI4mDFbU/iMV6XBIDCKK4=
   dependencies:
     object-assign "^4.1.1"
@@ -5390,7 +5390,7 @@ react-transform-hmr@^1.0.4:
 
 react@16.0.0:
   version "16.0.0"
-  resolved "https://registry.npm.taobao.org/react/download/react-16.0.0.tgz?cache=0&sync_timestamp=1603367627799&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact%2Fdownload%2Freact-16.0.0.tgz#ce7df8f1941b036f02b2cca9dbd0cb1f0e855e2d"
+  resolved "https://registry.npm.taobao.org/react/download/react-16.0.0.tgz#ce7df8f1941b036f02b2cca9dbd0cb1f0e855e2d"
   integrity sha1-zn348ZQbA28Cssyp29DLHw6FXi0=
   dependencies:
     fbjs "^0.8.16"
@@ -5791,7 +5791,7 @@ rxjs-compat@^6.3.1:
 
 rxjs@^6.3.1:
   version "6.6.3"
-  resolved "https://registry.npm.taobao.org/rxjs/download/rxjs-6.6.3.tgz?cache=0&sync_timestamp=1602770935624&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Frxjs%2Fdownload%2Frxjs-6.6.3.tgz#8ca84635c4daa900c0d3967a6ee7ac60271ee552"
+  resolved "https://registry.npm.taobao.org/rxjs/download/rxjs-6.6.3.tgz#8ca84635c4daa900c0d3967a6ee7ac60271ee552"
   integrity sha1-jKhGNcTaqQDA05Z6buesYCce5VI=
   dependencies:
     tslib "^1.9.0"
@@ -6525,12 +6525,12 @@ tunnel-agent@^0.6.0:
 
 tuya-panel-kit-types@^2.0.1-rc.0:
   version "2.0.1-rc.0"
-  resolved "https://registry.npm.taobao.org/tuya-panel-kit-types/download/tuya-panel-kit-types-2.0.1-rc.0.tgz?cache=0&sync_timestamp=1605064893371&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftuya-panel-kit-types%2Fdownload%2Ftuya-panel-kit-types-2.0.1-rc.0.tgz#5cd3fbc78fea3de0b830b754a2411d1a7ef3a315"
+  resolved "https://registry.npm.taobao.org/tuya-panel-kit-types/download/tuya-panel-kit-types-2.0.1-rc.0.tgz#5cd3fbc78fea3de0b830b754a2411d1a7ef3a315"
   integrity sha1-XNP7x4/qPeC4MLdUokEdGn7zoxU=
 
 "tuya-panel-kit@git://github.com/TuyaInc/tuya-panel-kit#develop_2.0":
   version "2.0.0-rc.7"
-  resolved "git://github.com/TuyaInc/tuya-panel-kit#3c6d901173382d1a22cb3b2cb6032e4726786d4c"
+  resolved "git://github.com/TuyaInc/tuya-panel-kit#39a79af69416fb4572d4bd10bba963c11f973605"
   dependencies:
     babel-cli "^6.26.0"
     color "^0.11.1"
