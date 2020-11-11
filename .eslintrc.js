@@ -46,6 +46,17 @@ module.exports = {
     'no-extra-bind': 1,
     'no-shadow': 1,
     'function-paren-newline': 0,
+    'no-bitwise': 1,
+    'no-restricted-properties': 1,
+    'no-param-reassign': 1,
+    eqeqeq: 1,
+    'prefer-spread': 1,
+    'no-useless-escape': 1,
+    'no-cond-assign': 1,
+    'no-restricted-globals': 1,
+    radix: 1,
+    'import/no-unresolved': 1,
+    'import/extensions': 1,
     'no-unused-vars': [
       1,
       {
@@ -95,13 +106,7 @@ module.exports = {
     'no-path-concat': 0,
     'handle-callback-err': 0,
     'no-empty': 0,
-    indent: [
-      2,
-      2,
-      {
-        SwitchCase: 1,
-      },
-    ],
+    indent: 0,
     camelcase: [
       1,
       {
@@ -198,7 +203,11 @@ module.exports = {
     'react/forbid-prop-types': ['error', { forbid: [] }],
     'react/no-multi-comp': 0,
     'react/no-unknown-property': 2,
-    'react/prop-types': 2,
+    'react/prop-types': 1,
+    'react/no-unused-prop-types': 1,
+    'react/default-props-match-prop-types': 1,
+    'react/no-array-index-key': 1,
+    'react/require-default-props': 1,
     'react/react-in-jsx-scope': 1,
     'react/self-closing-comp': 2,
     'react/jsx-wrap-multilines': [
