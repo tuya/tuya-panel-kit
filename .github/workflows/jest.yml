@@ -8,7 +8,7 @@ jobs:
       - name: Install modules
         run: yarn
       - name: Run Test
-        run: yarn test
+        run: yarn test --silent --runInBand
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
         with:
