@@ -1,6 +1,5 @@
 import NumberUtils from '../number';
 
-
 describe('NumberUtils toFixedString', () => {
   it('111, 5', () => {
     const result = NumberUtils.toFixedString(111, 5);
@@ -12,7 +11,6 @@ describe('NumberUtils toFixedString', () => {
     expect(result).toBe('22222');
   });
 });
-
 
 describe('NumberUtils toFilledString', () => {
   it('111, 5', () => {
@@ -31,7 +29,6 @@ describe('NumberUtils toFilledString', () => {
   });
 });
 
-
 describe('NumberUtils getBitValue', () => {
   it('111, 5', () => {
     // 1101111
@@ -45,7 +42,6 @@ describe('NumberUtils getBitValue', () => {
     expect(result).toBe(0);
   });
 });
-
 
 describe('NumberUtils changeBitValue', () => {
   it('changeBitValue 1234 7', () => {
@@ -68,7 +64,6 @@ describe('NumberUtils changeBitValue', () => {
   });
 });
 
-
 describe('NumberUtils setBitValueWithOne', () => {
   it('setBitValueWithOne 1234 7', () => {
     // 10011010010
@@ -76,7 +71,6 @@ describe('NumberUtils setBitValueWithOne', () => {
     const result = NumberUtils.setBitValueWithOne(1234, 7);
     expect(result).toBe(1234);
   });
-
 
   it('setBitValueWithOne 1234 22', () => {
     //             10011010010
@@ -86,7 +80,6 @@ describe('NumberUtils setBitValueWithOne', () => {
   });
 });
 
-
 describe('NumberUtils setBitValueWithZero', () => {
   it('setBitValueWithZero 1234 7', () => {
     // 10011010010
@@ -94,7 +87,6 @@ describe('NumberUtils setBitValueWithZero', () => {
     const result = NumberUtils.setBitValueWithZero(1234, 7);
     expect(result).toBe(1106);
   });
-
 
   it('setBitValueWithZero 1234 22', () => {
     //             10011010010
@@ -104,13 +96,11 @@ describe('NumberUtils setBitValueWithZero', () => {
   });
 });
 
-
 describe('NumberUtils bytesToHexString', () => {
   it('bytesToHexString 11 22', () => {
     const result = NumberUtils.bytesToHexString([11, 22]);
     expect(result).toBe('0b16');
   });
-
 
   it('bytesToHexString 234 22', () => {
     const result = NumberUtils.bytesToHexString([234, 22]);
@@ -118,13 +108,11 @@ describe('NumberUtils bytesToHexString', () => {
   });
 });
 
-
 describe('NumberUtils numToHexString', () => {
   it('numToHexString 11', () => {
     const result = NumberUtils.numToHexString(11);
     expect(result).toBe('0b');
   });
-
 
   it('numToHexString 234', () => {
     const result = NumberUtils.numToHexString(234);
@@ -132,13 +120,11 @@ describe('NumberUtils numToHexString', () => {
   });
 });
 
-
 describe('NumberUtils numToByteNumbers', () => {
   it('numToByteNumbers(123) = [0, 123]', () => {
     const result = NumberUtils.numToByteNumbers(123);
     expect(result).toEqual([0, 123]);
   });
-
 
   it('numToByteNumbers(1234567) = [18, 214, 135]', () => {
     // 18 * 256 * 256 + 214 * 256 + 135 = 1234567
@@ -147,20 +133,17 @@ describe('NumberUtils numToByteNumbers', () => {
   });
 });
 
-
 describe('NumberUtils highLowToInt', () => {
   it('highLowToInt(123, 45) = 31533', () => {
     const result = NumberUtils.highLowToInt(123, 45);
     expect(result).toEqual(31533);
   });
 
-
   it('highLowToInt(0, 89) = 89', () => {
     const result = NumberUtils.highLowToInt(0, 89);
     expect(result).toEqual(89);
   });
 });
-
 
 describe('NumberUtils intToHighLow', () => {
   it('intToHighLow(123) = [0, 123]', () => {
@@ -174,7 +157,6 @@ describe('NumberUtils intToHighLow', () => {
   });
 });
 
-
 describe('NumberUtils inMaxMin', () => {
   it('inMaxMin(1, -44, 22) = 1', () => {
     const result = NumberUtils.inMaxMin(1, -44, 22);
@@ -186,7 +168,6 @@ describe('NumberUtils inMaxMin', () => {
     expect(result).toEqual(55);
   });
 });
-
 
 describe('NumberUtils scaleNumber', () => {
   it('scaleNumber(2, 12345) = "123.45"', () => {
@@ -200,11 +181,61 @@ describe('NumberUtils scaleNumber', () => {
   });
 });
 
-
 describe('NumberUtils range', () => {
   it('range(0, 50) = [0,...,49]', () => {
     const result = NumberUtils.range(0, 50);
-    expect(result).toEqual([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]);
+    expect(result).toEqual([
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+    ]);
   });
 
   it('range(50, 3, -7) = [50, 43, 36, 29, 22, 15, 8]', () => {

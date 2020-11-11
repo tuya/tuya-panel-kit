@@ -12,6 +12,8 @@
   "author": "",
   "typings": "../tuya-panel-kit-types/index.d.ts",
   "scripts": {
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
+    "format": "prettier --write src/**/*/*.{js,jsx,ts,tsx}",
     "test": "jest -u",
     "prebuild": "rimraf lib/*",
     "build": "babel src --ignore __tests__ --out-dir lib --copy-files",

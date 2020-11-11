@@ -204,8 +204,8 @@ class FullView extends Component {
     const tipText = !appOnline
       ? Strings.getLang('appoffline')
       : !deviceOnline
-      ? Strings.getLang('offline')
-      : '';
+        ? Strings.getLang('offline')
+        : '';
 
     if (!show) {
       return null;

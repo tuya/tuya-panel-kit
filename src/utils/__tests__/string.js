@@ -1,6 +1,5 @@
 import StringUtil from '../string';
 
-
 describe('StringUtil hexStringToNumber', () => {
   it('StringUtil.hexStringToNumber("AD03") = [173, 3]', () => {
     const result = StringUtil.hexStringToNumber('AD03');
@@ -14,7 +13,6 @@ describe('StringUtil hexStringToNumber', () => {
   });
 });
 
-
 describe('StringUtil hexStringToBinString', () => {
   it('StringUtil.hexStringToBinString("AD03") = "1010110100000011"', () => {
     const result = StringUtil.hexStringToBinString('AD03');
@@ -24,10 +22,9 @@ describe('StringUtil hexStringToBinString', () => {
   it('StringUtil.hexStringToBinString("0fe9") = "0000111111101001"', () => {
     const result = StringUtil.hexStringToBinString('0fe9');
     expect(result).toEqual('0000111111101001');
-    expect(parseInt('0fe9', 16)).toEqual(parseInt('0000111111101001', 2));
+    expect(0x0fe9).toEqual(0b0000111111101001);
   });
 });
-
 
 describe('StringUtil strToHexString', () => {
   it('StringUtil.strToHexString("ababba0102hghg0011100") = "1010110100000011"', () => {
@@ -40,7 +37,6 @@ describe('StringUtil strToHexString', () => {
     expect(result).toEqual('398');
   });
 });
-
 
 describe('StringUtil camelize', () => {
   it('StringUtil.camelize("ababba0102hghg0011100") = "ababba0102hghg0011100"', () => {

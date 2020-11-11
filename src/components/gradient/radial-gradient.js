@@ -77,7 +77,9 @@ export default class RadialGradient extends Component {
 
   constructor(props) {
     super(props);
-    this._gradientId = Math.random().toString(36).substring(7);
+    this._gradientId = Math.random()
+      .toString(36)
+      .substring(7);
   }
 
   get gradientId() {
