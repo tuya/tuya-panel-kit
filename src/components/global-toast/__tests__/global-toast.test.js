@@ -1,7 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import GlobalToast from '../index';
-import { TYSdk } from '@tuya-rn/tuya-native-kit';
 
 describe('GlobalToast Component', () => {
   it('basic render', () => {

@@ -84,6 +84,7 @@ module.exports = {
         allowKeywords: true,
       },
     ],
+    'import/no-extraneous-dependencies': 0,
     'no-native-reassign': 1,
     'no-return-assign': 1,
     'no-constant-condition': 1,
@@ -239,7 +240,7 @@ module.exports = {
     'import/resolver': {
       'react-native': { platform: 'both' },
       node: {
-        extensions: ['.js', '.jsx', '.ios.js', '.android.js'],
+        extensions: ['.js', '.jsx', '.ios.js', '.android.js', '.ts', '.tsx'],
       },
     },
   },

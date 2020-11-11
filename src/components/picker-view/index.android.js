@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { StyleSheet, ViewPropTypes, ColorPropType } from 'react-native';
-import Picker from './picker';
+import Picker from './picker/index.android';
 import { ThemeUtils } from '../../utils';
 
 const { getTheme, ThemeConsumer } = ThemeUtils;
