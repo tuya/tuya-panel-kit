@@ -1,7 +1,7 @@
 # Tuya Panel Kit
 
 ![npm package](https://img.shields.io/npm/v/tuya-panel-kit/latest.svg)
-![codecov](https://codecov.io/gh/TuyaInc/tuya-panel-kit/branch/develop_2.0/graph/badge.svg)
+[![codecov](https://codecov.io/gh/TuyaInc/tuya-panel-kit/branch/develop_2.0/graph/badge.svg)](https://codecov.io/gh/TuyaInc/tuya-panel-kit)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?maxAge=2592000)](http://commitizen.github.io/cz-cli/) 
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-brightgreen.svg?maxAge=2592000)](https://conventionalcommits.org)
 ![Lint Code](https://github.com/TuyaInc/tuya-panel-kit/workflows/Lint%20Code/badge.svg)
