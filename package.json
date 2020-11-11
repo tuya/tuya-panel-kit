@@ -14,7 +14,7 @@
   "scripts": {
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
     "format": "prettier --write src/**/*/*.{js,jsx,ts,tsx}",
-    "test": "jest -u",
+    "test": "NODE_ENV=testing TZ=UTC jest -u",
     "prebuild": "rimraf lib/*",
     "build": "babel src --ignore __tests__ --out-dir lib --copy-files",
     "dev": "babel src --watch --ignore __tests__ --out-dir lib --copy-files",
@@ -35,7 +35,7 @@
   },
   "peerDependencies": {
     "react": "^16.14.0",
-    "react-native": "^0.59.10"
+    "react-native": "^0.51.0"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
@@ -60,6 +60,9 @@
     "commitizen": "^3.0.7",
     "coveralls": "^3.0.2",
     "cz-customizable": "^5.5.3",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "enzyme-to-json": "^3.6.1",
     "eslint": "^4.15.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^4.1.0",
@@ -75,9 +78,10 @@
     "lint-staged": "^8.1.5",
     "prettier": "^1.16.4",
     "prop-types": "^15.6.1",
-    "react": "16.0.0",
+    "react": "^16.14.0",
     "react-docgen": "^2.21.0",
-    "react-native": "0.59.10",
+    "react-native": "^0.51.1",
+    "react-native-mock-render": "^0.1.9",
     "react-test-renderer": "^16.6.3",
     "standard-version": "^5.0.2"
   },
@@ -98,32 +102,5 @@
       "eslint --fix",
       "git add"
     ]
-  },
-  "jest": {
-    "preset": "react-native",
-    "verbose": true,
-    "moduleNameMapper": {
-      "^image![a-zA-Z0-9$_-]+$": "GlobalImageStub",
-      "^[@./a-zA-Z0-9$_-]+\\.(png|gif)$": "RelativeImageStub"
-    },
-    "coverageDirectory": "./coverage/",
-    "collectCoverageFrom": [
-      "src/components/**/*.js",
-      "!src/components/layout/+(navigator-layout|full-view|offline-view)/*",
-      "!src/components/picker-view/picker/*",
-      "!src/components/color-picker/components/gesture.js",
-      "src/utils/**/*.js",
-      "!src/utils/color.js",
-      "!src/index.js",
-      "!src/helpers/*.js"
-    ],
-    "modulePathIgnorePatterns": [
-      "<rootDir>/example/node_modules",
-      "<rootDir>/demos"
-    ],
-    "collectCoverage": true,
-    "globals": {
-      "__DEV__": true
-    }
   }
 }

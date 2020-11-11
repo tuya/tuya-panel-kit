@@ -60,6 +60,11 @@ describe('Picker Component', () => {
       .at(2)
       .props()
       .onValueChange({ nativeEvent: { newIndex: 0 } });
+    const target2 = android.findWhere(c => !!c.prop('onChange'));
+    target2
+      .at(0)
+      .props()
+      .onChange({ nativeEvent: { newIndex: 0 } });
   });
   it('trigger web events', () => {
     const web = mount(
@@ -71,7 +76,10 @@ describe('Picker Component', () => {
       </ThemeProvider>
     );
     const target = web.findWhere(c => !!c.prop('onValueChange'));
-    target.at(0).props().onValueChange('tuya');
+    target
+      .at(0)
+      .props()
+      .onValueChange('tuya');
     const web1 = mount(
       <ThemeProvider>
         <PickerWeb>
@@ -81,7 +89,10 @@ describe('Picker Component', () => {
       </ThemeProvider>
     );
     const target1 = web1.findWhere(c => !!c.prop('onValueChange'));
-    target1.at(0).props().onValueChange('tuya');
+    target1
+      .at(0)
+      .props()
+      .onValueChange('tuya');
   });
   it('basic render', () => {
     const ios = renderer

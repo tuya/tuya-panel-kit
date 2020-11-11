@@ -34,7 +34,27 @@ exports[`Picker Component basic render 1`] = `
 `;
 
 exports[`Picker Component basic render 2`] = `
-<View
+<TYRCTWheelViewManager
+  accessibilityLabel="PickerView"
+  dividerColor="#cccccc"
+  itemAlign="center"
+  itemTextColor="#cccccc"
+  items={
+    Array [
+      Object {
+        "label": "Java",
+        "value": "java",
+      },
+      Object {
+        "label": "JavaScript",
+        "value": "js",
+      },
+    ]
+  }
+  loop={false}
+  onChange={[Function]}
+  selectedIndex={0}
+  selectedItemTextColor="black"
   style={
     Array [
       Object {
@@ -43,23 +63,9 @@ exports[`Picker Component basic render 2`] = `
       undefined,
     ]
   }
->
-  <RCTPicker
-    items={Array []}
-    onChange={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    selectedIndex={0}
-    style={
-      Array [
-        Object {
-          "height": 216,
-        },
-        undefined,
-      ]
-    }
-  />
-</View>
+  textSize={20}
+  visibleItemCount={8}
+/>
 `;
 
 exports[`Picker Component basic render 3`] = `
@@ -98,7 +104,27 @@ exports[`Picker Component basic render 3`] = `
 exports[`Picker Component should picker android item render 1`] = `null`;
 
 exports[`Picker Component should picker android value change 1`] = `
-<View
+<TYRCTWheelViewManager
+  accessibilityLabel="PickerView"
+  dividerColor="#cccccc"
+  itemAlign="center"
+  itemTextColor="#cccccc"
+  items={
+    Array [
+      Object {
+        "label": "Java",
+        "value": "java",
+      },
+      Object {
+        "label": "JavaScript",
+        "value": "js",
+      },
+    ]
+  }
+  loop={true}
+  onChange={[Function]}
+  selectedIndex={0}
+  selectedItemTextColor="black"
   style={
     Array [
       Object {
@@ -107,27 +133,33 @@ exports[`Picker Component should picker android value change 1`] = `
       undefined,
     ]
   }
->
-  <RCTPicker
-    items={Array []}
-    onChange={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    selectedIndex={0}
-    style={
-      Array [
-        Object {
-          "height": 216,
-        },
-        undefined,
-      ]
-    }
-  />
-</View>
+  textSize={20}
+  visibleItemCount={8}
+/>
 `;
 
 exports[`Picker Component should picker android value change 2`] = `
-<View
+<TYRCTWheelViewManager
+  accessibilityLabel="PickerView"
+  dividerColor="#cccccc"
+  itemAlign="center"
+  itemTextColor="#cccccc"
+  items={
+    Array [
+      Object {
+        "label": "Java",
+        "value": "java",
+      },
+      Object {
+        "label": "JavaScript",
+        "value": "js",
+      },
+    ]
+  }
+  loop={true}
+  onChange={[Function]}
+  selectedIndex={1}
+  selectedItemTextColor="black"
   style={
     Array [
       Object {
@@ -136,23 +168,9 @@ exports[`Picker Component should picker android value change 2`] = `
       undefined,
     ]
   }
->
-  <RCTPicker
-    items={Array []}
-    onChange={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    selectedIndex={0}
-    style={
-      Array [
-        Object {
-          "height": 216,
-        },
-        undefined,
-      ]
-    }
-  />
-</View>
+  textSize={20}
+  visibleItemCount={8}
+/>
 `;
 
 exports[`Picker Component should picker ios item render 1`] = `null`;

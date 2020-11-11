@@ -5,6 +5,7 @@ exports[`ToastView Component basic render 1`] = `
   pointerEvents="none"
   style={
     Array [
+      false,
       Object {
         "alignItems": "center",
         "bottom": 0,
@@ -13,8 +14,8 @@ exports[`ToastView Component basic render 1`] = `
         "position": "absolute",
         "right": 0,
         "top": 0,
-        "width": 750,
       },
+      null,
       Object {
         "justifyContent": "flex-end",
       },
@@ -22,17 +23,16 @@ exports[`ToastView Component basic render 1`] = `
   }
 >
   <View
-    collapsable={undefined}
     style={
       Object {
+        "alignItems": "center",
         "backgroundColor": "rgba(0, 0, 0, 0.6)",
         "borderRadius": 20,
+        "justifyContent": "center",
         "marginBottom": 64,
         "opacity": 0,
-        "paddingBottom": 10,
-        "paddingLeft": 24,
-        "paddingRight": 24,
-        "paddingTop": 10,
+        "paddingHorizontal": 24,
+        "paddingVertical": 10,
       }
     }
   >
@@ -41,10 +41,15 @@ exports[`ToastView Component basic render 1`] = `
       allowFontScaling={true}
       ellipsizeMode="tail"
       style={
-        Object {
-          "color": "#FFFFFF",
-          "fontSize": 16,
-        }
+        Array [
+          Object {
+            "color": "#FFFFFF",
+            "flexWrap": "wrap",
+            "fontSize": 14,
+            "textAlign": "center",
+          },
+          null,
+        ]
       }
     >
       I'm Iron man
@@ -58,6 +63,7 @@ exports[`ToastView Component should render invisible 1`] = `
   pointerEvents="none"
   style={
     Array [
+      false,
       Object {
         "alignItems": "center",
         "bottom": 0,
@@ -66,8 +72,8 @@ exports[`ToastView Component should render invisible 1`] = `
         "position": "absolute",
         "right": 0,
         "top": 0,
-        "width": 750,
       },
+      null,
       Object {
         "justifyContent": "flex-end",
       },
@@ -75,32 +81,19 @@ exports[`ToastView Component should render invisible 1`] = `
   }
 >
   <View
-    collapsable={undefined}
     style={
       Object {
+        "alignItems": "center",
         "backgroundColor": "rgba(0, 0, 0, 0.6)",
         "borderRadius": 20,
+        "justifyContent": "center",
         "marginBottom": 64,
         "opacity": 0,
-        "paddingBottom": 10,
-        "paddingLeft": 24,
-        "paddingRight": 24,
-        "paddingTop": 10,
+        "paddingHorizontal": 24,
+        "paddingVertical": 10,
       }
     }
-  >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Object {
-          "color": "#FFFFFF",
-          "fontSize": 16,
-        }
-      }
-    />
-  </View>
+  />
 </View>
 `;
 
@@ -109,6 +102,7 @@ exports[`ToastView Component should render position right 1`] = `
   pointerEvents="none"
   style={
     Array [
+      false,
       Object {
         "alignItems": "center",
         "bottom": 0,
@@ -117,8 +111,8 @@ exports[`ToastView Component should render position right 1`] = `
         "position": "absolute",
         "right": 0,
         "top": 0,
-        "width": 750,
       },
+      null,
       Object {
         "justifyContent": "flex-start",
       },
@@ -126,17 +120,16 @@ exports[`ToastView Component should render position right 1`] = `
   }
 >
   <View
-    collapsable={undefined}
     style={
       Object {
+        "alignItems": "center",
         "backgroundColor": "rgba(0, 0, 0, 0.6)",
         "borderRadius": 20,
+        "justifyContent": "center",
         "marginBottom": 64,
         "opacity": 0,
-        "paddingBottom": 10,
-        "paddingLeft": 24,
-        "paddingRight": 24,
-        "paddingTop": 10,
+        "paddingHorizontal": 24,
+        "paddingVertical": 10,
       }
     }
   >
@@ -145,10 +138,15 @@ exports[`ToastView Component should render position right 1`] = `
       allowFontScaling={true}
       ellipsizeMode="tail"
       style={
-        Object {
-          "color": "#FFFFFF",
-          "fontSize": 16,
-        }
+        Array [
+          Object {
+            "color": "#FFFFFF",
+            "flexWrap": "wrap",
+            "fontSize": 14,
+            "textAlign": "center",
+          },
+          null,
+        ]
       }
     >
       I'm Iron man
@@ -162,6 +160,7 @@ exports[`ToastView Component should render position right 2`] = `
   pointerEvents="none"
   style={
     Array [
+      false,
       Object {
         "alignItems": "center",
         "bottom": 0,
@@ -170,8 +169,8 @@ exports[`ToastView Component should render position right 2`] = `
         "position": "absolute",
         "right": 0,
         "top": 0,
-        "width": 750,
       },
+      null,
       Object {
         "justifyContent": "flex-end",
       },
@@ -179,17 +178,16 @@ exports[`ToastView Component should render position right 2`] = `
   }
 >
   <View
-    collapsable={undefined}
     style={
       Object {
+        "alignItems": "center",
         "backgroundColor": "rgba(0, 0, 0, 0.6)",
         "borderRadius": 20,
+        "justifyContent": "center",
         "marginBottom": 64,
         "opacity": 0,
-        "paddingBottom": 10,
-        "paddingLeft": 24,
-        "paddingRight": 24,
-        "paddingTop": 10,
+        "paddingHorizontal": 24,
+        "paddingVertical": 10,
       }
     }
   >
@@ -198,10 +196,15 @@ exports[`ToastView Component should render position right 2`] = `
       allowFontScaling={true}
       ellipsizeMode="tail"
       style={
-        Object {
-          "color": "#FFFFFF",
-          "fontSize": 16,
-        }
+        Array [
+          Object {
+            "color": "#FFFFFF",
+            "flexWrap": "wrap",
+            "fontSize": 14,
+            "textAlign": "center",
+          },
+          null,
+        ]
       }
     >
       I'm Iron man
@@ -215,6 +218,7 @@ exports[`ToastView Component should render position right 3`] = `
   pointerEvents="none"
   style={
     Array [
+      false,
       Object {
         "alignItems": "center",
         "bottom": 0,
@@ -223,8 +227,8 @@ exports[`ToastView Component should render position right 3`] = `
         "position": "absolute",
         "right": 0,
         "top": 0,
-        "width": 750,
       },
+      null,
       Object {
         "justifyContent": "center",
       },
@@ -232,17 +236,16 @@ exports[`ToastView Component should render position right 3`] = `
   }
 >
   <View
-    collapsable={undefined}
     style={
       Object {
+        "alignItems": "center",
         "backgroundColor": "rgba(0, 0, 0, 0.6)",
         "borderRadius": 20,
+        "justifyContent": "center",
         "marginBottom": 64,
         "opacity": 0,
-        "paddingBottom": 10,
-        "paddingLeft": 24,
-        "paddingRight": 24,
-        "paddingTop": 10,
+        "paddingHorizontal": 24,
+        "paddingVertical": 10,
       }
     }
   >
@@ -251,10 +254,15 @@ exports[`ToastView Component should render position right 3`] = `
       allowFontScaling={true}
       ellipsizeMode="tail"
       style={
-        Object {
-          "color": "#FFFFFF",
-          "fontSize": 16,
-        }
+        Array [
+          Object {
+            "color": "#FFFFFF",
+            "flexWrap": "wrap",
+            "fontSize": 14,
+            "textAlign": "center",
+          },
+          null,
+        ]
       }
     >
       I'm Iron man
