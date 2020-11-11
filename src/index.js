@@ -1,6 +1,6 @@
 import * as Utils from './utils';
 
-// 默认主题配置变量
+// 默认主题配置变量.
 export { default as defaultTheme } from './components/theme/base';
 
 // 主题配置Provider组件
