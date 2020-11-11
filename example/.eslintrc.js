@@ -5,6 +5,8 @@ module.exports = {
     'import/no-unresolved': [2, { ignore: ['.png$', '.webp$', '.jpg$'] }],
   },
   rules: {
-    'import/no-extraneous-dependencies': 'off',
+    'import/no-extraneous-dependencies': 0,
+    'react/prefer-stateless-function': 0,
+    'react/jsx-filename-extension': 0,
   },
 };
