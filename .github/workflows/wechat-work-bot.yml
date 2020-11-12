@@ -1,0 +1,16 @@
+name: Send notification on push
+on: [push,pull_request]
+
+jobs:
+  send-msg:
+    runs-on: ubuntu-latest
+    steps:
+      - name: WeChat Work notification by text
+        uses: chf007/action-wechat-work@master
+        env:
+          WECHAT_WORK_BOT_WEBHOOK: ${{secrets.WECHAT_WORK_BOT_WEBHOOK}}
+        with:
+          msgtype: markdown
+          if: github.event_name == 'push'
+          content: "${{github.event.pusher.name}} pushed ${{github.event.commits.length}} [commits](${{github.event.compare}}) to ${{github.repository}}#${{github.ref}}"
+          mentioned_list: '["@all"]'
