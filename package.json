@@ -14,11 +14,10 @@
   "scripts": {
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
     "format": "prettier --write src/**/*/*.{js,jsx,ts,tsx}",
-    "test": "NODE_ENV=testing TZ=UTC jest -u",
     "prebuild": "rimraf lib/*",
     "build": "babel src --ignore __tests__ --out-dir lib --copy-files",
     "dev": "babel src --watch --ignore __tests__ --out-dir lib --copy-files",
-    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
+    "test": "NODE_ENV=testing TZ=UTC jest -u",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "commit": "git-cz",
@@ -35,7 +34,7 @@
   },
   "peerDependencies": {
     "react": "^16.14.0",
-    "react-native": "^0.51.0"
+    "react-native": "^0.59.10"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
