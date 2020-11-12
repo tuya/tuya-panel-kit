@@ -10,7 +10,9 @@
 
 A component library for developing [Tuya](https://www.tuya.com) panels.
 
-## 安装
+## Get Started
+
+### Install
 
 ```shell
 $ npm install tuya-panel-kit
@@ -19,3 +21,19 @@ $ npm install tuya-panel-kit
 
 $ yarn add tuya-panel-kit
 ```
+
+### Usage
+
+```tsx
+import { Button } from 'tuya-panel-kit';
+
+<Button />;
+```
+
+## Documentation
+
+[View the full docs here](https://developer.tuya.com/cn/docs/iot/panel-development/panel-sdk-development/components/brickbutton/brickbutton?id=K97rcbc1lkl0f)
+
+## Contributing
+
+Interested in contributing to this repo? Check out our [Contributing Guide](./.github/CONTRIBUTING.MD) and submit a PR for a new feature/bug fix.
