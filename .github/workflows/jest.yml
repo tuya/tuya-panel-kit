@@ -1,4 +1,4 @@
-name: Upload coverage to Codecov & Coveralls
+name: Upload coverage to Codecov
 on: push
 jobs:
   build:
