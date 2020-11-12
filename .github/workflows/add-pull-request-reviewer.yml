@@ -1,0 +1,12 @@
+name: "Reviewer lottery"
+on:
+  pull_request:
+    types: [opened, ready_for_review, reopened]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: AveryCameronUofR/add-reviewer-gh-action@1.0.3
+        with:
+          reviewers: "youngjuning,ShinyLeee"
+          token: ${{ secrets.GITHUB_TOKEN }}
