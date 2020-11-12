@@ -16,6 +16,7 @@ module.exports = {
       'xmlbuilder',
       'simple-plist',
       'hoist-non-react-statics',
+      'color',
     ];
   },
   getBlacklistRE() {
