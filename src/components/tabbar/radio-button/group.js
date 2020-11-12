@@ -54,6 +54,7 @@ class Group extends React.PureComponent {
       activeLeft: new Animated.Value(0),
       activeIndex,
       activeViewHidden: true,
+      wrapperWidth: 0,
     };
     this.containerSize = null;
     this.wrapperSize = null;
