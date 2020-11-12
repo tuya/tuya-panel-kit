@@ -13,9 +13,9 @@ A component library for developing [Tuya](https://www.tuya.com) panels.
 ## 安装
 
 ```shell
-npm install tuya-panel-kit
+$ npm install tuya-panel-kit
 
-or
+# or
 
-yarn add tuya-panel-kit
+$ yarn add tuya-panel-kit
 ```
