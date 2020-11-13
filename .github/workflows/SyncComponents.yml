@@ -19,11 +19,3 @@ jobs:
         pr_assignee: "ShinyLeee,youngjuning"
         pr_allow_empty: true
         github_token: ${{ secrets.GITHUB_TOKEN }}
-    - name: WeChat Work notification by markdown
-      uses: chf007/action-wechat-work@master
-      env:
-        WECHAT_WORK_BOT_WEBHOOK: ${{secrets.WECHAT_WORK_BOT_WEBHOOK}}
-      with:
-        msgtype: markdown
-        content: "【${{github.repository}}】Pulling ${{ github.ref }} into develop_2.0"
-        mentioned_list: '["@all"]'
