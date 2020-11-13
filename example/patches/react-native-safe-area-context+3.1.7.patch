@@ -1,0 +1,25 @@
+diff --git a/node_modules/react-native-safe-area-context/lib/commonjs/InitialWindow.native.js b/node_modules/react-native-safe-area-context/lib/commonjs/InitialWindow.native.js
+index 56009bc..092af92 100644
+--- a/node_modules/react-native-safe-area-context/lib/commonjs/InitialWindow.native.js
++++ b/node_modules/react-native-safe-area-context/lib/commonjs/InitialWindow.native.js
+@@ -7,7 +7,7 @@ exports.initialWindowSafeAreaInsets = exports.initialWindowMetrics = void 0;
+ 
+ var _reactNative = require("react-native");
+ 
+-const RNCSafeAreaProviderConfig = _reactNative.UIManager.getViewManagerConfig('RNCSafeAreaProvider');
++const RNCSafeAreaProviderConfig = _reactNative.UIManager['RNCSafeAreaProvider'];
+ 
+ const initialWindowMetrics = RNCSafeAreaProviderConfig != null && RNCSafeAreaProviderConfig.Constants != null ? RNCSafeAreaProviderConfig.Constants.initialWindowMetrics : null;
+ /**
+diff --git a/node_modules/react-native-safe-area-context/package.json b/node_modules/react-native-safe-area-context/package.json
+index 686b9f2..94f5ccb 100644
+--- a/node_modules/react-native-safe-area-context/package.json
++++ b/node_modules/react-native-safe-area-context/package.json
+@@ -4,7 +4,6 @@
+   "description": "A flexible way to handle safe area, also works on Android and web.",
+   "main": "lib/commonjs/index.js",
+   "module": "lib/module/index.js",
+-  "react-native": "src/index.tsx",
+   "types": "lib/typescript/src/index.d.ts",
+   "sideEffects": false,
+   "files": [
