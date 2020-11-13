@@ -11,7 +11,7 @@
 <a name="da441097"></a>
 ## 代码演示
 
-> 详细demo可参考[此处](https://github.com/TuyaInc/tuya-panel-kit/tree/develop_2.0/example/src/scenes)
+> 详细demo可参考[此处](https://github.com/TuyaInc/tuya-panel-kit/tree/master/example/src/scenes)
 
 <a name="da45c664"></a>
 ### 警告框
@@ -231,4 +231,3 @@ Dialog.custom({
 ### Dialog.close
 
 **关闭当前存在的对话框**
-

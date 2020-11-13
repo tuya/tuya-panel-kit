@@ -8,7 +8,7 @@
 <a name="480c216f"></a>
 ## 代码演示
 
-> 详细demo可参考[此处](https://github.com/TuyaInc/tuya-panel-kit/tree/develop_2.0/example/src/scenes)
+> 详细demo可参考[此处](https://github.com/TuyaInc/tuya-panel-kit/tree/master/example/src/scenes)
 
 **注：轮播组件必须给组件设置高度可以通过给父组件添加 onLayout={e => this._onLayout(e)} 获取父元素高度，通过变量设置轮播组件的高度，进行自适应**
 

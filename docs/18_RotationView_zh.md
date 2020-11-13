@@ -8,7 +8,7 @@
 <a name="da441097"></a>
 ## 代码演示
 
-> 详细demo可参考[此处](https://github.com/TuyaInc/tuya-panel-kit/tree/develop_2.0/example/src/scenes)
+> 详细demo可参考[此处](https://github.com/TuyaInc/tuya-panel-kit/tree/master/example/src/scenes)
 
 <a name="50538bb4"></a>
 ### 基础使用
@@ -79,5 +79,3 @@ import { RotationView } from 'tuya-panel-kit';
 | 类型(Type) | 必传(Required) |
 | :---: | :---: |
 | `PropTypes.node` | 否 |
-
-

@@ -1,6 +1,6 @@
 # Triggered when code is pushed to any branch in a repository
 name: Sync Components
-on: 
+on:
   push:
     branches:
       - components
@@ -12,8 +12,8 @@ jobs:
     - name: pull-request
       uses: repo-sync/pull-request@v2
       with:
-        destination_branch: "develop_2.0"
-        pr_title: "Pulling ${{ github.ref }} into develop_2.0"
+        destination_branch: "master"
+        pr_title: "Pulling ${{ github.ref }} into master"
         pr_body: ":crown: *An automated PR*"
         pr_reviewer: "ShinyLeee,youngjuning"
         pr_assignee: "ShinyLeee,youngjuning"

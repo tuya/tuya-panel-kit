@@ -42,7 +42,7 @@
     "rxjs-compat": "^6.3.1",
     "style-equal": "^1.0.0",
     "styled-components": "^3.4.10",
-    "tuya-panel-kit": "git://github.com/TuyaInc/tuya-panel-kit#develop_2.0"
+    "tuya-panel-kit": "git://github.com/TuyaInc/tuya-panel-kit"
   },
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.8.3",

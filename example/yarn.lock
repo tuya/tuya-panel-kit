@@ -7011,7 +7011,7 @@ tuya-panel-kit-types@^2.0.1-rc.0:
   resolved "https://registry.npm.taobao.org/tuya-panel-kit-types/download/tuya-panel-kit-types-2.0.1-rc.1.tgz#329c49bfdd565655fd96b637567e3011dfae3496"
   integrity sha1-MpxJv91WVlX9lrY3Vn4wEd+uNJY=
 
-"tuya-panel-kit@git://github.com/TuyaInc/tuya-panel-kit#develop_2.0":
+"tuya-panel-kit@git://github.com/TuyaInc/tuya-panel-kit":
   version "2.0.0-rc.7"
   resolved "git://github.com/TuyaInc/tuya-panel-kit#135b6ed1959bc54e4feda320d16c29138e373d8a"
   dependencies:

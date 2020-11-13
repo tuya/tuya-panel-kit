@@ -11,7 +11,7 @@ Tabs标签栏通过纯手势编写，解决了之前ScrollView实现导致的互
 <a name="da441097"></a>
 ## 代码演示
 
-> 详细demo可参考[此处](https://github.com/TuyaInc/tuya-panel-kit/tree/develop_2.0/example/src/scenes)
+> 详细demo可参考[此处](https://github.com/TuyaInc/tuya-panel-kit/tree/master/example/src/scenes)
 
 <a name="77c3b6b8"></a>
 ### 基础Tabs
@@ -732,4 +732,3 @@ interface IAnimationConfig {
   useNativeDriver: true,
 }
 ```
-

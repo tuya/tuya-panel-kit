@@ -8,7 +8,7 @@
 <a name="3sQyU"></a>
 ## 代码演示
 
-> 详细demo可参考[此处](https://github.com/TuyaInc/tuya-panel-kit/tree/develop_2.0/example/src/scenes)
+> 详细demo可参考[此处](https://github.com/TuyaInc/tuya-panel-kit/tree/master/example/src/scenes)
 
 ```jsx
 import { BrickButton } from 'tuya-panel-kit';
@@ -174,4 +174,3 @@ loading外边框粗细:
 | 类型(Type) | 必传(Required) | 默认值 |
 | :---: | :---: | :---: |
 | object | 否 | `{      x1: '0%',      y1: '0%',      x2: '0%',      y2: '100%',      stops: {        '0%': 'red',        '30%': 'blue',        '100%': 'yellow',      },    }` |
-

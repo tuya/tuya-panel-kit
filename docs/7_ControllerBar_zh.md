@@ -12,7 +12,7 @@ ControllerBar.Group是控制栏的集合
 <a name="da441097"></a>
 ## 代码演示
 
-> 详细demo可参考[此处](https://github.com/TuyaInc/tuya-panel-kit/tree/develop_2.0/example/src/scenes)
+> 详细demo可参考[此处](https://github.com/TuyaInc/tuya-panel-kit/tree/master/example/src/scenes)
 
 <a name="ControllerBar"></a>
 ### ControllerBar
@@ -243,5 +243,3 @@ type为swiper时，swiper的配置
 | 类型(Type) | 必传(Required) | 默认值 |
 | :---: | :---: | :---: |
 | `node` | 是 | 无 |
-
-
