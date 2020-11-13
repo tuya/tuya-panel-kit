@@ -231,7 +231,7 @@ class TabBar extends React.Component {
     newScrollX -= (containerWidth - (1 - offset) * tabWidth - offset * nextTabWidth) / 2;
     newScrollX = newScrollX >= 0 ? newScrollX : 0;
     if (Platform.OS === 'android') {
-      this.scrollView.scrollTo({ x: newScrollX, y: 0, animated: true });
+      this.scrollView && this.scrollView.scrollTo({ x: newScrollX, y: 0, animated: true });
     } else {
       // eslint-disable-next-line max-len
       const rightBoundScroll = Math.max(
@@ -239,7 +239,7 @@ class TabBar extends React.Component {
         0
       );
       newScrollX = newScrollX > rightBoundScroll ? rightBoundScroll : newScrollX;
-      this.scrollView.scrollTo({ x: newScrollX, y: 0, animated: true });
+      this.scrollView && this.scrollView.scrollTo({ x: newScrollX, y: 0, animated: true });
     }
   };
 
