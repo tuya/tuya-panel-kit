@@ -7,6 +7,18 @@ function dataProducers(router) {
     key: id,
     title: id,
     arrow: true,
+    styles: {
+      container: {
+        backgroundColor: '#f5f5f5',
+        marginHorizontal: 24,
+        borderRadius: 8,
+        marginBottom: 8,
+      },
+      content: {
+        paddingTop: 19,
+        paddingBottom: 19,
+      },
+    },
     onPress: () =>
       TYSdk.Navigator.push({
         id,
