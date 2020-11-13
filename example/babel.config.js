@@ -7,7 +7,12 @@ module.exports = {
       {
         root: ['./'],
         alias: {
-          'tuya-panel-kit': '../',
+          'tuya-panel-kit/src/components/iconfont/svg/defaultSvg':
+            '../src/components/iconfont/svg/defaultSvg',
+          'tuya-panel-kit/src/components/iconfont/art/defaultSvg':
+            '../src/components/iconfont/art/defaultSvg',
+          'tuya-panel-kit/src/components/dialog/alert': '../src/components/dialog/alert',
+          'tuya-panel-kit': '../src/index',
         },
       },
     ],
