@@ -1,10 +1,6 @@
-<p align="center"><img src="https://images.tuyacn.com/rms-static/41166c90-1d06-11eb-808c-95024895fa97-1604319826393.png?tyName=logo.png" width="20%" height="20%" /></p>
+<p align="center"><img src="https://images.tuyacn.com/rms-static/dc225080-25a5-11eb-8913-b53cc9e03c9c-1605267985800.png?tyName=tuya.png" width="50%" height="50%" /></p>
 
-
-<h2 align="center">tuya-panel-kit</h2>
-
-
-<p align="center">轻量、可靠的 React Native 基础组件库，主要用于面板 Sdk 的快速开发。</p>
+<p align="center">高效、统一、可视化</p>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/tuya-panel-kit" target="_blank">
@@ -31,11 +27,9 @@
 
 - 深入每个细节的主题定制能力
 
-- 支持线上编辑实时预览
-
 - 支持 TS，提供完整的类型定义文件
 
-- 单元测试覆盖率 90%
+- 单元测试覆盖率 90% +
 
 ## 预览
 
