@@ -11,10 +11,6 @@
 ![codecov](https://codecov.io/gh/TuyaInc/tuya-panel-kit/branch/develop_2.0/graph/badge.svg)
 ![Lint Code](https://github.com/TuyaInc/tuya-panel-kit/workflows/Lint%20Code/badge.svg)
 
-## 版本
-
-&nbsp;&nbsp;[2.0.0-rc.7](https://github.com/TuyaInc/tuya-panel-kit/tree/v2.0.0-rc.7)
-
 ## 特性
 
 - 30+ 开箱即用的高质量组件
