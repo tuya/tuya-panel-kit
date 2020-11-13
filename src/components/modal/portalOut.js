@@ -87,8 +87,12 @@ class PortalOut extends React.Component {
       Object.keys(this.node || {}).length > 0
         ? uuidList.map((key, idx) => {
             activeIdx = idx;
-            const { node } = this.node[`${key}`];
-            return React.isValidElement(node) ? React.cloneElement(node, { key }) : node;
+            const node = this.node[`${key}`] && this.node[`${key}`].node;
+            return node === undefined
+              ? []
+              : React.isValidElement(node)
+              ? React.cloneElement(node, { key })
+              : node;
           })
         : [];
     return (
