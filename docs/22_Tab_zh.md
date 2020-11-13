@@ -8,7 +8,7 @@
 <a name="da441097"></a>
 ## 代码演示
 
-> 详细demo可参考[此处](https://github.com/TuyaInc/tuya-panel-kit/tree/develop_2.0/example/src/scenes)
+> 详细demo可参考[此处](https://github.com/TuyaInc/tuya-panel-kit/tree/master/example/src/scenes)
 
 ```jsx
 import React from 'react';
@@ -286,6 +286,3 @@ tab上文字或者自定义的元素
 | 类型(Type) | 必传(Required) |
 | :---: | :---: |
 | `'string' | React.ReactNode` | 否 |
-
-
-

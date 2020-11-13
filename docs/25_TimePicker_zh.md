@@ -8,7 +8,7 @@
 <a name="da441097"></a>
 ## 代码演示
 
-> 详细demo可参考[此处](https://github.com/TuyaInc/tuya-panel-kit/tree/develop_2.0/example/src/scenes)
+> 详细demo可参考[此处](https://github.com/TuyaInc/tuya-panel-kit/tree/master/example/src/scenes)
 
 <a name="a7ac592d"></a>
 ### 基础使用
@@ -161,5 +161,3 @@ picker是否支持手势
 | 类型(Type) | 必传(Required) |
 | :---: | :---: |
 | (startTime, endTime) => void | 否 |
-
-

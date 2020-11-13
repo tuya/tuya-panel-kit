@@ -8,7 +8,7 @@
 <a name="da441097"></a>
 ## 代码演示
 
-> 详细demo可参考[此处](https://github.com/TuyaInc/tuya-panel-kit/tree/develop_2.0/example/src/scenes)
+> 详细demo可参考[此处](https://github.com/TuyaInc/tuya-panel-kit/tree/master/example/src/scenes)
 
 <a name="ad988de0"></a>
 ### 倒计时弹出层
@@ -414,4 +414,3 @@ PropTypes.arrayOf(PropTypes.shape({
 ### Popup.close
 
 **关闭当前存在的弹出层**
-

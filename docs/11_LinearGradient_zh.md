@@ -7,7 +7,7 @@
 <a name="da441097"></a>
 ## 代码演示
 
-> 详细demo可参考[此处](https://github.com/TuyaInc/tuya-panel-kit/tree/develop_2.0/example/src/scenes)
+> 详细demo可参考[此处](https://github.com/TuyaInc/tuya-panel-kit/tree/master/example/src/scenes)
 
 <a name="4df5d75b"></a>
 ### 垂直两段渐变
@@ -226,4 +226,3 @@ export default composeLayout(store, MainLayout);
 ## 更多资料
 
 [react-native-svg/LinearGradient](https://github.com/react-native-community/react-native-svg#lineargradient)
-
