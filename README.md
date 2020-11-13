@@ -2,7 +2,7 @@
 
 ## tuya-panel-kit
 
-<center>轻量、可靠的 React Native 基础组件库，主要用于面板 Sdk 的快速开发。</center>
+<center>轻量、可靠的 React Native 基础组件库，主要用于面板 Sdk 的快速开发。</center><br/>
 
 ![npm package](https://img.shields.io/npm/v/tuya-panel-kit/latest.svg)
 ![license](https://img.shields.io/github/license/TuyaInc/tuya-panel-kit.svg)
