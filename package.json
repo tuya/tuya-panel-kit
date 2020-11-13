@@ -65,10 +65,10 @@
     ]
   },
   "dependencies": {
-    "@babel/cli": "^7.12.1",
     "@react-native-community/masked-view": "0.1.10",
     "@react-navigation/native": "5.7.3",
     "@react-navigation/stack": "5.9.0",
+    "babel-cli": "^6.26.0",
     "color": "^0.11.1",
     "events": "^1.1.1",
     "hoist-non-react-statics": "^3.3.0",
@@ -84,10 +84,6 @@
     "styled-components": "^3.4.10"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.3",
-    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.12.1",
-    "@babel/plugin-proposal-optional-chaining": "^7.12.1",
-    "@babel/preset-env": "^7.12.1",
     "@commitlint/cli": "^7.3.2",
     "@commitlint/config-conventional": "^7.3.1",
     "babel-eslint": "^8.2.1",
