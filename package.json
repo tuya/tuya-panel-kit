@@ -7,7 +7,7 @@
     "react-native",
     "panel"
   ],
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "typings": "../tuya-panel-kit-types/index.d.ts",
   "license": "MIT",
   "author": "sound2gd",

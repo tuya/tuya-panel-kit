@@ -45,18 +45,12 @@
     "tuya-panel-kit": "git://github.com/TuyaInc/tuya-panel-kit#develop_2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.3",
-    "@babel/plugin-proposal-decorators": "^7.12.1",
-    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.12.1",
-    "@babel/plugin-proposal-optional-chaining": "^7.12.1",
-    "@babel/preset-env": "^7.12.1",
     "@types/react": "^16.9.56",
     "@types/react-native": "^0.52.1",
     "babel-eslint": "^8.2.1",
     "babel-jest": "^22.1.0",
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
-    "babel-preset-react-native": "^4.0.1",
     "escape-string-regexp": "^1.0.5",
     "eslint": "^4.15.0",
     "eslint-config-airbnb": "^16.1.0",
