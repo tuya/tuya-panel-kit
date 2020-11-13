@@ -19,8 +19,10 @@ console.disableYellowBox = true;
 class MainLayout extends NavigatorLayout {
   constructor(props) {
     super(props);
-    console.log('TYSdk :', TYSdk);
-    console.log('Strings: ', Strings);
+    if (__DEV__) {
+      console.log('TYSdk :', TYSdk);
+      console.log('Strings: ', Strings);
+    }
   }
 
   /*
