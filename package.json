@@ -117,8 +117,8 @@
     "standard-version": "^5.0.2"
   },
   "peerDependencies": {
-    "react": "^16.14.0",
-    "react-native": "^0.59.10",
+    "react": "16.8.3",
+    "react-native": "0.59.10",
     "react-native-svg": "5.5.1",
     "tuya-panel-kit-types": "*"
   }
