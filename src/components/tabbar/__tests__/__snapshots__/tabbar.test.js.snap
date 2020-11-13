@@ -658,7 +658,7 @@ exports[`Tabbar Component type radio 1`] = `
       style={
         Object {
           "opacity": 1,
-          "width": NaN,
+          "width": 0,
         }
       }
     >
@@ -716,7 +716,7 @@ exports[`Tabbar Component type radio 1`] = `
       style={
         Object {
           "opacity": 1,
-          "width": NaN,
+          "width": 0,
         }
       }
     >
@@ -776,7 +776,7 @@ exports[`Tabbar Component type radio 1`] = `
       style={
         Object {
           "opacity": 1,
-          "width": NaN,
+          "width": 0,
         }
       }
     >
