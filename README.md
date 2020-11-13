@@ -1,4 +1,8 @@
-# Tuya Panel Kit
+<center><img src="https://images.tuyacn.com/rms-static/41166c90-1d06-11eb-808c-95024895fa97-1604319826393.png?tyName=logo.png" width="20%" height="20%" /></center>
+
+## tuya-panel-kit
+
+<center>轻量、可靠的 React Native 基础组件库，主要用于面板 Sdk 的快速开发。</center>
 
 ![npm package](https://img.shields.io/npm/v/tuya-panel-kit/latest.svg)
 ![license](https://img.shields.io/github/license/TuyaInc/tuya-panel-kit.svg)
@@ -6,13 +10,6 @@
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-brightgreen.svg?maxAge=2592000)](https://conventionalcommits.org)
 ![codecov](https://codecov.io/gh/TuyaInc/tuya-panel-kit/branch/develop_2.0/graph/badge.svg)
 ![Lint Code](https://github.com/TuyaInc/tuya-panel-kit/workflows/Lint%20Code/badge.svg)
-
-
-<center><img src="https://images.tuyacn.com/rms-static/41166c90-1d06-11eb-808c-95024895fa97-1604319826393.png?tyName=logo.png" width="20%" height="20%" /></center>
-
-<center><b><font size='6'>tuya-panel-kit</font></b> </center>
-<br/>
-<center>轻量、可靠的 React Native 基础组件库，主要用于面板 Sdk 的快速开发。</center>
 
 ## 版本
 
