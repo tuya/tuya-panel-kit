@@ -1,21 +1,26 @@
 {
   "compilerOptions": {
+    /* Basic Options */
+    "target": "ES2017" /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017','ES2018' or 'ESNEXT'. */,
+    "module": "commonjs" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */,
+    "jsx": "react" /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */,
+    /* Strict Type-Checking Options */
+    /* "strict": true                         /* Enable all strict type-checking options. */
+    "noImplicitAny": true /* Raise error on expressions and declarations with an implied 'any' type. */,
+    "strictNullChecks": true /* Enable strict null checks. */,
+    /* Additional Checks */
+    "noUnusedLocals": true /* Report errors on unused locals. */,
+    "noUnusedParameters": true /* Report errors on unused parameters. */,
+    /* Module Resolution Options */
+    "moduleResolution": "node" /* Specify module resolution strategy: 'node' (Node.js) or 'classic'  */,
     "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "jsx": "react",
-    "lib": ["ESNext"],
-    "target": "esnext",
-    "noImplicitAny": false,
-    "removeComments": true,
-    "preserveConstEnums": true,
-    "baseUrl": ".",
-    "module": "commonjs",
-    "declaration": true /* Generates corresponding '.d.ts' file. */,
-    "declarationDir": "@types",
-    "strict": false /* Enable all strict type-checking options. */,
-    "types": ["node"],
-    "skipLibCheck": true,
-    "incremental": true,
+    "paths": {
+      "*": ["*"]
+    },
+    "baseUrl": "./",
+    "types": ["react", "react-native"] /* Type declaration files to be included in compilation. */,
+    "allowSyntheticDefaultImports": true /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking. */,
+    "esModuleInterop": true /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
   },
-  "exclude": ["babel.config.js"]
+  "exclude": ["node_modules","babel.config.js"]
 }

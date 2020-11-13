@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { View, PanResponder, Image, ViewPropTypes } from 'react-native';
-import ReactNativeComponentTree from 'react-native/Libraries/Renderer/shims/ReactNativeComponentTree';
+import { View, PanResponder, Image, ViewPropTypes, ReactNativeComponentTree } from 'react-native';
 import { Utils } from 'tuya-panel-kit';
 import colorPicker from './res/color-picker.png';
 import thumb from './res/thumb.png';
