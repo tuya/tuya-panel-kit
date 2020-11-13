@@ -34,9 +34,9 @@
 
 ## 预览
 
-扫描下方二维码，体验涂鸦 RN 面板开发基础组件库
+&nbsp;&nbsp;&nbsp;&nbsp;使用手机端扫描下载 [涂鸦面板-RN App](https://smartapp.tuya.com/typaneldev)，在涂鸦面板-RN App 中扫描以下二维码您可以查看到目前涂鸦开放的功能组件，以供开发时使用，加快面板开发进度。
 
- <img src="https://images.tuyacn.com/rms-static/6186c8f0-1d04-11eb-8913-b53cc9e03c9c-1604319021823.png?tyName=comom.png" width="30%" height="30%" />
+<center><p align="center"><img src="https://images.tuyacn.com/fe-static/tuya-docs/773b84dd-df35-49e3-974c-77a965152e48.png" width="60%" height="60%" /></p></center>
 
 ## 安装
 
