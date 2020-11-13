@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "lib": ["ESNext"],
+    "target": "esnext",
+    "noImplicitAny": false,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "baseUrl": ".",
+    "module": "commonjs",
+    "declaration": true /* Generates corresponding '.d.ts' file. */,
+    "declarationDir": "@types",
+    "strict": false /* Enable all strict type-checking options. */,
+    "types": ["node"],
+    "skipLibCheck": true,
+    "incremental": true,
+  },
+  "exclude": ["babel.config.js"]
+}
