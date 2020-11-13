@@ -1,0 +1,12 @@
+diff --git a/node_modules/react-native-screens/package.json b/node_modules/react-native-screens/package.json
+index 7d0558c..737aced 100644
+--- a/node_modules/react-native-screens/package.json
++++ b/node_modules/react-native-screens/package.json
+@@ -15,7 +15,6 @@
+   },
+   "main": "lib/commonjs/index",
+   "module": "lib/module/index",
+-  "react-native": "src/index",
+   "source": "src/index",
+   "types": "src/index.d.ts",
+   "files": [

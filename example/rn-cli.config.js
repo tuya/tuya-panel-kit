@@ -22,6 +22,10 @@ module.exports = {
   getBlacklistRE() {
     return blacklist([
       new RegExp(`^${escape(path.resolve(__dirname, '..', 'node_modules'))}\\/.*$`),
+      new RegExp(`^${escape(path.resolve(__dirname, '..', 'demos'))}\\/.*$`),
     ]);
+  },
+  getSourceExts: () => {
+    return ['js', 'json', 'ts', 'tsx'];
   },
 };
