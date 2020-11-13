@@ -1413,26 +1413,6 @@
   resolved "https://registry.npm.taobao.org/@types/normalize-package-data/download/@types/normalize-package-data-2.4.0.tgz?cache=0&sync_timestamp=1605054866275&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fnormalize-package-data%2Fdownload%2F%40types%2Fnormalize-package-data-2.4.0.tgz#e486d0d97396d79beedd0a6e33f4534ff6b4973e"
   integrity sha1-5IbQ2XOW15vu3QpuM/RTT/a0lz4=
 
-"@types/prop-types@*":
-  version "15.7.3"
-  resolved "https://registry.npm.taobao.org/@types/prop-types/download/@types/prop-types-15.7.3.tgz#2ab0d5da2e5815f94b0b9d4b95d1e5f243ab2ca7"
-  integrity sha1-KrDV2i5YFflLC51LldHl8kOrLKc=
-
-"@types/react-native@^0.63.32":
-  version "0.63.34"
-  resolved "https://registry.npm.taobao.org/@types/react-native/download/@types/react-native-0.63.34.tgz#745270747308a09266eb061d9e1423d365670396"
-  integrity sha1-dFJwdHMIoJJm6wYdnhQj02VnA5Y=
-  dependencies:
-    "@types/react" "*"
-
-"@types/react@*", "@types/react@^16.9.55":
-  version "16.9.56"
-  resolved "https://registry.npm.taobao.org/@types/react/download/@types/react-16.9.56.tgz?cache=0&sync_timestamp=1604651667761&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Freact%2Fdownload%2F%40types%2Freact-16.9.56.tgz#ea25847b53c5bec064933095fc366b1462e2adf0"
-  integrity sha1-6iWEe1PFvsBkkzCV/DZrFGLirfA=
-  dependencies:
-    "@types/prop-types" "*"
-    csstype "^3.0.2"
-
 "@types/yargs-parser@*":
   version "15.0.0"
   resolved "https://registry.npm.taobao.org/@types/yargs-parser/download/@types/yargs-parser-15.0.0.tgz?cache=0&sync_timestamp=1605057457263&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fyargs-parser%2Fdownload%2F%40types%2Fyargs-parser-15.0.0.tgz#cb3f9f741869e20cce330ffbeb9271590483882d"
@@ -3805,11 +3785,6 @@ cssstyle@^1.0.0:
   integrity sha1-nTEyginTxWXGHlhrAgQaKPzNzPE=
   dependencies:
     cssom "0.3.x"
-
-csstype@^3.0.2:
-  version "3.0.4"
-  resolved "https://registry.npm.taobao.org/csstype/download/csstype-3.0.4.tgz?cache=0&sync_timestamp=1603439946794&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcsstype%2Fdownload%2Fcsstype-3.0.4.tgz#b156d7be03b84ff425c9a0a4b1e5f4da9c5ca888"
-  integrity sha1-sVbXvgO4T/QlyaCkseX02pxcqIg=
 
 csurf@~1.8.3:
   version "1.8.3"
@@ -8839,10 +8814,10 @@ react-native-svg@5.5.1:
     color "^0.11.1"
     lodash "^4.16.6"
 
-react-native@^0.51.1:
-  version "0.51.1"
-  resolved "https://registry.npm.taobao.org/react-native/download/react-native-0.51.1.tgz#be47ef396c07151722cf8246c942686d6df1170e"
-  integrity sha1-vkfvOWwHFRciz4JGyUJobW3xFw4=
+react-native@0.51.0:
+  version "0.51.0"
+  resolved "https://registry.npm.taobao.org/react-native/download/react-native-0.51.0.tgz#fe25934b3030fd323f3ca1a70f034133465955ed"
+  integrity sha1-/iWTSzAw/TI/PKGnDwNBM0ZZVe0=
   dependencies:
     absolute-path "^0.0.0"
     art "^0.10.0"
@@ -8934,7 +8909,7 @@ react-transform-hmr@^1.0.4:
     global "^4.3.0"
     react-proxy "^1.1.7"
 
-react@^16.14.0:
+react@16.14.0:
   version "16.14.0"
   resolved "https://registry.npm.taobao.org/react/download/react-16.14.0.tgz?cache=0&sync_timestamp=1603367627799&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact%2Fdownload%2Freact-16.14.0.tgz#94d776ddd0aaa37da3eda8fc5b6b18a4c9a3114d"
   integrity sha1-lNd23dCqo32j7aj8W2sYpMmjEU0=

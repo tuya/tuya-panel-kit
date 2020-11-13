@@ -90,8 +90,6 @@
     "@babel/preset-env": "^7.12.1",
     "@commitlint/cli": "^7.3.2",
     "@commitlint/config-conventional": "^7.3.1",
-    "@types/react": "^16.9.55",
-    "@types/react-native": "^0.63.32",
     "babel-eslint": "^8.2.1",
     "babel-jest": "^26.6.3",
     "commitizen": "^3.0.7",
@@ -116,15 +114,15 @@
     "metro-react-native-babel-preset": "^0.64.0",
     "prettier": "^1.16.4",
     "prop-types": "^15.6.1",
-    "react": "^16.14.0",
+    "react": "16.14.0",
     "react-docgen": "^2.21.0",
-    "react-native": "^0.51.0",
+    "react-native": "0.51.0",
     "react-native-mock-render": "^0.1.9",
     "react-test-renderer": "^16.6.3",
     "standard-version": "^5.0.2"
   },
   "peerDependencies": {
-    "react": "^16.0.0",
+    "react": "^16.14.0",
     "react-native": "^0.59.10",
     "react-native-svg": "5.5.1",
     "tuya-panel-kit-types": "*"

@@ -1100,10 +1100,10 @@
   resolved "https://registry.npm.taobao.org/@types/prop-types/download/@types/prop-types-15.7.3.tgz#2ab0d5da2e5815f94b0b9d4b95d1e5f243ab2ca7"
   integrity sha1-KrDV2i5YFflLC51LldHl8kOrLKc=
 
-"@types/react-native@^0.51.1":
-  version "0.51.10"
-  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.51.10.tgz#ab060c0b87110a32a2e797ebaef5b485a7856217"
-  integrity sha512-4+nuArLXBbDW2N6HeZFow1ZP41oGgCJqKc30GGRbfQCj+7ONRCnQI+HIKlEdjcpTtqJA7YNIGihz1CL/+QcqrA==
+"@types/react-native@^0.52.1":
+  version "0.52.25"
+  resolved "https://registry.npm.taobao.org/@types/react-native/download/@types/react-native-0.52.25.tgz#78c0e6049d4dc0a7af7d4024baac28ae922bedaf"
+  integrity sha1-eMDmBJ1NwKevfUAkuqworpIr7a8=
   dependencies:
     "@types/react" "*"
 
