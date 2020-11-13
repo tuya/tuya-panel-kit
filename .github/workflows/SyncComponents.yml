@@ -25,5 +25,5 @@ jobs:
         WECHAT_WORK_BOT_WEBHOOK: ${{secrets.WECHAT_WORK_BOT_WEBHOOK}}
       with:
         msgtype: markdown
-        content: "${{toJson(github)}}"
+        content: "【${{github.repository}}】Pulling ${{ github.ref }} into develop_2.0"
         mentioned_list: '["@all"]'
