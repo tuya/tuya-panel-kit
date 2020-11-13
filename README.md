@@ -1,15 +1,27 @@
-<center><img src="https://images.tuyacn.com/rms-static/41166c90-1d06-11eb-808c-95024895fa97-1604319826393.png?tyName=logo.png" width="20%" height="20%" /></center>
+<p align="center"><img src="https://images.tuyacn.com/rms-static/41166c90-1d06-11eb-808c-95024895fa97-1604319826393.png?tyName=logo.png" width="20%" height="20%" /></p>
 
-## tuya-panel-kit
 
-<center>轻量、可靠的 React Native 基础组件库，主要用于面板 Sdk 的快速开发。</center><br/>
+<h2 align="center">tuya-panel-kit</h2>
 
-![npm package](https://img.shields.io/npm/v/tuya-panel-kit/latest.svg)
-![license](https://img.shields.io/github/license/TuyaInc/tuya-panel-kit.svg)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?maxAge=2592000)](http://commitizen.github.io/cz-cli/) 
-[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-brightgreen.svg?maxAge=2592000)](https://conventionalcommits.org)
-![codecov](https://codecov.io/gh/TuyaInc/tuya-panel-kit/branch/develop_2.0/graph/badge.svg)
-![Lint Code](https://github.com/TuyaInc/tuya-panel-kit/workflows/Lint%20Code/badge.svg)
+
+<p align="center">轻量、可靠的 React Native 基础组件库，主要用于面板 Sdk 的快速开发。</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/tuya-panel-kit" target="_blank">
+    <img src="https://img.shields.io/npm/v/tuya-panel-kit/latest.svg" />
+  </a>
+  <img alt="Commitizen friendly" src="https://img.shields.io/github/license/TuyaInc/tuya-panel-kit.svg" />
+  <a href="http://commitizen.github.io/cz-cli/" target="_blank">
+    <img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?maxAge=2592000" />
+  </a>
+  <a href="https://conventionalcommits.org" target="_blank">
+    <img src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-brightgreen.svg?maxAge=2592000" />
+  </a>
+  <a href="https://codecov.io/gh/TuyaInc/tuya-panel-kit" target="_blank">
+    <img src="https://codecov.io/gh/TuyaInc/tuya-panel-kit/branch/develop_2.0/graph/badge.svg" />
+  </a>
+  <img src="https://github.com/TuyaInc/tuya-panel-kit/workflows/Lint%20Code/badge.svg" />
+</p>
 
 ## 特性
 
