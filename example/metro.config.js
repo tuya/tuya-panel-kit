@@ -2,7 +2,7 @@ const path = require('path');
 const blacklist = require('metro-config/src/defaults/blacklist');
 const pkg = require('../package.json');
 
-const modules = [...Object.keys(pkg.peerDependencies), 'react-native', 'react'];
+const modules = [...Object.keys(pkg.peerDependencies)];
 
 const root = path.resolve(__dirname, '..');
 

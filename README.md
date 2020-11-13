@@ -1,19 +1,24 @@
-<center><img src="https://images.tuyacn.com/rms-static/41166c90-1d06-11eb-808c-95024895fa97-1604319826393.png?tyName=logo.png" width="20%" height="20%" /></center>
+<center><p align="center"><img src="https://images.tuyacn.com/rms-static/dc225080-25a5-11eb-8913-b53cc9e03c9c-1605267985800.png?tyName=tuya.png" width="50%" height="50%" /></p></center>
 
-## tuya-panel-kit
+<center><p align="center">高效、统一、可视化</p></center>
 
-<center>轻量、可靠的 React Native 基础组件库，主要用于面板 Sdk 的快速开发。</center>
-
-![npm package](https://img.shields.io/npm/v/tuya-panel-kit/latest.svg)
-![license](https://img.shields.io/github/license/TuyaInc/tuya-panel-kit.svg)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?maxAge=2592000)](http://commitizen.github.io/cz-cli/) 
-[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-brightgreen.svg?maxAge=2592000)](https://conventionalcommits.org)
-![codecov](https://codecov.io/gh/TuyaInc/tuya-panel-kit/branch/master/graph/badge.svg)
-![Lint Code](https://github.com/TuyaInc/tuya-panel-kit/workflows/Lint%20Code/badge.svg)
-
-## 版本
-
-&nbsp;&nbsp;[2.0.0-rc.7](https://github.com/TuyaInc/tuya-panel-kit/tree/v2.0.0-rc.7)
+<center><p align="center">
+  <a href="https://www.npmjs.com/package/tuya-panel-kit" target="_blank">
+    <img src="https://img.shields.io/npm/v/tuya-panel-kit/latest.svg" />
+  </a>&nbsp;
+  <img alt="Commitizen friendly" src="https://img.shields.io/github/license/TuyaInc/tuya-panel-kit.svg" />
+  <a href="http://commitizen.github.io/cz-cli/" target="_blank">
+    <img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?maxAge=2592000" />
+  </a>&nbsp;
+  <a href="https://conventionalcommits.org" target="_blank">
+    <img src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-brightgreen.svg?maxAge=2592000" />
+  </a>&nbsp;
+  <a href="https://codecov.io/gh/TuyaInc/tuya-panel-kit" target="_blank">
+    <img src="https://codecov.io/gh/TuyaInc/tuya-panel-kit/branch/develop_2.0/graph/badge.svg" />
+  </a>&nbsp;
+  <img src="https://github.com/TuyaInc/tuya-panel-kit/workflows/Lint%20Code/badge.svg" />
+</p>
+</center>
 
 ## 特性
 
@@ -23,11 +28,9 @@
 
 - 深入每个细节的主题定制能力
 
-- 支持线上编辑实时预览
-
 - 支持 TS，提供完整的类型定义文件
 
-- 单元测试覆盖率 90%
+- 单元测试覆盖率 90% +
 
 ## 预览
 
