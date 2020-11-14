@@ -1,0 +1,248 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TYModal Component renders correctly 1`] = `
+<Component
+  animationType="fade"
+  hardwareAccelerated={false}
+  mask={true}
+  onRequestClose={[Function]}
+  transparent={true}
+  visible={true}
+>
+  <Styled(TouchableOpacity)
+    activeOpacity={1}
+    key="0"
+    onPress={[Function]}
+    style={
+      Array [
+        Array [
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          Object {
+            "justifyContent": "flex-end",
+          },
+          null,
+        ],
+        Object {
+          "display": "none",
+        },
+      ]
+    }
+  >
+    <View
+      onStartShouldSetResponder={[Function]}
+      style={null}
+    >
+      <View
+        onMaskPress={[Function]}
+      />
+    </View>
+  </Styled(TouchableOpacity)>
+  <Styled(TouchableOpacity)
+    activeOpacity={1}
+    key="1"
+    onPress={[Function]}
+    style={
+      Array [
+        Array [
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          Object {
+            "justifyContent": "flex-end",
+          },
+          null,
+        ],
+        Object {
+          "display": "none",
+        },
+      ]
+    }
+  >
+    <View
+      onStartShouldSetResponder={[Function]}
+      style={null}
+    >
+      <View
+        onMaskPress={[Function]}
+      />
+    </View>
+  </Styled(TouchableOpacity)>
+</Component>
+`;
+
+exports[`TYModal Component renders correctly 2`] = `
+Array [
+  <AnimatedComponent
+    key="0"
+    pointerEvents="box-none"
+    style={
+      Array [
+        Array [
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          Object {
+            "justifyContent": "flex-end",
+          },
+          Object {
+            "opacity": 0,
+          },
+        ],
+        Object {
+          "display": "none",
+        },
+      ]
+    }
+  >
+    <View />
+  </AnimatedComponent>,
+  <AnimatedComponent
+    key="1"
+    pointerEvents="box-none"
+    style={
+      Array [
+        Array [
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          Object {
+            "justifyContent": "flex-end",
+          },
+          Object {
+            "opacity": 0,
+          },
+        ],
+        Object {
+          "display": "none",
+        },
+      ]
+    }
+  >
+    <View />
+  </AnimatedComponent>,
+]
+`;
+
+exports[`TYModal Component renders correctly with useKeyboardView 1`] = `
+<Component
+  animationType="fade"
+  hardwareAccelerated={false}
+  mask={true}
+  onRequestClose={[Function]}
+  transparent={true}
+  visible={true}
+>
+  <Styled(TouchableOpacity)
+    activeOpacity={1}
+    key="0"
+    onPress={[Function]}
+    style={
+      Array [
+        Array [
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          Object {
+            "justifyContent": "flex-end",
+          },
+          null,
+        ],
+        Object {
+          "display": "none",
+        },
+      ]
+    }
+  >
+    <KeyboardAvoidingView
+      behavior="padding"
+      keyboardVerticalOffset={0}
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+          "paddingTop": 20,
+        }
+      }
+    >
+      <View
+        onStartShouldSetResponder={[Function]}
+        style={null}
+      >
+        <View
+          onMaskPress={[Function]}
+        />
+      </View>
+    </KeyboardAvoidingView>
+  </Styled(TouchableOpacity)>
+  <Styled(TouchableOpacity)
+    activeOpacity={1}
+    key="1"
+    onPress={[Function]}
+    style={
+      Array [
+        Array [
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          Object {
+            "justifyContent": "flex-end",
+          },
+          null,
+        ],
+        Object {
+          "display": "none",
+        },
+      ]
+    }
+  >
+    <KeyboardAvoidingView
+      behavior="padding"
+      keyboardVerticalOffset={0}
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+          "paddingTop": 20,
+        }
+      }
+    >
+      <View
+        onStartShouldSetResponder={[Function]}
+        style={null}
+      >
+        <View
+          onMaskPress={[Function]}
+        />
+      </View>
+    </KeyboardAvoidingView>
+  </Styled(TouchableOpacity)>
+</Component>
+`;

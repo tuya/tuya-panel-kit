@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Collapsible renders correctly 1`] = `
+<Collapsible
+  align="top"
+  collapsed={false}
+  collapsedHeight={0}
+  duration={300}
+  easing="EaseOutCubic"
+  onChange={[MockFunction]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#ff0",
+      "height": 260,
+      "justifyContent": "center",
+      "width": 375,
+    }
+  }
+>
+  <AnimatedComponent
+    pointerEvents="auto"
+    style={null}
+  >
+    <View
+      pointerEvents="auto"
+      style={null}
+    >
+      <View
+        pointerEvents="auto"
+        style={null}
+      >
+        <AnimatedComponent
+          onLayout={[Function]}
+          style={
+            Array [
+              Object {},
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#ff0",
+                "height": 260,
+                "justifyContent": "center",
+                "width": 375,
+              },
+            ]
+          }
+        >
+          <View
+            onLayout={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#ff0",
+                "height": 260,
+                "justifyContent": "center",
+                "width": 375,
+              }
+            }
+          >
+            <View
+              onLayout={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#ff0",
+                  "height": 260,
+                  "justifyContent": "center",
+                  "width": 375,
+                }
+              }
+            >
+              <TYText
+                align={null}
+                color={null}
+                size={null}
+                style={
+                  Object {
+                    "color": "#666",
+                    "fontSize": 16,
+                    "marginTop": 30,
+                    "textAlign": "center",
+                  }
+                }
+                text="以不变应万变，无招胜有招。"
+                type={null}
+                weight={null}
+              >
+                <Styled(Text)
+                  align={null}
+                  allowFontScaling={false}
+                  color={null}
+                  size={16}
+                  style={
+                    Object {
+                      "color": "#666",
+                      "fontSize": 16,
+                      "marginTop": 30,
+                      "textAlign": "center",
+                    }
+                  }
+                  text="以不变应万变，无招胜有招。"
+                  type={null}
+                  weight={null}
+                >
+                  <Text
+                    accessible={true}
+                    align={null}
+                    allowFontScaling={false}
+                    color={null}
+                    ellipsizeMode="tail"
+                    size={16}
+                    style={
+                      Array [
+                        Object {
+                          "backgroundColor": "transparent",
+                          "color": "#333",
+                          "fontSize": 16,
+                        },
+                        Object {
+                          "color": "#666",
+                          "fontSize": 16,
+                          "marginTop": 30,
+                          "textAlign": "center",
+                        },
+                      ]
+                    }
+                    text="以不变应万变，无招胜有招。"
+                    type={null}
+                    weight={null}
+                  >
+                    <Text
+                      accessible={true}
+                      align={null}
+                      allowFontScaling={false}
+                      color={null}
+                      ellipsizeMode="tail"
+                      size={16}
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "transparent",
+                            "color": "#333",
+                            "fontSize": 16,
+                          },
+                          Object {
+                            "color": "#666",
+                            "fontSize": 16,
+                            "marginTop": 30,
+                            "textAlign": "center",
+                          },
+                        ]
+                      }
+                      text="以不变应万变，无招胜有招。"
+                      type={null}
+                      weight={null}
+                    >
+                      以不变应万变，无招胜有招。
+                    </Text>
+                  </Text>
+                </Styled(Text)>
+              </TYText>
+            </View>
+          </View>
+        </AnimatedComponent>
+      </View>
+    </View>
+  </AnimatedComponent>
+</Collapsible>
+`;
+
+exports[`Collapsible renders correctly 2`] = `null`;

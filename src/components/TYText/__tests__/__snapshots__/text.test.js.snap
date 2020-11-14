@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TYText Component basic render 1`] = `
+<TYText
+  align={null}
+  color={null}
+  size={10}
+  type={null}
+  weight={null}
+>
+  <Styled(Text)
+    align={null}
+    allowFontScaling={false}
+    color={null}
+    size={10}
+    type={null}
+    weight={null}
+  >
+    <Text
+      accessible={true}
+      align={null}
+      allowFontScaling={false}
+      color={null}
+      ellipsizeMode="tail"
+      size={10}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#333",
+            "fontSize": 10,
+          },
+          undefined,
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        size={10}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 10,
+            },
+            undefined,
+          ]
+        }
+        type={null}
+        weight={null}
+      />
+    </Text>
+  </Styled(Text)>
+</TYText>
+`;

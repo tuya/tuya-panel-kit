@@ -1,0 +1,351 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tab Component basic render 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "borderColor": "#eee",
+          "minHeight": 87,
+        },
+        Object {
+          "borderBottomWidth": 1,
+        },
+        Object {},
+      ]
+    }
+  >
+    <RCTScrollView
+      bounces={false}
+      directionalLockEnabled={true}
+      horizontal={true}
+      scrollEnabled={false}
+      scrollsToTop={false}
+      showsHorizontalScrollIndicator={false}
+      showsVerticalScrollIndicator={false}
+    >
+      <View>
+        <View
+          onLayout={[Function]}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#fff",
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "space-around",
+              },
+              Object {},
+              Object {
+                "backgroundColor": "#fff",
+              },
+            ]
+          }
+        >
+          <View
+            accessibilityLabel="TabNav_0"
+            accessible={true}
+            isTVSelectable={true}
+            onLayout={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "flex": 1,
+                    "flexDirection": "row",
+                    "justifyContent": "center",
+                    "paddingBottom": 0,
+                    "paddingLeft": 4,
+                    "paddingRight": 4,
+                    "paddingTop": 0,
+                  },
+                  Object {},
+                  Object {
+                    "width": NaN,
+                  },
+                ]
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                numberOfLines={1}
+                style={
+                  Array [
+                    Object {
+                      "color": "#000",
+                      "fontSize": 30,
+                    },
+                    Object {
+                      "color": "#333",
+                    },
+                    Object {},
+                    Object {
+                      "color": "#108ee9",
+                    },
+                    Object {},
+                  ]
+                }
+              >
+                1
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "backgroundColor": "#108ee9",
+                "bottom": 0,
+                "height": 4,
+                "left": 0,
+                "position": "absolute",
+                "width": 0,
+              }
+            }
+          />
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+  <RCTScrollView
+    alwaysBounceVertical={false}
+    automaticallyAdjustContentInsets={false}
+    directionalLockEnabled={true}
+    horizontal={true}
+    keyboardDismissMode="on-drag"
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    pagingEnabled={true}
+    scrollEnabled={true}
+    scrollEventThrottle={5}
+    scrollsToTop={false}
+    showsHorizontalScrollIndicator={false}
+  >
+    <View>
+      <View>
+        <View
+          isActive={true}
+          style={
+            Array [
+              undefined,
+              Object {
+                "width": 750,
+              },
+            ]
+          }
+          tab="1"
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            The No.1 Tab
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
+exports[`Tab Component basic render 2`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "borderColor": "#eee",
+          "minHeight": 87,
+        },
+        Object {
+          "borderBottomWidth": 1,
+        },
+        Object {},
+      ]
+    }
+  >
+    <RCTScrollView
+      bounces={false}
+      directionalLockEnabled={true}
+      horizontal={true}
+      scrollEnabled={false}
+      scrollsToTop={false}
+      showsHorizontalScrollIndicator={false}
+      showsVerticalScrollIndicator={false}
+    >
+      <View>
+        <View
+          onLayout={[Function]}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#fff",
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "space-around",
+              },
+              Object {},
+              Object {
+                "backgroundColor": "#fff",
+              },
+            ]
+          }
+        >
+          <View
+            accessibilityLabel="TabNav_0"
+            accessible={true}
+            isTVSelectable={true}
+            onLayout={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "flex": 1,
+                    "flexDirection": "row",
+                    "justifyContent": "center",
+                    "paddingBottom": 0,
+                    "paddingLeft": 4,
+                    "paddingRight": 4,
+                    "paddingTop": 0,
+                  },
+                  Object {},
+                  Object {
+                    "width": NaN,
+                  },
+                ]
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                numberOfLines={1}
+                style={
+                  Array [
+                    Object {
+                      "color": "#000",
+                      "fontSize": 30,
+                    },
+                    Object {
+                      "color": "#333",
+                    },
+                    Object {},
+                    Object {
+                      "color": "#108ee9",
+                    },
+                    Object {},
+                  ]
+                }
+              >
+                1
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "backgroundColor": "#108ee9",
+                "bottom": 0,
+                "height": 4,
+                "left": 0,
+                "position": "absolute",
+                "width": 0,
+              }
+            }
+          />
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+  <RCTScrollView
+    alwaysBounceVertical={false}
+    automaticallyAdjustContentInsets={false}
+    directionalLockEnabled={true}
+    horizontal={true}
+    keyboardDismissMode="on-drag"
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    pagingEnabled={true}
+    scrollEnabled={true}
+    scrollEventThrottle={5}
+    scrollsToTop={false}
+    showsHorizontalScrollIndicator={false}
+  >
+    <View>
+      <View>
+        <View
+          isActive={true}
+          style={
+            Array [
+              undefined,
+              Object {
+                "width": 750,
+              },
+            ]
+          }
+          tab="1"
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            The No.1 Tab
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

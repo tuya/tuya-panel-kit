@@ -1,0 +1,2294 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopBar Component basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignSelf": "stretch",
+        "height": 88,
+      },
+      Array [
+        Object {
+          "backgroundColor": "#000",
+        },
+        null,
+      ],
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "alignSelf": "stretch",
+          "flexDirection": "row",
+          "height": 44,
+          "justifyContent": "space-between",
+          "marginTop": 44,
+        },
+        Array [
+          Object {
+            "marginHorizontal": 6,
+          },
+          null,
+        ],
+      ]
+    }
+  >
+    <View
+      accessible={true}
+      hitSlop={
+        Object {
+          "bottom": 6,
+          "left": 6,
+          "right": 6,
+          "top": 6,
+        }
+      }
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "height": "100%",
+          "justifyContent": "center",
+          "left": 0,
+          "marginHorizontal": 6,
+          "opacity": 1,
+          "position": "absolute",
+          "width": 17,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            Object {
+              "height": 17,
+              "width": 17,
+            },
+            false,
+            null,
+          ]
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+              false,
+              Object {
+                "flex": 0,
+                "height": 17,
+                "width": 17,
+              },
+            ]
+          }
+          vbHeight={1024}
+          vbWidth={1024}
+        >
+          <RNSVGPath
+            d="M770.673778 21.959111a56.888889 56.888889 0 0 1 0 80.440889l-402.204445 402.318222 402.204445 402.204445a56.888889 56.888889 0 0 1-80.440889 80.497777L247.751111 544.938667a56.888889 56.888889 0 0 1 0-80.497778L690.232889 21.959111a56.888889 56.888889 0 0 1 80.440889 0z"
+            fill={
+              Array [
+                0,
+                1,
+                0,
+                0,
+                1,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            propList={
+              Array [
+                "stroke",
+                "strokeWidth",
+                "fill",
+              ]
+            }
+            stroke={
+              Array [
+                0,
+                1,
+                0,
+                0,
+                1,
+              ]
+            }
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+          />
+        </RNSVGSvgView>
+      </View>
+    </View>
+    <View
+      accessibilityLabel="TopBar_Btn_Title"
+      accessible={true}
+      align="center"
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "height": "100%",
+            "justifyContent": "center",
+            "position": "absolute",
+          },
+          Object {
+            "left": 70,
+            "right": 70,
+            "width": 610,
+          },
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        size={17}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 17,
+            },
+            Array [
+              Object {
+                "color": "#000",
+                "fontWeight": "500",
+              },
+              null,
+            ],
+          ]
+        }
+        type="title"
+        weight={null}
+      >
+        Title
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      hitSlop={
+        Object {
+          "bottom": 6,
+          "left": 6,
+          "right": 6,
+          "top": 6,
+        }
+      }
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "height": "100%",
+          "justifyContent": "center",
+          "marginHorizontal": 6,
+          "opacity": 1,
+          "position": "absolute",
+          "right": 0,
+          "width": 17,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            Object {
+              "height": 17,
+              "width": 17,
+            },
+            false,
+            null,
+          ]
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+              false,
+              Object {
+                "flex": 0,
+                "height": 17,
+                "width": 17,
+              },
+            ]
+          }
+          vbHeight={1024}
+          vbWidth={1024}
+        >
+          <RNSVGPath
+            d="M0 960c0-35.328 28.48-64 64-64h896c35.328 0 64 28.416 64 64 0 35.328-28.48 64-64 64H64c-35.328 0-64-28.416-64-64zM640 128l128 128-512 512H160.32A31.808 31.808 0 0 1 128 735.68V640l512-512z m165.952-128c14.912 0 34.176 8.128 44.16 18.176l27.712 27.648c10.304 10.304 18.176 29.824 18.176 44.16v11.968c0 14.912-8.32 34.304-18.56 44.544L800 224l-128-128L749.44 18.56c10.368-10.368 30.208-18.56 44.608-18.56z"
+            fill={
+              Array [
+                0,
+                1,
+                1,
+                0,
+                1,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            propList={
+              Array [
+                "stroke",
+                "strokeWidth",
+                "fill",
+              ]
+            }
+            stroke={
+              Array [
+                0,
+                1,
+                1,
+                0,
+                1,
+              ]
+            }
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+          />
+        </RNSVGSvgView>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`TopBar Component render gradient 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignSelf": "stretch",
+        "height": 88,
+      },
+      Array [
+        false,
+        null,
+      ],
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "bottom": 0,
+          "flex": 1,
+          "height": 1334,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": 750,
+        },
+        Object {
+          "height": 88,
+          "width": 750,
+        },
+      ]
+    }
+  >
+    <RNSVGSvgView
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+          },
+          undefined,
+          false,
+          Object {
+            "flex": 0,
+            "height": 88,
+            "width": 750,
+          },
+        ]
+      }
+    >
+      <RNSVGDefs>
+        <RNSVGLinearGradient
+          gradient={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              0,
+              1,
+            ]
+          }
+          gradientTransform={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          gradientUnits={0}
+          name="linear-gradient"
+          x1="0%"
+          x2="0%"
+          y1="0%"
+          y2="100%"
+        />
+      </RNSVGDefs>
+      <RNSVGRect
+        fill={
+          Array [
+            1,
+            "linear-gradient",
+          ]
+        }
+        fillOpacity={1}
+        fillRule={1}
+        height="88"
+        matrix={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+        opacity={1}
+        propList={
+          Array [
+            "fill",
+          ]
+        }
+        rx="0"
+        ry="0"
+        stroke={null}
+        strokeDasharray={null}
+        strokeDashoffset={null}
+        strokeLinecap={0}
+        strokeLinejoin={0}
+        strokeMiterlimit={4}
+        strokeOpacity={1}
+        strokeWidth={null}
+        width="750"
+        x="0"
+        y="0"
+      />
+    </RNSVGSvgView>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "alignSelf": "stretch",
+          "flexDirection": "row",
+          "height": 44,
+          "justifyContent": "space-between",
+          "marginTop": 44,
+        },
+        Array [
+          Object {
+            "marginHorizontal": 6,
+          },
+          null,
+        ],
+      ]
+    }
+  >
+    <View
+      accessible={true}
+      hitSlop={
+        Object {
+          "bottom": 6,
+          "left": 6,
+          "right": 6,
+          "top": 6,
+        }
+      }
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "height": "100%",
+          "justifyContent": "center",
+          "left": 0,
+          "marginHorizontal": 6,
+          "opacity": 1,
+          "position": "absolute",
+          "width": 17,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            Object {
+              "height": 17,
+              "width": 17,
+            },
+            false,
+            null,
+          ]
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+              false,
+              Object {
+                "flex": 0,
+                "height": 17,
+                "width": 17,
+              },
+            ]
+          }
+          vbHeight={1024}
+          vbWidth={1024}
+        >
+          <RNSVGPath
+            d="M770.673778 21.959111a56.888889 56.888889 0 0 1 0 80.440889l-402.204445 402.318222 402.204445 402.204445a56.888889 56.888889 0 0 1-80.440889 80.497777L247.751111 544.938667a56.888889 56.888889 0 0 1 0-80.497778L690.232889 21.959111a56.888889 56.888889 0 0 1 80.440889 0z"
+            fill={
+              Array [
+                0,
+                0,
+                0,
+                0,
+                1,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            propList={
+              Array [
+                "stroke",
+                "strokeWidth",
+                "fill",
+              ]
+            }
+            stroke={
+              Array [
+                0,
+                0,
+                0,
+                0,
+                1,
+              ]
+            }
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+          />
+        </RNSVGSvgView>
+      </View>
+    </View>
+    <View
+      accessibilityLabel="TopBar_Btn_Title"
+      accessible={true}
+      align="center"
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "height": "100%",
+            "justifyContent": "center",
+            "position": "absolute",
+          },
+          Object {
+            "left": 70,
+            "right": 70,
+            "width": 610,
+          },
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        size={17}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 17,
+            },
+            Array [
+              Object {
+                "color": "#000",
+                "fontWeight": "500",
+              },
+              null,
+            ],
+          ]
+        }
+        type="title"
+        weight={null}
+      >
+        Title
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`TopBar Component render gradient 2`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignSelf": "stretch",
+        "height": 88,
+      },
+      Array [
+        false,
+        Object {
+          "marginTop": 24,
+        },
+      ],
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "bottom": 0,
+          "flex": 1,
+          "height": 1334,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": 750,
+        },
+        Object {
+          "height": 88,
+          "width": 750,
+        },
+      ]
+    }
+  >
+    <RNSVGSvgView
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+          },
+          Object {
+            "height": 88,
+            "width": 750,
+          },
+          false,
+          Object {
+            "flex": 0,
+            "height": 88,
+            "width": 750,
+          },
+        ]
+      }
+    >
+      <RNSVGDefs>
+        <RNSVGRadialGradient
+          cx="50%"
+          cy="50%"
+          fx="50%"
+          fy="50%"
+          gradient={
+            Array [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              1,
+              1,
+              0,
+              1,
+            ]
+          }
+          gradientTransform={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          gradientUnits={0}
+          name="radial-gradient"
+          rx="50%"
+          ry="50%"
+        />
+      </RNSVGDefs>
+      <RNSVGRect
+        fill={
+          Array [
+            1,
+            "radial-gradient",
+          ]
+        }
+        fillOpacity={1}
+        fillRule={1}
+        height="88"
+        matrix={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+        opacity={1}
+        propList={
+          Array [
+            "fill",
+          ]
+        }
+        rx="0"
+        ry="0"
+        stroke={null}
+        strokeDasharray={null}
+        strokeDashoffset={null}
+        strokeLinecap={0}
+        strokeLinejoin={0}
+        strokeMiterlimit={4}
+        strokeOpacity={1}
+        strokeWidth={null}
+        width="750"
+        x="0"
+        y="0"
+      />
+    </RNSVGSvgView>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "alignSelf": "stretch",
+          "flexDirection": "row",
+          "height": 44,
+          "justifyContent": "space-between",
+          "marginTop": 44,
+        },
+        Array [
+          Object {
+            "marginHorizontal": 6,
+          },
+          null,
+        ],
+      ]
+    }
+  >
+    <View
+      accessibilityLabel="TopBar_Btn_Back"
+      accessible={true}
+      hitSlop={
+        Object {
+          "bottom": 6,
+          "left": 6,
+          "right": 6,
+          "top": 6,
+        }
+      }
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "height": "100%",
+          "justifyContent": "center",
+          "left": 0,
+          "marginHorizontal": 6,
+          "opacity": 1,
+          "position": "absolute",
+          "width": 17,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            Object {
+              "height": 17,
+              "width": 17,
+            },
+            false,
+            null,
+          ]
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+              false,
+              Object {
+                "flex": 0,
+                "height": 17,
+                "width": 17,
+              },
+            ]
+          }
+          vbHeight={1024}
+          vbWidth={1024}
+        >
+          <RNSVGPath
+            d="M770.673778 21.959111a56.888889 56.888889 0 0 1 0 80.440889l-402.204445 402.318222 402.204445 402.204445a56.888889 56.888889 0 0 1-80.440889 80.497777L247.751111 544.938667a56.888889 56.888889 0 0 1 0-80.497778L690.232889 21.959111a56.888889 56.888889 0 0 1 80.440889 0z"
+            fill={
+              Array [
+                0,
+                0,
+                0,
+                0,
+                1,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            propList={
+              Array [
+                "stroke",
+                "strokeWidth",
+                "fill",
+              ]
+            }
+            stroke={
+              Array [
+                0,
+                0,
+                0,
+                0,
+                1,
+              ]
+            }
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+          />
+        </RNSVGSvgView>
+      </View>
+    </View>
+    <View
+      accessibilityLabel="TopBar_Btn_Title"
+      accessible={true}
+      align="center"
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "height": "100%",
+            "justifyContent": "center",
+            "position": "absolute",
+          },
+          Object {
+            "left": 70,
+            "right": 70,
+            "width": 610,
+          },
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        size={17}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 17,
+            },
+            Array [
+              Object {
+                "color": "#000",
+                "fontWeight": "500",
+              },
+              null,
+            ],
+          ]
+        }
+        type="title"
+        weight={null}
+      >
+        Title
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`TopBar Component render multiple actions 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignSelf": "stretch",
+        "height": 88,
+      },
+      Array [
+        Object {
+          "backgroundColor": "blue",
+        },
+        null,
+      ],
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "alignSelf": "stretch",
+          "flexDirection": "row",
+          "height": 44,
+          "justifyContent": "space-between",
+          "marginTop": 44,
+        },
+        Array [
+          Object {
+            "marginHorizontal": 6,
+          },
+          null,
+        ],
+      ]
+    }
+  >
+    <View
+      accessible={true}
+      hitSlop={
+        Object {
+          "bottom": 6,
+          "left": 6,
+          "right": 6,
+          "top": 6,
+        }
+      }
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "height": "100%",
+          "justifyContent": "center",
+          "left": 0,
+          "marginHorizontal": 6,
+          "opacity": 1,
+          "position": "absolute",
+          "width": 17,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            Object {
+              "height": 17,
+              "width": 17,
+            },
+            false,
+            null,
+          ]
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+              false,
+              Object {
+                "flex": 0,
+                "height": 17,
+                "width": 17,
+              },
+            ]
+          }
+          vbHeight={1024}
+          vbWidth={1024}
+        >
+          <RNSVGPath
+            d="M770.673778 21.959111a56.888889 56.888889 0 0 1 0 80.440889l-402.204445 402.318222 402.204445 402.204445a56.888889 56.888889 0 0 1-80.440889 80.497777L247.751111 544.938667a56.888889 56.888889 0 0 1 0-80.497778L690.232889 21.959111a56.888889 56.888889 0 0 1 80.440889 0z"
+            fill={
+              Array [
+                0,
+                0,
+                0,
+                0,
+                1,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            propList={
+              Array [
+                "stroke",
+                "strokeWidth",
+                "fill",
+              ]
+            }
+            stroke={
+              Array [
+                0,
+                0,
+                0,
+                0,
+                1,
+              ]
+            }
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+          />
+        </RNSVGSvgView>
+      </View>
+    </View>
+    <View
+      accessible={true}
+      hitSlop={
+        Object {
+          "bottom": 6,
+          "left": 6,
+          "right": 6,
+          "top": 6,
+        }
+      }
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "height": "100%",
+          "justifyContent": "center",
+          "left": 29,
+          "marginHorizontal": 6,
+          "opacity": 1,
+          "position": "absolute",
+          "width": 17,
+        }
+      }
+    >
+      <Image
+        color="red"
+        source={123}
+        style={
+          Array [
+            Object {
+              "tintColor": "red",
+            },
+            null,
+          ]
+        }
+      />
+    </View>
+    <View
+      accessibilityLabel="TopBar_Btn_Title"
+      accessible={true}
+      align="center"
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "height": "100%",
+            "justifyContent": "center",
+            "position": "absolute",
+          },
+          Object {
+            "left": 87,
+            "right": 87,
+            "width": 576,
+          },
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        size={17}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 17,
+            },
+            Array [
+              Object {
+                "color": "#000",
+                "fontWeight": "500",
+              },
+              null,
+            ],
+          ]
+        }
+        type="title"
+        weight={null}
+      >
+        Very Very Very Very Very Long Title
+      </Text>
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        size="normal"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 17,
+              "lineHeight": 24,
+            },
+            Array [
+              Object {
+                "color": "#000",
+              },
+              null,
+            ],
+          ]
+        }
+        type="paragraph"
+        weight={null}
+      >
+        SubTitle
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      hitSlop={
+        Object {
+          "bottom": 6,
+          "left": 6,
+          "right": 6,
+          "top": 6,
+        }
+      }
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "height": "100%",
+          "justifyContent": "center",
+          "marginHorizontal": 6,
+          "opacity": 1,
+          "position": "absolute",
+          "right": 0,
+          "width": 17,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            Object {
+              "height": 17,
+              "width": 17,
+            },
+            false,
+            null,
+          ]
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+              false,
+              Object {
+                "flex": 0,
+                "height": 17,
+                "width": 17,
+              },
+            ]
+          }
+          vbHeight={1024}
+          vbWidth={1024}
+        >
+          <RNSVGPath
+            d="M512 85.333333a42.666667 42.666667 0 0 1 42.666667 42.666667v341.333333h341.333333a42.666667 42.666667 0 0 1 0 85.333334h-341.376L554.666667 896a42.666667 42.666667 0 0 1-85.333334 0l-0.042666-341.333333H128a42.666667 42.666667 0 0 1 0-85.333334h341.333333V128a42.666667 42.666667 0 0 1 42.666667-42.666667z"
+            fill={
+              Array [
+                0,
+                0,
+                0,
+                0,
+                1,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            propList={
+              Array [
+                "stroke",
+                "strokeWidth",
+                "fill",
+              ]
+            }
+            stroke={
+              Array [
+                0,
+                0,
+                0,
+                0,
+                1,
+              ]
+            }
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+          />
+        </RNSVGSvgView>
+      </View>
+    </View>
+    <View
+      accessible={true}
+      hitSlop={
+        Object {
+          "bottom": 6,
+          "left": 6,
+          "right": 6,
+          "top": 6,
+        }
+      }
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "height": "100%",
+          "justifyContent": "center",
+          "marginHorizontal": 6,
+          "opacity": 1,
+          "position": "absolute",
+          "right": 29,
+          "width": 17,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            Object {
+              "height": 17,
+              "width": 17,
+            },
+            false,
+            null,
+          ]
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+              false,
+              Object {
+                "flex": 0,
+                "height": 17,
+                "width": 17,
+              },
+            ]
+          }
+          vbHeight={1024}
+          vbWidth={1024}
+        >
+          <RNSVGPath
+            d="M512 0c282.7776 0 512 229.2224 512 512s-229.2224 512-512 512S0 794.7776 0 512 229.2224 0 512 0z m0 665.6a76.8 76.8 0 1 0 0 153.6 76.8 76.8 0 0 0 0-153.6z m0-460.8a72.192 72.192 0 0 0-71.9872 76.6464l17.6128 281.856a54.4768 54.4768 0 0 0 108.7488 0l17.6128-281.856A72.192 72.192 0 0 0 512 204.8z"
+            fill={
+              Array [
+                0,
+                0,
+                0,
+                0,
+                1,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            propList={
+              Array [
+                "stroke",
+                "strokeWidth",
+                "fill",
+              ]
+            }
+            stroke={
+              Array [
+                0,
+                0,
+                0,
+                0,
+                1,
+              ]
+            }
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+          />
+        </RNSVGSvgView>
+      </View>
+    </View>
+    <View
+      accessible={true}
+      hitSlop={
+        Object {
+          "bottom": 6,
+          "left": 6,
+          "right": 6,
+          "top": 6,
+        }
+      }
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "height": "100%",
+          "justifyContent": "center",
+          "marginHorizontal": 6,
+          "opacity": 1,
+          "position": "absolute",
+          "right": 58,
+          "width": 17,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            Object {
+              "height": 17,
+              "width": 17,
+            },
+            false,
+            null,
+          ]
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+              false,
+              Object {
+                "flex": 0,
+                "height": 17,
+                "width": 17,
+              },
+            ]
+          }
+          vbHeight={1024}
+          vbWidth={1024}
+        >
+          <RNSVGPath
+            d="M0 960c0-35.328 28.48-64 64-64h896c35.328 0 64 28.416 64 64 0 35.328-28.48 64-64 64H64c-35.328 0-64-28.416-64-64zM640 128l128 128-512 512H160.32A31.808 31.808 0 0 1 128 735.68V640l512-512z m165.952-128c14.912 0 34.176 8.128 44.16 18.176l27.712 27.648c10.304 10.304 18.176 29.824 18.176 44.16v11.968c0 14.912-8.32 34.304-18.56 44.544L800 224l-128-128L749.44 18.56c10.368-10.368 30.208-18.56 44.608-18.56z"
+            fill={
+              Array [
+                0,
+                0,
+                0,
+                0,
+                1,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            propList={
+              Array [
+                "stroke",
+                "strokeWidth",
+                "fill",
+              ]
+            }
+            stroke={
+              Array [
+                0,
+                0,
+                0,
+                0,
+                1,
+              ]
+            }
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+          />
+        </RNSVGSvgView>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`TopBar Component render multiple actions 2`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignSelf": "stretch",
+        "height": 88,
+      },
+      Array [
+        Object {
+          "backgroundColor": "blue",
+        },
+        Object {
+          "marginTop": 24,
+        },
+      ],
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "alignSelf": "stretch",
+          "flexDirection": "row",
+          "height": 44,
+          "justifyContent": "space-between",
+          "marginTop": 44,
+        },
+        Array [
+          Object {
+            "marginHorizontal": 6,
+          },
+          null,
+        ],
+      ]
+    }
+  >
+    <View
+      accessible={true}
+      hitSlop={
+        Object {
+          "bottom": 6,
+          "left": 6,
+          "right": 6,
+          "top": 6,
+        }
+      }
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "height": "100%",
+          "justifyContent": "center",
+          "left": 0,
+          "marginHorizontal": 6,
+          "opacity": 1,
+          "position": "absolute",
+          "width": 17,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            Object {
+              "height": 17,
+              "width": 17,
+            },
+            false,
+            null,
+          ]
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+              false,
+              Object {
+                "flex": 0,
+                "height": 17,
+                "width": 17,
+              },
+            ]
+          }
+          vbHeight={1024}
+          vbWidth={1024}
+        >
+          <RNSVGPath
+            d="M770.673778 21.959111a56.888889 56.888889 0 0 1 0 80.440889l-402.204445 402.318222 402.204445 402.204445a56.888889 56.888889 0 0 1-80.440889 80.497777L247.751111 544.938667a56.888889 56.888889 0 0 1 0-80.497778L690.232889 21.959111a56.888889 56.888889 0 0 1 80.440889 0z"
+            fill={
+              Array [
+                0,
+                0,
+                0,
+                0,
+                1,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            propList={
+              Array [
+                "stroke",
+                "strokeWidth",
+                "fill",
+              ]
+            }
+            stroke={
+              Array [
+                0,
+                0,
+                0,
+                0,
+                1,
+              ]
+            }
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+          />
+        </RNSVGSvgView>
+      </View>
+    </View>
+    <View
+      accessible={true}
+      hitSlop={null}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "height": "100%",
+          "justifyContent": "center",
+          "left": 29,
+          "marginHorizontal": 6,
+          "maxWidth": 78,
+          "opacity": 1,
+          "position": "absolute",
+          "width": null,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color="red"
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        size={16}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "red",
+              "fontSize": 16,
+            },
+            Array [
+              Object {
+                "color": "red",
+                "fontSize": 16,
+              },
+              null,
+            ],
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        定时
+      </Text>
+    </View>
+    <View
+      accessibilityLabel="TopBar_Btn_Title"
+      accessible={true}
+      align="center"
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "alignSelf": "center",
+            "height": "100%",
+            "justifyContent": "center",
+            "position": "absolute",
+          },
+          Object {
+            "left": 119,
+            "right": 119,
+            "width": 512,
+          },
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        size={17}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 17,
+            },
+            Array [
+              Object {
+                "color": "#000",
+                "fontWeight": "500",
+              },
+              null,
+            ],
+          ]
+        }
+        type="title"
+        weight={null}
+      >
+        Very Very Very Very Very Long Title
+      </Text>
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        size="normal"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 17,
+              "lineHeight": 24,
+            },
+            Array [
+              Object {
+                "color": "#000",
+              },
+              null,
+            ],
+          ]
+        }
+        type="paragraph"
+        weight={null}
+      >
+        SubTitle
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      hitSlop={
+        Object {
+          "bottom": 6,
+          "left": 6,
+          "right": 6,
+          "top": 6,
+        }
+      }
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "height": "100%",
+          "justifyContent": "center",
+          "marginHorizontal": 6,
+          "opacity": 1,
+          "position": "absolute",
+          "right": 0,
+          "width": 17,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            Object {
+              "height": 17,
+              "width": 17,
+            },
+            false,
+            null,
+          ]
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+              false,
+              Object {
+                "flex": 0,
+                "height": 17,
+                "width": 17,
+              },
+            ]
+          }
+          vbHeight={1024}
+          vbWidth={1024}
+        >
+          <RNSVGPath
+            d="M512 85.333333a42.666667 42.666667 0 0 1 42.666667 42.666667v341.333333h341.333333a42.666667 42.666667 0 0 1 0 85.333334h-341.376L554.666667 896a42.666667 42.666667 0 0 1-85.333334 0l-0.042666-341.333333H128a42.666667 42.666667 0 0 1 0-85.333334h341.333333V128a42.666667 42.666667 0 0 1 42.666667-42.666667z"
+            fill={
+              Array [
+                0,
+                0,
+                0,
+                0,
+                1,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            propList={
+              Array [
+                "stroke",
+                "strokeWidth",
+                "fill",
+              ]
+            }
+            stroke={
+              Array [
+                0,
+                0,
+                0,
+                0,
+                1,
+              ]
+            }
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+          />
+        </RNSVGSvgView>
+      </View>
+    </View>
+    <View
+      accessible={true}
+      hitSlop={
+        Object {
+          "bottom": 6,
+          "left": 6,
+          "right": 6,
+          "top": 6,
+        }
+      }
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "height": "100%",
+          "justifyContent": "center",
+          "marginHorizontal": 6,
+          "opacity": 1,
+          "position": "absolute",
+          "right": 29,
+          "width": 17,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            Object {
+              "height": 17,
+              "width": 17,
+            },
+            false,
+            null,
+          ]
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+              false,
+              Object {
+                "flex": 0,
+                "height": 17,
+                "width": 17,
+              },
+            ]
+          }
+          vbHeight={1024}
+          vbWidth={1024}
+        >
+          <RNSVGPath
+            d="M512 0c282.7776 0 512 229.2224 512 512s-229.2224 512-512 512S0 794.7776 0 512 229.2224 0 512 0z m0 665.6a76.8 76.8 0 1 0 0 153.6 76.8 76.8 0 0 0 0-153.6z m0-460.8a72.192 72.192 0 0 0-71.9872 76.6464l17.6128 281.856a54.4768 54.4768 0 0 0 108.7488 0l17.6128-281.856A72.192 72.192 0 0 0 512 204.8z"
+            fill={
+              Array [
+                0,
+                0,
+                0,
+                0,
+                1,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            propList={
+              Array [
+                "stroke",
+                "strokeWidth",
+                "fill",
+              ]
+            }
+            stroke={
+              Array [
+                0,
+                0,
+                0,
+                0,
+                1,
+              ]
+            }
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+          />
+        </RNSVGSvgView>
+      </View>
+    </View>
+    <View
+      accessible={true}
+      hitSlop={
+        Object {
+          "bottom": 6,
+          "left": 6,
+          "right": 6,
+          "top": 6,
+        }
+      }
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "height": "100%",
+          "justifyContent": "center",
+          "marginHorizontal": 6,
+          "opacity": 1,
+          "position": "absolute",
+          "right": 58,
+          "width": 17,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            Object {
+              "height": 17,
+              "width": 17,
+            },
+            false,
+            null,
+          ]
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+              false,
+              Object {
+                "flex": 0,
+                "height": 17,
+                "width": 17,
+              },
+            ]
+          }
+          vbHeight={1024}
+          vbWidth={1024}
+        >
+          <RNSVGPath
+            d="M0 960c0-35.328 28.48-64 64-64h896c35.328 0 64 28.416 64 64 0 35.328-28.48 64-64 64H64c-35.328 0-64-28.416-64-64zM640 128l128 128-512 512H160.32A31.808 31.808 0 0 1 128 735.68V640l512-512z m165.952-128c14.912 0 34.176 8.128 44.16 18.176l27.712 27.648c10.304 10.304 18.176 29.824 18.176 44.16v11.968c0 14.912-8.32 34.304-18.56 44.544L800 224l-128-128L749.44 18.56c10.368-10.368 30.208-18.56 44.608-18.56z"
+            fill={
+              Array [
+                0,
+                0,
+                0,
+                0,
+                1,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            propList={
+              Array [
+                "stroke",
+                "strokeWidth",
+                "fill",
+              ]
+            }
+            stroke={
+              Array [
+                0,
+                0,
+                0,
+                0,
+                1,
+              ]
+            }
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+          />
+        </RNSVGSvgView>
+      </View>
+    </View>
+  </View>
+</View>
+`;

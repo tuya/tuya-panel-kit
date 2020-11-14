@@ -1,11 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  ViewPropTypes,
-} from 'react-native';
+import { View, Text, StyleSheet, ViewPropTypes } from 'react-native';
 import { SwitchButton } from 'tuya-panel-kit';
 
 export default class ControlBoolean extends Component {
@@ -14,23 +9,18 @@ export default class ControlBoolean extends Component {
     title: PropTypes.string.isRequired,
     value: PropTypes.bool.isRequired,
     ...SwitchButton.propTypes,
-  }
+  };
 
   static defaultProps = {
     style: null,
-  }
+  };
 
   shouldComponentUpdate(nextProps) {
     return this.props.value !== nextProps.value;
   }
 
   render() {
-    const {
-      style,
-      value,
-      title,
-      ...SwitchButtonProps
-    } = this.props;
+    const { style, value, title, ...SwitchButtonProps } = this.props;
     return (
       <View style={[styles.container, style]}>
         <Text style={styles.text} numberOfLines={1}>

@@ -9,17 +9,20 @@ export const startGesture = createAction(START_GESTURE);
 export const stopGesture = createAction(STOP_GESTURE);
 
 // Reducers
-const uiState = handleActions({
-  [START_GESTURE]: () => ({
-    gesturing: true,
-  }),
+const uiState = handleActions(
+  {
+    [START_GESTURE]: () => ({
+      gesturing: true,
+    }),
 
-  [STOP_GESTURE]: () => ({
+    [STOP_GESTURE]: () => ({
+      gesturing: false,
+    }),
+  },
+  {
     gesturing: false,
-  }),
-}, {
-  gesturing: false,
-});
+  }
+);
 
 export const reducers = {
   uiState,

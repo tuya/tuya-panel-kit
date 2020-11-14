@@ -19,43 +19,45 @@ export const deviceChange = createAction('_DEVICECHANGED_');
 export const responseUpdateDp = createAction('RESPONSE_UPDATE_DP');
 export const updateDp = createAction('CHANGE_DP');
 
-
 // reducer
-const dpState = handleActions({
-  [devInfoChange.toString()]: (state, action) => ({
-    ...state,
-    ...action.payload.state,
-  }),
+const dpState = handleActions(
+  {
+    [devInfoChange.toString()]: (state, action) => ({
+      ...state,
+      ...action.payload.state,
+    }),
 
-  [responseUpdateDp.toString()]: (state, action) => ({
-    ...state,
-    ...action.payload,
-  }),
+    [responseUpdateDp.toString()]: (state, action) => ({
+      ...state,
+      ...action.payload,
+    }),
+  },
+  {}
+);
 
-}, {});
+const devInfo = handleActions(
+  {
+    [devInfoChange.toString()]: (state, action) => ({
+      ...state,
+      ...action.payload,
+    }),
 
-const devInfo = handleActions({
-  [devInfoChange.toString()]: (state, action) => ({
-    ...state,
-    ...action.payload,
-  }),
-
-  [deviceChange.toString()]: (state, action) => ({
-    ...state,
-    ...action.payload,
-  }),
-
-}, {});
+    [deviceChange.toString()]: (state, action) => ({
+      ...state,
+      ...action.payload,
+    }),
+  },
+  {}
+);
 
 export const reducers = {
   dpState,
   devInfo,
 };
 
-
 // epics
-const dpUpdateEpic$ = action$ => action$.ofType(updateDp)
-  .mergeMap(action => {
+const dpUpdateEpic$ = action$ =>
+  action$.ofType(updateDp).mergeMap(action => {
     const { payload } = action;
     const [success, error] = Observable.fromPromise(putDeviceData(payload))
       .catch(err => Observable.of(responseUpdateDp({})))
@@ -67,7 +69,4 @@ const dpUpdateEpic$ = action$ => action$.ofType(updateDp)
     );
   });
 
-
-export const epics = [
-  dpUpdateEpic$,
-];
+export const epics = [dpUpdateEpic$];

@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Motion Render basic render 1`] = `
+<View
+  style={
+    Object {
+      "bottom": 0,
+      "position": "absolute",
+      "transform": Array [
+        Object {
+          "translateY": 200,
+        },
+      ],
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "height": 48,
+        "width": 120,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Motion Render invisible render 1`] = `null`;
+
+exports[`Motion Render onHide render 1`] = `
+<View
+  style={
+    Object {
+      "bottom": 0,
+      "position": "absolute",
+      "transform": Array [
+        Object {
+          "translateY": 200,
+        },
+      ],
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "height": 48,
+        "width": 120,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Motion Render onHide render 2`] = `null`;
+
+exports[`Motion Render onShow render 1`] = `null`;
+
+exports[`Motion Render onShow render 2`] = `null`;

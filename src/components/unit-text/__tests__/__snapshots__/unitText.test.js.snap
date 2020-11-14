@@ -1,0 +1,1671 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UnitText Component  render width isRtl 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "justifyContent": "center",
+      },
+      Object {
+        "flexDirection": "row-reverse",
+      },
+      null,
+    ]
+  }
+  unitType="icon"
+/>
+`;
+
+exports[`UnitText Component  render width unit 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "justifyContent": "center",
+      },
+      Object {
+        "flexDirection": "row-reverse",
+      },
+      null,
+    ]
+  }
+  unitType="icon"
+/>
+`;
+
+exports[`UnitText Component  render width unit 2`] = `
+<View
+  style={
+    Array [
+      Object {
+        "justifyContent": "center",
+      },
+      Object {
+        "flexDirection": "row-reverse",
+      },
+      null,
+    ]
+  }
+  unitType="text"
+>
+  <Text
+    accessible={true}
+    align={null}
+    allowFontScaling={false}
+    color={null}
+    ellipsizeMode="tail"
+    size={24}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "color": "#333",
+          "fontSize": 24,
+        },
+        Array [
+          Object {
+            "color": "white",
+            "fontSize": 24,
+          },
+          Array [
+            Object {
+              "marginRight": -14.399999999999999,
+              "marginTop": 0,
+            },
+          ],
+        ],
+      ]
+    }
+    type={null}
+    weight={null}
+  >
+    C
+  </Text>
+</View>
+`;
+
+exports[`UnitText Component  render width value 1`] = `null`;
+
+exports[`UnitText Component basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "justifyContent": "center",
+      },
+      Object {
+        "flexDirection": "row",
+      },
+      null,
+    ]
+  }
+  unitType="icon"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+        },
+        Object {
+          "height": 48,
+          "width": 48,
+        },
+        false,
+        Array [
+          false,
+        ],
+      ]
+    }
+  >
+    <RNSVGSvgView
+      align="xMidYMid"
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+          },
+          undefined,
+          false,
+          Object {
+            "flex": 0,
+            "height": 48,
+            "width": 48,
+          },
+        ]
+      }
+      vbHeight={1024}
+      vbWidth={1024}
+    >
+      <RNSVGPath
+        d="M535.272727 0h139.636364v1024H535.272727V186.181818L349.090909 325.818182V139.636364z"
+        fill={
+          Array [
+            0,
+            1,
+            1,
+            1,
+            1,
+          ]
+        }
+        fillOpacity={1}
+        fillRule={1}
+        matrix={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+        opacity={1}
+        propList={
+          Array [
+            "stroke",
+            "strokeWidth",
+            "fill",
+          ]
+        }
+        stroke={
+          Array [
+            0,
+            1,
+            1,
+            1,
+            1,
+          ]
+        }
+        strokeDasharray={null}
+        strokeDashoffset={null}
+        strokeLinecap={0}
+        strokeLinejoin={0}
+        strokeMiterlimit={4}
+        strokeOpacity={1}
+        strokeWidth={1}
+      />
+    </RNSVGSvgView>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+        },
+        Object {
+          "height": 24,
+          "width": 24,
+        },
+        false,
+        Array [
+          Object {
+            "marginLeft": -14.399999999999999,
+            "marginTop": 0,
+          },
+        ],
+      ]
+    }
+  >
+    <RNSVGSvgView
+      align="xMidYMid"
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+          },
+          undefined,
+          false,
+          Object {
+            "flex": 0,
+            "height": 24,
+            "width": 24,
+          },
+        ]
+      }
+      vbHeight={1024}
+      vbWidth={1024}
+    >
+      <RNSVGPath
+        d="℃"
+        fill={
+          Array [
+            0,
+            1,
+            1,
+            1,
+            1,
+          ]
+        }
+        fillOpacity={1}
+        fillRule={1}
+        matrix={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+        opacity={1}
+        propList={
+          Array [
+            "stroke",
+            "strokeWidth",
+            "fill",
+          ]
+        }
+        stroke={
+          Array [
+            0,
+            1,
+            1,
+            1,
+            1,
+          ]
+        }
+        strokeDasharray={null}
+        strokeDashoffset={null}
+        strokeLinecap={0}
+        strokeLinejoin={0}
+        strokeMiterlimit={4}
+        strokeOpacity={1}
+        strokeWidth={1}
+      />
+    </RNSVGSvgView>
+  </View>
+</View>
+`;
+
+exports[`UnitText Component basic render 2`] = `
+<View
+  style={
+    Array [
+      Object {
+        "justifyContent": "center",
+      },
+      Object {
+        "flexDirection": "row",
+      },
+      Object {
+        "marginRight": 50,
+      },
+    ]
+  }
+  unitType="icon"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+        },
+        Object {
+          "height": 41,
+          "width": 41,
+        },
+        false,
+        Array [
+          Object {
+            "marginLeft": -24.599999999999998,
+            "marginTop": 0,
+          },
+        ],
+      ]
+    }
+  >
+    <RNSVGSvgView
+      align="xMidYMid"
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+          },
+          undefined,
+          false,
+          Object {
+            "flex": 0,
+            "height": 41,
+            "width": 41,
+          },
+        ]
+      }
+      vbHeight={1024}
+      vbWidth={1024}
+    >
+      <RNSVGPath
+        d="M603.701493 794.746269a76.41791 76.41791 0 0 1 76.41791 76.41791v76.417911a76.41791 76.41791 0 0 1-76.41791 76.41791h-30.567165a76.41791 76.41791 0 0 1-76.41791-76.41791v-76.417911a76.41791 76.41791 0 0 1 76.41791-76.41791h30.567165z m61.134328-794.746269L420.298507 1024H359.164179L603.701493 0h61.134328z m-61.134328 855.880597h-30.567165a15.283582 15.283582 0 0 0-15.283582 15.283582v76.417911a15.283582 15.283582 0 0 0 15.283582 15.283582h30.567165a15.283582 15.283582 0 0 0 15.283582-15.283582v-76.417911a15.283582 15.283582 0 0 0-15.283582-15.283582zM450.865672 0a76.41791 76.41791 0 0 1 76.41791 76.41791v76.417911a76.41791 76.41791 0 0 1-76.41791 76.41791H420.298507a76.41791 76.41791 0 0 1-76.41791-76.41791V76.41791a76.41791 76.41791 0 0 1 76.41791-76.41791h30.567165z m0 61.134328H420.298507a15.283582 15.283582 0 0 0-15.283582 15.283582v76.417911a15.283582 15.283582 0 0 0 15.283582 15.283582h30.567165a15.283582 15.283582 0 0 0 15.283582-15.283582V76.41791a15.283582 15.283582 0 0 0-15.283582-15.283582z"
+        fill={
+          Array [
+            0,
+            0,
+            0.5019607843137255,
+            0,
+            1,
+          ]
+        }
+        fillOpacity={1}
+        fillRule={1}
+        matrix={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+        opacity={1}
+        propList={
+          Array [
+            "stroke",
+            "strokeWidth",
+            "fill",
+          ]
+        }
+        stroke={
+          Array [
+            0,
+            0,
+            0.5019607843137255,
+            0,
+            1,
+          ]
+        }
+        strokeDasharray={null}
+        strokeDashoffset={null}
+        strokeLinecap={0}
+        strokeLinejoin={0}
+        strokeMiterlimit={4}
+        strokeOpacity={1}
+        strokeWidth={1}
+      />
+    </RNSVGSvgView>
+  </View>
+</View>
+`;
+
+exports[`UnitText Component: useArt  render width unit 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "justifyContent": "center",
+      },
+      Object {
+        "flexDirection": "row-reverse",
+      },
+      null,
+    ]
+  }
+  symbols={
+    Array [
+      "t",
+      "y",
+    ]
+  }
+  unitType="icon"
+/>
+`;
+
+exports[`UnitText Component: useArt  render width unit 2`] = `
+<View
+  style={
+    Array [
+      Object {
+        "justifyContent": "center",
+      },
+      Object {
+        "flexDirection": "row-reverse",
+      },
+      null,
+    ]
+  }
+  symbols={
+    Array [
+      "t",
+      "y",
+    ]
+  }
+  unitType="text"
+>
+  <Text
+    accessible={true}
+    align={null}
+    allowFontScaling={false}
+    color={null}
+    ellipsizeMode="tail"
+    size={24}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "color": "#333",
+          "fontSize": 24,
+        },
+        Array [
+          Object {
+            "color": "white",
+            "fontSize": 24,
+          },
+          Array [
+            Object {
+              "marginRight": -20.88,
+              "marginTop": 0,
+            },
+          ],
+        ],
+      ]
+    }
+    type={null}
+    weight={null}
+  >
+    C
+  </Text>
+</View>
+`;
+
+exports[`UnitText Component: useArt basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "justifyContent": "center",
+      },
+      Object {
+        "flexDirection": "row-reverse",
+      },
+      null,
+    ]
+  }
+  unitType="icon"
+>
+  <View
+    style={
+      Object {
+        "height": 48,
+        "width": 48,
+      }
+    }
+  >
+    <ARTSurfaceView
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+          },
+          Object {
+            "height": 48,
+            "width": 48,
+          },
+        ]
+      }
+    >
+      <ARTShape
+        d={
+          Array [
+            0,
+            464.258,
+            650.506,
+            2,
+            359.81399999999996,
+            573.7099999999999,
+            2,
+            359.81399999999996,
+            684.2979999999999,
+            2,
+            464.258,
+            761.0939999999999,
+            2,
+            568.702,
+            761.0939999999999,
+            2,
+            568.702,
+            32.035999999999945,
+            2,
+            464.258,
+            32.035999999999945,
+            1,
+          ]
+        }
+        fill={
+          Array [
+            0,
+            1,
+            1,
+            1,
+            1,
+          ]
+        }
+        opacity={1}
+        stroke={
+          Array [
+            1,
+            1,
+            1,
+            1,
+          ]
+        }
+        strokeCap={1}
+        strokeDash={
+          Array [
+            0,
+            0,
+          ]
+        }
+        strokeJoin={1}
+        strokeWidth={1}
+        transform={
+          Array [
+            0.046875,
+            0,
+            0,
+            -0.046875,
+            0,
+            42,
+          ]
+        }
+      />
+    </ARTSurfaceView>
+  </View>
+  <View
+    style={
+      Object {
+        "height": 24,
+        "width": 24,
+      }
+    }
+  >
+    <ARTSurfaceView
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "marginRight": -20.88,
+            "marginTop": 0,
+          },
+          Object {
+            "height": 24,
+            "width": 24,
+          },
+        ]
+      }
+    >
+      <ARTShape
+        d={Array []}
+        fill={
+          Array [
+            0,
+            1,
+            1,
+            1,
+            1,
+          ]
+        }
+        opacity={1}
+        stroke={
+          Array [
+            1,
+            1,
+            1,
+            1,
+          ]
+        }
+        strokeCap={1}
+        strokeDash={
+          Array [
+            0,
+            0,
+          ]
+        }
+        strokeJoin={1}
+        strokeWidth={1}
+        transform={
+          Array [
+            0.0234375,
+            0,
+            0,
+            -0.0234375,
+            0,
+            21,
+          ]
+        }
+      />
+    </ARTSurfaceView>
+  </View>
+</View>
+`;
+
+exports[`UnitText Component: useArt basic render 2`] = `
+<View
+  style={
+    Array [
+      Object {
+        "justifyContent": "center",
+      },
+      Object {
+        "flexDirection": "row-reverse",
+      },
+      Object {
+        "marginRight": 50,
+      },
+    ]
+  }
+  unitType="icon"
+>
+  <View
+    style={
+      Object {
+        "height": 48,
+        "width": 48,
+      }
+    }
+  >
+    <ARTSurfaceView
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "marginRight": -41.76,
+            "marginTop": 0,
+          },
+          Object {
+            "height": 48,
+            "width": 48,
+          },
+        ]
+      }
+    >
+      <ARTShape
+        d={
+          Array [
+            0,
+            623.6,
+            824.6,
+            2,
+            705.4,
+            824.6,
+            2,
+            403,
+            -57.799999999999955,
+            2,
+            321.2,
+            -57.799999999999955,
+            2,
+            623.5999999999999,
+            824.6,
+            1,
+            0,
+            615,
+            -65.3,
+            3,
+            582.8,
+            -65.3,
+            557.2,
+            -56.599999999999994,
+            538.2,
+            -39.3,
+            3,
+            519.2,
+            -22,
+            509.70000000000005,
+            0.8000000000000043,
+            509.70000000000005,
+            28.900000000000006,
+            2,
+            509.70000000000005,
+            109.5,
+            3,
+            509.70000000000005,
+            140.9,
+            519.2,
+            165.7,
+            538.2,
+            183.9,
+            3,
+            557.2,
+            202.1,
+            582.8000000000001,
+            211.20000000000002,
+            615,
+            211.20000000000002,
+            3,
+            647.1999999999999,
+            211.20000000000002,
+            672.8,
+            202.10000000000002,
+            691.8,
+            183.9,
+            3,
+            710.8,
+            165.70000000000002,
+            720.3,
+            140.9,
+            720.3,
+            109.5,
+            2,
+            720.3,
+            28.900000000000006,
+            3,
+            720.3,
+            0.8000000000000043,
+            710.8,
+            -21.89999999999999,
+            691.8,
+            -39.3,
+            3,
+            672.8,
+            -56.599999999999994,
+            647.1999999999999,
+            -65.3,
+            615,
+            -65.3,
+            1,
+            0,
+            584,
+            41.3,
+            3,
+            584,
+            32.199999999999996,
+            587.1,
+            24.599999999999998,
+            593.3,
+            18.4,
+            3,
+            599.4999999999999,
+            12.2,
+            606.6999999999999,
+            9.099999999999998,
+            615,
+            9.099999999999998,
+            3,
+            623.3,
+            9.099999999999998,
+            630.5,
+            12.199999999999998,
+            636.7,
+            18.4,
+            3,
+            642.9000000000001,
+            24.6,
+            646,
+            32.2,
+            646,
+            41.3,
+            2,
+            646,
+            104.5,
+            3,
+            646,
+            113.6,
+            642.9,
+            121.2,
+            636.7,
+            127.4,
+            3,
+            630.5000000000001,
+            133.60000000000002,
+            623.3000000000001,
+            136.70000000000002,
+            615,
+            136.70000000000002,
+            3,
+            606.7,
+            136.70000000000002,
+            599.5,
+            133.60000000000002,
+            593.3,
+            127.40000000000002,
+            3,
+            587.0999999999999,
+            121.20000000000002,
+            584,
+            113.60000000000002,
+            584,
+            104.50000000000003,
+            2,
+            584,
+            41.300000000000026,
+            1,
+            0,
+            411.7,
+            555.7,
+            3,
+            379.5,
+            555.7,
+            353.9,
+            564.4000000000001,
+            334.9,
+            581.7,
+            3,
+            315.9,
+            599.1,
+            306.4,
+            621.8000000000001,
+            306.4,
+            649.9000000000001,
+            2,
+            306.4,
+            730.5000000000001,
+            3,
+            306.4,
+            761.9000000000001,
+            315.9,
+            786.7000000000002,
+            334.9,
+            804.9000000000001,
+            3,
+            353.9,
+            823.1,
+            379.5,
+            832.2,
+            411.7,
+            832.2,
+            3,
+            443.9,
+            832.2,
+            469.5,
+            823.1,
+            488.5,
+            804.9000000000001,
+            3,
+            507.5,
+            786.7,
+            517,
+            761.9000000000001,
+            517,
+            730.5000000000001,
+            2,
+            517,
+            649.9000000000001,
+            3,
+            517,
+            621.8000000000001,
+            507.5,
+            599.1000000000001,
+            488.5,
+            581.7,
+            3,
+            469.6,
+            564.3000000000001,
+            443.9,
+            555.7,
+            411.7,
+            555.7,
+            1,
+            0,
+            411.7,
+            630,
+            3,
+            420,
+            630,
+            427.2,
+            633.1,
+            433.4,
+            639.3,
+            3,
+            439.59999999999997,
+            645.5,
+            442.7,
+            653.0999999999999,
+            442.7,
+            662.1999999999999,
+            2,
+            442.7,
+            725.4,
+            3,
+            442.7,
+            734.5,
+            439.59999999999997,
+            742.1,
+            433.4,
+            748.3,
+            3,
+            427.2,
+            754.5,
+            420,
+            757.5999999999999,
+            411.7,
+            757.5999999999999,
+            3,
+            403.4,
+            757.5999999999999,
+            396.2,
+            754.4999999999999,
+            390,
+            748.3,
+            3,
+            383.8,
+            742.0999999999999,
+            380.7,
+            734.5,
+            380.7,
+            725.4,
+            2,
+            380.7,
+            662.1999999999999,
+            3,
+            380.7,
+            653.0999999999999,
+            383.8,
+            645.4999999999999,
+            390,
+            639.3,
+            3,
+            396.2,
+            633.1,
+            403.5,
+            630,
+            411.7,
+            630,
+            1,
+          ]
+        }
+        fill={
+          Array [
+            0,
+            0,
+            0.5019607843137255,
+            0,
+            1,
+          ]
+        }
+        opacity={1}
+        stroke={
+          Array [
+            0,
+            0.5019607843137255,
+            0,
+            1,
+          ]
+        }
+        strokeCap={1}
+        strokeDash={
+          Array [
+            0,
+            0,
+          ]
+        }
+        strokeJoin={1}
+        strokeWidth={1}
+        transform={
+          Array [
+            0.046875,
+            0,
+            0,
+            -0.046875,
+            0,
+            42,
+          ]
+        }
+      />
+    </ARTSurfaceView>
+  </View>
+</View>
+`;
+
+exports[`UnitText Component: useArt render with unit 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "justifyContent": "center",
+      },
+      Object {
+        "flexDirection": "row-reverse",
+      },
+      null,
+    ]
+  }
+  unitType="icon"
+>
+  <View
+    style={
+      Object {
+        "height": 48,
+        "width": 48,
+      }
+    }
+  >
+    <ARTSurfaceView
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+          },
+          Object {
+            "height": 48,
+            "width": 48,
+          },
+        ]
+      }
+    >
+      <ARTShape
+        d={
+          Array [
+            0,
+            464.258,
+            650.506,
+            2,
+            359.81399999999996,
+            573.7099999999999,
+            2,
+            359.81399999999996,
+            684.2979999999999,
+            2,
+            464.258,
+            761.0939999999999,
+            2,
+            568.702,
+            761.0939999999999,
+            2,
+            568.702,
+            32.035999999999945,
+            2,
+            464.258,
+            32.035999999999945,
+            1,
+          ]
+        }
+        fill={
+          Array [
+            0,
+            1,
+            1,
+            1,
+            1,
+          ]
+        }
+        opacity={1}
+        stroke={
+          Array [
+            1,
+            1,
+            1,
+            1,
+          ]
+        }
+        strokeCap={1}
+        strokeDash={
+          Array [
+            0,
+            0,
+          ]
+        }
+        strokeJoin={1}
+        strokeWidth={1}
+        transform={
+          Array [
+            0.046875,
+            0,
+            0,
+            -0.046875,
+            0,
+            42,
+          ]
+        }
+      />
+    </ARTSurfaceView>
+  </View>
+</View>
+`;
+
+exports[`UnitText Component: useArt render with update 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "justifyContent": "center",
+      },
+      Object {
+        "flexDirection": "row-reverse",
+      },
+      null,
+    ]
+  }
+  unitType="icon"
+>
+  <View
+    style={
+      Object {
+        "height": 48,
+        "width": 48,
+      }
+    }
+  >
+    <ARTSurfaceView
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+          },
+          Object {
+            "height": 48,
+            "width": 48,
+          },
+        ]
+      }
+    >
+      <ARTShape
+        d={
+          Array [
+            0,
+            464.258,
+            650.506,
+            2,
+            359.81399999999996,
+            573.7099999999999,
+            2,
+            359.81399999999996,
+            684.2979999999999,
+            2,
+            464.258,
+            761.0939999999999,
+            2,
+            568.702,
+            761.0939999999999,
+            2,
+            568.702,
+            32.035999999999945,
+            2,
+            464.258,
+            32.035999999999945,
+            1,
+          ]
+        }
+        fill={
+          Array [
+            0,
+            1,
+            1,
+            1,
+            1,
+          ]
+        }
+        opacity={1}
+        stroke={
+          Array [
+            1,
+            1,
+            1,
+            1,
+          ]
+        }
+        strokeCap={1}
+        strokeDash={
+          Array [
+            0,
+            0,
+          ]
+        }
+        strokeJoin={1}
+        strokeWidth={1}
+        transform={
+          Array [
+            0.046875,
+            0,
+            0,
+            -0.046875,
+            0,
+            42,
+          ]
+        }
+      />
+    </ARTSurfaceView>
+  </View>
+  <View
+    style={
+      Object {
+        "height": 24,
+        "width": 24,
+      }
+    }
+  >
+    <ARTSurfaceView
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "marginRight": -20.88,
+            "marginTop": 0,
+          },
+          Object {
+            "height": 24,
+            "width": 24,
+          },
+        ]
+      }
+    >
+      <ARTShape
+        d={
+          Array [
+            0,
+            623.6,
+            824.6,
+            2,
+            705.4,
+            824.6,
+            2,
+            403,
+            -57.799999999999955,
+            2,
+            321.2,
+            -57.799999999999955,
+            2,
+            623.5999999999999,
+            824.6,
+            1,
+            0,
+            615,
+            -65.3,
+            3,
+            582.8,
+            -65.3,
+            557.2,
+            -56.599999999999994,
+            538.2,
+            -39.3,
+            3,
+            519.2,
+            -22,
+            509.70000000000005,
+            0.8000000000000043,
+            509.70000000000005,
+            28.900000000000006,
+            2,
+            509.70000000000005,
+            109.5,
+            3,
+            509.70000000000005,
+            140.9,
+            519.2,
+            165.7,
+            538.2,
+            183.9,
+            3,
+            557.2,
+            202.1,
+            582.8000000000001,
+            211.20000000000002,
+            615,
+            211.20000000000002,
+            3,
+            647.1999999999999,
+            211.20000000000002,
+            672.8,
+            202.10000000000002,
+            691.8,
+            183.9,
+            3,
+            710.8,
+            165.70000000000002,
+            720.3,
+            140.9,
+            720.3,
+            109.5,
+            2,
+            720.3,
+            28.900000000000006,
+            3,
+            720.3,
+            0.8000000000000043,
+            710.8,
+            -21.89999999999999,
+            691.8,
+            -39.3,
+            3,
+            672.8,
+            -56.599999999999994,
+            647.1999999999999,
+            -65.3,
+            615,
+            -65.3,
+            1,
+            0,
+            584,
+            41.3,
+            3,
+            584,
+            32.199999999999996,
+            587.1,
+            24.599999999999998,
+            593.3,
+            18.4,
+            3,
+            599.4999999999999,
+            12.2,
+            606.6999999999999,
+            9.099999999999998,
+            615,
+            9.099999999999998,
+            3,
+            623.3,
+            9.099999999999998,
+            630.5,
+            12.199999999999998,
+            636.7,
+            18.4,
+            3,
+            642.9000000000001,
+            24.6,
+            646,
+            32.2,
+            646,
+            41.3,
+            2,
+            646,
+            104.5,
+            3,
+            646,
+            113.6,
+            642.9,
+            121.2,
+            636.7,
+            127.4,
+            3,
+            630.5000000000001,
+            133.60000000000002,
+            623.3000000000001,
+            136.70000000000002,
+            615,
+            136.70000000000002,
+            3,
+            606.7,
+            136.70000000000002,
+            599.5,
+            133.60000000000002,
+            593.3,
+            127.40000000000002,
+            3,
+            587.0999999999999,
+            121.20000000000002,
+            584,
+            113.60000000000002,
+            584,
+            104.50000000000003,
+            2,
+            584,
+            41.300000000000026,
+            1,
+            0,
+            411.7,
+            555.7,
+            3,
+            379.5,
+            555.7,
+            353.9,
+            564.4000000000001,
+            334.9,
+            581.7,
+            3,
+            315.9,
+            599.1,
+            306.4,
+            621.8000000000001,
+            306.4,
+            649.9000000000001,
+            2,
+            306.4,
+            730.5000000000001,
+            3,
+            306.4,
+            761.9000000000001,
+            315.9,
+            786.7000000000002,
+            334.9,
+            804.9000000000001,
+            3,
+            353.9,
+            823.1,
+            379.5,
+            832.2,
+            411.7,
+            832.2,
+            3,
+            443.9,
+            832.2,
+            469.5,
+            823.1,
+            488.5,
+            804.9000000000001,
+            3,
+            507.5,
+            786.7,
+            517,
+            761.9000000000001,
+            517,
+            730.5000000000001,
+            2,
+            517,
+            649.9000000000001,
+            3,
+            517,
+            621.8000000000001,
+            507.5,
+            599.1000000000001,
+            488.5,
+            581.7,
+            3,
+            469.6,
+            564.3000000000001,
+            443.9,
+            555.7,
+            411.7,
+            555.7,
+            1,
+            0,
+            411.7,
+            630,
+            3,
+            420,
+            630,
+            427.2,
+            633.1,
+            433.4,
+            639.3,
+            3,
+            439.59999999999997,
+            645.5,
+            442.7,
+            653.0999999999999,
+            442.7,
+            662.1999999999999,
+            2,
+            442.7,
+            725.4,
+            3,
+            442.7,
+            734.5,
+            439.59999999999997,
+            742.1,
+            433.4,
+            748.3,
+            3,
+            427.2,
+            754.5,
+            420,
+            757.5999999999999,
+            411.7,
+            757.5999999999999,
+            3,
+            403.4,
+            757.5999999999999,
+            396.2,
+            754.4999999999999,
+            390,
+            748.3,
+            3,
+            383.8,
+            742.0999999999999,
+            380.7,
+            734.5,
+            380.7,
+            725.4,
+            2,
+            380.7,
+            662.1999999999999,
+            3,
+            380.7,
+            653.0999999999999,
+            383.8,
+            645.4999999999999,
+            390,
+            639.3,
+            3,
+            396.2,
+            633.1,
+            403.5,
+            630,
+            411.7,
+            630,
+            1,
+          ]
+        }
+        fill={
+          Array [
+            0,
+            1,
+            1,
+            1,
+            1,
+          ]
+        }
+        opacity={1}
+        stroke={
+          Array [
+            1,
+            1,
+            1,
+            1,
+          ]
+        }
+        strokeCap={1}
+        strokeDash={
+          Array [
+            0,
+            0,
+          ]
+        }
+        strokeJoin={1}
+        strokeWidth={1}
+        transform={
+          Array [
+            0.0234375,
+            0,
+            0,
+            -0.0234375,
+            0,
+            21,
+          ]
+        }
+      />
+    </ARTSurfaceView>
+  </View>
+</View>
+`;
+
+exports[`UnitText Component: useArt render with update 2`] = `
+<View
+  style={
+    Array [
+      Object {
+        "justifyContent": "center",
+      },
+      Object {
+        "flexDirection": "row-reverse",
+      },
+      null,
+    ]
+  }
+  unitType="icon"
+>
+  <View
+    style={
+      Object {
+        "height": 24,
+        "width": 24,
+      }
+    }
+  >
+    <ARTSurfaceView
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "marginRight": -20.88,
+            "marginTop": 0,
+          },
+          Object {
+            "height": 24,
+            "width": 24,
+          },
+        ]
+      }
+    >
+      <ARTShape
+        d={
+          Array [
+            3,
+            0,
+            0,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+          ]
+        }
+        fill={
+          Array [
+            0,
+            1,
+            1,
+            1,
+            1,
+          ]
+        }
+        opacity={1}
+        stroke={
+          Array [
+            1,
+            1,
+            1,
+            1,
+          ]
+        }
+        strokeCap={1}
+        strokeDash={
+          Array [
+            0,
+            0,
+          ]
+        }
+        strokeJoin={1}
+        strokeWidth={1}
+        transform={
+          Array [
+            0.0234375,
+            0,
+            0,
+            -0.0234375,
+            0,
+            21,
+          ]
+        }
+      />
+    </ARTSurfaceView>
+  </View>
+</View>
+`;

@@ -1,6 +1,6 @@
 /* eslint-disable react/require-default-props */
 import React from 'react';
-import { View, ViewPropTypes } from 'react-native';
+import { View, ViewPropTypes, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 import defaultLocale from './locale/en_US';
 import cnLocale from './locale/zh_CN';
@@ -17,18 +17,38 @@ function plusZero(n) {
   return n < 10 ? `0${n}` : `${n}`;
 }
 
+const capitalized = str => str.charAt(0).toUpperCase() + str.slice(1); // 首字母大写
+
+const sortColumnsAndValue = (dateSortKeys, cols, value) => {
+  if (!dateSortKeys || !Array.isArray(dateSortKeys) || dateSortKeys.length !== 3) {
+    dateSortKeys &&
+      console.warn(
+        `dateSortKeys: ${JSON.stringify(
+          dateSortKeys
+        )} 不合法，必须为长度为3的数组，且值必须为'year' || 'month' || 'day`
+      );
+    return { cols, value };
+  }
+  const sortedCols = [];
+  const sortedValue = [];
+  dateSortKeys.forEach(k => {
+    const colIndex = cols.findIndex(col => col.key === k);
+    colIndex !== -1 && sortedCols.push(cols[colIndex]);
+    colIndex !== -1 && sortedValue.push(value[colIndex]);
+  });
+  return { cols: sortedCols, value: sortedValue };
+};
+
 const formatColArray = (arrLength, min, labelLocal, isPlusZero) => {
   return Array.from(Array(arrLength), (v, k) => {
-    const fianlLabelLocal = `${labelLocal || ''}`;
+    const finalLabelLocal = `${labelLocal || ''}`;
     const finalLabelMain = isPlusZero ? `${plusZero(k + min)}` : `${k + min}`;
-    const label = `${finalLabelMain}${fianlLabelLocal}`;
+    const label = `${finalLabelMain}${finalLabelLocal}`;
     return { value: `${k + min}`, label };
   });
 };
 // get how many days
-const getDaysInMonth = date => (
-  new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate()
-);
+const getDaysInMonth = date => new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
 
 const setMonth = (date, month) => {
   const days = getDaysInMonth(new Date(date.getFullYear(), month));
@@ -38,43 +58,107 @@ const setMonth = (date, month) => {
 
 class DatePicker extends React.Component {
   static propTypes = {
-    locale: PropTypes.string,
+    /**
+     * 测试标志
+     */
+    accessibilityLabel: PropTypes.string,
+    /**
+     * 多语言设置
+     */
+    locale: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+    /**
+     * 选择器的选择类型
+     */
     mode: PropTypes.string,
+    /**
+     * 选择picker是否可循环
+     */
+    loop: PropTypes.bool,
+    /**
+     * 是否为12小时制
+     */
     use12Hours: PropTypes.bool,
+    /**
+     * 月、日、时、分，是否补0显示
+     */
+    isPlusZero: PropTypes.bool,
+    /**
+     * 设置最小可选择的值
+     */
     minDate: PropTypes.object,
+    /**
+     * 设置最大可选择的值
+     */
     maxDate: PropTypes.object,
+    /**
+     * 某一项被选中时执行此回调
+     */
     onDateChange: PropTypes.func,
+    /**
+     * 某一项被选中时执行此回调
+     */
     onValueChange: PropTypes.func,
+    /**
+     * `AM / PM` Picker项是否位于 `小时`及`分钟` 之前
+     */
     isAmpmFirst: PropTypes.bool,
+    /**
+     * `小时`及`分钟` Picker项是否位于 `年` `月` `日` 之前
+     */
+    isTimeFirst: PropTypes.bool,
+    /**
+     * 当前选中的值，设置了该属性即为受控组件
+     */
     date: PropTypes.object,
+    /**
+     * 默认选中的值
+     */
     defaultDate: PropTypes.object,
+    /**
+     * 容器样式
+     */
     style: ViewPropTypes.style,
+    /**
+     * picker里字体颜色
+     */
+    pickerFontColor: PropTypes.string,
+    /**
+     * `年` `月` `日` 排序规则，若不提供则默认为年月日
+     */
+    dateSortKeys: PropTypes.array,
   };
 
   static defaultProps = {
+    accessibilityLabel: 'DatePicker',
     mode: DATE,
+    loop: false,
     use12Hours: false,
+    isPlusZero: true,
     isAmpmFirst: false,
+    isTimeFirst: false,
     locale: 'en',
     minDate: new Date(2000, 0, 1, 0, 0, 0),
     maxDate: new Date(2030, 11, 31, 23, 59, 59),
     onDateChange: () => {},
-    onValueChange: () => {}
+    onValueChange: () => {},
+    pickerFontColor: '#333',
+    dateSortKeys: null,
     // disabled: false,
-  }
+  };
 
   constructor(props) {
     super(props);
     this.state = {
       date: props.date || props.defaultDate,
     };
-    this.locale = props.locale === 'cn' ? cnLocale : defaultLocale;
+    this.i18n(props.locale);
   }
 
   componentWillReceiveProps(nextProps) {
     if ('date' in nextProps) {
       this.setState({ date: nextProps.date || nextProps.defaultDate });
     }
+    this.i18n(nextProps.locale);
   }
 
   onValueChange = (value, index, key) => {
@@ -88,7 +172,7 @@ class DatePicker extends React.Component {
     if (this.props.onValueChange) {
       this.props.onValueChange(value, index);
     }
-  }
+  };
 
   // get now date
   getDate() {
@@ -172,14 +256,14 @@ class DatePicker extends React.Component {
       }
     }
     return this.getRealDate(newValue);
-  }
+  };
   // get time data
   getTimeColsData = date => {
     let minMinute = 0;
     let maxMinute = 59;
     let minHour = 0;
     let maxHour = 23;
-    const { mode, use12Hours, isAmpmFirst, minDate, maxDate } = this.props;
+    const { mode, use12Hours, isPlusZero, isAmpmFirst, minDate, maxDate } = this.props;
     const { locale } = this;
     const minDateMinute = minDate.getMinutes();
     const maxDateMinute = maxDate.getMinutes();
@@ -221,48 +305,45 @@ class DatePicker extends React.Component {
     let ampmCols = [];
     // todo: minDate and maxDate
     if (use12Hours) {
-    //   let ampm = [];
-    //   if (minHour > 12 && maxHour > 12) {
-    //     ampm.push({ value: '1', label: locale.pm })
-    //   } else if (minHour <= 12 && maxHour <= 12) {
-    //     ampm.push({ value: '0', label: locale.am })
-    //   } else {
-    //     ampm = [{ value: '0', label: locale.am }, { value: '1', label: locale.pm }];
-    //   }
-      const ampm = [{ value: '0', label: locale.am }, { value: '1', label: locale.pm }];
+      //   let ampm = [];
+      //   if (minHour > 12 && maxHour > 12) {
+      //     ampm.push({ value: '1', label: locale.pm })
+      //   } else if (minHour <= 12 && maxHour <= 12) {
+      //     ampm.push({ value: '0', label: locale.am })
+      //   } else {
+      //     ampm = [{ value: '0', label: locale.am }, { value: '1', label: locale.pm }];
+      //   }
+      const ampm = [
+        { value: '0', label: locale.am },
+        { value: '1', label: locale.pm },
+      ];
       ampmCols = [{ key: 'ampm', values: ampm }];
     }
     let hour = [];
-    if (minHour === 0 && maxHour === 0 || minHour !== 0 && maxHour !== 0) {
+    if ((minHour === 0 && maxHour === 0) || (minHour !== 0 && maxHour !== 0)) {
       minHour = this.getRealHour(minHour);
     } else if (minHour === 0 && use12Hours) {
       minHour = 1;
       hour.push({ value: '0', label: locale.hour ? `12${locale.hour}` : '12' });
     }
     maxHour = this.getRealHour(maxHour);
-    const hours = formatColArray(
-      maxHour - minHour + 1,
-      minHour, locale.hour || '',
-      locale.hour,
-      true,
-    );
+    const hours = formatColArray(maxHour - minHour + 1, minHour, locale.hour || '', isPlusZero);
     hour = hour.concat(hours);
     const hourCols = { key: 'hour', values: hour };
     const nowMinute = date.getMinutes();
     const minute = formatColArray(
       maxMinute - minMinute + 1,
-      minMinute, locale.minute || '',
-      locale.minute,
-      true
+      minMinute,
+      locale.minute || '',
+      isPlusZero
     );
     const minuteCols = { key: 'minute', values: minute };
 
-    const cols = !isAmpmFirst ? [
-      hourCols,
-      minuteCols,
-    ].concat(ampmCols) : ampmCols.concat([hourCols, minuteCols]);
+    const cols = !isAmpmFirst
+      ? [hourCols, minuteCols].concat(ampmCols)
+      : ampmCols.concat([hourCols, minuteCols]);
     return { cols, nowMinute, nowHour };
-  }
+  };
 
   // get the correct date for pciker
   getRealDate = date => {
@@ -284,10 +365,10 @@ class DatePicker extends React.Component {
           const minMinutes = minDate.getMinutes();
           const hour = date.getHours();
           const minutes = date.getMinutes();
-          if (hour < minHour || hour === minHour && minutes < minMinutes) {
+          if (hour < minHour || (hour === minHour && minutes < minMinutes)) {
             return new Date(+minDate);
           }
-          if (hour > maxHour || hour === maxHour && minMinutes > maxMinutes) {
+          if (hour > maxHour || (hour === maxHour && minMinutes > maxMinutes)) {
             return new Date(+maxDate);
           }
         }
@@ -302,10 +383,10 @@ class DatePicker extends React.Component {
         break;
     }
     return date;
-  }
+  };
   // get col data
   getDateColsData = () => {
-    const { mode, maxDate, minDate } = this.props;
+    const { mode, maxDate, minDate, isPlusZero } = this.props;
     const { locale } = this;
     const date = this.getDate();
     const nowYear = date.getFullYear();
@@ -330,7 +411,7 @@ class DatePicker extends React.Component {
     if (maxDateYear === nowYear) {
       maxMonth = maxDateMonth;
     }
-    const month = formatColArray(maxMonth - minMonth + 1, minMonth + 1, locale.month, true);
+    const month = formatColArray(maxMonth - minMonth + 1, minMonth + 1, locale.month, isPlusZero);
     const monthCol = { key: 'month', values: month };
     if (mode === MONTH) {
       return [yearCol, monthCol];
@@ -344,14 +425,14 @@ class DatePicker extends React.Component {
     if (maxDateYear === nowYear && maxDateMonth === nowMonth) {
       maxDay = maxDateDay;
     }
-    const day = formatColArray(maxDay - minDay + 1, minDay, locale.day, true);
+    const day = formatColArray(maxDay - minDay + 1, minDay, locale.day, isPlusZero);
     const dayCol = { key: 'day', values: day };
 
     return [yearCol, monthCol, dayCol];
-  }
+  };
   // get picker selectItems and currentValue
   getIndexAndCols = () => {
-    const { mode, use12Hours, isAmpmFirst } = this.props;
+    const { mode, use12Hours, isAmpmFirst, isTimeFirst, dateSortKeys } = this.props;
     const date = this.getDate();
     const cols = [];
     const value = [];
@@ -363,22 +444,24 @@ class DatePicker extends React.Component {
       };
     }
     if (mode === MONTH) {
-      return {
-        cols: this.getDateColsData(),
-        value: [`${date.getFullYear()}`, `${date.getMonth() + 1}`]
-      };
+      const unSortDateCols = this.getDateColsData();
+      const unSortDateValue = [`${date.getFullYear()}`, `${date.getMonth() + 1}`];
+      return sortColumnsAndValue(dateSortKeys, unSortDateCols, unSortDateValue);
     }
     if (mode === DATE) {
-      return {
-        cols: this.getDateColsData(),
-        value: [`${date.getFullYear()}`, `${date.getMonth() + 1}`, `${date.getDate()}`],
-      };
+      const unSortDateCols = this.getDateColsData();
+      const unSortDateValue = [
+        `${date.getFullYear()}`,
+        `${date.getMonth() + 1}`,
+        `${date.getDate()}`,
+      ];
+      return sortColumnsAndValue(dateSortKeys, unSortDateCols, unSortDateValue);
     }
     const time = this.getTimeColsData(date);
     let realhour = time.nowHour;
     const timeValue = [`${realhour}`, `${time.nowMinute}`];
     if (use12Hours) {
-      realhour = time.nowHour === 0 ? 12 : (time.nowHour > 12 ? time.nowHour - 12 : time.nowHour);
+      realhour = time.nowHour === 0 ? 12 : time.nowHour > 12 ? time.nowHour - 12 : time.nowHour;
       timeValue[0] = `${realhour}`;
       const ampmStr = `${time.nowHour >= 12 ? 1 : 0}`;
       if (isAmpmFirst) {
@@ -388,31 +471,63 @@ class DatePicker extends React.Component {
       }
     }
     if (mode === DATETIME) {
+      const unSortDateCols = this.getDateColsData();
+      const unSortDateValue = [
+        `${date.getFullYear()}`,
+        `${date.getMonth() + 1}`,
+        `${date.getDate()}`,
+      ];
+      const { cols: sortDateCols, value: sortDateValue } = sortColumnsAndValue(
+        dateSortKeys,
+        unSortDateCols,
+        unSortDateValue
+      );
       return {
-        cols: this.getDateColsData().concat(time.cols),
-        value: [
-          `${date.getFullYear()}`,
-          `${date.getMonth() + 1}`,
-          `${date.getDate()}`,
-          ...timeValue
-        ],
+        cols: isTimeFirst ? [...time.cols, ...sortDateCols] : [...sortDateCols, ...time.cols],
+        value: isTimeFirst ? [...timeValue, ...sortDateValue] : [...sortDateValue, ...timeValue],
       };
     }
     if (mode === TIME) {
       return {
         cols: time.cols,
-        value: [...timeValue]
+        value: [...timeValue],
       };
     }
     return {
       cols,
       value,
     };
-  }
+  };
+
+  i18n = locale => {
+    if (typeof locale === 'string') {
+      this.locale = locale === 'cn' ? cnLocale : defaultLocale;
+    } else if (typeof locale === 'object') {
+      this.locale = Object.assign({}, defaultLocale, locale);
+    } else {
+      this.locale = defaultLocale;
+    }
+  };
 
   render() {
     const { value, cols } = this.getIndexAndCols();
-    const { style } = this.props;
+    const {
+      locale,
+      mode,
+      use12Hours,
+      minDate,
+      maxDate,
+      onDateChange,
+      onValueChange,
+      isAmpmFirst,
+      date,
+      defaultDate,
+      style,
+      loop,
+      pickerFontColor,
+      accessibilityLabel,
+      ...PickerProps
+    } = this.props;
     const multiStyle = {
       flexDirection: 'row',
       alignItems: 'center',
@@ -423,28 +538,32 @@ class DatePicker extends React.Component {
     };
     return (
       <View style={[multiStyle, style]}>
-        {
-          cols.map((pItem, pindex) => (
-            <Picker
-              style={{ flex: 1 }}
-              key={pItem.key}
-              // disabled={disabled}
-              // itemStyle={itemStyle}
-              selectedValue={value[pindex]}
-              onValueChange={date => this.onValueChange(date, pindex, pItem.key)}
-            >
-              {
-                pItem.values.map(item => (
-                  <Picker.Item key={`${pItem.key}_${item.value}`} value={item.value} label={item.label} />
-                ))
-              }
-            </Picker>
-          ))
-        }
+        {cols.map((pItem, pindex) => (
+          <Picker
+            {...PickerProps}
+            style={{ flex: 1 }}
+            key={pItem.key}
+            accessibilityLabel={`${accessibilityLabel}_${capitalized(pItem.key)}`}
+            // disabled={disabled}
+            loop={pItem.key !== 'ampm' && loop}
+            theme={{ fontColor: pickerFontColor }}
+            selectedItemTextColor={pickerFontColor}
+            itemStyle={StyleSheet.flatten([{ color: pickerFontColor }, PickerProps.itemStyle])}
+            selectedValue={value[pindex]}
+            onValueChange={dateValue => this.onValueChange(dateValue, pindex, pItem.key)}
+          >
+            {pItem.values.map(item => (
+              <Picker.Item
+                key={`${pItem.key}_${item.value}`}
+                value={item.value}
+                label={item.label}
+              />
+            ))}
+          </Picker>
+        ))}
       </View>
     );
   }
-
 }
 
 export default DatePicker;

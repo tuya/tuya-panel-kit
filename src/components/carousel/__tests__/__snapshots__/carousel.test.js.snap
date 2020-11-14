@@ -1,0 +1,502 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Carousel Component renders correctly 1`] = `
+<View
+  onLayout={[Function]}
+>
+  <ScrollViewMock
+    accessibilityLabel="Carousel"
+    automaticallyAdjustContentInsets={false}
+    autoplay={false}
+    autoplayInterval={2000}
+    bounces={true}
+    carouselChange={[MockFunction]}
+    contentContainerStyle={
+      Object {
+        "height": 180,
+      }
+    }
+    contentOffset={
+      Object {
+        "x": 0,
+        "y": 0,
+      }
+    }
+    directionalLockEnabled={true}
+    dotActiveStyle={
+      Object {
+        "backgroundColor": "#ff0",
+      }
+    }
+    dotStyle={
+      Object {
+        "backgroundColor": "#fff",
+        "borderRadius": 4,
+        "height": 8,
+        "width": 8,
+      }
+    }
+    dots={[Function]}
+    hasDots={true}
+    horizontal={true}
+    loop={true}
+    onMomentumScrollEnd={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    pageStyle={Object {}}
+    pagingEnabled={true}
+    removeClippedSubviews={false}
+    selectedIndex={0}
+    showsHorizontalScrollIndicator={false}
+    showsVerticalScrollIndicator={false}
+    style={
+      Object {
+        "height": 180,
+      }
+    }
+    useViewPagerOnAndroid={true}
+  >
+    <View
+      accessibilityLabel="Carousel_0"
+      key="carousel_0"
+      style={
+        Array [
+          Object {},
+          Object {
+            "width": 0,
+          },
+        ]
+      }
+    >
+      <View
+        key=".2"
+        style={
+          Object {
+            "backgroundColor": "yellow",
+            "flex": 1,
+          }
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Object {
+              "color": "#333",
+            }
+          }
+          type={null}
+          weight={null}
+        >
+          Carousel 3
+        </TYText>
+      </View>
+    </View>
+    <View
+      accessibilityLabel="Carousel_1"
+      key="carousel_1"
+      style={
+        Array [
+          Object {},
+          Object {
+            "width": 0,
+          },
+        ]
+      }
+    >
+      <View
+        key=".0"
+        style={
+          Object {
+            "backgroundColor": "red",
+            "flex": 1,
+          }
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Object {
+              "color": "#333",
+            }
+          }
+          type={null}
+          weight={null}
+        >
+          Carousel 1
+        </TYText>
+      </View>
+    </View>
+    <View
+      accessibilityLabel="Carousel_2"
+      key="carousel_2"
+      style={
+        Array [
+          Object {},
+          Object {
+            "width": 0,
+          },
+        ]
+      }
+    >
+      <View
+        key=".1"
+        style={
+          Object {
+            "backgroundColor": "blue",
+            "flex": 1,
+          }
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Object {
+              "color": "#333",
+            }
+          }
+          type={null}
+          weight={null}
+        >
+          Carousel 2
+        </TYText>
+      </View>
+    </View>
+    <View
+      accessibilityLabel="Carousel_3"
+      key="carousel_3"
+      style={
+        Array [
+          Object {},
+          Object {
+            "width": 0,
+          },
+        ]
+      }
+    >
+      <View
+        key=".2"
+        style={
+          Object {
+            "backgroundColor": "yellow",
+            "flex": 1,
+          }
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Object {
+              "color": "#333",
+            }
+          }
+          type={null}
+          weight={null}
+        >
+          Carousel 3
+        </TYText>
+      </View>
+    </View>
+    <View
+      accessibilityLabel="Carousel_4"
+      key="carousel_4"
+      style={
+        Array [
+          Object {},
+          Object {
+            "width": 0,
+          },
+        ]
+      }
+    >
+      <View
+        key=".0"
+        style={
+          Object {
+            "backgroundColor": "red",
+            "flex": 1,
+          }
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Object {
+              "color": "#333",
+            }
+          }
+          type={null}
+          weight={null}
+        >
+          Carousel 1
+        </TYText>
+      </View>
+    </View>
+  </ScrollViewMock>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "bottom": 10,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        key="dot-0"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#bbb",
+              "borderRadius": 8,
+              "height": 8,
+              "width": 8,
+            },
+            Object {
+              "marginHorizontal": 3,
+              "marginVertical": 3,
+            },
+            Object {
+              "backgroundColor": "#fff",
+              "borderRadius": 4,
+              "height": 8,
+              "width": 8,
+            },
+            Object {
+              "backgroundColor": "#fff",
+            },
+            Object {
+              "backgroundColor": "#ff0",
+            },
+          ]
+        }
+      />
+      <View
+        key="dot-1"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#bbb",
+              "borderRadius": 8,
+              "height": 8,
+              "width": 8,
+            },
+            Object {
+              "marginHorizontal": 3,
+              "marginVertical": 3,
+            },
+            Object {
+              "backgroundColor": "#fff",
+              "borderRadius": 4,
+              "height": 8,
+              "width": 8,
+            },
+            false,
+            false,
+          ]
+        }
+      />
+      <View
+        key="dot-2"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#bbb",
+              "borderRadius": 8,
+              "height": 8,
+              "width": 8,
+            },
+            Object {
+              "marginHorizontal": 3,
+              "marginVertical": 3,
+            },
+            Object {
+              "backgroundColor": "#fff",
+              "borderRadius": 4,
+              "height": 8,
+              "width": 8,
+            },
+            false,
+            false,
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Carousel Component renders correctly 2`] = `""`;
+
+exports[`Carousel Component renders correctly with no child 1`] = `""`;
+
+exports[`Carousel Component renders correctly with one child 1`] = `
+<View
+  onLayout={[Function]}
+>
+  <UnimplementedView
+    accessibilityLabel="Carousel"
+    autoplay={false}
+    autoplayInterval={2000}
+    bounces={true}
+    carouselChange={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            2,
+          ],
+          Array [
+            0,
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    dotActiveStyle={
+      Object {
+        "backgroundColor": "#ff0",
+      }
+    }
+    dotStyle={
+      Object {
+        "backgroundColor": "#fff",
+        "borderRadius": 4,
+        "height": 8,
+        "width": 8,
+      }
+    }
+    dots={[Function]}
+    hasDots={true}
+    initialPage={1}
+    key="$carousel"
+    loop={true}
+    onPageScrollStateChanged={[Function]}
+    onPageSelected={[Function]}
+    pageStyle={Object {}}
+    selectedIndex={0}
+    style={
+      Object {
+        "height": 180,
+      }
+    }
+    useViewPagerOnAndroid={true}
+  >
+    <View
+      style={
+        Array [
+          Object {},
+          Object {
+            "width": 0,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "red",
+            "flex": 1,
+          }
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Object {
+              "color": "#333",
+            }
+          }
+          type={null}
+          weight={null}
+        >
+          Carousel 1
+        </TYText>
+      </View>
+    </View>
+  </UnimplementedView>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "bottom": 10,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        key="dot-0"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#bbb",
+              "borderRadius": 8,
+              "height": 8,
+              "width": 8,
+            },
+            Object {
+              "marginHorizontal": 3,
+              "marginVertical": 3,
+            },
+            Object {
+              "backgroundColor": "#fff",
+              "borderRadius": 4,
+              "height": 8,
+              "width": 8,
+            },
+            Object {
+              "backgroundColor": "#fff",
+            },
+            Object {
+              "backgroundColor": "#ff0",
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;

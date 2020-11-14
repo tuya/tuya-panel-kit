@@ -1,84 +1,58 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import {
-  Image,
-  Text,
-  View,
-  StyleSheet,
-  ViewPropTypes,
-  TouchableWithoutFeedback,
-} from 'react-native';
-import TYSdk from '../../../TYNativeApi';
-import Strings from '../../../i18n/strings';
-import H5WebView from '../../webview';
+import { Image, View, StyleSheet, ViewPropTypes, ColorPropType } from 'react-native';
+import { TYSdk } from '../../../TYNativeApi';
 import RefText from '../../TYText';
-import IconFont from '../../iconfont';
-import { RatioUtils } from '../../../utils';
+import { RatioUtils, NumberUtils, CoreUtils } from '../../../utils';
+import BleOfflineView from './ble-offline-view';
+import NewOfflineView from './new-offline-view';
 
-const TYEvent = TYSdk.event;
 const TYMobile = TYSdk.mobile;
 const TYNative = TYSdk.native;
 const TYDevice = TYSdk.device;
+const TYEvent = TYSdk.event;
 
-const { convert, viewWidth } = RatioUtils;
-
+const { convert } = RatioUtils;
+const { compareVersion, get } = CoreUtils;
 const OFFLINE_API_SUPPORT = TYMobile.verSupported('2.91');
 
 const Res = {
-  offline: require('./common_offline.png'),
+  offline: require('../../res/offline.png'),
 };
 
-const BlueToothOffData = {
-  title: Strings.getLang('offlineTitle'),
-  rowTitle1: Strings.getLang('devBeside'),
-  row1: Strings.getLang('openBlueTooth'),
-  rowTitle2: Strings.getLang('devNotBeside'),
-  row2: Strings.getLang('offlineHelp'),
-  beNotInUseTitle: Strings.getLang('beNotInUse'),
-  beNotInUse: Strings.getLang('beNotInUseContent'),
-  helpLink: 'https://smartapp.tuya.com/faq/mesh1'
-};
+const requireRnVersion = '5.23';
 
-const BlueToothOnData = {
-  title: Strings.getLang('offlineTitle'),
-  rowTitle2: Strings.getLang('iDotKnow'),
-  row2: Strings.getLang('offlineHelp'),
-  beNotInUseTitle: Strings.getLang('beNotInUse'),
-  beNotInUse: Strings.getLang('beNotInUseContent'),
-  helpLink: 'https://smartapp.tuya.com/faq/mesh1'
-};
-
-// const WiFiData = {
-//   title: Strings.getLang('offlineTitle'),
-//   rowTitle1: Strings.getLang('wifiConnected'),
-//   row1: Strings.getLang('checkWifiStatus'),
-//   rowTitle2: Strings.getLang('wifiUnConnected'),
-//   row2: Strings.getLang('offlineHelp'),
-//   beNotInUseTitle: Strings.getLang('beNotInUse'),
-//   beNotInUse: Strings.getLang('beNotInUseContent'),
-//   helpLink: 'https://smartapp.tuya.com/tuyasmart/help'
-// };
+const requireWifiRnVersion = '5.30';
 
 export default class OfflineView extends Component {
   static propTypes = {
     style: ViewPropTypes.style,
     textStyle: ViewPropTypes.style,
     text: PropTypes.string,
-    isShare: PropTypes.bool,
     appOnline: PropTypes.bool,
+    deviceOnline: PropTypes.bool,
+    capability: PropTypes.number,
+    isBleOfflineOverlay: PropTypes.bool,
+    showDeviceImg: PropTypes.bool,
+    maskColor: ColorPropType,
   };
 
   static defaultProps = {
     style: null,
     textStyle: null,
     text: null,
-    isShare: false,
     appOnline: true,
+    deviceOnline: true,
+    capability: 1,
+    isBleOfflineOverlay: true,
+    showDeviceImg: true,
+    maskColor: 'rgba(0, 0, 0, 0.8)',
   };
 
   state = {
     bluetoothStatus: null,
-  }
+    show: true,
+  };
 
   async componentDidMount() {
     try {
@@ -96,112 +70,90 @@ export default class OfflineView extends Component {
 
   bluetoothChangeHandle = bluetoothStatus => {
     this.setState({ bluetoothStatus });
-  }
+  };
 
-  openH5WebView(source, title) {
-    TYSdk.Navigator.push({
-      element: H5WebView,
-      noFullView: true,
-      barStyle: 'default',
-      titleStyle: {
-        color: '#000'
-      },
-      appStyle: {
-        backgroundColor: '#fff'
-      },
-      topBarStyle: {
-        borderBottomWidth: StyleSheet.hairlineWidth,
-        borderBottomColor: '#E1E1E1',
-        backgroundColor: '#fff',
-      },
-      source,
-      title,
-    });
-  }
+  _handleLinkPress = () => {
+    const { devId } = TYSdk.devInfo;
+    const isJumpToWifi = this._handleVersionToJump();
+    if (isJumpToWifi) {
+      TYNative.jumpTo(`tuyaSmart://device_offline_reconnect?device_id=${devId}`);
+    }
+  };
 
-  checkWifi() {
-    TYNative.gotoDeviceWifiNetworkMonitor();
-  }
+  // 判断App RN版本是否为3.21及以上，且身份符合条件才可跳转至配网页面
+  _handleVersionToJump = () => {
+    const appRnVersion = get(TYNative, 'mobileInfo.appRnVersion');
+    const role = get(TYSdk, 'devInfo.role');
+    const isGreater = appRnVersion && compareVersion(appRnVersion, requireWifiRnVersion);
+    const isJumpToWifi = isGreater === 0 || isGreater === 1;
+    // role = 1: 家庭管理员  role = 2: 家庭超级管理员
+    return isJumpToWifi && (role === 1 || role === 2);
+  };
 
-  checkBlueTooth() {
-    TYNative.gotoBlePermissions();
-  }
-
-  deleteDevice() {
-    TYNative.simpleConfirmDialog(
-      '',
-      Strings.getLang('beNotInUseCheck'),
-      () => TYDevice.deleteDeviceInfo().then(TYMobile.back).catch(() => {
-        TYNative.simpleTipDialog(Strings.getLang('removeFailed'), () => {});
-      }),
-      () => {}
+  _handleMoreHelp = () => {
+    const isJumpToWifi = this._handleVersionToJump();
+    let linkJumpStyle;
+    if (isJumpToWifi) {
+      linkJumpStyle = {
+        color: '#FF4800',
+        textDecorationLine: 'underline',
+      };
+    } else {
+      linkJumpStyle = {
+        textDecorationLine: 'none',
+        color: '#999',
+      };
+    }
+    TYMobile.jumpSubPage(
+      { uiId: '000000cg8b' },
+      {
+        textLinkStyle: linkJumpStyle,
+      }
     );
-  }
+  };
 
-  renderNewView(data, bleOpen) {
-    const { isShare } = this.props;
+  renderBleView() {
+    const { deviceOnline, capability, isBleOfflineOverlay } = this.props;
+    const isJumpToWifi = this._handleVersionToJump();
+    // 在蓝牙状态未获取到之前不渲染该页面
+    if (typeof this.state.bluetoothStatus !== 'boolean') {
+      return null;
+    }
     return (
-      <View style={[styles.container, this.props.style]}>
-        <View style={styles.content}>
-          <View style={[styles.row, styles.header]}>
-            <IconFont
-              name="warning"
-              size={convert(32)}
-              color="#F2F2F2"
-            />
-            <Text style={[styles.txt, styles.headerTitle]}>{data.title}</Text>
-          </View>
-          {!bleOpen ? (
-            <TouchableWithoutFeedback onPress={data.checkHandle}>
-              <View style={styles.row}>
-                <View style={styles.rowContent}>
-                  <Text style={[styles.txt, styles.title]}>
-                    {data.rowTitle1}
-                  </Text>
-                  <Text style={styles.txt}>{data.row1}</Text>
-                </View>
-                <IconFont name="arrow" color="rgba(0, 0, 0, 0.6)" />
-              </View>
-            </TouchableWithoutFeedback>
-          ) : null}
-          <TouchableWithoutFeedback
-            onPress={() => {
-              data.helpHandle(data.helpLink, data.row2);
-            }}
-          >
-            <View style={[styles.row, { borderBottomWidth: isShare ? 0 : 1 }]}>
-              <View style={styles.rowContent}>
-                <Text style={[styles.txt, styles.title]}>{data.rowTitle2}</Text>
-                <Text style={styles.txt}>{data.row2}</Text>
-              </View>
-              <IconFont name="arrow" color="rgba(0, 0, 0, 0.6)" />
-            </View>
-          </TouchableWithoutFeedback>
-          {!isShare ? (
-            <TouchableWithoutFeedback onPress={data.delHandle}>
-              <View style={[styles.row, { borderBottomWidth: 0 }]}>
-                <View style={styles.rowContent}>
-                  <Text style={[styles.txt, styles.title]}>
-                    {data.beNotInUseTitle}
-                  </Text>
-                  <Text style={styles.txt}>{data.beNotInUse}</Text>
-                </View>
-                <IconFont name="arrow" color="rgba(0, 0, 0, 0.6)" />
-              </View>
-            </TouchableWithoutFeedback>
-          ) : null}
-        </View>
-      </View>
+      <BleOfflineView
+        bluetoothValue={this.state.bluetoothStatus}
+        deviceOnline={deviceOnline}
+        capability={capability}
+        isBleOfflineOverlay={isBleOfflineOverlay}
+        isJumpToWifi={isJumpToWifi}
+        onLinkPress={this._handleLinkPress}
+      />
     );
   }
 
   renderOldView() {
-    return (
-      <View style={[styles.container, this.props.style]}>
+    const { showDeviceImg, maskColor } = this.props;
+    const { show } = this.state;
+    const appRnVersion = get(TYNative, 'mobileInfo.appRnVersion');
+    // app版本大于3.16 →  appRNVersion >= 5.23才会显示新离线弹框
+    const isGreater = appRnVersion && compareVersion(appRnVersion, requireRnVersion);
+    const isShowNewOffline = isGreater === 0 || isGreater === 1;
+    const showOldOffline = get(TYSdk, 'devInfo.panelConfig.fun.showOldOffline', false);
+    const isJumpToWifi = this._handleVersionToJump();
+    return !showOldOffline && isShowNewOffline ? (
+      <NewOfflineView
+        show={show}
+        showDeviceImg={showDeviceImg}
+        onLinkPress={this._handleLinkPress}
+        onConfirm={this._handleConfirm}
+        onHelpPress={this._handleMoreHelp}
+        maskColor={maskColor}
+        isJumpToWifi={isJumpToWifi}
+      />
+    ) : (
+      <View accessibilityLabel="OfflineView_Wifi" style={[styles.container, this.props.style]}>
         <Image style={styles.icon} source={Res.offline} />
-        <RefText style={[styles.tip, this.props.textStyle]}>
-          {this.props.text}
-        </RefText>
+        <RefText style={[styles.tip, this.props.textStyle]}>{this.props.text}</RefText>
       </View>
     );
   }
@@ -212,93 +164,46 @@ export default class OfflineView extends Component {
       部分老的面板未用NavigatorLayout，继续走老的离线提示
       分享的设备不支持删除操作
     */
-    const { appOnline } = this.props;
+    const { appOnline, deviceOnline, capability } = this.props;
+    const isBle = !!NumberUtils.getBitValue(capability, 10);
+    const isBleMesh = !!NumberUtils.getBitValue(capability, 11);
+    const isSigMesh = !!NumberUtils.getBitValue(capability, 15);
+    const isBleDevice = isBle || isBleMesh || isSigMesh;
+
+    // 如果是蓝牙设备，设备在线，但网络离线时不需要显示遮罩
+    if (deviceOnline && isBleDevice) {
+      return null;
+    }
 
     if (appOnline && OFFLINE_API_SUPPORT && TYSdk.Navigator && TYSdk.Navigator.push) {
-      const { bluetoothStatus } = this.state;
-      const isWifiDevice = TYDevice.isWifiDevice();
-      const handles = {
-        helpHandle: this.openH5WebView,
-        delHandle: this.deleteDevice,
-        checkHandle: this.checkBlueTooth
-      };
-      const data = bluetoothStatus
-        ? { ...BlueToothOnData, ...handles }
-        : { ...BlueToothOffData, ...handles };
-      if (isWifiDevice) {
+      const isWifiDevice = capability === 1;
+      if (isWifiDevice || !appOnline) {
         return this.renderOldView();
-        // data = {
-        //   ...WiFiData,
-        //   helpHandle: this.openH5WebView,
-        //   delHandle: this.deleteDevice,
-        //   checkHandle: this.checkWifi
-        // };
+      } else if (isBleDevice) {
+        return this.renderBleView();
       }
-      return this.renderNewView(data, bluetoothStatus);
     }
 
     return this.renderOldView();
   }
 }
 
-
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     justifyContent: 'center',
     alignSelf: 'center',
-    backgroundColor: `rgba(0, 0, 0, 0.8)`
-  },
-  content: {
-    backgroundColor: '#fff',
-    borderRadius: 6,
-    transform: [{ translateY: -convert(60) }]
+    backgroundColor: `rgba(0, 0, 0, 0.8)`,
   },
   icon: {
     resizeMode: 'stretch',
     width: convert(121),
-    height: convert(81)
+    height: convert(81),
   },
   tip: {
     marginTop: convert(14),
     fontSize: 16,
     color: 'white',
-    textAlign: 'center'
-  },
-  header: {
-    backgroundColor: '#FF9700',
-    justifyContent: 'center',
-    borderTopLeftRadius: 6,
-    borderTopRightRadius: 6
-  },
-  headerTitle: {
-    marginLeft: convert(5),
-    fontSize: convert(20),
-    color: '#fff',
-    opacity: 1
-  },
-  row: {
-    height: convert(86),
-    flexDirection: 'row',
-    alignItems: 'center',
-    borderBottomWidth: 1,
-    borderBottomColor: '#F2F2F2',
-    paddingRight: convert(10),
-    paddingLeft: convert(15),
-    width: viewWidth * 0.8
-  },
-  rowContent: {
-    flex: 1
-  },
-  txt: {
-    backgroundColor: 'transparent',
-    fontSize: convert(12),
-    color: '#333',
-    opacity: 0.5
-  },
-  title: {
-    fontSize: convert(15),
-    opacity: 1,
-    marginBottom: convert(2)
+    textAlign: 'center',
   },
 });

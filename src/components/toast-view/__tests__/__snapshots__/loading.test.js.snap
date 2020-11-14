@@ -1,0 +1,181 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toast.Error Component basic render 1`] = `
+<View
+  pointerEvents="none"
+  style={
+    Array [
+      false,
+      Object {
+        "alignItems": "center",
+        "bottom": 0,
+        "flex": 1,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      },
+      null,
+      Object {
+        "justifyContent": "center",
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(0,0,0,.7)",
+        "borderRadius": 16,
+        "height": 240,
+        "justifyContent": "center",
+        "marginBottom": 64,
+        "opacity": 0,
+        "paddingHorizontal": 24,
+        "paddingVertical": 54,
+        "width": 240,
+      }
+    }
+  >
+    <View
+      accessibilityLabel="RotationView"
+      style={
+        Object {
+          "transform": Array [
+            Object {
+              "rotate": "0deg",
+            },
+          ],
+        }
+      }
+    >
+      <RNSVGSvgView
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+            false,
+            Object {
+              "flex": 0,
+              "height": 80,
+              "width": 80,
+            },
+          ]
+        }
+      >
+        <RNSVGCircle
+          cx="40"
+          cy="40"
+          fill={
+            Array [
+              0,
+              0,
+              0,
+              0,
+              0,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "fill",
+            ]
+          }
+          r="32"
+          stroke={
+            Array [
+              0,
+              1,
+              1,
+              1,
+              0.1,
+            ]
+          }
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={8}
+        />
+        <RNSVGCircle
+          cx="40"
+          cy="40"
+          fill={
+            Array [
+              0,
+              0,
+              0,
+              0,
+              0,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "strokeDasharray",
+              "strokeDashoffset",
+              "strokeLinecap",
+              "fill",
+            ]
+          }
+          r="32"
+          stroke={
+            Array [
+              0,
+              1,
+              1,
+              1,
+              1,
+            ]
+          }
+          strokeDasharray={
+            Array [
+              50.26548245743669,
+              150.79644737231007,
+            ]
+          }
+          strokeDashoffset={40}
+          strokeLinecap={1}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={8}
+        />
+      </RNSVGSvgView>
+    </View>
+  </View>
+</View>
+`;

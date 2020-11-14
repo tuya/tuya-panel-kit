@@ -6,6 +6,7 @@ import RatioUtils from './ratio';
 import StringUtils from './string';
 import TemperatureUtils from './temperature';
 import TimeUtils from './time';
+import ThemeUtils from './theme';
 
 export {
   ColorUtils,
@@ -16,4 +17,5 @@ export {
   StringUtils,
   TemperatureUtils,
   TimeUtils,
+  ThemeUtils,
 };

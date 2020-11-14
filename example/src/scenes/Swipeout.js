@@ -5,16 +5,20 @@ import { Swipeout, TYText } from 'tuya-panel-kit';
 const SwipeoutScene = () => (
   <Swipeout
     autoClose={true}
-    right={[{
-      text: 'delete',
-      type: 'delete',
-      fontStyle: { color: '#fff', fontSize: 16 }
-    }]}
-    left={[{
-      text: 'action',
-      type: 'primary',
-      fontStyle: { color: '#fff', fontSize: 16 }
-    }]}
+    right={[
+      {
+        text: 'delete',
+        type: 'delete',
+        fontStyle: { color: '#fff', fontSize: 16 },
+      },
+    ]}
+    left={[
+      {
+        text: 'action',
+        type: 'primary',
+        fontStyle: { color: '#fff', fontSize: 16 },
+      },
+    ]}
   >
     <View style={styles.contentStyle}>
       <TYText style={styles.textStyle}>Swipeout</TYText>
@@ -31,7 +35,7 @@ const styles = StyleSheet.create({
   },
   textStyle: {
     color: '#333',
-  }
+  },
 });
 
 export default SwipeoutScene;

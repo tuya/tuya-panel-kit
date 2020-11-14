@@ -1,0 +1,970 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox basic render 1`] = `
+<View
+  accessibilityLabel="Checkbox"
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "alignSelf": "stretch",
+      "backgroundColor": "transparent",
+      "flexDirection": "row",
+      "height": 36,
+      "justifyContent": "flex-start",
+      "opacity": 1,
+      "width": 54,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "height": 17,
+            "width": 17,
+          },
+          false,
+          Array [
+            Object {},
+            false,
+          ],
+        ]
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+            false,
+            Object {
+              "flex": 0,
+              "height": 17,
+              "width": 17,
+            },
+          ]
+        }
+        vbHeight={1024}
+        vbWidth={1024}
+      >
+        <RNSVGPath
+          d="M512 0c282.7776 0 512 229.2224 512 512s-229.2224 512-512 512S0 794.7776 0 512 229.2224 0 512 0z m279.04 362.8032a51.2 51.2 0 0 0-72.3968 0l-253.44 253.3888-108.6464-108.544a51.2 51.2 0 0 0-72.3968 72.3456l144.2304 144.1792 0.6144 0.6656a51.2 51.2 0 0 0 72.3968 0L791.04 435.2a51.2 51.2 0 0 0 0-72.3968z"
+          fill={
+            Array [
+              0,
+              0.2,
+              0.5333333333333333,
+              1,
+              1,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "fill",
+            ]
+          }
+          stroke={
+            Array [
+              0,
+              0.2,
+              0.5333333333333333,
+              1,
+              1,
+            ]
+          }
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={1}
+        />
+      </RNSVGSvgView>
+    </View>
+    <Text
+      accessible={true}
+      align={null}
+      allowFontScaling={false}
+      color={null}
+      disabled={false}
+      ellipsizeMode="tail"
+      size="small"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#333",
+            "fontSize": 17,
+            "lineHeight": 24,
+          },
+          Array [
+            Object {
+              "color": "#333",
+              "marginLeft": 12,
+            },
+            undefined,
+          ],
+        ]
+      }
+      type="title"
+      weight={null}
+    >
+      复选框
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Checkbox disabled render 1`] = `
+<View
+  accessibilityLabel="Checkbox"
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "alignSelf": "stretch",
+      "backgroundColor": "transparent",
+      "flexDirection": "row",
+      "justifyContent": "flex-start",
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "opacity": 0.3,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "height": 17,
+            "width": 17,
+          },
+          false,
+          Array [
+            Object {},
+            Object {
+              "opacity": 0,
+            },
+          ],
+        ]
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+            false,
+            Object {
+              "flex": 0,
+              "height": 17,
+              "width": 17,
+            },
+          ]
+        }
+        vbHeight={1024}
+        vbWidth={1024}
+      >
+        <RNSVGPath
+          d="M512 0c282.752 0 512 229.248 512 512s-229.248 512-512 512S0 794.752 0 512 229.248 0 512 0z m0 85.333333C276.352 85.333333 85.333333 276.352 85.333333 512s191.018667 426.666667 426.666667 426.666667 426.666667-191.018667 426.666667-426.666667S747.648 85.333333 512 85.333333z"
+          fill={
+            Array [
+              0,
+              0.4,
+              0.4,
+              0.4,
+              1,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "fill",
+            ]
+          }
+          responsible={true}
+          stroke={
+            Array [
+              0,
+              0.4,
+              0.4,
+              0.4,
+              1,
+            ]
+          }
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={1}
+        />
+      </RNSVGSvgView>
+    </View>
+    <Text
+      accessible={true}
+      align={null}
+      allowFontScaling={false}
+      color={null}
+      disabled={true}
+      ellipsizeMode="tail"
+      size="small"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#333",
+            "fontSize": 17,
+            "lineHeight": 24,
+          },
+          Array [
+            Object {
+              "color": "#333",
+              "marginLeft": 12,
+            },
+            undefined,
+          ],
+        ]
+      }
+      type="title"
+      weight={null}
+    >
+      复选框
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Checkbox onPress _handleToggleCheck 1`] = `
+<Checkbox
+  accessibilityLabel="Checkbox"
+  checked={true}
+  checkedIcon={null}
+  color={null}
+  disabled={false}
+  disabledColor={null}
+  hideOnUnselect={false}
+  onChange={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          false,
+        ],
+      ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  reverse={false}
+  size={17}
+  style={
+    Object {
+      "height": 36,
+      "width": 54,
+    }
+  }
+  unCheckedIcon={null}
+>
+  <Styled(TouchableOpacity)
+    accessibilityLabel="Checkbox"
+    activeOpacity={0.8}
+    disabled={false}
+    onPress={[Function]}
+    style={
+      Object {
+        "height": 36,
+        "width": 54,
+      }
+    }
+  >
+    <TouchableOpacity
+      accessibilityLabel="Checkbox"
+      activeOpacity={0.8}
+      disabled={false}
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "backgroundColor": "transparent",
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+          },
+          Object {
+            "height": 36,
+            "width": 54,
+          },
+        ]
+      }
+    >
+      <AnimatedComponent
+        accessibilityLabel="Checkbox"
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Array [
+              Object {
+                "alignItems": "center",
+                "alignSelf": "stretch",
+                "backgroundColor": "transparent",
+                "flexDirection": "row",
+                "justifyContent": "flex-start",
+              },
+              Object {
+                "height": 36,
+                "width": 54,
+              },
+            ],
+            Object {
+              "opacity": 1,
+            },
+          ]
+        }
+      >
+        <View
+          accessibilityLabel="Checkbox"
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "alignSelf": "stretch",
+              "backgroundColor": "transparent",
+              "flexDirection": "row",
+              "height": 36,
+              "justifyContent": "flex-start",
+              "opacity": 1,
+              "width": 54,
+            }
+          }
+        >
+          <View
+            accessibilityLabel="Checkbox"
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "alignSelf": "stretch",
+                "backgroundColor": "transparent",
+                "flexDirection": "row",
+                "height": 36,
+                "justifyContent": "flex-start",
+                "opacity": 1,
+                "width": 54,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "opacity": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "opacity": 1,
+                  }
+                }
+              >
+                <Styled(Component)
+                  activeColor={null}
+                  d="M512 0c282.7776 0 512 229.2224 512 512s-229.2224 512-512 512S0 794.7776 0 512 229.2224 0 512 0z m279.04 362.8032a51.2 51.2 0 0 0-72.3968 0l-253.44 253.3888-108.6464-108.544a51.2 51.2 0 0 0-72.3968 72.3456l144.2304 144.1792 0.6144 0.6656a51.2 51.2 0 0 0 72.3968 0L791.04 435.2a51.2 51.2 0 0 0 0-72.3968z"
+                  disabled={false}
+                  disabledColor={null}
+                  key="checkIcon"
+                  size={17}
+                  style={false}
+                >
+                  <Component
+                    activeColor={null}
+                    color="#3388FF"
+                    d="M512 0c282.7776 0 512 229.2224 512 512s-229.2224 512-512 512S0 794.7776 0 512 229.2224 0 512 0z m279.04 362.8032a51.2 51.2 0 0 0-72.3968 0l-253.44 253.3888-108.6464-108.544a51.2 51.2 0 0 0-72.3968 72.3456l144.2304 144.1792 0.6144 0.6656a51.2 51.2 0 0 0 72.3968 0L791.04 435.2a51.2 51.2 0 0 0 0-72.3968z"
+                    disabled={false}
+                    disabledColor={null}
+                    innerRef={[Function]}
+                    size={17}
+                    style={
+                      Array [
+                        Object {},
+                        false,
+                      ]
+                    }
+                  >
+                    <IconFont
+                      activeColor={null}
+                      color="#3388FF"
+                      d="M512 0c282.7776 0 512 229.2224 512 512s-229.2224 512-512 512S0 794.7776 0 512 229.2224 0 512 0z m279.04 362.8032a51.2 51.2 0 0 0-72.3968 0l-253.44 253.3888-108.6464-108.544a51.2 51.2 0 0 0-72.3968 72.3456l144.2304 144.1792 0.6144 0.6656a51.2 51.2 0 0 0 72.3968 0L791.04 435.2a51.2 51.2 0 0 0 0-72.3968z"
+                      disabled={false}
+                      disabledColor={null}
+                      fill={null}
+                      hFlip={false}
+                      height={null}
+                      innerRef={[Function]}
+                      name={null}
+                      size={17}
+                      stroke={null}
+                      strokeCap="round"
+                      strokeDash={
+                        Array [
+                          0,
+                          0,
+                        ]
+                      }
+                      strokeJoin="round"
+                      strokeWidth={1}
+                      style={
+                        Array [
+                          Object {},
+                          false,
+                        ]
+                      }
+                      vFlip={false}
+                      viewBox="0 0 1024 1024"
+                      width={null}
+                    >
+                      <View
+                        style={
+                          Array [
+                            Object {
+                              "flexDirection": "row",
+                            },
+                            Object {
+                              "height": 17,
+                              "width": 17,
+                            },
+                            false,
+                            Array [
+                              Object {},
+                              false,
+                            ],
+                          ]
+                        }
+                      >
+                        <View
+                          style={
+                            Array [
+                              Object {
+                                "flexDirection": "row",
+                              },
+                              Object {
+                                "height": 17,
+                                "width": 17,
+                              },
+                              false,
+                              Array [
+                                Object {},
+                                false,
+                              ],
+                            ]
+                          }
+                        >
+                          <Svg
+                            height={17}
+                            key="0"
+                            preserveAspectRatio="xMidYMid meet"
+                            viewBox="0 0 1024 1024"
+                            width={17}
+                          >
+                            <_class
+                              align="xMidYMid"
+                              meetOrSlice={0}
+                              minX={0}
+                              minY={0}
+                              style={
+                                Array [
+                                  Object {
+                                    "backgroundColor": "transparent",
+                                  },
+                                  undefined,
+                                  false,
+                                  Object {
+                                    "flex": 0,
+                                    "height": 17,
+                                    "width": 17,
+                                  },
+                                ]
+                              }
+                              vbHeight={1024}
+                              vbWidth={1024}
+                            >
+                              <RNSVGSvgView
+                                align="xMidYMid"
+                                meetOrSlice={0}
+                                minX={0}
+                                minY={0}
+                                style={
+                                  Array [
+                                    Object {
+                                      "backgroundColor": "transparent",
+                                    },
+                                    undefined,
+                                    false,
+                                    Object {
+                                      "flex": 0,
+                                      "height": 17,
+                                      "width": 17,
+                                    },
+                                  ]
+                                }
+                                vbHeight={1024}
+                                vbWidth={1024}
+                              >
+                                <Path
+                                  activeColor={null}
+                                  d="M512 0c282.7776 0 512 229.2224 512 512s-229.2224 512-512 512S0 794.7776 0 512 229.2224 0 512 0z m279.04 362.8032a51.2 51.2 0 0 0-72.3968 0l-253.44 253.3888-108.6464-108.544a51.2 51.2 0 0 0-72.3968 72.3456l144.2304 144.1792 0.6144 0.6656a51.2 51.2 0 0 0 72.3968 0L791.04 435.2a51.2 51.2 0 0 0 0-72.3968z"
+                                  disabled={false}
+                                  disabledColor={null}
+                                  fill="#3388FF"
+                                  height={null}
+                                  innerRef={[Function]}
+                                  stroke="#3388FF"
+                                  strokeCap="round"
+                                  strokeDash={
+                                    Array [
+                                      0,
+                                      0,
+                                    ]
+                                  }
+                                  strokeJoin="round"
+                                  strokeWidth={1}
+                                  width={null}
+                                >
+                                  <RNSVGPath
+                                    d="M512 0c282.7776 0 512 229.2224 512 512s-229.2224 512-512 512S0 794.7776 0 512 229.2224 0 512 0z m279.04 362.8032a51.2 51.2 0 0 0-72.3968 0l-253.44 253.3888-108.6464-108.544a51.2 51.2 0 0 0-72.3968 72.3456l144.2304 144.1792 0.6144 0.6656a51.2 51.2 0 0 0 72.3968 0L791.04 435.2a51.2 51.2 0 0 0 0-72.3968z"
+                                    fill={
+                                      Array [
+                                        0,
+                                        0.2,
+                                        0.5333333333333333,
+                                        1,
+                                        1,
+                                      ]
+                                    }
+                                    fillOpacity={1}
+                                    fillRule={1}
+                                    matrix={
+                                      Array [
+                                        1,
+                                        0,
+                                        0,
+                                        1,
+                                        0,
+                                        0,
+                                      ]
+                                    }
+                                    opacity={1}
+                                    propList={
+                                      Array [
+                                        "stroke",
+                                        "strokeWidth",
+                                        "fill",
+                                      ]
+                                    }
+                                    stroke={
+                                      Array [
+                                        0,
+                                        0.2,
+                                        0.5333333333333333,
+                                        1,
+                                        1,
+                                      ]
+                                    }
+                                    strokeDasharray={null}
+                                    strokeDashoffset={null}
+                                    strokeLinecap={0}
+                                    strokeLinejoin={0}
+                                    strokeMiterlimit={4}
+                                    strokeOpacity={1}
+                                    strokeWidth={1}
+                                  />
+                                </Path>
+                              </RNSVGSvgView>
+                            </_class>
+                          </Svg>
+                        </View>
+                      </View>
+                    </IconFont>
+                  </Component>
+                </Styled(Component)>
+                <Styled(TYText)
+                  disabled={false}
+                  key="checkText"
+                >
+                  <TYText
+                    align={null}
+                    color={null}
+                    disabled={false}
+                    size="small"
+                    style={
+                      Array [
+                        Object {
+                          "color": "#333",
+                          "marginLeft": 12,
+                        },
+                        undefined,
+                      ]
+                    }
+                    type="title"
+                    weight={null}
+                  >
+                    <Styled(Text)
+                      align={null}
+                      allowFontScaling={false}
+                      color={null}
+                      disabled={false}
+                      size="small"
+                      style={
+                        Array [
+                          Object {
+                            "color": "#333",
+                            "marginLeft": 12,
+                          },
+                          undefined,
+                        ]
+                      }
+                      type="title"
+                      weight={null}
+                    >
+                      <Text
+                        accessible={true}
+                        align={null}
+                        allowFontScaling={false}
+                        color={null}
+                        disabled={false}
+                        ellipsizeMode="tail"
+                        size="small"
+                        style={
+                          Array [
+                            Object {
+                              "backgroundColor": "transparent",
+                              "color": "#333",
+                              "fontSize": 17,
+                              "lineHeight": 24,
+                            },
+                            Array [
+                              Object {
+                                "color": "#333",
+                                "marginLeft": 12,
+                              },
+                              undefined,
+                            ],
+                          ]
+                        }
+                        type="title"
+                        weight={null}
+                      >
+                        <Text
+                          accessible={true}
+                          align={null}
+                          allowFontScaling={false}
+                          color={null}
+                          disabled={false}
+                          ellipsizeMode="tail"
+                          size="small"
+                          style={
+                            Array [
+                              Object {
+                                "backgroundColor": "transparent",
+                                "color": "#333",
+                                "fontSize": 17,
+                                "lineHeight": 24,
+                              },
+                              Array [
+                                Object {
+                                  "color": "#333",
+                                  "marginLeft": 12,
+                                },
+                                undefined,
+                              ],
+                            ]
+                          }
+                          type="title"
+                          weight={null}
+                        >
+                          复选框
+                        </Text>
+                      </Text>
+                    </Styled(Text)>
+                  </TYText>
+                </Styled(TYText)>
+              </View>
+            </View>
+          </View>
+        </View>
+      </AnimatedComponent>
+    </TouchableOpacity>
+  </Styled(TouchableOpacity)>
+</Checkbox>
+`;
+
+exports[`Checkbox reverse render 1`] = `
+<View
+  accessibilityLabel="Checkbox"
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "alignSelf": "stretch",
+      "backgroundColor": "transparent",
+      "flexDirection": "row",
+      "justifyContent": "flex-start",
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "opacity": 1,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      align={null}
+      allowFontScaling={false}
+      color={null}
+      disabled={false}
+      ellipsizeMode="tail"
+      size="small"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#333",
+            "fontSize": 17,
+            "lineHeight": 24,
+          },
+          Array [
+            Object {
+              "color": "#333",
+              "marginLeft": 12,
+            },
+            undefined,
+          ],
+        ]
+      }
+      type="title"
+      weight={null}
+    >
+      复选框
+    </Text>
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "height": 30,
+            "width": 30,
+          },
+          false,
+          Array [
+            Object {},
+            false,
+          ],
+        ]
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+            false,
+            Object {
+              "flex": 0,
+              "height": 30,
+              "width": 30,
+            },
+          ]
+        }
+        vbHeight={1024}
+        vbWidth={1024}
+      >
+        <RNSVGPath
+          d="M512 0c282.752 0 512 229.248 512 512s-229.248 512-512 512S0 794.752 0 512 229.248 0 512 0z m0 85.333333C276.352 85.333333 85.333333 276.352 85.333333 512s191.018667 426.666667 426.666667 426.666667 426.666667-191.018667 426.666667-426.666667S747.648 85.333333 512 85.333333z"
+          fill={
+            Array [
+              0,
+              0.2,
+              0.5333333333333333,
+              1,
+              1,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "fill",
+            ]
+          }
+          stroke={
+            Array [
+              0,
+              0.2,
+              0.5333333333333333,
+              1,
+              1,
+            ]
+          }
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={1}
+        />
+      </RNSVGSvgView>
+    </View>
+  </View>
+</View>
+`;

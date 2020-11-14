@@ -4,17 +4,18 @@ import { View } from 'react-native';
 
 const TabPane = props => {
   const { children, ...otherProps } = props;
-  return (
-    <View {...otherProps}>
-      { children }
-    </View>
-  );
+  return <View {...otherProps}>{children}</View>;
 };
 
 TabPane.propTypes = {
-  key: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  /**
+   * 每个tab的宽度
+   */
   tabWidth: PropTypes.number,
+  /**
+   * tab上文字或者自定义的元素
+   */
   tab: PropTypes.node,
-}
+};
 
 export default TabPane;

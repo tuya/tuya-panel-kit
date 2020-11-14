@@ -1,0 +1,1448 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SwitchButton Component  render width no value 1`] = `
+<View
+  needsOffscreenAlphaCompositing={true}
+  style={
+    Array [
+      undefined,
+      false,
+    ]
+  }
+>
+  <View
+    accessibilityLabel="SwitchButton"
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "height": NaN,
+        "justifyContent": "center",
+        "opacity": 1,
+        "width": NaN,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "borderRadius": NaN,
+            "height": undefined,
+            "justifyContent": "center",
+            "width": undefined,
+          },
+          Object {
+            "backgroundColor": "#44DB5E",
+            "borderColor": "#44DB5E",
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "flex-start",
+          "backgroundColor": "#fff",
+          "borderRadius": NaN,
+          "elevation": 2,
+          "height": undefined,
+          "position": "absolute",
+          "shadowColor": "rgba(0, 0, 0, 0.3)",
+          "shadowOffset": Object {
+            "height": 3,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 3,
+          "transform": Array [
+            Object {
+              "translateX": NaN,
+            },
+          ],
+          "width": undefined,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`SwitchButton Component  render width no value 2`] = `
+<View
+  needsOffscreenAlphaCompositing={true}
+  style={
+    Array [
+      undefined,
+      false,
+    ]
+  }
+>
+  <View
+    accessibilityLabel="SwitchButton"
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "height": NaN,
+        "justifyContent": "center",
+        "opacity": 1,
+        "width": NaN,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "borderRadius": NaN,
+            "height": undefined,
+            "justifyContent": "center",
+            "width": undefined,
+          },
+          Object {
+            "backgroundColor": "#44DB5E",
+            "borderColor": "#44DB5E",
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "flex-start",
+          "backgroundColor": "#fff",
+          "borderRadius": NaN,
+          "elevation": 2,
+          "height": undefined,
+          "position": "absolute",
+          "shadowColor": "rgba(0, 0, 0, 0.3)",
+          "shadowOffset": Object {
+            "height": 3,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 3,
+          "transform": Array [
+            Object {
+              "translateX": NaN,
+            },
+          ],
+          "width": undefined,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`SwitchButton Component SwitchButton render width onTintColor 1`] = `
+<View
+  needsOffscreenAlphaCompositing={true}
+  style={
+    Array [
+      Object {
+        "marginRight": 14,
+      },
+      false,
+    ]
+  }
+>
+  <View
+    accessibilityLabel="SwitchButton"
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "height": NaN,
+        "justifyContent": "center",
+        "opacity": 1,
+        "width": NaN,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "borderRadius": NaN,
+            "height": undefined,
+            "justifyContent": "center",
+            "width": undefined,
+          },
+          Object {
+            "backgroundColor": "transparent",
+            "borderColor": "transparent",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "bottom": 0,
+              "flex": 1,
+              "height": 1334,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": 750,
+            },
+            Object {
+              "height": undefined,
+              "width": undefined,
+            },
+          ]
+        }
+      >
+        <RNSVGSvgView
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+              false,
+              undefined,
+            ]
+          }
+        >
+          <RNSVGDefs>
+            <RNSVGLinearGradient
+              gradient={
+                Array [
+                  0.9803921568627451,
+                  0.4392156862745098,
+                  0.6039215686274509,
+                  1,
+                  0.996078431372549,
+                  0.8666666666666667,
+                  0.26666666666666666,
+                  1,
+                  0,
+                  1,
+                ]
+              }
+              gradientTransform={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
+              }
+              gradientUnits={0}
+              name="linear-gradient"
+              x1="0%"
+              x2="100%"
+              y1="0%"
+              y2="0%"
+            />
+          </RNSVGDefs>
+          <RNSVGRect
+            fill={
+              Array [
+                1,
+                "linear-gradient",
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            height="100%"
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            propList={
+              Array [
+                "fill",
+              ]
+            }
+            rx="NaN"
+            ry="0"
+            stroke={null}
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={null}
+            width="100%"
+            x="0"
+            y="0"
+          />
+        </RNSVGSvgView>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "alignSelf": "flex-start",
+          "backgroundColor": "#fff",
+          "borderRadius": NaN,
+          "elevation": 2,
+          "height": undefined,
+          "position": "absolute",
+          "shadowColor": "rgba(0, 0, 0, 0.3)",
+          "shadowOffset": Object {
+            "height": 3,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 3,
+          "transform": Array [
+            Object {
+              "translateX": NaN,
+            },
+          ],
+          "width": undefined,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`SwitchButton Component SwitchButton render width onTintColor 2`] = `
+<View
+  needsOffscreenAlphaCompositing={true}
+  style={
+    Array [
+      Object {
+        "marginRight": 14,
+      },
+      false,
+    ]
+  }
+>
+  <View
+    accessibilityLabel="SwitchButton"
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "height": NaN,
+        "justifyContent": "center",
+        "opacity": 1,
+        "width": NaN,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "borderRadius": NaN,
+            "height": undefined,
+            "justifyContent": "center",
+            "width": NaN,
+          },
+          Object {
+            "backgroundColor": "transparent",
+            "borderColor": "transparent",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "bottom": 0,
+              "flex": 1,
+              "height": 1334,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": 750,
+            },
+            Object {
+              "height": undefined,
+              "width": NaN,
+            },
+          ]
+        }
+      >
+        <RNSVGSvgView
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+              false,
+              undefined,
+            ]
+          }
+        >
+          <RNSVGDefs>
+            <RNSVGLinearGradient
+              gradient={
+                Array [
+                  0.9803921568627451,
+                  0.4392156862745098,
+                  0.6039215686274509,
+                  1,
+                  0.996078431372549,
+                  0.8666666666666667,
+                  0.26666666666666666,
+                  1,
+                  0,
+                  1,
+                ]
+              }
+              gradientTransform={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
+              }
+              gradientUnits={0}
+              name="linear-gradient"
+              x1="0%"
+              x2="100%"
+              y1="0%"
+              y2="0%"
+            />
+          </RNSVGDefs>
+          <RNSVGRect
+            fill={
+              Array [
+                1,
+                "linear-gradient",
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            height="100%"
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            propList={
+              Array [
+                "fill",
+              ]
+            }
+            rx="NaN"
+            ry="0"
+            stroke={null}
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={null}
+            width="100%"
+            x="0"
+            y="0"
+          />
+        </RNSVGSvgView>
+      </View>
+    </View>
+    <Text
+      accessible={true}
+      align={null}
+      allowFontScaling={false}
+      color={null}
+      ellipsizeMode="tail"
+      size={10}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#333",
+            "fontSize": 10,
+          },
+          Array [
+            Object {
+              "color": "#FFF",
+              "fontSize": 10,
+              "fontWeight": "500",
+              "left": 6,
+              "opacity": 1,
+              "position": "absolute",
+            },
+            null,
+          ],
+        ]
+      }
+      text="ON"
+      type={null}
+      weight={null}
+    >
+      ON
+    </Text>
+    <Text
+      accessible={true}
+      align={null}
+      allowFontScaling={false}
+      color={null}
+      ellipsizeMode="tail"
+      size={10}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#333",
+            "fontSize": 10,
+          },
+          Array [
+            Object {
+              "color": "#999",
+              "fontSize": 10,
+              "fontWeight": "500",
+              "opacity": 0,
+              "position": "absolute",
+              "right": 6,
+            },
+            null,
+          ],
+        ]
+      }
+      text="OFF"
+      type={null}
+      weight={null}
+    >
+      OFF
+    </Text>
+    <View
+      style={
+        Object {
+          "alignSelf": "flex-start",
+          "backgroundColor": "#fff",
+          "borderRadius": NaN,
+          "elevation": 2,
+          "height": undefined,
+          "position": "absolute",
+          "shadowColor": "rgba(0, 0, 0, 0.3)",
+          "shadowOffset": Object {
+            "height": 3,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 3,
+          "transform": Array [
+            Object {
+              "translateX": NaN,
+            },
+          ],
+          "width": undefined,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`SwitchButton Component SwitchButton size&theme conflict 1`] = `
+<View
+  needsOffscreenAlphaCompositing={true}
+  style={
+    Array [
+      undefined,
+      false,
+    ]
+  }
+>
+  <View
+    accessibilityLabel="SwitchButton"
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "height": 63,
+        "justifyContent": "center",
+        "opacity": 1,
+        "width": 122,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "borderRadius": 33.214285714285715,
+            "height": 60,
+            "justifyContent": "center",
+            "width": 120,
+          },
+          Object {
+            "backgroundColor": "#44DB5E",
+            "borderColor": "#44DB5E",
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "flex-start",
+          "backgroundColor": "#fff",
+          "borderRadius": 27.5,
+          "elevation": 2,
+          "height": 55,
+          "position": "absolute",
+          "shadowColor": "rgba(0, 0, 0, 0.3)",
+          "shadowOffset": Object {
+            "height": 3,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 3,
+          "transform": Array [
+            Object {
+              "translateX": NaN,
+            },
+          ],
+          "width": 55,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`SwitchButton Component basic render 1`] = `
+<View
+  needsOffscreenAlphaCompositing={true}
+  style={
+    Array [
+      undefined,
+      false,
+    ]
+  }
+>
+  <View
+    accessibilityLabel="SwitchButton"
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "height": NaN,
+        "justifyContent": "center",
+        "opacity": 1,
+        "width": NaN,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "borderRadius": NaN,
+            "height": undefined,
+            "justifyContent": "center",
+            "width": undefined,
+          },
+          Object {
+            "backgroundColor": "#44DB5E",
+            "borderColor": "#44DB5E",
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "flex-start",
+          "backgroundColor": "#fff",
+          "borderRadius": NaN,
+          "elevation": 2,
+          "height": undefined,
+          "position": "absolute",
+          "shadowColor": "rgba(0, 0, 0, 0.3)",
+          "shadowOffset": Object {
+            "height": 3,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 3,
+          "transform": Array [
+            Object {
+              "translateX": NaN,
+            },
+          ],
+          "width": undefined,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`SwitchButton Component basic render 2`] = `
+<View
+  needsOffscreenAlphaCompositing={true}
+  style={
+    Array [
+      undefined,
+      false,
+    ]
+  }
+>
+  <View
+    accessibilityLabel="SwitchButton"
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "height": NaN,
+        "justifyContent": "center",
+        "opacity": 1,
+        "width": NaN,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "borderRadius": NaN,
+            "height": undefined,
+            "justifyContent": "center",
+            "width": undefined,
+          },
+          Object {
+            "backgroundColor": "#e5e5e5",
+            "borderColor": "#e5e5e5",
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "flex-start",
+          "backgroundColor": "#fff",
+          "borderRadius": NaN,
+          "elevation": 2,
+          "height": undefined,
+          "position": "absolute",
+          "shadowColor": "rgba(0, 0, 0, 0.3)",
+          "shadowOffset": Object {
+            "height": 3,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 3,
+          "transform": Array [
+            Object {
+              "translateX": NaN,
+            },
+          ],
+          "width": undefined,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`SwitchButton Component onSwitchChange disabled = true 1`] = `
+<ThemeProvider
+  theme={null}
+>
+  <WithTheme(ThemeConsumer)>
+    <ThemeConsumer
+      theme={null}
+    >
+      <ThemeProvider
+        theme={Object {}}
+      >
+        <ThemedSwitchButton
+          disabled={true}
+          onValueChange={[MockFunction]}
+          theme={null}
+        >
+          <WithTheme(ThemeConsumer)>
+            <ThemeConsumer
+              theme={Object {}}
+            >
+              <SwitchButton
+                accessibilityLabel="SwitchButton"
+                borderColor="#e5e5e5"
+                defaultValue={true}
+                disabled={true}
+                offText="OFF"
+                offTextStyle={null}
+                onText="ON"
+                onTextStyle={null}
+                onTintColor="#44DB5E"
+                onValueChange={[MockFunction]}
+                size={
+                  Object {
+                    "activeSize": undefined,
+                    "height": undefined,
+                    "margin": undefined,
+                    "width": undefined,
+                  }
+                }
+                thumbStyle={null}
+                thumbTintColor="#fff"
+                tintColor="#e5e5e5"
+                useNativeDriver={true}
+              >
+                <View
+                  needsOffscreenAlphaCompositing={true}
+                  style={
+                    Array [
+                      undefined,
+                      Object {
+                        "opacity": 0.8,
+                      },
+                    ]
+                  }
+                >
+                  <View
+                    needsOffscreenAlphaCompositing={true}
+                    style={
+                      Array [
+                        undefined,
+                        Object {
+                          "opacity": 0.8,
+                        },
+                      ]
+                    }
+                  >
+                    <TouchableOpacity
+                      accessibilityLabel="SwitchButton"
+                      activeOpacity={1}
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "transparent",
+                          "height": NaN,
+                          "justifyContent": "center",
+                          "width": NaN,
+                        }
+                      }
+                    >
+                      <AnimatedComponent
+                        accessibilityLabel="SwitchButton"
+                        accessible={true}
+                        isTVSelectable={true}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={
+                          Array [
+                            Object {
+                              "alignItems": "center",
+                              "backgroundColor": "transparent",
+                              "height": NaN,
+                              "justifyContent": "center",
+                              "width": NaN,
+                            },
+                            Object {
+                              "opacity": 1,
+                            },
+                          ]
+                        }
+                      >
+                        <View
+                          accessibilityLabel="SwitchButton"
+                          accessible={true}
+                          isTVSelectable={true}
+                          onResponderGrant={[Function]}
+                          onResponderMove={[Function]}
+                          onResponderRelease={[Function]}
+                          onResponderTerminate={[Function]}
+                          onResponderTerminationRequest={[Function]}
+                          onStartShouldSetResponder={[Function]}
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "backgroundColor": "transparent",
+                              "height": NaN,
+                              "justifyContent": "center",
+                              "opacity": 1,
+                              "width": NaN,
+                            }
+                          }
+                        >
+                          <View
+                            accessibilityLabel="SwitchButton"
+                            accessible={true}
+                            isTVSelectable={true}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "alignItems": "center",
+                                "backgroundColor": "transparent",
+                                "height": NaN,
+                                "justifyContent": "center",
+                                "opacity": 1,
+                                "width": NaN,
+                              }
+                            }
+                          >
+                            <View
+                              style={
+                                Array [
+                                  Object {
+                                    "borderRadius": NaN,
+                                    "height": undefined,
+                                    "justifyContent": "center",
+                                    "width": undefined,
+                                  },
+                                  Object {
+                                    "backgroundColor": "#44DB5E",
+                                    "borderColor": "#44DB5E",
+                                  },
+                                ]
+                              }
+                            >
+                              <View
+                                style={
+                                  Array [
+                                    Object {
+                                      "borderRadius": NaN,
+                                      "height": undefined,
+                                      "justifyContent": "center",
+                                      "width": undefined,
+                                    },
+                                    Object {
+                                      "backgroundColor": "#44DB5E",
+                                      "borderColor": "#44DB5E",
+                                    },
+                                  ]
+                                }
+                              />
+                            </View>
+                            <AnimatedComponent
+                              style={
+                                Array [
+                                  Object {
+                                    "alignSelf": "flex-start",
+                                    "backgroundColor": "#fff",
+                                    "borderRadius": NaN,
+                                    "elevation": 2,
+                                    "height": undefined,
+                                    "position": "absolute",
+                                    "shadowColor": "rgba(0, 0, 0, 0.3)",
+                                    "shadowOffset": Object {
+                                      "height": 3,
+                                      "width": 0,
+                                    },
+                                    "shadowOpacity": 1,
+                                    "shadowRadius": 3,
+                                    "transform": Array [
+                                      Object {
+                                        "translateX": NaN,
+                                      },
+                                    ],
+                                    "width": undefined,
+                                  },
+                                  null,
+                                ]
+                              }
+                            >
+                              <View
+                                style={
+                                  Object {
+                                    "alignSelf": "flex-start",
+                                    "backgroundColor": "#fff",
+                                    "borderRadius": NaN,
+                                    "elevation": 2,
+                                    "height": undefined,
+                                    "position": "absolute",
+                                    "shadowColor": "rgba(0, 0, 0, 0.3)",
+                                    "shadowOffset": Object {
+                                      "height": 3,
+                                      "width": 0,
+                                    },
+                                    "shadowOpacity": 1,
+                                    "shadowRadius": 3,
+                                    "transform": Array [
+                                      Object {
+                                        "translateX": NaN,
+                                      },
+                                    ],
+                                    "width": undefined,
+                                  }
+                                }
+                              >
+                                <View
+                                  style={
+                                    Object {
+                                      "alignSelf": "flex-start",
+                                      "backgroundColor": "#fff",
+                                      "borderRadius": NaN,
+                                      "elevation": 2,
+                                      "height": undefined,
+                                      "position": "absolute",
+                                      "shadowColor": "rgba(0, 0, 0, 0.3)",
+                                      "shadowOffset": Object {
+                                        "height": 3,
+                                        "width": 0,
+                                      },
+                                      "shadowOpacity": 1,
+                                      "shadowRadius": 3,
+                                      "transform": Array [
+                                        Object {
+                                          "translateX": NaN,
+                                        },
+                                      ],
+                                      "width": undefined,
+                                    }
+                                  }
+                                />
+                              </View>
+                            </AnimatedComponent>
+                          </View>
+                        </View>
+                      </AnimatedComponent>
+                    </TouchableOpacity>
+                  </View>
+                </View>
+              </SwitchButton>
+            </ThemeConsumer>
+          </WithTheme(ThemeConsumer)>
+        </ThemedSwitchButton>
+      </ThemeProvider>
+    </ThemeConsumer>
+  </WithTheme(ThemeConsumer)>
+</ThemeProvider>
+`;
+
+exports[`SwitchButton Component onSwitchChange disabled=false 1`] = `
+<ThemeProvider
+  theme={null}
+>
+  <WithTheme(ThemeConsumer)>
+    <ThemeConsumer
+      theme={null}
+    >
+      <ThemeProvider
+        theme={Object {}}
+      >
+        <ThemedSwitchButton
+          onValueChange={[MockFunction]}
+          theme={null}
+        >
+          <WithTheme(ThemeConsumer)>
+            <ThemeConsumer
+              theme={Object {}}
+            >
+              <SwitchButton
+                accessibilityLabel="SwitchButton"
+                borderColor="#e5e5e5"
+                defaultValue={true}
+                disabled={false}
+                offText="OFF"
+                offTextStyle={null}
+                onText="ON"
+                onTextStyle={null}
+                onTintColor="#44DB5E"
+                onValueChange={[MockFunction]}
+                size={
+                  Object {
+                    "activeSize": undefined,
+                    "height": undefined,
+                    "margin": undefined,
+                    "width": undefined,
+                  }
+                }
+                thumbStyle={null}
+                thumbTintColor="#fff"
+                tintColor="#e5e5e5"
+                useNativeDriver={true}
+              >
+                <View
+                  needsOffscreenAlphaCompositing={true}
+                  style={
+                    Array [
+                      undefined,
+                      false,
+                    ]
+                  }
+                >
+                  <View
+                    needsOffscreenAlphaCompositing={true}
+                    style={
+                      Array [
+                        undefined,
+                        false,
+                      ]
+                    }
+                  >
+                    <TouchableOpacity
+                      accessibilityLabel="SwitchButton"
+                      activeOpacity={1}
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "transparent",
+                          "height": NaN,
+                          "justifyContent": "center",
+                          "width": NaN,
+                        }
+                      }
+                    >
+                      <AnimatedComponent
+                        accessibilityLabel="SwitchButton"
+                        accessible={true}
+                        isTVSelectable={true}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={
+                          Array [
+                            Object {
+                              "alignItems": "center",
+                              "backgroundColor": "transparent",
+                              "height": NaN,
+                              "justifyContent": "center",
+                              "width": NaN,
+                            },
+                            Object {
+                              "opacity": 1,
+                            },
+                          ]
+                        }
+                      >
+                        <View
+                          accessibilityLabel="SwitchButton"
+                          accessible={true}
+                          isTVSelectable={true}
+                          onResponderGrant={[Function]}
+                          onResponderMove={[Function]}
+                          onResponderRelease={[Function]}
+                          onResponderTerminate={[Function]}
+                          onResponderTerminationRequest={[Function]}
+                          onStartShouldSetResponder={[Function]}
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "backgroundColor": "transparent",
+                              "height": NaN,
+                              "justifyContent": "center",
+                              "opacity": 1,
+                              "width": NaN,
+                            }
+                          }
+                        >
+                          <View
+                            accessibilityLabel="SwitchButton"
+                            accessible={true}
+                            isTVSelectable={true}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "alignItems": "center",
+                                "backgroundColor": "transparent",
+                                "height": NaN,
+                                "justifyContent": "center",
+                                "opacity": 1,
+                                "width": NaN,
+                              }
+                            }
+                          >
+                            <View
+                              style={
+                                Array [
+                                  Object {
+                                    "borderRadius": NaN,
+                                    "height": undefined,
+                                    "justifyContent": "center",
+                                    "width": undefined,
+                                  },
+                                  Object {
+                                    "backgroundColor": "#44DB5E",
+                                    "borderColor": "#44DB5E",
+                                  },
+                                ]
+                              }
+                            >
+                              <View
+                                style={
+                                  Array [
+                                    Object {
+                                      "borderRadius": NaN,
+                                      "height": undefined,
+                                      "justifyContent": "center",
+                                      "width": undefined,
+                                    },
+                                    Object {
+                                      "backgroundColor": "#44DB5E",
+                                      "borderColor": "#44DB5E",
+                                    },
+                                  ]
+                                }
+                              />
+                            </View>
+                            <AnimatedComponent
+                              style={
+                                Array [
+                                  Object {
+                                    "alignSelf": "flex-start",
+                                    "backgroundColor": "#fff",
+                                    "borderRadius": NaN,
+                                    "elevation": 2,
+                                    "height": undefined,
+                                    "position": "absolute",
+                                    "shadowColor": "rgba(0, 0, 0, 0.3)",
+                                    "shadowOffset": Object {
+                                      "height": 3,
+                                      "width": 0,
+                                    },
+                                    "shadowOpacity": 1,
+                                    "shadowRadius": 3,
+                                    "transform": Array [
+                                      Object {
+                                        "translateX": NaN,
+                                      },
+                                    ],
+                                    "width": undefined,
+                                  },
+                                  null,
+                                ]
+                              }
+                            >
+                              <View
+                                style={
+                                  Object {
+                                    "alignSelf": "flex-start",
+                                    "backgroundColor": "#fff",
+                                    "borderRadius": NaN,
+                                    "elevation": 2,
+                                    "height": undefined,
+                                    "position": "absolute",
+                                    "shadowColor": "rgba(0, 0, 0, 0.3)",
+                                    "shadowOffset": Object {
+                                      "height": 3,
+                                      "width": 0,
+                                    },
+                                    "shadowOpacity": 1,
+                                    "shadowRadius": 3,
+                                    "transform": Array [
+                                      Object {
+                                        "translateX": NaN,
+                                      },
+                                    ],
+                                    "width": undefined,
+                                  }
+                                }
+                              >
+                                <View
+                                  style={
+                                    Object {
+                                      "alignSelf": "flex-start",
+                                      "backgroundColor": "#fff",
+                                      "borderRadius": NaN,
+                                      "elevation": 2,
+                                      "height": undefined,
+                                      "position": "absolute",
+                                      "shadowColor": "rgba(0, 0, 0, 0.3)",
+                                      "shadowOffset": Object {
+                                        "height": 3,
+                                        "width": 0,
+                                      },
+                                      "shadowOpacity": 1,
+                                      "shadowRadius": 3,
+                                      "transform": Array [
+                                        Object {
+                                          "translateX": NaN,
+                                        },
+                                      ],
+                                      "width": undefined,
+                                    }
+                                  }
+                                />
+                              </View>
+                            </AnimatedComponent>
+                          </View>
+                        </View>
+                      </AnimatedComponent>
+                    </TouchableOpacity>
+                  </View>
+                </View>
+              </SwitchButton>
+            </ThemeConsumer>
+          </WithTheme(ThemeConsumer)>
+        </ThemedSwitchButton>
+      </ThemeProvider>
+    </ThemeConsumer>
+  </WithTheme(ThemeConsumer)>
+</ThemeProvider>
+`;
+
+exports[`SwitchButton Component render width disabled 1`] = `
+<View
+  needsOffscreenAlphaCompositing={true}
+  style={
+    Array [
+      undefined,
+      Object {
+        "opacity": 0.8,
+      },
+    ]
+  }
+>
+  <View
+    accessibilityLabel="SwitchButton"
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "height": NaN,
+        "justifyContent": "center",
+        "opacity": 1,
+        "width": NaN,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "borderRadius": NaN,
+            "height": undefined,
+            "justifyContent": "center",
+            "width": undefined,
+          },
+          Object {
+            "backgroundColor": "#44DB5E",
+            "borderColor": "#44DB5E",
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "flex-start",
+          "backgroundColor": "#fff",
+          "borderRadius": NaN,
+          "elevation": 2,
+          "height": undefined,
+          "position": "absolute",
+          "shadowColor": "rgba(0, 0, 0, 0.3)",
+          "shadowOffset": Object {
+            "height": 3,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 3,
+          "transform": Array [
+            Object {
+              "translateX": NaN,
+            },
+          ],
+          "width": undefined,
+        }
+      }
+    />
+  </View>
+</View>
+`;

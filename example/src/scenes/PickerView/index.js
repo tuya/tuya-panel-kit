@@ -4,7 +4,7 @@ import { subRouters } from '../../config/routers';
 import Basic from './Basic';
 import TimePicker from './TimePicker';
 
-export default class TYSectionList extends Component {
+export default class PickerViewScene extends Component {
   static Basic = Basic;
   static TimePicker = TimePicker;
 
@@ -15,16 +15,15 @@ export default class TYSectionList extends Component {
         key: id,
         title: id,
         arrow: true,
-        onPress: () => TYSdk.Navigator.push({
-          id,
-          title: id,
-        }),
+        onPress: () =>
+          TYSdk.Navigator.push({
+            id,
+            title: id,
+          }),
       }));
   }
 
   render() {
-    return (
-      <TYFlatList data={this.datas} />
-    );
+    return <TYFlatList contentContainerStyle={{ marginTop: 24 }} data={this.datas} />;
   }
 }

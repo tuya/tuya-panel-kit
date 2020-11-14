@@ -1,11 +1,10 @@
 import thunk from 'redux-thunk';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { createLogger } from 'redux-logger';
-import { createEpicMiddleware } from 'redux-observable';
+// import { createEpicMiddleware } from 'redux-observable';
 import { rootEpics, rootReducers } from './combine';
 
-const epicMiddleware = createEpicMiddleware();
-
+// const epicMiddleware = createEpicMiddleware();
 
 const isDebuggingInChrome = __DEV__ && !!window.navigator.userAgent;
 const logger = createLogger({
@@ -16,7 +15,7 @@ const logger = createLogger({
 });
 
 const middlewares = [
-  epicMiddleware,
+  // epicMiddleware,
   thunk,
 ];
 
@@ -32,11 +31,10 @@ export default function configureStore(initialState) {
     initialState,
     compose(
       applyedMiddleware,
-      isDebuggingInChrome && window.devToolsExtension
-        ? window.devToolsExtension() : f => f
+      isDebuggingInChrome && window.devToolsExtension ? window.devToolsExtension() : f => f
     )
   );
 
-  epicMiddleware.run(rootEpics);
+  // epicMiddleware.run(rootEpics);
   return store;
 }

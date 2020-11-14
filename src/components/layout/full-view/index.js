@@ -1,50 +1,54 @@
+/* eslint-disable prettier/prettier */
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import {
-  View,
-  Image,
-  Dimensions,
-  StyleSheet,
-  ViewPropTypes,
-} from 'react-native';
+import { View, Image, Dimensions, StyleSheet, ViewPropTypes, Platform } from 'react-native';
 import { Rect } from 'react-native-svg';
-import TYSdk from '../../../TYNativeApi';
-import Strings from '../../../i18n/strings';
+import { TYSdk, Strings } from '../../../TYNativeApi';
 import TopBar from '../topbar';
-import MaskView from '../../modal-view/mask-view';
 import OfflineView from '../offline-view';
-import { CoreUtils } from '../../../utils';
-
-const TYMobile = TYSdk.mobile;
-const TYNative = TYSdk.native;
+import { CoreUtils, ThemeUtils, RatioUtils } from '../../../utils';
+import Notification from '../../notification';
+import GlobalToast from '../../global-toast';
 
 let LinearGradient = View;
 let RadialGradient = View;
+
+const TYNative = TYSdk.native;
+const TYMobile = TYSdk.mobile;
+const TYEvent = TYSdk.event;
 
 if (TYMobile.verSupported('2.5')) {
   LinearGradient = require('../../gradient/linear-gradient').default;
   RadialGradient = require('../../gradient/radial-gradient').default;
 }
 
-const Window = Dimensions.get('window');
+const { get } = CoreUtils;
+const { withTheme } = ThemeUtils;
+const { isIphoneX } = RatioUtils;
 const Screen = Dimensions.get('screen');
+const isIos = Platform.OS === 'ios';
+const dropHeight = isIos ? (isIphoneX ? 88 : 64) : 56;
 
-export default class FullView extends Component {
+class FullView extends Component {
   static propTypes = {
+    theme: PropTypes.object,
     title: PropTypes.string,
     style: ViewPropTypes.style,
     topbarStyle: ViewPropTypes.style,
     hideTopbar: PropTypes.bool,
     showMenu: PropTypes.bool,
     // backgroundStyle: PropTypes.oneOfType([ViewPropTypes.style, Image.propTypes.style]),
-    background: PropTypes.oneOfType([
-      PropTypes.number,
-      PropTypes.object,
-    ]),
+    background: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
     onBack: PropTypes.func,
+    capability: PropTypes.number,
+    /**
+     * 蓝牙离线提示是否覆盖整个面板(除头部栏外)
+     */
+    isBleOfflineOverlay: PropTypes.bool,
   };
 
   static defaultProps = {
+    theme: null,
     title: '',
     style: null,
     topbarStyle: null,
@@ -52,13 +56,35 @@ export default class FullView extends Component {
     showMenu: true,
     background: null,
     onBack: null,
+    capability: 0,
+    isBleOfflineOverlay: true,
   };
 
   constructor(props) {
     super(props);
     this.state = {
       // background: props.background,
+      showNotification: false,
+      showToast: false,
+      information: {},
+      motionStyle: {},
+      successInformation: {},
+      successStyle: {},
     };
+  }
+
+  componentDidMount() {
+    TYEvent.on('showNotification', this.showNotification);
+    TYEvent.on('hideNotification', this.hideNotification);
+    TYEvent.on('showToast', this.showToast);
+    TYEvent.on('hideToast', this.hideToast);
+  }
+
+  componentWillUnmount() {
+    TYEvent.off('showNotification', this.showNotification);
+    TYEvent.off('hideNotification', this.hideNotification);
+    TYEvent.off('showToast', this.showToast);
+    TYEvent.off('hideToast', this.hideToast);
   }
 
   onBack = tab => {
@@ -69,17 +95,45 @@ export default class FullView extends Component {
         TYNative.back();
       }
     }
+  };
+
+  get topBarMoreIconName() {
+    return (
+      (TYSdk.devInfo.panelConfig &&
+        TYSdk.devInfo.panelConfig.fun &&
+        TYSdk.devInfo.panelConfig.fun.topBarMoreIconName) ||
+      'pen'
+    );
   }
 
-  renderBackground() {
-    const { backgroundStyle, background, } = this.props;
-    // const { background } = this.state;
+  showNotification = data => {
+    const { motionStyle, ...rest } = data;
+    this.setState({ showNotification: true, information: rest, motionStyle });
+  };
+
+  showToast = data => {
+    const { style, ...rest } = data;
+    this.setState({ showToast: true, successInformation: rest, successStyle: style });
+  };
+
+  hideNotification = () => {
+    this.setState({ showNotification: false });
+  };
+
+  hideToast = () => {
+    this.setState({ showToast: false });
+  };
+
+  renderBackground(background) {
+    const { backgroundStyle } = this.props;
 
     if (typeof background === 'number') {
       return (
         <Image
           fadeDuration={0}
-          ref={ref => { this.refBackground = ref; }}
+          ref={ref => {
+            this.refBackground = ref;
+          }}
           style={[styles.background, backgroundStyle]}
           source={background}
         />
@@ -94,7 +148,9 @@ export default class FullView extends Component {
         return (
           <Image
             fadeDuration={0}
-            ref={ref => { this.refBackground = ref; }}
+            ref={ref => {
+              this.refBackground = ref;
+            }}
             style={[styles.background, backgroundStyle]}
             source={{ uri }}
             {...others}
@@ -105,7 +161,9 @@ export default class FullView extends Component {
       if (CoreUtils.isArray(stops)) {
         return (
           <RadialGradient
-            ref={ref => { this.refBackground = ref; }}
+            ref={ref => {
+              this.refBackground = ref;
+            }}
             style={[styles.gradientStyle, backgroundStyle]}
             {...others}
             stops={stops}
@@ -116,7 +174,9 @@ export default class FullView extends Component {
       const { x1, y1, x2, y2, ...ostops } = background;
       return (
         <LinearGradient
-          ref={ref => { this.refBackground = ref; }}
+          ref={ref => {
+            this.refBackground = ref;
+          }}
           style={[styles.gradientStyle, backgroundStyle]}
           stops={ostops}
           x1={x1}
@@ -133,11 +193,19 @@ export default class FullView extends Component {
   }
 
   renderOfflineView() {
-    const { appOnline, deviceOnline, showOfflineView } = this.props;
-    const show = !appOnline || (!deviceOnline);
+    const {
+      appOnline,
+      deviceOnline,
+      showOfflineView,
+      capability,
+      isBleOfflineOverlay,
+    } = this.props;
+    const show = !appOnline || !deviceOnline;
     const tipText = !appOnline
       ? Strings.getLang('appoffline')
-      : !deviceOnline ? Strings.getLang('offline') : '';
+      : !deviceOnline
+        ? Strings.getLang('offline')
+        : '';
 
     if (!show) {
       return null;
@@ -154,8 +222,37 @@ export default class FullView extends Component {
     return (
       <OfflineView
         style={styles.offlineStyle}
-        textStyle={styles.offlineText}
         text={tipText}
+        textStyle={styles.offlineText}
+        appOnline={appOnline}
+        deviceOnline={deviceOnline}
+        capability={capability}
+        isBleOfflineOverlay={isBleOfflineOverlay}
+      />
+    );
+  }
+
+  // 渲染Notification
+  renderNotification() {
+    return (
+      <Notification
+        onClose={() => this.setState({ showNotification: false })}
+        motionConfig={{ dropHeight }}
+        {...this.state.information}
+        show={this.state.showNotification}
+        motionStyle={[{ zIndex: 99 }, this.state.motionStyle]}
+      />
+    );
+  }
+
+  // 渲染全局成功Toast
+  renderGlobalToast() {
+    return (
+      <GlobalToast
+        onFinish={() => this.setState({ showToast: false })}
+        {...this.state.successInformation}
+        show={this.state.showToast}
+        style={[{ zIndex: 999 }, this.state.successStyle]}
       />
     );
   }
@@ -168,16 +265,35 @@ export default class FullView extends Component {
       if (renderTopBar) {
         return renderTopBar();
       }
+      const uiPhase = TYSdk.devInfo.uiPhase || 'release';
+      const { color } = StyleSheet.flatten(topbarTextStyle) || {};
+      const isShowMore = !(isShare || !this.props.showMenu);
+      const actions = [
+        {
+          accessibilityLabel: 'TopBar_Btn_RightItem',
+          name: this.topBarMoreIconName,
+          onPress: () => this.onBack('right'),
+        },
+        uiPhase !== 'release' && {
+          accessibilityLabel: 'TopBar_Preview',
+          style: {
+            backgroundColor: '#57DD43',
+            borderWidth: 1,
+          },
+          contentStyle: { fontSize: 12 },
+          color: '#000',
+          source: 'Preview',
+          disabled: true,
+        },
+      ].filter(v => !!v);
       return (
         <TopBar
-          ref={ref => { this.topBarRef = ref; }}
-          centerText={title}
-          isLeftBack={true}
-          alignCenter={true}
-          isRightMore={!(isShare || !this.props.showMenu)}
-          style={topbarStyle}
-          textStyle={topbarTextStyle}
-          onChange={this.onBack}
+          style={[{ zIndex: 999 }, topbarStyle]}
+          title={title}
+          titleStyle={topbarTextStyle}
+          color={color}
+          actions={isShowMore ? actions : null}
+          onBack={() => this.onBack('left')}
         />
       );
     }
@@ -196,20 +312,22 @@ export default class FullView extends Component {
   }
 
   render() {
-    const { style, background, } = this.props;
+    const { style, theme } = this.props;
+    const background = this.props.background || get(theme, 'global.background', '#f8f8f8');
+    const isBgColor = typeof background === 'string';
     return (
       <View
-        ref={ref => { this.refRootView = ref; }}
-        style={[
-          styles.container,
-          style,
-        ]}
+        ref={ref => {
+          this.refRootView = ref;
+        }}
+        style={[styles.container, isBgColor && { backgroundColor: background }, style]}
       >
         {this.renderStatusBar()}
-        {!!background && this.renderBackground()}
+        {!isBgColor && this.renderBackground(background)}
+        {this.renderNotification()}
         {this.renderTopBar()}
+        {this.renderGlobalToast()}
         {this.props.children}
-        <MaskView />
         {this.renderOfflineView()}
       </View>
     );
@@ -235,17 +353,19 @@ const styles = StyleSheet.create({
 
   offlineStyle: {
     width: Screen.width,
-    height: Screen.height - TopBar.TopBarHeight,
+    height: Screen.height - TopBar.height,
     position: 'absolute',
-    top: TopBar.TopBarHeight,
+    top: TopBar.height,
   },
 
   offlineText: {
-    paddingBottom: TopBar.TopBarHeight * 2,
+    paddingBottom: TopBar.height * 2,
   },
 
   gradientStyle: {
     width: Screen.width,
     height: Screen.height,
-  }
+  },
 });
+
+export default withTheme(FullView);

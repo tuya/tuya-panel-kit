@@ -21,9 +21,7 @@ class RotationScene extends React.PureComponent {
           style={styles.btnStyle}
           onPress={() => this.setState({ active: !this.state.active })}
         >
-          <TYText style={styles.textStyle}>
-            { !this.state.active ? 'Start' : 'Stop' }
-          </TYText>
+          <TYText style={styles.textStyle}>{!this.state.active ? 'Start' : 'Stop'}</TYText>
         </TouchableOpacity>
       </View>
     );
@@ -35,7 +33,7 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
     backgroundColor: 'red',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   btnStyle: {
     position: 'absolute',
@@ -47,11 +45,11 @@ const styles = StyleSheet.create({
     borderColor: '#d0d0d0',
     borderWidth: StyleSheet.hairlineWidth,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   textStyle: {
-    color: '#333'
-  }
+    color: '#333',
+  },
 });
 
 export default RotationScene;
