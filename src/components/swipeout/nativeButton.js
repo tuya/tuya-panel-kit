@@ -1,21 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TouchableOpacity, TouchableWithoutFeedback, Text, Platform, TouchableNativeFeedback, TouchableHighlight, StyleSheet } from 'react-native';
+import {
+  TouchableOpacity,
+  TouchableWithoutFeedback,
+  Text,
+  Platform,
+  TouchableNativeFeedback,
+  TouchableHighlight,
+  StyleSheet,
+} from 'react-native';
 
 class NativeButton extends React.Component {
   static propTypes = {
     ...TouchableWithoutFeedback.propTypes,
     textStyle: Text.propTypes.style,
     children: PropTypes.node.isRequired,
-    background: (TouchableNativeFeedback.propTypes) ?
-      TouchableNativeFeedback.propTypes.background : PropTypes.any,
-  }
+    background: TouchableNativeFeedback.propTypes
+      ? TouchableNativeFeedback.propTypes.background
+      : PropTypes.any,
+  };
 
   static defaultProps = {
     textStyle: undefined,
     background: undefined,
-  }
-
+  };
 
   renderText = () => {
     if (typeof this.props.children !== 'string') {
@@ -27,10 +35,10 @@ class NativeButton extends React.Component {
         ellipsizeMode={Platform.OS === 'ios' ? 'clip' : 'tail'}
         style={[styles.textButton, this.props.textStyle]}
       >
-        { this.props.children }
+        {this.props.children}
       </Text>
     );
-  }
+  };
   render() {
     const disabledStyle = this.props.disabled ? styles.opacity : {};
     return (
@@ -40,7 +48,7 @@ class NativeButton extends React.Component {
         disabled={this.props.disabled}
         style={[styles.button, this.props.style, disabledStyle]}
       >
-        { this.renderText() }
+        {this.renderText()}
       </TouchableOpacity>
     );
   }

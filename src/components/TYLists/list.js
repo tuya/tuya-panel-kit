@@ -1,27 +1,32 @@
+/* eslint-disable new-cap */
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import {
-  View,
-  Text,
-  FlatList,
-  StyleSheet,
-  ViewPropTypes,
-} from 'react-native';
+import { View, FlatList, StyleSheet, ViewPropTypes } from 'react-native';
+import { defaultTheme } from '../theme';
+import { CoreUtils, RatioUtils, ThemeUtils } from '../../utils';
+import { StyledValueText } from './styled';
 import ListItem from './list-item';
+import CheckboxItem from './items/checkbox-item';
+import InputItem from './items/input-item';
+import SliderItem from './items/slider-item';
+import SwitchItem from './items/switch-item';
 import SwitchButton from '../switch-button';
-import { RatioUtils } from '../../utils';
 
-const {
-  convertX: cx,
-} = RatioUtils;
+const { get } = CoreUtils;
+const { convertX: cx } = RatioUtils;
+const { getTheme, ThemeConsumer } = ThemeUtils;
 
-/* eslint-disable new-cap */
 export default class TYFlatList extends Component {
   static Item = ListItem;
+  static CheckboxItem = CheckboxItem;
+  static InputItem = InputItem;
+  static SliderItem = SliderItem;
+  static SwitchItem = SwitchItem;
+
   static propTypes = {
     ...FlatList.propTypes,
-    /* data 格式
-      [{
+    /* data 数据
+     [{
         styles: [Object],
         title: [string],
         value: [bool, string],
@@ -30,71 +35,64 @@ export default class TYFlatList extends Component {
         Icon: [Func | Element],
         Action: [Func | Element],
         ...ListItemProps,
-      }]
-    */
-    data: PropTypes.arrayOf(PropTypes.shape({
-      renderItem: PropTypes.func,
-      SwitchButtonProps: PropTypes.shape({
-        ...SwitchButton.propTypes,
-      }),
-      ...ListItem.propTypes,
-    })).isRequired,
+     }]
+     */
+    data: PropTypes.arrayOf(
+      PropTypes.shape({
+        renderItem: PropTypes.func,
+        SwitchButtonProps: PropTypes.shape({
+          ...SwitchButton.propTypes,
+        }),
+        ...ListItem.propTypes,
+      })
+    ).isRequired,
+    /**
+     * 分割线样式
+     */
     separatorStyle: ViewPropTypes.style,
+    /**
+     * 列表项实例
+     */
+    flatListRef: PropTypes.func,
+    /**
+     * 是否使用 ART 实现版本
+     */
+    useART: PropTypes.bool,
   };
 
   static defaultProps = {
     separatorStyle: null,
-  }
+    flatListRef: null,
+    useART: false,
+  };
 
   renderItem = ({ item, ...otherData }) => {
-    const {
-      value,
-      onValueChange,
-      SwitchButtonProps,
-      renderItem,
-      ...listItemProps
-    } = item;
+    const { useART } = this.props;
+    const { value, SwitchButtonProps, renderItem, ...listItemProps } = item;
     if (typeof renderItem === 'function') {
       return renderItem({ item, ...otherData });
     }
     if (typeof value === 'boolean') {
-      return (
-        <ListItem
-          disabled={true}
-          Action={
-            <SwitchButton
-              value={value}
-              onTintColor="#44DB5E"
-              onThumbTintColor="#fff"
-              onValueChange={onValueChange}
-              {...SwitchButtonProps}
-            />
-          }
-          {...listItemProps}
-        />
-      );
+      return <SwitchItem value={value} useART={useART} {...listItemProps} {...SwitchButtonProps} />;
     } else if (typeof value !== 'undefined') {
-      const valueStyle = [
-        styles.valueText,
-        item.styles && item.styles.valueText,
-      ];
+      const descFontColor = get(item, 'theme.descFontColor');
+      const valueStyle = [descFontColor && { color: descFontColor }, get(item, 'styles.valueText')];
       return (
         <ListItem
+          useART={useART}
           {...listItemProps}
-          Action={(
-            <View style={styles.row}>
-              <Text style={valueStyle}>{value}</Text>
-              {
-                typeof listItemProps.Action === 'function'
-                  ? listItemProps.Action()
-                  : listItemProps.Action
-              }
+          Action={
+            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+              <StyledValueText style={valueStyle}>{value}</StyledValueText>
+              {typeof listItemProps.Action === 'function'
+                ? listItemProps.Action()
+                : listItemProps.Action}
             </View>
-          )}
+          }
         />
       );
     }
-    return <ListItem {...listItemProps} />;
+    return <ListItem useART={useART} {...listItemProps} />;
   };
 
   render() {
@@ -102,39 +100,48 @@ export default class TYFlatList extends Component {
       contentContainerStyle,
       separatorStyle,
       data,
+      flatListRef,
       ...flatListProps
     } = this.props;
     return (
-      <FlatList
-        contentContainerStyle={[styles.container, contentContainerStyle]}
-        ItemSeparatorComponent={() => <View style={[styles.separator, separatorStyle]} />}
-        renderItem={this.renderItem}
-        data={data}
-        keyExtractor={item => item.key}
-        {...flatListProps}
-      />
+      <ThemeConsumer>
+        {globalTheme => {
+          const propsWithTheme = { ...this.props, theme: globalTheme };
+          const contentStyle = [
+            {
+              backgroundColor: getTheme(
+                propsWithTheme,
+                'list.boardBg',
+                defaultTheme.list.light.boardBg
+              ),
+            },
+            contentContainerStyle,
+          ];
+          const sepStyle = [
+            {
+              marginLeft: cx(16),
+              height: StyleSheet.hairlineWidth,
+              backgroundColor: getTheme(
+                propsWithTheme,
+                'list.cellLine',
+                defaultTheme.list.light.cellLine
+              ),
+            },
+            separatorStyle,
+          ];
+          return (
+            <FlatList
+              contentContainerStyle={contentStyle}
+              ItemSeparatorComponent={() => <View style={sepStyle} />}
+              renderItem={this.renderItem}
+              data={data}
+              keyExtractor={item => item.key}
+              {...flatListProps}
+              ref={flatListRef}
+            />
+          );
+        }}
+      </ThemeConsumer>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#f8f8f8',
-  },
-
-  row: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-
-  separator: {
-    height: StyleSheet.hairlineWidth,
-    backgroundColor: '#eee',
-  },
-
-  valueText: {
-    fontSize: cx(14),
-    color: '#999',
-    marginRight: cx(6),
-  },
-});

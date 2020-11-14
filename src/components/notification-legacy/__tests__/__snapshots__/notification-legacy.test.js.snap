@@ -1,0 +1,684 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotificationLegacy Component basic render 1`] = `
+<View
+  accessibilityLabel="NotificationLegacy"
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "alignSelf": "stretch",
+      "borderRadius": 18,
+      "height": 36,
+      "justifyContent": "space-between",
+      "opacity": 1,
+      "width": 240,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "bottom": 0,
+          "flex": 1,
+          "height": 1334,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": 750,
+        },
+        Object {
+          "height": 184,
+          "width": 750,
+        },
+      ]
+    }
+  >
+    <RNSVGSvgView
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+          },
+          undefined,
+          false,
+          Object {
+            "flex": 0,
+            "height": 184,
+            "width": 750,
+          },
+        ]
+      }
+    >
+      <RNSVGDefs>
+        <RNSVGLinearGradient
+          gradient={
+            Array [
+              0,
+              0,
+              0,
+              0.6,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+            ]
+          }
+          gradientTransform={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          gradientUnits={0}
+          name="linear-gradient"
+          x1="0%"
+          x2="0%"
+          y1="0%"
+          y2="100%"
+        />
+      </RNSVGDefs>
+      <RNSVGRect
+        fill={
+          Array [
+            1,
+            "linear-gradient",
+          ]
+        }
+        fillOpacity={1}
+        fillRule={1}
+        height="184"
+        matrix={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+        opacity={1}
+        propList={
+          Array [
+            "fill",
+          ]
+        }
+        rx="0"
+        ry="0"
+        stroke={null}
+        strokeDasharray={null}
+        strokeDashoffset={null}
+        strokeLinecap={0}
+        strokeLinejoin={0}
+        strokeMiterlimit={4}
+        strokeOpacity={1}
+        strokeWidth={null}
+        width="750"
+        x="0"
+        y="0"
+      />
+    </RNSVGSvgView>
+  </View>
+  <View
+    background="#fff"
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#fff",
+          "borderRadius": 28,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginBottom": 0,
+          "marginLeft": 0,
+          "marginRight": 0,
+          "marginTop": 100,
+          "minHeight": 56,
+          "paddingBottom": 6,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "paddingTop": 6,
+          "width": 702,
+        },
+        Object {
+          "alignItems": "center",
+          "borderRadius": 30,
+          "elevation": 2,
+          "shadowColor": "rgba(0,0,0,0.16)",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 8,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "height": 20,
+            "width": 20,
+          },
+          false,
+          null,
+        ]
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+            false,
+            Object {
+              "flex": 0,
+              "height": 20,
+              "width": 20,
+            },
+          ]
+        }
+        vbHeight={1024}
+        vbWidth={1024}
+      >
+        <RNSVGPath
+          d="M512 0c282.7776 0 512 229.2224 512 512s-229.2224 512-512 512S0 794.7776 0 512 229.2224 0 512 0z m0 665.6a76.8 76.8 0 1 0 0 153.6 76.8 76.8 0 0 0 0-153.6z m0-460.8a72.192 72.192 0 0 0-71.9872 76.6464l17.6128 281.856a54.4768 54.4768 0 0 0 108.7488 0l17.6128-281.856A72.192 72.192 0 0 0 512 204.8z"
+          fill={
+            Array [
+              0,
+              0,
+              0,
+              1,
+              1,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "fill",
+            ]
+          }
+          stroke={
+            Array [
+              0,
+              0,
+              0,
+              1,
+              1,
+            ]
+          }
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={1}
+        />
+      </RNSVGSvgView>
+    </View>
+    <Text
+      accessible={true}
+      align={null}
+      allowFontScaling={false}
+      color="#495054"
+      ellipsizeMode="tail"
+      numberOfLines={3}
+      size={14}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#495054",
+            "fontSize": 14,
+          },
+          Array [
+            Object {
+              "color": "#495054",
+              "flexBasis": 0,
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "fontSize": 14,
+              "lineHeight": 20,
+              "marginBottom": 2,
+              "marginLeft": 16,
+              "marginRight": 16,
+              "marginTop": 2,
+            },
+            undefined,
+          ],
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      I am Notification
+    </Text>
+    <View
+      accessibilityLabel="NotificationLegacy_Close"
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "height": 48,
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": 48,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            Object {
+              "height": 15,
+              "width": 15,
+            },
+            false,
+            null,
+          ]
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+              false,
+              Object {
+                "flex": 0,
+                "height": 15,
+                "width": 15,
+              },
+            ]
+          }
+          vbHeight={1024}
+          vbWidth={1024}
+        >
+          <RNSVGPath
+            d="M964.544 59.456a64 64 0 0 1 0 90.496L602.56 512l361.984 362.112a64 64 0 0 1-90.496 90.496L512 602.496 149.952 964.48A64 64 0 0 1 59.52 874.048l362.048-362.112L59.52 149.952A64 64 0 0 1 149.952 59.52l362.112 361.984L874.048 59.52a64 64 0 0 1 90.496 0z"
+            fill={
+              Array [
+                0,
+                0.5058823529411764,
+                0.5098039215686274,
+                0.5450980392156862,
+                1,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            propList={
+              Array [
+                "stroke",
+                "strokeWidth",
+                "fill",
+              ]
+            }
+            stroke={
+              Array [
+                0,
+                0.5058823529411764,
+                0.5098039215686274,
+                0.5450980392156862,
+                1,
+              ]
+            }
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+          />
+        </RNSVGSvgView>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`NotificationLegacy Component enableClose render 1`] = `
+<View
+  accessibilityLabel="NotificationLegacy"
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "alignSelf": "stretch",
+      "borderRadius": 18,
+      "height": 36,
+      "justifyContent": "space-between",
+      "opacity": 1,
+      "width": 240,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "bottom": 0,
+          "flex": 1,
+          "height": 1334,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": 750,
+        },
+        Object {
+          "height": 184,
+          "width": 750,
+        },
+      ]
+    }
+  >
+    <RNSVGSvgView
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+          },
+          undefined,
+          false,
+          Object {
+            "flex": 0,
+            "height": 184,
+            "width": 750,
+          },
+        ]
+      }
+    >
+      <RNSVGDefs>
+        <RNSVGLinearGradient
+          gradient={
+            Array [
+              0,
+              0,
+              0,
+              0.6,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+            ]
+          }
+          gradientTransform={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          gradientUnits={0}
+          name="linear-gradient"
+          x1="0%"
+          x2="0%"
+          y1="0%"
+          y2="100%"
+        />
+      </RNSVGDefs>
+      <RNSVGRect
+        fill={
+          Array [
+            1,
+            "linear-gradient",
+          ]
+        }
+        fillOpacity={1}
+        fillRule={1}
+        height="184"
+        matrix={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+        opacity={1}
+        propList={
+          Array [
+            "fill",
+          ]
+        }
+        rx="0"
+        ry="0"
+        stroke={null}
+        strokeDasharray={null}
+        strokeDashoffset={null}
+        strokeLinecap={0}
+        strokeLinejoin={0}
+        strokeMiterlimit={4}
+        strokeOpacity={1}
+        strokeWidth={null}
+        width="750"
+        x="0"
+        y="0"
+      />
+    </RNSVGSvgView>
+  </View>
+  <View
+    background="#fff"
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#fff",
+          "borderRadius": 28,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginBottom": 0,
+          "marginLeft": 0,
+          "marginRight": 0,
+          "marginTop": 100,
+          "minHeight": 56,
+          "paddingBottom": 6,
+          "paddingLeft": 32,
+          "paddingRight": 32,
+          "paddingTop": 6,
+          "width": 702,
+        },
+        Object {
+          "alignItems": "center",
+          "borderRadius": 30,
+          "elevation": 2,
+          "shadowColor": "rgba(0,0,0,0.16)",
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 8,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "height": 20,
+            "width": 20,
+          },
+          false,
+          null,
+        ]
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+            false,
+            Object {
+              "flex": 0,
+              "height": 20,
+              "width": 20,
+            },
+          ]
+        }
+        vbHeight={1024}
+        vbWidth={1024}
+      >
+        <RNSVGPath
+          d="M512 0c282.7776 0 512 229.2224 512 512s-229.2224 512-512 512S0 794.7776 0 512 229.2224 0 512 0z m0 665.6a76.8 76.8 0 1 0 0 153.6 76.8 76.8 0 0 0 0-153.6z m0-460.8a72.192 72.192 0 0 0-71.9872 76.6464l17.6128 281.856a54.4768 54.4768 0 0 0 108.7488 0l17.6128-281.856A72.192 72.192 0 0 0 512 204.8z"
+          fill={
+            Array [
+              0,
+              0,
+              0,
+              1,
+              1,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "fill",
+            ]
+          }
+          stroke={
+            Array [
+              0,
+              0,
+              0,
+              1,
+              1,
+            ]
+          }
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={1}
+        />
+      </RNSVGSvgView>
+    </View>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#0f0",
+          "borderRadius": 18,
+          "height": 36,
+          "width": 240,
+        }
+      }
+    />
+  </View>
+</View>
+`;

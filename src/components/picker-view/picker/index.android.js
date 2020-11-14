@@ -1,4 +1,3 @@
-/* eslint-disable react/require-default-props */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { requireNativeComponent, ViewPropTypes } from 'react-native';
@@ -21,6 +20,7 @@ class WheelPicker extends Component {
   render() {
     return (
       <WheelPickerView
+        accessibilityLabel={this.props.accessibilityLabel || 'PickerView'}
         style={this.props.style}
         items={this.props.items}
         itemTextColor={this.props.itemTextColor}

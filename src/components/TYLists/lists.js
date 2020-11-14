@@ -1,24 +1,33 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import { View, Text, SectionList, StyleSheet, ViewPropTypes } from 'react-native';
+import { defaultTheme } from '../theme';
+import { CoreUtils, RatioUtils, ThemeUtils } from '../../utils';
 import {
-  View,
-  Text,
-  SectionList,
-  StyleSheet,
-  ViewPropTypes,
-} from 'react-native';
+  StyledValueText,
+  StyledHeader,
+  StyledHeaderText,
+  StyledFooter,
+  StyledFooterText,
+} from './styled';
 import ListItem from './list-item';
-import SwitchButton from '../switch-button';
-import { RatioUtils } from '../../utils';
+import CheckboxItem from './items/checkbox-item';
+import InputItem from './items/input-item';
+import SliderItem from './items/slider-item';
+import SwitchItem from './items/switch-item';
 
-const {
-  convertX: cx,
-  convertY: cy,
-} = RatioUtils;
+const { get } = CoreUtils;
+const { convertX: cx } = RatioUtils;
+const { getTheme, ThemeConsumer } = ThemeUtils;
 
 /* eslint-disable new-cap */
 export default class TYSectionLists extends Component {
   static Item = ListItem;
+  static CheckboxItem = CheckboxItem;
+  static InputItem = InputItem;
+  static SliderItem = SliderItem;
+  static SwitchItem = SwitchItem;
+
   static propTypes = {
     ...SectionList.propTypes,
     /* sections 格式
@@ -40,72 +49,86 @@ export default class TYSectionLists extends Component {
       }]
     */
     sections: PropTypes.array.isRequired,
+    /**
+     * 头部样式
+     */
     headerStyle: Text.propTypes.style,
+    /**
+     * 分割线样式
+     */
     separatorStyle: ViewPropTypes.style,
+    /**
+     * 列表项实例
+     */
+    sectionListRef: PropTypes.func,
+    /**
+     * 是否使用 ART 实现版本
+     */
+    useART: PropTypes.bool,
   };
 
   static defaultProps = {
     headerStyle: null,
     separatorStyle: null,
-  }
+    sectionListRef: null,
+    useART: false,
+  };
 
-  renderSectionHeader = ({ section: { title } }) => {
+  renderSectionHeader = ({ section }) => {
+    const { title } = section;
+    const { sections } = this.props;
     const { headerStyle } = this.props;
+    const sectionIdx = sections.findIndex(sec => sec.title === title);
+    const prevSectionHasFooter = !!get(sections, `${sectionIdx - 1}.footer`);
     if (title) {
-      return <Text style={[styles.sectionHeader, headerStyle]}>{title}</Text>;
+      return (
+        <StyledHeader style={[{ marginTop: prevSectionHasFooter ? 0 : 24 }, headerStyle]}>
+          {React.isValidElement(title) ? title : <StyledHeaderText>{title}</StyledHeaderText>}
+        </StyledHeader>
+      );
+    }
+    return <View style={{ marginTop: prevSectionHasFooter ? 0 : 12 }} />;
+  };
+
+  renderSectionFooter = ({ section: { footer } }) => {
+    const { footerStyle } = this.props;
+    if (footer) {
+      return (
+        <StyledFooter style={footerStyle}>
+          {React.isValidElement(footer) ? footer : <StyledFooterText>{footer}</StyledFooterText>}
+        </StyledFooter>
+      );
     }
     return null;
-  }
+  };
 
   renderItem = ({ item, ...otherData }) => {
-    const {
-      value,
-      onValueChange,
-      SwitchButtonProps,
-      renderItem,
-      ...listItemProps
-    } = item;
+    const { useART } = this.props;
+    const { value, SwitchButtonProps, renderItem, ...listItemProps } = item;
     if (typeof renderItem === 'function') {
       return renderItem({ item, ...otherData });
     }
     if (typeof value === 'boolean') {
-      return (
-        <ListItem
-          disabled={true}
-          Action={
-            <SwitchButton
-              value={value}
-              onTintColor="#44DB5E"
-              onThumbTintColor="#fff"
-              onValueChange={onValueChange}
-              {...SwitchButtonProps}
-            />
-          }
-          {...listItemProps}
-        />
-      );
+      return <SwitchItem value={value} useART={useART} {...listItemProps} {...SwitchButtonProps} />;
     } else if (typeof value !== 'undefined') {
-      const valueStyle = [
-        styles.valueText,
-        item.styles && item.styles.valueText,
-      ];
+      const descFontColor = get(item, 'theme.descFontColor');
+      const valueStyle = [descFontColor && { color: descFontColor }, get(item, 'styles.valueText')];
       return (
         <ListItem
+          useART={useART}
           {...listItemProps}
-          Action={(
-            <View style={styles.row}>
-              <Text style={valueStyle}>{value}</Text>
-              {
-                typeof listItemProps.Action === 'function'
-                  ? listItemProps.Action()
-                  : listItemProps.Action
-              }
+          Action={
+            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+              <StyledValueText style={valueStyle}>{value}</StyledValueText>
+              {typeof listItemProps.Action === 'function'
+                ? listItemProps.Action()
+                : listItemProps.Action}
             </View>
-          )}
+          }
         />
       );
     }
-    return <ListItem {...listItemProps} />;
+    return <ListItem useART={useART} {...listItemProps} />;
   };
 
   render() {
@@ -113,49 +136,51 @@ export default class TYSectionLists extends Component {
       contentContainerStyle,
       separatorStyle,
       sections,
+      sectionListRef,
       ...sectionListProps
     } = this.props;
     return (
-      <SectionList
-        contentContainerStyle={[styles.container, contentContainerStyle]}
-        ItemSeparatorComponent={() => <View style={[styles.separator, separatorStyle]} />}
-        renderSectionHeader={this.renderSectionHeader}
-        renderSectionFooter={() => <View style={styles.sectionFooter} />}
-        renderItem={this.renderItem}
-        sections={sections}
-        keyExtractor={item => item.key}
-        stickySectionHeadersEnabled={false}
-        {...sectionListProps}
-      />
+      <ThemeConsumer>
+        {globalTheme => {
+          const propsWithTheme = { ...this.props, theme: globalTheme };
+          const contentStyle = [
+            {
+              backgroundColor: getTheme(
+                propsWithTheme,
+                'list.boardBg',
+                defaultTheme.list.light.boardBg
+              ),
+            },
+            contentContainerStyle,
+          ];
+          const sepStyle = [
+            {
+              marginLeft: cx(16),
+              height: StyleSheet.hairlineWidth,
+              backgroundColor: getTheme(
+                propsWithTheme,
+                'list.cellLine',
+                defaultTheme.list.light.cellLine
+              ),
+            },
+            separatorStyle,
+          ];
+          return (
+            <SectionList
+              contentContainerStyle={contentStyle}
+              ItemSeparatorComponent={() => <View style={sepStyle} />}
+              renderSectionHeader={this.renderSectionHeader}
+              renderSectionFooter={this.renderSectionFooter}
+              renderItem={this.renderItem}
+              sections={sections}
+              keyExtractor={item => item.key}
+              stickySectionHeadersEnabled={false}
+              {...sectionListProps}
+              ref={sectionListRef}
+            />
+          );
+        }}
+      </ThemeConsumer>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#f8f8f8',
-  },
-
-  sectionHeader: {
-    marginLeft: cx(12),
-    marginBottom: cy(6),
-    fontSize: Math.max(12, cx(12)),
-    color: '#c8c8c8',
-    backgroundColor: 'transparent',
-  },
-
-  separator: {
-    height: StyleSheet.hairlineWidth,
-    backgroundColor: '#eee',
-  },
-
-  sectionFooter: {
-    marginTop: cy(16),
-  },
-
-  valueText: {
-    fontSize: cx(14),
-    color: '#999',
-    marginRight: cx(6),
-  },
-});

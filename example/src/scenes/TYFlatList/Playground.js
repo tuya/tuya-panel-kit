@@ -1,14 +1,6 @@
 import React, { Component } from 'react';
-import {
-  View,
-  Text,
-  Image,
-  StyleSheet,
-} from 'react-native';
-import {
-  TYSdk,
-  TYFlatList,
-} from 'tuya-panel-kit';
+import { View, Text, Image, StyleSheet } from 'react-native';
+import { TYSdk, TYFlatList } from 'tuya-panel-kit';
 import ExplorerLayout from '../../components/ExplorerLayout';
 import ControlBoolean from '../../components/ControlBoolean';
 
@@ -25,7 +17,7 @@ export default class TYFlatListScene extends Component {
     showIcon: false,
     isCustomTheme: false,
     showCustomItem: false,
-  }
+  };
 
   get datas() {
     const imgStyle = { width: 24, height: 24 };
@@ -43,17 +35,17 @@ export default class TYFlatListScene extends Component {
       disabled: this.state.disabled,
       Icon: this.state.showIcon ? <Image style={imgStyle} source={Res.hue} /> : null,
       onPress: this._handleItemPress(v),
-      renderItem: (this.state.showCustomItem && v === 3) ? this.renderCustomItem : null,
+      renderItem: this.state.showCustomItem && v === 3 ? this.renderCustomItem : null,
     }));
   }
 
   _handleItemPress = value => () => {
     TYNative.simpleTipDialog(`Click Item ${value}`, () => {});
-  }
+  };
 
   _handleBoolChange = key => value => {
     this.setState({ [key]: value });
-  }
+  };
 
   renderCustomItem = () => {
     return (
@@ -61,16 +53,11 @@ export default class TYFlatListScene extends Component {
         <Text style={styles.title}>I am custom item</Text>
       </View>
     );
-  }
+  };
 
   renderContent = () => {
-    return (
-      <TYFlatList
-        style={{ alignSelf: 'stretch' }}
-        data={this.datas}
-      />
-    );
-  }
+    return <TYFlatList style={{ alignSelf: 'stretch' }} data={this.datas} />;
+  };
 
   renderPlayground = () => {
     return (
@@ -102,14 +89,11 @@ export default class TYFlatListScene extends Component {
         />
       </View>
     );
-  }
+  };
 
   render() {
     return (
-      <ExplorerLayout
-        renderContent={this.renderContent}
-        renderPlayground={this.renderPlayground}
-      />
+      <ExplorerLayout renderContent={this.renderContent} renderPlayground={this.renderPlayground} />
     );
   }
 }
@@ -124,7 +108,7 @@ const styles = StyleSheet.create({
   title: {
     color: 'rgba(255, 255, 255, 0.9)',
   },
-  
+
   subTitle: {
     color: 'rgba(255, 255, 255, 0.4)',
     marginTop: 4,

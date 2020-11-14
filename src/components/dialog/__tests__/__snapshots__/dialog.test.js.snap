@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dialog Component Dialog.alert render 1`] = `null`;
+
+exports[`Dialog Component Dialog.checkbox(Radio) render 1`] = `null`;
+
+exports[`Dialog Component Dialog.checkbox(Switch) render 1`] = `null`;
+
+exports[`Dialog Component Dialog.confirm render 1`] = `null`;
+
+exports[`Dialog Component Dialog.custom render 1`] = `null`;
+
+exports[`Dialog Component Dialog.list render 1`] = `null`;
+
+exports[`Dialog Component Dialog.prompt(defaultValue) render 1`] = `null`;
+
+exports[`Dialog Component Dialog.prompt(value) render 1`] = `null`;

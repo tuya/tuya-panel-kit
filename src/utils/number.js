@@ -1,7 +1,6 @@
 import CoreUtils from './core';
 import StringUtils from './string';
 
-
 /**
  * @example
  * toFixedString(111, 5)
@@ -15,7 +14,6 @@ const toFixedString = (num, count) => {
   s = CoreUtils.toFixed(s, count);
   return num < 0 ? `-${s}` : s;
 };
-
 
 /**
  * @example
@@ -34,7 +32,6 @@ const toFilledString = (num, count) => {
   return num < 0 ? `-${s}` : s;
 };
 
-
 /**
  * @example
  * // 17 = 10001(2)
@@ -49,9 +46,7 @@ const toFilledString = (num, count) => {
  * @param {Number} idx, idx is reverse, and it begins 0
  * @returns {Number} a num
  */
-// eslint-disable-next-line
-const getBitValue = (num, idx) => ((num & (1 << idx)) >> idx);
-
+const getBitValue = (num, idx) => (num & (1 << idx)) >> idx;
 
 /**
  * @example
@@ -67,9 +62,7 @@ const getBitValue = (num, idx) => ((num & (1 << idx)) >> idx);
  * @param {Number} idx, idx is reverse, and it begins 0
  * @returns {Number} a num, which the idx th digit change, 1 to 0, 0 to 1
  */
-// eslint-disable-next-line
-const changeBitValue = (num, idx) => (num ^ (1 << idx));
-
+const changeBitValue = (num, idx) => num ^ (1 << idx);
 
 /**
  * @example
@@ -87,10 +80,8 @@ const changeBitValue = (num, idx) => (num ^ (1 << idx));
  */
 const setBitValueWithOne = (num, idx) => {
   const digit = getBitValue(num, idx);
-  // eslint-disable-next-line
-  return (num + (1 - digit) * (1 << idx));
+  return num + (1 - digit) * (1 << idx);
 };
-
 
 /**
  * @example
@@ -108,10 +99,8 @@ const setBitValueWithOne = (num, idx) => {
  */
 const setBitValueWithZero = (num, idx) => {
   const digit = getBitValue(num, idx);
-  // eslint-disable-next-line
-  return (num + (-1 * digit) * (1 << idx));
+  return num + -1 * digit * (1 << idx);
 };
-
 
 /**
  * @example
@@ -124,15 +113,14 @@ const setBitValueWithZero = (num, idx) => {
  * @returns {String} a string which convert from the bytes array
  */
 const bytesToHexString = bytes => {
-  return bytes.map(x => {
-    // eslint-disable-next-line
-    const high = (x >>> 4).toString(16);
-    // eslint-disable-next-line
-    const low = (x & 0xF).toString(16);
-    return `${high}${low}`;
-  }).join('');
+  return bytes
+    .map(x => {
+      const high = (x >>> 4).toString(16);
+      const low = (x & 0xf).toString(16);
+      return `${high}${low}`;
+    })
+    .join('');
 };
-
 
 /**
  * 等同于原来的 decToHex
@@ -150,7 +138,6 @@ const numToHexString = (num, padding = 2) => {
   return CoreUtils.toFixed(hex, padding);
 };
 
-
 /**
  * 等同于原来的 numberToBytes
  * @example
@@ -166,10 +153,8 @@ const numToByteNumbers = (num, bytes = 2) => {
   const hex = Number(num).toString(16);
   const hexStr = CoreUtils.toFilled(hex, bytes * 2);
   const len = hexStr.length;
-  // eslint-disable-next-line
   return StringUtils.hexStringToNumber([hexStr, `0${hexStr}`][len & 1]);
 };
-
 
 /**
  * 等同于原来的 highlowToInt
@@ -183,9 +168,7 @@ const numToByteNumbers = (num, bytes = 2) => {
  * @param {Number} low, a number which stands the low 8 number
  * @returns {Number} a number which converts from the `str` and the `low`
  */
-// eslint-disable-next-line
-const highLowToInt = (high, low) => (low + (high << 8));
-
+const highLowToInt = (high, low) => low + (high << 8);
 
 /**
  * 等同于原来的 intToHighlow
@@ -198,9 +181,7 @@ const highLowToInt = (high, low) => (low + (high << 8));
  * @param {Number} num, a number
  * @returns {Array} a array of number, which the first is the high 8 number, the second is the low 8 number
  */
-// eslint-disable-next-line
 const intToHighLow = num => [num >> 8, num & 0xff];
-
 
 /**
  * 等同于原来的 inMaxMin
@@ -229,9 +210,7 @@ const inMaxMin = (min, max, value) => Math.max(Math.min(max, value), min);
  * @param {Number} value, a number
  * @returns {Number}
  */
-// eslint-disable-next-line
 const scaleNumber = (scale, value) => (value / Math.pow(10, scale)).toFixed(scale).toString();
-
 
 // https://github.com/lodash/lodash/blob/master/.internal/baseRange.js
 /**
@@ -250,7 +229,6 @@ const range = (start = 0, end, step = 1) => {
 
   while (length--) {
     result[++index] = start;
-    // eslint-disable-next-line
     start += step;
   }
   return result;
@@ -280,7 +258,7 @@ const range = (start = 0, end, step = 1) => {
 const calcPosition = (value, min, max, newMin, newMax) => {
   const oldRange = max - min;
   const newRange = newMax - newMin;
-  const newValue = ((value - min) * newRange / oldRange) + newMin;
+  const newValue = ((value - min) * newRange) / oldRange + newMin;
   return newValue;
 };
 
@@ -306,6 +284,38 @@ const calcPercent = (min, max, value, offset = 0) => {
   return calcPosition(val, min, max, newMin, newMax) / 100;
 };
 
+const calNumLength = (number1, number2) => {
+  const hasPoint1 = number1.toString().indexOf('.') !== -1;
+  const hasPoint2 = number2.toString().indexOf('.') !== -1;
+  const idxPoint1 = hasPoint1 ? number1.toString().split('.')[1].length : 0;
+  const idxPoint2 = hasPoint2 ? number2.toString().split('.')[1].length : 0;
+  const maxLength = Math.pow(10, Math.max(idxPoint1, idxPoint2));
+  return maxLength;
+};
+
+/**
+ * @description 两数相加数据精度问题可通过该函数处理
+ * @param {Number} value1 值
+ * @param {Number} value2  值
+ * @returns {Number}  相加结果
+ */
+
+const add = (number1, number2) => {
+  const maxLength = calNumLength(number1, number2);
+  return (number1 * maxLength + number2 * maxLength) / maxLength;
+};
+
+/** 两数相减数据精度问题可通过该函数处理
+ * @param {Number} value1 值
+ * @param {Number} value2  值
+ * @returns {Number}  相减结果
+ */
+
+const subtract = (number1, number2) => {
+  const maxLength = calNumLength(number1, number2);
+  return (number1 * maxLength - number2 * maxLength) / maxLength;
+};
+
 const NumberUtil = {
   toFixedString,
   toFilledString,
@@ -323,7 +333,8 @@ const NumberUtil = {
   range,
   calcPosition,
   calcPercent,
+  add,
+  subtract,
 };
-
 
 export default NumberUtil;

@@ -1,2 +1,6 @@
 node_modules
 __tests__
+src/TYNativeApi.js
+lib
+*.d.ts
+example

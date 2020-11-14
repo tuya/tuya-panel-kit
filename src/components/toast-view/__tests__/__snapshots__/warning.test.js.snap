@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toast.Error Component basic render 1`] = `
+<View
+  pointerEvents="none"
+  style={
+    Array [
+      false,
+      Object {
+        "alignItems": "center",
+        "bottom": 0,
+        "flex": 1,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      },
+      null,
+      Object {
+        "justifyContent": "center",
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(0,0,0,.7)",
+        "borderRadius": 16,
+        "justifyContent": "center",
+        "marginBottom": 64,
+        "maxWidth": 244,
+        "minWidth": 240,
+        "opacity": 0,
+        "paddingHorizontal": 36,
+        "paddingVertical": 54,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "height": 80,
+            "width": 80,
+          },
+          false,
+          Array [
+            Object {
+              "marginBottom": 16,
+            },
+            null,
+          ],
+        ]
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+            false,
+            Object {
+              "flex": 0,
+              "height": 80,
+              "width": 80,
+            },
+          ]
+        }
+        vbHeight={1024}
+        vbWidth={1024}
+      >
+        <RNSVGPath
+          d="M512 0c282.7776 0 512 229.2224 512 512s-229.2224 512-512 512S0 794.7776 0 512 229.2224 0 512 0z m0 51.2C257.5104 51.2 51.2 257.5104 51.2 512s206.3104 460.8 460.8 460.8 460.8-206.3104 460.8-460.8S766.4896 51.2 512 51.2z m0 614.4a51.2 51.2 0 1 1 0 102.4 51.2 51.2 0 0 1 0-102.4z m0-409.6a51.2 51.2 0 0 1 51.2 51.2v256a51.2 51.2 0 1 1-102.4 0V307.2a51.2 51.2 0 0 1 51.2-51.2z"
+          fill={
+            Array [
+              0,
+              1,
+              1,
+              1,
+              1,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "fill",
+            ]
+          }
+          stroke={
+            Array [
+              0,
+              1,
+              1,
+              1,
+              1,
+            ]
+          }
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={1}
+        />
+      </RNSVGSvgView>
+    </View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#FFFFFF",
+            "flexWrap": "wrap",
+            "fontSize": 14,
+            "textAlign": "center",
+          },
+          null,
+        ]
+      }
+    >
+      I'm Iron man
+    </Text>
+  </View>
+</View>
+`;

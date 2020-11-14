@@ -1,14 +1,6 @@
 import React, { Component } from 'react';
-import {
-  View,
-  Text,
-  Image,
-  StyleSheet,
-} from 'react-native';
-import {
-  TYSdk,
-  TYFlatList,
-} from 'tuya-panel-kit';
+import { View, Text, StyleSheet } from 'react-native';
+import { TYSdk, TYFlatList } from 'tuya-panel-kit';
 
 const TYNative = TYSdk.native;
 
@@ -18,7 +10,6 @@ const Res = {
 
 export default class TYFlatListBasicScene extends Component {
   get data() {
-    const imgStyle = { width: 24, height: 24 };
     return new Array(15).fill(0).map((_, idx) => ({
       key: idx,
       styles: idx === 2 && {
@@ -29,15 +20,16 @@ export default class TYFlatListBasicScene extends Component {
       title: `title_${idx}`,
       subTitle: `subTitle_${idx}`,
       arrow: true,
-      Icon: <Image style={imgStyle} source={Res.hue} />,
+      iconSize: 24,
+      Icon: idx === 0 ? '1' : Res.hue,
       onPress: this._handleItemPress(idx),
-      renderItem: idx === 1 && this.renderCustomItem,
+      renderItem: idx === 1 ? this.renderCustomItem : null,
     }));
   }
 
   _handleItemPress = value => () => {
     TYNative.simpleTipDialog(`Click Item ${value}`, () => {});
-  }
+  };
 
   renderCustomItem = ({ item }) => {
     return (
@@ -47,7 +39,7 @@ export default class TYFlatListBasicScene extends Component {
         </Text>
       </View>
     );
-  }
+  };
 
   render() {
     return (
@@ -70,7 +62,7 @@ const styles = StyleSheet.create({
   title: {
     color: 'rgba(255, 255, 255, 0.9)',
   },
-  
+
   subTitle: {
     color: 'rgba(255, 255, 255, 0.4)',
     marginTop: 4,

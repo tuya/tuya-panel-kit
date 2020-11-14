@@ -9,15 +9,18 @@ export default () => (
     <View style={dimension}>
       <RadialGradient
         style={dimension}
-        stops={[{
-          offset: '0%',
-          stopColor: '#ff0',
-          stopOpacity: '1',
-        }, {
-          offset: '100%',
-          stopColor: '#00f',
-          stopOpacity: '1',
-        }]}
+        stops={[
+          {
+            offset: '0%',
+            stopColor: '#ff0',
+            stopOpacity: '1',
+          },
+          {
+            offset: '100%',
+            stopColor: '#00f',
+            stopOpacity: '1',
+          },
+        ]}
         rx="50%"
         ry="50%"
         fx="50%"

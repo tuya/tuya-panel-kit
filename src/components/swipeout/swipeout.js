@@ -1,11 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/require-default-props */
 import React from 'react';
-import {
-  PanResponder, StyleSheet,
-  View, Animated, Easing,
-  ViewPropTypes
-} from 'react-native';
+import { PanResponder, StyleSheet, View, Animated, Easing, ViewPropTypes } from 'react-native';
 import PropTypes from 'prop-types';
 import NativeButton from './nativeButton';
 
@@ -26,10 +22,12 @@ const SwipeoutButton = props => {
     swipeoutBtnStyle.push([{ backgroundColor: props.backgroundColor }]);
   }
   // height|width
-  swipeoutBtnStyle.push([{
-    height: props.height,
-    width: props.width,
-  }]);
+  swipeoutBtnStyle.push([
+    {
+      height: props.height,
+      width: props.width,
+    },
+  ]);
 
   const swipeoutBtnContentStyle = {
     height: props.height,
@@ -51,35 +49,66 @@ const SwipeoutButton = props => {
       style={[styles.swipeoutBtnWrapperStyle, swipeoutBtnStyle]}
       textStyle={swipeoutBtnTextStyle}
     >
-      {
-        props.content ? (
-          <View style={swipeoutBtnContentStyle}>{props.content}</View>
-        ) : props.text
-      }
+      {props.content ? <View style={swipeoutBtnContentStyle}>{props.content}</View> : props.text}
     </NativeButton>
   );
 };
 
 class Swipeout extends React.Component {
   static defaultProps = {
+    accessibilityLabel: 'Swipeout',
     disabled: false,
     rowID: -1,
     sectionID: -1,
     sensitivity: 50,
-  }
+  };
 
   static propTypes = {
+    /**
+     * 测试标志
+     */
+    accessibilityLabel: PropTypes.string,
+    /**
+     * 是否禁用swipeout所提供的侧滑操作
+     */
     disabled: PropTypes.bool,
+    /**
+     * 往左滑出现的按钮
+     */
     left: PropTypes.array,
+    /**
+     * 往右滑出现的按钮
+     */
     right: PropTypes.array,
+    /**
+     * 侧滑之后出现按钮的宽度
+     */
     buttonWidth: PropTypes.number,
+    /**
+     * 任意一侧按钮全显示的回调
+     */
     onOpen: PropTypes.func,
+    /**
+     * 任意一侧按钮全隐藏的回调
+     */
     onClose: PropTypes.func,
+    /**
+     * 侧滑的距离
+     */
     sensitivity: PropTypes.number,
+    /**
+     * 滑动回调函数
+     */
     scroll: PropTypes.func,
+    /**
+     * 容器样式
+     */
     style: ViewPropTypes.style,
+    /**
+     * 当close从false变为true时，会隐藏所有侧滑操作按钮。反过来true变为false无任何变化。
+     */
     close: PropTypes.bool,
-  }
+  };
 
   constructor(props) {
     super(props);
@@ -100,8 +129,7 @@ class Swipeout extends React.Component {
   componentWillMount() {
     this.panResponder = PanResponder.create({
       onStartShouldSetPanResponder: () => true,
-      onStartShouldSetPanResponderCapture: () =>
-        this.state.openedLeft || this.state.openedRight,
+      onStartShouldSetPanResponderCapture: () => this.state.openedLeft || this.state.openedRight,
       onMoveShouldSetPanResponderCapture: (event, gestureState) =>
         Math.abs(gestureState.dx) > this.props.sensitivity &&
         Math.abs(gestureState.dy) <= this.props.sensitivity,
@@ -109,12 +137,12 @@ class Swipeout extends React.Component {
       onPanResponderMove: this.handlePanResponderMove,
       onPanResponderRelease: this.handlePanResponderEnd,
       onPanResponderTerminate: this.handlePanResponderEnd,
-      onShouldBlockNativeResponder: () => false,
+      onShouldBlockNativeResponder: /* istanbul ignore next */ () => false,
       onPanResponderTerminationRequest: () => false,
     });
     this.state.contentDot.addListener(obj => {
       this.setState({
-        contentDotNum: obj.value
+        contentDotNum: obj.value,
       });
     });
   }
@@ -129,17 +157,17 @@ class Swipeout extends React.Component {
       contentWidth: width,
       contentHeight: height,
     });
-  }
+  };
 
   onOpen = () => {
     const { onOpen, sectionID, rowID } = this.props;
     if (onOpen && typeof onOpen === 'function') onOpen(sectionID, rowID);
-  }
+  };
 
   onClose = () => {
     const { onClose, sectionID, rowID } = this.props;
     if (onClose && typeof onClose === 'function') onClose(sectionID, rowID);
-  }
+  };
 
   onShow = (contentDot, direction, duration) => {
     const left = direction === 'left';
@@ -156,7 +184,7 @@ class Swipeout extends React.Component {
         swiping: false,
       });
     });
-  }
+  };
 
   onHide = () => {
     const { sectionID, rowID, onClose } = this.props;
@@ -177,7 +205,7 @@ class Swipeout extends React.Component {
         swiping: false,
       });
     });
-  }
+  };
 
   grantMeasureCallback = (x, y, width) => {
     const { left, right, buttonWidth } = this.props;
@@ -188,7 +216,7 @@ class Swipeout extends React.Component {
       rightWidth: right ? right.length * btnWidth : 0,
       swiping: true,
     });
-  }
+  };
 
   handlePanResponderGrant = () => {
     const { disabled } = this.props;
@@ -200,7 +228,7 @@ class Swipeout extends React.Component {
       this.onClose();
     }
     this.swipeoutContent.measure(this.grantMeasureCallback);
-  }
+  };
 
   handlePanResponderMove = (e, gestureState) => {
     const { disabled } = this.props;
@@ -227,15 +255,18 @@ class Swipeout extends React.Component {
     } else if (dx > 0 && this.props.left) {
       this.state.contentDot.setValue(dx);
     }
-  }
+  };
 
   handlePanResponderEnd = (e, gestureState) => {
     const { disabled } = this.props;
     const {
-      openedLeft, openedRight,
-      leftWidth, rightWidth,
-      contentDotNum, contentWidth,
-      swiping
+      openedLeft,
+      openedRight,
+      leftWidth,
+      rightWidth,
+      contentDotNum,
+      contentWidth,
+      swiping,
     } = this.state;
     if (disabled) return;
     const { dx } = gestureState;
@@ -257,7 +288,7 @@ class Swipeout extends React.Component {
         this.onHide();
       }
     }
-  }
+  };
 
   autoClose = btn => {
     const { onPress } = btn;
@@ -265,18 +296,20 @@ class Swipeout extends React.Component {
     if (onPress && typeof onPress === 'function') {
       onPress();
     }
-  }
+  };
 
   renderButtons = (btnsArray, visible, style) => {
+    const { accessibilityLabel } = this.props;
     if (btnsArray && visible) {
       return (
         <Animated.View style={style}>
-          { btnsArray.map((btn, index) => (
+          {btnsArray.map((btn, index) => (
             <SwipeoutButton
               backgroundColor={btn.backgroundColor}
               color={btn.color}
               disabled={btn.disabled}
               key={btn.key || index}
+              accessibilityLabel={`${accessibilityLabel}_${btn.key || index}`}
               onPress={() => this.autoClose(btn)}
               text={btn.text}
               content={btn.content}
@@ -286,37 +319,50 @@ class Swipeout extends React.Component {
               fontSize={btn.fontSize}
               textStyle={btn.textStyle}
             />
-          )) }
+          ))}
         </Animated.View>
       );
     }
-  }
+  };
 
   render() {
+    const { accessibilityLabel } = this.props;
     const { contentDotNum, contentWidth } = this.state;
     const styleSwipeout = [styles.swipeout, this.props.style];
     if (this.props.backgroundColor) {
       styleSwipeout.push([{ backgroundColor: this.props.backgroundColor }]);
     }
-    const styleLeft = [styles.swipeoutBtns, {
-      left: 0,
-      overflow: 'hidden',
-      width: contentDotNum,
-    }];
-    const styleRight = [styles.swipeoutBtns, {
-      right: 0,
-      left: Math.abs(contentWidth + contentDotNum),
-    }];
-    const styleContent = [styles.swipeoutContent, {
-      left: this.state.contentDot
-    }];
+    const styleLeft = [
+      styles.swipeoutBtns,
+      {
+        left: 0,
+        overflow: 'hidden',
+        width: contentDotNum,
+      },
+    ];
+    const styleRight = [
+      styles.swipeoutBtns,
+      {
+        right: 0,
+        left: Math.abs(contentWidth + contentDotNum),
+      },
+    ];
+    const styleContent = [
+      styles.swipeoutContent,
+      {
+        left: this.state.contentDot,
+      },
+    ];
     const isRightVisible = contentDotNum < 0;
     const isLeftVisible = contentDotNum > 0;
     return (
       <View style={styleSwipeout}>
         <Animated.View style={styleContent}>
           <View
-            ref={ref => { this.swipeoutContent = ref; }}
+            ref={ref => {
+              this.swipeoutContent = ref;
+            }}
+            accessibilityLabel={accessibilityLabel}
             // style={styleContent}
             onLayout={this.onLayout}
             {...this.panResponder.panHandlers}
@@ -324,8 +370,8 @@ class Swipeout extends React.Component {
             {this.props.children}
           </View>
         </Animated.View>
-        { this.renderButtons(this.props.left, isLeftVisible, styleLeft) }
-        { this.renderButtons(this.props.right, isRightVisible, styleRight) }
+        {this.renderButtons(this.props.left, isLeftVisible, styleLeft)}
+        {this.renderButtons(this.props.right, isRightVisible, styleRight)}
       </View>
     );
   }
@@ -358,16 +404,15 @@ const styles = StyleSheet.create({
     right: 0,
     top: 0,
   },
-  swipeoutContent: {
-  },
+  swipeoutContent: {},
   colorDelete: {
     backgroundColor: '#fb3d38',
   },
   colorPrimary: {
-    backgroundColor: '#006fff'
+    backgroundColor: '#006fff',
   },
   colorSecondary: {
-    backgroundColor: '#fd9427'
+    backgroundColor: '#fd9427',
   },
 });
 

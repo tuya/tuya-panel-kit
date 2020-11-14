@@ -1,134 +1,95 @@
-/* eslint-disable react/require-default-props */
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  Animated, TouchableOpacity,
-  View, ViewPropTypes
-} from 'react-native';
+import { ColorPropType } from 'react-native';
+import SwitchButton from './switch-button';
+import { ThemeUtils } from '../../utils';
 
-class SwitchButton extends React.PureComponent {
-  static propTypes = {
-    style: ViewPropTypes.style,
-    disabled: PropTypes.bool,
-    value: PropTypes.bool,
-    defaultValue: PropTypes.bool,
-    size: PropTypes.object,
-    onValueChange: PropTypes.func,
-    tintColor: PropTypes.string,
-    onTintColor: PropTypes.string,
-    thumbTintColor: PropTypes.string,
-    onThumbTintColor: PropTypes.string,
-    borderColor: PropTypes.string,
-  };
-  static defaultProps = {
-    defaultValue: true,
-    disabled: false,
-    onTintColor: '#44DB5E',
-    thumbTintColor: '#E5E5E5E5',
-    tintColor: 'transparent',
-    borderColor: '#E5E5E5',
-  };
-  constructor(props) {
-    super(props);
-    this.value = ('value' in props) ? props.value : props.defaultValue;
-    this.CGSize = { width: 52, height: 32, activeSize: 28, margin: 0.5, ...props.size };
-    const left = this.calcLeft(this.value);
-    this.state = {
-      thumbLeft: new Animated.Value(left),
-    };
-  }
-  componentWillReceiveProps(nextProps) {
-    if (!('value' in nextProps) || this.value === nextProps.value) return;
-    this.valueChange(nextProps.value);
-  }
+const { getTheme, ThemeConsumer } = ThemeUtils;
 
-  onSwitchChange = () => {
-    const { disabled, onValueChange } = this.props;
-    if (disabled) return;
-    const newValue = !this.value;
-    if (!('value' in this.props)) {
-      this.valueChange(newValue);
-    }
-    onValueChange && onValueChange(newValue);
-  }
+const ThemedSwitchButton = props => {
+  const { theme: localTheme, size, ...rest } = props;
+  return (
+    <ThemeConsumer>
+      {globalTheme => {
+        const theme = {
+          ...globalTheme,
+          switchButton: { ...globalTheme.switchButton, ...localTheme },
+        };
+        const propsWithTheme = { theme, ...rest };
+        const { onTintColor } = rest;
+        const isGradient = onTintColor && typeof onTintColor === 'object';
+        // 1、在 满足isGradient为true的情况下，传onText、offText属性，且不为空。
+        // 2、在 满足isGradient为true的情况下，没传onText、offText属性，使用默认。
+        const hasText =
+          (rest.onText !== undefined &&
+            rest.offText !== undefined &&
+            !!rest.onText &&
+            !!rest.offText) ||
+          (rest.onText === undefined && rest.offText === undefined);
+        const themedProps = {
+          size: {
+            width:
+              isGradient && hasText
+                ? getTheme(propsWithTheme, 'switchButton.width') + 9
+                : getTheme(propsWithTheme, 'switchButton.width'),
+            height: getTheme(propsWithTheme, 'switchButton.height'),
+            activeSize: getTheme(propsWithTheme, 'switchButton.thumbSize'),
+            margin: getTheme(propsWithTheme, 'switchButton.margin'),
+            ...size,
+          },
+        };
 
-  calcLeft = value => {
-    const { width, activeSize, margin } = this.CGSize;
-    const left = value ? width - (activeSize + margin + 1.5) : margin;
-    return left;
-  }
+        const keys = ['tintColor', 'onTintColor', 'thumbTintColor', 'onThumbTintColor'];
+        keys.forEach(themeKey => {
+          const path = `switchButton.${themeKey}`;
+          themedProps[themeKey] = getTheme(propsWithTheme, path);
+        });
+        return <SwitchButton {...themedProps} {...rest} />;
+      }}
+    </ThemeConsumer>
+  );
+};
 
-  calcColor = (value, type) => {
-    const {
-      onThumbTintColor, thumbTintColor,
-      onTintColor, tintColor, borderColor
-    } = this.props;
-    if (type === 'thumb') {
-      const activeColor = onThumbTintColor || thumbTintColor;
-      return value ? activeColor : thumbTintColor;
-    }
-    if (type === 'border') {
-      return value ? onTintColor : borderColor;
-    }
-    return value ? onTintColor : tintColor;
-  }
+ThemedSwitchButton.propTypes = {
+  ...SwitchButton.propTypes,
+  theme: PropTypes.shape({
+    /**
+     * 开关轨道宽度
+     */
+    width: PropTypes.number,
+    /**
+     * 开关轨道高度
+     */
+    height: PropTypes.number,
+    /**
+     * 开关圆球尺寸
+     */
+    thumbSize: PropTypes.number,
+    /**
+     * 开关圆球距离轨道边距
+     */
+    margin: PropTypes.number,
+    /**
+     * 轨道未激活的背景色
+     */
+    tintColor: ColorPropType,
+    /**
+     * 轨道激活的背景色
+     */
+    onTintColor: ColorPropType,
+    /**
+     * 圆球未激活的背景色
+     */
+    thumbTintColor: ColorPropType,
+    /**
+     * 圆球激活的背景色
+     */
+    onThumbTintColor: ColorPropType,
+  }),
+};
 
-  valueChange = value => {
-    const color = this.calcColor(value);
-    const borderColor = this.calcColor(value, 'border');
-    const thumbColor = this.calcColor(this.value, 'thumb');
-    this._ref.setNativeProps({
-      style: { backgroundColor: color, borderColor }
-    });
-    this.thumb.setNativeProps({
-      style: { backgroundColor: thumbColor }
-    });
-    this.value = value;
-    const left = this.calcLeft(value);
-    this.state.thumbLeft.stopAnimation();
-    Animated.spring(
-      this.state.thumbLeft,
-      { toValue: left, duration: 200 },
-    ).start();
-  }
+ThemedSwitchButton.defaultProps = {
+  theme: null,
+};
 
-  render() {
-    const { style, disabled } = this.props;
-    const thumbColor = this.calcColor(this.value, 'thumb');
-    const backgroundColor = this.calcColor(this.value);
-    const borderColor = this.calcColor(this.value, 'border');
-    const containerStyle = [
-      style,
-      disabled && { opacity: 0.8 },
-    ];
-    const wrapperStyle = {
-      backgroundColor,
-      width: this.CGSize.width,
-      height: this.CGSize.height,
-      borderRadius: this.CGSize.height / 2,
-      justifyContent: 'center',
-      borderWidth: 1.5,
-      borderColor,
-    };
-    const thumbStyle = {
-      width: this.CGSize.activeSize,
-      height: this.CGSize.activeSize,
-      borderRadius: this.CGSize.activeSize / 2,
-      position: 'absolute',
-      left: this.state.thumbLeft,
-      backgroundColor: thumbColor,
-    };
-    return (
-      <View style={containerStyle}>
-        <TouchableOpacity
-          ref={ref => { this._ref = ref; }}
-          onPress={this.onSwitchChange}
-          style={wrapperStyle}
-        >
-          <Animated.View style={thumbStyle} ref={ref => { this.thumb = ref; }} />
-        </TouchableOpacity>
-      </View>
-    );
-  }
-}
-export default SwitchButton;
+export default ThemedSwitchButton;

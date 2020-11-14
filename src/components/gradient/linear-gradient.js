@@ -2,33 +2,50 @@
 import color from 'color';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import {
-  View,
-  StyleSheet,
-  Dimensions,
-  ViewPropTypes,
-} from 'react-native';
-import Svg, {
-  LinearGradient as Gradient,
-  Defs,
-  Stop,
-} from 'react-native-svg';
+import { View, StyleSheet, Dimensions, ViewPropTypes } from 'react-native';
+import Svg, { LinearGradient as Gradient, Defs, Stop } from 'react-native-svg';
 import { NumberUtils } from '../../utils';
 
 const Window = Dimensions.get('window');
 
 export default class LinearGradient extends Component {
   static propTypes = {
-    style: ViewPropTypes.style,
+    /**
+     * 该子节点会被添加渐变效果，一般为 Rect
+     */
     children: PropTypes.any,
+    /**
+     * 渐变 id
+     */
+    gradientId: PropTypes.string,
+    /**
+     * 渐变梯度停点
+     */
     stops: PropTypes.object,
+    /**
+     * 容器样式
+     */
+    style: ViewPropTypes.style,
+    /**
+     * 起始点的x轴坐标
+     */
     x1: PropTypes.string,
-    y1: PropTypes.string,
+    /**
+     * 终点的x轴坐标
+     */
     x2: PropTypes.string,
+    /**
+     * 起始点的y轴坐标
+     */
+    y1: PropTypes.string,
+    /**
+     * 终点的y轴坐标
+     */
     y2: PropTypes.string,
   };
 
   static defaultProps = {
+    gradientId: 'linear-gradient',
     style: null,
     children: null,
     stops: {
@@ -43,6 +60,9 @@ export default class LinearGradient extends Component {
 
   constructor(props) {
     super(props);
+    this._gradientId = Math.random()
+      .toString(36)
+      .substring(7);
     this.setSource = this.setSource.bind(this);
     this.state = {
       stops: props.stops,
@@ -69,8 +89,13 @@ export default class LinearGradient extends Component {
       this.state.x2 !== nextState.x2 ||
       this.state.y1 !== nextState.y1 ||
       this.state.y2 !== nextState.y2 ||
-      this.state.stops !== nextState.stops
+      this.state.stops !== nextState.stops ||
+      this.props.children !== nextProps.children
     );
+  }
+
+  get gradientId() {
+    return this.props.gradientId || this._gradientId;
   }
 
   setSource(background) {
@@ -87,6 +112,7 @@ export default class LinearGradient extends Component {
   }
 
   render() {
+    const { gradientId } = this;
     const { style } = this.props;
     const { stops, x1, x2, y1, y2 } = this.state;
     const { height, width } = StyleSheet.flatten([styles.container, style]);
@@ -99,7 +125,7 @@ export default class LinearGradient extends Component {
           offset={k}
           stopColor={`#${NumberUtils.numToHexString(stopColor.rgbNumber(), 6)}`}
           stopOpacity={stopColor.alpha()}
-        />,
+        />
       );
     }
 
@@ -107,11 +133,13 @@ export default class LinearGradient extends Component {
       <View style={[styles.container, style]}>
         <Svg height={height} width={width}>
           <Defs>
-            <Gradient id="Gradient" x1={x1} y1={y1} x2={x2} y2={y2}>
+            <Gradient id={gradientId} x1={x1} x2={x2} y1={y1} y2={y2}>
               {stopView.map(d => d)}
             </Gradient>
           </Defs>
-          {React.Children.map(this.props.children, element => React.cloneElement(element, { fill: 'url(#Gradient)' }))}
+          {React.Children.map(this.props.children, element =>
+            React.cloneElement(element, { fill: `url(#${gradientId})` })
+          )}
         </Svg>
       </View>
     );

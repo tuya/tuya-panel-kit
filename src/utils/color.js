@@ -1,4 +1,3 @@
-/* eslint-disable */
 const maxIn = 255;
 
 const parse = (d, len = 2) => {
@@ -18,11 +17,9 @@ class Color {
 
     if (/^rgb/.test(color)) {
       const matcher =
-        color.match(
-          // eslint-disable-next-line
-          /rgba?\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*(?:,\s*([\.\d]+))?\)/
-        ) || [];
-      rgb = [matcher[1], matcher[2], matcher[3]].map(item => parseInt(item, 10));
+        color.match(/rgba?\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*(?:,\s*([\.\d]+))?\)/) ||
+        [];
+      rgb = [matcher[1], matcher[2], matcher[3]].map(item => parseInt(item));
       let alpha = matcher[4];
       if (alpha !== undefined) {
         alpha = alpha > 1 ? 1 : alpha < 0 ? 0 : alpha;
@@ -31,11 +28,9 @@ class Color {
       return rgb;
     }
 
-    // eslint-disable-next-line
     color = color.replace(/^#/, '');
     const len = color.length;
     if (len !== 6 && len !== 3) {
-      // eslint-disable-next-line
       color = '000000';
     }
     if (len === 3) {
@@ -44,11 +39,8 @@ class Color {
       rgb = color.match(/[0-9a-f]{2}/gi) || [];
     }
     return rgb.map(i => {
-      // eslint-disable-next-line
       i = parseInt(i, 16);
-      // eslint-disable-next-line
       if (i < 0) i = 0;
-      // eslint-disable-next-line
       if (i > maxIn) i = maxIn;
       return i;
     });
@@ -68,7 +60,7 @@ class Color {
     let s;
     let v;
 
-    if (C === 0) h = 0;
+    if (C == 0) h = 0;
     else if (M === r) h = ((g - b) / C) % 6;
     else if (M === g) h = (b - r) / C + 2;
     else h = (r - g) / C + 4;
@@ -106,14 +98,14 @@ class Color {
     let h;
     let l;
     let s;
-    if (d === 0) h = 0;
+    if (d == 0) h = 0;
     else if (M === r) h = ((g - b) / d) % 6;
     else if (M === g) h = (b - r) / d + 2;
     else h = (r - g) / d + 4;
     h *= 60;
     if (h < 0) h += 360;
     l = (M + m) / 2;
-    if (d === 0) s = 0;
+    if (d == 0) s = 0;
     else s = d / (1 - Math.abs(2 * l - 1));
     s *= 100;
     l *= 100;
@@ -167,20 +159,19 @@ class Color {
       let _bit = bit;
       if (_bit) _bit = parseFloat(_bit);
       if (i === 0) {
-        // eslint-disable-next-line
-        return Math.round((_bit %= 360) < 0 ? _bit + 360 : _bit);
+        return (_bit %= 360) < 0 ? _bit + 360 : _bit;
       }
       return limit(Math.round(bit), 0, 100);
     });
 
-    const br = Math.round(hsb[2] / 100 * 255);
-    if (hsb[1] === 0) return [br, br, br];
+    const br = Math.round((hsb[2] / 100) * 255);
+    if (hsb[1] == 0) return [br, br, br];
 
     const hue = hsb[0];
     const f = hue % 60;
-    const p = Math.round(hsb[2] * (100 - hsb[1]) / 10000 * 255);
-    const q = Math.round(hsb[2] * (6000 - hsb[1] * f) / 600000 * 255);
-    const t = Math.round(hsb[2] * (6000 - hsb[1] * (60 - f)) / 600000 * 255);
+    const p = Math.round(((hsb[2] * (100 - hsb[1])) / 10000) * 255);
+    const q = Math.round(((hsb[2] * (6000 - hsb[1] * f)) / 600000) * 255);
+    const t = Math.round(((hsb[2] * (6000 - hsb[1] * (60 - f))) / 600000) * 255);
 
     let rgb;
     switch (Math.floor(hue / 60)) {
@@ -305,7 +296,7 @@ class Color {
     l /= 100;
     const C = (1 - Math.abs(2 * l - 1)) * s;
     const hh = h / 60;
-    const X = C * (1 - Math.abs(hh % 2 - 1));
+    const X = C * (1 - Math.abs((hh % 2) - 1));
     let r = 0;
     let g = 0;
     let b = 0;
@@ -539,6 +530,7 @@ class Color {
     // b 白光亮度 t白光色温
     // x,y为坐标
     const arr = data.match(/[a-z\d]{2}/gi);
+    console.log(arr, 'arr');
     const [l, t, f, c, ...d] = arr;
     const ltfc = [l, t, f, c].map(item => parseInt(item, 16));
     const mrgbhsvbt = [];
@@ -666,10 +658,7 @@ class Color {
       // c -> -40.25366309332127
       // x -> (kelvin/100) - 55}
       red = temperature - 55.0;
-      red =
-        351.97690566805693 +
-        0.114206453784165 * red -
-        40.25366309332127 * Math.log(red);
+      red = 351.97690566805693 + 0.114206453784165 * red - 40.25366309332127 * Math.log(red);
       if (red < 0) red = 0;
       if (red > 255) red = 255;
     }
@@ -684,9 +673,7 @@ class Color {
       // x -> (kelvin/100) - 2}
       green = temperature - 2;
       green =
-        -155.25485562709179 -
-        0.44596950469579133 * green +
-        104.49216199393888 * Math.log(green);
+        -155.25485562709179 - 0.44596950469579133 * green + 104.49216199393888 * Math.log(green);
       if (green < 0) green = 0;
       if (green > 255) green = 255;
     } else {
@@ -696,10 +683,7 @@ class Color {
       // c -> -28.0852963507957`,
       // x -> (kelvin/100) - 50}
       green = temperature - 50.0;
-      green =
-        325.4494125711974 +
-        0.07943456536662342 * green -
-        28.0852963507957 * Math.log(green);
+      green = 325.4494125711974 + 0.07943456536662342 * green - 28.0852963507957 * Math.log(green);
       if (green < 0) green = 0;
       if (green > 255) green = 255;
     }
@@ -717,10 +701,7 @@ class Color {
       // c -> 115.67994401066147`,
       // x -> kelvin/100 - 10}
       blue = temperature - 10;
-      blue =
-        -254.76935184120902 +
-        0.8274096064007395 * blue +
-        115.67994401066147 * Math.log(blue);
+      blue = -254.76935184120902 + 0.8274096064007395 * blue + 115.67994401066147 * Math.log(blue);
       if (blue < 0) blue = 0;
       if (blue > 255) blue = 255;
     }
@@ -781,8 +762,8 @@ const calculateWhiteColorForView = (brightRate, temperatureRate) => {
   const sMax = 60;
 
   const hue = 36.8;
-  const sat = temperatureRate * (sMax - sMin) / 100;
-  const alpha = alphaMin + brightRate / 100 * (alphaMax - alphaMin);
+  const sat = (temperatureRate * (sMax - sMin)) / 100;
+  const alpha = alphaMin + (brightRate / 100) * (alphaMax - alphaMin);
 
   const rgb = color.hsb2RgbString(hue, sat, 100, alpha);
   return rgb;
@@ -797,52 +778,45 @@ const calculateWhiteColorForView = (brightRate, temperatureRate) => {
 /* eslint-disable */
 function _gcd(a, b) {
   return !b ? a : _gcd(b, a % b);
-};
+}
 
-function _gcdEx(a, b) {
-  let ref,
-      ref1,
-      x,
-      y;
-  if (b === 0) {
-    return [1, 0];
-  }
-  ref = _gcdEx(b, a % b), x = ref[0], y = ref[1];
-  return ref1 = [y, x - Math.floor(a / b) * y], x = ref1[0], y = ref1[1], ref1;
-};
+// function _gcdEx(a, b) {
+//   let ref,
+//       ref1,
+//       x,
+//       y;
+//   if (b === 0) {
+//     return [1, 0];
+//   }
+//   ref = _gcdEx(b, a % b), x = ref[0], y = ref[1];
+//   return ref1 = [y, x - Math.floor(a / b) * y], x = ref1[0], y = ref1[1], ref1;
+// };
 
 function getSolutionOfLinearConguenceEquation(a, b, n) {
-  let d,
-    k,
-    r,
-    ref,
-    s,
-    x,
-    x0;
+  let d, k, r, ref, s, x, x0;
   if (a * b === 0) {
     return false;
   }
   d = _gcd(a, n);
-  if (d % b === 0 && b !== 1) {
-    ref = _gcdEx(a, n), r = ref[0], s = ref[1];
-    x0 = r * (b / d);
-    return ((function () {
-      let i,
-        ref1,
-        results;
-      results = [];
-      for (k = i = 0, ref1 = n; 0 <= ref1 ? i < ref1 : i > ref1; k = 0 <= ref1 ? ++i : --i) {
-        if (x = x0 + k * Math.floor(n / d) > 0) {
-          results.push(x);
-        }
-      }
-      return results;
-    })()).slice(0, d);
-  }
+  // a 和 n的数值都是固定的 1 和 6, 所以 d 固定为 1, 要想满足条件, b 必须为 1
+  // if (d % b === 0 && b !== 1) {
+  //   ref = _gcdEx(a, n), r = ref[0], s = ref[1];
+  //   x0 = r * (b / d);
+  //   return ((function () {
+  //     let i,
+  //       ref1,
+  //       results;
+  //     results = [];
+  //     for (k = i = 0, ref1 = n; 0 <= ref1 ? i < ref1 : i > ref1; k = 0 <= ref1 ? ++i : --i) {
+  //       if (x = x0 + k * Math.floor(n / d) > 0) {
+  //         results.push(x);
+  //       }
+  //     }
+  //     return results;
+  //   })()).slice(0, d);
+  // }
   return [b];
-
-};
-
+}
 
 /**
  * hsv转rgb, 来自维基百科的公式的完整实现, 变量名都没改
@@ -858,14 +832,7 @@ function getSolutionOfLinearConguenceEquation(a, b, n) {
  * b - blue, 0~255
  */
 function hsvToRgb(h, s, v) {
-  let r,
-      g,
-      b,
-      i,
-      f,
-      p,
-      q,
-      t;
+  let r, g, b, i, f, p, q, t;
 
   // Make sure our arguments stay in-range
   h = Math.max(0, Math.min(360, h));
@@ -879,16 +846,40 @@ function hsvToRgb(h, s, v) {
   q = v * (1 - f * s);
   t = v * (1 - (1 - f) * s);
   switch (i % 6) {
-      case 0: r = v; g = t; b = p; break;
-      case 1: r = q; g = v; b = p; break;
-      case 2: r = p; g = v; b = t; break;
-      case 3: r = p; g = q; b = v; break;
-      case 4: r = t; g = p; b = v; break;
-      case 5: r = v; g = p; b = q; break;
+    case 0:
+      r = v;
+      g = t;
+      b = p;
+      break;
+    case 1:
+      r = q;
+      g = v;
+      b = p;
+      break;
+    case 2:
+      r = p;
+      g = v;
+      b = t;
+      break;
+    case 3:
+      r = p;
+      g = q;
+      b = v;
+      break;
+    case 4:
+      r = t;
+      g = p;
+      b = v;
+      break;
+    case 5:
+      r = v;
+      g = p;
+      b = q;
+      break;
   }
 
   return { r: Math.round(r * 255), g: Math.round(g * 255), b: Math.round(b * 255) };
-};
+}
 
 /**
  * RGB的颜色值转换hsv
@@ -904,9 +895,7 @@ function hsvToRgb(h, s, v) {
  * v - Value表示明度
  */
 function rgbToHsv(r, g, b) {
-  let h,
-      s,
-      v;
+  let h, s, v;
 
   const min = Math.min(r, g, b);
   const max = Math.max(r, g, b);
@@ -927,8 +916,7 @@ function rgbToHsv(r, g, b) {
   if (h < 0) h += 360;
 
   return { h: Math.round(h), s, v };
-};
-
+}
 
 function _hueToRgb(p, q, t) {
   if (t < 0) t += 1;
@@ -937,7 +925,7 @@ function _hueToRgb(p, q, t) {
   if (t < 1 / 2) return q;
   if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
   return p;
-};
+}
 
 /**
  * 维基百科的hsl转rgb的完整实现，变量名没有改
@@ -953,8 +941,9 @@ function _hueToRgb(p, q, t) {
  * g - green, 0~255
  * b - blue, 0~255
  */
-function hslToRgb(h, s, l) { // 360, 1.0, 1.0
-  const h0 = (h % 360 + 360) % 360 / 360;
+function hslToRgb(h, s, l) {
+  // 360, 1.0, 1.0
+  const h0 = (((h % 360) + 360) % 360) / 360;
   const q = l < 0.5 ? l * (1 + s) : l + s - l * s;
   const p = 2 * l - q;
   const r = _hueToRgb(p, q, h0 + 1 / 3);
@@ -962,7 +951,7 @@ function hslToRgb(h, s, l) { // 360, 1.0, 1.0
   const b = _hueToRgb(p, q, h0 - 1 / 3);
 
   return { r: Math.round(r * 255), g: Math.round(g * 255), b: Math.round(b * 255) };
-};
+}
 
 /**
  * RGB转换hsl, 也是来自维基百科的公式实现
@@ -978,15 +967,9 @@ function hslToRgb(h, s, l) { // 360, 1.0, 1.0
  * s - Saturation饱和度
  * v - Lightness表示亮度
  */
-function rgbToHsl(rr, gg, bb) { // 255, 255, 255
-  let r,
-      g,
-      b,
-      h,
-      s,
-      l,
-      min,
-      max;
+function rgbToHsl(rr, gg, bb) {
+  // 255, 255, 255
+  let r, g, b, h, s, l, min, max;
 
   r = parseFloat(rr) / 255;
   g = parseFloat(gg) / 255;
@@ -1003,16 +986,22 @@ function rgbToHsl(rr, gg, bb) { // 255, 255, 255
   else s = (max - min) / (2 - max - min);
 
   switch (max) {
-      case r: h = (g - b) / (max - min); break;
-      case g: h = 2 + (b - r) / (max - min); break;
-      case b: h = 4 + (r - g) / (max - min); break;
+    case r:
+      h = (g - b) / (max - min);
+      break;
+    case g:
+      h = 2 + (b - r) / (max - min);
+      break;
+    case b:
+      h = 4 + (r - g) / (max - min);
+      break;
   }
 
   h *= 60;
   h += h < 0 ? 360 : 0;
 
   return { h, s, l };
-};
+}
 
 export default {
   color,
@@ -1021,4 +1010,4 @@ export default {
   rgbToHsv,
   hslToRgb,
   rgbToHsl,
-}
+};
