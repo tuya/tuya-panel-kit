@@ -1,6 +1,13 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [4.0.0-rc.0](https://github.com/TuyaInc/tuya-panel-kit/compare/v2.0.0-rc.7...v4.0.0-rc.0) (2020-11-14)
+
+
+### Bug Fixes
+
+* set default value for wrapperWidth ([34066eb](https://github.com/TuyaInc/tuya-panel-kit/commit/34066ebd590b2bff19498fbae08760c97cfc71d9))
 
 # [2.0.0-rc.7](https://github.com/TuyaInc/tuya-panel-kit/compare/v2.0.0-rc.6...v2.0.0-rc.7) (2020-09-25)
 
