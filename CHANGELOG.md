@@ -8,9 +8,22 @@ All notable changes to this project will be documented in this file. See [standa
 ### Bug Fixes
 
 * set default value for wrapperWidth ([34066eb](https://github.com/TuyaInc/tuya-panel-kit/commit/34066ebd590b2bff19498fbae08760c97cfc71d9))
+* **Modal:** 修复node节点undefined的时候崩溃 ([c1d6aed](https://github.com/TuyaInc/tuya-panel-kit/commit/c1d6aed))
+* **tabbar:** 修复tabar崩溃问题 ([c1d6aed](https://github.com/TuyaInc/tuya-panel-kit/commit/c1d6aed))
+
+### Features
+
+* 支持使用 react-navigation 5
+* 测试覆盖率达到 90% 以上
+* 支持 react-native@0.59.10
+* 支持 typescript 开发
+
+### Breaking Changes
+
+* 因为引入了 react-navigation 所以必须要 app 版本 3.21 以上 即 appRNVersion 5.30 以上
+* 4.0 之后不再支持 0.59.10 以下版本，低版本需自行兼容
 
 # [2.0.0-rc.7](https://github.com/TuyaInc/tuya-panel-kit/compare/v2.0.0-rc.6...v2.0.0-rc.7) (2020-09-25)
-
 
 ### Bug Fixes
 
