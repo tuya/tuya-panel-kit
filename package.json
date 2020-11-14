@@ -9,6 +9,7 @@
   ],
   "main": "lib/index.js",
   "typings": "../tuya-panel-kit-types/index.d.ts",
+  "files": ["lib","src"],
   "license": "MIT",
   "author": "sound2gd",
   "contributors": [
