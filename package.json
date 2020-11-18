@@ -9,7 +9,10 @@
   ],
   "main": "lib/index.js",
   "typings": "../tuya-panel-kit-types/index.d.ts",
-  "files": ["lib","src"],
+  "files": [
+    "lib",
+    "src"
+  ],
   "license": "MIT",
   "author": "sound2gd",
   "contributors": [
@@ -59,10 +62,13 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": [
-      "prettier --write",
+    "**/*.{js,jsx,ts,tsx}": [
       "eslint --fix",
-      "git add"
+      "git add ."
+    ],
+    "**/*.{md,json}": [
+      "prettier --write",
+      "git add ."
     ]
   },
   "dependencies": {
