@@ -6,17 +6,17 @@
   <a href="https://www.npmjs.com/package/tuya-panel-kit" target="_blank">
     <img src="https://img.shields.io/npm/v/tuya-panel-kit/latest.svg" />
   </a>&nbsp;
-  <img src="https://img.shields.io/github/license/TuyaInc/tuya-panel-kit.svg" />
+  <img src="https://img.shields.io/github/license/tuya/tuya-panel-kit.svg" />
   <a href="http://commitizen.github.io/cz-cli/" target="_blank">
     <img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?maxAge=2592000" />
   </a>&nbsp;
   <a href="https://conventionalcommits.org" target="_blank">
     <img src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-brightgreen.svg?maxAge=2592000" />
   </a>&nbsp;
-  <a href="https://codecov.io/gh/TuyaInc/tuya-panel-kit" target="_blank">
-    <img src="https://codecov.io/gh/TuyaInc/tuya-panel-kit/branch/master/graph/badge.svg" />
+  <a href="https://codecov.io/gh/tuya/tuya-panel-kit" target="_blank">
+    <img src="https://codecov.io/gh/tuya/tuya-panel-kit/branch/master/graph/badge.svg" />
   </a>&nbsp;
-  <img src="https://github.com/TuyaInc/tuya-panel-kit/workflows/Lint%20Code/badge.svg" />
+  <img src="https://github.com/tuya/tuya-panel-kit/workflows/Lint%20Code/badge.svg" />
 </p>
 </center>
 
