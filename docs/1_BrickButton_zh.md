@@ -8,7 +8,7 @@
 <a name="3sQyU"></a>
 ## 代码演示
 
-> 详细demo可参考[此处](https://github.com/TuyaInc/tuya-panel-kit/tree/master/example/src/scenes)
+> 详细demo可参考[此处](https://github.com/tuya/tuya-panel-kit/tree/master/example/src/scenes)
 
 ```jsx
 import { BrickButton } from 'tuya-panel-kit';

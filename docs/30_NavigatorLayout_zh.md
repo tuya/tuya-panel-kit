@@ -119,7 +119,7 @@ export default ({ navigator }) => (
 );
 ```
 
-通过`Navigator`的`push`方法，我们能**跳转到某个页面**，通过`pop`方法，能**回退一个页面**。<br />在工程目录下运行`yarn start`, 并且在app输入相应的调试地址，之后我们就可以在app上看到效果了。<br />代码对应的demo可以在github上找到, 地址: [NavigatorLayout基础使用](https://github.com/TuyaInc/tuya-panel-kit/tree/master/demos/navigator-layout/basic-jump)
+通过`Navigator`的`push`方法，我们能**跳转到某个页面**，通过`pop`方法，能**回退一个页面**。<br />在工程目录下运行`yarn start`, 并且在app输入相应的调试地址，之后我们就可以在app上看到效果了。<br />代码对应的demo可以在github上找到, 地址: [NavigatorLayout基础使用](https://github.com/tuya/tuya-panel-kit/tree/master/demos/navigator-layout/basic-jump)
 
 ![navigator.gif](https://airtake-public-data.oss-cn-hangzhou.aliyuncs.com/fe-static/tuya-docs/a071b4a3-bedf-4014-8be7-94077c3387d8.gif)<br />
 <a name="bd3ac9f8"></a>
@@ -230,7 +230,7 @@ export default ({ navigator }) => (
 <a name="fb60ea83"></a>
 ## PropTypes 传入属性定义
 
-**此处是原始的`devInfo`定义，如果使用涂鸦提供的[模板](https://github.com/TuyaInc/tuya-panel-kit-template)，其中的`devInfo`经过了特殊的处理以便开发者使用**
+**此处是原始的`devInfo`定义，如果使用涂鸦提供的[模板](https://github.com/tuya/tuya-panel-kit-template)，其中的`devInfo`经过了特殊的处理以便开发者使用**
 
 - devInfo: 一个普通js对象，包含大量设备的信息, 至少会提供以下字段:
   name: 设备名称
@@ -251,4 +251,3 @@ export default ({ navigator }) => (
   capability: 设备的能力类型, 标志设备支持什么能力， 如支持zigbee, 红外, 蓝牙等，具体可见下图
 
   ![设备能力值](https://airtake-public-data.oss-cn-hangzhou.aliyuncs.com/fe-static/tuya-docs/223e5d3a-2257-4c21-877b-18bd342c968b.png)
-
