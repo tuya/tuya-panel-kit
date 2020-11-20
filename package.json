@@ -8,7 +8,6 @@
     "panel"
   ],
   "main": "lib/index.js",
-  "typings": "../tuya-panel-kit-types/index.d.ts",
   "files": [
     "lib",
     "src"
