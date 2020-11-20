@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
-- set default value for wrapperWidth ([34066eb](https://github.com/TuyaInc/tuya-panel-kit/commit/34066ebd590b2bff19498fbae08760c97cfc71d9))
+- **Tabbar:** 给 wrapperWidth 设置默认值 ([34066eb](https://github.com/TuyaInc/tuya-panel-kit/commit/34066ebd590b2bff19498fbae08760c97cfc71d9))
 - **Modal:** 修复 node 节点 undefined 的时候崩溃 ([c1d6aed](https://github.com/TuyaInc/tuya-panel-kit/commit/c1d6aed))
 - **tabbar:** 修复 tabar 崩溃问题 ([c1d6aed](https://github.com/TuyaInc/tuya-panel-kit/commit/c1d6aed))
 
@@ -72,7 +72,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
-修复 apiRequest 解析基础数据类型崩溃 ([30fd8f2](https://github.com/TuyaInc/tuya-panel-kit/commit/30fd8f2627d5ac596766f6cd0bdfd73e1887267e))
+- **TYSdk:** 修复 apiRequest 解析基础数据类型崩溃 ([30fd8f2](https://github.com/TuyaInc/tuya-panel-kit/commit/30fd8f2627d5ac596766f6cd0bdfd73e1887267e))
 
 - **Progress:** 修复 thumb 过大被截 ([4579450](https://github.com/TuyaInc/tuya-panel-kit/commit/4579450730d37ef98989189bbc0432ef1e1cfe41))
 
@@ -85,7 +85,7 @@ All notable changes to this project will be documented in this file. See [standa
 ### Bug Fixes
 
 - **Motion:** allow startAnimation when animating ([9084cfd](https://github.com/TuyaInc/tuya-panel-kit/commit/9084cfd8798a0baadffd6eaa5ed265dfe2b713c9))
-- do not request mqtt data below version 5.21 ([416ffb6](https://github.com/TuyaInc/tuya-panel-kit/commit/416ffb6a04ac97cf00d60e2d102b952434c49f25))
+- **Layout:** 在 5.21 之前的版本不请求 mqtt data ([416ffb6](https://github.com/TuyaInc/tuya-panel-kit/commit/416ffb6a04ac97cf00d60e2d102b952434c49f25))
 - **OfflineView:** 允许蓝牙设备在网络离线设备在线的情况下操作 ([99cc363](https://github.com/TuyaInc/tuya-panel-kit/commit/99cc363b8e4f21662a820556d07db1576cc8c120))
 - **parseJSON:** 修复传入 false 返回空对象 ([fb2e4c4](https://github.com/TuyaInc/tuya-panel-kit/commit/fb2e4c412e944973dbea05c7b285c66d9d893c57))
 - **Popup.countdown:** fix min prop ([ed5a7ef](https://github.com/TuyaInc/tuya-panel-kit/commit/ed5a7eff9d28a3a6741ee04142a53df14337a071))
@@ -163,5 +163,5 @@ All notable changes to this project will be documented in this file. See [standa
 
 ##### Bug Fixes
 
-- `OfflineView`: fix Android OfflineView height [4980a25f](https://github.com/TuyaInc/tuya-panel-kit/commit/4980a25f3648b46140f99ff3fefd72081c1f0c12)
-- `TopBar`: Iphone XsMax 兼容 [baf1276d](https://github.com/TuyaInc/tuya-panel-kit/commit/baf1276d32c450ecb7f56fb0a20ccc493154d7a5)
+- **OfflineView:** fix Android OfflineView height [4980a25f](https://github.com/TuyaInc/tuya-panel-kit/commit/4980a25f3648b46140f99ff3fefd72081c1f0c12)
+- **TopBar**: Iphone XsMax 兼容 [baf1276d](https://github.com/TuyaInc/tuya-panel-kit/commit/baf1276d32c450ecb7f56fb0a20ccc493154d7a5)
