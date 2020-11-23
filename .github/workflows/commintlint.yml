@@ -14,6 +14,8 @@ jobs:
       - uses: c-hive/gha-yarn-cache@v1
       - run: yarn install
       - name: Add dependencies for commitlint action
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
         # $GITHUB_WORKSPACE is the path to your repository
         run: echo "::set-env name=NODE_PATH::$GITHUB_WORKSPACE/node_modules"
       # Now the commitlint action will run considering its own dependencies and yours as well 🚀
