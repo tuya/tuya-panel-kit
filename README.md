@@ -22,7 +22,7 @@
 
 English | [简体中文](./README-zh_CN.md)
 
-## 特性
+## Feature
 
 - 30+ High-quality components out of the box
 
@@ -34,7 +34,7 @@ English | [简体中文](./README-zh_CN.md)
 
 - 90%+ Unit test coverage
 
-## 预览
+## Preview
 
 Use the mobile phone to scan and download [涂鸦面板-RN App](https://smartapp.tuya.com/typaneldev)，Scan the following qrcode in **涂鸦面板-RN App**, you can view the currently open functional components of Tuya for use during development and accelerate the progress of panel development.
 
