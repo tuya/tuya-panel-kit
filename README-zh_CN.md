@@ -1,6 +1,6 @@
 <center><p align="center"><img src="https://images.tuyacn.com/rms-static/dc225080-25a5-11eb-8913-b53cc9e03c9c-1605267985800.png?tyName=tuya.png" width="36%" height="36%" /></p></center>
 
-<center><p align="center">Efficient、Unified、Visualization</p></center>
+<center><p align="center">高效、统一、可视化</p></center>
 
 <center><p align="center">
   <a href="https://www.npmjs.com/package/tuya-panel-kit" target="_blank">
@@ -20,27 +20,27 @@
 </p>
 </center>
 
-English | [简体中文](./README-zh_CN.md)
+[English](./README.md) | 简体中文
 
 ## 特性
 
-- 30+ High-quality components out of the box
+- 30+ 开箱即用的高质量组件
 
-- Complete documentation and examples
+- 完善的文档和事例
 
-- Theme customization capabilities that go deep into every detail
+- 深入每个细节的主题定制能力
 
-- support TS，Complete type definition file
+- 支持 TS，提供完整的类型定义文件
 
-- 90%+ Unit test coverage
+- 单元测试覆盖率 90% +
 
 ## 预览
 
-Use the mobile phone to scan and download [涂鸦面板-RN App](https://smartapp.tuya.com/typaneldev)，Scan the following qrcode in **涂鸦面板-RN App**, you can view the currently open functional components of Tuya for use during development and accelerate the progress of panel development.
+&nbsp;&nbsp;&nbsp;&nbsp;使用手机端扫描下载 [涂鸦面板-RN App](https://smartapp.tuya.com/typaneldev)，在涂鸦面板-RN App 中扫描以下二维码您可以查看到目前涂鸦开放的功能组件，以供开发时使用，加快面板开发进度。
 
 <center><p align="center"><img src="https://images.tuyacn.com/fe-static/tuya-docs/773b84dd-df35-49e3-974c-77a965152e48.png" width="60%" height="60%" /></p></center>
 
-## Installation
+## 安装
 
 ```shell
 npm install tuya-panel-kit
@@ -50,6 +50,6 @@ or
 yarn add tuya-panel-kit
 ```
 
-## Get Help
+## 获取帮助
 
-If you encounter any problems during use, please [submit a ticket](https://iot.tuya.com/council/chat/). We will try our best to help you.
+使用中遇到任何问题请[提交工单](https://iot.tuya.com/council/chat/)
