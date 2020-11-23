@@ -1,6 +1,6 @@
-# Changelog
+# 更新日志
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+<!-- All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.-->
 
 ## [4.0.0-rc.0](https://github.com/tuya/tuya-panel-kit/compare/v2.0.0-rc.7...v4.0.0-rc.0) (2020-11-14)
 
