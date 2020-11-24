@@ -25,13 +25,9 @@ English | [简体中文](./README-zh_CN.md)
 ## Feature
 
 - 30+ High-quality components out of the box
-
 - Complete documentation and examples
-
 - Theme customization capabilities that go deep into every detail
-
 - support TS，Complete type definition file
-
 - 90%+ Unit test coverage
 
 ## Preview
@@ -49,7 +45,12 @@ or
 
 yarn add tuya-panel-kit
 ```
+## Support
 
-## Get Help
+Tuya Developer Center: https://developer.tuya.com/en/
+Tuya Smart Help Center: https://support.tuya.com/en/help
+Technical Support Council: https://iot.tuya.com/council/
 
-If you encounter any problems during use, please [submit a ticket](https://iot.tuya.com/council/chat/). We will try our best to help you.
+## License
+
+[MIT License](./LICENSE)

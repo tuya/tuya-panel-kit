@@ -25,13 +25,9 @@
 ## 特性
 
 - 30+ 开箱即用的高质量组件
-
 - 完善的文档和事例
-
 - 深入每个细节的主题定制能力
-
 - 支持 TS，提供完整的类型定义文件
-
 - 单元测试覆盖率 90% +
 
 ## 预览
@@ -50,6 +46,12 @@ or
 yarn add tuya-panel-kit
 ```
 
-## 获取帮助
+## 技术支持
 
-使用中遇到任何问题请[提交工单](https://iot.tuya.com/council/chat/)
+开发者中心：https://developer.tuya.com/cn/
+帮助中心: https://support.tuya.com/cn/help
+技术支持工单中心: https://iot.tuya.com/council/
+
+## License
+
+[MIT License](./LICENSE)
