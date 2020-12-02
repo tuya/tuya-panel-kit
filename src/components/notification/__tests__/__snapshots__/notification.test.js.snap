@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Notification Component basic render 1`] = `null`;
+
+exports[`Notification Component render width update 1`] = `null`;
+
+exports[`Notification Component render width update 2`] = `null`;
+
+exports[`Notification basic render width enableClose 1`] = `null`;
+
+exports[`Notification basic render width enableClose 2`] = `null`;
