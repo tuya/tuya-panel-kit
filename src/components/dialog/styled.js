@@ -46,7 +46,7 @@ export const StyledHeader = styled(View)`
 `;
 
 export const StyledContent = styled(View)`
-  padding: ${cx(16)}px;
+  padding: ${`${cx(36)}px ${cx(32)}px`};
   align-self: stretch;
   align-items: center;
   justify-content: center;
@@ -65,13 +65,14 @@ export const StyledTitle = styled(TYText)`
   font-size: ${titleFontSize}px;
   text-align: center;
   color: ${titleFontColor};
+  flex-wrap: wrap;
 `;
 
 export const StyledSubTitle = styled(TYText)`
-  margin-top: 7px;
   font-size: ${subTitleFontSize}px;
   text-align: center;
   color: ${subTitleFontColor};
+  flex-wrap: wrap;
 `;
 
 export const StyledButton = styled(TouchableOpacity).attrs({
@@ -103,21 +104,17 @@ export const StyledConfirmText = styled(TYText)`
 
 export const StyledInputContainer = styled(View)`
   justify-content: center;
-  border-radius: ${prompt.radius}
   align-self: stretch;
-  margin-top: 16px;
+  margin-top: 28px;
   padding: ${prompt.padding};
-  background-color: ${prompt.bg};
-  border-color: ${lineColor};
-  border-width: ${StyleSheet.hairlineWidth};
 `;
 
 export const StyledInput = styled(TextInput).attrs({
   placeholderTextColor: prompt.placeholder,
   underlineColorAndroid: 'transparent',
 })`
-  font-size: ${subTitleFontSize};
-  color: ${titleFontColor};
+  font-size: 16;
+  color: ${subTitleFontColor};
   padding: 0px;
 `;
 

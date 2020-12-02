@@ -290,48 +290,44 @@ const dialog = {
    * @desc 默认风格
    */
   basic: {
-    width: cx(315), // 弹窗容器宽度
+    width: cx(311), // 弹窗容器宽度
     bg: '#fff', // 弹窗背景色
-    radius: cx(8), // 弹窗容器圆角
-    cellHeight: 56, // 列表高度（头部、底部）
-    lineColor: '#e5e5e5', // 分隔线颜色
-    titleFontSize: 18, // 标题字体大小
-    titleFontColor: '#333', // 头部栏标题颜色
-    subTitleFontSize: 16, // 副标题字体大小
-    subTitleFontColor: '#999', // 头部栏副标题颜色
-    cancelFontSize: 16,
-    cancelFontColor: '#666', // 底部栏取消字体颜色
-    confirmFontSize: 16,
-    confirmFontColor: '#333', // 底部栏确认字体颜色
+    radius: cx(16), // 弹窗容器圆角
+    cellHeight: 55, // 列表高度（头部、底部）
+    lineColor: 'rgba(0, 0, 0, 0.1)', // 分隔线颜色
+    titleFontSize: 17, // 标题字体大小
+    titleFontColor: 'rgba(0, 0, 0, 0.9)', // 头部栏标题颜色
+    subTitleFontSize: 15, // 副标题字体大小
+    subTitleFontColor: 'rgba(0, 0, 0, 0.5)', // 头部栏副标题颜色
+    cancelFontSize: 17,
+    cancelFontColor: 'rgba(0, 0, 0, 0.7)', // 底部栏取消字体颜色
+    confirmFontSize: 17,
+    confirmFontColor: 'rgba(0, 0, 0, 0.9)', // 底部栏确认字体颜色
     prompt: {
-      bg: '#f8f8f8', // 输入框背景色
-      radius: cx(4), // 输入框圆角
-      padding: '12px 16px', // 输入框边距
-      placeholder: '#d6d6de', // 占位符字体颜色
+      padding: '12px 0px', // 输入框边距
+      placeholder: 'rgba(0, 0, 0, 0.3)', // 占位符字体颜色
     },
   },
   /**
    * @desc 黑色主题
    */
   dark: {
-    width: cx(315), // 弹窗容器宽度
-    bg: '#1a1a1a', // 弹窗背景色
-    radius: cx(8), // 弹窗容器圆角
-    cellHeight: 56, // 列表高度（头部、底部）
-    lineColor: '#404040', // 分隔线颜色
-    titleFontSize: 18, // 标题字体大小
+    width: cx(311), // 弹窗容器宽度
+    bg: '#191919', // 弹窗背景色
+    radius: cx(16), // 弹窗容器圆角
+    cellHeight: 55, // 列表高度（头部、底部）
+    lineColor: 'rgba(255, 255, 255, 0.1)', // 分隔线颜色
+    titleFontSize: 17, // 标题字体大小
     titleFontColor: '#FFF', // 头部栏标题颜色
-    subTitleFontSize: 16, // 副标题字体大小
-    subTitleFontColor: '#ccc', // 头部栏副标题颜色
-    cancelFontSize: 16,
-    cancelFontColor: '#999', // 底部栏取消字体颜色
-    confirmFontSize: 16,
+    subTitleFontSize: 15, // 副标题字体大小
+    subTitleFontColor: 'rgba(255, 255, 255, 0.7)', // 头部栏副标题颜色
+    cancelFontSize: 17,
+    cancelFontColor: 'rgba(255, 255, 255, 0.7)', // 底部栏取消字体颜色
+    confirmFontSize: 17,
     confirmFontColor: '#fff', // 底部栏确认字体颜色
     prompt: {
-      bg: '#262626', // 输入框背景色
-      radius: cx(4), // 输入框圆角
-      padding: '12px 16px', // 输入框边距
-      placeholder: '#666', // 占位符字体颜色
+      padding: '12px 0px', // 输入框边距
+      placeholder: 'rgba(255, 255, 255, 0.3)', // 占位符字体颜色
     },
   },
 
