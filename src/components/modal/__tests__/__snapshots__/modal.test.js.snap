@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal Component basic render 1`] = `null`;
+
+exports[`Modal Component basic render 2`] = `null`;
+
+exports[`Modal Component render with modal.close 1`] = `null`;
+
+exports[`Modal Component render with modal.render 1`] = `null`;
+
+exports[`Modal Component render with visible 1`] = `null`;
+
+exports[`Modal Component render with visible 2`] = `null`;
+
+exports[`Modal Component render with visible no changed 1`] = `null`;
+
+exports[`Modal Component render with visible no changed 2`] = `null`;
