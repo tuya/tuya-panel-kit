@@ -70,7 +70,6 @@ function RouteIntercept(props) {
     return () => {
       unsubscribeFocus();
       unsubscribeBlur();
-      // console.warn('page.leave', navigationName);
     };
   }, [navigation]);
 
@@ -81,7 +80,6 @@ const Stack = createStackNavigator();
 
 export default function createNavigator({ router, screenOptions }) {
   const defaultScreenOptions = {
-    header: () => null,
     ...TransitionPresets.SlideFromRightIOS,
   };
 
@@ -235,47 +233,6 @@ export default function createNavigator({ router, screenOptions }) {
       }
     };
 
-    /**
-     * @desc
-     *   hookRoute 可以做一些控制处理，
-     *   return 是一个 Object, 返回出去的Object将会被 FullView 所应用，
-     *   FullView 即一个视图包裹组件，内置了头部栏，背景，离线提示，模态窗等功能，
-     *   因此你可以通过return的object来自定义这些内容;
-     * @param {Object} route - 路径对象，里面会包括路径id等路径信息，也会包含navigator.push()所附带的值
-     * @example
-     * {
-     *   background: backgroundImage | linearGradientBackground, // 背景（可支持图片或渐变）
-     *   backgroundColor: '#FCFCFC', // 背景颜色值
-     *   style: ViewPropTypes.style,
-     *   topbarStyle: ViewPropTypes.style, // 控制头部栏的样式
-     *   topbarTextStyle: Text.propTypes.style, // 控制头部栏的文字样式
-     *   hideFullView: boolean, // 控制是否隐藏 FullView
-     *   showOfflineView: boolean, // 是否渲染 OfflineView
-     *   renderFullView: (props) => {
-     *     return (<FullView />);
-     *   },
-     *   FullView: ReactComponent, // 自定义的 FullView 组件, 如果使用自定义 FullView 组件，TopBar、OfflineView 也需要在 FullView 里面调用
-     *   hideTopbar: boolean, // 控制是否隐藏 TopBar
-     *   OfflineView: ReactComponent, // 自定义的 OfflineView 组件
-     * }
-     */
-    hookRoute(_route) {
-      return {};
-    }
-
-    // 可重写此方法实现具体页面渲染
-    // renderScene(route: { id: string }, Element: any, props: any) {
-    //   const navigation = this.getNavigation();
-    //   return (
-    //     <Element
-    //       navigator={TYNative.Navigator}
-    //       navigation={navigation}
-    //       {...props.route.params}
-    //       {...props}
-    //     />
-    //   );
-    // }
-
     setFullViewRef = ref => {
       if (ref) this.fullViewRef = ref;
     };
@@ -283,7 +240,7 @@ export default function createNavigator({ router, screenOptions }) {
     getFullViewRef = () => this.fullViewRef;
 
     getRouteOptions = (localRoute, navRoute) => {
-      const opts = Object.assign({}, localRoute, this.hookRoute(localRoute), navRoute.params);
+      const opts = Object.assign({}, localRoute, localRoute, navRoute.params);
       return opts;
     };
 
@@ -292,15 +249,12 @@ export default function createNavigator({ router, screenOptions }) {
         <Stack.Screen
           key={route.id}
           name={route.id}
-          options={({ route: navRoute, navigation }) => {
+          options={({ route: navRoute }) => {
             const opts = this.getRouteOptions(route, navRoute);
-            const options = this.getScreenOptions(
-              { route: navRoute, navigation },
-              route.screenOptions
-            );
+            const options = opts.options || {};
             let gestureEnabled;
             const { enablePopGesture = true } = opts;
-            if ((!!opts.gesture || opts.id === 'main') && enablePopGesture) {
+            if ((opts.gesture || opts.id === 'main') && enablePopGesture) {
               gestureEnabled = true;
               TYMobile.enablePopGesture();
             } else {
@@ -316,7 +270,10 @@ export default function createNavigator({ router, screenOptions }) {
         >
           {({ route: navRoute, navigation }) => {
             const Element = route.Scene;
-            const opts = this.getRouteOptions(route, navRoute);
+            const routeOptions = this.getRouteOptions(route, navRoute);
+            const options = routeOptions.options || {};
+            const opts = { ...routeOptions, ...options };
+
             this.opts = opts;
             const { devInfo } = this.props;
             const title = opts.title ? opts.title : devInfo.name;
@@ -338,31 +295,6 @@ export default function createNavigator({ router, screenOptions }) {
                       {...navRoute.params}
                     />
                   );
-
-                  if (opts.hideFullView) {
-                    return contentLayout;
-                  }
-
-                  if (opts.FullView) {
-                    const CustomFullView = opts.FullView;
-                    return (
-                      <CustomFullView
-                        ref={ref => {
-                          if (ref) this.fullViewRef = ref;
-                        }}
-                        title={title}
-                        onBack={this._onBack}
-                        appOnline={devInfo.appOnline}
-                        deviceOnline={devInfo.deviceOnline}
-                        renderStatusBar={opts.renderStatusBar}
-                        renderTopBar={opts.renderTopBar}
-                        hideTopbar={!!opts.hideTopbar}
-                        showOfflineView={showOfflineView}
-                      >
-                        {contentLayout}
-                      </CustomFullView>
-                    );
-                  }
 
                   return (
                     <FullView
@@ -431,11 +363,13 @@ export default function createNavigator({ router, screenOptions }) {
         options = {
           ...defaultOptions,
           ..._screenOptions({ route, navigation }),
+          header: () => null,
         };
       } else {
         options = {
           ...defaultOptions,
           ..._screenOptions,
+          header: () => null,
         };
       }
       return options;
