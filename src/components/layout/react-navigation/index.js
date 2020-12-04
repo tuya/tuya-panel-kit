@@ -34,7 +34,7 @@ const { isIos } = RatioUtils;
 const TYEvent = TYSdk.event;
 const TYMobile = TYSdk.mobile;
 
-// 处理Text在某种机型某种字体下宽度被截断的问题,
+// 处理Text在某种机型某种字体下宽度被截断的问题
 if (Platform.OS !== 'web') {
   const originRender = Text.render || Text.prototype.render;
   const parent = Text.render ? Text : Text.prototype;
@@ -87,13 +87,8 @@ export default function createNavigator({ router, screenOptions }) {
     static propTypes = {
       devInfo: PropTypes.object.isRequired,
     };
-
-    // timer: NodeJS.Timeout;
-    // navigationState: NavigationState;
     _navigation = {};
-    _navigator = {};
-    // fullViewRef: any;
-    // opts: HookRouteOptions;
+
     /**
      * 推送到云端的事件名
      */
@@ -113,7 +108,6 @@ export default function createNavigator({ router, screenOptions }) {
       if (UIManager.setLayoutAnimationEnabledExperimental) {
         UIManager.setLayoutAnimationEnabledExperimental(true);
       }
-      TYSdk.applyNavigator(this._navigator);
       this.state = {
         modalVisible: false,
       };
@@ -144,10 +138,7 @@ export default function createNavigator({ router, screenOptions }) {
     }
 
     get hideSignalPop() {
-      const { hideSignalPop: hideSignalPopProps = false } = this.opts;
-      const hideSignalPop = get(TYSdk, 'devInfo.panelConfig.fun.hideSignalPop', false);
-
-      return hideSignalPop || hideSignalPopProps;
+      return get(TYSdk, 'devInfo.panelConfig.fun.hideSignalPop', false);
     }
 
     sendEventInfo(eventType, state) {
@@ -240,21 +231,23 @@ export default function createNavigator({ router, screenOptions }) {
     getFullViewRef = () => this.fullViewRef;
 
     getRouteOptions = (localRoute, navRoute) => {
-      const opts = Object.assign({}, localRoute, localRoute, navRoute.params);
-      return opts;
+      return {
+        ...localRoute,
+        ...navRoute.params,
+      };
     };
 
     dispatchRoute = route => {
       return (
         <Stack.Screen
-          key={route.id}
-          name={route.id}
+          key={route.name}
+          name={route.name}
           options={({ route: navRoute }) => {
             const opts = this.getRouteOptions(route, navRoute);
             const options = opts.options || {};
             let gestureEnabled;
             const { enablePopGesture = true } = opts;
-            if ((opts.gesture || opts.id === 'main') && enablePopGesture) {
+            if ((options.gesture || opts.name === 'main') && enablePopGesture) {
               gestureEnabled = true;
               TYMobile.enablePopGesture();
             } else {
@@ -269,11 +262,10 @@ export default function createNavigator({ router, screenOptions }) {
           }}
         >
           {({ route: navRoute, navigation }) => {
-            const Element = route.Scene;
+            const Element = route.component;
             const routeOptions = this.getRouteOptions(route, navRoute);
             const options = routeOptions.options || {};
-            const opts = { ...routeOptions, ...options };
-
+            const opts = { ...options, ...routeOptions };
             this.opts = opts;
             const { devInfo } = this.props;
             const title = opts.title ? opts.title : devInfo.name;
@@ -288,13 +280,7 @@ export default function createNavigator({ router, screenOptions }) {
             return (
               <RouteIntercept onBlur={this._onBlur} onFocus={this._onFocus}>
                 {() => {
-                  const contentLayout = (
-                    <Element
-                      navigator={TYSdk.Navigator}
-                      navigation={navigation}
-                      {...navRoute.params}
-                    />
-                  );
+                  const contentLayout = <Element navigation={navigation} route={navRoute} />;
 
                   return (
                     <FullView
@@ -302,13 +288,13 @@ export default function createNavigator({ router, screenOptions }) {
                       title={title}
                       style={[styles.container, opts.style]}
                       background={opts.background}
-                      topbarStyle={[styles.topbarStyle, opts.topbarStyle]}
+                      topbarStyle={[opts.topbarStyle]}
                       topbarTextStyle={opts.topbarTextStyle}
                       appOnline={devInfo.appOnline}
                       deviceOnline={devInfo.deviceOnline}
                       capability={devInfo.capability}
                       onBack={this._onBack}
-                      showMenu={route.id === 'main'}
+                      showMenu={route.name === 'main'}
                       isBleOfflineOverlay={opts.isBleOfflineOverlay}
                       renderStatusBar={opts.renderStatusBar}
                       renderTopBar={opts.renderTopBar}
@@ -325,28 +311,6 @@ export default function createNavigator({ router, screenOptions }) {
           }}
         </Stack.Screen>
       );
-    };
-
-    setTYNativeNavigator(navigation) {
-      const navigator = Object.assign(this._navigator, {
-        ...navigation,
-        push({ id, ...params }) {
-          return navigation.navigate(id, params);
-        },
-        pop() {
-          navigation.pop();
-        },
-        getCurrentRoutes: () => {
-          const routes = this.navigationState && this.navigationState.routes;
-          return routes;
-        },
-      });
-      TYSdk.applyNavigator(navigator);
-    }
-
-    setNavigation = navigation => {
-      this._navigation = Object.assign(this._navigation, navigation);
-      this.setTYNativeNavigator(navigation);
     };
 
     getNavigation = () => {
@@ -384,7 +348,7 @@ export default function createNavigator({ router, screenOptions }) {
             <Stack.Navigator
               initialRouteName="main"
               screenOptions={({ route, navigation }) => {
-                this.setNavigation(navigation);
+                this._navigation = navigation;
                 const options = this.getScreenOptions(
                   { route, navigation },
                   screenOptions,
@@ -410,5 +374,4 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
   },
-  topbarStyle: {},
 });
