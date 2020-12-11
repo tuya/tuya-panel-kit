@@ -1,0 +1,9 @@
+__tests__
+.github
+.vscode
+dist
+docs
+demos
+example
+coverage
+scripts
