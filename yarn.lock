@@ -8471,9 +8471,10 @@ react-is@^16.3.1, react-is@^16.8.1, react-is@^16.8.6:
   resolved "https://registry.npm.taobao.org/react-is/download/react-is-16.12.0.tgz#2cc0fe0fba742d97fd527c42a13bec4eeb06241c"
   integrity sha1-LMD+D7p0LZf9UnxCoTvsTusGJBw=
 
-"react-native-deprecated-custom-components@git+https://github.com/facebookarchive/react-native-custom-components.git#83c4fa19ccc9b6cd48ff80e457c493332819b486":
-  version "0.1.1"
-  resolved "git+https://github.com/facebookarchive/react-native-custom-components.git#83c4fa19ccc9b6cd48ff80e457c493332819b486"
+react-native-deprecated-custom-components@0.1.2:
+  version "0.1.2"
+  resolved "https://registry.npm.taobao.org/react-native-deprecated-custom-components/download/react-native-deprecated-custom-components-0.1.2.tgz#ba10d40942bd90e1a98f989fd2809ea2466d413f"
+  integrity sha1-uhDUCUK9kOGpj5if0oCeokZtQT8=
   dependencies:
     create-react-class "15.6.0"
     fbjs "~0.8.9"
