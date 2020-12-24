@@ -8,6 +8,8 @@ export { default as Theme } from './components/theme';
 
 export { default as createNavigator } from './components/layout/react-navigation';
 
+export { default as TransitionPresets } from './components/layout/react-navigation/TransitionPresets';
+
 export { default as FullView } from './components/layout/full-view';
 
 export { default as NavigatorLayout } from './components/layout/navigator-layout';
