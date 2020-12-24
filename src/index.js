@@ -11,6 +11,8 @@ export { default as useTheme } from './utils/theme/context/useTheme';
 
 export { default as createNavigator } from './components/layout/react-navigation';
 
+export { default as TransitionPresets } from './components/layout/react-navigation/TransitionPresets';
+
 export { default as FullView } from './components/layout/full-view';
 
 export { default as NavigatorLayout } from './components/layout/navigator-layout';
@@ -67,7 +69,7 @@ export { default as Swipeout } from './components/swipeout';
 
 export { default as I18N } from './components/i18n';
 
-export { Strings, TYSdk } from '@tuya-rn/tuya-native-kit';
+export { Strings, TYSdk } from './TYNativeApi';
 
 export { Utils };
 

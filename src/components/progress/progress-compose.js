@@ -135,17 +135,14 @@ export default class ProgressSimple extends Gesture {
     endColor: PropTypes.string,
     /**
      * 进度条2 Thumb小圆球的填充色
-     * @version 3.5.1
      */
     thumbFill2: PropTypes.string,
     /**
      * 进度条2 Thumb小圆球边框宽度
-     * @version 3.5.1
      */
     thumbStrokeWidth2: PropTypes.number,
     /**
      * 进度条2 Thumb小圆球的边框色
-     * @version 3.5.1
      */
     thumbStroke2: PropTypes.string,
   };

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Navigator } from 'react-native-deprecated-custom-components';
 import { View, StyleSheet, UIManager, BackHandler, Platform, AppState, Text } from 'react-native';
-import { TYSdk } from '@tuya-rn/tuya-native-kit';
+import { TYSdk } from '../../../TYNativeApi';
 import MaskView from '../../modal/portalOut';
 import FullView from '../full-view';
 import Notification from '../../notification';
@@ -28,7 +28,7 @@ const TYNative = TYSdk.native;
 if (Platform.OS !== 'web') {
   const originRender = Text.render || Text.prototype.render;
   const parent = Text.render ? Text : Text.prototype;
-  parent.render = function (...args) {
+  parent.render = function(...args) {
     const origin = originRender.call(this, ...args);
     return React.cloneElement(origin, {
       style: [!isIos && { fontFamily: '' }, origin.props.style],

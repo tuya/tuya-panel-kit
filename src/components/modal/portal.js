@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TYSdk } from '@tuya-rn/tuya-native-kit';
+import { TYSdk } from '../../TYNativeApi';
 import PortalFun from './portal-direct';
 import { ListModal } from '../popup/list';
 import { PickerModal } from '../popup/picker';

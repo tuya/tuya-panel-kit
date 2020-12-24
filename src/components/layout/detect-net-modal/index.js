@@ -10,7 +10,7 @@ import {
   Image,
   Dimensions,
 } from 'react-native';
-import { TYSdk } from '@tuya-rn/tuya-native-kit';
+import { TYSdk } from '../../../TYNativeApi';
 import { RatioUtils, CoreUtils } from '../../../utils';
 import TYText from '../../TYText';
 import Tips from '../../tips';

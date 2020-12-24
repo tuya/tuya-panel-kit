@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ViewPropTypes } from 'react-native';
-import { TYSdk } from '@tuya-rn/tuya-native-kit';
 import iconfont from '../res/iconfont.json';
 import Toast from '../toast-view/toast';
 import IconFont from '../iconfont/svg';
 import { RatioUtils } from '../../utils';
 import { pick, omit } from '../TYLists/items/utils';
+import { TYSdk } from '../../TYNativeApi';
 
 const TYEvent = TYSdk.event;
 
@@ -16,7 +16,6 @@ class GlobalToast extends React.PureComponent {
   static propTypes = {
     /**
      * 提示文字
-     * @version 3.1.1
      */
     text: PropTypes.string,
     /**
@@ -45,7 +44,7 @@ class GlobalToast extends React.PureComponent {
     color: PropTypes.string,
     /**
      * 是否显示图标
-     * @version 3.3.0
+     * @version 2.0.0-rc.6
      */
     showIcon: PropTypes.bool,
   };

@@ -1,6 +1,5 @@
 import TemperatureUtils from '../temperature';
 
-
 describe('TemperatureUtils c2f', () => {
   it('TemperatureUtils.c2f(100) = 212', () => {
     const result = TemperatureUtils.c2f(100);
@@ -12,7 +11,6 @@ describe('TemperatureUtils c2f', () => {
     expect(result).toEqual(-107);
   });
 });
-
 
 describe('TemperatureUtils f2c', () => {
   it('TemperatureUtils.f2c(212) = 100', () => {

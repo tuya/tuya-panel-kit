@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { View, Image, Dimensions, StyleSheet, ViewPropTypes, Platform } from 'react-native';
 import { Rect } from 'react-native-svg';
-import { TYSdk, Strings } from '@tuya-rn/tuya-native-kit';
+import { TYSdk, Strings } from '../../../TYNativeApi';
 import TopBar from '../topbar';
 import OfflineView from '../offline-view';
 import { CoreUtils, ThemeUtils, RatioUtils } from '../../../utils';
@@ -110,13 +110,16 @@ class FullView extends Component {
     const { motionStyle, ...rest } = data;
     this.setState({ showNotification: true, information: rest, motionStyle });
   };
+
   showToast = data => {
     const { style, ...rest } = data;
     this.setState({ showToast: true, successInformation: rest, successStyle: style });
   };
+
   hideNotification = () => {
     this.setState({ showNotification: false });
   };
+
   hideToast = () => {
     this.setState({ showToast: false });
   };
@@ -201,8 +204,8 @@ class FullView extends Component {
     const tipText = !appOnline
       ? Strings.getLang('appoffline')
       : !deviceOnline
-      ? Strings.getLang('offline')
-      : '';
+        ? Strings.getLang('offline')
+        : '';
 
     if (!show) {
       return null;

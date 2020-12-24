@@ -143,7 +143,6 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
       backText: PropTypes.string,
       /**
        * 是否显示返回按钮
-       * @version 3.4.2
        */
       showBack: PropTypes.bool,
     };

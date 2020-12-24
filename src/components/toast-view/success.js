@@ -13,7 +13,6 @@ class Success extends React.PureComponent {
   static propTypes = {
     /**
      * 提示文字
-     * @version 3.0.0-rc.13
      */
     text: PropTypes.string,
     /**

@@ -1,6 +1,6 @@
 # Triggered when code is pushed to any branch in a repository
 name: Sync Components
-on: 
+on:
   push:
     branches:
       - components

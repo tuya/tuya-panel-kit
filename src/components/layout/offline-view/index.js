@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Image, View, StyleSheet, ViewPropTypes, ColorPropType } from 'react-native';
-import { TYSdk } from '@tuya-rn/tuya-native-kit';
+import { TYSdk } from '../../../TYNativeApi';
 import RefText from '../../TYText';
 import { RatioUtils, NumberUtils, CoreUtils } from '../../../utils';
 import BleOfflineView from './ble-offline-view';

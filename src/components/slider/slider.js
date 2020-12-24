@@ -543,23 +543,23 @@ export default class Slider extends Component {
 
     const rect = this.props.horizontal
       ? new Rect(
-          touchOverflowSize.width / 2 +
+        touchOverflowSize.width / 2 +
             this._getThumbLeft(this._getCurrentValue()) +
             (state.thumbSize.width - props.thumbTouchSize.width) / 2,
-          touchOverflowSize.height / 2 +
+        touchOverflowSize.height / 2 +
             (state.containerSize.height - props.thumbTouchSize.height) / 2,
-          props.thumbTouchSize.width,
-          props.thumbTouchSize.height
-        )
+        props.thumbTouchSize.width,
+        props.thumbTouchSize.height
+      )
       : new Rect(
-          touchOverflowSize.width / 2 +
+        touchOverflowSize.width / 2 +
             (state.containerSize.width - props.thumbTouchSize.width) / 2,
-          touchOverflowSize.height / 2 +
+        touchOverflowSize.height / 2 +
             this._getThumbLeft(this._getCurrentValue()) +
             (state.thumbSize.height - props.thumbTouchSize.height) / 2,
-          props.thumbTouchSize.width,
-          props.thumbTouchSize.height
-        );
+        props.thumbTouchSize.width,
+        props.thumbTouchSize.height
+      );
     return rect;
   }
 
@@ -567,17 +567,17 @@ export default class Slider extends Component {
     const thumbTouchRect = this._getThumbTouchRect();
     const positionStyle = this.props.horizontal
       ? {
-          left: thumbLeft,
-          top: thumbTouchRect.y,
-          width: thumbTouchRect.width,
-          height: thumbTouchRect.height,
-        }
+        left: thumbLeft,
+        top: thumbTouchRect.y,
+        width: thumbTouchRect.width,
+        height: thumbTouchRect.height,
+      }
       : {
-          left: thumbTouchRect.x,
-          top: thumbLeft,
-          width: thumbTouchRect.width,
-          height: thumbTouchRect.height,
-        };
+        left: thumbTouchRect.x,
+        top: thumbLeft,
+        width: thumbTouchRect.width,
+        height: thumbTouchRect.height,
+      };
 
     return (
       <Animated.View

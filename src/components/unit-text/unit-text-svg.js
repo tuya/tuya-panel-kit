@@ -58,22 +58,18 @@ export default class UnitTextSvg extends React.PureComponent {
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     /**
      * 自定义文字的宽度
-     * @version 3.0.0-rc.14
      */
     letterWidth: PropTypes.number,
     /**
      * 自定义符号的宽度（如.,:等）
-     * @version 3.0.0-rc.14
      */
     symbolWidth: PropTypes.number,
     /**
      * 哪些字符串被认作为symbol，并被应用与symbolWidth
-     * @version 3.0.0-rc.14
      */
     symbols: PropTypes.array,
     /**
      * 额外的svg路径映射表，用于拓展内部的svg path或覆盖内部的svg path
-     * @version 3.0.0-rc.14
      */
     svgMap: PropTypes.object,
   };

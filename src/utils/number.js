@@ -1,7 +1,6 @@
 import CoreUtils from './core';
 import StringUtils from './string';
 
-
 /**
  * @example
  * toFixedString(111, 5)
@@ -15,7 +14,6 @@ const toFixedString = (num, count) => {
   s = CoreUtils.toFixed(s, count);
   return num < 0 ? `-${s}` : s;
 };
-
 
 /**
  * @example
@@ -34,8 +32,6 @@ const toFilledString = (num, count) => {
   return num < 0 ? `-${s}` : s;
 };
 
-
-
 /**
  * @example
  * // 17 = 10001(2)
@@ -50,8 +46,7 @@ const toFilledString = (num, count) => {
  * @param {Number} idx, idx is reverse, and it begins 0
  * @returns {Number} a num
  */
-const getBitValue = (num, idx) => ((num & (1 << idx)) >> idx);
-
+const getBitValue = (num, idx) => (num & (1 << idx)) >> idx;
 
 /**
  * @example
@@ -67,8 +62,7 @@ const getBitValue = (num, idx) => ((num & (1 << idx)) >> idx);
  * @param {Number} idx, idx is reverse, and it begins 0
  * @returns {Number} a num, which the idx th digit change, 1 to 0, 0 to 1
  */
-const changeBitValue = (num, idx) => (num ^ (1 << idx));
-
+const changeBitValue = (num, idx) => num ^ (1 << idx);
 
 /**
  * @example
@@ -86,9 +80,8 @@ const changeBitValue = (num, idx) => (num ^ (1 << idx));
  */
 const setBitValueWithOne = (num, idx) => {
   const digit = getBitValue(num, idx);
-  return (num + (1 - digit) * (1 << idx));
+  return num + (1 - digit) * (1 << idx);
 };
-
 
 /**
  * @example
@@ -106,9 +99,8 @@ const setBitValueWithOne = (num, idx) => {
  */
 const setBitValueWithZero = (num, idx) => {
   const digit = getBitValue(num, idx);
-  return (num + (-1 * digit) * (1 << idx));
+  return num + -1 * digit * (1 << idx);
 };
-
 
 /**
  * @example
@@ -121,13 +113,14 @@ const setBitValueWithZero = (num, idx) => {
  * @returns {String} a string which convert from the bytes array
  */
 const bytesToHexString = bytes => {
-  return bytes.map(x => {
-    const high = (x >>> 4).toString(16);
-    const low = (x & 0xF).toString(16);
-    return `${high}${low}`;
-  }).join('');
+  return bytes
+    .map(x => {
+      const high = (x >>> 4).toString(16);
+      const low = (x & 0xf).toString(16);
+      return `${high}${low}`;
+    })
+    .join('');
 };
-
 
 /**
  * 等同于原来的 decToHex
@@ -144,7 +137,6 @@ const numToHexString = (num, padding = 2) => {
   const hex = Number(num).toString(16);
   return CoreUtils.toFixed(hex, padding);
 };
-
 
 /**
  * 等同于原来的 numberToBytes
@@ -164,7 +156,6 @@ const numToByteNumbers = (num, bytes = 2) => {
   return StringUtils.hexStringToNumber([hexStr, `0${hexStr}`][len & 1]);
 };
 
-
 /**
  * 等同于原来的 highlowToInt
  * @example
@@ -177,8 +168,7 @@ const numToByteNumbers = (num, bytes = 2) => {
  * @param {Number} low, a number which stands the low 8 number
  * @returns {Number} a number which converts from the `str` and the `low`
  */
-const highLowToInt = (high, low) => (low + (high << 8));
-
+const highLowToInt = (high, low) => low + (high << 8);
 
 /**
  * 等同于原来的 intToHighlow
@@ -192,7 +182,6 @@ const highLowToInt = (high, low) => (low + (high << 8));
  * @returns {Array} a array of number, which the first is the high 8 number, the second is the low 8 number
  */
 const intToHighLow = num => [num >> 8, num & 0xff];
-
 
 /**
  * 等同于原来的 inMaxMin
@@ -223,7 +212,6 @@ const inMaxMin = (min, max, value) => Math.max(Math.min(max, value), min);
  */
 const scaleNumber = (scale, value) => (value / Math.pow(10, scale)).toFixed(scale).toString();
 
-
 // https://github.com/lodash/lodash/blob/master/.internal/baseRange.js
 /**
  * @example
@@ -235,15 +223,15 @@ const scaleNumber = (scale, value) => (value / Math.pow(10, scale)).toFixed(scal
  * @returns {Number} Returns the range of numbers.
  */
 const range = (start = 0, end, step = 1) => {
-  let index = -1
-  let length = Math.max(Math.ceil((end - start) / (step || 1)), 0)
-  const result = new Array(length)
+  let index = -1;
+  let length = Math.max(Math.ceil((end - start) / (step || 1)), 0);
+  const result = new Array(length);
 
   while (length--) {
-    result[++index] = start
-    start += step
+    result[++index] = start;
+    start += step;
   }
-  return result
+  return result;
   // if ((end - start ) * step < 0) return [];
   // const len = ~~((end - start) / step) + 1;
   // return (new Array(len)).fill(1).map((_, idx) => (start + idx * step));
@@ -264,13 +252,13 @@ const range = (start = 0, end, step = 1) => {
  * @param {Number} max - 原先最大范围
  * @param {Number} newMin - 新最小范围
  * @param {Number} newMax - 新最大范围
- * 
+ *
  * @return {Number} newValue - 新范围内对应的值
  */
 const calcPosition = (value, min, max, newMin, newMax) => {
   const oldRange = max - min;
   const newRange = newMax - newMin;
-  const newValue = ((value - min) * newRange / oldRange) + newMin;
+  const newValue = ((value - min) * newRange) / oldRange + newMin;
   return newValue;
 };
 
@@ -295,7 +283,6 @@ const calcPercent = (min, max, value, offset = 0) => {
   const newMax = 100;
   return calcPosition(val, min, max, newMin, newMax) / 100;
 };
-
 
 const calNumLength = (number1, number2) => {
   const hasPoint1 = number1.toString().indexOf('.') !== -1;

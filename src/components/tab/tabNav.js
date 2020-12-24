@@ -279,11 +279,11 @@ class TabBar extends React.Component {
     const borderPosition =
       tabBarPosition === 'top'
         ? {
-            borderBottomWidth: 1,
-          }
+          borderBottomWidth: 1,
+        }
         : {
-            borderTopWidth: 1,
-          };
+          borderTopWidth: 1,
+        };
     return (
       <View
         onLayout={this.onContainerLayout}

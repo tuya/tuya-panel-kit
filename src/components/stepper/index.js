@@ -80,12 +80,12 @@ export default class Stepper extends PureComponent {
     onValueChange: PropTypes.func,
     /**
      * 是否禁用
-     * @version 3.4.6
+     * @version 2.0.0-rc.7
      */
     disabled: PropTypes.bool,
     /**
      * 获取TextInput 实例ref
-     * @version 3.4.11
+     * @version 2.0.0-rc.7
      */
     getTextInputRef: PropTypes.func,
   };

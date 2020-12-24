@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import { ColorPropType, ViewPropTypes, StyleSheet, TouchableOpacity } from 'react-native';
-import { TYSdk } from '@tuya-rn/tuya-native-kit';
 import IconFont from '../iconfont';
 import svgs from '../iconfont/svg/defaultSvg';
 import { ThemeUtils, RatioUtils } from '../../utils';
@@ -13,13 +12,14 @@ import {
   StyledImage,
 } from './styled';
 import Motion from '../motion';
-
-const TYEvent = TYSdk.event;
+import { TYSdk } from '../../TYNativeApi';
 
 const { ThemeConsumer } = ThemeUtils;
 const { convertX: cx } = RatioUtils;
 const closeIcon =
   'M329.557333 281.9072a32.8704 32.8704 0 0 1 0.887467 0.853333l177.527467 178.449067 161.6896-171.281067a33.1776 33.1776 0 0 1 47.581866-0.682666l0.682667 0.682666a34.133333 34.133333 0 0 1 0.682667 47.581867l-162.474667 172.100267 162.269867 163.157333a34.133333 34.133333 0 0 1 0.750933 47.377067l-0.853333 0.9216a32.8704 32.8704 0 0 1-46.455467 1.604266l-0.887467-0.853333-161.6896-162.577067-155.7504 165.034667a33.1776 33.1776 0 0 1-46.865066 1.365333l-1.365334-1.365333a34.133333 34.133333 0 0 1-0.682666-47.581867l156.501333-165.853866L282.999467 331.776a34.133333 34.133333 0 0 1-0.750934-47.342933l0.853334-0.9216a32.8704 32.8704 0 0 1 46.455466-1.604267z';
+
+const TYEvent = TYSdk.event;
 
 const ICONS = {
   success: svgs.selected,

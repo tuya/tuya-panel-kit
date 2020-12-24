@@ -11,7 +11,6 @@ class Loading extends React.PureComponent {
   static propTypes = {
     /**
      * 内容样式
-     * @version 3.0.0-rc.13
      */
     contentStyle: ViewPropTypes.style,
     /**

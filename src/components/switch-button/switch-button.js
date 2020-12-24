@@ -85,22 +85,18 @@ export default class SwitchButton extends React.PureComponent {
     useNativeDriver: PropTypes.bool,
     /**
      * switchButton的value值为false时左侧显示的字符,超过3个字符则显示显示2个字符，其余显示…
-     * @version 3.0.0-rc.14
      */
     onText: PropTypes.string,
     /**
      * switchButton的value值为true时右侧显示的字符，超过3个字符则显示显示2个字符，其余显示…
-     * @version 3.0.0-rc.14
      */
     offText: PropTypes.string,
     /**
      * switchButton的value值为false时左侧显示的字符样式
-     * @version 3.0.0-rc.14
      */
     onTextStyle: ViewPropTypes.style,
     /**
      * switchButton的value值为true时右侧显示的字符样式
-     * @version 3.0.0-rc.14
      */
     offTextStyle: ViewPropTypes.style,
   };

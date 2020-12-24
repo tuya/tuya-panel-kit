@@ -101,7 +101,6 @@ export default class ProgressSpace extends Gesture {
     renderCenterView: PropTypes.element,
     /**
      * 进度条块状的宽度
-     * @version 3.5.1
      */
     strokeWidth: PropTypes.number,
   };
