@@ -4,7 +4,7 @@ import defaultTheme from '../../../components/theme/base';
 import ThemeContext from './ThemeContext';
 
 export default function ThemeProvider({ theme, children }) {
-  return <ThemeContext.Provider value={{ theme }}>{children}</ThemeContext.Provider>;
+  return <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>;
 }
 
 ThemeProvider.propTypes = {
