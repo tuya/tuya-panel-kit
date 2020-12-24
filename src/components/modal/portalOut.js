@@ -1,6 +1,6 @@
 import React from 'react';
 import { Platform } from 'react-native';
-import { TYSdk } from '@tuya-rn/tuya-native-kit';
+import { TYSdk } from '../../TYNativeApi';
 import TYModal from './TYModal';
 
 const TYEvent = TYSdk.event;

@@ -63,13 +63,11 @@ class TYModal extends React.Component {
     onlyLastModalVisible: PropTypes.bool,
     /**
      * 是否弹出键盘自适应
-     * @version 3.0.0-rc.15
      */
     useKeyboardView: PropTypes.bool,
 
     /**
      * Modal 组件销毁回调事件，一般用于在弹窗销毁后跳转新的 native 页面
-     * @version 3.4.4
      * @platform iOS
      */
     onDismiss: PropTypes.func,

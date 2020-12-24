@@ -1,4 +1,4 @@
-import { TYSdk } from '@tuya-rn/tuya-native-kit';
+import { TYSdk } from '../../TYNativeApi';
 
 const TYEvent = TYSdk.event;
 

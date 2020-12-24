@@ -3,7 +3,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { StyleSheet, Text, ViewPropTypes, View, StatusBar } from 'react-native';
-import { TYSdk } from '@tuya-rn/tuya-native-kit';
+import { TYSdk } from '../../../TYNativeApi';
 import WebView from '../../webview';
 import TopBar from '../topbar';
 

@@ -18,22 +18,18 @@ class ToastView extends React.PureComponent {
   static propTypes = {
     /**
      * toast样式
-     * @version 2.0.8
      */
     style: ViewPropTypes.style,
     /**
      * toast内容样式
-     * @version 2.0.8
      */
     contentStyle: ViewPropTypes.style,
     /**
      * toast文字样式
-     * @version 2.0.8
      */
     textStyle: Text.propTypes.style,
     /**
      * toast图标样式
-     * @version 2.0.8
      */
     imageStyle: Image.propTypes.style,
     /**
@@ -54,12 +50,10 @@ class ToastView extends React.PureComponent {
     showPosition: PropTypes.oneOf(['top', 'bottom', 'center']),
     /**
      * 图标
-     * @version 2.0.8
      */
     image: PropTypes.number,
     /**
      * 嵌套子元素
-     * @version 2.0.8
      */
     children: PropTypes.any,
   };

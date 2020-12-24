@@ -212,7 +212,6 @@ export default class Progress extends Gesture {
       progressX: endX,
       progressY: endY,
     } = this.getCirclePosition(this.backScalePath);
-
     this.startX = startX;
     this.startY = startY;
     this.endX = endX;
@@ -474,9 +473,8 @@ export default class Progress extends Gesture {
         ]}
       >
         <Svg
-          viewBox={`${-thumbRadius} ${-thumbRadius} ${size + 2 * thumbRadius} ${
-            size + 2 * thumbRadius
-          }`}
+          viewBox={`${-thumbRadius} ${-thumbRadius} ${size + 2 * thumbRadius} ${size +
+            2 * thumbRadius}`}
           width={size + 2 * thumbRadius}
           height={size + 2 * thumbRadius}
         >

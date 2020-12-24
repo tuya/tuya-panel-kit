@@ -31,7 +31,6 @@ class Tips extends PureComponent {
   static propTypes = {
     /**
      * 气泡的样式
-     * @version 3.0.0-rc.18
      */
     contentStyle: ViewPropTypes.style,
     /**
@@ -75,7 +74,6 @@ class Tips extends PureComponent {
     motionConfig: PropTypes.object,
     /**
      * 是否应用于Popup上伴有遮罩
-     * @3.1.3加入
      */
     withModal: PropTypes.bool,
   };

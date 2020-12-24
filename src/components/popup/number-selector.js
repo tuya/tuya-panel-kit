@@ -57,12 +57,12 @@ class NumberSelectorPopup extends Component {
     _onDataChange: PropTypes.func,
     /**
      * 长按 + - 时每隔多久改变一次值（单位 ms）
-     * @version 3.4.11
+     * @version 2.0.0-rc.7
      */
     valueChangeTime: PropTypes.number,
     /**
      * 是否匀速加减值
-     * @version 3.4.11
+     * @version 2.0.0-rc.7
      */
     isValueChangeUniform: PropTypes.bool,
   };

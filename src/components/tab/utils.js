@@ -39,5 +39,5 @@ export default {
   toArray,
   getActiveIndex,
   activeKeyIsValid,
-  getDefaultActiveKey
+  getDefaultActiveKey,
 };

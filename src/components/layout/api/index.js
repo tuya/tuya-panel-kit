@@ -1,6 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 import { NativeModules } from 'react-native';
-import { TYSdk } from '@tuya-rn/tuya-native-kit';
+import { TYSdk } from '../../../TYNativeApi';
 import { JsonUtils, CoreUtils } from '../../../utils';
 
 const ESPNative = Object.assign({}, NativeModules.TYRCTMqttManager);

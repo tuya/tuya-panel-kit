@@ -59,7 +59,6 @@ export default class TYSectionLists extends Component {
     separatorStyle: ViewPropTypes.style,
     /**
      * 列表项实例
-     * @version 2.0.9
      */
     sectionListRef: PropTypes.func,
     /**

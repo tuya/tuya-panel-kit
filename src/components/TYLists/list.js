@@ -52,7 +52,6 @@ export default class TYFlatList extends Component {
     separatorStyle: ViewPropTypes.style,
     /**
      * 列表项实例
-     * @version 2.0.9
      */
     flatListRef: PropTypes.func,
     /**

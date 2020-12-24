@@ -22,7 +22,7 @@ describe('StringUtil hexStringToBinString', () => {
   it('StringUtil.hexStringToBinString("0fe9") = "0000111111101001"', () => {
     const result = StringUtil.hexStringToBinString('0fe9');
     expect(result).toEqual('0000111111101001');
-    expect(parseInt('0fe9', 16)).toEqual(parseInt('0000111111101001', 2));
+    expect(0x0fe9).toEqual(0b0000111111101001);
   });
 });
 

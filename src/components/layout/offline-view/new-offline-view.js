@@ -12,7 +12,7 @@ import {
   Image,
   Easing,
 } from 'react-native';
-import { TYSdk } from '@tuya-rn/tuya-native-kit';
+import { TYSdk } from '../../../TYNativeApi';
 import Motion from '../../motion';
 import RefText from '../../TYText';
 import Strings from '../../i18n/strings';

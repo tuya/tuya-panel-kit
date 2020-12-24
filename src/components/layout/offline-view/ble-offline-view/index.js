@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { TYSdk } from '@tuya-rn/tuya-native-kit';
 import { StyleSheet, Text, View } from 'react-native';
+import { TYSdk } from '../../../../TYNativeApi';
 import Modal from '../../../modal';
 import H5WebView from '../webview';
 import BleToast from './ble-toast';

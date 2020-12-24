@@ -1,7 +1,7 @@
 import React from 'react';
 import { Platform } from 'react-native';
 import { shallow } from 'enzyme';
-import { TYSdk } from '@tuya-rn/tuya-native-kit';
+import { TYSdk } from '../../../TYNativeApi';
 import PortalOut from '../portalOut';
 import TYModal from '../TYModal';
 

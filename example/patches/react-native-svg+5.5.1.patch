@@ -1,0 +1,38 @@
+diff --git a/node_modules/react-native-svg/elements/Shape.js b/node_modules/react-native-svg/elements/Shape.js
+index f77e6d9..b72972e 100644
+--- a/node_modules/react-native-svg/elements/Shape.js
++++ b/node_modules/react-native-svg/elements/Shape.js
+@@ -1,15 +1,24 @@
+-import {Component} from 'react';
+-import SvgTouchableMixin from '../lib/SvgTouchableMixin';
+-import _ from 'lodash';
++import { Component } from "react";
++import SvgTouchableMixin from "../lib/SvgTouchableMixin";
+ 
+-class Shape extends Component {
++const touch = Object.entries(SvgTouchableMixin);
++
++export default class Shape extends Component {
+     constructor() {
+         super(...arguments);
+-        _.forEach(SvgTouchableMixin, (method, key) => {
+-            this[key] = method.bind(this);
+-        });
++        for (const [key, val] of touch) {
++            if (typeof val === "function") {
++                this[key] = val.bind(this);
++            } else {
++                this[key] = val;
++            }
++        }
+         this.state = this.touchableGetInitialState();
+     }
++    refMethod = ref => {
++        this.root = ref;
++    };
++    setNativeProps = props => {
++        this.root.setNativeProps(props);
++    };
+ }
+-
+-export default Shape;

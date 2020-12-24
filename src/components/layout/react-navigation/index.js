@@ -11,9 +11,10 @@ import {
   NativeModules,
 } from 'react-native';
 import { NavigationContainer, useNavigation, useNavigationState } from '@react-navigation/native';
-import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import 'react-native-gesture-handler';
-import { TYSdk } from '@tuya-rn/tuya-native-kit';
+import { TransitionPresets } from './TransitionPresets';
+import { TYSdk } from '../../../TYNativeApi';
 
 import MaskView from '../../modal/portalOut';
 import FullView from '../full-view';
@@ -38,7 +39,7 @@ const TYMobile = TYSdk.mobile;
 if (Platform.OS !== 'web') {
   const originRender = Text.render || Text.prototype.render;
   const parent = Text.render ? Text : Text.prototype;
-  parent.render = function (...args) {
+  parent.render = function(...args) {
     const origin = originRender.call(this, ...args);
     return React.cloneElement(origin, {
       style: [!isIos && { fontFamily: '' }, origin.props.style],
