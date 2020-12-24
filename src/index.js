@@ -6,6 +6,9 @@ export { default as defaultTheme } from './components/theme/base';
 // 主题配置Provider组件
 export { default as Theme } from './components/theme';
 
+// The useTheme hook let's us access the currently active theme.
+export { default as useTheme } from './utils/theme/context/useTheme';
+
 export { default as createNavigator } from './components/layout/react-navigation';
 
 export { default as FullView } from './components/layout/full-view';
