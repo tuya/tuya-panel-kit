@@ -1,6 +1,16 @@
-# 更新日志
+# Change Log
 
-<!-- All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.-->
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+# [4.0.0-rc.1](https://github.com/tuya/tuya-panel-kit/compare/v4.0.0-rc.0...v4.0.0-rc.1) (2020-12-11)
+
+### Bug Fixes
+
+- react-native-deprecated-custom-components use official npm version ([cc03843](https://github.com/tuya/tuya-panel-kit/commit/cc038433992aa0a9ad5cc6904bbcaec2ecf7848c))
+
+### Features
+
+- remove typings ([16c1d96](https://github.com/tuya/tuya-panel-kit/commit/16c1d9603c4fb47d4bc983df596cb7b8c805aed2))
 
 ## [4.0.0-rc.0](https://github.com/tuya/tuya-panel-kit/compare/v2.0.0-rc.7...v4.0.0-rc.0) (2020-11-14)
 
