@@ -11,8 +11,9 @@ import {
   NativeModules,
 } from 'react-native';
 import { NavigationContainer, useNavigation, useNavigationState } from '@react-navigation/native';
-import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import 'react-native-gesture-handler';
+import { TransitionPresets } from './TransitionPresets';
 import { TYSdk } from '../../../TYNativeApi';
 
 import MaskView from '../../modal/portalOut';
