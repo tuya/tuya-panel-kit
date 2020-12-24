@@ -138,7 +138,10 @@ export default function createNavigator({ router, screenOptions }) {
     }
 
     get hideSignalPop() {
-      return get(TYSdk, 'devInfo.panelConfig.fun.hideSignalPop', false);
+      const { hideSignalPop: hideSignalPopProps = false } = this.opts;
+      const hideSignalPop = get(TYSdk, 'devInfo.panelConfig.fun.hideSignalPop', false);
+
+      return hideSignalPop || hideSignalPopProps;
     }
 
     sendEventInfo(eventType, state) {
