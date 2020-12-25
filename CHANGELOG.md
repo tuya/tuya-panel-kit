@@ -6,11 +6,18 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
-- remove [@tuya-rn](https://github.com/tuya-rn) ([2ea6247](https://github.com/tuya/tuya-panel-kit/commit/2ea62474e43887c690a197b015338d80b39f8e26))
+- **TimerPicker:** 修复时间制不更新问题。（[62ff90e](https://github.com/tuya/tuya-panel-kit/commit/62ff90e80963739c29a6ccecfb739999ca2b8988)）
 
 ### Features
 
-- **Navigation:** add TransitionPresets ([5ca060d](https://github.com/tuya/tuya-panel-kit/commit/5ca060dffbe56bcd74036afead3f40df11cc9346))
+- **Navigation:** add TransitionPresets. ([5ca060d](https://github.com/tuya/tuya-panel-kit/commit/5ca060dffbe56bcd74036afead3f40df11cc9346))
+- **Theme:** add useTheme hooks.
+
+### Breaking Changes
+
+- **Navigation:** modify the screenOption structure.
+
+- **Dialog:** Dialog 交互视图向 App 靠齐。（[62ff90e](https://github.com/tuya/tuya-panel-kit/commit/62ff90e80963739c29a6ccecfb739999ca2b8988)）
 
 # [4.0.0-rc.1](https://github.com/tuya/tuya-panel-kit/compare/v4.0.0-rc.0...v4.0.0-rc.1) (2020-12-11)
 
