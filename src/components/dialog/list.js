@@ -130,7 +130,9 @@ export default class List extends Component {
           >
             {title}
           </StyledTitle>
-          {!!subTitle && <StyledSubTitle style={subTitleStyle}>{subTitle}</StyledSubTitle>}
+          {!!subTitle && (
+            <StyledSubTitle style={[{ marginTop: 7 }, subTitleStyle]}>{subTitle}</StyledSubTitle>
+          )}
           <StyledList
             style={[listStyle, { maxHeight: maxItemNum * ITEM_HEIGHT + cx(16) }]}
             scrollEnabled={dataSource.length > maxItemNum}

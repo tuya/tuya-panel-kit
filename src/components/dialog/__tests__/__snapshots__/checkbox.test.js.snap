@@ -97,9 +97,9 @@ exports[`Checkbox Component basic render switch 1`] = `
           "alignItems": "center",
           "alignSelf": "center",
           "backgroundColor": "#fff",
-          "borderRadius": 16,
+          "borderRadius": 32,
           "justifyContent": "center",
-          "width": 630,
+          "width": 622,
         },
         null,
       ]
@@ -111,9 +111,9 @@ exports[`Checkbox Component basic render switch 1`] = `
           Object {
             "alignItems": "center",
             "alignSelf": "stretch",
-            "borderBottomColor": "#e5e5e5",
+            "borderBottomColor": "rgba(0, 0, 0, 0.1)",
             "borderBottomWidth": 0.5,
-            "height": 56,
+            "height": 55,
             "justifyContent": "center",
           },
           null,
@@ -127,18 +127,19 @@ exports[`Checkbox Component basic render switch 1`] = `
         color={null}
         ellipsizeMode="tail"
         numberOfLines={2}
-        size={18}
+        size={17}
         style={
           Array [
             Object {
               "backgroundColor": "transparent",
               "color": "#333",
-              "fontSize": 18,
+              "fontSize": 17,
             },
             Array [
               Object {
-                "color": "#333",
-                "fontSize": 18,
+                "color": "rgba(0, 0, 0, 0.9)",
+                "flexWrap": "wrap",
+                "fontSize": 17,
                 "fontWeight": "500",
                 "textAlign": "center",
               },
@@ -157,19 +158,19 @@ exports[`Checkbox Component basic render switch 1`] = `
         allowFontScaling={false}
         color={null}
         ellipsizeMode="tail"
-        size={16}
+        size={15}
         style={
           Array [
             Object {
               "backgroundColor": "transparent",
               "color": "#333",
-              "fontSize": 16,
+              "fontSize": 15,
             },
             Array [
               Object {
-                "color": "#999",
-                "fontSize": 16,
-                "marginTop": 7,
+                "color": "rgba(0, 0, 0, 0.5)",
+                "flexWrap": "wrap",
+                "fontSize": 15,
                 "textAlign": "center",
               },
               null,
@@ -1157,10 +1158,10 @@ exports[`Checkbox Component basic render switch 1`] = `
         Array [
           Object {
             "alignSelf": "stretch",
-            "borderTopColor": "#e5e5e5",
+            "borderTopColor": "rgba(0, 0, 0, 0.1)",
             "borderTopWidth": 0.5,
             "flexDirection": "row",
-            "height": 56,
+            "height": 55,
           },
           null,
         ]
@@ -1179,7 +1180,7 @@ exports[`Checkbox Component basic render switch 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "borderRightColor": "#e5e5e5",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0.5,
             "flexBasis": 0,
             "flexGrow": 1,
@@ -1195,18 +1196,18 @@ exports[`Checkbox Component basic render switch 1`] = `
           allowFontScaling={false}
           color={null}
           ellipsizeMode="tail"
-          size={16}
+          size={17}
           style={
             Array [
               Object {
                 "backgroundColor": "transparent",
                 "color": "#333",
-                "fontSize": 16,
+                "fontSize": 17,
               },
               Array [
                 Object {
-                  "color": "#666",
-                  "fontSize": 16,
+                  "color": "rgba(0, 0, 0, 0.7)",
+                  "fontSize": 17,
                   "textAlign": "center",
                 },
                 null,
@@ -1232,7 +1233,7 @@ exports[`Checkbox Component basic render switch 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "borderRightColor": "#e5e5e5",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0,
             "flexBasis": 0,
             "flexGrow": 1,
@@ -1248,18 +1249,18 @@ exports[`Checkbox Component basic render switch 1`] = `
           allowFontScaling={false}
           color={null}
           ellipsizeMode="tail"
-          size={16}
+          size={17}
           style={
             Array [
               Object {
                 "backgroundColor": "transparent",
                 "color": "#333",
-                "fontSize": 16,
+                "fontSize": 17,
               },
               Array [
                 Object {
-                  "color": "#333",
-                  "fontSize": 16,
+                  "color": "rgba(0, 0, 0, 0.9)",
+                  "fontSize": 17,
                   "fontWeight": "bold",
                   "textAlign": "center",
                 },
@@ -1301,9 +1302,9 @@ exports[`Checkbox Component basic render switch 2`] = `
           "alignItems": "center",
           "alignSelf": "center",
           "backgroundColor": "#fff",
-          "borderRadius": 16,
+          "borderRadius": 32,
           "justifyContent": "center",
-          "width": 630,
+          "width": 622,
         },
         null,
       ]
@@ -1315,9 +1316,9 @@ exports[`Checkbox Component basic render switch 2`] = `
           Object {
             "alignItems": "center",
             "alignSelf": "stretch",
-            "borderBottomColor": "#e5e5e5",
+            "borderBottomColor": "rgba(0, 0, 0, 0.1)",
             "borderBottomWidth": 0.5,
-            "height": 56,
+            "height": 55,
             "justifyContent": "center",
           },
           null,
@@ -1331,18 +1332,19 @@ exports[`Checkbox Component basic render switch 2`] = `
         color={null}
         ellipsizeMode="tail"
         numberOfLines={2}
-        size={18}
+        size={17}
         style={
           Array [
             Object {
               "backgroundColor": "transparent",
               "color": "#333",
-              "fontSize": 18,
+              "fontSize": 17,
             },
             Array [
               Object {
-                "color": "#333",
-                "fontSize": 18,
+                "color": "rgba(0, 0, 0, 0.9)",
+                "flexWrap": "wrap",
+                "fontSize": 17,
                 "fontWeight": "500",
                 "textAlign": "center",
               },
@@ -1361,19 +1363,19 @@ exports[`Checkbox Component basic render switch 2`] = `
         allowFontScaling={false}
         color={null}
         ellipsizeMode="tail"
-        size={16}
+        size={15}
         style={
           Array [
             Object {
               "backgroundColor": "transparent",
               "color": "#333",
-              "fontSize": 16,
+              "fontSize": 15,
             },
             Array [
               Object {
-                "color": "#999",
-                "fontSize": 16,
-                "marginTop": 7,
+                "color": "rgba(0, 0, 0, 0.5)",
+                "flexWrap": "wrap",
+                "fontSize": 15,
                 "textAlign": "center",
               },
               null,
@@ -2361,10 +2363,10 @@ exports[`Checkbox Component basic render switch 2`] = `
         Array [
           Object {
             "alignSelf": "stretch",
-            "borderTopColor": "#e5e5e5",
+            "borderTopColor": "rgba(0, 0, 0, 0.1)",
             "borderTopWidth": 0.5,
             "flexDirection": "row",
-            "height": 56,
+            "height": 55,
           },
           null,
         ]
@@ -2383,7 +2385,7 @@ exports[`Checkbox Component basic render switch 2`] = `
         style={
           Object {
             "alignItems": "center",
-            "borderRightColor": "#e5e5e5",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0.5,
             "flexBasis": 0,
             "flexGrow": 1,
@@ -2399,18 +2401,18 @@ exports[`Checkbox Component basic render switch 2`] = `
           allowFontScaling={false}
           color={null}
           ellipsizeMode="tail"
-          size={16}
+          size={17}
           style={
             Array [
               Object {
                 "backgroundColor": "transparent",
                 "color": "#333",
-                "fontSize": 16,
+                "fontSize": 17,
               },
               Array [
                 Object {
-                  "color": "#666",
-                  "fontSize": 16,
+                  "color": "rgba(0, 0, 0, 0.7)",
+                  "fontSize": 17,
                   "textAlign": "center",
                 },
                 null,
@@ -2436,7 +2438,7 @@ exports[`Checkbox Component basic render switch 2`] = `
         style={
           Object {
             "alignItems": "center",
-            "borderRightColor": "#e5e5e5",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0,
             "flexBasis": 0,
             "flexGrow": 1,
@@ -2452,18 +2454,18 @@ exports[`Checkbox Component basic render switch 2`] = `
           allowFontScaling={false}
           color={null}
           ellipsizeMode="tail"
-          size={16}
+          size={17}
           style={
             Array [
               Object {
                 "backgroundColor": "transparent",
                 "color": "#333",
-                "fontSize": 16,
+                "fontSize": 17,
               },
               Array [
                 Object {
-                  "color": "#333",
-                  "fontSize": 16,
+                  "color": "rgba(0, 0, 0, 0.9)",
+                  "fontSize": 17,
                   "fontWeight": "bold",
                   "textAlign": "center",
                 },

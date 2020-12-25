@@ -23,9 +23,9 @@ exports[`Confirm Component basic render 1`] = `
           "alignItems": "center",
           "alignSelf": "center",
           "backgroundColor": "#fff",
-          "borderRadius": 16,
+          "borderRadius": 32,
           "justifyContent": "center",
-          "width": 630,
+          "width": 622,
         },
         null,
       ]
@@ -38,10 +38,10 @@ exports[`Confirm Component basic render 1`] = `
             "alignItems": "center",
             "alignSelf": "stretch",
             "justifyContent": "center",
-            "paddingBottom": 32,
-            "paddingLeft": 32,
-            "paddingRight": 32,
-            "paddingTop": 32,
+            "paddingBottom": 72,
+            "paddingLeft": 64,
+            "paddingRight": 64,
+            "paddingTop": 72,
           },
           null,
         ]
@@ -53,25 +53,26 @@ exports[`Confirm Component basic render 1`] = `
         allowFontScaling={false}
         color={null}
         ellipsizeMode="tail"
-        numberOfLines={2}
-        size={18}
+        size={16}
         style={
           Array [
             Object {
               "backgroundColor": "transparent",
               "color": "#333",
-              "fontSize": 18,
+              "fontSize": 16,
             },
             Array [
               Object {
-                "color": "#333",
-                "fontSize": 18,
+                "color": "rgba(0, 0, 0, 0.9)",
+                "flexWrap": "wrap",
+                "fontSize": 17,
                 "fontWeight": "500",
                 "textAlign": "center",
               },
               Array [
                 Object {
-                  "paddingVertical": 0,
+                  "fontSize": 16,
+                  "marginBottom": 14,
                 },
                 null,
               ],
@@ -89,19 +90,19 @@ exports[`Confirm Component basic render 1`] = `
         allowFontScaling={false}
         color={null}
         ellipsizeMode="tail"
-        size={16}
+        size={15}
         style={
           Array [
             Object {
               "backgroundColor": "transparent",
               "color": "#333",
-              "fontSize": 16,
+              "fontSize": 15,
             },
             Array [
               Object {
-                "color": "#999",
-                "fontSize": 16,
-                "marginTop": 7,
+                "color": "rgba(0, 0, 0, 0.5)",
+                "flexWrap": "wrap",
+                "fontSize": 15,
                 "textAlign": "center",
               },
               null,
@@ -119,10 +120,10 @@ exports[`Confirm Component basic render 1`] = `
         Array [
           Object {
             "alignSelf": "stretch",
-            "borderTopColor": "#e5e5e5",
+            "borderTopColor": "rgba(0, 0, 0, 0.1)",
             "borderTopWidth": 0.5,
             "flexDirection": "row",
-            "height": 56,
+            "height": 55,
           },
           null,
         ]
@@ -141,7 +142,7 @@ exports[`Confirm Component basic render 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "borderRightColor": "#e5e5e5",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0.5,
             "flexBasis": 0,
             "flexGrow": 1,
@@ -157,18 +158,18 @@ exports[`Confirm Component basic render 1`] = `
           allowFontScaling={false}
           color={null}
           ellipsizeMode="tail"
-          size={16}
+          size={17}
           style={
             Array [
               Object {
                 "backgroundColor": "transparent",
                 "color": "#333",
-                "fontSize": 16,
+                "fontSize": 17,
               },
               Array [
                 Object {
-                  "color": "#666",
-                  "fontSize": 16,
+                  "color": "rgba(0, 0, 0, 0.7)",
+                  "fontSize": 17,
                   "textAlign": "center",
                 },
                 null,
@@ -194,7 +195,7 @@ exports[`Confirm Component basic render 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "borderRightColor": "#e5e5e5",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0,
             "flexBasis": 0,
             "flexGrow": 1,
@@ -210,18 +211,18 @@ exports[`Confirm Component basic render 1`] = `
           allowFontScaling={false}
           color={null}
           ellipsizeMode="tail"
-          size={16}
+          size={17}
           style={
             Array [
               Object {
                 "backgroundColor": "transparent",
                 "color": "#333",
-                "fontSize": 16,
+                "fontSize": 17,
               },
               Array [
                 Object {
-                  "color": "#333",
-                  "fontSize": 16,
+                  "color": "rgba(0, 0, 0, 0.9)",
+                  "fontSize": 17,
                   "fontWeight": "bold",
                   "textAlign": "center",
                 },

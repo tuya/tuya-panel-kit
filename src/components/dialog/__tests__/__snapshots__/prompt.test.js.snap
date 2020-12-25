@@ -47,10 +47,8 @@ exports[`Prompt Component basic render defaultValue 1`] = `
     showHelp={false}
     style={null}
     subTitle="副标题"
-    subTitleStyle={null}
     textContentType=""
     title="标题"
-    titleNumberOfLines={2}
     titleStyle={null}
   />
 </Motion.ScaleFadeIn>
@@ -79,9 +77,9 @@ exports[`Prompt Component basic render value 1`] = `
           "alignItems": "center",
           "alignSelf": "center",
           "backgroundColor": "#fff",
-          "borderRadius": 16,
+          "borderRadius": 32,
           "justifyContent": "center",
-          "width": 630,
+          "width": 622,
         },
         null,
       ]
@@ -94,12 +92,20 @@ exports[`Prompt Component basic render value 1`] = `
             "alignItems": "center",
             "alignSelf": "stretch",
             "justifyContent": "center",
-            "paddingBottom": 32,
-            "paddingLeft": 32,
-            "paddingRight": 32,
-            "paddingTop": 32,
+            "paddingBottom": 72,
+            "paddingLeft": 64,
+            "paddingRight": 64,
+            "paddingTop": 72,
           },
-          null,
+          Array [
+            Object {
+              "paddingBottom": 24,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 28,
+            },
+            null,
+          ],
         ]
       }
     >
@@ -109,19 +115,19 @@ exports[`Prompt Component basic render value 1`] = `
         allowFontScaling={false}
         color={null}
         ellipsizeMode="tail"
-        numberOfLines={2}
-        size={18}
+        size={17}
         style={
           Array [
             Object {
               "backgroundColor": "transparent",
               "color": "#333",
-              "fontSize": 18,
+              "fontSize": 17,
             },
             Array [
               Object {
-                "color": "#333",
-                "fontSize": 18,
+                "color": "rgba(0, 0, 0, 0.9)",
+                "flexWrap": "wrap",
+                "fontSize": 17,
                 "fontWeight": "500",
                 "textAlign": "center",
               },
@@ -134,50 +140,16 @@ exports[`Prompt Component basic render value 1`] = `
       >
         标题
       </Text>
-      <Text
-        accessible={true}
-        align={null}
-        allowFontScaling={false}
-        color={null}
-        ellipsizeMode="tail"
-        size={16}
-        style={
-          Array [
-            Object {
-              "backgroundColor": "transparent",
-              "color": "#333",
-              "fontSize": 16,
-            },
-            Array [
-              Object {
-                "color": "#999",
-                "fontSize": 16,
-                "marginTop": 7,
-                "textAlign": "center",
-              },
-              null,
-            ],
-          ]
-        }
-        type={null}
-        weight={null}
-      >
-        副标题
-      </Text>
       <View
         style={
           Array [
             Object {
               "alignSelf": "stretch",
-              "backgroundColor": "#f8f8f8",
-              "borderColor": "#e5e5e5",
-              "borderRadius": 8,
-              "borderWidth": 0.5,
               "justifyContent": "center",
-              "marginTop": 16,
+              "marginTop": 28,
               "paddingBottom": 12,
-              "paddingLeft": 16,
-              "paddingRight": 16,
+              "paddingLeft": 0,
+              "paddingRight": 0,
               "paddingTop": 12,
             },
             null,
@@ -186,6 +158,7 @@ exports[`Prompt Component basic render value 1`] = `
       >
         <TextInput
           allowFontScaling={true}
+          autoFocus={true}
           motionConfig={
             Object {
               "initScale": 0.5,
@@ -195,11 +168,12 @@ exports[`Prompt Component basic render value 1`] = `
           onChangeText={[Function]}
           onConfirm={[Function]}
           placeholder="Password"
-          placeholderTextColor="#d6d6de"
+          placeholderTextColor="rgba(0, 0, 0, 0.3)"
+          selectionColor="#FF4800"
           style={
             Array [
               Object {
-                "color": "#333",
+                "color": "rgba(0, 0, 0, 0.5)",
                 "fontSize": 16,
                 "paddingBottom": 0,
                 "paddingLeft": 0,
@@ -209,6 +183,7 @@ exports[`Prompt Component basic render value 1`] = `
               null,
             ]
           }
+          subTitle="副标题"
           textContentType=""
           underlineColorAndroid="transparent"
           value=""
@@ -325,10 +300,10 @@ exports[`Prompt Component basic render value 1`] = `
         Array [
           Object {
             "alignSelf": "stretch",
-            "borderTopColor": "#e5e5e5",
+            "borderTopColor": "rgba(0, 0, 0, 0.1)",
             "borderTopWidth": 0.5,
             "flexDirection": "row",
-            "height": 56,
+            "height": 55,
           },
           null,
         ]
@@ -347,7 +322,7 @@ exports[`Prompt Component basic render value 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "borderRightColor": "#e5e5e5",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0.5,
             "flexBasis": 0,
             "flexGrow": 1,
@@ -363,18 +338,18 @@ exports[`Prompt Component basic render value 1`] = `
           allowFontScaling={false}
           color={null}
           ellipsizeMode="tail"
-          size={16}
+          size={17}
           style={
             Array [
               Object {
                 "backgroundColor": "transparent",
                 "color": "#333",
-                "fontSize": 16,
+                "fontSize": 17,
               },
               Array [
                 Object {
-                  "color": "#666",
-                  "fontSize": 16,
+                  "color": "rgba(0, 0, 0, 0.7)",
+                  "fontSize": 17,
                   "textAlign": "center",
                 },
                 null,
@@ -400,7 +375,7 @@ exports[`Prompt Component basic render value 1`] = `
         style={
           Object {
             "alignItems": "center",
-            "borderRightColor": "#e5e5e5",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0,
             "flexBasis": 0,
             "flexGrow": 1,
@@ -416,24 +391,24 @@ exports[`Prompt Component basic render value 1`] = `
           allowFontScaling={false}
           color={null}
           ellipsizeMode="tail"
-          size={16}
+          size={17}
           style={
             Array [
               Object {
                 "backgroundColor": "transparent",
                 "color": "#333",
-                "fontSize": 16,
+                "fontSize": 17,
               },
               Array [
                 Object {
-                  "color": "#333",
-                  "fontSize": 16,
+                  "color": "rgba(0, 0, 0, 0.9)",
+                  "fontSize": 17,
                   "fontWeight": "bold",
                   "textAlign": "center",
                 },
                 Array [
                   Object {
-                    "opacity": 0.4,
+                    "opacity": 0.3,
                   },
                   null,
                 ],
