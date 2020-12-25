@@ -7,32 +7,36 @@ assignees: ''
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+## 组件
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+组件名称
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+## 组件版本
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+当前组件版本
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+## 概述
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+Bug 问题概述
 
-**Additional context**
-Add any other context about the problem here.
+## 重现步骤
+
+1. aaa
+2. bbb
+3. ccc
+
+## Bug 行为
+
+Bug 的表现行为
+
+## 期望行为
+
+组件的正确行为
+
+## 期望发布日期
+
+期望 bug 解决后发布的正式版本号或日期
+
+## 附件
+
+附上图片或日志
