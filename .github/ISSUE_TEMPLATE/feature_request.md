@@ -7,14 +7,24 @@ assignees: ''
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+## 组件
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+组件名称
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+## 概述
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+Feature 新功能概述
+
+## 主要功能点
+
+1. aaa
+2. bbb
+3. ccc
+
+## 期望发布日期
+
+期望添加新功能后组件发布的正式版本号或日期
+
+## 附件
+
+附上图片或者设计稿
