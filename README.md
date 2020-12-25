@@ -45,11 +45,16 @@ or
 
 yarn add tuya-panel-kit
 ```
+
 ## Support
 
 Tuya Developer Center: https://developer.tuya.com/en/
+
 Tuya Smart Help Center: https://support.tuya.com/en/help
+
 Technical Support Council: https://iot.tuya.com/council/
+
+Detail Docs : https://panel-docs.tuyaus.com/
 
 ## License
 

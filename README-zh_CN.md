@@ -49,8 +49,12 @@ yarn add tuya-panel-kit
 ## 技术支持
 
 开发者中心：https://developer.tuya.com/cn/
-帮助中心: https://support.tuya.com/cn/help
-技术支持工单中心: https://iot.tuya.com/council/
+
+帮助中心：https://support.tuya.com/cn/help
+
+技术支持工单中心：https://iot.tuya.com/council/
+
+详细文档：https://panel-docs.tuyacn.com/
 
 ## License
 
