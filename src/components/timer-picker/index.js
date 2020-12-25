@@ -92,7 +92,7 @@ export default class TimerPicker extends Component {
 
   constructor(props) {
     super(props);
-    this.hours = getHourSelections(props.is12Hours);
+    const hours = getHourSelections(props.is12Hours);
     this.minutes = getMinsSelections();
     this.prefixs = getTimePrefixSelections();
     const [startHour, startMin] = parseTimer(props.startTime * 60)
@@ -107,12 +107,17 @@ export default class TimerPicker extends Component {
       startMin,
       endHour,
       endMin,
+      hours,
     };
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.startTime !== this.props.startTime || nextProps.endTime !== this.props.endTime) {
       this.parseTimer(nextProps.startTime, nextProps.endTime);
+    }
+    if (nextProps.is12Hours !== this.props.is12Hours) {
+      const hours = getHourSelections(nextProps.is12Hours);
+      this.setState({ hours });
     }
   }
 
@@ -223,7 +228,7 @@ export default class TimerPicker extends Component {
       symbol,
       loop,
     } = this.props;
-    const { startHour, startMin, endHour, endMin } = this.state;
+    const { startHour, startMin, endHour, endMin, hours } = this.state;
     const startPrefix = getPrefix(startHour);
     const endPrefix = getPrefix(endHour);
     let prefixPositionStart = prefixPosition;
@@ -243,7 +248,7 @@ export default class TimerPicker extends Component {
               false,
               'StartAmpm'
             )}
-          {this.renderPickView(this.hours, startHour, this.onStartHourChange, loop, 'StartHour')}
+          {this.renderPickView(hours, startHour, this.onStartHourChange, loop, 'StartHour')}
           {this.renderPickView(this.minutes, startMin, this.onStartMinChange, loop, 'StartMinute')}
           {is12Hours &&
             prefixPositionStart === 'right' &&
@@ -269,7 +274,7 @@ export default class TimerPicker extends Component {
                 false,
                 'EndAmpm'
               )}
-            {this.renderPickView(this.hours, endHour, this.onEndHourChange, loop, 'EndHour')}
+            {this.renderPickView(hours, endHour, this.onEndHourChange, loop, 'EndHour')}
             {this.renderPickView(this.minutes, endMin, this.onEndMinChange, loop, 'EndMinute')}
             {is12Hours &&
               prefixPositionEnd === 'right' &&

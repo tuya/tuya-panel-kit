@@ -10,7 +10,6 @@ import {
   StyledInputContainer,
   StyledInput,
   StyledTitle,
-  StyledSubTitle,
 } from './styled';
 import withMotion from './withMotion';
 
@@ -42,10 +41,6 @@ class Prompt extends Component {
      */
     contentStyle: ViewPropTypes.style,
     /**
-     * 标题超过多少行显示省略号
-     */
-    titleNumberOfLines: PropTypes.number,
-    /**
      * 标题
      */
     title: PropTypes.string.isRequired,
@@ -53,14 +48,6 @@ class Prompt extends Component {
      * 标题样式
      */
     titleStyle: TYText.propTypes.style,
-    /**
-     * 副标题
-     */
-    subTitle: PropTypes.string,
-    /**
-     * 副标题样式
-     */
-    subTitleStyle: TYText.propTypes.style,
     /**
      * footer容器样式
      */
@@ -108,10 +95,7 @@ class Prompt extends Component {
     onHelpPress: null,
     style: null,
     contentStyle: null,
-    titleNumberOfLines: 2,
     titleStyle: null,
-    subTitle: '',
-    subTitleStyle: null,
     inputWrapperStyle: null,
     inputStyle: null,
     footerWrapperStyle: null,
@@ -172,11 +156,8 @@ class Prompt extends Component {
       onHelpPress,
       style,
       contentStyle,
-      titleNumberOfLines,
       title,
       titleStyle,
-      subTitle,
-      subTitleStyle,
       inputWrapperStyle,
       inputStyle,
       footerWrapperStyle,
@@ -194,14 +175,18 @@ class Prompt extends Component {
       (typeof defaultValue !== 'undefined' && this.state.unControlledValue);
     return (
       <StyledContainer style={style}>
-        <StyledContent style={contentStyle}>
-          <StyledTitle style={titleStyle} numberOfLines={titleNumberOfLines}>
-            {title}
-          </StyledTitle>
-          {!!subTitle && <StyledSubTitle style={subTitleStyle}>{subTitle}</StyledSubTitle>}
+        <StyledContent
+          style={[
+            { paddingLeft: 16, paddingRight: 16, paddingTop: 28, paddingBottom: 24 },
+            contentStyle,
+          ]}
+        >
+          <StyledTitle style={titleStyle}>{title}</StyledTitle>
           <StyledInputContainer style={inputWrapperStyle}>
             <StyledInput
               style={inputStyle}
+              autoFocus={true}
+              selectionColor="#FF4800"
               {...TextInputProps}
               value={typeof value !== 'undefined' ? this.state.value : undefined}
               defaultValue={
@@ -223,7 +208,7 @@ class Prompt extends Component {
         <Footer
           style={footerWrapperStyle}
           cancelTextStyle={cancelTextStyle}
-          confirmTextStyle={[{ opacity: confirmDisabled ? 1 : 0.4 }, confirmTextStyle]}
+          confirmTextStyle={[{ opacity: confirmDisabled ? 1 : 0.3 }, confirmTextStyle]}
           cancelText={cancelText}
           confirmText={confirmText}
           cancelAccessibilityLabel={cancelAccessibilityLabel}

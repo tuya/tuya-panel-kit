@@ -9,7 +9,6 @@ import withMotion from './withMotion';
 const Confirm = ({
   style,
   contentStyle,
-  titleNumberOfLines,
   title,
   titleStyle,
   subTitle,
@@ -27,10 +26,7 @@ const Confirm = ({
   return (
     <StyledContainer style={style}>
       <StyledContent style={contentStyle}>
-        <StyledTitle
-          style={[{ paddingVertical: subTitle ? 0 : 12 }, titleStyle]}
-          numberOfLines={titleNumberOfLines}
-        >
+        <StyledTitle style={[!!subTitle && { fontSize: 16, marginBottom: 14 }, titleStyle]}>
           {title}
         </StyledTitle>
         {!!subTitle && <StyledSubTitle style={subTitleStyle}>{subTitle}</StyledSubTitle>}
@@ -59,10 +55,6 @@ Confirm.propTypes = {
    * 内容样式
    */
   contentStyle: ViewPropTypes.style,
-  /**
-   * 标题超过多少行显示省略号
-   */
-  titleNumberOfLines: PropTypes.number,
   /**
    * 标题
    */
@@ -120,7 +112,6 @@ Confirm.propTypes = {
 Confirm.defaultProps = {
   style: null,
   contentStyle: null,
-  titleNumberOfLines: 2,
   titleStyle: null,
   subTitle: '',
   subTitleStyle: null,

@@ -8,9 +8,9 @@ exports[`List Component basic render 1`] = `
         "alignItems": "center",
         "alignSelf": "center",
         "backgroundColor": "#fff",
-        "borderRadius": 16,
+        "borderRadius": 32,
         "justifyContent": "center",
-        "width": 630,
+        "width": 622,
       },
       null,
     ]
@@ -23,10 +23,10 @@ exports[`List Component basic render 1`] = `
           "alignItems": "center",
           "alignSelf": "stretch",
           "justifyContent": "center",
-          "paddingBottom": 32,
-          "paddingLeft": 32,
-          "paddingRight": 32,
-          "paddingTop": 32,
+          "paddingBottom": 72,
+          "paddingLeft": 64,
+          "paddingRight": 64,
+          "paddingTop": 72,
         },
         Array [
           Object {
@@ -46,18 +46,19 @@ exports[`List Component basic render 1`] = `
       color={null}
       ellipsizeMode="tail"
       numberOfLines={2}
-      size={18}
+      size={17}
       style={
         Array [
           Object {
             "backgroundColor": "transparent",
             "color": "#333",
-            "fontSize": 18,
+            "fontSize": 17,
           },
           Array [
             Object {
-              "color": "#333",
-              "fontSize": 18,
+              "color": "rgba(0, 0, 0, 0.9)",
+              "flexWrap": "wrap",
+              "fontSize": 17,
               "fontWeight": "500",
               "textAlign": "center",
             },
@@ -81,22 +82,27 @@ exports[`List Component basic render 1`] = `
       allowFontScaling={false}
       color={null}
       ellipsizeMode="tail"
-      size={16}
+      size={15}
       style={
         Array [
           Object {
             "backgroundColor": "transparent",
             "color": "#333",
-            "fontSize": 16,
+            "fontSize": 15,
           },
           Array [
             Object {
-              "color": "#999",
-              "fontSize": 16,
-              "marginTop": 7,
+              "color": "rgba(0, 0, 0, 0.5)",
+              "flexWrap": "wrap",
+              "fontSize": 15,
               "textAlign": "center",
             },
-            null,
+            Array [
+              Object {
+                "marginTop": 7,
+              },
+              null,
+            ],
           ],
         ]
       }
@@ -169,9 +175,9 @@ exports[`List Component basic render 1`] = `
           Object {
             "alignSelf": "stretch",
             "backgroundColor": "#fff",
-            "borderBottomLeftRadius": 16,
-            "borderBottomRightRadius": 16,
-            "borderTopColor": "#e5e5e5",
+            "borderBottomLeftRadius": 32,
+            "borderBottomRightRadius": 32,
+            "borderTopColor": "rgba(0, 0, 0, 0.1)",
             "borderTopWidth": 0.5,
             "marginTop": 32,
           },
