@@ -32,6 +32,11 @@ export default class RotationView extends Component {
      * 是否使用原生动画驱动, 一般在安卓低端机上会比较有用
      */
     useNativeDriver: PropTypes.bool,
+    /**
+     * 此动画是否在“ InteractionManager”上创建“交互手柄”
+     * @version 4.0.1
+     */
+    isInteraction: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -39,6 +44,7 @@ export default class RotationView extends Component {
     duration: 5000,
     active: true,
     useNativeDriver: false,
+    isInteraction: true,
   };
 
   constructor(props) {
@@ -92,6 +98,7 @@ export default class RotationView extends Component {
       duration: this.props.duration * (1 - this.rotateV),
       easing: Easing.linear,
       useNativeDriver: this.props.useNativeDriver,
+      isInteraction: this.props.isInteraction,
     }).start(() => {
       this.startAnimation();
     });
