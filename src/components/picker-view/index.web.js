@@ -38,8 +38,13 @@ export class PickerView extends PureComponent {
     const { loop, onValueChange } = this.props;
     if (loop) {
       const [loopIdx, selectedValue] = value.split('-');
-      this.setState({ loopIdx, selectedValue });
-      onValueChange && onValueChange(selectedValue, idx);
+      const originSelectedValue =
+        typeof this.state.selectedValue === 'number' ? selectedValue * 1 : selectedValue;
+      this.setState({
+        loopIdx,
+        selectedValue: originSelectedValue,
+      });
+      onValueChange && onValueChange(originSelectedValue, idx);
     } else {
       const selectedValue = value;
       this.setState({ selectedValue });
