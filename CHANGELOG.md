@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file. See [standa
 ### Bug Fixes
 
 - **Popup:** 修复 Popup.countdown 在安卓 RN 0.59 全功能升级下出现横线间断的问题 ([#22](https://github.com/tuya/tuya-panel-kit/issues/22)) ([51b8f8d](https://github.com/tuya/tuya-panel-kit/commit/51b8f8d757849514efc8a40aab432f90e465515d))
+- **Dialog** && **Popup**: 修复同时操作多个弹框，内容消失弹框不消失 [#24](https://github.com/tuya/tuya-panel-kit/issues/24)
 
 ## [4.1.0](https://github.com/tuya/tuya-panel-kit/compare/v4.0.0...v4.1.0) (2020-12-29)
 
