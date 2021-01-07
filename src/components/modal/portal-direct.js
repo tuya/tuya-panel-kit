@@ -22,6 +22,7 @@ class Portal {
   };
 
   hide = () => {
+    this.uuid = `portal-direct-${uuid--}`;
     TYEvent.emit('showPortal', { uuid: this.uuid, show: false });
     TYEvent.emit('removePortal', this.uuid);
   };
