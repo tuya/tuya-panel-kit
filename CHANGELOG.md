@@ -1,6 +1,16 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [4.1.0](https://github.com/tuya/tuya-panel-kit/compare/v4.0.0...v4.1.0) (2020-12-29)
+
+### Features
+
+- **RotationView:** 增加 isInteraction 属性不阻塞 InteractionManager 任务队列, fixes [#20](https://github.com/tuya/tuya-panel-kit/issues/20) ([#21](https://github.com/tuya/tuya-panel-kit/issues/21)) ([83d58e1](https://github.com/tuya/tuya-panel-kit/commit/83d58e124cc186faf572c0f3d4443ef553eaa750))
+
+### Bug Fixes
+
+- **Picker:** add type transfer for selectedValue ([f17010e](https://github.com/tuya/tuya-panel-kit/commit/f17010e2161c27d3245353745c7d864ccced0c58)), closes [#17](https://github.com/tuya/tuya-panel-kit/issues/17)
 
 # [4.0.0](https://github.com/tuya/tuya-panel-kit/compare/v4.0.0-rc.1...v4.0.0) (2020-12-25)
 
