@@ -276,7 +276,7 @@ class CountdownPopup extends React.Component {
             >
               <StyledOverview
                 style={{
-                  flex: 1.1,
+                  flex: isIos ? 1.1 : 1.4,
                   height: 240,
                 }}
               >
@@ -318,13 +318,12 @@ class CountdownPopup extends React.Component {
                   style={StyleSheet.flatten([
                     isIos
                       ? {
-                        width: width * (8 / 10),
-                        marginLeft: -(width * 3) / 10,
-                      }
+                          width: width * (8 / 10),
+                          marginLeft: -(width * 3) / 10,
+                        }
                       : {
-                        width: width * (7 / 10),
-                        marginLeft: 20,
-                      },
+                          width: width * (7 / 10),
+                        },
                     minutePickerStyle,
                   ])}
                 >
