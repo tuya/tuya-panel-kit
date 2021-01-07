@@ -244,6 +244,37 @@ export default class DialogScene extends Component {
         title: 'Dialog.close(for test)',
         onPress: Dialog.close,
       },
+      {
+        key: 'Dialog.withMultipleDialog',
+        title: 'Dialog.withMultipleDialog',
+        onPress: () => {
+          Dialog.alert(
+            {
+              title: '这是第一个弹框标题',
+              subTitle: '这是第一个弹框副标题',
+              confirmText: '确认',
+              onConfirm: (data, { close }) => {
+                close();
+              },
+            },
+            {
+              onShow: () => console.log('onShow'),
+              onHide: () => console.log('onHide'),
+            }
+          );
+
+          Dialog.confirm({
+            titleNumberOfLines: 1,
+            title: '这是第二个弹框标题',
+            subTitle: '这是第二个弹框副标题',
+            cancelText: '取消',
+            confirmText: '确认',
+            onConfirm: (data, { close }) => {
+              close();
+            },
+          });
+        },
+      },
     ];
   }
 
