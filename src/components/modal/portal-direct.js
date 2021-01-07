@@ -5,12 +5,13 @@ const TYEvent = TYSdk.event;
 let uuid = 0;
 class Portal {
   constructor() {
-    uuid += 1;
     this.uuid = `portal-direct-${uuid}`;
   }
 
   show = (ele, props) => {
     const userProps = Object.assign({}, { onMaskPress: this.hide }, props);
+    uuid += 1;
+    this.uuid = `portal-direct-${uuid}`;
     TYEvent.emit('registerPortal', {
       node: ele,
       uuid: this.uuid,
