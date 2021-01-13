@@ -1,0 +1,18 @@
+name: wechat-work-bot
+on:
+  issues:
+    types: [opened, edited, milestoned]
+jobs:
+  send-msg:
+    runs-on: ubuntu-latest
+    steps:
+      - name: WeChat Work notification by markdown
+        uses: chf007/action-wechat-work@master
+        env:
+          WECHAT_WORK_BOT_WEBHOOK: ${{secrets.WECHAT_WORK_BOT_WEBHOOK}}
+        with:
+          msgtype: markdown
+          content: "⏰ 今天 [${{github.repository}}](https://github.com/${{github.repository}}) <font color=\"warning\"> 还有未处理的客户问题哦，请及时处理</font>🚗 🚗 🚗 \n
+          > 问题编号: [<font color=\"info\">${{github.event.issue.number}}</font>](${{github.event.issues.url}}) \n
+          > 问题标题: <font color=\"info\">${{github.event.issue.title}}</font> \n"
+          mentioned_list: '["@all"]'
