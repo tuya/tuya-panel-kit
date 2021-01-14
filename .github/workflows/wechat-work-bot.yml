@@ -1,18 +1,32 @@
 name: wechat-work-bot
 on:
   issues:
-    types: [opened, edited, milestoned]
+    types: [opened, edited, milestoned, reopened]
+  pull_request:
+    branches:
+      - main
+    types: [assigned, opened, synchronize, reopened]
 jobs:
   send-msg:
     runs-on: ubuntu-latest
+    env:
+      WECHAT_WORK_BOT_WEBHOOK: ${{secrets.WECHAT_WORK_BOT_WEBHOOK}}
     steps:
-      - name: WeChat Work notification by markdown
+      - name: WeChat Work notification by markdown on issues event
+        if: github.event_name == 'issues'
         uses: chf007/action-wechat-work@master
-        env:
-          WECHAT_WORK_BOT_WEBHOOK: ${{secrets.WECHAT_WORK_BOT_WEBHOOK}}
         with:
           msgtype: markdown
           content: "⏰ 今天 [${{github.repository}}](https://github.com/${{github.repository}}) <font color=\"warning\"> 还有未处理的客户问题哦，请及时处理</font>🚗 🚗 🚗 \n
-          > 问题编号: [<font color=\"info\">${{github.event.issue.number}}</font>](${{github.event.issues.url}}) \n
+          > 问题编号: [<font color=\"info\">${{github.event.issue.number}}</font>](${{github.event.issue.html_url}}) \n
           > 问题标题: <font color=\"info\">${{github.event.issue.title}}</font> \n"
+          mentioned_list: '["@all"]'
+      - name: WeChat Work notification by markdown on pull_request event
+        if: github.event_name == 'pull_request'
+        uses: chf007/action-wechat-work@master
+        with:
+          msgtype: markdown
+          content: "⏰ 今天 [${{github.repository}}](https://github.com/${{github.repository}}) <font color=\"warning\"> 还有未处理的 pr 哦，请及时处理</font>🚗 🚗 🚗 \n
+            > pr 编号: [<font color=\"info\">${{github.event.pull_request.number}}</font>](${{github.event.pull_request.html_url}}) \n
+            > pr 标题: <font color=\"comment\">${{github.event.pull_request.title}}</font>"
           mentioned_list: '["@all"]'
