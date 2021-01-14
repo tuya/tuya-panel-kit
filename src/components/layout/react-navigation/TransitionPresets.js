@@ -43,8 +43,8 @@ const SlideFromRightWithMargin = {
     const translateUnfocused = next
       ? multiply(
           next.progress.interpolate({
-            inputRange: [0, 1],
-            outputRange: [0, screen.width * -1],
+            inputRange: [0, 0.98, 1],
+            outputRange: [0, screen.width * -0.3, screen.width * -1],
             extrapolate: 'clamp',
           }),
           inverted
