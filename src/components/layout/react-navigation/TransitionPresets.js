@@ -7,7 +7,7 @@ import {
 
 const { add, multiply } = Animated;
 
-export const SlideFromRightWithMargin = {
+const SlideFromRightWithMargin = {
   gestureDirection: 'horizontal',
   transitionSpec: {
     open: TransitionSpecs.TransitionIOSSpec,
@@ -74,7 +74,7 @@ export const SlideFromRightWithMargin = {
   headerStyleInterpolator: HeaderStyleInterpolators.forFade,
 };
 
-export const TransitionPresets = {
+export default {
   ...originTransitionPresets,
   SlideFromRightWithMargin,
 };
