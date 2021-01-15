@@ -27,14 +27,13 @@ exports[`Toast.Error Component basic render 1`] = `
       Object {
         "alignItems": "center",
         "backgroundColor": "rgba(0,0,0,.7)",
-        "borderRadius": 16,
+        "borderRadius": 24,
         "justifyContent": "center",
         "marginBottom": 64,
-        "maxWidth": 244,
-        "minWidth": 240,
+        "marginHorizontal": 132,
         "opacity": 0,
         "paddingHorizontal": 36,
-        "paddingVertical": 54,
+        "paddingVertical": 36,
       }
     }
   >
@@ -45,16 +44,11 @@ exports[`Toast.Error Component basic render 1`] = `
             "flexDirection": "row",
           },
           Object {
-            "height": 80,
-            "width": 80,
+            "height": 84,
+            "width": 84,
           },
           false,
-          Array [
-            Object {
-              "marginBottom": 16,
-            },
-            null,
-          ],
+          null,
         ]
       }
     >
@@ -72,8 +66,8 @@ exports[`Toast.Error Component basic render 1`] = `
             false,
             Object {
               "flex": 0,
-              "height": 80,
-              "width": 80,
+              "height": 84,
+              "width": 84,
             },
           ]
         }
@@ -140,7 +134,11 @@ exports[`Toast.Error Component basic render 1`] = `
             "color": "#FFFFFF",
             "flexWrap": "wrap",
             "fontSize": 14,
+            "lineHeight": 20,
             "textAlign": "center",
+          },
+          Object {
+            "marginTop": 12,
           },
           null,
         ]

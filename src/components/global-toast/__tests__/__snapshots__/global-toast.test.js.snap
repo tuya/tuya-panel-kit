@@ -27,14 +27,13 @@ exports[`GlobalToast basic render 1`] = `
       Object {
         "alignItems": "center",
         "backgroundColor": "rgba(0,0,0,.7)",
-        "borderRadius": 16,
-        "height": 240,
+        "borderRadius": 24,
         "justifyContent": "center",
         "marginBottom": 64,
+        "marginHorizontal": 44,
         "opacity": 0,
-        "paddingHorizontal": 24,
-        "paddingVertical": 54,
-        "width": 240,
+        "paddingHorizontal": 36,
+        "paddingVertical": 36,
       }
     }
   >
@@ -49,12 +48,7 @@ exports[`GlobalToast basic render 1`] = `
             "width": 80,
           },
           false,
-          Array [
-            Object {
-              "marginBottom": 16,
-            },
-            null,
-          ],
+          null,
         ]
       }
     >
@@ -140,7 +134,11 @@ exports[`GlobalToast basic render 1`] = `
             "color": "#FFFFFF",
             "flexWrap": "wrap",
             "fontSize": 14,
+            "lineHeight": 20,
             "textAlign": "center",
+          },
+          Object {
+            "marginTop": 12,
           },
           null,
         ]
