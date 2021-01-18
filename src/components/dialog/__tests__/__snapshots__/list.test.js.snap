@@ -10,6 +10,7 @@ exports[`List Component basic render 1`] = `
         "backgroundColor": "#fff",
         "borderRadius": 32,
         "justifyContent": "center",
+        "overflow": "hidden",
         "width": 622,
       },
       null,

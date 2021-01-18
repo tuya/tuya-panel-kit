@@ -22,6 +22,7 @@ const {
   confirmFontSize,
   confirmFontColor,
   prompt,
+  pressColor,
 } = dialog;
 
 /**
@@ -33,6 +34,7 @@ export const StyledContainer = styled(View)`
   align-items: center;
   justify-content: center;
   border-radius: ${radius};
+  overflow: hidden;
   background-color: ${bgColor};
 `;
 
@@ -75,7 +77,7 @@ export const StyledSubTitle = styled(TYText)`
   flex-wrap: wrap;
 `;
 
-export const StyledButton = styled(TouchableOpacity).attrs({
+export const StyledConfirmButton = styled(TouchableOpacity).attrs({
   activeOpacity: 0.8,
 })`
   flex: 1;
@@ -83,6 +85,18 @@ export const StyledButton = styled(TouchableOpacity).attrs({
   justify-content: center;
   border-right-width: ${props => (props.bordered ? StyleSheet.hairlineWidth : 0)};
   border-right-color: ${lineColor};
+  background-color: ${props => (props.pressActive ? pressColor : bgColor)};
+`;
+
+export const StyledCancelButton = styled(TouchableOpacity).attrs({
+  activeOpacity: 0.8,
+})`
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  border-right-width: ${props => (props.bordered ? StyleSheet.hairlineWidth : 0)};
+  border-right-color: ${lineColor};
+  background-color: ${props => (props.pressActive ? pressColor : bgColor)};
 `;
 
 export const StyledCancelText = styled(TYText)`

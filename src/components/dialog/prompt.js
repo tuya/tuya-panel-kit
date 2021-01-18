@@ -53,10 +53,6 @@ class Prompt extends Component {
      */
     footerWrapperStyle: ViewPropTypes.style,
     /**
-     * 内容文字
-     */
-    textContentType: PropTypes.string,
-    /**
      * 取消文案
      */
     cancelText: PropTypes.string.isRequired,
@@ -103,7 +99,6 @@ class Prompt extends Component {
     cancelAccessibilityLabel: 'Dialog.Cancel',
     confirmTextStyle: null,
     confirmAccessibilityLabel: 'Dialog.Confirm',
-    textContentType: '',
     onCancel: null,
     onConfirm: null,
   };
