@@ -10,7 +10,7 @@ import { TYSdk } from '../../TYNativeApi';
 
 const TYEvent = TYSdk.event;
 
-const { convertX: cx, convertY: cy } = RatioUtils;
+const { convertX: cx } = RatioUtils;
 
 class GlobalToast extends React.PureComponent {
   static propTypes = {
@@ -51,7 +51,7 @@ class GlobalToast extends React.PureComponent {
 
   static defaultProps = {
     text: '成功文案',
-    size: cx(40),
+    size: cx(42),
     d: iconfont.correct,
     iconfontStyle: null,
     contentStyle: {},
