@@ -3,8 +3,6 @@ on:
   issues:
     types: [opened, edited, milestoned, reopened]
   pull_request:
-    branches:
-      - master
     types: [assigned, opened, synchronize, reopened]
 jobs:
   send-msg:
