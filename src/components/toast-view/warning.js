@@ -43,7 +43,7 @@ class Warning extends React.PureComponent {
 
   static defaultProps = {
     text: 'warningText',
-    size: cx(40),
+    size: cx(42),
     d: iconfont.warning,
     iconfontStyle: null,
     contentStyle: null,
@@ -72,13 +72,7 @@ class Warning extends React.PureComponent {
         showPosition={showPosition}
         contentStyle={[styles.contentStyle, contentStyle]}
       >
-        <IconFont
-          {...iconProps}
-          d={d}
-          size={size}
-          color={color}
-          style={[{ marginBottom: cy(8) }, iconfontStyle]}
-        />
+        <IconFont {...iconProps} d={d} size={size} color={color} style={iconfontStyle} />
       </Toast>
     );
   }
@@ -87,11 +81,10 @@ export default Warning;
 
 const styles = StyleSheet.create({
   contentStyle: {
-    paddingVertical: cy(27),
+    paddingVertical: cx(18),
     paddingHorizontal: cx(18),
     backgroundColor: 'rgba(0,0,0,.7)',
-    borderRadius: cx(8),
-    maxWidth: cx(122),
-    minWidth: cx(120),
+    borderRadius: cx(12),
+    marginHorizontal: cx(66),
   },
 });
