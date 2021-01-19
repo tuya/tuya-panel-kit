@@ -27,14 +27,13 @@ exports[`Toast.Error Component basic render 1`] = `
       Object {
         "alignItems": "center",
         "backgroundColor": "rgba(0,0,0,.7)",
-        "borderRadius": 16,
+        "borderRadius": 24,
         "justifyContent": "center",
         "marginBottom": 64,
-        "maxWidth": 244,
-        "minWidth": 240,
+        "marginHorizontal": 132,
         "opacity": 0,
         "paddingHorizontal": 36,
-        "paddingVertical": 54,
+        "paddingVertical": 36,
       }
     }
   >
@@ -45,16 +44,11 @@ exports[`Toast.Error Component basic render 1`] = `
             "flexDirection": "row",
           },
           Object {
-            "height": 80,
-            "width": 80,
+            "height": 84,
+            "width": 84,
           },
           false,
-          Array [
-            Object {
-              "marginBottom": 16,
-            },
-            null,
-          ],
+          null,
         ]
       }
     >
@@ -72,8 +66,8 @@ exports[`Toast.Error Component basic render 1`] = `
             false,
             Object {
               "flex": 0,
-              "height": 80,
-              "width": 80,
+              "height": 84,
+              "width": 84,
             },
           ]
         }
@@ -81,7 +75,7 @@ exports[`Toast.Error Component basic render 1`] = `
         vbWidth={1024}
       >
         <RNSVGPath
-          d="M512 0c282.7776 0 512 229.2224 512 512s-229.2224 512-512 512S0 794.7776 0 512 229.2224 0 512 0z m0 51.2C257.5104 51.2 51.2 257.5104 51.2 512s206.3104 460.8 460.8 460.8 460.8-206.3104 460.8-460.8S766.4896 51.2 512 51.2z m0 614.4a51.2 51.2 0 1 1 0 102.4 51.2 51.2 0 0 1 0-102.4z m0-409.6a51.2 51.2 0 0 1 51.2 51.2v256a51.2 51.2 0 1 1-102.4 0V307.2a51.2 51.2 0 0 1 51.2-51.2z"
+          d="M512 0c282.770286 0 512 229.229714 512 512s-229.229714 512-512 512S0 794.770286 0 512 229.229714 0 512 0z m0 48.761905C256.170667 48.761905 48.761905 256.170667 48.761905 512s207.408762 463.238095 463.238095 463.238095 463.238095-207.408762 463.238095-463.238095S767.829333 48.761905 512 48.761905z m0 585.142857a24.380952 24.380952 0 1 1 0 48.761905 24.380952 24.380952 0 0 1 0-48.761905z m0-292.571429a24.380952 24.380952 0 0 1 24.380952 24.380953v170.666666a24.380952 24.380952 0 0 1-48.761904 0v-170.666666a24.380952 24.380952 0 0 1 24.380952-24.380953z"
           fill={
             Array [
               0,
@@ -140,7 +134,11 @@ exports[`Toast.Error Component basic render 1`] = `
             "color": "#FFFFFF",
             "flexWrap": "wrap",
             "fontSize": 14,
+            "lineHeight": 20,
             "textAlign": "center",
+          },
+          Object {
+            "marginTop": 12,
           },
           null,
         ]

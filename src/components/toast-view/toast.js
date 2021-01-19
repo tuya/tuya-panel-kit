@@ -145,6 +145,7 @@ class ToastView extends React.PureComponent {
     } else if (showPosition === 'center') {
       position = { justifyContent: 'center' };
     }
+    const isValidElement = React.isValidElement(children);
     return (
       <View
         style={[Platform.OS === 'web' && { width: winWidth }, styles.container, style, position]}
@@ -160,8 +161,12 @@ class ToastView extends React.PureComponent {
           ]}
         >
           {typeof image === 'number' && <Image style={[styles.image, imageStyle]} source={image} />}
-          {children}
-          {text ? <Text style={[styles.text, textStyle]}>{text}</Text> : null}
+          {isValidElement && children}
+          {text ? (
+            <Text style={[styles.text, isValidElement && { marginTop: 12 }, textStyle]}>
+              {text}
+            </Text>
+          ) : null}
         </Animated.View>
       </View>
     );
@@ -182,19 +187,21 @@ const styles = StyleSheet.create({
   textBg: {
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: `rgba(0, 0, 0, 0.6)`,
-    borderRadius: 20,
+    backgroundColor: `rgba(0, 0, 0, 0.7)`,
+    borderRadius: 26,
     marginBottom: 64,
+    marginHorizontal: 44,
     paddingHorizontal: 24,
-    paddingVertical: 10,
+    paddingVertical: 16,
   },
 
   image: {
-    marginBottom: 6,
+    marginBottom: 12,
   },
 
   text: {
     fontSize: 14,
+    lineHeight: 20,
     color: '#FFFFFF',
     textAlign: 'center',
     flexWrap: 'wrap',

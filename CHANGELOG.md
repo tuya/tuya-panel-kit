@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.2.1](https://github.com/tuya/tuya-panel-kit/compare/v4.2.0...v4.2.1) (2021-01-19)
+
+### Bug Fixes
+
+- TransitionPresets export error ([#27](https://github.com/tuya/tuya-panel-kit/issues/27)) ([f24ff58](https://github.com/tuya/tuya-panel-kit/commit/f24ff584fae1bf670ff3500e999d45fcf5500b1e))
+
 # [4.2.0](https://github.com/tuya/tuya-panel-kit/compare/v4.1.0...v4.2.0) (2021-01-07)
 
 ### Bug Fixes

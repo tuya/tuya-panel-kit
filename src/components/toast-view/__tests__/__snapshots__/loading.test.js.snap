@@ -31,6 +31,7 @@ exports[`Toast.Error Component basic render 1`] = `
         "height": 240,
         "justifyContent": "center",
         "marginBottom": 64,
+        "marginHorizontal": 44,
         "opacity": 0,
         "paddingHorizontal": 24,
         "paddingVertical": 54,

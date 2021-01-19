@@ -26,13 +26,14 @@ exports[`ToastView Component basic render 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "rgba(0, 0, 0, 0.6)",
-        "borderRadius": 20,
+        "backgroundColor": "rgba(0, 0, 0, 0.7)",
+        "borderRadius": 26,
         "justifyContent": "center",
         "marginBottom": 64,
+        "marginHorizontal": 44,
         "opacity": 0,
         "paddingHorizontal": 24,
-        "paddingVertical": 10,
+        "paddingVertical": 16,
       }
     }
   >
@@ -46,8 +47,10 @@ exports[`ToastView Component basic render 1`] = `
             "color": "#FFFFFF",
             "flexWrap": "wrap",
             "fontSize": 14,
+            "lineHeight": 20,
             "textAlign": "center",
           },
+          false,
           null,
         ]
       }
@@ -84,13 +87,14 @@ exports[`ToastView Component should render invisible 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "rgba(0, 0, 0, 0.6)",
-        "borderRadius": 20,
+        "backgroundColor": "rgba(0, 0, 0, 0.7)",
+        "borderRadius": 26,
         "justifyContent": "center",
         "marginBottom": 64,
+        "marginHorizontal": 44,
         "opacity": 0,
         "paddingHorizontal": 24,
-        "paddingVertical": 10,
+        "paddingVertical": 16,
       }
     }
   />
@@ -123,13 +127,14 @@ exports[`ToastView Component should render position right 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "rgba(0, 0, 0, 0.6)",
-        "borderRadius": 20,
+        "backgroundColor": "rgba(0, 0, 0, 0.7)",
+        "borderRadius": 26,
         "justifyContent": "center",
         "marginBottom": 64,
+        "marginHorizontal": 44,
         "opacity": 0,
         "paddingHorizontal": 24,
-        "paddingVertical": 10,
+        "paddingVertical": 16,
       }
     }
   >
@@ -143,8 +148,10 @@ exports[`ToastView Component should render position right 1`] = `
             "color": "#FFFFFF",
             "flexWrap": "wrap",
             "fontSize": 14,
+            "lineHeight": 20,
             "textAlign": "center",
           },
+          false,
           null,
         ]
       }
@@ -181,13 +188,14 @@ exports[`ToastView Component should render position right 2`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "rgba(0, 0, 0, 0.6)",
-        "borderRadius": 20,
+        "backgroundColor": "rgba(0, 0, 0, 0.7)",
+        "borderRadius": 26,
         "justifyContent": "center",
         "marginBottom": 64,
+        "marginHorizontal": 44,
         "opacity": 0,
         "paddingHorizontal": 24,
-        "paddingVertical": 10,
+        "paddingVertical": 16,
       }
     }
   >
@@ -201,8 +209,10 @@ exports[`ToastView Component should render position right 2`] = `
             "color": "#FFFFFF",
             "flexWrap": "wrap",
             "fontSize": 14,
+            "lineHeight": 20,
             "textAlign": "center",
           },
+          false,
           null,
         ]
       }
@@ -239,13 +249,14 @@ exports[`ToastView Component should render position right 3`] = `
     style={
       Object {
         "alignItems": "center",
-        "backgroundColor": "rgba(0, 0, 0, 0.6)",
-        "borderRadius": 20,
+        "backgroundColor": "rgba(0, 0, 0, 0.7)",
+        "borderRadius": 26,
         "justifyContent": "center",
         "marginBottom": 64,
+        "marginHorizontal": 44,
         "opacity": 0,
         "paddingHorizontal": 24,
-        "paddingVertical": 10,
+        "paddingVertical": 16,
       }
     }
   >
@@ -259,8 +270,10 @@ exports[`ToastView Component should render position right 3`] = `
             "color": "#FFFFFF",
             "flexWrap": "wrap",
             "fontSize": 14,
+            "lineHeight": 20,
             "textAlign": "center",
           },
+          false,
           null,
         ]
       }
