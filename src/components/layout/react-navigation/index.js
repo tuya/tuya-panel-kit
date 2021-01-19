@@ -13,7 +13,7 @@ import {
 import { NavigationContainer, useNavigation, useNavigationState } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import 'react-native-gesture-handler';
-import { TransitionPresets } from './TransitionPresets';
+import TransitionPresets from './TransitionPresets';
 import { TYSdk } from '../../../TYNativeApi';
 
 import MaskView from '../../modal/portalOut';
@@ -81,6 +81,10 @@ const Stack = createStackNavigator();
 
 export default function createNavigator({ router, screenOptions }) {
   const defaultScreenOptions = {
+    cardOverlay: () => {
+      return <View style={{ flex: 1, backgroundColor: 'rgba(0,0,0,0.3)' }} />;
+    },
+    cardOverlayEnabled: true,
     ...TransitionPresets.SlideFromRightIOS,
   };
 
