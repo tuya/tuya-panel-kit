@@ -7,7 +7,7 @@ import {
 
 const { add, multiply } = Animated;
 
-export const SlideFromRightWithMargin = {
+const SlideFromRightWithMargin = {
   gestureDirection: 'horizontal',
   transitionSpec: {
     open: TransitionSpecs.TransitionIOSSpec,
@@ -40,17 +40,6 @@ export const SlideFromRightWithMargin = {
         : 0
     );
 
-    const translateUnfocused = next
-      ? multiply(
-          next.progress.interpolate({
-            inputRange: [0, 1],
-            outputRange: [0, screen.width * -1],
-            extrapolate: 'clamp',
-          }),
-          inverted
-        )
-      : 0;
-
     const overlayOpacity = progress.interpolate({
       inputRange: [0, 1, 1.0001, 2],
       outputRange: [0, 0.3, 1, 1],
@@ -66,7 +55,7 @@ export const SlideFromRightWithMargin = {
         borderTopRightRadius: 10,
         marginTop: statusBarHeight + topOffset,
         marginBottom: topOffset,
-        transform: [{ translateX: translateFocused }, { translateX: translateUnfocused }],
+        transform: [{ translateX: translateFocused }],
       },
       overlayStyle: { opacity: overlayOpacity },
     };
@@ -74,7 +63,7 @@ export const SlideFromRightWithMargin = {
   headerStyleInterpolator: HeaderStyleInterpolators.forFade,
 };
 
-export const TransitionPresets = {
+export default {
   ...originTransitionPresets,
   SlideFromRightWithMargin,
 };
