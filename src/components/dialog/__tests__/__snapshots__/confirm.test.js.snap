@@ -39,10 +39,10 @@ exports[`Confirm Component basic render 1`] = `
             "alignItems": "center",
             "alignSelf": "stretch",
             "justifyContent": "center",
-            "paddingBottom": 72,
+            "paddingBottom": 64,
             "paddingLeft": 64,
             "paddingRight": 64,
-            "paddingTop": 72,
+            "paddingTop": 64,
           },
           null,
         ]

@@ -172,7 +172,7 @@ class Prompt extends Component {
       <StyledContainer style={style}>
         <StyledContent
           style={[
-            { paddingLeft: 16, paddingRight: 16, paddingTop: 28, paddingBottom: 24 },
+            { paddingLeft: 16, paddingRight: 16, paddingTop: 24, paddingBottom: 24 },
             contentStyle,
           ]}
         >

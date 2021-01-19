@@ -48,7 +48,7 @@ export const StyledHeader = styled(View)`
 `;
 
 export const StyledContent = styled(View)`
-  padding: ${`${cx(36)}px ${cx(32)}px`};
+  padding: ${`${cx(32)}px ${cx(32)}px`};
   align-self: stretch;
   align-items: center;
   justify-content: center;

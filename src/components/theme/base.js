@@ -314,7 +314,7 @@ const dialog = {
    */
   dark: {
     width: cx(311), // 弹窗容器宽度
-    bg: '#191919', // 弹窗背景色
+    bg: '#1a1a1a', // 弹窗背景色
     radius: cx(16), // 弹窗容器圆角
     cellHeight: 55, // 列表高度（头部、底部）
     lineColor: 'rgba(255, 255, 255, 0.1)', // 分隔线颜色
