@@ -4,3 +4,5 @@ src/TYNativeApi.js
 lib
 *.d.ts
 example
+TYNativeApi.web/
+TYNativeApi.web.js
