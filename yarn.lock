@@ -1518,7 +1518,7 @@ arrify@^1.0.1:
   resolved "https://registry.npm.taobao.org/arrify/download/arrify-1.0.1.tgz#898508da2226f380df904728456849c1501a4b0d"
   integrity sha1-iYUI2iIm84DfkEcoRWhJwVAaSw0=
 
-art@^0.10.0:
+art@^0.10.0, art@^0.10.1:
   version "0.10.3"
   resolved "https://registry.npm.taobao.org/art/download/art-0.10.3.tgz#b01d84a968ccce6208df55a733838c96caeeaea2"
   integrity sha1-sB2EqWjMzmII31WnM4OMlsrurqI=
@@ -8420,6 +8420,17 @@ react-addons-shallow-compare@^15.6.2:
     fbjs "^0.8.4"
     object-assign "^4.1.0"
 
+react-art@^17.0.1:
+  version "17.0.1"
+  resolved "https://registry.npm.taobao.org/react-art/download/react-art-17.0.1.tgz#3e5f812f241426891be886ea6595a15e439e1ffe"
+  integrity sha1-Pl+BLyQUJokb6IbqZZWhXkOeH/4=
+  dependencies:
+    art "^0.10.1"
+    create-react-class "^15.6.2"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    scheduler "^0.20.1"
+
 react-clone-referenced-element@^1.0.1:
   version "1.1.0"
   resolved "https://registry.npm.taobao.org/react-clone-referenced-element/download/react-clone-referenced-element-1.1.0.tgz#9cdda7f2aeb54fea791f3ab8c6ab96c7a77d0158"
@@ -9282,6 +9293,14 @@ scheduler@^0.19.1:
   version "0.19.1"
   resolved "https://registry.npm.taobao.org/scheduler/download/scheduler-0.19.1.tgz?cache=0&sync_timestamp=1603367635514&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fscheduler%2Fdownload%2Fscheduler-0.19.1.tgz#4f3e2ed2c1a7d65681f4c854fa8c5a1ccb40f196"
   integrity sha1-Tz4u0sGn1laB9MhU+oxaHMtA8ZY=
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+
+scheduler@^0.20.1:
+  version "0.20.1"
+  resolved "https://registry.npm.taobao.org/scheduler/download/scheduler-0.20.1.tgz?cache=0&sync_timestamp=1610380753450&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fscheduler%2Fdownload%2Fscheduler-0.20.1.tgz#da0b907e24026b01181ecbc75efdc7f27b5a000c"
+  integrity sha1-2guQfiQCawEYHsvHXv3H8ntaAAw=
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"

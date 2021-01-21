@@ -1,8 +1,9 @@
 /* eslint-disable no-plusplus */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyleSheet, ART, Platform, View, AppState, ScrollView } from 'react-native';
+import { StyleSheet, Platform, View, AppState, ScrollView } from 'react-native';
 import DefaultSvgs from 'tuya-panel-kit/src/components/iconfont/art/defaultSvg';
+import ART from 'react-art';
 
 const ReactNativeVersion = {
   major: 0,
