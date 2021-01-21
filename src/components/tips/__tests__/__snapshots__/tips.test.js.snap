@@ -1,0 +1,355 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tips Component cornerPosition render = topCenter 1`] = `[Function]`;
+
+exports[`Tips Component cornerPosition render = topLeft 1`] = `[Function]`;
+
+exports[`Tips Component cornerPosition render = topLeft 2`] = `[Function]`;
+
+exports[`Tips Component cornerPosition render = topLeft 3`] = `[Function]`;
+
+exports[`Tips Component cornerPosition render = topLeft 4`] = `[Function]`;
+
+exports[`Tips Component cornerPosition render = topLeft 5`] = `[Function]`;
+
+exports[`Tips Component cornerPosition render = topRight 1`] = `[Function]`;
+
+exports[`Tips Component cornerPosition render = topRight 2`] = `[Function]`;
+
+exports[`Tips Component cornerPosition render = topRight 3`] = `[Function]`;
+
+exports[`Tips Component cornerPosition render = topRight 4`] = `[Function]`;
+
+exports[`Tips Component cornerPosition render = topRight 5`] = `[Function]`;
+
+exports[`Tips Component cornerPosition render: bottomCenter 1`] = `[Function]`;
+
+exports[`Tips Component cornerPosition render: bottomRight 1`] = `[Function]`;
+
+exports[`Tips Component cornerPosition render: bottomRight 2`] = `[Function]`;
+
+exports[`Tips Component cornerPosition render: bottomRight 3`] = `[Function]`;
+
+exports[`Tips Component cornerPosition render: bottomRight 4`] = `[Function]`;
+
+exports[`Tips Component cornerPosition render: bottomRight 5`] = `[Function]`;
+
+exports[`Tips Component render width update 1`] = `
+<View
+  renderToHardwareTextureAndroid={false}
+  style={
+    Object {
+      "alignItems": "center",
+      "justifyContent": "center",
+      "opacity": 0,
+      "transform": Array [
+        Object {
+          "scale": 0,
+        },
+      ],
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "borderRadius": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "height": 64,
+            "width": 64,
+          },
+          false,
+          Object {
+            "alignSelf": "center",
+          },
+        ]
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+            false,
+            Object {
+              "flex": 0,
+              "height": 64,
+              "width": 64,
+            },
+          ]
+        }
+        vbHeight={1024}
+        vbWidth={1024}
+      >
+        <RNSVGPath
+          d="M1023.977245 1023.948801c-37.318282 0-74.60812 0.170663-111.926402-0.22755-35.696985-0.398213-75.660541-0.96709-110.418879-14.108131-37.545832-14.221906-62.377281-39.110242-87.379392-68.378925-18.004933-21.048421-53.360592-65.961201-70.597542-87.635386-14.079687-17.777383-41.670185-52.905491-56.745406-69.943335C567.966045 762.294171 544.528344 739.539121 511.988622 739.539121c-32.568165 0-55.977423 22.75505-74.921001 44.08791-15.075221 17.0094-42.665719 52.165952-56.77385 69.943334-17.180063 21.674185-52.535721 66.586965-70.540654 87.635386-25.058999 29.297127-49.862003 54.157019-87.407836 68.378925-34.758339 13.112597-74.721895 13.709918-110.418879 14.108131-37.318282 0.398213-74.60812 0.22755-111.926402 0.22755h1023.977245z"
+          fill={
+            Array [
+              0,
+              0,
+              0,
+              1,
+              1,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "fill",
+            ]
+          }
+          stroke={
+            Array [
+              0,
+              0,
+              0,
+              1,
+              1,
+            ]
+          }
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={1}
+        />
+      </RNSVGSvgView>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+            "borderRadius": 8,
+            "minWidth": 128,
+            "paddingBottom": 16,
+            "paddingLeft": 32,
+            "paddingRight": 32,
+            "paddingTop": 16,
+          },
+          Array [
+            Object {
+              "borderRadius": 16,
+              "height": 64,
+              "width": 110,
+            },
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#00f",
+              "justifyContent": "center",
+            },
+          ],
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "height": 30,
+            "width": 40,
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Tips Component render width update 2`] = `
+<View
+  renderToHardwareTextureAndroid={true}
+  style={
+    Object {
+      "alignItems": "center",
+      "justifyContent": "center",
+      "opacity": 0,
+      "transform": Array [
+        Object {
+          "scale": 0,
+        },
+      ],
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "borderRadius": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "height": 64,
+            "width": 64,
+          },
+          false,
+          Object {
+            "alignSelf": "center",
+          },
+        ]
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+            false,
+            Object {
+              "flex": 0,
+              "height": 64,
+              "width": 64,
+            },
+          ]
+        }
+        vbHeight={1024}
+        vbWidth={1024}
+      >
+        <RNSVGPath
+          d="M1023.977245 1023.948801c-37.318282 0-74.60812 0.170663-111.926402-0.22755-35.696985-0.398213-75.660541-0.96709-110.418879-14.108131-37.545832-14.221906-62.377281-39.110242-87.379392-68.378925-18.004933-21.048421-53.360592-65.961201-70.597542-87.635386-14.079687-17.777383-41.670185-52.905491-56.745406-69.943335C567.966045 762.294171 544.528344 739.539121 511.988622 739.539121c-32.568165 0-55.977423 22.75505-74.921001 44.08791-15.075221 17.0094-42.665719 52.165952-56.77385 69.943334-17.180063 21.674185-52.535721 66.586965-70.540654 87.635386-25.058999 29.297127-49.862003 54.157019-87.407836 68.378925-34.758339 13.112597-74.721895 13.709918-110.418879 14.108131-37.318282 0.398213-74.60812 0.22755-111.926402 0.22755h1023.977245z"
+          fill={
+            Array [
+              0,
+              0,
+              0,
+              1,
+              1,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "fill",
+            ]
+          }
+          stroke={
+            Array [
+              0,
+              0,
+              0,
+              1,
+              1,
+            ]
+          }
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={1}
+        />
+      </RNSVGSvgView>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+            "borderRadius": 8,
+            "minWidth": 128,
+            "paddingBottom": 16,
+            "paddingLeft": 32,
+            "paddingRight": 32,
+            "paddingTop": 16,
+          },
+          Array [
+            Object {
+              "borderRadius": 16,
+              "height": 64,
+              "width": 110,
+            },
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#00f",
+              "justifyContent": "center",
+            },
+          ],
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "height": 30,
+            "width": 40,
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Tips Component show render = false 1`] = `[Function]`;
+
+exports[`Tips Component showCorner render = false 1`] = `[Function]`;
+
+exports[`Tips Component withModal render = bottomLeft 1`] = `[Function]`;
+
+exports[`Tips Component withModal render = bottomLeft 2`] = `[Function]`;
+
+exports[`Tips Component withModal render = bottomLeft 3`] = `[Function]`;
+
+exports[`Tips Component withModal render = bottomLeft 4`] = `[Function]`;
+
+exports[`Tips Component withModal render = bottomLeft 5`] = `[Function]`;
