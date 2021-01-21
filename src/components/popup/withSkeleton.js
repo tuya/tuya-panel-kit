@@ -12,7 +12,8 @@ import {
   StyledTitleText,
   StyledSwitch,
   StyledFooter,
-  StyledButton,
+  StyledConfirmButton,
+  StyledCancelButton,
   StyledCancelText,
   StyledConfirmText,
   StyledSubTitleText,
@@ -181,6 +182,8 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
         show: withModal ? props.visible : true,
         switchValue: props.switchValue,
         visible: withModal ? props.visible : true,
+        pressConfirmActive: false,
+        pressCancelActive: false,
       };
     }
 
@@ -209,28 +212,16 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
     };
 
     // 针对Popup.list
-    _handleSelect = (value, sValue) => {
-      const { type = 'radio', onSelect } = this.props;
+    _handleSelect = value => {
+      const { onSelect } = this.props;
       if (this.hasMotion) {
-        if (type === 'radio') {
-          typeof onSelect === 'function' &&
-            onSelect(value, {
-              close: this._handleModalClose,
-            });
-        } else if (type === 'switch') {
-          typeof onSelect === 'function' &&
-            onSelect(value, sValue, {
-              close: this._handleModalClose,
-            });
-        }
-      } else if (type === 'radio') {
         typeof onSelect === 'function' &&
           onSelect(value, {
             close: this._handleModalClose,
           });
-      } else if (type === 'switch') {
+      } else {
         typeof onSelect === 'function' &&
-          onSelect(value, sValue, {
+          onSelect(value, {
             close: this._handleModalClose,
           });
       }
@@ -315,6 +306,30 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
       }
     };
 
+    _handlePressIn = isConfirm => {
+      if (isConfirm) {
+        this.setState({
+          pressConfirmActive: true,
+        });
+      } else {
+        this.setState({
+          pressCancelActive: true,
+        });
+      }
+    };
+
+    _handlePressOut = isConfirm => {
+      if (isConfirm) {
+        this.setState({
+          pressConfirmActive: false,
+        });
+      } else {
+        this.setState({
+          pressCancelActive: false,
+        });
+      }
+    };
+
     renderTitle = () => {
       const {
         title,
@@ -370,28 +385,35 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
         confirmTextStyle,
       } = this.props;
       if (footer) return footer;
+      const { pressCancelActive, pressConfirmActive } = this.state;
       const showConfirm = footerType === 'both' || footerType === 'singleConfirm';
       const showCancel = footerType === 'both' || footerType === 'singleCancel';
       return (
         <StyledFooter style={footerWrapperStyle}>
           {showCancel ? (
-            <StyledButton
+            <StyledCancelButton
               accessibilityLabel={`${accessPrefix}_Cancel`}
               bordered={footerType === 'both'}
               onPress={this._handleCancelPress}
+              onPressIn={() => this._handlePressIn(false)}
+              onPressOut={() => this._handlePressOut(false)}
+              pressActive={pressCancelActive}
             >
               <StyledCancelText style={cancelTextStyle} single={footerType === 'singleCancel'}>
                 {cancelText}
               </StyledCancelText>
-            </StyledButton>
+            </StyledCancelButton>
           ) : null}
           {showConfirm ? (
-            <StyledButton
+            <StyledConfirmButton
               accessibilityLabel={`${accessPrefix}_Confirm`}
               onPress={this._handleConfirmPress}
+              onPressIn={() => this._handlePressIn(true)}
+              onPressOut={() => this._handlePressOut(true)}
+              pressActive={pressConfirmActive}
             >
               <StyledConfirmText style={confirmTextStyle}>{confirmText}</StyledConfirmText>
-            </StyledButton>
+            </StyledConfirmButton>
           ) : null}
         </StyledFooter>
       );

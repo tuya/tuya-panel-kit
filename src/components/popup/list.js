@@ -5,13 +5,13 @@ import PropTypes from 'prop-types';
 import TYFlatList from '../TYLists/list';
 import withSkeleton from './withSkeleton';
 import { ThemeUtils } from '../../utils';
-import { StyledIconFont, StyledFlatList, StyledSwitch } from './styled';
+import { StyledIconFont, StyledFlatList, StyledCheckout } from './styled';
 
 const selectedPath =
   'M288.67 521.63l18.69-25.26a5.217 5.217 0 0 1 7.29-1.09c0.02 0.01 0.04 0.03 0.06 0.04l113.01 86.01a5.216 5.216 0 0 0 6.48-0.13l275.9-228.25a5.22 5.22 0 0 1 6.97 0.29l17.32 16.98a5.212 5.212 0 0 1 0.07 7.37l-0.08 0.08-299.65 292.84a5.221 5.221 0 0 1-7.37-0.08l-0.01-0.01-138.22-142.06a5.206 5.206 0 0 1-0.46-6.73z';
 const { getTheme, ThemeConsumer } = ThemeUtils;
 
-let itemHeight = 48;
+let itemHeight = 56;
 
 class ListPopup extends React.Component {
   static propTypes = {
@@ -31,7 +31,7 @@ class ListPopup extends React.Component {
       PropTypes.shape({
         styles: PropTypes.object,
         title: PropTypes.string,
-        Icon: PropTypes.element,
+        Icon: PropTypes.any,
         value: PropTypes.any.isRequired,
       })
     ),
@@ -46,7 +46,7 @@ class ListPopup extends React.Component {
     /**
      * 列表选择弹出层的类型
      */
-    type: PropTypes.oneOf(['switch', 'radio']),
+    type: PropTypes.oneOf(['switch', 'radio', 'arrow']),
     /**
      * 设置type为radio时选中图标的颜色
      */
@@ -72,6 +72,10 @@ class ListPopup extends React.Component {
      * 数据更改回调
      */
     _onDataChange: PropTypes.func,
+    /**
+     * 多选框的样式
+     */
+    switchStyle: ViewPropTypes.style,
   };
 
   static defaultProps = {
@@ -81,17 +85,18 @@ class ListPopup extends React.Component {
     selectedIcon: null,
     type: 'radio',
     iconTintColor: '',
-    contentCenter: null,
+    contentCenter: true,
     value: -1,
     listItemStyle: null,
     onSelect: (value, switchValue) => {},
     _onDataChange: () => {},
+    switchStyle: {},
   };
 
   constructor(props) {
     super(props);
     const { selected, selectedArr } = this.calcSelected(props);
-    itemHeight = StyleSheet.flatten([props.listItemStyle]).height || 48;
+    itemHeight = StyleSheet.flatten([props.listItemStyle]).height || 56;
     this.state = {
       selected,
       selectedArr,
@@ -117,37 +122,35 @@ class ListPopup extends React.Component {
 
   selectRow = value => {
     const { onSelect, type, _onDataChange } = this.props;
-    if (type === 'switch') return;
-    this.setState({ selected: value });
-    onSelect && onSelect(value);
-    _onDataChange && _onDataChange(value);
-  };
-
-  // sValue: 布尔值， value： 索引值
-  switchValueChange = (sValue, value) => {
-    const { onSelect, _onDataChange } = this.props;
     const { selectedArr } = this.state;
-    const alreadyIndex = selectedArr.indexOf(value);
-    if (sValue) {
-      if (alreadyIndex > -1) return;
-      selectedArr.push(value);
+    const newSelectedArr = selectedArr;
+    if (type === 'switch') {
+      if (selectedArr.indexOf(value) === -1) {
+        newSelectedArr.push(value);
+      } else {
+        const index = selectedArr.indexOf(value);
+        newSelectedArr.splice(index, 1);
+      }
+      this.setState({
+        selectedArr: newSelectedArr,
+      });
+      onSelect && onSelect(value);
+      _onDataChange && _onDataChange(newSelectedArr);
     } else {
-      if (alreadyIndex < 0) return;
-      selectedArr.splice(alreadyIndex, 1);
+      this.setState({ selected: value });
+      onSelect && onSelect(value);
+      _onDataChange && _onDataChange(value);
     }
-    this.setState({ selectedArr });
-    onSelect && onSelect(value, sValue);
-    _onDataChange && _onDataChange(selectedArr);
   };
 
   renderSwitch = value => {
+    const { selectedArr } = this.state;
+    const { switchStyle } = this.props;
+    const isActive = selectedArr.indexOf(value.toString()) !== -1;
     return (
-      <StyledSwitch
-        style={{ right: 0 }}
-        useNativeDriver={false} // 与 Modal 共用暂时有bug
-        onValueChange={sValue => this.switchValueChange(sValue, value)}
-        defaultValue={this.state.selectedArr.indexOf(value) > -1}
-      />
+      <StyledCheckout active={isActive} style={switchStyle}>
+        {isActive && <StyledIconFont d={selectedPath} color="#e5e5e5" size={18} />}
+      </StyledCheckout>
     );
   };
 
@@ -163,8 +166,10 @@ class ListPopup extends React.Component {
     const { type } = this.props;
     if (type === 'switch') {
       return this.renderSwitch(value);
+    } else if (type === 'radio') {
+      return this.renderSelectIcon(value);
     }
-    return this.renderSelectIcon(value);
+    return null;
   };
 
   renderItem = ({ item, index }) => {
@@ -177,12 +182,9 @@ class ListPopup extends React.Component {
     let titleAlign;
     if (contentCenter) {
       titleAlign = 'center';
-    } else if (type === 'switch') {
+    } else {
       titleAlign = 'left';
-    } else if (type === 'radio') {
-      titleAlign = 'center';
     }
-
     return (
       <ThemeConsumer>
         {globalTheme => {
@@ -207,10 +209,8 @@ class ListPopup extends React.Component {
               { textAlign: titleAlign, fontSize: cellFontSize, color: cellFontColor },
               styles.title,
             ],
-            contentRight: [
-              { position: 'absolute', right: type === 'switch' ? 16 : 24 },
-              styles.contentRight,
-            ],
+            contentRight: [{ position: 'absolute', right: 14 }, styles.contentRight],
+            contentLeft: [{ marginRight: 8 }, styles.contentLeft],
           };
           return (
             <TYFlatList.Item

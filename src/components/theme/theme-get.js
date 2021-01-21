@@ -54,6 +54,7 @@ export const popup = {
   confirmFontColor: props => getTheme(props, 'popup.confirmFontColor', d2.confirmFontColor),
   subTitleFontColor: props => getTheme(props, 'popup.subTitleFontColor', d2.subTitleFontColor),
   backIconColor: props => getTheme(props, 'popup.backIconColor', d2.backIconColor),
+  pressColor: props => getTheme(props, 'popup.pressColor', d2.pressColor),
 };
 
 export default {
