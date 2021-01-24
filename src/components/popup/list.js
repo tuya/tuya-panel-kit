@@ -176,7 +176,7 @@ class ListPopup extends React.Component {
     const { styles = {}, type, contentCenter, listItemStyle, dataSource } = this.props;
     const containerStyle = {
       alignSelf: 'stretch',
-      height: itemHeight,
+      minHeight: itemHeight,
       backgroundColor: '#fff',
     };
     let titleAlign;
@@ -209,7 +209,10 @@ class ListPopup extends React.Component {
               { textAlign: titleAlign, fontSize: cellFontSize, color: cellFontColor },
               styles.title,
             ],
-            contentRight: [{ position: 'absolute', right: 14 }, styles.contentRight],
+            contentRight: [
+              !!contentCenter && { position: 'absolute', right: 14 },
+              styles.contentRight,
+            ],
             contentLeft: [{ marginRight: 8 }, styles.contentLeft],
           };
           return (
