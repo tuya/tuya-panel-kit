@@ -24,11 +24,11 @@ exports[`List Component basic render 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#f5f5f5",
+        "backgroundColor": "#f8f8f8",
         "borderBottomLeftRadius": 0,
         "borderBottomRightRadius": 0,
-        "borderTopLeftRadius": 8,
-        "borderTopRightRadius": 8,
+        "borderTopLeftRadius": 16,
+        "borderTopRightRadius": 16,
         "opacity": 1,
       }
     }
@@ -40,18 +40,22 @@ exports[`List Component basic render 1`] = `
             "alignItems": "center",
             "backgroundColor": "#fff",
             "flexDirection": "row",
-            "height": 48,
+            "height": 56,
             "justifyContent": "center",
           },
           Array [
             Object {
               "backgroundColor": "#ffffff",
-              "borderBottomColor": "#e5e5e5",
+              "borderBottomColor": "rgba(0, 0, 0, 0.1)",
               "borderBottomWidth": 0.5,
-              "borderTopLeftRadius": 8,
-              "borderTopRightRadius": 8,
-              "height": 48,
+              "borderTopLeftRadius": 16,
+              "borderTopRightRadius": 16,
+              "height": 56,
               "justifyContent": "space-around",
+              "paddingBottom": 0,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 0,
             },
             Array [
               null,
@@ -80,7 +84,7 @@ exports[`List Component basic render 1`] = `
             },
             Array [
               Object {
-                "color": "#333",
+                "color": "rgba(0,0,0,0.9)",
                 "fontSize": 14,
               },
               null,
@@ -108,7 +112,7 @@ exports[`List Component basic render 1`] = `
             },
             Array [
               Object {
-                "color": "#999",
+                "color": "rgba(0, 0, 0, .5)",
                 "fontSize": 12,
                 "marginTop": 10,
               },
@@ -209,6 +213,7 @@ exports[`List Component basic render 1`] = `
         showBack={false}
         stickyHeaderIndices={Array []}
         subTitle="副标题"
+        switchStyle={Object {}}
         updateCellsBatchingPeriod={50}
         useART={false}
         viewabilityConfigCallbackPairs={Array []}
@@ -239,7 +244,7 @@ exports[`List Component basic render 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 36,
                   "opacity": 1,
                 }
               }
@@ -254,8 +259,8 @@ exports[`List Component basic render 1`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -340,7 +345,7 @@ exports[`List Component basic render 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 14,
                     }
                   }
                 />
@@ -348,19 +353,22 @@ exports[`List Component basic render 1`] = `
             </View>
             <View
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                    "height": 0.5,
-                    "marginLeft": 32,
-                  },
+                Object {
+                  "backgroundColor": undefined,
+                }
+              }
+            >
+              <View
+                style={
                   Object {
                     "backgroundColor": undefined,
-                    "marginLeft": 0,
-                  },
-                ]
-              }
-            />
+                    "height": 0.5,
+                    "marginLeft": 16,
+                    "marginRight": 16,
+                  }
+                }
+              />
+            </View>
           </View>
           <View
             onLayout={[Function]}
@@ -386,7 +394,7 @@ exports[`List Component basic render 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 36,
                   "opacity": 1,
                 }
               }
@@ -401,8 +409,8 @@ exports[`List Component basic render 1`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -487,7 +495,7 @@ exports[`List Component basic render 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 14,
                     }
                   }
                 />
@@ -495,19 +503,22 @@ exports[`List Component basic render 1`] = `
             </View>
             <View
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                    "height": 0.5,
-                    "marginLeft": 32,
-                  },
+                Object {
+                  "backgroundColor": undefined,
+                }
+              }
+            >
+              <View
+                style={
                   Object {
                     "backgroundColor": undefined,
-                    "marginLeft": 0,
-                  },
-                ]
-              }
-            />
+                    "height": 0.5,
+                    "marginLeft": 16,
+                    "marginRight": 16,
+                  }
+                }
+              />
+            </View>
           </View>
           <View
             onLayout={[Function]}
@@ -533,7 +544,7 @@ exports[`List Component basic render 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 36,
                   "opacity": 1,
                 }
               }
@@ -548,8 +559,8 @@ exports[`List Component basic render 1`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -634,7 +645,7 @@ exports[`List Component basic render 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 14,
                     }
                   }
                 />
@@ -642,19 +653,22 @@ exports[`List Component basic render 1`] = `
             </View>
             <View
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                    "height": 0.5,
-                    "marginLeft": 32,
-                  },
+                Object {
+                  "backgroundColor": undefined,
+                }
+              }
+            >
+              <View
+                style={
                   Object {
                     "backgroundColor": undefined,
-                    "marginLeft": 0,
-                  },
-                ]
-              }
-            />
+                    "height": 0.5,
+                    "marginLeft": 16,
+                    "marginRight": 16,
+                  }
+                }
+              />
+            </View>
           </View>
           <View
             onLayout={[Function]}
@@ -680,7 +694,7 @@ exports[`List Component basic render 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 36,
                   "opacity": 1,
                 }
               }
@@ -695,8 +709,8 @@ exports[`List Component basic render 1`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -781,7 +795,7 @@ exports[`List Component basic render 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 14,
                     }
                   }
                 >
@@ -827,9 +841,9 @@ exports[`List Component basic render 1`] = `
                         fill={
                           Array [
                             0,
-                            0.26666666666666666,
-                            0.8588235294117647,
-                            0.3686274509803922,
+                            1,
+                            0.2823529411764706,
+                            0,
                             1,
                           ]
                         }
@@ -856,9 +870,9 @@ exports[`List Component basic render 1`] = `
                         stroke={
                           Array [
                             0,
-                            0.26666666666666666,
-                            0.8588235294117647,
-                            0.3686274509803922,
+                            1,
+                            0.2823529411764706,
+                            0,
                             1,
                           ]
                         }
@@ -877,19 +891,22 @@ exports[`List Component basic render 1`] = `
             </View>
             <View
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                    "height": 0.5,
-                    "marginLeft": 32,
-                  },
+                Object {
+                  "backgroundColor": undefined,
+                }
+              }
+            >
+              <View
+                style={
                   Object {
                     "backgroundColor": undefined,
-                    "marginLeft": 0,
-                  },
-                ]
-              }
-            />
+                    "height": 0.5,
+                    "marginLeft": 16,
+                    "marginRight": 16,
+                  }
+                }
+              />
+            </View>
           </View>
           <View
             onLayout={[Function]}
@@ -915,7 +932,7 @@ exports[`List Component basic render 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 36,
                   "opacity": 1,
                 }
               }
@@ -930,8 +947,8 @@ exports[`List Component basic render 1`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -1016,7 +1033,7 @@ exports[`List Component basic render 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 14,
                     }
                   }
                 />
@@ -1024,19 +1041,22 @@ exports[`List Component basic render 1`] = `
             </View>
             <View
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                    "height": 0.5,
-                    "marginLeft": 32,
-                  },
+                Object {
+                  "backgroundColor": undefined,
+                }
+              }
+            >
+              <View
+                style={
                   Object {
                     "backgroundColor": undefined,
-                    "marginLeft": 0,
-                  },
-                ]
-              }
-            />
+                    "height": 0.5,
+                    "marginLeft": 16,
+                    "marginRight": 16,
+                  }
+                }
+              />
+            </View>
           </View>
           <View
             onLayout={[Function]}
@@ -1062,7 +1082,7 @@ exports[`List Component basic render 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 36,
                   "opacity": 1,
                 }
               }
@@ -1077,8 +1097,8 @@ exports[`List Component basic render 1`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -1163,7 +1183,7 @@ exports[`List Component basic render 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 14,
                     }
                   }
                 />
@@ -1171,19 +1191,22 @@ exports[`List Component basic render 1`] = `
             </View>
             <View
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                    "height": 0.5,
-                    "marginLeft": 32,
-                  },
+                Object {
+                  "backgroundColor": undefined,
+                }
+              }
+            >
+              <View
+                style={
                   Object {
                     "backgroundColor": undefined,
-                    "marginLeft": 0,
-                  },
-                ]
-              }
-            />
+                    "height": 0.5,
+                    "marginLeft": 16,
+                    "marginRight": 16,
+                  }
+                }
+              />
+            </View>
           </View>
           <View
             onLayout={[Function]}
@@ -1209,7 +1232,7 @@ exports[`List Component basic render 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 36,
                   "opacity": 1,
                 }
               }
@@ -1224,8 +1247,8 @@ exports[`List Component basic render 1`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -1310,7 +1333,7 @@ exports[`List Component basic render 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 14,
                     }
                   }
                 />
@@ -1327,14 +1350,14 @@ exports[`List Component basic render 1`] = `
             "alignItems": "center",
             "backgroundColor": "#fff",
             "flexDirection": "row",
-            "height": 48,
+            "height": 56,
             "justifyContent": "center",
           },
           Array [
             Object {
               "borderBottomLeftRadius": 0,
               "borderBottomRightRadius": 0,
-              "height": 68,
+              "height": 76,
               "marginTop": 12,
               "paddingBottom": 20,
             },
@@ -1357,17 +1380,18 @@ exports[`List Component basic render 1`] = `
           Object {
             "alignItems": "center",
             "alignSelf": "stretch",
-            "borderRightColor": "#e5e5e5",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0.5,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
             "justifyContent": "center",
-            "marginBottom": 12,
-            "marginLeft": 0,
-            "marginRight": 0,
-            "marginTop": 12,
             "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
           }
         }
       >
@@ -1388,7 +1412,7 @@ exports[`List Component basic render 1`] = `
               },
               Array [
                 Object {
-                  "color": "#666",
+                  "color": "rgba(0,0,0,0.7)",
                   "fontSize": 16,
                 },
                 null,
@@ -1415,17 +1439,18 @@ exports[`List Component basic render 1`] = `
           Object {
             "alignItems": "center",
             "alignSelf": "stretch",
-            "borderRightColor": "#e5e5e5",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
             "justifyContent": "center",
-            "marginBottom": 12,
-            "marginLeft": 0,
-            "marginRight": 0,
-            "marginTop": 12,
             "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
           }
         }
       >
@@ -1445,7 +1470,7 @@ exports[`List Component basic render 1`] = `
               },
               Array [
                 Object {
-                  "color": "#333",
+                  "color": "#FF4800",
                   "fontSize": 16,
                   "fontWeight": "bold",
                 },
@@ -1488,11 +1513,11 @@ exports[`List Component basic render 2`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#f5f5f5",
+        "backgroundColor": "#f8f8f8",
         "borderBottomLeftRadius": 0,
         "borderBottomRightRadius": 0,
-        "borderTopLeftRadius": 8,
-        "borderTopRightRadius": 8,
+        "borderTopLeftRadius": 16,
+        "borderTopRightRadius": 16,
         "opacity": 1,
       }
     }
@@ -1504,18 +1529,22 @@ exports[`List Component basic render 2`] = `
             "alignItems": "center",
             "backgroundColor": "#fff",
             "flexDirection": "row",
-            "height": 48,
+            "height": 56,
             "justifyContent": "center",
           },
           Array [
             Object {
               "backgroundColor": "#ffffff",
-              "borderBottomColor": "#e5e5e5",
+              "borderBottomColor": "rgba(0, 0, 0, 0.1)",
               "borderBottomWidth": 0.5,
-              "borderTopLeftRadius": 8,
-              "borderTopRightRadius": 8,
-              "height": 48,
+              "borderTopLeftRadius": 16,
+              "borderTopRightRadius": 16,
+              "height": 56,
               "justifyContent": "space-around",
+              "paddingBottom": 0,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 0,
             },
             Array [
               null,
@@ -1544,7 +1573,7 @@ exports[`List Component basic render 2`] = `
             },
             Array [
               Object {
-                "color": "#333",
+                "color": "rgba(0,0,0,0.9)",
                 "fontSize": 14,
               },
               null,
@@ -1572,7 +1601,7 @@ exports[`List Component basic render 2`] = `
             },
             Array [
               Object {
-                "color": "#999",
+                "color": "rgba(0, 0, 0, .5)",
                 "fontSize": 12,
                 "marginTop": 10,
               },
@@ -1593,7 +1622,7 @@ exports[`List Component basic render 2`] = `
           null,
           false,
           Object {
-            "height": 336,
+            "height": 392,
           },
         ]
       }
@@ -1673,6 +1702,7 @@ exports[`List Component basic render 2`] = `
         showBack={false}
         stickyHeaderIndices={Array []}
         subTitle="副标题"
+        switchStyle={Object {}}
         updateCellsBatchingPeriod={50}
         useART={false}
         viewabilityConfigCallbackPairs={Array []}
@@ -1698,12 +1728,11 @@ exports[`List Component basic render 2`] = `
                   "backgroundColor": undefined,
                   "borderRadius": 0,
                   "flexGrow": 0,
-                  "height": 48,
                   "marginBottom": 0,
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -1718,8 +1747,8 @@ exports[`List Component basic render 2`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -1774,7 +1803,7 @@ exports[`List Component basic render 2`] = `
                               Object {
                                 "color": undefined,
                                 "fontSize": undefined,
-                                "textAlign": "left",
+                                "textAlign": "center",
                               },
                               undefined,
                             ],
@@ -1804,106 +1833,47 @@ exports[`List Component basic render 2`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 16,
+                      "right": 14,
                     }
                   }
                 >
                   <View
-                    needsOffscreenAlphaCompositing={true}
+                    active={false}
                     style={
                       Array [
-                        Array [
-                          Object {},
-                          Object {
-                            "right": 0,
-                          },
-                        ],
-                        false,
+                        Object {
+                          "backgroundColor": "transparent",
+                          "borderColor": "#e5e5e5",
+                          "borderRadius": 9,
+                          "borderWidth": 1,
+                          "height": 18,
+                          "width": 18,
+                        },
+                        Object {},
                       ]
                     }
-                  >
-                    <View
-                      accessibilityLabel="SwitchButton"
-                      accessible={true}
-                      isTVSelectable={true}
-                      onResponderGrant={[Function]}
-                      onResponderMove={[Function]}
-                      onResponderRelease={[Function]}
-                      onResponderTerminate={[Function]}
-                      onResponderTerminationRequest={[Function]}
-                      onStartShouldSetResponder={[Function]}
-                      style={
-                        Object {
-                          "alignItems": "center",
-                          "backgroundColor": "transparent",
-                          "height": NaN,
-                          "justifyContent": "center",
-                          "opacity": 1,
-                          "width": NaN,
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          Array [
-                            Object {
-                              "borderRadius": NaN,
-                              "height": undefined,
-                              "justifyContent": "center",
-                              "width": undefined,
-                            },
-                            Object {
-                              "backgroundColor": "#e5e5e5",
-                              "borderColor": "#e5e5e5",
-                            },
-                          ]
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "alignSelf": "flex-start",
-                            "backgroundColor": "#fff",
-                            "borderRadius": NaN,
-                            "elevation": 2,
-                            "height": undefined,
-                            "position": "absolute",
-                            "shadowColor": "rgba(0, 0, 0, 0.3)",
-                            "shadowOffset": Object {
-                              "height": 3,
-                              "width": 0,
-                            },
-                            "shadowOpacity": 1,
-                            "shadowRadius": 3,
-                            "transform": Array [
-                              Object {
-                                "translateX": NaN,
-                              },
-                            ],
-                            "width": undefined,
-                          }
-                        }
-                      />
-                    </View>
-                  </View>
+                  />
                 </View>
               </View>
             </View>
             <View
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                    "height": 0.5,
-                    "marginLeft": 32,
-                  },
+                Object {
+                  "backgroundColor": undefined,
+                }
+              }
+            >
+              <View
+                style={
                   Object {
                     "backgroundColor": undefined,
-                    "marginLeft": 0,
-                  },
-                ]
-              }
-            />
+                    "height": 0.5,
+                    "marginLeft": 16,
+                    "marginRight": 16,
+                  }
+                }
+              />
+            </View>
           </View>
           <View
             onLayout={[Function]}
@@ -1924,12 +1894,11 @@ exports[`List Component basic render 2`] = `
                   "backgroundColor": undefined,
                   "borderRadius": 0,
                   "flexGrow": 0,
-                  "height": 48,
                   "marginBottom": 0,
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -1944,8 +1913,8 @@ exports[`List Component basic render 2`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -2000,7 +1969,7 @@ exports[`List Component basic render 2`] = `
                               Object {
                                 "color": undefined,
                                 "fontSize": undefined,
-                                "textAlign": "left",
+                                "textAlign": "center",
                               },
                               undefined,
                             ],
@@ -2030,106 +1999,47 @@ exports[`List Component basic render 2`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 16,
+                      "right": 14,
                     }
                   }
                 >
                   <View
-                    needsOffscreenAlphaCompositing={true}
+                    active={false}
                     style={
                       Array [
-                        Array [
-                          Object {},
-                          Object {
-                            "right": 0,
-                          },
-                        ],
-                        false,
+                        Object {
+                          "backgroundColor": "transparent",
+                          "borderColor": "#e5e5e5",
+                          "borderRadius": 9,
+                          "borderWidth": 1,
+                          "height": 18,
+                          "width": 18,
+                        },
+                        Object {},
                       ]
                     }
-                  >
-                    <View
-                      accessibilityLabel="SwitchButton"
-                      accessible={true}
-                      isTVSelectable={true}
-                      onResponderGrant={[Function]}
-                      onResponderMove={[Function]}
-                      onResponderRelease={[Function]}
-                      onResponderTerminate={[Function]}
-                      onResponderTerminationRequest={[Function]}
-                      onStartShouldSetResponder={[Function]}
-                      style={
-                        Object {
-                          "alignItems": "center",
-                          "backgroundColor": "transparent",
-                          "height": NaN,
-                          "justifyContent": "center",
-                          "opacity": 1,
-                          "width": NaN,
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          Array [
-                            Object {
-                              "borderRadius": NaN,
-                              "height": undefined,
-                              "justifyContent": "center",
-                              "width": undefined,
-                            },
-                            Object {
-                              "backgroundColor": "#44DB5E",
-                              "borderColor": "#44DB5E",
-                            },
-                          ]
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "alignSelf": "flex-start",
-                            "backgroundColor": "#fff",
-                            "borderRadius": NaN,
-                            "elevation": 2,
-                            "height": undefined,
-                            "position": "absolute",
-                            "shadowColor": "rgba(0, 0, 0, 0.3)",
-                            "shadowOffset": Object {
-                              "height": 3,
-                              "width": 0,
-                            },
-                            "shadowOpacity": 1,
-                            "shadowRadius": 3,
-                            "transform": Array [
-                              Object {
-                                "translateX": NaN,
-                              },
-                            ],
-                            "width": undefined,
-                          }
-                        }
-                      />
-                    </View>
-                  </View>
+                  />
                 </View>
               </View>
             </View>
             <View
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                    "height": 0.5,
-                    "marginLeft": 32,
-                  },
+                Object {
+                  "backgroundColor": undefined,
+                }
+              }
+            >
+              <View
+                style={
                   Object {
                     "backgroundColor": undefined,
-                    "marginLeft": 0,
-                  },
-                ]
-              }
-            />
+                    "height": 0.5,
+                    "marginLeft": 16,
+                    "marginRight": 16,
+                  }
+                }
+              />
+            </View>
           </View>
           <View
             onLayout={[Function]}
@@ -2150,12 +2060,11 @@ exports[`List Component basic render 2`] = `
                   "backgroundColor": undefined,
                   "borderRadius": 0,
                   "flexGrow": 0,
-                  "height": 48,
                   "marginBottom": 0,
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -2170,8 +2079,8 @@ exports[`List Component basic render 2`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -2226,7 +2135,7 @@ exports[`List Component basic render 2`] = `
                               Object {
                                 "color": undefined,
                                 "fontSize": undefined,
-                                "textAlign": "left",
+                                "textAlign": "center",
                               },
                               undefined,
                             ],
@@ -2256,106 +2165,47 @@ exports[`List Component basic render 2`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 16,
+                      "right": 14,
                     }
                   }
                 >
                   <View
-                    needsOffscreenAlphaCompositing={true}
+                    active={false}
                     style={
                       Array [
-                        Array [
-                          Object {},
-                          Object {
-                            "right": 0,
-                          },
-                        ],
-                        false,
+                        Object {
+                          "backgroundColor": "transparent",
+                          "borderColor": "#e5e5e5",
+                          "borderRadius": 9,
+                          "borderWidth": 1,
+                          "height": 18,
+                          "width": 18,
+                        },
+                        Object {},
                       ]
                     }
-                  >
-                    <View
-                      accessibilityLabel="SwitchButton"
-                      accessible={true}
-                      isTVSelectable={true}
-                      onResponderGrant={[Function]}
-                      onResponderMove={[Function]}
-                      onResponderRelease={[Function]}
-                      onResponderTerminate={[Function]}
-                      onResponderTerminationRequest={[Function]}
-                      onStartShouldSetResponder={[Function]}
-                      style={
-                        Object {
-                          "alignItems": "center",
-                          "backgroundColor": "transparent",
-                          "height": NaN,
-                          "justifyContent": "center",
-                          "opacity": 1,
-                          "width": NaN,
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          Array [
-                            Object {
-                              "borderRadius": NaN,
-                              "height": undefined,
-                              "justifyContent": "center",
-                              "width": undefined,
-                            },
-                            Object {
-                              "backgroundColor": "#e5e5e5",
-                              "borderColor": "#e5e5e5",
-                            },
-                          ]
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "alignSelf": "flex-start",
-                            "backgroundColor": "#fff",
-                            "borderRadius": NaN,
-                            "elevation": 2,
-                            "height": undefined,
-                            "position": "absolute",
-                            "shadowColor": "rgba(0, 0, 0, 0.3)",
-                            "shadowOffset": Object {
-                              "height": 3,
-                              "width": 0,
-                            },
-                            "shadowOpacity": 1,
-                            "shadowRadius": 3,
-                            "transform": Array [
-                              Object {
-                                "translateX": NaN,
-                              },
-                            ],
-                            "width": undefined,
-                          }
-                        }
-                      />
-                    </View>
-                  </View>
+                  />
                 </View>
               </View>
             </View>
             <View
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                    "height": 0.5,
-                    "marginLeft": 32,
-                  },
+                Object {
+                  "backgroundColor": undefined,
+                }
+              }
+            >
+              <View
+                style={
                   Object {
                     "backgroundColor": undefined,
-                    "marginLeft": 0,
-                  },
-                ]
-              }
-            />
+                    "height": 0.5,
+                    "marginLeft": 16,
+                    "marginRight": 16,
+                  }
+                }
+              />
+            </View>
           </View>
           <View
             onLayout={[Function]}
@@ -2376,12 +2226,11 @@ exports[`List Component basic render 2`] = `
                   "backgroundColor": undefined,
                   "borderRadius": 0,
                   "flexGrow": 0,
-                  "height": 48,
                   "marginBottom": 0,
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -2396,8 +2245,8 @@ exports[`List Component basic render 2`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -2452,7 +2301,7 @@ exports[`List Component basic render 2`] = `
                               Object {
                                 "color": undefined,
                                 "fontSize": undefined,
-                                "textAlign": "left",
+                                "textAlign": "center",
                               },
                               undefined,
                             ],
@@ -2482,86 +2331,112 @@ exports[`List Component basic render 2`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 16,
+                      "right": 14,
                     }
                   }
                 >
                   <View
-                    needsOffscreenAlphaCompositing={true}
+                    active={true}
                     style={
                       Array [
-                        Array [
-                          Object {},
-                          Object {
-                            "right": 0,
-                          },
-                        ],
-                        false,
+                        Object {
+                          "backgroundColor": "#FF4800",
+                          "borderColor": "#FF4800",
+                          "borderRadius": 9,
+                          "borderWidth": 1,
+                          "height": 18,
+                          "width": 18,
+                        },
+                        Object {},
                       ]
                     }
                   >
                     <View
-                      accessibilityLabel="SwitchButton"
-                      accessible={true}
-                      isTVSelectable={true}
-                      onResponderGrant={[Function]}
-                      onResponderMove={[Function]}
-                      onResponderRelease={[Function]}
-                      onResponderTerminate={[Function]}
-                      onResponderTerminationRequest={[Function]}
-                      onStartShouldSetResponder={[Function]}
                       style={
-                        Object {
-                          "alignItems": "center",
-                          "backgroundColor": "transparent",
-                          "height": NaN,
-                          "justifyContent": "center",
-                          "opacity": 1,
-                          "width": NaN,
-                        }
+                        Array [
+                          Object {
+                            "flexDirection": "row",
+                          },
+                          Object {
+                            "height": 18,
+                            "width": 18,
+                          },
+                          false,
+                          null,
+                        ]
                       }
                     >
-                      <View
+                      <RNSVGSvgView
+                        align="xMidYMid"
+                        meetOrSlice={0}
+                        minX={0}
+                        minY={0}
                         style={
                           Array [
                             Object {
-                              "borderRadius": NaN,
-                              "height": undefined,
-                              "justifyContent": "center",
-                              "width": undefined,
+                              "backgroundColor": "transparent",
                             },
+                            undefined,
+                            false,
                             Object {
-                              "backgroundColor": "#e5e5e5",
-                              "borderColor": "#e5e5e5",
+                              "flex": 0,
+                              "height": 18,
+                              "width": 18,
                             },
                           ]
                         }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "alignSelf": "flex-start",
-                            "backgroundColor": "#fff",
-                            "borderRadius": NaN,
-                            "elevation": 2,
-                            "height": undefined,
-                            "position": "absolute",
-                            "shadowColor": "rgba(0, 0, 0, 0.3)",
-                            "shadowOffset": Object {
-                              "height": 3,
-                              "width": 0,
-                            },
-                            "shadowOpacity": 1,
-                            "shadowRadius": 3,
-                            "transform": Array [
-                              Object {
-                                "translateX": NaN,
-                              },
-                            ],
-                            "width": undefined,
+                        vbHeight={1024}
+                        vbWidth={1024}
+                      >
+                        <RNSVGPath
+                          d="M288.67 521.63l18.69-25.26a5.217 5.217 0 0 1 7.29-1.09c0.02 0.01 0.04 0.03 0.06 0.04l113.01 86.01a5.216 5.216 0 0 0 6.48-0.13l275.9-228.25a5.22 5.22 0 0 1 6.97 0.29l17.32 16.98a5.212 5.212 0 0 1 0.07 7.37l-0.08 0.08-299.65 292.84a5.221 5.221 0 0 1-7.37-0.08l-0.01-0.01-138.22-142.06a5.206 5.206 0 0 1-0.46-6.73z"
+                          fill={
+                            Array [
+                              0,
+                              0.8980392156862745,
+                              0.8980392156862745,
+                              0.8980392156862745,
+                              1,
+                            ]
                           }
-                        }
-                      />
+                          fillOpacity={1}
+                          fillRule={1}
+                          matrix={
+                            Array [
+                              1,
+                              0,
+                              0,
+                              1,
+                              0,
+                              0,
+                            ]
+                          }
+                          opacity={1}
+                          propList={
+                            Array [
+                              "stroke",
+                              "strokeWidth",
+                              "fill",
+                            ]
+                          }
+                          stroke={
+                            Array [
+                              0,
+                              0.8980392156862745,
+                              0.8980392156862745,
+                              0.8980392156862745,
+                              1,
+                            ]
+                          }
+                          strokeDasharray={null}
+                          strokeDashoffset={null}
+                          strokeLinecap={0}
+                          strokeLinejoin={0}
+                          strokeMiterlimit={4}
+                          strokeOpacity={1}
+                          strokeWidth={1}
+                        />
+                      </RNSVGSvgView>
                     </View>
                   </View>
                 </View>
@@ -2569,19 +2444,22 @@ exports[`List Component basic render 2`] = `
             </View>
             <View
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                    "height": 0.5,
-                    "marginLeft": 32,
-                  },
+                Object {
+                  "backgroundColor": undefined,
+                }
+              }
+            >
+              <View
+                style={
                   Object {
                     "backgroundColor": undefined,
-                    "marginLeft": 0,
-                  },
-                ]
-              }
-            />
+                    "height": 0.5,
+                    "marginLeft": 16,
+                    "marginRight": 16,
+                  }
+                }
+              />
+            </View>
           </View>
           <View
             onLayout={[Function]}
@@ -2602,12 +2480,11 @@ exports[`List Component basic render 2`] = `
                   "backgroundColor": undefined,
                   "borderRadius": 0,
                   "flexGrow": 0,
-                  "height": 48,
                   "marginBottom": 0,
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -2622,8 +2499,8 @@ exports[`List Component basic render 2`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -2678,7 +2555,7 @@ exports[`List Component basic render 2`] = `
                               Object {
                                 "color": undefined,
                                 "fontSize": undefined,
-                                "textAlign": "left",
+                                "textAlign": "center",
                               },
                               undefined,
                             ],
@@ -2708,106 +2585,47 @@ exports[`List Component basic render 2`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 16,
+                      "right": 14,
                     }
                   }
                 >
                   <View
-                    needsOffscreenAlphaCompositing={true}
+                    active={false}
                     style={
                       Array [
-                        Array [
-                          Object {},
-                          Object {
-                            "right": 0,
-                          },
-                        ],
-                        false,
+                        Object {
+                          "backgroundColor": "transparent",
+                          "borderColor": "#e5e5e5",
+                          "borderRadius": 9,
+                          "borderWidth": 1,
+                          "height": 18,
+                          "width": 18,
+                        },
+                        Object {},
                       ]
                     }
-                  >
-                    <View
-                      accessibilityLabel="SwitchButton"
-                      accessible={true}
-                      isTVSelectable={true}
-                      onResponderGrant={[Function]}
-                      onResponderMove={[Function]}
-                      onResponderRelease={[Function]}
-                      onResponderTerminate={[Function]}
-                      onResponderTerminationRequest={[Function]}
-                      onStartShouldSetResponder={[Function]}
-                      style={
-                        Object {
-                          "alignItems": "center",
-                          "backgroundColor": "transparent",
-                          "height": NaN,
-                          "justifyContent": "center",
-                          "opacity": 1,
-                          "width": NaN,
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          Array [
-                            Object {
-                              "borderRadius": NaN,
-                              "height": undefined,
-                              "justifyContent": "center",
-                              "width": undefined,
-                            },
-                            Object {
-                              "backgroundColor": "#e5e5e5",
-                              "borderColor": "#e5e5e5",
-                            },
-                          ]
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "alignSelf": "flex-start",
-                            "backgroundColor": "#fff",
-                            "borderRadius": NaN,
-                            "elevation": 2,
-                            "height": undefined,
-                            "position": "absolute",
-                            "shadowColor": "rgba(0, 0, 0, 0.3)",
-                            "shadowOffset": Object {
-                              "height": 3,
-                              "width": 0,
-                            },
-                            "shadowOpacity": 1,
-                            "shadowRadius": 3,
-                            "transform": Array [
-                              Object {
-                                "translateX": NaN,
-                              },
-                            ],
-                            "width": undefined,
-                          }
-                        }
-                      />
-                    </View>
-                  </View>
+                  />
                 </View>
               </View>
             </View>
             <View
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                    "height": 0.5,
-                    "marginLeft": 32,
-                  },
+                Object {
+                  "backgroundColor": undefined,
+                }
+              }
+            >
+              <View
+                style={
                   Object {
                     "backgroundColor": undefined,
-                    "marginLeft": 0,
-                  },
-                ]
-              }
-            />
+                    "height": 0.5,
+                    "marginLeft": 16,
+                    "marginRight": 16,
+                  }
+                }
+              />
+            </View>
           </View>
           <View
             onLayout={[Function]}
@@ -2828,12 +2646,11 @@ exports[`List Component basic render 2`] = `
                   "backgroundColor": undefined,
                   "borderRadius": 0,
                   "flexGrow": 0,
-                  "height": 48,
                   "marginBottom": 0,
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -2848,8 +2665,8 @@ exports[`List Component basic render 2`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -2904,7 +2721,7 @@ exports[`List Component basic render 2`] = `
                               Object {
                                 "color": undefined,
                                 "fontSize": undefined,
-                                "textAlign": "left",
+                                "textAlign": "center",
                               },
                               undefined,
                             ],
@@ -2934,106 +2751,47 @@ exports[`List Component basic render 2`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 16,
+                      "right": 14,
                     }
                   }
                 >
                   <View
-                    needsOffscreenAlphaCompositing={true}
+                    active={false}
                     style={
                       Array [
-                        Array [
-                          Object {},
-                          Object {
-                            "right": 0,
-                          },
-                        ],
-                        false,
+                        Object {
+                          "backgroundColor": "transparent",
+                          "borderColor": "#e5e5e5",
+                          "borderRadius": 9,
+                          "borderWidth": 1,
+                          "height": 18,
+                          "width": 18,
+                        },
+                        Object {},
                       ]
                     }
-                  >
-                    <View
-                      accessibilityLabel="SwitchButton"
-                      accessible={true}
-                      isTVSelectable={true}
-                      onResponderGrant={[Function]}
-                      onResponderMove={[Function]}
-                      onResponderRelease={[Function]}
-                      onResponderTerminate={[Function]}
-                      onResponderTerminationRequest={[Function]}
-                      onStartShouldSetResponder={[Function]}
-                      style={
-                        Object {
-                          "alignItems": "center",
-                          "backgroundColor": "transparent",
-                          "height": NaN,
-                          "justifyContent": "center",
-                          "opacity": 1,
-                          "width": NaN,
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          Array [
-                            Object {
-                              "borderRadius": NaN,
-                              "height": undefined,
-                              "justifyContent": "center",
-                              "width": undefined,
-                            },
-                            Object {
-                              "backgroundColor": "#e5e5e5",
-                              "borderColor": "#e5e5e5",
-                            },
-                          ]
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "alignSelf": "flex-start",
-                            "backgroundColor": "#fff",
-                            "borderRadius": NaN,
-                            "elevation": 2,
-                            "height": undefined,
-                            "position": "absolute",
-                            "shadowColor": "rgba(0, 0, 0, 0.3)",
-                            "shadowOffset": Object {
-                              "height": 3,
-                              "width": 0,
-                            },
-                            "shadowOpacity": 1,
-                            "shadowRadius": 3,
-                            "transform": Array [
-                              Object {
-                                "translateX": NaN,
-                              },
-                            ],
-                            "width": undefined,
-                          }
-                        }
-                      />
-                    </View>
-                  </View>
+                  />
                 </View>
               </View>
             </View>
             <View
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                    "height": 0.5,
-                    "marginLeft": 32,
-                  },
+                Object {
+                  "backgroundColor": undefined,
+                }
+              }
+            >
+              <View
+                style={
                   Object {
                     "backgroundColor": undefined,
-                    "marginLeft": 0,
-                  },
-                ]
-              }
-            />
+                    "height": 0.5,
+                    "marginLeft": 16,
+                    "marginRight": 16,
+                  }
+                }
+              />
+            </View>
           </View>
           <View
             onLayout={[Function]}
@@ -3054,12 +2812,11 @@ exports[`List Component basic render 2`] = `
                   "backgroundColor": undefined,
                   "borderRadius": 0,
                   "flexGrow": 0,
-                  "height": 48,
                   "marginBottom": 0,
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -3074,8 +2831,8 @@ exports[`List Component basic render 2`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -3130,7 +2887,7 @@ exports[`List Component basic render 2`] = `
                               Object {
                                 "color": undefined,
                                 "fontSize": undefined,
-                                "textAlign": "left",
+                                "textAlign": "center",
                               },
                               undefined,
                             ],
@@ -3160,88 +2917,26 @@ exports[`List Component basic render 2`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 16,
+                      "right": 14,
                     }
                   }
                 >
                   <View
-                    needsOffscreenAlphaCompositing={true}
+                    active={false}
                     style={
                       Array [
-                        Array [
-                          Object {},
-                          Object {
-                            "right": 0,
-                          },
-                        ],
-                        false,
+                        Object {
+                          "backgroundColor": "transparent",
+                          "borderColor": "#e5e5e5",
+                          "borderRadius": 9,
+                          "borderWidth": 1,
+                          "height": 18,
+                          "width": 18,
+                        },
+                        Object {},
                       ]
                     }
-                  >
-                    <View
-                      accessibilityLabel="SwitchButton"
-                      accessible={true}
-                      isTVSelectable={true}
-                      onResponderGrant={[Function]}
-                      onResponderMove={[Function]}
-                      onResponderRelease={[Function]}
-                      onResponderTerminate={[Function]}
-                      onResponderTerminationRequest={[Function]}
-                      onStartShouldSetResponder={[Function]}
-                      style={
-                        Object {
-                          "alignItems": "center",
-                          "backgroundColor": "transparent",
-                          "height": NaN,
-                          "justifyContent": "center",
-                          "opacity": 1,
-                          "width": NaN,
-                        }
-                      }
-                    >
-                      <View
-                        style={
-                          Array [
-                            Object {
-                              "borderRadius": NaN,
-                              "height": undefined,
-                              "justifyContent": "center",
-                              "width": undefined,
-                            },
-                            Object {
-                              "backgroundColor": "#e5e5e5",
-                              "borderColor": "#e5e5e5",
-                            },
-                          ]
-                        }
-                      />
-                      <View
-                        style={
-                          Object {
-                            "alignSelf": "flex-start",
-                            "backgroundColor": "#fff",
-                            "borderRadius": NaN,
-                            "elevation": 2,
-                            "height": undefined,
-                            "position": "absolute",
-                            "shadowColor": "rgba(0, 0, 0, 0.3)",
-                            "shadowOffset": Object {
-                              "height": 3,
-                              "width": 0,
-                            },
-                            "shadowOpacity": 1,
-                            "shadowRadius": 3,
-                            "transform": Array [
-                              Object {
-                                "translateX": NaN,
-                              },
-                            ],
-                            "width": undefined,
-                          }
-                        }
-                      />
-                    </View>
-                  </View>
+                  />
                 </View>
               </View>
             </View>
@@ -3256,14 +2951,14 @@ exports[`List Component basic render 2`] = `
             "alignItems": "center",
             "backgroundColor": "#fff",
             "flexDirection": "row",
-            "height": 48,
+            "height": 56,
             "justifyContent": "center",
           },
           Array [
             Object {
               "borderBottomLeftRadius": 0,
               "borderBottomRightRadius": 0,
-              "height": 68,
+              "height": 76,
               "marginTop": 12,
               "paddingBottom": 20,
             },
@@ -3286,17 +2981,18 @@ exports[`List Component basic render 2`] = `
           Object {
             "alignItems": "center",
             "alignSelf": "stretch",
-            "borderRightColor": "#e5e5e5",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0.5,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
             "justifyContent": "center",
-            "marginBottom": 12,
-            "marginLeft": 0,
-            "marginRight": 0,
-            "marginTop": 12,
             "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
           }
         }
       >
@@ -3317,7 +3013,7 @@ exports[`List Component basic render 2`] = `
               },
               Array [
                 Object {
-                  "color": "#666",
+                  "color": "rgba(0,0,0,0.7)",
                   "fontSize": 16,
                 },
                 null,
@@ -3344,17 +3040,18 @@ exports[`List Component basic render 2`] = `
           Object {
             "alignItems": "center",
             "alignSelf": "stretch",
-            "borderRightColor": "#e5e5e5",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
             "justifyContent": "center",
-            "marginBottom": 12,
-            "marginLeft": 0,
-            "marginRight": 0,
-            "marginTop": 12,
             "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
           }
         }
       >
@@ -3374,7 +3071,7 @@ exports[`List Component basic render 2`] = `
               },
               Array [
                 Object {
-                  "color": "#333",
+                  "color": "#FF4800",
                   "fontSize": 16,
                   "fontWeight": "bold",
                 },
@@ -3417,11 +3114,11 @@ exports[`List Component basic render 3`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#f5f5f5",
+        "backgroundColor": "#f8f8f8",
         "borderBottomLeftRadius": 0,
         "borderBottomRightRadius": 0,
-        "borderTopLeftRadius": 8,
-        "borderTopRightRadius": 8,
+        "borderTopLeftRadius": 16,
+        "borderTopRightRadius": 16,
         "opacity": 1,
       }
     }
@@ -3433,18 +3130,22 @@ exports[`List Component basic render 3`] = `
             "alignItems": "center",
             "backgroundColor": "#fff",
             "flexDirection": "row",
-            "height": 48,
+            "height": 56,
             "justifyContent": "center",
           },
           Array [
             Object {
               "backgroundColor": "#ffffff",
-              "borderBottomColor": "#e5e5e5",
+              "borderBottomColor": "rgba(0, 0, 0, 0.1)",
               "borderBottomWidth": 0.5,
-              "borderTopLeftRadius": 8,
-              "borderTopRightRadius": 8,
-              "height": 48,
+              "borderTopLeftRadius": 16,
+              "borderTopRightRadius": 16,
+              "height": 56,
               "justifyContent": "space-around",
+              "paddingBottom": 0,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 0,
             },
             Array [
               null,
@@ -3473,7 +3174,7 @@ exports[`List Component basic render 3`] = `
             },
             Array [
               Object {
-                "color": "#333",
+                "color": "rgba(0,0,0,0.9)",
                 "fontSize": 14,
               },
               null,
@@ -3501,7 +3202,7 @@ exports[`List Component basic render 3`] = `
             },
             Array [
               Object {
-                "color": "#999",
+                "color": "rgba(0, 0, 0, .5)",
                 "fontSize": 12,
                 "marginTop": 10,
               },
@@ -3602,6 +3303,7 @@ exports[`List Component basic render 3`] = `
         showBack={false}
         stickyHeaderIndices={Array []}
         subTitle="副标题"
+        switchStyle={Object {}}
         updateCellsBatchingPeriod={50}
         useART={false}
         viewabilityConfigCallbackPairs={Array []}
@@ -3632,7 +3334,7 @@ exports[`List Component basic render 3`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 36,
                   "opacity": 1,
                 }
               }
@@ -3647,8 +3349,8 @@ exports[`List Component basic render 3`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -3733,7 +3435,7 @@ exports[`List Component basic render 3`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 14,
                     }
                   }
                 />
@@ -3741,19 +3443,22 @@ exports[`List Component basic render 3`] = `
             </View>
             <View
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                    "height": 0.5,
-                    "marginLeft": 32,
-                  },
+                Object {
+                  "backgroundColor": undefined,
+                }
+              }
+            >
+              <View
+                style={
                   Object {
                     "backgroundColor": undefined,
-                    "marginLeft": 0,
-                  },
-                ]
-              }
-            />
+                    "height": 0.5,
+                    "marginLeft": 16,
+                    "marginRight": 16,
+                  }
+                }
+              />
+            </View>
           </View>
           <View
             onLayout={[Function]}
@@ -3779,7 +3484,7 @@ exports[`List Component basic render 3`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 36,
                   "opacity": 1,
                 }
               }
@@ -3794,8 +3499,8 @@ exports[`List Component basic render 3`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -3880,7 +3585,7 @@ exports[`List Component basic render 3`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 14,
                     }
                   }
                 >
@@ -3926,9 +3631,9 @@ exports[`List Component basic render 3`] = `
                         fill={
                           Array [
                             0,
-                            0.26666666666666666,
-                            0.8588235294117647,
-                            0.3686274509803922,
+                            1,
+                            0.2823529411764706,
+                            0,
                             1,
                           ]
                         }
@@ -3955,9 +3660,9 @@ exports[`List Component basic render 3`] = `
                         stroke={
                           Array [
                             0,
-                            0.26666666666666666,
-                            0.8588235294117647,
-                            0.3686274509803922,
+                            1,
+                            0.2823529411764706,
+                            0,
                             1,
                           ]
                         }
@@ -3976,19 +3681,22 @@ exports[`List Component basic render 3`] = `
             </View>
             <View
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                    "height": 0.5,
-                    "marginLeft": 32,
-                  },
+                Object {
+                  "backgroundColor": undefined,
+                }
+              }
+            >
+              <View
+                style={
                   Object {
                     "backgroundColor": undefined,
-                    "marginLeft": 0,
-                  },
-                ]
-              }
-            />
+                    "height": 0.5,
+                    "marginLeft": 16,
+                    "marginRight": 16,
+                  }
+                }
+              />
+            </View>
           </View>
           <View
             onLayout={[Function]}
@@ -4014,7 +3722,7 @@ exports[`List Component basic render 3`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 36,
                   "opacity": 1,
                 }
               }
@@ -4029,8 +3737,8 @@ exports[`List Component basic render 3`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -4115,7 +3823,7 @@ exports[`List Component basic render 3`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 14,
                     }
                   }
                 />
@@ -4123,19 +3831,22 @@ exports[`List Component basic render 3`] = `
             </View>
             <View
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                    "height": 0.5,
-                    "marginLeft": 32,
-                  },
+                Object {
+                  "backgroundColor": undefined,
+                }
+              }
+            >
+              <View
+                style={
                   Object {
                     "backgroundColor": undefined,
-                    "marginLeft": 0,
-                  },
-                ]
-              }
-            />
+                    "height": 0.5,
+                    "marginLeft": 16,
+                    "marginRight": 16,
+                  }
+                }
+              />
+            </View>
           </View>
           <View
             onLayout={[Function]}
@@ -4161,7 +3872,7 @@ exports[`List Component basic render 3`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 36,
                   "opacity": 1,
                 }
               }
@@ -4176,8 +3887,8 @@ exports[`List Component basic render 3`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -4262,7 +3973,7 @@ exports[`List Component basic render 3`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 14,
                     }
                   }
                 />
@@ -4270,19 +3981,22 @@ exports[`List Component basic render 3`] = `
             </View>
             <View
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                    "height": 0.5,
-                    "marginLeft": 32,
-                  },
+                Object {
+                  "backgroundColor": undefined,
+                }
+              }
+            >
+              <View
+                style={
                   Object {
                     "backgroundColor": undefined,
-                    "marginLeft": 0,
-                  },
-                ]
-              }
-            />
+                    "height": 0.5,
+                    "marginLeft": 16,
+                    "marginRight": 16,
+                  }
+                }
+              />
+            </View>
           </View>
           <View
             onLayout={[Function]}
@@ -4308,7 +4022,7 @@ exports[`List Component basic render 3`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 36,
                   "opacity": 1,
                 }
               }
@@ -4323,8 +4037,8 @@ exports[`List Component basic render 3`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -4409,7 +4123,7 @@ exports[`List Component basic render 3`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 14,
                     }
                   }
                 />
@@ -4417,19 +4131,22 @@ exports[`List Component basic render 3`] = `
             </View>
             <View
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                    "height": 0.5,
-                    "marginLeft": 32,
-                  },
+                Object {
+                  "backgroundColor": undefined,
+                }
+              }
+            >
+              <View
+                style={
                   Object {
                     "backgroundColor": undefined,
-                    "marginLeft": 0,
-                  },
-                ]
-              }
-            />
+                    "height": 0.5,
+                    "marginLeft": 16,
+                    "marginRight": 16,
+                  }
+                }
+              />
+            </View>
           </View>
           <View
             onLayout={[Function]}
@@ -4455,7 +4172,7 @@ exports[`List Component basic render 3`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 36,
                   "opacity": 1,
                 }
               }
@@ -4470,8 +4187,8 @@ exports[`List Component basic render 3`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -4556,7 +4273,7 @@ exports[`List Component basic render 3`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 14,
                     }
                   }
                 />
@@ -4564,19 +4281,22 @@ exports[`List Component basic render 3`] = `
             </View>
             <View
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                    "height": 0.5,
-                    "marginLeft": 32,
-                  },
+                Object {
+                  "backgroundColor": undefined,
+                }
+              }
+            >
+              <View
+                style={
                   Object {
                     "backgroundColor": undefined,
-                    "marginLeft": 0,
-                  },
-                ]
-              }
-            />
+                    "height": 0.5,
+                    "marginLeft": 16,
+                    "marginRight": 16,
+                  }
+                }
+              />
+            </View>
           </View>
           <View
             onLayout={[Function]}
@@ -4602,7 +4322,7 @@ exports[`List Component basic render 3`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 36,
                   "opacity": 1,
                 }
               }
@@ -4617,8 +4337,8 @@ exports[`List Component basic render 3`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -4703,7 +4423,7 @@ exports[`List Component basic render 3`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 14,
                     }
                   }
                 />
@@ -4720,14 +4440,14 @@ exports[`List Component basic render 3`] = `
             "alignItems": "center",
             "backgroundColor": "#fff",
             "flexDirection": "row",
-            "height": 48,
+            "height": 56,
             "justifyContent": "center",
           },
           Array [
             Object {
               "borderBottomLeftRadius": 0,
               "borderBottomRightRadius": 0,
-              "height": 68,
+              "height": 76,
               "marginTop": 12,
               "paddingBottom": 20,
             },
@@ -4750,17 +4470,18 @@ exports[`List Component basic render 3`] = `
           Object {
             "alignItems": "center",
             "alignSelf": "stretch",
-            "borderRightColor": "#e5e5e5",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0.5,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
             "justifyContent": "center",
-            "marginBottom": 12,
-            "marginLeft": 0,
-            "marginRight": 0,
-            "marginTop": 12,
             "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
           }
         }
       >
@@ -4781,7 +4502,7 @@ exports[`List Component basic render 3`] = `
               },
               Array [
                 Object {
-                  "color": "#666",
+                  "color": "rgba(0,0,0,0.7)",
                   "fontSize": 16,
                 },
                 null,
@@ -4808,17 +4529,18 @@ exports[`List Component basic render 3`] = `
           Object {
             "alignItems": "center",
             "alignSelf": "stretch",
-            "borderRightColor": "#e5e5e5",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
             "justifyContent": "center",
-            "marginBottom": 12,
-            "marginLeft": 0,
-            "marginRight": 0,
-            "marginTop": 12,
             "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
           }
         }
       >
@@ -4838,7 +4560,7 @@ exports[`List Component basic render 3`] = `
               },
               Array [
                 Object {
-                  "color": "#333",
+                  "color": "#FF4800",
                   "fontSize": 16,
                   "fontWeight": "bold",
                 },
@@ -4881,11 +4603,11 @@ exports[`List Component render with contentCenter 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#f5f5f5",
+        "backgroundColor": "#f8f8f8",
         "borderBottomLeftRadius": 0,
         "borderBottomRightRadius": 0,
-        "borderTopLeftRadius": 8,
-        "borderTopRightRadius": 8,
+        "borderTopLeftRadius": 16,
+        "borderTopRightRadius": 16,
         "opacity": 1,
       }
     }
@@ -4897,18 +4619,22 @@ exports[`List Component render with contentCenter 1`] = `
             "alignItems": "center",
             "backgroundColor": "#fff",
             "flexDirection": "row",
-            "height": 48,
+            "height": 56,
             "justifyContent": "center",
           },
           Array [
             Object {
               "backgroundColor": "#ffffff",
-              "borderBottomColor": "#e5e5e5",
+              "borderBottomColor": "rgba(0, 0, 0, 0.1)",
               "borderBottomWidth": 0.5,
-              "borderTopLeftRadius": 8,
-              "borderTopRightRadius": 8,
-              "height": 48,
+              "borderTopLeftRadius": 16,
+              "borderTopRightRadius": 16,
+              "height": 56,
               "justifyContent": "space-around",
+              "paddingBottom": 0,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 0,
             },
             Array [
               null,
@@ -4937,7 +4663,7 @@ exports[`List Component render with contentCenter 1`] = `
             },
             Array [
               Object {
-                "color": "#333",
+                "color": "rgba(0,0,0,0.9)",
                 "fontSize": 14,
               },
               null,
@@ -4965,7 +4691,7 @@ exports[`List Component render with contentCenter 1`] = `
             },
             Array [
               Object {
-                "color": "#999",
+                "color": "rgba(0, 0, 0, .5)",
                 "fontSize": 12,
                 "marginTop": 10,
               },
@@ -4986,7 +4712,7 @@ exports[`List Component render with contentCenter 1`] = `
           null,
           false,
           Object {
-            "height": 336,
+            "height": 392,
           },
         ]
       }
@@ -5066,6 +4792,7 @@ exports[`List Component render with contentCenter 1`] = `
         showBack={false}
         stickyHeaderIndices={Array []}
         subTitle="副标题"
+        switchStyle={Object {}}
         updateCellsBatchingPeriod={50}
         useART={false}
         viewabilityConfigCallbackPairs={Array []}
@@ -5091,12 +4818,11 @@ exports[`List Component render with contentCenter 1`] = `
                   "backgroundColor": "#ccc",
                   "borderRadius": 0,
                   "flexGrow": 0,
-                  "height": 48,
                   "marginBottom": 0,
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -5111,8 +4837,8 @@ exports[`List Component render with contentCenter 1`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -5197,7 +4923,7 @@ exports[`List Component render with contentCenter 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 14,
                     }
                   }
                 />
@@ -5205,19 +4931,22 @@ exports[`List Component render with contentCenter 1`] = `
             </View>
             <View
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                    "height": 0.5,
-                    "marginLeft": 32,
-                  },
+                Object {
+                  "backgroundColor": undefined,
+                }
+              }
+            >
+              <View
+                style={
                   Object {
                     "backgroundColor": undefined,
-                    "marginLeft": 0,
-                  },
-                ]
-              }
-            />
+                    "height": 0.5,
+                    "marginLeft": 16,
+                    "marginRight": 16,
+                  }
+                }
+              />
+            </View>
           </View>
           <View
             onLayout={[Function]}
@@ -5238,12 +4967,11 @@ exports[`List Component render with contentCenter 1`] = `
                   "backgroundColor": "#ccc",
                   "borderRadius": 0,
                   "flexGrow": 0,
-                  "height": 48,
                   "marginBottom": 0,
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -5258,8 +4986,8 @@ exports[`List Component render with contentCenter 1`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -5344,7 +5072,7 @@ exports[`List Component render with contentCenter 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 14,
                     }
                   }
                 />
@@ -5352,19 +5080,22 @@ exports[`List Component render with contentCenter 1`] = `
             </View>
             <View
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                    "height": 0.5,
-                    "marginLeft": 32,
-                  },
+                Object {
+                  "backgroundColor": undefined,
+                }
+              }
+            >
+              <View
+                style={
                   Object {
                     "backgroundColor": undefined,
-                    "marginLeft": 0,
-                  },
-                ]
-              }
-            />
+                    "height": 0.5,
+                    "marginLeft": 16,
+                    "marginRight": 16,
+                  }
+                }
+              />
+            </View>
           </View>
           <View
             onLayout={[Function]}
@@ -5385,12 +5116,11 @@ exports[`List Component render with contentCenter 1`] = `
                   "backgroundColor": "#ccc",
                   "borderRadius": 0,
                   "flexGrow": 0,
-                  "height": 48,
                   "marginBottom": 0,
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -5405,8 +5135,8 @@ exports[`List Component render with contentCenter 1`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -5491,7 +5221,7 @@ exports[`List Component render with contentCenter 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 14,
                     }
                   }
                 />
@@ -5499,19 +5229,22 @@ exports[`List Component render with contentCenter 1`] = `
             </View>
             <View
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                    "height": 0.5,
-                    "marginLeft": 32,
-                  },
+                Object {
+                  "backgroundColor": undefined,
+                }
+              }
+            >
+              <View
+                style={
                   Object {
                     "backgroundColor": undefined,
-                    "marginLeft": 0,
-                  },
-                ]
-              }
-            />
+                    "height": 0.5,
+                    "marginLeft": 16,
+                    "marginRight": 16,
+                  }
+                }
+              />
+            </View>
           </View>
           <View
             onLayout={[Function]}
@@ -5532,12 +5265,11 @@ exports[`List Component render with contentCenter 1`] = `
                   "backgroundColor": "#ccc",
                   "borderRadius": 0,
                   "flexGrow": 0,
-                  "height": 48,
                   "marginBottom": 0,
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -5552,8 +5284,8 @@ exports[`List Component render with contentCenter 1`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -5638,7 +5370,7 @@ exports[`List Component render with contentCenter 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 14,
                     }
                   }
                 />
@@ -5646,19 +5378,22 @@ exports[`List Component render with contentCenter 1`] = `
             </View>
             <View
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                    "height": 0.5,
-                    "marginLeft": 32,
-                  },
+                Object {
+                  "backgroundColor": undefined,
+                }
+              }
+            >
+              <View
+                style={
                   Object {
                     "backgroundColor": undefined,
-                    "marginLeft": 0,
-                  },
-                ]
-              }
-            />
+                    "height": 0.5,
+                    "marginLeft": 16,
+                    "marginRight": 16,
+                  }
+                }
+              />
+            </View>
           </View>
           <View
             onLayout={[Function]}
@@ -5679,12 +5414,11 @@ exports[`List Component render with contentCenter 1`] = `
                   "backgroundColor": "#ccc",
                   "borderRadius": 0,
                   "flexGrow": 0,
-                  "height": 48,
                   "marginBottom": 0,
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -5699,8 +5433,8 @@ exports[`List Component render with contentCenter 1`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -5785,7 +5519,7 @@ exports[`List Component render with contentCenter 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 14,
                     }
                   }
                 />
@@ -5793,19 +5527,22 @@ exports[`List Component render with contentCenter 1`] = `
             </View>
             <View
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                    "height": 0.5,
-                    "marginLeft": 32,
-                  },
+                Object {
+                  "backgroundColor": undefined,
+                }
+              }
+            >
+              <View
+                style={
                   Object {
                     "backgroundColor": undefined,
-                    "marginLeft": 0,
-                  },
-                ]
-              }
-            />
+                    "height": 0.5,
+                    "marginLeft": 16,
+                    "marginRight": 16,
+                  }
+                }
+              />
+            </View>
           </View>
           <View
             onLayout={[Function]}
@@ -5826,12 +5563,11 @@ exports[`List Component render with contentCenter 1`] = `
                   "backgroundColor": "#ccc",
                   "borderRadius": 0,
                   "flexGrow": 0,
-                  "height": 48,
                   "marginBottom": 0,
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -5846,8 +5582,8 @@ exports[`List Component render with contentCenter 1`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -5932,7 +5668,7 @@ exports[`List Component render with contentCenter 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 14,
                     }
                   }
                 />
@@ -5940,19 +5676,22 @@ exports[`List Component render with contentCenter 1`] = `
             </View>
             <View
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                    "height": 0.5,
-                    "marginLeft": 32,
-                  },
+                Object {
+                  "backgroundColor": undefined,
+                }
+              }
+            >
+              <View
+                style={
                   Object {
                     "backgroundColor": undefined,
-                    "marginLeft": 0,
-                  },
-                ]
-              }
-            />
+                    "height": 0.5,
+                    "marginLeft": 16,
+                    "marginRight": 16,
+                  }
+                }
+              />
+            </View>
           </View>
           <View
             onLayout={[Function]}
@@ -5973,12 +5712,11 @@ exports[`List Component render with contentCenter 1`] = `
                   "backgroundColor": "#ccc",
                   "borderRadius": 0,
                   "flexGrow": 0,
-                  "height": 48,
                   "marginBottom": 0,
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -5993,8 +5731,8 @@ exports[`List Component render with contentCenter 1`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -6079,7 +5817,7 @@ exports[`List Component render with contentCenter 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 14,
                     }
                   }
                 />
@@ -6096,14 +5834,14 @@ exports[`List Component render with contentCenter 1`] = `
             "alignItems": "center",
             "backgroundColor": "#fff",
             "flexDirection": "row",
-            "height": 48,
+            "height": 56,
             "justifyContent": "center",
           },
           Array [
             Object {
               "borderBottomLeftRadius": 0,
               "borderBottomRightRadius": 0,
-              "height": 68,
+              "height": 76,
               "marginTop": 12,
               "paddingBottom": 20,
             },
@@ -6126,17 +5864,18 @@ exports[`List Component render with contentCenter 1`] = `
           Object {
             "alignItems": "center",
             "alignSelf": "stretch",
-            "borderRightColor": "#e5e5e5",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0.5,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
             "justifyContent": "center",
-            "marginBottom": 12,
-            "marginLeft": 0,
-            "marginRight": 0,
-            "marginTop": 12,
             "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
           }
         }
       >
@@ -6157,7 +5896,7 @@ exports[`List Component render with contentCenter 1`] = `
               },
               Array [
                 Object {
-                  "color": "#666",
+                  "color": "rgba(0,0,0,0.7)",
                   "fontSize": 16,
                 },
                 null,
@@ -6184,17 +5923,18 @@ exports[`List Component render with contentCenter 1`] = `
           Object {
             "alignItems": "center",
             "alignSelf": "stretch",
-            "borderRightColor": "#e5e5e5",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
             "justifyContent": "center",
-            "marginBottom": 12,
-            "marginLeft": 0,
-            "marginRight": 0,
-            "marginTop": 12,
             "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
           }
         }
       >
@@ -6214,7 +5954,7 @@ exports[`List Component render with contentCenter 1`] = `
               },
               Array [
                 Object {
-                  "color": "#333",
+                  "color": "#FF4800",
                   "fontSize": 16,
                   "fontWeight": "bold",
                 },
@@ -6245,11 +5985,11 @@ exports[`List Component render with listItemStyle 1`] = `
   onStartShouldSetResponder={[Function]}
   style={
     Object {
-      "backgroundColor": "#f5f5f5",
+      "backgroundColor": "#f8f8f8",
       "borderBottomLeftRadius": 0,
       "borderBottomRightRadius": 0,
-      "borderTopLeftRadius": 8,
-      "borderTopRightRadius": 8,
+      "borderTopLeftRadius": 16,
+      "borderTopRightRadius": 16,
       "opacity": 1,
     }
   }
@@ -6261,18 +6001,22 @@ exports[`List Component render with listItemStyle 1`] = `
           "alignItems": "center",
           "backgroundColor": "#fff",
           "flexDirection": "row",
-          "height": 48,
+          "height": 56,
           "justifyContent": "center",
         },
         Array [
           Object {
             "backgroundColor": "#ffffff",
-            "borderBottomColor": "#e5e5e5",
+            "borderBottomColor": "rgba(0, 0, 0, 0.1)",
             "borderBottomWidth": 0.5,
-            "borderTopLeftRadius": 8,
-            "borderTopRightRadius": 8,
-            "height": 48,
+            "borderTopLeftRadius": 16,
+            "borderTopRightRadius": 16,
+            "height": 56,
             "justifyContent": "space-around",
+            "paddingBottom": 0,
+            "paddingLeft": 16,
+            "paddingRight": 16,
+            "paddingTop": 0,
           },
           Array [
             null,
@@ -6301,7 +6045,7 @@ exports[`List Component render with listItemStyle 1`] = `
           },
           Array [
             Object {
-              "color": "#333",
+              "color": "rgba(0,0,0,0.9)",
               "fontSize": 14,
             },
             null,
@@ -6329,7 +6073,7 @@ exports[`List Component render with listItemStyle 1`] = `
           },
           Array [
             Object {
-              "color": "#999",
+              "color": "rgba(0, 0, 0, .5)",
               "fontSize": 12,
               "marginTop": 10,
             },
@@ -6350,7 +6094,7 @@ exports[`List Component render with listItemStyle 1`] = `
         null,
         false,
         Object {
-          "height": 336,
+          "height": 392,
         },
       ]
     }
@@ -6430,6 +6174,7 @@ exports[`List Component render with listItemStyle 1`] = `
       showBack={false}
       stickyHeaderIndices={Array []}
       subTitle="副标题"
+      switchStyle={Object {}}
       updateCellsBatchingPeriod={50}
       useART={false}
       viewabilityConfigCallbackPairs={Array []}
@@ -6455,12 +6200,11 @@ exports[`List Component render with listItemStyle 1`] = `
                 "backgroundColor": "#ccc",
                 "borderRadius": 0,
                 "flexGrow": 0,
-                "height": 48,
                 "marginBottom": 0,
                 "marginLeft": 0,
                 "marginRight": 0,
                 "marginTop": 0,
-                "minHeight": 48,
+                "minHeight": 56,
                 "opacity": 1,
               }
             }
@@ -6475,8 +6219,8 @@ exports[`List Component render with listItemStyle 1`] = `
                     "flexDirection": "row",
                     "opacity": 1,
                     "paddingBottom": 12,
-                    "paddingLeft": 32,
-                    "paddingRight": 32,
+                    "paddingLeft": 28,
+                    "paddingRight": 28,
                     "paddingTop": 12,
                   },
                   Array [
@@ -6531,7 +6275,7 @@ exports[`List Component render with listItemStyle 1`] = `
                             Object {
                               "color": undefined,
                               "fontSize": undefined,
-                              "textAlign": "left",
+                              "textAlign": "center",
                             },
                             undefined,
                           ],
@@ -6561,106 +6305,47 @@ exports[`List Component render with listItemStyle 1`] = `
                     "marginLeft": 20,
                     "opacity": 1,
                     "position": "absolute",
-                    "right": 16,
+                    "right": 14,
                   }
                 }
               >
                 <View
-                  needsOffscreenAlphaCompositing={true}
+                  active={false}
                   style={
                     Array [
-                      Array [
-                        Object {},
-                        Object {
-                          "right": 0,
-                        },
-                      ],
-                      false,
+                      Object {
+                        "backgroundColor": "transparent",
+                        "borderColor": "#e5e5e5",
+                        "borderRadius": 9,
+                        "borderWidth": 1,
+                        "height": 18,
+                        "width": 18,
+                      },
+                      Object {},
                     ]
                   }
-                >
-                  <View
-                    accessibilityLabel="SwitchButton"
-                    accessible={true}
-                    isTVSelectable={true}
-                    onResponderGrant={[Function]}
-                    onResponderMove={[Function]}
-                    onResponderRelease={[Function]}
-                    onResponderTerminate={[Function]}
-                    onResponderTerminationRequest={[Function]}
-                    onStartShouldSetResponder={[Function]}
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "backgroundColor": "transparent",
-                        "height": NaN,
-                        "justifyContent": "center",
-                        "opacity": 1,
-                        "width": NaN,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Array [
-                          Object {
-                            "borderRadius": NaN,
-                            "height": undefined,
-                            "justifyContent": "center",
-                            "width": undefined,
-                          },
-                          Object {
-                            "backgroundColor": "#e5e5e5",
-                            "borderColor": "#e5e5e5",
-                          },
-                        ]
-                      }
-                    />
-                    <View
-                      style={
-                        Object {
-                          "alignSelf": "flex-start",
-                          "backgroundColor": "#fff",
-                          "borderRadius": NaN,
-                          "elevation": 2,
-                          "height": undefined,
-                          "position": "absolute",
-                          "shadowColor": "rgba(0, 0, 0, 0.3)",
-                          "shadowOffset": Object {
-                            "height": 3,
-                            "width": 0,
-                          },
-                          "shadowOpacity": 1,
-                          "shadowRadius": 3,
-                          "transform": Array [
-                            Object {
-                              "translateX": NaN,
-                            },
-                          ],
-                          "width": undefined,
-                        }
-                      }
-                    />
-                  </View>
-                </View>
+                />
               </View>
             </View>
           </View>
           <View
             style={
-              Array [
-                Object {
-                  "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                  "height": 0.5,
-                  "marginLeft": 32,
-                },
+              Object {
+                "backgroundColor": undefined,
+              }
+            }
+          >
+            <View
+              style={
                 Object {
                   "backgroundColor": undefined,
-                  "marginLeft": 0,
-                },
-              ]
-            }
-          />
+                  "height": 0.5,
+                  "marginLeft": 16,
+                  "marginRight": 16,
+                }
+              }
+            />
+          </View>
         </View>
         <View
           onLayout={[Function]}
@@ -6681,12 +6366,11 @@ exports[`List Component render with listItemStyle 1`] = `
                 "backgroundColor": "#ccc",
                 "borderRadius": 0,
                 "flexGrow": 0,
-                "height": 48,
                 "marginBottom": 0,
                 "marginLeft": 0,
                 "marginRight": 0,
                 "marginTop": 0,
-                "minHeight": 48,
+                "minHeight": 56,
                 "opacity": 1,
               }
             }
@@ -6701,8 +6385,8 @@ exports[`List Component render with listItemStyle 1`] = `
                     "flexDirection": "row",
                     "opacity": 1,
                     "paddingBottom": 12,
-                    "paddingLeft": 32,
-                    "paddingRight": 32,
+                    "paddingLeft": 28,
+                    "paddingRight": 28,
                     "paddingTop": 12,
                   },
                   Array [
@@ -6757,7 +6441,7 @@ exports[`List Component render with listItemStyle 1`] = `
                             Object {
                               "color": undefined,
                               "fontSize": undefined,
-                              "textAlign": "left",
+                              "textAlign": "center",
                             },
                             undefined,
                           ],
@@ -6787,86 +6471,112 @@ exports[`List Component render with listItemStyle 1`] = `
                     "marginLeft": 20,
                     "opacity": 1,
                     "position": "absolute",
-                    "right": 16,
+                    "right": 14,
                   }
                 }
               >
                 <View
-                  needsOffscreenAlphaCompositing={true}
+                  active={true}
                   style={
                     Array [
-                      Array [
-                        Object {},
-                        Object {
-                          "right": 0,
-                        },
-                      ],
-                      false,
+                      Object {
+                        "backgroundColor": "#FF4800",
+                        "borderColor": "#FF4800",
+                        "borderRadius": 9,
+                        "borderWidth": 1,
+                        "height": 18,
+                        "width": 18,
+                      },
+                      Object {},
                     ]
                   }
                 >
                   <View
-                    accessibilityLabel="SwitchButton"
-                    accessible={true}
-                    isTVSelectable={true}
-                    onResponderGrant={[Function]}
-                    onResponderMove={[Function]}
-                    onResponderRelease={[Function]}
-                    onResponderTerminate={[Function]}
-                    onResponderTerminationRequest={[Function]}
-                    onStartShouldSetResponder={[Function]}
                     style={
-                      Object {
-                        "alignItems": "center",
-                        "backgroundColor": "transparent",
-                        "height": NaN,
-                        "justifyContent": "center",
-                        "opacity": 1,
-                        "width": NaN,
-                      }
+                      Array [
+                        Object {
+                          "flexDirection": "row",
+                        },
+                        Object {
+                          "height": 18,
+                          "width": 18,
+                        },
+                        false,
+                        null,
+                      ]
                     }
                   >
-                    <View
+                    <RNSVGSvgView
+                      align="xMidYMid"
+                      meetOrSlice={0}
+                      minX={0}
+                      minY={0}
                       style={
                         Array [
                           Object {
-                            "borderRadius": NaN,
-                            "height": undefined,
-                            "justifyContent": "center",
-                            "width": undefined,
+                            "backgroundColor": "transparent",
                           },
+                          undefined,
+                          false,
                           Object {
-                            "backgroundColor": "#44DB5E",
-                            "borderColor": "#44DB5E",
+                            "flex": 0,
+                            "height": 18,
+                            "width": 18,
                           },
                         ]
                       }
-                    />
-                    <View
-                      style={
-                        Object {
-                          "alignSelf": "flex-start",
-                          "backgroundColor": "#fff",
-                          "borderRadius": NaN,
-                          "elevation": 2,
-                          "height": undefined,
-                          "position": "absolute",
-                          "shadowColor": "rgba(0, 0, 0, 0.3)",
-                          "shadowOffset": Object {
-                            "height": 3,
-                            "width": 0,
-                          },
-                          "shadowOpacity": 1,
-                          "shadowRadius": 3,
-                          "transform": Array [
-                            Object {
-                              "translateX": NaN,
-                            },
-                          ],
-                          "width": undefined,
+                      vbHeight={1024}
+                      vbWidth={1024}
+                    >
+                      <RNSVGPath
+                        d="M288.67 521.63l18.69-25.26a5.217 5.217 0 0 1 7.29-1.09c0.02 0.01 0.04 0.03 0.06 0.04l113.01 86.01a5.216 5.216 0 0 0 6.48-0.13l275.9-228.25a5.22 5.22 0 0 1 6.97 0.29l17.32 16.98a5.212 5.212 0 0 1 0.07 7.37l-0.08 0.08-299.65 292.84a5.221 5.221 0 0 1-7.37-0.08l-0.01-0.01-138.22-142.06a5.206 5.206 0 0 1-0.46-6.73z"
+                        fill={
+                          Array [
+                            0,
+                            0.8980392156862745,
+                            0.8980392156862745,
+                            0.8980392156862745,
+                            1,
+                          ]
                         }
-                      }
-                    />
+                        fillOpacity={1}
+                        fillRule={1}
+                        matrix={
+                          Array [
+                            1,
+                            0,
+                            0,
+                            1,
+                            0,
+                            0,
+                          ]
+                        }
+                        opacity={1}
+                        propList={
+                          Array [
+                            "stroke",
+                            "strokeWidth",
+                            "fill",
+                          ]
+                        }
+                        stroke={
+                          Array [
+                            0,
+                            0.8980392156862745,
+                            0.8980392156862745,
+                            0.8980392156862745,
+                            1,
+                          ]
+                        }
+                        strokeDasharray={null}
+                        strokeDashoffset={null}
+                        strokeLinecap={0}
+                        strokeLinejoin={0}
+                        strokeMiterlimit={4}
+                        strokeOpacity={1}
+                        strokeWidth={1}
+                      />
+                    </RNSVGSvgView>
                   </View>
                 </View>
               </View>
@@ -6874,19 +6584,22 @@ exports[`List Component render with listItemStyle 1`] = `
           </View>
           <View
             style={
-              Array [
-                Object {
-                  "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                  "height": 0.5,
-                  "marginLeft": 32,
-                },
+              Object {
+                "backgroundColor": undefined,
+              }
+            }
+          >
+            <View
+              style={
                 Object {
                   "backgroundColor": undefined,
-                  "marginLeft": 0,
-                },
-              ]
-            }
-          />
+                  "height": 0.5,
+                  "marginLeft": 16,
+                  "marginRight": 16,
+                }
+              }
+            />
+          </View>
         </View>
         <View
           onLayout={[Function]}
@@ -6907,12 +6620,11 @@ exports[`List Component render with listItemStyle 1`] = `
                 "backgroundColor": "#ccc",
                 "borderRadius": 0,
                 "flexGrow": 0,
-                "height": 48,
                 "marginBottom": 0,
                 "marginLeft": 0,
                 "marginRight": 0,
                 "marginTop": 0,
-                "minHeight": 48,
+                "minHeight": 56,
                 "opacity": 1,
               }
             }
@@ -6927,8 +6639,8 @@ exports[`List Component render with listItemStyle 1`] = `
                     "flexDirection": "row",
                     "opacity": 1,
                     "paddingBottom": 12,
-                    "paddingLeft": 32,
-                    "paddingRight": 32,
+                    "paddingLeft": 28,
+                    "paddingRight": 28,
                     "paddingTop": 12,
                   },
                   Array [
@@ -6983,7 +6695,7 @@ exports[`List Component render with listItemStyle 1`] = `
                             Object {
                               "color": undefined,
                               "fontSize": undefined,
-                              "textAlign": "left",
+                              "textAlign": "center",
                             },
                             undefined,
                           ],
@@ -7013,106 +6725,47 @@ exports[`List Component render with listItemStyle 1`] = `
                     "marginLeft": 20,
                     "opacity": 1,
                     "position": "absolute",
-                    "right": 16,
+                    "right": 14,
                   }
                 }
               >
                 <View
-                  needsOffscreenAlphaCompositing={true}
+                  active={false}
                   style={
                     Array [
-                      Array [
-                        Object {},
-                        Object {
-                          "right": 0,
-                        },
-                      ],
-                      false,
+                      Object {
+                        "backgroundColor": "transparent",
+                        "borderColor": "#e5e5e5",
+                        "borderRadius": 9,
+                        "borderWidth": 1,
+                        "height": 18,
+                        "width": 18,
+                      },
+                      Object {},
                     ]
                   }
-                >
-                  <View
-                    accessibilityLabel="SwitchButton"
-                    accessible={true}
-                    isTVSelectable={true}
-                    onResponderGrant={[Function]}
-                    onResponderMove={[Function]}
-                    onResponderRelease={[Function]}
-                    onResponderTerminate={[Function]}
-                    onResponderTerminationRequest={[Function]}
-                    onStartShouldSetResponder={[Function]}
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "backgroundColor": "transparent",
-                        "height": NaN,
-                        "justifyContent": "center",
-                        "opacity": 1,
-                        "width": NaN,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Array [
-                          Object {
-                            "borderRadius": NaN,
-                            "height": undefined,
-                            "justifyContent": "center",
-                            "width": undefined,
-                          },
-                          Object {
-                            "backgroundColor": "#e5e5e5",
-                            "borderColor": "#e5e5e5",
-                          },
-                        ]
-                      }
-                    />
-                    <View
-                      style={
-                        Object {
-                          "alignSelf": "flex-start",
-                          "backgroundColor": "#fff",
-                          "borderRadius": NaN,
-                          "elevation": 2,
-                          "height": undefined,
-                          "position": "absolute",
-                          "shadowColor": "rgba(0, 0, 0, 0.3)",
-                          "shadowOffset": Object {
-                            "height": 3,
-                            "width": 0,
-                          },
-                          "shadowOpacity": 1,
-                          "shadowRadius": 3,
-                          "transform": Array [
-                            Object {
-                              "translateX": NaN,
-                            },
-                          ],
-                          "width": undefined,
-                        }
-                      }
-                    />
-                  </View>
-                </View>
+                />
               </View>
             </View>
           </View>
           <View
             style={
-              Array [
-                Object {
-                  "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                  "height": 0.5,
-                  "marginLeft": 32,
-                },
+              Object {
+                "backgroundColor": undefined,
+              }
+            }
+          >
+            <View
+              style={
                 Object {
                   "backgroundColor": undefined,
-                  "marginLeft": 0,
-                },
-              ]
-            }
-          />
+                  "height": 0.5,
+                  "marginLeft": 16,
+                  "marginRight": 16,
+                }
+              }
+            />
+          </View>
         </View>
         <View
           onLayout={[Function]}
@@ -7133,12 +6786,11 @@ exports[`List Component render with listItemStyle 1`] = `
                 "backgroundColor": "#ccc",
                 "borderRadius": 0,
                 "flexGrow": 0,
-                "height": 48,
                 "marginBottom": 0,
                 "marginLeft": 0,
                 "marginRight": 0,
                 "marginTop": 0,
-                "minHeight": 48,
+                "minHeight": 56,
                 "opacity": 1,
               }
             }
@@ -7153,8 +6805,8 @@ exports[`List Component render with listItemStyle 1`] = `
                     "flexDirection": "row",
                     "opacity": 1,
                     "paddingBottom": 12,
-                    "paddingLeft": 32,
-                    "paddingRight": 32,
+                    "paddingLeft": 28,
+                    "paddingRight": 28,
                     "paddingTop": 12,
                   },
                   Array [
@@ -7209,7 +6861,7 @@ exports[`List Component render with listItemStyle 1`] = `
                             Object {
                               "color": undefined,
                               "fontSize": undefined,
-                              "textAlign": "left",
+                              "textAlign": "center",
                             },
                             undefined,
                           ],
@@ -7239,106 +6891,47 @@ exports[`List Component render with listItemStyle 1`] = `
                     "marginLeft": 20,
                     "opacity": 1,
                     "position": "absolute",
-                    "right": 16,
+                    "right": 14,
                   }
                 }
               >
                 <View
-                  needsOffscreenAlphaCompositing={true}
+                  active={false}
                   style={
                     Array [
-                      Array [
-                        Object {},
-                        Object {
-                          "right": 0,
-                        },
-                      ],
-                      false,
+                      Object {
+                        "backgroundColor": "transparent",
+                        "borderColor": "#e5e5e5",
+                        "borderRadius": 9,
+                        "borderWidth": 1,
+                        "height": 18,
+                        "width": 18,
+                      },
+                      Object {},
                     ]
                   }
-                >
-                  <View
-                    accessibilityLabel="SwitchButton"
-                    accessible={true}
-                    isTVSelectable={true}
-                    onResponderGrant={[Function]}
-                    onResponderMove={[Function]}
-                    onResponderRelease={[Function]}
-                    onResponderTerminate={[Function]}
-                    onResponderTerminationRequest={[Function]}
-                    onStartShouldSetResponder={[Function]}
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "backgroundColor": "transparent",
-                        "height": NaN,
-                        "justifyContent": "center",
-                        "opacity": 1,
-                        "width": NaN,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Array [
-                          Object {
-                            "borderRadius": NaN,
-                            "height": undefined,
-                            "justifyContent": "center",
-                            "width": undefined,
-                          },
-                          Object {
-                            "backgroundColor": "#e5e5e5",
-                            "borderColor": "#e5e5e5",
-                          },
-                        ]
-                      }
-                    />
-                    <View
-                      style={
-                        Object {
-                          "alignSelf": "flex-start",
-                          "backgroundColor": "#fff",
-                          "borderRadius": NaN,
-                          "elevation": 2,
-                          "height": undefined,
-                          "position": "absolute",
-                          "shadowColor": "rgba(0, 0, 0, 0.3)",
-                          "shadowOffset": Object {
-                            "height": 3,
-                            "width": 0,
-                          },
-                          "shadowOpacity": 1,
-                          "shadowRadius": 3,
-                          "transform": Array [
-                            Object {
-                              "translateX": NaN,
-                            },
-                          ],
-                          "width": undefined,
-                        }
-                      }
-                    />
-                  </View>
-                </View>
+                />
               </View>
             </View>
           </View>
           <View
             style={
-              Array [
-                Object {
-                  "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                  "height": 0.5,
-                  "marginLeft": 32,
-                },
+              Object {
+                "backgroundColor": undefined,
+              }
+            }
+          >
+            <View
+              style={
                 Object {
                   "backgroundColor": undefined,
-                  "marginLeft": 0,
-                },
-              ]
-            }
-          />
+                  "height": 0.5,
+                  "marginLeft": 16,
+                  "marginRight": 16,
+                }
+              }
+            />
+          </View>
         </View>
         <View
           onLayout={[Function]}
@@ -7359,12 +6952,11 @@ exports[`List Component render with listItemStyle 1`] = `
                 "backgroundColor": "#ccc",
                 "borderRadius": 0,
                 "flexGrow": 0,
-                "height": 48,
                 "marginBottom": 0,
                 "marginLeft": 0,
                 "marginRight": 0,
                 "marginTop": 0,
-                "minHeight": 48,
+                "minHeight": 56,
                 "opacity": 1,
               }
             }
@@ -7379,8 +6971,8 @@ exports[`List Component render with listItemStyle 1`] = `
                     "flexDirection": "row",
                     "opacity": 1,
                     "paddingBottom": 12,
-                    "paddingLeft": 32,
-                    "paddingRight": 32,
+                    "paddingLeft": 28,
+                    "paddingRight": 28,
                     "paddingTop": 12,
                   },
                   Array [
@@ -7435,7 +7027,7 @@ exports[`List Component render with listItemStyle 1`] = `
                             Object {
                               "color": undefined,
                               "fontSize": undefined,
-                              "textAlign": "left",
+                              "textAlign": "center",
                             },
                             undefined,
                           ],
@@ -7465,106 +7057,47 @@ exports[`List Component render with listItemStyle 1`] = `
                     "marginLeft": 20,
                     "opacity": 1,
                     "position": "absolute",
-                    "right": 16,
+                    "right": 14,
                   }
                 }
               >
                 <View
-                  needsOffscreenAlphaCompositing={true}
+                  active={false}
                   style={
                     Array [
-                      Array [
-                        Object {},
-                        Object {
-                          "right": 0,
-                        },
-                      ],
-                      false,
+                      Object {
+                        "backgroundColor": "transparent",
+                        "borderColor": "#e5e5e5",
+                        "borderRadius": 9,
+                        "borderWidth": 1,
+                        "height": 18,
+                        "width": 18,
+                      },
+                      Object {},
                     ]
                   }
-                >
-                  <View
-                    accessibilityLabel="SwitchButton"
-                    accessible={true}
-                    isTVSelectable={true}
-                    onResponderGrant={[Function]}
-                    onResponderMove={[Function]}
-                    onResponderRelease={[Function]}
-                    onResponderTerminate={[Function]}
-                    onResponderTerminationRequest={[Function]}
-                    onStartShouldSetResponder={[Function]}
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "backgroundColor": "transparent",
-                        "height": NaN,
-                        "justifyContent": "center",
-                        "opacity": 1,
-                        "width": NaN,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Array [
-                          Object {
-                            "borderRadius": NaN,
-                            "height": undefined,
-                            "justifyContent": "center",
-                            "width": undefined,
-                          },
-                          Object {
-                            "backgroundColor": "#e5e5e5",
-                            "borderColor": "#e5e5e5",
-                          },
-                        ]
-                      }
-                    />
-                    <View
-                      style={
-                        Object {
-                          "alignSelf": "flex-start",
-                          "backgroundColor": "#fff",
-                          "borderRadius": NaN,
-                          "elevation": 2,
-                          "height": undefined,
-                          "position": "absolute",
-                          "shadowColor": "rgba(0, 0, 0, 0.3)",
-                          "shadowOffset": Object {
-                            "height": 3,
-                            "width": 0,
-                          },
-                          "shadowOpacity": 1,
-                          "shadowRadius": 3,
-                          "transform": Array [
-                            Object {
-                              "translateX": NaN,
-                            },
-                          ],
-                          "width": undefined,
-                        }
-                      }
-                    />
-                  </View>
-                </View>
+                />
               </View>
             </View>
           </View>
           <View
             style={
-              Array [
-                Object {
-                  "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                  "height": 0.5,
-                  "marginLeft": 32,
-                },
+              Object {
+                "backgroundColor": undefined,
+              }
+            }
+          >
+            <View
+              style={
                 Object {
                   "backgroundColor": undefined,
-                  "marginLeft": 0,
-                },
-              ]
-            }
-          />
+                  "height": 0.5,
+                  "marginLeft": 16,
+                  "marginRight": 16,
+                }
+              }
+            />
+          </View>
         </View>
         <View
           onLayout={[Function]}
@@ -7585,12 +7118,11 @@ exports[`List Component render with listItemStyle 1`] = `
                 "backgroundColor": "#ccc",
                 "borderRadius": 0,
                 "flexGrow": 0,
-                "height": 48,
                 "marginBottom": 0,
                 "marginLeft": 0,
                 "marginRight": 0,
                 "marginTop": 0,
-                "minHeight": 48,
+                "minHeight": 56,
                 "opacity": 1,
               }
             }
@@ -7605,8 +7137,8 @@ exports[`List Component render with listItemStyle 1`] = `
                     "flexDirection": "row",
                     "opacity": 1,
                     "paddingBottom": 12,
-                    "paddingLeft": 32,
-                    "paddingRight": 32,
+                    "paddingLeft": 28,
+                    "paddingRight": 28,
                     "paddingTop": 12,
                   },
                   Array [
@@ -7661,7 +7193,7 @@ exports[`List Component render with listItemStyle 1`] = `
                             Object {
                               "color": undefined,
                               "fontSize": undefined,
-                              "textAlign": "left",
+                              "textAlign": "center",
                             },
                             undefined,
                           ],
@@ -7691,106 +7223,47 @@ exports[`List Component render with listItemStyle 1`] = `
                     "marginLeft": 20,
                     "opacity": 1,
                     "position": "absolute",
-                    "right": 16,
+                    "right": 14,
                   }
                 }
               >
                 <View
-                  needsOffscreenAlphaCompositing={true}
+                  active={false}
                   style={
                     Array [
-                      Array [
-                        Object {},
-                        Object {
-                          "right": 0,
-                        },
-                      ],
-                      false,
+                      Object {
+                        "backgroundColor": "transparent",
+                        "borderColor": "#e5e5e5",
+                        "borderRadius": 9,
+                        "borderWidth": 1,
+                        "height": 18,
+                        "width": 18,
+                      },
+                      Object {},
                     ]
                   }
-                >
-                  <View
-                    accessibilityLabel="SwitchButton"
-                    accessible={true}
-                    isTVSelectable={true}
-                    onResponderGrant={[Function]}
-                    onResponderMove={[Function]}
-                    onResponderRelease={[Function]}
-                    onResponderTerminate={[Function]}
-                    onResponderTerminationRequest={[Function]}
-                    onStartShouldSetResponder={[Function]}
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "backgroundColor": "transparent",
-                        "height": NaN,
-                        "justifyContent": "center",
-                        "opacity": 1,
-                        "width": NaN,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Array [
-                          Object {
-                            "borderRadius": NaN,
-                            "height": undefined,
-                            "justifyContent": "center",
-                            "width": undefined,
-                          },
-                          Object {
-                            "backgroundColor": "#e5e5e5",
-                            "borderColor": "#e5e5e5",
-                          },
-                        ]
-                      }
-                    />
-                    <View
-                      style={
-                        Object {
-                          "alignSelf": "flex-start",
-                          "backgroundColor": "#fff",
-                          "borderRadius": NaN,
-                          "elevation": 2,
-                          "height": undefined,
-                          "position": "absolute",
-                          "shadowColor": "rgba(0, 0, 0, 0.3)",
-                          "shadowOffset": Object {
-                            "height": 3,
-                            "width": 0,
-                          },
-                          "shadowOpacity": 1,
-                          "shadowRadius": 3,
-                          "transform": Array [
-                            Object {
-                              "translateX": NaN,
-                            },
-                          ],
-                          "width": undefined,
-                        }
-                      }
-                    />
-                  </View>
-                </View>
+                />
               </View>
             </View>
           </View>
           <View
             style={
-              Array [
-                Object {
-                  "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                  "height": 0.5,
-                  "marginLeft": 32,
-                },
+              Object {
+                "backgroundColor": undefined,
+              }
+            }
+          >
+            <View
+              style={
                 Object {
                   "backgroundColor": undefined,
-                  "marginLeft": 0,
-                },
-              ]
-            }
-          />
+                  "height": 0.5,
+                  "marginLeft": 16,
+                  "marginRight": 16,
+                }
+              }
+            />
+          </View>
         </View>
         <View
           onLayout={[Function]}
@@ -7811,12 +7284,11 @@ exports[`List Component render with listItemStyle 1`] = `
                 "backgroundColor": "#ccc",
                 "borderRadius": 0,
                 "flexGrow": 0,
-                "height": 48,
                 "marginBottom": 0,
                 "marginLeft": 0,
                 "marginRight": 0,
                 "marginTop": 0,
-                "minHeight": 48,
+                "minHeight": 56,
                 "opacity": 1,
               }
             }
@@ -7831,8 +7303,8 @@ exports[`List Component render with listItemStyle 1`] = `
                     "flexDirection": "row",
                     "opacity": 1,
                     "paddingBottom": 12,
-                    "paddingLeft": 32,
-                    "paddingRight": 32,
+                    "paddingLeft": 28,
+                    "paddingRight": 28,
                     "paddingTop": 12,
                   },
                   Array [
@@ -7887,7 +7359,7 @@ exports[`List Component render with listItemStyle 1`] = `
                             Object {
                               "color": undefined,
                               "fontSize": undefined,
-                              "textAlign": "left",
+                              "textAlign": "center",
                             },
                             undefined,
                           ],
@@ -7917,88 +7389,26 @@ exports[`List Component render with listItemStyle 1`] = `
                     "marginLeft": 20,
                     "opacity": 1,
                     "position": "absolute",
-                    "right": 16,
+                    "right": 14,
                   }
                 }
               >
                 <View
-                  needsOffscreenAlphaCompositing={true}
+                  active={false}
                   style={
                     Array [
-                      Array [
-                        Object {},
-                        Object {
-                          "right": 0,
-                        },
-                      ],
-                      false,
+                      Object {
+                        "backgroundColor": "transparent",
+                        "borderColor": "#e5e5e5",
+                        "borderRadius": 9,
+                        "borderWidth": 1,
+                        "height": 18,
+                        "width": 18,
+                      },
+                      Object {},
                     ]
                   }
-                >
-                  <View
-                    accessibilityLabel="SwitchButton"
-                    accessible={true}
-                    isTVSelectable={true}
-                    onResponderGrant={[Function]}
-                    onResponderMove={[Function]}
-                    onResponderRelease={[Function]}
-                    onResponderTerminate={[Function]}
-                    onResponderTerminationRequest={[Function]}
-                    onStartShouldSetResponder={[Function]}
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "backgroundColor": "transparent",
-                        "height": NaN,
-                        "justifyContent": "center",
-                        "opacity": 1,
-                        "width": NaN,
-                      }
-                    }
-                  >
-                    <View
-                      style={
-                        Array [
-                          Object {
-                            "borderRadius": NaN,
-                            "height": undefined,
-                            "justifyContent": "center",
-                            "width": undefined,
-                          },
-                          Object {
-                            "backgroundColor": "#e5e5e5",
-                            "borderColor": "#e5e5e5",
-                          },
-                        ]
-                      }
-                    />
-                    <View
-                      style={
-                        Object {
-                          "alignSelf": "flex-start",
-                          "backgroundColor": "#fff",
-                          "borderRadius": NaN,
-                          "elevation": 2,
-                          "height": undefined,
-                          "position": "absolute",
-                          "shadowColor": "rgba(0, 0, 0, 0.3)",
-                          "shadowOffset": Object {
-                            "height": 3,
-                            "width": 0,
-                          },
-                          "shadowOpacity": 1,
-                          "shadowRadius": 3,
-                          "transform": Array [
-                            Object {
-                              "translateX": NaN,
-                            },
-                          ],
-                          "width": undefined,
-                        }
-                      }
-                    />
-                  </View>
-                </View>
+                />
               </View>
             </View>
           </View>
@@ -8013,14 +7423,14 @@ exports[`List Component render with listItemStyle 1`] = `
           "alignItems": "center",
           "backgroundColor": "#fff",
           "flexDirection": "row",
-          "height": 48,
+          "height": 56,
           "justifyContent": "center",
         },
         Array [
           Object {
             "borderBottomLeftRadius": 0,
             "borderBottomRightRadius": 0,
-            "height": 68,
+            "height": 76,
             "marginTop": 12,
             "paddingBottom": 20,
           },
@@ -8043,17 +7453,18 @@ exports[`List Component render with listItemStyle 1`] = `
         Object {
           "alignItems": "center",
           "alignSelf": "stretch",
-          "borderRightColor": "#e5e5e5",
+          "backgroundColor": "#fff",
+          "borderRightColor": "rgba(0, 0, 0, 0.1)",
           "borderRightWidth": 0.5,
           "flexBasis": 0,
           "flexGrow": 1,
           "flexShrink": 1,
           "justifyContent": "center",
-          "marginBottom": 12,
-          "marginLeft": 0,
-          "marginRight": 0,
-          "marginTop": 12,
           "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 0,
+          "paddingRight": 0,
+          "paddingTop": 12,
         }
       }
     >
@@ -8074,7 +7485,7 @@ exports[`List Component render with listItemStyle 1`] = `
             },
             Array [
               Object {
-                "color": "#666",
+                "color": "rgba(0,0,0,0.7)",
                 "fontSize": 16,
               },
               null,
@@ -8101,17 +7512,18 @@ exports[`List Component render with listItemStyle 1`] = `
         Object {
           "alignItems": "center",
           "alignSelf": "stretch",
-          "borderRightColor": "#e5e5e5",
+          "backgroundColor": "#fff",
+          "borderRightColor": "rgba(0, 0, 0, 0.1)",
           "borderRightWidth": 0,
           "flexBasis": 0,
           "flexGrow": 1,
           "flexShrink": 1,
           "justifyContent": "center",
-          "marginBottom": 12,
-          "marginLeft": 0,
-          "marginRight": 0,
-          "marginTop": 12,
           "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 0,
+          "paddingRight": 0,
+          "paddingTop": 12,
         }
       }
     >
@@ -8131,7 +7543,7 @@ exports[`List Component render with listItemStyle 1`] = `
             },
             Array [
               Object {
-                "color": "#333",
+                "color": "#FF4800",
                 "fontSize": 16,
                 "fontWeight": "bold",
               },
@@ -8173,11 +7585,11 @@ exports[`List Component render with type 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#f5f5f5",
+        "backgroundColor": "#f8f8f8",
         "borderBottomLeftRadius": 0,
         "borderBottomRightRadius": 0,
-        "borderTopLeftRadius": 8,
-        "borderTopRightRadius": 8,
+        "borderTopLeftRadius": 16,
+        "borderTopRightRadius": 16,
         "opacity": 1,
       }
     }
@@ -8189,18 +7601,22 @@ exports[`List Component render with type 1`] = `
             "alignItems": "center",
             "backgroundColor": "#fff",
             "flexDirection": "row",
-            "height": 48,
+            "height": 56,
             "justifyContent": "center",
           },
           Array [
             Object {
               "backgroundColor": "#ffffff",
-              "borderBottomColor": "#e5e5e5",
+              "borderBottomColor": "rgba(0, 0, 0, 0.1)",
               "borderBottomWidth": 0.5,
-              "borderTopLeftRadius": 8,
-              "borderTopRightRadius": 8,
-              "height": 48,
+              "borderTopLeftRadius": 16,
+              "borderTopRightRadius": 16,
+              "height": 56,
               "justifyContent": "space-around",
+              "paddingBottom": 0,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 0,
             },
             Array [
               null,
@@ -8229,7 +7645,7 @@ exports[`List Component render with type 1`] = `
             },
             Array [
               Object {
-                "color": "#333",
+                "color": "rgba(0,0,0,0.9)",
                 "fontSize": 14,
               },
               null,
@@ -8257,7 +7673,7 @@ exports[`List Component render with type 1`] = `
             },
             Array [
               Object {
-                "color": "#999",
+                "color": "rgba(0, 0, 0, .5)",
                 "fontSize": 12,
                 "marginTop": 10,
               },
@@ -8278,7 +7694,7 @@ exports[`List Component render with type 1`] = `
           null,
           false,
           Object {
-            "height": 336,
+            "height": 392,
           },
         ]
       }
@@ -8358,6 +7774,7 @@ exports[`List Component render with type 1`] = `
         showBack={false}
         stickyHeaderIndices={Array []}
         subTitle="副标题"
+        switchStyle={Object {}}
         updateCellsBatchingPeriod={50}
         useART={false}
         viewabilityConfigCallbackPairs={Array []}
@@ -8383,12 +7800,11 @@ exports[`List Component render with type 1`] = `
                   "backgroundColor": "#ccc",
                   "borderRadius": 0,
                   "flexGrow": 0,
-                  "height": 48,
                   "marginBottom": 0,
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -8403,8 +7819,8 @@ exports[`List Component render with type 1`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -8459,7 +7875,7 @@ exports[`List Component render with type 1`] = `
                               Object {
                                 "color": undefined,
                                 "fontSize": undefined,
-                                "textAlign": undefined,
+                                "textAlign": "center",
                               },
                               undefined,
                             ],
@@ -8489,7 +7905,7 @@ exports[`List Component render with type 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 14,
                     }
                   }
                 />
@@ -8497,19 +7913,22 @@ exports[`List Component render with type 1`] = `
             </View>
             <View
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                    "height": 0.5,
-                    "marginLeft": 32,
-                  },
+                Object {
+                  "backgroundColor": undefined,
+                }
+              }
+            >
+              <View
+                style={
                   Object {
                     "backgroundColor": undefined,
-                    "marginLeft": 0,
-                  },
-                ]
-              }
-            />
+                    "height": 0.5,
+                    "marginLeft": 16,
+                    "marginRight": 16,
+                  }
+                }
+              />
+            </View>
           </View>
           <View
             onLayout={[Function]}
@@ -8530,12 +7949,11 @@ exports[`List Component render with type 1`] = `
                   "backgroundColor": "#ccc",
                   "borderRadius": 0,
                   "flexGrow": 0,
-                  "height": 48,
                   "marginBottom": 0,
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -8550,8 +7968,8 @@ exports[`List Component render with type 1`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -8606,7 +8024,7 @@ exports[`List Component render with type 1`] = `
                               Object {
                                 "color": undefined,
                                 "fontSize": undefined,
-                                "textAlign": undefined,
+                                "textAlign": "center",
                               },
                               undefined,
                             ],
@@ -8636,7 +8054,7 @@ exports[`List Component render with type 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 14,
                     }
                   }
                 />
@@ -8644,19 +8062,22 @@ exports[`List Component render with type 1`] = `
             </View>
             <View
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                    "height": 0.5,
-                    "marginLeft": 32,
-                  },
+                Object {
+                  "backgroundColor": undefined,
+                }
+              }
+            >
+              <View
+                style={
                   Object {
                     "backgroundColor": undefined,
-                    "marginLeft": 0,
-                  },
-                ]
-              }
-            />
+                    "height": 0.5,
+                    "marginLeft": 16,
+                    "marginRight": 16,
+                  }
+                }
+              />
+            </View>
           </View>
           <View
             onLayout={[Function]}
@@ -8677,12 +8098,11 @@ exports[`List Component render with type 1`] = `
                   "backgroundColor": "#ccc",
                   "borderRadius": 0,
                   "flexGrow": 0,
-                  "height": 48,
                   "marginBottom": 0,
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -8697,8 +8117,8 @@ exports[`List Component render with type 1`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -8753,7 +8173,7 @@ exports[`List Component render with type 1`] = `
                               Object {
                                 "color": undefined,
                                 "fontSize": undefined,
-                                "textAlign": undefined,
+                                "textAlign": "center",
                               },
                               undefined,
                             ],
@@ -8783,7 +8203,7 @@ exports[`List Component render with type 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 14,
                     }
                   }
                 />
@@ -8791,19 +8211,22 @@ exports[`List Component render with type 1`] = `
             </View>
             <View
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                    "height": 0.5,
-                    "marginLeft": 32,
-                  },
+                Object {
+                  "backgroundColor": undefined,
+                }
+              }
+            >
+              <View
+                style={
                   Object {
                     "backgroundColor": undefined,
-                    "marginLeft": 0,
-                  },
-                ]
-              }
-            />
+                    "height": 0.5,
+                    "marginLeft": 16,
+                    "marginRight": 16,
+                  }
+                }
+              />
+            </View>
           </View>
           <View
             onLayout={[Function]}
@@ -8824,12 +8247,11 @@ exports[`List Component render with type 1`] = `
                   "backgroundColor": "#ccc",
                   "borderRadius": 0,
                   "flexGrow": 0,
-                  "height": 48,
                   "marginBottom": 0,
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -8844,8 +8266,8 @@ exports[`List Component render with type 1`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -8900,7 +8322,7 @@ exports[`List Component render with type 1`] = `
                               Object {
                                 "color": undefined,
                                 "fontSize": undefined,
-                                "textAlign": undefined,
+                                "textAlign": "center",
                               },
                               undefined,
                             ],
@@ -8930,7 +8352,7 @@ exports[`List Component render with type 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 14,
                     }
                   }
                 />
@@ -8938,19 +8360,22 @@ exports[`List Component render with type 1`] = `
             </View>
             <View
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                    "height": 0.5,
-                    "marginLeft": 32,
-                  },
+                Object {
+                  "backgroundColor": undefined,
+                }
+              }
+            >
+              <View
+                style={
                   Object {
                     "backgroundColor": undefined,
-                    "marginLeft": 0,
-                  },
-                ]
-              }
-            />
+                    "height": 0.5,
+                    "marginLeft": 16,
+                    "marginRight": 16,
+                  }
+                }
+              />
+            </View>
           </View>
           <View
             onLayout={[Function]}
@@ -8971,12 +8396,11 @@ exports[`List Component render with type 1`] = `
                   "backgroundColor": "#ccc",
                   "borderRadius": 0,
                   "flexGrow": 0,
-                  "height": 48,
                   "marginBottom": 0,
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -8991,8 +8415,8 @@ exports[`List Component render with type 1`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -9047,7 +8471,7 @@ exports[`List Component render with type 1`] = `
                               Object {
                                 "color": undefined,
                                 "fontSize": undefined,
-                                "textAlign": undefined,
+                                "textAlign": "center",
                               },
                               undefined,
                             ],
@@ -9077,7 +8501,7 @@ exports[`List Component render with type 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 14,
                     }
                   }
                 />
@@ -9085,19 +8509,22 @@ exports[`List Component render with type 1`] = `
             </View>
             <View
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                    "height": 0.5,
-                    "marginLeft": 32,
-                  },
+                Object {
+                  "backgroundColor": undefined,
+                }
+              }
+            >
+              <View
+                style={
                   Object {
                     "backgroundColor": undefined,
-                    "marginLeft": 0,
-                  },
-                ]
-              }
-            />
+                    "height": 0.5,
+                    "marginLeft": 16,
+                    "marginRight": 16,
+                  }
+                }
+              />
+            </View>
           </View>
           <View
             onLayout={[Function]}
@@ -9118,12 +8545,11 @@ exports[`List Component render with type 1`] = `
                   "backgroundColor": "#ccc",
                   "borderRadius": 0,
                   "flexGrow": 0,
-                  "height": 48,
                   "marginBottom": 0,
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -9138,8 +8564,8 @@ exports[`List Component render with type 1`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -9194,7 +8620,7 @@ exports[`List Component render with type 1`] = `
                               Object {
                                 "color": undefined,
                                 "fontSize": undefined,
-                                "textAlign": undefined,
+                                "textAlign": "center",
                               },
                               undefined,
                             ],
@@ -9224,7 +8650,7 @@ exports[`List Component render with type 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 14,
                     }
                   }
                 />
@@ -9232,19 +8658,22 @@ exports[`List Component render with type 1`] = `
             </View>
             <View
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "rgba(51, 51, 51, 0.1)",
-                    "height": 0.5,
-                    "marginLeft": 32,
-                  },
+                Object {
+                  "backgroundColor": undefined,
+                }
+              }
+            >
+              <View
+                style={
                   Object {
                     "backgroundColor": undefined,
-                    "marginLeft": 0,
-                  },
-                ]
-              }
-            />
+                    "height": 0.5,
+                    "marginLeft": 16,
+                    "marginRight": 16,
+                  }
+                }
+              />
+            </View>
           </View>
           <View
             onLayout={[Function]}
@@ -9265,12 +8694,11 @@ exports[`List Component render with type 1`] = `
                   "backgroundColor": "#ccc",
                   "borderRadius": 0,
                   "flexGrow": 0,
-                  "height": 48,
                   "marginBottom": 0,
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 48,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -9285,8 +8713,8 @@ exports[`List Component render with type 1`] = `
                       "flexDirection": "row",
                       "opacity": 1,
                       "paddingBottom": 12,
-                      "paddingLeft": 32,
-                      "paddingRight": 32,
+                      "paddingLeft": 28,
+                      "paddingRight": 28,
                       "paddingTop": 12,
                     },
                     Array [
@@ -9341,7 +8769,7 @@ exports[`List Component render with type 1`] = `
                               Object {
                                 "color": undefined,
                                 "fontSize": undefined,
-                                "textAlign": undefined,
+                                "textAlign": "center",
                               },
                               undefined,
                             ],
@@ -9371,7 +8799,7 @@ exports[`List Component render with type 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 14,
                     }
                   }
                 />
@@ -9388,14 +8816,14 @@ exports[`List Component render with type 1`] = `
             "alignItems": "center",
             "backgroundColor": "#fff",
             "flexDirection": "row",
-            "height": 48,
+            "height": 56,
             "justifyContent": "center",
           },
           Array [
             Object {
               "borderBottomLeftRadius": 0,
               "borderBottomRightRadius": 0,
-              "height": 68,
+              "height": 76,
               "marginTop": 12,
               "paddingBottom": 20,
             },
@@ -9418,17 +8846,18 @@ exports[`List Component render with type 1`] = `
           Object {
             "alignItems": "center",
             "alignSelf": "stretch",
-            "borderRightColor": "#e5e5e5",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0.5,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
             "justifyContent": "center",
-            "marginBottom": 12,
-            "marginLeft": 0,
-            "marginRight": 0,
-            "marginTop": 12,
             "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
           }
         }
       >
@@ -9449,7 +8878,7 @@ exports[`List Component render with type 1`] = `
               },
               Array [
                 Object {
-                  "color": "#666",
+                  "color": "rgba(0,0,0,0.7)",
                   "fontSize": 16,
                 },
                 null,
@@ -9476,17 +8905,18 @@ exports[`List Component render with type 1`] = `
           Object {
             "alignItems": "center",
             "alignSelf": "stretch",
-            "borderRightColor": "#e5e5e5",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
             "justifyContent": "center",
-            "marginBottom": 12,
-            "marginLeft": 0,
-            "marginRight": 0,
-            "marginTop": 12,
             "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
           }
         }
       >
@@ -9506,7 +8936,7 @@ exports[`List Component render with type 1`] = `
               },
               Array [
                 Object {
-                  "color": "#333",
+                  "color": "#FF4800",
                   "fontSize": 16,
                   "fontWeight": "bold",
                 },

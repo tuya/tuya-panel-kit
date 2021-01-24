@@ -305,8 +305,8 @@ exports[`Checkbox Component basic render switch 1`] = `
                     "flexDirection": "row",
                     "opacity": 1,
                     "paddingBottom": 12,
-                    "paddingLeft": 32,
-                    "paddingRight": 32,
+                    "paddingLeft": 28,
+                    "paddingRight": 28,
                     "paddingTop": 12,
                   },
                   Array [
@@ -574,8 +574,8 @@ exports[`Checkbox Component basic render switch 1`] = `
                     "flexDirection": "row",
                     "opacity": 1,
                     "paddingBottom": 12,
-                    "paddingLeft": 32,
-                    "paddingRight": 32,
+                    "paddingLeft": 28,
+                    "paddingRight": 28,
                     "paddingTop": 12,
                   },
                   Array [
@@ -843,8 +843,8 @@ exports[`Checkbox Component basic render switch 1`] = `
                     "flexDirection": "row",
                     "opacity": 1,
                     "paddingBottom": 12,
-                    "paddingLeft": 32,
-                    "paddingRight": 32,
+                    "paddingLeft": 28,
+                    "paddingRight": 28,
                     "paddingTop": 12,
                   },
                   Array [
@@ -908,10 +908,10 @@ exports[`Checkbox Component basic render switch 1`] = `
                       fill={
                         Array [
                           0,
-                          0.2,
-                          0.2,
-                          0.2,
-                          0.5,
+                          0.8313725490196079,
+                          0.8313725490196079,
+                          0.8313725490196079,
+                          1,
                         ]
                       }
                       fillOpacity={1}
@@ -937,10 +937,10 @@ exports[`Checkbox Component basic render switch 1`] = `
                       stroke={
                         Array [
                           0,
-                          0.2,
-                          0.2,
-                          0.2,
-                          0.5,
+                          0.8313725490196079,
+                          0.8313725490196079,
+                          0.8313725490196079,
+                          1,
                         ]
                       }
                       strokeDasharray={null}
@@ -1510,8 +1510,8 @@ exports[`Checkbox Component basic render switch 2`] = `
                     "flexDirection": "row",
                     "opacity": 1,
                     "paddingBottom": 12,
-                    "paddingLeft": 32,
-                    "paddingRight": 32,
+                    "paddingLeft": 28,
+                    "paddingRight": 28,
                     "paddingTop": 12,
                   },
                   Array [
@@ -1779,8 +1779,8 @@ exports[`Checkbox Component basic render switch 2`] = `
                     "flexDirection": "row",
                     "opacity": 1,
                     "paddingBottom": 12,
-                    "paddingLeft": 32,
-                    "paddingRight": 32,
+                    "paddingLeft": 28,
+                    "paddingRight": 28,
                     "paddingTop": 12,
                   },
                   Array [
@@ -2048,8 +2048,8 @@ exports[`Checkbox Component basic render switch 2`] = `
                     "flexDirection": "row",
                     "opacity": 1,
                     "paddingBottom": 12,
-                    "paddingLeft": 32,
-                    "paddingRight": 32,
+                    "paddingLeft": 28,
+                    "paddingRight": 28,
                     "paddingTop": 12,
                   },
                   Array [
@@ -2113,10 +2113,10 @@ exports[`Checkbox Component basic render switch 2`] = `
                       fill={
                         Array [
                           0,
-                          0.2,
-                          0.2,
-                          0.2,
-                          0.5,
+                          0.8313725490196079,
+                          0.8313725490196079,
+                          0.8313725490196079,
+                          1,
                         ]
                       }
                       fillOpacity={1}
@@ -2142,10 +2142,10 @@ exports[`Checkbox Component basic render switch 2`] = `
                       stroke={
                         Array [
                           0,
-                          0.2,
-                          0.2,
-                          0.2,
-                          0.5,
+                          0.8313725490196079,
+                          0.8313725490196079,
+                          0.8313725490196079,
+                          1,
                         ]
                       }
                       strokeDasharray={null}
