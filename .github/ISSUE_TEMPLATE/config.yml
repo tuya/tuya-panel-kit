@@ -1,5 +1,5 @@
 blank_issues_enabled: false
 contact_links:
-  - name: 创建工单
+  - name: Create a ticket
     url: https://iot.tuya.com/council/chat/
-    about: 请点击 「Open」 按钮打开新链接创建 工单
+    about: Please click the "Open" button to open a new link to create a ticket
