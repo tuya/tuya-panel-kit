@@ -317,6 +317,9 @@ exports[`List Component basic render 1`] = `
                                 "fontSize": undefined,
                                 "textAlign": "center",
                               },
+                              Object {
+                                "width": 690,
+                              },
                               undefined,
                             ],
                           ],
@@ -466,6 +469,9 @@ exports[`List Component basic render 1`] = `
                                 "color": undefined,
                                 "fontSize": undefined,
                                 "textAlign": "center",
+                              },
+                              Object {
+                                "width": 690,
                               },
                               undefined,
                             ],
@@ -617,6 +623,9 @@ exports[`List Component basic render 1`] = `
                                 "fontSize": undefined,
                                 "textAlign": "center",
                               },
+                              Object {
+                                "width": 690,
+                              },
                               undefined,
                             ],
                           ],
@@ -766,6 +775,9 @@ exports[`List Component basic render 1`] = `
                                 "color": undefined,
                                 "fontSize": undefined,
                                 "textAlign": "center",
+                              },
+                              Object {
+                                "width": 690,
                               },
                               undefined,
                             ],
@@ -1005,6 +1017,9 @@ exports[`List Component basic render 1`] = `
                                 "fontSize": undefined,
                                 "textAlign": "center",
                               },
+                              Object {
+                                "width": 690,
+                              },
                               undefined,
                             ],
                           ],
@@ -1155,6 +1170,9 @@ exports[`List Component basic render 1`] = `
                                 "fontSize": undefined,
                                 "textAlign": "center",
                               },
+                              Object {
+                                "width": 690,
+                              },
                               undefined,
                             ],
                           ],
@@ -1304,6 +1322,9 @@ exports[`List Component basic render 1`] = `
                                 "color": undefined,
                                 "fontSize": undefined,
                                 "textAlign": "center",
+                              },
+                              Object {
+                                "width": 690,
                               },
                               undefined,
                             ],
@@ -1805,6 +1826,9 @@ exports[`List Component basic render 2`] = `
                                 "fontSize": undefined,
                                 "textAlign": "center",
                               },
+                              Object {
+                                "width": 690,
+                              },
                               undefined,
                             ],
                           ],
@@ -1970,6 +1994,9 @@ exports[`List Component basic render 2`] = `
                                 "color": undefined,
                                 "fontSize": undefined,
                                 "textAlign": "center",
+                              },
+                              Object {
+                                "width": 690,
                               },
                               undefined,
                             ],
@@ -2137,6 +2164,9 @@ exports[`List Component basic render 2`] = `
                                 "fontSize": undefined,
                                 "textAlign": "center",
                               },
+                              Object {
+                                "width": 690,
+                              },
                               undefined,
                             ],
                           ],
@@ -2302,6 +2332,9 @@ exports[`List Component basic render 2`] = `
                                 "color": undefined,
                                 "fontSize": undefined,
                                 "textAlign": "center",
+                              },
+                              Object {
+                                "width": 690,
                               },
                               undefined,
                             ],
@@ -2557,6 +2590,9 @@ exports[`List Component basic render 2`] = `
                                 "fontSize": undefined,
                                 "textAlign": "center",
                               },
+                              Object {
+                                "width": 690,
+                              },
                               undefined,
                             ],
                           ],
@@ -2723,6 +2759,9 @@ exports[`List Component basic render 2`] = `
                                 "fontSize": undefined,
                                 "textAlign": "center",
                               },
+                              Object {
+                                "width": 690,
+                              },
                               undefined,
                             ],
                           ],
@@ -2888,6 +2927,9 @@ exports[`List Component basic render 2`] = `
                                 "color": undefined,
                                 "fontSize": undefined,
                                 "textAlign": "center",
+                              },
+                              Object {
+                                "width": 690,
                               },
                               undefined,
                             ],
@@ -3407,6 +3449,9 @@ exports[`List Component basic render 3`] = `
                                 "fontSize": undefined,
                                 "textAlign": "center",
                               },
+                              Object {
+                                "width": 690,
+                              },
                               undefined,
                             ],
                           ],
@@ -3556,6 +3601,9 @@ exports[`List Component basic render 3`] = `
                                 "color": undefined,
                                 "fontSize": undefined,
                                 "textAlign": "center",
+                              },
+                              Object {
+                                "width": 690,
                               },
                               undefined,
                             ],
@@ -3795,6 +3843,9 @@ exports[`List Component basic render 3`] = `
                                 "fontSize": undefined,
                                 "textAlign": "center",
                               },
+                              Object {
+                                "width": 690,
+                              },
                               undefined,
                             ],
                           ],
@@ -3944,6 +3995,9 @@ exports[`List Component basic render 3`] = `
                                 "color": undefined,
                                 "fontSize": undefined,
                                 "textAlign": "center",
+                              },
+                              Object {
+                                "width": 690,
                               },
                               undefined,
                             ],
@@ -4095,6 +4149,9 @@ exports[`List Component basic render 3`] = `
                                 "fontSize": undefined,
                                 "textAlign": "center",
                               },
+                              Object {
+                                "width": 690,
+                              },
                               undefined,
                             ],
                           ],
@@ -4245,6 +4302,9 @@ exports[`List Component basic render 3`] = `
                                 "fontSize": undefined,
                                 "textAlign": "center",
                               },
+                              Object {
+                                "width": 690,
+                              },
                               undefined,
                             ],
                           ],
@@ -4394,6 +4454,9 @@ exports[`List Component basic render 3`] = `
                                 "color": undefined,
                                 "fontSize": undefined,
                                 "textAlign": "center",
+                              },
+                              Object {
+                                "width": 690,
                               },
                               undefined,
                             ],
@@ -4895,6 +4958,9 @@ exports[`List Component render with contentCenter 1`] = `
                                 "fontSize": undefined,
                                 "textAlign": "center",
                               },
+                              Object {
+                                "width": 690,
+                              },
                               undefined,
                             ],
                           ],
@@ -5043,6 +5109,9 @@ exports[`List Component render with contentCenter 1`] = `
                                 "color": undefined,
                                 "fontSize": undefined,
                                 "textAlign": "center",
+                              },
+                              Object {
+                                "width": 690,
                               },
                               undefined,
                             ],
@@ -5193,6 +5262,9 @@ exports[`List Component render with contentCenter 1`] = `
                                 "fontSize": undefined,
                                 "textAlign": "center",
                               },
+                              Object {
+                                "width": 690,
+                              },
                               undefined,
                             ],
                           ],
@@ -5341,6 +5413,9 @@ exports[`List Component render with contentCenter 1`] = `
                                 "color": undefined,
                                 "fontSize": undefined,
                                 "textAlign": "center",
+                              },
+                              Object {
+                                "width": 690,
                               },
                               undefined,
                             ],
@@ -5491,6 +5566,9 @@ exports[`List Component render with contentCenter 1`] = `
                                 "fontSize": undefined,
                                 "textAlign": "center",
                               },
+                              Object {
+                                "width": 690,
+                              },
                               undefined,
                             ],
                           ],
@@ -5640,6 +5718,9 @@ exports[`List Component render with contentCenter 1`] = `
                                 "fontSize": undefined,
                                 "textAlign": "center",
                               },
+                              Object {
+                                "width": 690,
+                              },
                               undefined,
                             ],
                           ],
@@ -5788,6 +5869,9 @@ exports[`List Component render with contentCenter 1`] = `
                                 "color": undefined,
                                 "fontSize": undefined,
                                 "textAlign": "center",
+                              },
+                              Object {
+                                "width": 690,
                               },
                               undefined,
                             ],
@@ -6277,6 +6361,9 @@ exports[`List Component render with listItemStyle 1`] = `
                               "fontSize": undefined,
                               "textAlign": "center",
                             },
+                            Object {
+                              "width": 690,
+                            },
                             undefined,
                           ],
                         ],
@@ -6442,6 +6529,9 @@ exports[`List Component render with listItemStyle 1`] = `
                               "color": undefined,
                               "fontSize": undefined,
                               "textAlign": "center",
+                            },
+                            Object {
+                              "width": 690,
                             },
                             undefined,
                           ],
@@ -6697,6 +6787,9 @@ exports[`List Component render with listItemStyle 1`] = `
                               "fontSize": undefined,
                               "textAlign": "center",
                             },
+                            Object {
+                              "width": 690,
+                            },
                             undefined,
                           ],
                         ],
@@ -6862,6 +6955,9 @@ exports[`List Component render with listItemStyle 1`] = `
                               "color": undefined,
                               "fontSize": undefined,
                               "textAlign": "center",
+                            },
+                            Object {
+                              "width": 690,
                             },
                             undefined,
                           ],
@@ -7029,6 +7125,9 @@ exports[`List Component render with listItemStyle 1`] = `
                               "fontSize": undefined,
                               "textAlign": "center",
                             },
+                            Object {
+                              "width": 690,
+                            },
                             undefined,
                           ],
                         ],
@@ -7195,6 +7294,9 @@ exports[`List Component render with listItemStyle 1`] = `
                               "fontSize": undefined,
                               "textAlign": "center",
                             },
+                            Object {
+                              "width": 690,
+                            },
                             undefined,
                           ],
                         ],
@@ -7360,6 +7462,9 @@ exports[`List Component render with listItemStyle 1`] = `
                               "color": undefined,
                               "fontSize": undefined,
                               "textAlign": "center",
+                            },
+                            Object {
+                              "width": 690,
                             },
                             undefined,
                           ],
@@ -7877,6 +7982,9 @@ exports[`List Component render with type 1`] = `
                                 "fontSize": undefined,
                                 "textAlign": "center",
                               },
+                              Object {
+                                "width": 690,
+                              },
                               undefined,
                             ],
                           ],
@@ -8025,6 +8133,9 @@ exports[`List Component render with type 1`] = `
                                 "color": undefined,
                                 "fontSize": undefined,
                                 "textAlign": "center",
+                              },
+                              Object {
+                                "width": 690,
                               },
                               undefined,
                             ],
@@ -8175,6 +8286,9 @@ exports[`List Component render with type 1`] = `
                                 "fontSize": undefined,
                                 "textAlign": "center",
                               },
+                              Object {
+                                "width": 690,
+                              },
                               undefined,
                             ],
                           ],
@@ -8323,6 +8437,9 @@ exports[`List Component render with type 1`] = `
                                 "color": undefined,
                                 "fontSize": undefined,
                                 "textAlign": "center",
+                              },
+                              Object {
+                                "width": 690,
                               },
                               undefined,
                             ],
@@ -8473,6 +8590,9 @@ exports[`List Component render with type 1`] = `
                                 "fontSize": undefined,
                                 "textAlign": "center",
                               },
+                              Object {
+                                "width": 690,
+                              },
                               undefined,
                             ],
                           ],
@@ -8622,6 +8742,9 @@ exports[`List Component render with type 1`] = `
                                 "fontSize": undefined,
                                 "textAlign": "center",
                               },
+                              Object {
+                                "width": 690,
+                              },
                               undefined,
                             ],
                           ],
@@ -8770,6 +8893,9 @@ exports[`List Component render with type 1`] = `
                                 "color": undefined,
                                 "fontSize": undefined,
                                 "textAlign": "center",
+                              },
+                              Object {
+                                "width": 690,
                               },
                               undefined,
                             ],

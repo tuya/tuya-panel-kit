@@ -4,7 +4,7 @@ import { FlatList, View, StyleSheet, ViewPropTypes } from 'react-native';
 import PropTypes from 'prop-types';
 import TYFlatList from '../TYLists/list';
 import withSkeleton from './withSkeleton';
-import { ThemeUtils } from '../../utils';
+import { ThemeUtils, RatioUtils } from '../../utils';
 import { StyledIconFont, StyledFlatList, StyledCheckout } from './styled';
 
 const selectedPath =
@@ -12,6 +12,8 @@ const selectedPath =
 const { getTheme, ThemeConsumer } = ThemeUtils;
 
 let itemHeight = 56;
+
+const { viewWidth } = RatioUtils;
 
 class ListPopup extends React.Component {
   static propTypes = {
@@ -207,6 +209,7 @@ class ListPopup extends React.Component {
             content: [{ flex: 1, alignItems: 'center' }, styles.content],
             title: [
               { textAlign: titleAlign, fontSize: cellFontSize, color: cellFontColor },
+              !!contentCenter && { width: viewWidth - 60 },
               styles.title,
             ],
             contentRight: [
