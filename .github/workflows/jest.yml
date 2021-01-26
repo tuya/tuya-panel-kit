@@ -1,5 +1,8 @@
 name: Upload coverage to Codecov
-on: push
+on:
+  push:
+    branches:
+      - master # Change this to your default branch
 jobs:
   build:
     runs-on: ubuntu-latest
