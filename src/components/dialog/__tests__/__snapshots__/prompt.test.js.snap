@@ -10,10 +10,10 @@ exports[`Prompt Component basic render defaultValue 1`] = `
       "useNativeDriver": true,
     }
   }
-  finalScale={0}
+  finalScale={0.9}
   height={null}
   hideDuration={250}
-  initScale={0.5}
+  initScale={0.8}
   isAlign={true}
   onHide={[Function]}
   onShow={[Function]}
@@ -36,7 +36,8 @@ exports[`Prompt Component basic render defaultValue 1`] = `
     inputWrapperStyle={null}
     motionConfig={
       Object {
-        "initScale": 0.5,
+        "finalScale": 0.9,
+        "initScale": 0.8,
       }
     }
     motionType="ScaleFadeIn"
@@ -47,7 +48,6 @@ exports[`Prompt Component basic render defaultValue 1`] = `
     showHelp={false}
     style={null}
     subTitle="副标题"
-    textContentType=""
     title="标题"
     titleStyle={null}
   />
@@ -64,7 +64,7 @@ exports[`Prompt Component basic render value 1`] = `
       "opacity": 0,
       "transform": Array [
         Object {
-          "scale": 0.5,
+          "scale": 0.8,
         },
       ],
     }
@@ -79,6 +79,7 @@ exports[`Prompt Component basic render value 1`] = `
           "backgroundColor": "#fff",
           "borderRadius": 32,
           "justifyContent": "center",
+          "overflow": "hidden",
           "width": 622,
         },
         null,
@@ -92,17 +93,17 @@ exports[`Prompt Component basic render value 1`] = `
             "alignItems": "center",
             "alignSelf": "stretch",
             "justifyContent": "center",
-            "paddingBottom": 72,
+            "paddingBottom": 64,
             "paddingLeft": 64,
             "paddingRight": 64,
-            "paddingTop": 72,
+            "paddingTop": 64,
           },
           Array [
             Object {
               "paddingBottom": 24,
               "paddingLeft": 16,
               "paddingRight": 16,
-              "paddingTop": 28,
+              "paddingTop": 24,
             },
             null,
           ],
@@ -161,7 +162,8 @@ exports[`Prompt Component basic render value 1`] = `
           autoFocus={true}
           motionConfig={
             Object {
-              "initScale": 0.5,
+              "finalScale": 0.9,
+              "initScale": 0.8,
             }
           }
           motionType="ScaleFadeIn"
@@ -184,7 +186,6 @@ exports[`Prompt Component basic render value 1`] = `
             ]
           }
           subTitle="副标题"
-          textContentType=""
           underlineColorAndroid="transparent"
           value=""
         />
@@ -322,6 +323,7 @@ exports[`Prompt Component basic render value 1`] = `
         style={
           Object {
             "alignItems": "center",
+            "backgroundColor": "#fff",
             "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0.5,
             "flexBasis": 0,
@@ -375,6 +377,7 @@ exports[`Prompt Component basic render value 1`] = `
         style={
           Object {
             "alignItems": "center",
+            "backgroundColor": "#fff",
             "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0,
             "flexBasis": 0,
@@ -401,7 +404,7 @@ exports[`Prompt Component basic render value 1`] = `
               },
               Array [
                 Object {
-                  "color": "rgba(0, 0, 0, 0.9)",
+                  "color": "#FF4800",
                   "fontSize": 17,
                   "fontWeight": "bold",
                   "textAlign": "center",

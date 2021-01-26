@@ -41,11 +41,26 @@ export default class DialogScene extends Component {
         title: 'Dialog.confirm',
         onPress: () => {
           Dialog.confirm({
-            titleNumberOfLines: 1,
             title:
               '这是标题这是标题这是标题这是标题这是标题这是标题这是标题这是标题这是标题这是标题这是标题这是标题',
             subTitle:
               '这是内容这是内容这是内容这是内容这这是内容这是内容是内容这是内容这是内容这是内容这是内容这这是内容这是内容是内容这是内容这是内容这是内容这是内容这这是内容这是内容是内容',
+            cancelText: '取消',
+            confirmText: '确认',
+            onConfirm: (data, { close }) => {
+              close();
+            },
+          });
+        },
+      },
+      {
+        key: 'confirm-picture',
+        title: 'Dialog.confirm(WithPicture)',
+        onPress: () => {
+          Dialog.confirm({
+            imageSource: require('../../res/Logo.png'),
+            title: '标题名称',
+            subTitle: '这里展示辅助信息',
             cancelText: '取消',
             confirmText: '确认',
             onConfirm: (data, { close }) => {

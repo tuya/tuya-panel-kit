@@ -10,7 +10,7 @@ exports[`Alert Component basic render 1`] = `
       "opacity": 0,
       "transform": Array [
         Object {
-          "scale": 0.5,
+          "scale": 0.8,
         },
       ],
     }
@@ -25,6 +25,7 @@ exports[`Alert Component basic render 1`] = `
           "backgroundColor": "#fff",
           "borderRadius": 32,
           "justifyContent": "center",
+          "overflow": "hidden",
           "width": 622,
         },
         null,
@@ -38,10 +39,10 @@ exports[`Alert Component basic render 1`] = `
             "alignItems": "center",
             "alignSelf": "stretch",
             "justifyContent": "center",
-            "paddingBottom": 72,
+            "paddingBottom": 64,
             "paddingLeft": 64,
             "paddingRight": 64,
-            "paddingTop": 72,
+            "paddingTop": 64,
           },
           null,
         ]
@@ -142,6 +143,7 @@ exports[`Alert Component basic render 1`] = `
         style={
           Object {
             "alignItems": "center",
+            "backgroundColor": "#fff",
             "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0,
             "flexBasis": 0,
@@ -168,7 +170,7 @@ exports[`Alert Component basic render 1`] = `
               },
               Array [
                 Object {
-                  "color": "rgba(0, 0, 0, 0.9)",
+                  "color": "#FF4800",
                   "fontSize": 17,
                   "fontWeight": "bold",
                   "textAlign": "center",
