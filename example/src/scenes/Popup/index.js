@@ -190,7 +190,7 @@ export default class PopupScene extends Component {
               title: `${n}`,
               value: `${n}`,
             })),
-            title: ['单选', '测试'],
+            title: '单选',
             cancelText: '取消',
             confirmText: '确认',
             showBack: true,
@@ -198,6 +198,75 @@ export default class PopupScene extends Component {
               console.log('I am Popup.list.radio');
               close();
             },
+            value: this.state.listValue,
+            footerType: 'singleCancel',
+            onMaskPress: ({ close }) => {
+              close();
+            },
+            onSelect: (value, { close }) => {
+              console.log('radio value :', value);
+              this.setState({ listValue: value });
+              close();
+            },
+          });
+        },
+      },
+      {
+        key: 'Popup.list.radio - withIcon',
+        title: 'Popup.list(Radio - withIcon)',
+        onPress: () => {
+          Popup.list({
+            type: 'radio',
+            maxItemNum: 7,
+            dataSource: _.times(7, n => ({
+              key: `${n}`,
+              title: `列表第${n}条`,
+              value: `${n}`,
+              Icon:
+                'M512 0c282.770286 0 512 229.229714 512 512s-229.229714 512-512 512S0 794.770286 0 512 229.229714 0 512 0z m0 48.761905C256.170667 48.761905 48.761905 256.170667 48.761905 512s207.408762 463.238095 463.238095 463.238095 463.238095-207.408762 463.238095-463.238095S767.829333 48.761905 512 48.761905z m-103.448381 325.315047l103.472762 103.424 103.424-103.424a24.380952 24.380952 0 1 1 34.474667 34.474667L546.474667 512l103.448381 103.448381a24.380952 24.380952 0 1 1-34.474667 34.474667L512 546.474667l-103.448381 103.448381a24.380952 24.380952 0 1 1-34.474667-34.474667L477.525333 512l-103.448381-103.448381a24.380952 24.380952 0 1 1 34.474667-34.474667z',
+            })),
+            contentCenter: false,
+            title: '单选',
+            subTitle: '副标题',
+            cancelText: '取消',
+            confirmText: '确认',
+            showBack: true,
+            onBack: ({ close }) => {
+              console.log('I am Popup.list.radio');
+              close();
+            },
+            value: this.state.listValue,
+            footerType: 'singleCancel',
+            onMaskPress: ({ close }) => {
+              close();
+            },
+            onSelect: (value, { close }) => {
+              console.log('radio value :', value);
+              this.setState({ listValue: value });
+              close();
+            },
+          });
+        },
+      },
+      {
+        key: 'Popup.list.arrow',
+        title: 'Popup.list(arrow)',
+        onPress: () => {
+          Popup.list({
+            type: 'arrow',
+            maxItemNum: 7,
+            dataSource: _.times(7, n => ({
+              key: `${n}`,
+              title: `第${n}条内容`,
+              value: `${n}`,
+              arrow: true,
+              arrowUseIcon: true,
+            })),
+            contentCenter: false,
+            title: '这是标题',
+            subTitle: '这里是副标题内容',
+            cancelText: '取消',
+            confirmText: '确认',
             value: this.state.listValue,
             footerType: 'singleCancel',
             onMaskPress: ({ close }) => {
@@ -223,6 +292,7 @@ export default class PopupScene extends Component {
               value: `${n}`,
             })),
             title: '多选',
+            contentCenter: false,
             cancelText: '取消',
             confirmText: '确认',
             subTitle: '副标题',
@@ -230,8 +300,12 @@ export default class PopupScene extends Component {
             onMaskPress: ({ close }) => {
               close();
             },
+            onSelect: (value, { close }) => {
+              console.log('switch select value :', value);
+              this.setState({ listValue: value });
+            },
             onConfirm: (value, { close }) => {
-              console.log('switch value :', value);
+              console.log('switch confirm value :', value);
               this.setState({ listValues: value });
               close();
             },

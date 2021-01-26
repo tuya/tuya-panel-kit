@@ -26,11 +26,11 @@ exports[`countdown Component basic render 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#f5f5f5",
+        "backgroundColor": "#f8f8f8",
         "borderBottomLeftRadius": 0,
         "borderBottomRightRadius": 0,
-        "borderTopLeftRadius": 8,
-        "borderTopRightRadius": 8,
+        "borderTopLeftRadius": 16,
+        "borderTopRightRadius": 16,
         "opacity": 1,
       }
     }
@@ -42,18 +42,22 @@ exports[`countdown Component basic render 1`] = `
             "alignItems": "center",
             "backgroundColor": "#fff",
             "flexDirection": "row",
-            "height": 48,
+            "height": 56,
             "justifyContent": "center",
           },
           Array [
             Object {
               "backgroundColor": "#ffffff",
-              "borderBottomColor": "#e5e5e5",
+              "borderBottomColor": "rgba(0, 0, 0, 0.1)",
               "borderBottomWidth": 0.5,
-              "borderTopLeftRadius": 8,
-              "borderTopRightRadius": 8,
-              "height": 48,
+              "borderTopLeftRadius": 16,
+              "borderTopRightRadius": 16,
+              "height": 56,
               "justifyContent": "space-around",
+              "paddingBottom": 0,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 0,
             },
             Array [
               null,
@@ -79,7 +83,7 @@ exports[`countdown Component basic render 1`] = `
             },
             Array [
               Object {
-                "color": "#333",
+                "color": "rgba(0,0,0,0.9)",
                 "fontSize": 14,
               },
               null,
@@ -374,7 +378,7 @@ exports[`countdown Component basic render 1`] = `
               },
               Array [
                 Object {
-                  "color": "#333",
+                  "color": "rgba(0,0,0,0.9)",
                   "fontSize": 16,
                 },
                 Object {
@@ -748,7 +752,7 @@ exports[`countdown Component basic render 1`] = `
               },
               Array [
                 Object {
-                  "color": "#333",
+                  "color": "rgba(0,0,0,0.9)",
                   "fontSize": 16,
                 },
                 Object {
@@ -772,14 +776,14 @@ exports[`countdown Component basic render 1`] = `
             "alignItems": "center",
             "backgroundColor": "#fff",
             "flexDirection": "row",
-            "height": 48,
+            "height": 56,
             "justifyContent": "center",
           },
           Array [
             Object {
               "borderBottomLeftRadius": 0,
               "borderBottomRightRadius": 0,
-              "height": 68,
+              "height": 76,
               "marginTop": 12,
               "paddingBottom": 20,
             },
@@ -802,17 +806,18 @@ exports[`countdown Component basic render 1`] = `
           Object {
             "alignItems": "center",
             "alignSelf": "stretch",
-            "borderRightColor": "#e5e5e5",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0.5,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
             "justifyContent": "center",
-            "marginBottom": 12,
-            "marginLeft": 0,
-            "marginRight": 0,
-            "marginTop": 12,
             "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
           }
         }
       >
@@ -833,7 +838,7 @@ exports[`countdown Component basic render 1`] = `
               },
               Array [
                 Object {
-                  "color": "#666",
+                  "color": "rgba(0,0,0,0.7)",
                   "fontSize": 16,
                 },
                 null,
@@ -860,17 +865,18 @@ exports[`countdown Component basic render 1`] = `
           Object {
             "alignItems": "center",
             "alignSelf": "stretch",
-            "borderRightColor": "#e5e5e5",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
             "justifyContent": "center",
-            "marginBottom": 12,
-            "marginLeft": 0,
-            "marginRight": 0,
-            "marginTop": 12,
             "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
           }
         }
       >
@@ -890,7 +896,7 @@ exports[`countdown Component basic render 1`] = `
               },
               Array [
                 Object {
-                  "color": "#333",
+                  "color": "#FF4800",
                   "fontSize": 16,
                   "fontWeight": "bold",
                 },
@@ -933,11 +939,11 @@ exports[`countdown Component basic render 2`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#f5f5f5",
+        "backgroundColor": "#f8f8f8",
         "borderBottomLeftRadius": 0,
         "borderBottomRightRadius": 0,
-        "borderTopLeftRadius": 8,
-        "borderTopRightRadius": 8,
+        "borderTopLeftRadius": 16,
+        "borderTopRightRadius": 16,
         "opacity": 1,
       }
     }
@@ -949,18 +955,22 @@ exports[`countdown Component basic render 2`] = `
             "alignItems": "center",
             "backgroundColor": "#fff",
             "flexDirection": "row",
-            "height": 48,
+            "height": 56,
             "justifyContent": "center",
           },
           Array [
             Object {
               "backgroundColor": "#ffffff",
-              "borderBottomColor": "#e5e5e5",
+              "borderBottomColor": "rgba(0, 0, 0, 0.1)",
               "borderBottomWidth": 0.5,
-              "borderTopLeftRadius": 8,
-              "borderTopRightRadius": 8,
-              "height": 48,
+              "borderTopLeftRadius": 16,
+              "borderTopRightRadius": 16,
+              "height": 56,
               "justifyContent": "space-around",
+              "paddingBottom": 0,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 0,
             },
             Array [
               null,
@@ -986,7 +996,7 @@ exports[`countdown Component basic render 2`] = `
             },
             Array [
               Object {
-                "color": "#333",
+                "color": "rgba(0,0,0,0.9)",
                 "fontSize": 14,
               },
               null,
@@ -1281,7 +1291,7 @@ exports[`countdown Component basic render 2`] = `
               },
               Array [
                 Object {
-                  "color": "#333",
+                  "color": "rgba(0,0,0,0.9)",
                   "fontSize": 16,
                 },
                 Object {
@@ -1655,7 +1665,7 @@ exports[`countdown Component basic render 2`] = `
               },
               Array [
                 Object {
-                  "color": "#333",
+                  "color": "rgba(0,0,0,0.9)",
                   "fontSize": 16,
                 },
                 Object {
@@ -1679,14 +1689,14 @@ exports[`countdown Component basic render 2`] = `
             "alignItems": "center",
             "backgroundColor": "#fff",
             "flexDirection": "row",
-            "height": 48,
+            "height": 56,
             "justifyContent": "center",
           },
           Array [
             Object {
               "borderBottomLeftRadius": 0,
               "borderBottomRightRadius": 0,
-              "height": 68,
+              "height": 76,
               "marginTop": 12,
               "paddingBottom": 20,
             },
@@ -1709,17 +1719,18 @@ exports[`countdown Component basic render 2`] = `
           Object {
             "alignItems": "center",
             "alignSelf": "stretch",
-            "borderRightColor": "#e5e5e5",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0.5,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
             "justifyContent": "center",
-            "marginBottom": 12,
-            "marginLeft": 0,
-            "marginRight": 0,
-            "marginTop": 12,
             "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
           }
         }
       >
@@ -1740,7 +1751,7 @@ exports[`countdown Component basic render 2`] = `
               },
               Array [
                 Object {
-                  "color": "#666",
+                  "color": "rgba(0,0,0,0.7)",
                   "fontSize": 16,
                 },
                 null,
@@ -1767,17 +1778,18 @@ exports[`countdown Component basic render 2`] = `
           Object {
             "alignItems": "center",
             "alignSelf": "stretch",
-            "borderRightColor": "#e5e5e5",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
             "justifyContent": "center",
-            "marginBottom": 12,
-            "marginLeft": 0,
-            "marginRight": 0,
-            "marginTop": 12,
             "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
           }
         }
       >
@@ -1797,7 +1809,7 @@ exports[`countdown Component basic render 2`] = `
               },
               Array [
                 Object {
-                  "color": "#333",
+                  "color": "#FF4800",
                   "fontSize": 16,
                   "fontWeight": "bold",
                 },
@@ -1840,11 +1852,11 @@ exports[`countdown Component basic update 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#f5f5f5",
+        "backgroundColor": "#f8f8f8",
         "borderBottomLeftRadius": 0,
         "borderBottomRightRadius": 0,
-        "borderTopLeftRadius": 8,
-        "borderTopRightRadius": 8,
+        "borderTopLeftRadius": 16,
+        "borderTopRightRadius": 16,
         "opacity": 1,
       }
     }
@@ -1856,18 +1868,22 @@ exports[`countdown Component basic update 1`] = `
             "alignItems": "center",
             "backgroundColor": "#fff",
             "flexDirection": "row",
-            "height": 48,
+            "height": 56,
             "justifyContent": "center",
           },
           Array [
             Object {
               "backgroundColor": "#ffffff",
-              "borderBottomColor": "#e5e5e5",
+              "borderBottomColor": "rgba(0, 0, 0, 0.1)",
               "borderBottomWidth": 0.5,
-              "borderTopLeftRadius": 8,
-              "borderTopRightRadius": 8,
-              "height": 48,
+              "borderTopLeftRadius": 16,
+              "borderTopRightRadius": 16,
+              "height": 56,
               "justifyContent": "space-around",
+              "paddingBottom": 0,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 0,
             },
             Array [
               null,
@@ -1893,7 +1909,7 @@ exports[`countdown Component basic update 1`] = `
             },
             Array [
               Object {
-                "color": "#333",
+                "color": "rgba(0,0,0,0.9)",
                 "fontSize": 14,
               },
               null,
@@ -2186,7 +2202,7 @@ exports[`countdown Component basic update 1`] = `
               },
               Array [
                 Object {
-                  "color": "#333",
+                  "color": "rgba(0,0,0,0.9)",
                   "fontSize": 16,
                 },
                 Object {
@@ -2560,7 +2576,7 @@ exports[`countdown Component basic update 1`] = `
               },
               Array [
                 Object {
-                  "color": "#333",
+                  "color": "rgba(0,0,0,0.9)",
                   "fontSize": 16,
                 },
                 Object {
@@ -2584,14 +2600,14 @@ exports[`countdown Component basic update 1`] = `
             "alignItems": "center",
             "backgroundColor": "#fff",
             "flexDirection": "row",
-            "height": 48,
+            "height": 56,
             "justifyContent": "center",
           },
           Array [
             Object {
               "borderBottomLeftRadius": 0,
               "borderBottomRightRadius": 0,
-              "height": 68,
+              "height": 76,
               "marginTop": 12,
               "paddingBottom": 20,
             },
@@ -2614,17 +2630,18 @@ exports[`countdown Component basic update 1`] = `
           Object {
             "alignItems": "center",
             "alignSelf": "stretch",
-            "borderRightColor": "#e5e5e5",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0.5,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
             "justifyContent": "center",
-            "marginBottom": 12,
-            "marginLeft": 0,
-            "marginRight": 0,
-            "marginTop": 12,
             "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
           }
         }
       >
@@ -2645,7 +2662,7 @@ exports[`countdown Component basic update 1`] = `
               },
               Array [
                 Object {
-                  "color": "#666",
+                  "color": "rgba(0,0,0,0.7)",
                   "fontSize": 16,
                 },
                 null,
@@ -2672,17 +2689,18 @@ exports[`countdown Component basic update 1`] = `
           Object {
             "alignItems": "center",
             "alignSelf": "stretch",
-            "borderRightColor": "#e5e5e5",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
             "justifyContent": "center",
-            "marginBottom": 12,
-            "marginLeft": 0,
-            "marginRight": 0,
-            "marginTop": 12,
             "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
           }
         }
       >
@@ -2702,7 +2720,7 @@ exports[`countdown Component basic update 1`] = `
               },
               Array [
                 Object {
-                  "color": "#333",
+                  "color": "#FF4800",
                   "fontSize": 16,
                   "fontWeight": "bold",
                 },
@@ -2745,11 +2763,11 @@ exports[`countdown Component basic update 2`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#f5f5f5",
+        "backgroundColor": "#f8f8f8",
         "borderBottomLeftRadius": 0,
         "borderBottomRightRadius": 0,
-        "borderTopLeftRadius": 8,
-        "borderTopRightRadius": 8,
+        "borderTopLeftRadius": 16,
+        "borderTopRightRadius": 16,
         "opacity": 1,
       }
     }
@@ -2761,18 +2779,22 @@ exports[`countdown Component basic update 2`] = `
             "alignItems": "center",
             "backgroundColor": "#fff",
             "flexDirection": "row",
-            "height": 48,
+            "height": 56,
             "justifyContent": "center",
           },
           Array [
             Object {
               "backgroundColor": "#ffffff",
-              "borderBottomColor": "#e5e5e5",
+              "borderBottomColor": "rgba(0, 0, 0, 0.1)",
               "borderBottomWidth": 0.5,
-              "borderTopLeftRadius": 8,
-              "borderTopRightRadius": 8,
-              "height": 48,
+              "borderTopLeftRadius": 16,
+              "borderTopRightRadius": 16,
+              "height": 56,
               "justifyContent": "space-around",
+              "paddingBottom": 0,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 0,
             },
             Array [
               null,
@@ -2798,7 +2820,7 @@ exports[`countdown Component basic update 2`] = `
             },
             Array [
               Object {
-                "color": "#333",
+                "color": "rgba(0,0,0,0.9)",
                 "fontSize": 14,
               },
               null,
@@ -3091,7 +3113,7 @@ exports[`countdown Component basic update 2`] = `
               },
               Array [
                 Object {
-                  "color": "#333",
+                  "color": "rgba(0,0,0,0.9)",
                   "fontSize": 16,
                 },
                 Object {
@@ -3465,7 +3487,7 @@ exports[`countdown Component basic update 2`] = `
               },
               Array [
                 Object {
-                  "color": "#333",
+                  "color": "rgba(0,0,0,0.9)",
                   "fontSize": 16,
                 },
                 Object {
@@ -3489,14 +3511,14 @@ exports[`countdown Component basic update 2`] = `
             "alignItems": "center",
             "backgroundColor": "#fff",
             "flexDirection": "row",
-            "height": 48,
+            "height": 56,
             "justifyContent": "center",
           },
           Array [
             Object {
               "borderBottomLeftRadius": 0,
               "borderBottomRightRadius": 0,
-              "height": 68,
+              "height": 76,
               "marginTop": 12,
               "paddingBottom": 20,
             },
@@ -3519,17 +3541,18 @@ exports[`countdown Component basic update 2`] = `
           Object {
             "alignItems": "center",
             "alignSelf": "stretch",
-            "borderRightColor": "#e5e5e5",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0.5,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
             "justifyContent": "center",
-            "marginBottom": 12,
-            "marginLeft": 0,
-            "marginRight": 0,
-            "marginTop": 12,
             "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
           }
         }
       >
@@ -3550,7 +3573,7 @@ exports[`countdown Component basic update 2`] = `
               },
               Array [
                 Object {
-                  "color": "#666",
+                  "color": "rgba(0,0,0,0.7)",
                   "fontSize": 16,
                 },
                 null,
@@ -3577,17 +3600,18 @@ exports[`countdown Component basic update 2`] = `
           Object {
             "alignItems": "center",
             "alignSelf": "stretch",
-            "borderRightColor": "#e5e5e5",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
             "justifyContent": "center",
-            "marginBottom": 12,
-            "marginLeft": 0,
-            "marginRight": 0,
-            "marginTop": 12,
             "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
           }
         }
       >
@@ -3607,7 +3631,7 @@ exports[`countdown Component basic update 2`] = `
               },
               Array [
                 Object {
-                  "color": "#333",
+                  "color": "#FF4800",
                   "fontSize": 16,
                   "fontWeight": "bold",
                 },
@@ -3650,11 +3674,11 @@ exports[`countdown Component render width hour 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#f5f5f5",
+        "backgroundColor": "#f8f8f8",
         "borderBottomLeftRadius": 0,
         "borderBottomRightRadius": 0,
-        "borderTopLeftRadius": 8,
-        "borderTopRightRadius": 8,
+        "borderTopLeftRadius": 16,
+        "borderTopRightRadius": 16,
         "opacity": 1,
       }
     }
@@ -3666,18 +3690,22 @@ exports[`countdown Component render width hour 1`] = `
             "alignItems": "center",
             "backgroundColor": "#fff",
             "flexDirection": "row",
-            "height": 48,
+            "height": 56,
             "justifyContent": "center",
           },
           Array [
             Object {
               "backgroundColor": "#ffffff",
-              "borderBottomColor": "#e5e5e5",
+              "borderBottomColor": "rgba(0, 0, 0, 0.1)",
               "borderBottomWidth": 0.5,
-              "borderTopLeftRadius": 8,
-              "borderTopRightRadius": 8,
-              "height": 48,
+              "borderTopLeftRadius": 16,
+              "borderTopRightRadius": 16,
+              "height": 56,
               "justifyContent": "space-around",
+              "paddingBottom": 0,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 0,
             },
             Array [
               null,
@@ -3703,7 +3731,7 @@ exports[`countdown Component render width hour 1`] = `
             },
             Array [
               Object {
-                "color": "#333",
+                "color": "rgba(0,0,0,0.9)",
                 "fontSize": 14,
               },
               null,
@@ -3797,7 +3825,7 @@ exports[`countdown Component render width hour 1`] = `
               },
               Array [
                 Object {
-                  "color": "#333",
+                  "color": "rgba(0,0,0,0.9)",
                   "fontSize": 16,
                 },
                 Object {
@@ -4121,7 +4149,7 @@ exports[`countdown Component render width hour 1`] = `
               },
               Array [
                 Object {
-                  "color": "#333",
+                  "color": "rgba(0,0,0,0.9)",
                   "fontSize": 16,
                 },
                 Object {
@@ -4145,14 +4173,14 @@ exports[`countdown Component render width hour 1`] = `
             "alignItems": "center",
             "backgroundColor": "#fff",
             "flexDirection": "row",
-            "height": 48,
+            "height": 56,
             "justifyContent": "center",
           },
           Array [
             Object {
               "borderBottomLeftRadius": 0,
               "borderBottomRightRadius": 0,
-              "height": 68,
+              "height": 76,
               "marginTop": 12,
               "paddingBottom": 20,
             },
@@ -4175,17 +4203,18 @@ exports[`countdown Component render width hour 1`] = `
           Object {
             "alignItems": "center",
             "alignSelf": "stretch",
-            "borderRightColor": "#e5e5e5",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0.5,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
             "justifyContent": "center",
-            "marginBottom": 12,
-            "marginLeft": 0,
-            "marginRight": 0,
-            "marginTop": 12,
             "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
           }
         }
       >
@@ -4206,7 +4235,7 @@ exports[`countdown Component render width hour 1`] = `
               },
               Array [
                 Object {
-                  "color": "#666",
+                  "color": "rgba(0,0,0,0.7)",
                   "fontSize": 16,
                 },
                 null,
@@ -4233,17 +4262,18 @@ exports[`countdown Component render width hour 1`] = `
           Object {
             "alignItems": "center",
             "alignSelf": "stretch",
-            "borderRightColor": "#e5e5e5",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
             "justifyContent": "center",
-            "marginBottom": 12,
-            "marginLeft": 0,
-            "marginRight": 0,
-            "marginTop": 12,
             "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
           }
         }
       >
@@ -4263,7 +4293,7 @@ exports[`countdown Component render width hour 1`] = `
               },
               Array [
                 Object {
-                  "color": "#333",
+                  "color": "#FF4800",
                   "fontSize": 16,
                   "fontWeight": "bold",
                 },
@@ -4306,11 +4336,11 @@ exports[`countdown Component render width hour 2`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#f5f5f5",
+        "backgroundColor": "#f8f8f8",
         "borderBottomLeftRadius": 0,
         "borderBottomRightRadius": 0,
-        "borderTopLeftRadius": 8,
-        "borderTopRightRadius": 8,
+        "borderTopLeftRadius": 16,
+        "borderTopRightRadius": 16,
         "opacity": 1,
       }
     }
@@ -4322,18 +4352,22 @@ exports[`countdown Component render width hour 2`] = `
             "alignItems": "center",
             "backgroundColor": "#fff",
             "flexDirection": "row",
-            "height": 48,
+            "height": 56,
             "justifyContent": "center",
           },
           Array [
             Object {
               "backgroundColor": "#ffffff",
-              "borderBottomColor": "#e5e5e5",
+              "borderBottomColor": "rgba(0, 0, 0, 0.1)",
               "borderBottomWidth": 0.5,
-              "borderTopLeftRadius": 8,
-              "borderTopRightRadius": 8,
-              "height": 48,
+              "borderTopLeftRadius": 16,
+              "borderTopRightRadius": 16,
+              "height": 56,
               "justifyContent": "space-around",
+              "paddingBottom": 0,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 0,
             },
             Array [
               null,
@@ -4359,7 +4393,7 @@ exports[`countdown Component render width hour 2`] = `
             },
             Array [
               Object {
-                "color": "#333",
+                "color": "rgba(0,0,0,0.9)",
                 "fontSize": 14,
               },
               null,
@@ -4458,7 +4492,7 @@ exports[`countdown Component render width hour 2`] = `
               },
               Array [
                 Object {
-                  "color": "#333",
+                  "color": "rgba(0,0,0,0.9)",
                   "fontSize": 16,
                 },
                 Object {
@@ -4732,7 +4766,7 @@ exports[`countdown Component render width hour 2`] = `
               },
               Array [
                 Object {
-                  "color": "#333",
+                  "color": "rgba(0,0,0,0.9)",
                   "fontSize": 16,
                 },
                 Object {
@@ -4756,14 +4790,14 @@ exports[`countdown Component render width hour 2`] = `
             "alignItems": "center",
             "backgroundColor": "#fff",
             "flexDirection": "row",
-            "height": 48,
+            "height": 56,
             "justifyContent": "center",
           },
           Array [
             Object {
               "borderBottomLeftRadius": 0,
               "borderBottomRightRadius": 0,
-              "height": 68,
+              "height": 76,
               "marginTop": 12,
               "paddingBottom": 20,
             },
@@ -4786,17 +4820,18 @@ exports[`countdown Component render width hour 2`] = `
           Object {
             "alignItems": "center",
             "alignSelf": "stretch",
-            "borderRightColor": "#e5e5e5",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0.5,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
             "justifyContent": "center",
-            "marginBottom": 12,
-            "marginLeft": 0,
-            "marginRight": 0,
-            "marginTop": 12,
             "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
           }
         }
       >
@@ -4817,7 +4852,7 @@ exports[`countdown Component render width hour 2`] = `
               },
               Array [
                 Object {
-                  "color": "#666",
+                  "color": "rgba(0,0,0,0.7)",
                   "fontSize": 16,
                 },
                 null,
@@ -4844,17 +4879,18 @@ exports[`countdown Component render width hour 2`] = `
           Object {
             "alignItems": "center",
             "alignSelf": "stretch",
-            "borderRightColor": "#e5e5e5",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
             "justifyContent": "center",
-            "marginBottom": 12,
-            "marginLeft": 0,
-            "marginRight": 0,
-            "marginTop": 12,
             "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
           }
         }
       >
@@ -4874,7 +4910,7 @@ exports[`countdown Component render width hour 2`] = `
               },
               Array [
                 Object {
-                  "color": "#333",
+                  "color": "#FF4800",
                   "fontSize": 16,
                   "fontWeight": "bold",
                 },
@@ -4917,11 +4953,11 @@ exports[`countdown Component render width hour 3`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#f5f5f5",
+        "backgroundColor": "#f8f8f8",
         "borderBottomLeftRadius": 0,
         "borderBottomRightRadius": 0,
-        "borderTopLeftRadius": 8,
-        "borderTopRightRadius": 8,
+        "borderTopLeftRadius": 16,
+        "borderTopRightRadius": 16,
         "opacity": 1,
       }
     }
@@ -4933,18 +4969,22 @@ exports[`countdown Component render width hour 3`] = `
             "alignItems": "center",
             "backgroundColor": "#fff",
             "flexDirection": "row",
-            "height": 48,
+            "height": 56,
             "justifyContent": "center",
           },
           Array [
             Object {
               "backgroundColor": "#ffffff",
-              "borderBottomColor": "#e5e5e5",
+              "borderBottomColor": "rgba(0, 0, 0, 0.1)",
               "borderBottomWidth": 0.5,
-              "borderTopLeftRadius": 8,
-              "borderTopRightRadius": 8,
-              "height": 48,
+              "borderTopLeftRadius": 16,
+              "borderTopRightRadius": 16,
+              "height": 56,
               "justifyContent": "space-around",
+              "paddingBottom": 0,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 0,
             },
             Array [
               null,
@@ -4970,7 +5010,7 @@ exports[`countdown Component render width hour 3`] = `
             },
             Array [
               Object {
-                "color": "#333",
+                "color": "rgba(0,0,0,0.9)",
                 "fontSize": 14,
               },
               null,
@@ -5069,7 +5109,7 @@ exports[`countdown Component render width hour 3`] = `
               },
               Array [
                 Object {
-                  "color": "#333",
+                  "color": "rgba(0,0,0,0.9)",
                   "fontSize": 16,
                 },
                 Object {
@@ -5393,7 +5433,7 @@ exports[`countdown Component render width hour 3`] = `
               },
               Array [
                 Object {
-                  "color": "#333",
+                  "color": "rgba(0,0,0,0.9)",
                   "fontSize": 16,
                 },
                 Object {
@@ -5417,14 +5457,14 @@ exports[`countdown Component render width hour 3`] = `
             "alignItems": "center",
             "backgroundColor": "#fff",
             "flexDirection": "row",
-            "height": 48,
+            "height": 56,
             "justifyContent": "center",
           },
           Array [
             Object {
               "borderBottomLeftRadius": 0,
               "borderBottomRightRadius": 0,
-              "height": 68,
+              "height": 76,
               "marginTop": 12,
               "paddingBottom": 20,
             },
@@ -5447,17 +5487,18 @@ exports[`countdown Component render width hour 3`] = `
           Object {
             "alignItems": "center",
             "alignSelf": "stretch",
-            "borderRightColor": "#e5e5e5",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0.5,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
             "justifyContent": "center",
-            "marginBottom": 12,
-            "marginLeft": 0,
-            "marginRight": 0,
-            "marginTop": 12,
             "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
           }
         }
       >
@@ -5478,7 +5519,7 @@ exports[`countdown Component render width hour 3`] = `
               },
               Array [
                 Object {
-                  "color": "#666",
+                  "color": "rgba(0,0,0,0.7)",
                   "fontSize": 16,
                 },
                 null,
@@ -5505,17 +5546,18 @@ exports[`countdown Component render width hour 3`] = `
           Object {
             "alignItems": "center",
             "alignSelf": "stretch",
-            "borderRightColor": "#e5e5e5",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
             "justifyContent": "center",
-            "marginBottom": 12,
-            "marginLeft": 0,
-            "marginRight": 0,
-            "marginTop": 12,
             "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
           }
         }
       >
@@ -5535,7 +5577,7 @@ exports[`countdown Component render width hour 3`] = `
               },
               Array [
                 Object {
-                  "color": "#333",
+                  "color": "#FF4800",
                   "fontSize": 16,
                   "fontWeight": "bold",
                 },
@@ -5578,11 +5620,11 @@ exports[`countdown Component render width onlyone 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#f5f5f5",
+        "backgroundColor": "#f8f8f8",
         "borderBottomLeftRadius": 0,
         "borderBottomRightRadius": 0,
-        "borderTopLeftRadius": 8,
-        "borderTopRightRadius": 8,
+        "borderTopLeftRadius": 16,
+        "borderTopRightRadius": 16,
         "opacity": 1,
       }
     }
@@ -5594,18 +5636,22 @@ exports[`countdown Component render width onlyone 1`] = `
             "alignItems": "center",
             "backgroundColor": "#fff",
             "flexDirection": "row",
-            "height": 48,
+            "height": 56,
             "justifyContent": "center",
           },
           Array [
             Object {
               "backgroundColor": "#ffffff",
-              "borderBottomColor": "#e5e5e5",
+              "borderBottomColor": "rgba(0, 0, 0, 0.1)",
               "borderBottomWidth": 0.5,
-              "borderTopLeftRadius": 8,
-              "borderTopRightRadius": 8,
-              "height": 48,
+              "borderTopLeftRadius": 16,
+              "borderTopRightRadius": 16,
+              "height": 56,
               "justifyContent": "space-around",
+              "paddingBottom": 0,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 0,
             },
             Array [
               null,
@@ -5631,7 +5677,7 @@ exports[`countdown Component render width onlyone 1`] = `
             },
             Array [
               Object {
-                "color": "#333",
+                "color": "rgba(0,0,0,0.9)",
                 "fontSize": 14,
               },
               null,
@@ -12927,7 +12973,7 @@ exports[`countdown Component render width onlyone 1`] = `
               },
               Array [
                 Object {
-                  "color": "#333",
+                  "color": "rgba(0,0,0,0.9)",
                   "fontSize": 16,
                 },
                 Object {
@@ -12951,14 +12997,14 @@ exports[`countdown Component render width onlyone 1`] = `
             "alignItems": "center",
             "backgroundColor": "#fff",
             "flexDirection": "row",
-            "height": 48,
+            "height": 56,
             "justifyContent": "center",
           },
           Array [
             Object {
               "borderBottomLeftRadius": 0,
               "borderBottomRightRadius": 0,
-              "height": 68,
+              "height": 76,
               "marginTop": 12,
               "paddingBottom": 20,
             },
@@ -12981,17 +13027,18 @@ exports[`countdown Component render width onlyone 1`] = `
           Object {
             "alignItems": "center",
             "alignSelf": "stretch",
-            "borderRightColor": "#e5e5e5",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0.5,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
             "justifyContent": "center",
-            "marginBottom": 12,
-            "marginLeft": 0,
-            "marginRight": 0,
-            "marginTop": 12,
             "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
           }
         }
       >
@@ -13012,7 +13059,7 @@ exports[`countdown Component render width onlyone 1`] = `
               },
               Array [
                 Object {
-                  "color": "#666",
+                  "color": "rgba(0,0,0,0.7)",
                   "fontSize": 16,
                 },
                 null,
@@ -13039,17 +13086,18 @@ exports[`countdown Component render width onlyone 1`] = `
           Object {
             "alignItems": "center",
             "alignSelf": "stretch",
-            "borderRightColor": "#e5e5e5",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
             "justifyContent": "center",
-            "marginBottom": 12,
-            "marginLeft": 0,
-            "marginRight": 0,
-            "marginTop": 12,
             "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
           }
         }
       >
@@ -13069,7 +13117,7 @@ exports[`countdown Component render width onlyone 1`] = `
               },
               Array [
                 Object {
-                  "color": "#333",
+                  "color": "#FF4800",
                   "fontSize": 16,
                   "fontWeight": "bold",
                 },
