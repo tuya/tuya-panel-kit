@@ -2,43 +2,91 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { ViewPropTypes } from 'react-native';
 import TYText from '../TYText';
-import { StyledFooter, StyledButton, StyledCancelText, StyledConfirmText } from './styled';
+import {
+  StyledFooter,
+  StyledCancelButton,
+  StyledConfirmButton,
+  StyledCancelText,
+  StyledConfirmText,
+} from './styled';
 
-const DialogFooter = ({
-  style,
-  cancelText,
-  cancelTextStyle,
-  cancelAccessibilityLabel,
-  confirmText,
-  confirmTextStyle,
-  confirmAccessibilityLabel,
-  confirmDisabled,
-  onCancel,
-  onConfirm,
-}) => {
-  return (
-    <StyledFooter style={style}>
-      {!!cancelText && (
-        <StyledButton
-          bordered={!!cancelText && !!confirmText}
-          accessibilityLabel={cancelAccessibilityLabel}
-          onPress={onCancel}
-        >
-          <StyledCancelText style={cancelTextStyle}>{cancelText}</StyledCancelText>
-        </StyledButton>
-      )}
-      {!!confirmText && (
-        <StyledButton
-          accessibilityLabel={confirmAccessibilityLabel}
-          onPress={onConfirm}
-          disabled={confirmDisabled}
-        >
-          <StyledConfirmText style={confirmTextStyle}>{confirmText}</StyledConfirmText>
-        </StyledButton>
-      )}
-    </StyledFooter>
-  );
-};
+export class DialogFooter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      pressConfirmActive: false,
+      pressCancelActive: false,
+    };
+  }
+
+  _handlePressIn = isConfirm => {
+    if (isConfirm) {
+      this.setState({
+        pressConfirmActive: true,
+      });
+    } else {
+      this.setState({
+        pressCancelActive: true,
+      });
+    }
+  };
+
+  _handlePressOut = isConfirm => {
+    if (isConfirm) {
+      this.setState({
+        pressConfirmActive: false,
+      });
+    } else {
+      this.setState({
+        pressCancelActive: false,
+      });
+    }
+  };
+
+  render() {
+    const {
+      style,
+      cancelText,
+      cancelTextStyle,
+      cancelAccessibilityLabel,
+      confirmText,
+      confirmTextStyle,
+      confirmAccessibilityLabel,
+      confirmDisabled,
+      onCancel,
+      onConfirm,
+    } = this.props;
+    const { pressConfirmActive, pressCancelActive } = this.state;
+    return (
+      <StyledFooter style={style}>
+        {!!cancelText && (
+          <StyledCancelButton
+            bordered={!!cancelText && !!confirmText}
+            accessibilityLabel={cancelAccessibilityLabel}
+            onPressIn={() => this._handlePressIn(false)}
+            onPressOut={() => this._handlePressOut(false)}
+            onPress={onCancel}
+            pressActive={pressCancelActive}
+          >
+            <StyledCancelText style={cancelTextStyle}>{cancelText}</StyledCancelText>
+          </StyledCancelButton>
+        )}
+        {!!confirmText && (
+          <StyledConfirmButton
+            accessibilityLabel={confirmAccessibilityLabel}
+            onPress={onConfirm}
+            onPressIn={() => this._handlePressIn(true)}
+            onPressOut={() => this._handlePressOut(true)}
+            disabled={confirmDisabled}
+            pressActive={pressConfirmActive}
+          >
+            <StyledConfirmText style={confirmTextStyle}>{confirmText}</StyledConfirmText>
+          </StyledConfirmButton>
+        )}
+      </StyledFooter>
+    );
+  }
+}
 
 DialogFooter.propTypes = {
   style: ViewPropTypes.style,
