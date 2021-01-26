@@ -40,6 +40,7 @@ const {
   confirmFontColor,
   subTitleFontColor,
   backIconColor,
+  pressColor,
 } = popup;
 
 /**
@@ -68,6 +69,7 @@ export const StyledContainer = styled(TouchableOpacity).attrs({
 export const StyledTitle = styled(Row)`
   justify-content: space-around;
   height: ${titleHeight}px;
+  padding: 0 16px;
   background-color: ${titleBg};
   border-top-left-radius: ${titleRadius};
   border-top-right-radius: ${titleRadius};
@@ -84,6 +86,15 @@ export const StyledSwitch = styled(SwitchButton).attrs({
   tintColor: props => getTheme(props, 'popup.tintColor', '#e5e5e5'),
 })``;
 
+export const StyledCheckout = styled(View).attrs({})`
+  width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  border-width: 1px;
+  border-color: ${props => (props.active ? confirmFontColor : '#e5e5e5')};
+  background-color: ${props => (props.active ? confirmFontColor : 'transparent')};
+`;
+
 export const StyledFooter = styled(Row)`
   padding-bottom: ${isIphoneX ? 20 : 0};
   margin-top: ${cx(6)}px;
@@ -95,16 +106,30 @@ export const StyledFooter = styled(Row)`
   }}px;
 `;
 
-export const StyledButton = styled(TouchableOpacity).attrs({
+export const StyledConfirmButton = styled(TouchableOpacity).attrs({
   activeOpacity: 0.8,
 })`
   flex: 1;
-  margin: 12px 0;
+  padding: 12px 0;
   align-self: stretch;
   align-items: center;
   justify-content: center;
   border-right-width: ${props => (props.bordered ? StyleSheet.hairlineWidth : 0)};
   border-right-color: ${lineColor};
+  background-color: ${props => (props.pressActive ? pressColor : cellBg)};
+`;
+
+export const StyledCancelButton = styled(TouchableOpacity).attrs({
+  activeOpacity: 0.8,
+})`
+  flex: 1;
+  padding: 12px 0;
+  align-self: stretch;
+  align-items: center;
+  justify-content: center;
+  border-right-width: ${props => (props.bordered ? StyleSheet.hairlineWidth : 0)};
+  border-right-color: ${lineColor};
+  background-color: ${props => (props.pressActive ? pressColor : cellBg)};
 `;
 
 export const StyledCancelText = styled(TYText)`
@@ -334,10 +359,18 @@ export const StyledFlatList = props => {
         const listTheme = { ...props, theme: globalTheme };
         return (
           <TYFlatList
-            separatorStyle={{
-              backgroundColor: getTheme(listTheme, 'popup.lineColor'),
-              marginLeft: 0,
-            }}
+            ItemSeparatorComponent={() => (
+              <View style={{ backgroundColor: getTheme(listTheme, 'popup.cellBg') }}>
+                <View
+                  style={{
+                    backgroundColor: getTheme(listTheme, 'popup.lineColor'),
+                    marginLeft: 16,
+                    marginRight: 16,
+                    height: StyleSheet.hairlineWidth,
+                  }}
+                />
+              </View>
+            )}
             {...props}
           />
         );

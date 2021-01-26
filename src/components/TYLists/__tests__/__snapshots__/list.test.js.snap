@@ -116,8 +116,8 @@ exports[`List Component basic render 1`] = `
                 "flexDirection": "row",
                 "opacity": 1,
                 "paddingBottom": 12,
-                "paddingLeft": 32,
-                "paddingRight": 32,
+                "paddingLeft": 28,
+                "paddingRight": 28,
                 "paddingTop": 12,
               },
               Array [
@@ -349,8 +349,8 @@ exports[`List Component should able to use FlatList props 1`] = `
                 "flexDirection": "row",
                 "opacity": 1,
                 "paddingBottom": 12,
-                "paddingLeft": 32,
-                "paddingRight": 32,
+                "paddingLeft": 28,
+                "paddingRight": 28,
                 "paddingTop": 12,
               },
               Array [
@@ -582,8 +582,8 @@ exports[`List Component should render with Checkbox 1`] = `
                 "flexDirection": "row",
                 "opacity": 1,
                 "paddingBottom": 12,
-                "paddingLeft": 32,
-                "paddingRight": 32,
+                "paddingLeft": 28,
+                "paddingRight": 28,
                 "paddingTop": 12,
               },
               Array [
@@ -913,8 +913,8 @@ exports[`List Component should render with Checkbox 1`] = `
                 "flexDirection": "row",
                 "opacity": 1,
                 "paddingBottom": 12,
-                "paddingLeft": 32,
-                "paddingRight": 32,
+                "paddingLeft": 28,
+                "paddingRight": 28,
                 "paddingTop": 12,
               },
               Array [
@@ -1730,8 +1730,8 @@ exports[`List Component should render with SliderItem 1`] = `
                 "flexDirection": "row",
                 "opacity": 1,
                 "paddingBottom": 12,
-                "paddingLeft": 32,
-                "paddingRight": 32,
+                "paddingLeft": 28,
+                "paddingRight": 28,
                 "paddingTop": 12,
               },
               Array [
@@ -1769,7 +1769,7 @@ exports[`List Component should render with SliderItem 1`] = `
                     "width": 17,
                   },
                   Object {
-                    "tintColor": "rgba(51, 51, 51, 0.5)",
+                    "tintColor": "#D4D4D4",
                   },
                   undefined,
                 ]
@@ -1933,8 +1933,8 @@ exports[`List Component should render with SliderItem 1`] = `
                 "flexDirection": "row",
                 "opacity": 1,
                 "paddingBottom": 12,
-                "paddingLeft": 32,
-                "paddingRight": 32,
+                "paddingLeft": 28,
+                "paddingRight": 28,
                 "paddingTop": 12,
               },
               Array [
@@ -2115,10 +2115,10 @@ exports[`List Component should render with SliderItem 1`] = `
                   fill={
                     Array [
                       0,
-                      0.2,
-                      0.2,
-                      0.2,
-                      0.5,
+                      0.8313725490196079,
+                      0.8313725490196079,
+                      0.8313725490196079,
+                      1,
                     ]
                   }
                   fillOpacity={1}
@@ -2144,10 +2144,10 @@ exports[`List Component should render with SliderItem 1`] = `
                   stroke={
                     Array [
                       0,
-                      0.2,
-                      0.2,
-                      0.2,
-                      0.5,
+                      0.8313725490196079,
+                      0.8313725490196079,
+                      0.8313725490196079,
+                      1,
                     ]
                   }
                   strokeDasharray={null}
@@ -2213,8 +2213,8 @@ exports[`List Component should render with SliderItem 1`] = `
                 "flexDirection": "row",
                 "opacity": 1,
                 "paddingBottom": 12,
-                "paddingLeft": 32,
-                "paddingRight": 32,
+                "paddingLeft": 28,
+                "paddingRight": 28,
                 "paddingTop": 12,
               },
               Array [
@@ -2279,10 +2279,10 @@ exports[`List Component should render with SliderItem 1`] = `
                   fill={
                     Array [
                       0,
-                      0.2,
-                      0.2,
-                      0.2,
-                      0.5,
+                      0.8313725490196079,
+                      0.8313725490196079,
+                      0.8313725490196079,
+                      1,
                     ]
                   }
                   fillOpacity={1}
@@ -2308,10 +2308,10 @@ exports[`List Component should render with SliderItem 1`] = `
                   stroke={
                     Array [
                       0,
-                      0.2,
-                      0.2,
-                      0.2,
-                      0.5,
+                      0.8313725490196079,
+                      0.8313725490196079,
+                      0.8313725490196079,
+                      1,
                     ]
                   }
                   strokeDasharray={null}
@@ -2483,10 +2483,10 @@ exports[`List Component should render with SliderItem 1`] = `
                   fill={
                     Array [
                       0,
-                      0.2,
-                      0.2,
-                      0.2,
-                      0.5,
+                      0.8313725490196079,
+                      0.8313725490196079,
+                      0.8313725490196079,
+                      1,
                     ]
                   }
                   fillOpacity={1}
@@ -2512,10 +2512,10 @@ exports[`List Component should render with SliderItem 1`] = `
                   stroke={
                     Array [
                       0,
-                      0.2,
-                      0.2,
-                      0.2,
-                      0.5,
+                      0.8313725490196079,
+                      0.8313725490196079,
+                      0.8313725490196079,
+                      1,
                     ]
                   }
                   strokeDasharray={null}
@@ -2581,8 +2581,8 @@ exports[`List Component should render with SliderItem 1`] = `
                 "flexDirection": "row",
                 "opacity": 1,
                 "paddingBottom": 12,
-                "paddingLeft": 32,
-                "paddingRight": 32,
+                "paddingLeft": 28,
+                "paddingRight": 28,
                 "paddingTop": 12,
               },
               Array [
@@ -2616,7 +2616,7 @@ exports[`List Component should render with SliderItem 1`] = `
                     "width": 17,
                   },
                   Object {
-                    "tintColor": "rgba(51, 51, 51, 0.5)",
+                    "tintColor": "#D4D4D4",
                   },
                   undefined,
                 ]
@@ -2781,10 +2781,10 @@ exports[`List Component should render with SliderItem 1`] = `
                   fill={
                     Array [
                       0,
-                      0.2,
-                      0.2,
-                      0.2,
-                      0.5,
+                      0.8313725490196079,
+                      0.8313725490196079,
+                      0.8313725490196079,
+                      1,
                     ]
                   }
                   fillOpacity={1}
@@ -2810,10 +2810,10 @@ exports[`List Component should render with SliderItem 1`] = `
                   stroke={
                     Array [
                       0,
-                      0.2,
-                      0.2,
-                      0.2,
-                      0.5,
+                      0.8313725490196079,
+                      0.8313725490196079,
+                      0.8313725490196079,
+                      1,
                     ]
                   }
                   strokeDasharray={null}
@@ -2934,8 +2934,8 @@ exports[`List Component should render with SliderItem 2`] = `
                 "flexDirection": "row",
                 "opacity": 1,
                 "paddingBottom": 12,
-                "paddingLeft": 32,
-                "paddingRight": 32,
+                "paddingLeft": 28,
+                "paddingRight": 28,
                 "paddingTop": 12,
               },
               Array [
@@ -3162,8 +3162,8 @@ exports[`List Component should render with SliderItem 2`] = `
                 "flexDirection": "row",
                 "opacity": 1,
                 "paddingBottom": 12,
-                "paddingLeft": 32,
-                "paddingRight": 32,
+                "paddingLeft": 28,
+                "paddingRight": 28,
                 "paddingTop": 12,
               },
               Array [
@@ -3449,8 +3449,8 @@ exports[`List Component should render with SliderItem 3`] = `
                 "flexDirection": "row",
                 "opacity": 1,
                 "paddingBottom": 12,
-                "paddingLeft": 32,
-                "paddingRight": 32,
+                "paddingLeft": 28,
+                "paddingRight": 28,
                 "paddingTop": 12,
               },
               Array [
@@ -3592,7 +3592,7 @@ exports[`List Component should render with SliderItem 3`] = `
                     "width": 17,
                   },
                   Object {
-                    "tintColor": "rgba(51, 51, 51, 0.5)",
+                    "tintColor": "#D4D4D4",
                   },
                   undefined,
                 ]
@@ -3651,8 +3651,8 @@ exports[`List Component should render with SliderItem 3`] = `
                 "flexDirection": "row",
                 "opacity": 1,
                 "paddingBottom": 12,
-                "paddingLeft": 32,
-                "paddingRight": 32,
+                "paddingLeft": 28,
+                "paddingRight": 28,
                 "paddingTop": 12,
               },
               Array [
@@ -3794,7 +3794,7 @@ exports[`List Component should render with SliderItem 3`] = `
                     "width": 17,
                   },
                   Object {
-                    "tintColor": "rgba(51, 51, 51, 0.5)",
+                    "tintColor": "#D4D4D4",
                   },
                   undefined,
                 ]
@@ -3895,8 +3895,8 @@ exports[`List Component should render with SwitchButton 1`] = `
                 "flexDirection": "row",
                 "opacity": 1,
                 "paddingBottom": 12,
-                "paddingLeft": 32,
-                "paddingRight": 32,
+                "paddingLeft": 28,
+                "paddingRight": 28,
                 "paddingTop": 12,
               },
               Array [
@@ -4097,8 +4097,8 @@ exports[`List Component should render with SwitchButton 1`] = `
                 "flexDirection": "row",
                 "opacity": 1,
                 "paddingBottom": 12,
-                "paddingLeft": 32,
-                "paddingRight": 32,
+                "paddingLeft": 28,
+                "paddingRight": 28,
                 "paddingTop": 12,
               },
               Array [
@@ -4348,8 +4348,8 @@ exports[`List Component should render with custom item 1`] = `
                 "flexDirection": "row",
                 "opacity": 1,
                 "paddingBottom": 12,
-                "paddingLeft": 32,
-                "paddingRight": 32,
+                "paddingLeft": 28,
+                "paddingRight": 28,
                 "paddingTop": 12,
               },
               Array [
@@ -4550,8 +4550,8 @@ exports[`List Component should render with custom item 1`] = `
                 "flexDirection": "row",
                 "opacity": 1,
                 "paddingBottom": 12,
-                "paddingLeft": 32,
-                "paddingRight": 32,
+                "paddingLeft": 28,
+                "paddingRight": 28,
                 "paddingTop": 12,
               },
               Array [
@@ -5446,8 +5446,8 @@ exports[`TYList basic render 1`] = `
                                                   "flexDirection": "row",
                                                   "opacity": 1,
                                                   "paddingBottom": 12,
-                                                  "paddingLeft": 32,
-                                                  "paddingRight": 32,
+                                                  "paddingLeft": 28,
+                                                  "paddingRight": 28,
                                                   "paddingTop": 12,
                                                 },
                                                 Array [
@@ -5468,8 +5468,8 @@ exports[`TYList basic render 1`] = `
                                                     "flexDirection": "row",
                                                     "opacity": 1,
                                                     "paddingBottom": 12,
-                                                    "paddingLeft": 32,
-                                                    "paddingRight": 32,
+                                                    "paddingLeft": 28,
+                                                    "paddingRight": 28,
                                                     "paddingTop": 12,
                                                   },
                                                   Array [
@@ -6764,8 +6764,8 @@ exports[`TYList basic render 1`] = `
                                                   "flexDirection": "row",
                                                   "opacity": 1,
                                                   "paddingBottom": 12,
-                                                  "paddingLeft": 32,
-                                                  "paddingRight": 32,
+                                                  "paddingLeft": 28,
+                                                  "paddingRight": 28,
                                                   "paddingTop": 12,
                                                 },
                                                 Array [
@@ -6786,8 +6786,8 @@ exports[`TYList basic render 1`] = `
                                                     "flexDirection": "row",
                                                     "opacity": 1,
                                                     "paddingBottom": 12,
-                                                    "paddingLeft": 32,
-                                                    "paddingRight": 32,
+                                                    "paddingLeft": 28,
+                                                    "paddingRight": 28,
                                                     "paddingTop": 12,
                                                   },
                                                   Array [
@@ -8360,8 +8360,8 @@ exports[`TYList basic render value != undefined 1`] = `
                                                 "flexDirection": "row",
                                                 "opacity": 1,
                                                 "paddingBottom": 12,
-                                                "paddingLeft": 32,
-                                                "paddingRight": 32,
+                                                "paddingLeft": 28,
+                                                "paddingRight": 28,
                                                 "paddingTop": 12,
                                               },
                                               Array [
@@ -8382,8 +8382,8 @@ exports[`TYList basic render value != undefined 1`] = `
                                                   "flexDirection": "row",
                                                   "opacity": 1,
                                                   "paddingBottom": 12,
-                                                  "paddingLeft": 32,
-                                                  "paddingRight": 32,
+                                                  "paddingLeft": 28,
+                                                  "paddingRight": 28,
                                                   "paddingTop": 12,
                                                 },
                                                 Array [
@@ -9292,8 +9292,8 @@ exports[`TYList basic render value != undefined 1`] = `
                                                 "flexDirection": "row",
                                                 "opacity": 1,
                                                 "paddingBottom": 12,
-                                                "paddingLeft": 32,
-                                                "paddingRight": 32,
+                                                "paddingLeft": 28,
+                                                "paddingRight": 28,
                                                 "paddingTop": 12,
                                               },
                                               Array [
@@ -9314,8 +9314,8 @@ exports[`TYList basic render value != undefined 1`] = `
                                                   "flexDirection": "row",
                                                   "opacity": 1,
                                                   "paddingBottom": 12,
-                                                  "paddingLeft": 32,
-                                                  "paddingRight": 32,
+                                                  "paddingLeft": 28,
+                                                  "paddingRight": 28,
                                                   "paddingTop": 12,
                                                 },
                                                 Array [
@@ -10441,8 +10441,8 @@ exports[`TYList basic render value = undefined 1`] = `
                                                 "flexDirection": "row",
                                                 "opacity": 1,
                                                 "paddingBottom": 12,
-                                                "paddingLeft": 32,
-                                                "paddingRight": 32,
+                                                "paddingLeft": 28,
+                                                "paddingRight": 28,
                                                 "paddingTop": 12,
                                               },
                                               Array [
@@ -10463,8 +10463,8 @@ exports[`TYList basic render value = undefined 1`] = `
                                                   "flexDirection": "row",
                                                   "opacity": 1,
                                                   "paddingBottom": 12,
-                                                  "paddingLeft": 32,
-                                                  "paddingRight": 32,
+                                                  "paddingLeft": 28,
+                                                  "paddingRight": 28,
                                                   "paddingTop": 12,
                                                 },
                                                 Array [
@@ -11285,8 +11285,8 @@ exports[`TYList basic render value = undefined 1`] = `
                                                 "flexDirection": "row",
                                                 "opacity": 1,
                                                 "paddingBottom": 12,
-                                                "paddingLeft": 32,
-                                                "paddingRight": 32,
+                                                "paddingLeft": 28,
+                                                "paddingRight": 28,
                                                 "paddingTop": 12,
                                               },
                                               Array [
@@ -11307,8 +11307,8 @@ exports[`TYList basic render value = undefined 1`] = `
                                                   "flexDirection": "row",
                                                   "opacity": 1,
                                                   "paddingBottom": 12,
-                                                  "paddingLeft": 32,
-                                                  "paddingRight": 32,
+                                                  "paddingLeft": 28,
+                                                  "paddingRight": 28,
                                                   "paddingTop": 12,
                                                 },
                                                 Array [

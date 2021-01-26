@@ -163,7 +163,7 @@ const slider = {
 const list = {
   light: {
     boardBg: '#f8f8f8',
-    iconColor: 'rgba(51, 51, 51, 0.5)',
+    iconColor: '#D4D4D4',
     fontColor: '#333',
     subFontColor: 'rgba(51, 51, 51, 0.5)',
     descFontColor: 'rgba(51, 51, 51, 0.5)',
@@ -171,19 +171,19 @@ const list = {
     cellBg: '#fff',
     cellRadius: 0,
     margin: [0, 0, 0, 0],
-    padding: [12, cx(16), 12, cx(16)],
+    padding: [12, cx(14), 12, cx(14)],
   },
   dark: {
     boardBg: '#2b2c2a',
     fontColor: '#fff',
-    iconColor: 'rgba(255, 255, 255, 0.5)',
+    iconColor: '#8f8f8f',
     subFontColor: 'rgba(255, 255, 255, 0.5)',
     descFontColor: 'rgba(255, 255, 255, 0.5)',
     cellLine: 'rgba(255, 255, 255, 0.02)',
     cellBg: 'rgba(255, 255, 255, 0.02)',
     cellRadius: 0,
     margin: [0, 0, 0, 0],
-    padding: [12, cx(16), 12, cx(16)],
+    padding: [12, cx(14), 12, cx(14)],
   },
 };
 
@@ -365,24 +365,25 @@ const dialog = {
 const popup = {
   type: 'basic', // Enum: basic| dark | ...
   basic: {
-    cellHeight: 48, // 列表高度
+    cellHeight: 56, // 列表高度
     cellBg: '#fff', // 列表底色
-    cellFontColor: '#333', // 列表字体颜色
+    cellFontColor: 'rgba(0,0,0,0.9)', // 列表字体颜色
     cellFontSize: 16, // 列表字体大小
-    subTitleFontColor: '#999', // 头部栏副标题颜色
-    titleRadius: 8, // 头部圆角
+    subTitleFontColor: 'rgba(0, 0, 0, .5)', // 头部栏副标题颜色
+    titleRadius: 16, // 头部圆角
     titleBg: '#ffffff', // 头部背景色
-    titleHeight: 48, // 头部高度
+    titleHeight: 56, // 头部高度
     footerRadius: 0, // 底部圆角
-    bottomBg: '#f5f5f5', // 底部栏底色
-    lineColor: '#e5e5e5', // 分隔线颜色
+    bottomBg: '#f8f8f8', // 底部栏底色
+    lineColor: 'rgba(0, 0, 0, 0.1)', // 分隔线颜色
     titleFontSize: 14,
-    checkboxColor: '#44db5e', // 选中icon颜色
-    titleFontColor: '#333', // 头部栏标题颜色
+    checkboxColor: '#FF4800', // 选中icon颜色
+    titleFontColor: 'rgba(0,0,0,0.9)', // 头部栏标题颜色
     cancelFontSize: 16,
-    cancelFontColor: '#666', // 底部栏取消字体颜色
+    cancelFontColor: 'rgba(0,0,0,0.7)', // 底部栏取消字体颜色
     confirmFontSize: 16,
-    confirmFontColor: '#333', // 底部栏确认字体颜色
+    confirmFontColor: '#FF4800', // 底部栏确认字体颜色
+    pressColor: '#E5E5E5',
     backIconColor: '#000', // 返回文案和按钮颜色
     tintColor: '#e5e5e5', // SwitchButton 关闭情况下背景色，popup 需要独立
     numberSelector: {
@@ -394,26 +395,27 @@ const popup = {
     },
   },
   dark: {
-    cellHeight: 48, // 列表高度
-    cellBg: '#262626', // 列表底色
-    cellFontColor: '#fff', // 列表字体颜色
+    cellHeight: 56, // 列表高度
+    cellBg: '#1A1A1A', // 列表底色
+    cellFontColor: 'rgba(255, 255, 255, 0.9)', // 列表字体颜色
     cellFontSize: 16, // 列表字体大小
-    subTitleFontColor: '#ccc', // 头部栏副标题颜色
-    titleRadius: 8, // 头部圆角
-    titleBg: '#262626', // 头部背景色
-    titleHeight: 48, // 头部高度
+    subTitleFontColor: 'rgba(255,255,255,0.5)', // 头部栏副标题颜色
+    titleRadius: 16, // 头部圆角
+    titleBg: '#1A1A1A', // 头部背景色
+    titleHeight: 56, // 头部高度
     footerRadius: 0, // 底部圆角
-    bottomBg: '#1a1a1a', // 底部栏底色
-    lineColor: '#404040', // 分隔线颜色
+    bottomBg: '#000', // 底部栏底色
+    lineColor: 'rgba(255,255,255, 0.1)', // 分隔线颜色
     titleFontSize: 14,
-    checkboxColor: '#44db5e', // 选中icon颜色
-    titleFontColor: '#fff', // 头部栏标题颜色
+    checkboxColor: '#FF4800', // 选中icon颜色
+    titleFontColor: 'rgba(255, 255, 255, 0.9)', // 头部栏标题颜色
     cancelFontSize: 16,
-    cancelFontColor: '#ccc', // 底部栏取消字体颜色
+    cancelFontColor: 'rgba(255,255,255,0.7)', // 底部栏取消字体颜色
     confirmFontSize: 16,
-    confirmFontColor: '#fff', // 底部栏确认字体颜
+    confirmFontColor: '#FF4800', // 底部栏确认字体颜色
     backIconColor: '#fff', // 返回文案和按钮颜色
     tintColor: 'rgba(255, 255, 255, 0.3)', // SwitchButton 关闭情况下背景色，popup 需要独立
+    pressColor: '#313131',
     numberSelector: {
       cellPlusColor: '#fff', // Number-selector的加减颜色
       maximumTrackTintColor: '#1A1A1A', // 大于当前值的轨道颜色
