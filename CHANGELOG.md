@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.3.2](https://github.com/tuya/tuya-panel-kit/compare/v4.3.1...v4.3.2) (2021-01-27)
+
+
+### Bug Fixes
+
+* **TYNativeApi:** fix parseJSON not defined ([83e41fe](https://github.com/tuya/tuya-panel-kit/commit/83e41fe837e9b31bb2e35e3fd95c5d9381eaf1a8))
+
+
+
 ## [4.3.1](https://github.com/tuya/tuya-panel-kit/compare/v4.3.1-rc.0...v4.3.1) (2021-01-26)
 
 
