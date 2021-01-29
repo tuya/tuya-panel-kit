@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.3.3](https://github.com/tuya/tuya-panel-kit/compare/v4.3.2...v4.3.3) (2021-01-29)
+
+
+### Bug Fixes
+
+* **react-navigation:** 修复react-navigation在二级页面首页无法接受参数的问题 ([#34](https://github.com/tuya/tuya-panel-kit/issues/34)) ([f71ebda](https://github.com/tuya/tuya-panel-kit/commit/f71ebda9a2e5103cb69f263bb74e6810013acb5a))
+
+
+### Features
+
+* **Beacon:** 新增蓝牙Beacon 协议 ([#35](https://github.com/tuya/tuya-panel-kit/issues/35)) ([5fedcfb](https://github.com/tuya/tuya-panel-kit/commit/5fedcfb854ab58d8db42575da41620cf8f9b2fcb))
+
+
+
 ## [4.3.2](https://github.com/tuya/tuya-panel-kit/compare/v4.3.1...v4.3.2) (2021-01-27)
 
 
