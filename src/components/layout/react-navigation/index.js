@@ -288,7 +288,9 @@ export default function createNavigator({ router, screenOptions }) {
             return (
               <RouteIntercept onBlur={this._onBlur} onFocus={this._onFocus}>
                 {() => {
-                  const contentLayout = <Element navigation={navigation} route={navRoute} />;
+                  const contentLayout = (
+                    <Element navigation={navigation} route={{ ...navRoute, ...route }} />
+                  );
 
                   return (
                     <FullView
