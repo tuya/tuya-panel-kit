@@ -168,7 +168,9 @@ export default class OfflineView extends Component {
     const isBle = !!NumberUtils.getBitValue(capability, 10);
     const isBleMesh = !!NumberUtils.getBitValue(capability, 11);
     const isSigMesh = !!NumberUtils.getBitValue(capability, 15);
-    const isBleDevice = isBle || isBleMesh || isSigMesh;
+    // 新增蓝牙 Beacon 协议
+    const isBleBeacon = !!NumberUtils.getBitValue(capability, 21);
+    const isBleDevice = isBle || isBleMesh || isSigMesh || isBleBeacon;
 
     // 如果是蓝牙设备，设备在线，但网络离线时不需要显示遮罩
     if (deviceOnline && isBleDevice) {
