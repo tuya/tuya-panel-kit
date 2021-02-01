@@ -209,7 +209,7 @@ class ListPopup extends React.Component {
             content: [{ flex: 1, alignItems: 'center' }, styles.content],
             title: [
               { textAlign: titleAlign, fontSize: cellFontSize, color: cellFontColor },
-              !!contentCenter && { width: viewWidth - 60 },
+              !!contentCenter && { width: viewWidth - 28 },
               styles.title,
             ],
             contentRight: [
