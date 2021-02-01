@@ -22,6 +22,7 @@ export const dialog = {
   cancelFontColor: props => getTheme(props, 'dialog.cancelFontColor', d1.cancelFontColor),
   confirmFontSize: props => getTheme(props, 'dialog.confirmFontSize', d1.confirmFontSize),
   confirmFontColor: props => getTheme(props, 'dialog.confirmFontColor', d1.confirmFontColor),
+  pressColor: props => getTheme(props, 'dialog.pressColor', d1.pressColor),
   prompt: {
     bg: props => getTheme(props, 'dialog.prompt.bg', d1.prompt.bg),
     radius: props => getTheme(props, 'dialog.prompt.radius', d1.prompt.radius),

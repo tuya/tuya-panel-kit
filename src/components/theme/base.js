@@ -302,7 +302,8 @@ const dialog = {
     cancelFontSize: 17,
     cancelFontColor: 'rgba(0, 0, 0, 0.7)', // 底部栏取消字体颜色
     confirmFontSize: 17,
-    confirmFontColor: 'rgba(0, 0, 0, 0.9)', // 底部栏确认字体颜色
+    confirmFontColor: '#FF4800', // 底部栏确认字体颜色
+    pressColor: '#E5E5E5',
     prompt: {
       padding: '12px 0px', // 输入框边距
       placeholder: 'rgba(0, 0, 0, 0.3)', // 占位符字体颜色
@@ -313,7 +314,7 @@ const dialog = {
    */
   dark: {
     width: cx(311), // 弹窗容器宽度
-    bg: '#191919', // 弹窗背景色
+    bg: '#1a1a1a', // 弹窗背景色
     radius: cx(16), // 弹窗容器圆角
     cellHeight: 55, // 列表高度（头部、底部）
     lineColor: 'rgba(255, 255, 255, 0.1)', // 分隔线颜色
@@ -324,11 +325,12 @@ const dialog = {
     cancelFontSize: 17,
     cancelFontColor: 'rgba(255, 255, 255, 0.7)', // 底部栏取消字体颜色
     confirmFontSize: 17,
-    confirmFontColor: '#fff', // 底部栏确认字体颜色
+    confirmFontColor: '#FF4800', // 底部栏确认字体颜色
     prompt: {
       padding: '12px 0px', // 输入框边距
       placeholder: 'rgba(255, 255, 255, 0.3)', // 占位符字体颜色
     },
+    pressColor: '#313131',
   },
 
   /**

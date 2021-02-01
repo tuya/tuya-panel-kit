@@ -1,6 +1,6 @@
 {
   "name": "tuya-panel-kit",
-  "version": "4.2.1",
+  "version": "4.3.3",
   "description": "a functional component library for developing tuya device panels!",
   "keywords": [
     "tuya",
@@ -42,12 +42,12 @@
     "commit": "git-cz",
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
     "format": "prettier --write src/**/*/*.{js,jsx,ts,tsx}",
-    "release:major:pre": "yarn build && standard-version --release-as major --prerelease rc",
-    "release:major": "yarn build && standard-version --release-as major",
-    "release:minor:pre": "yarn build && standard-version --release-as minor --prerelease rc --skip.changelog=true --skip.tag=true",
-    "release:minor": "yarn build && standard-version --release-as minor",
-    "release:patch:pre": "yarn build && standard-version --release-as patch --prerelease rc",
-    "release:patch": "yarn build && standard-version --release-as patch"
+    "release:major:pre": "standard-version --release-as major --prerelease rc && git push --follow-tags origin master",
+    "release:major": "standard-version --release-as major && git push --follow-tags origin master",
+    "release:minor:pre": "standard-version --release-as minor --prerelease rc --skip.changelog=true --skip.tag=true && git push --follow-tags origin master",
+    "release:minor": "standard-version --release-as minor && git push --follow-tags origin master",
+    "release:patch:pre": "standard-version --release-as patch --prerelease rc && git push --follow-tags origin master",
+    "release:patch": "standard-version --release-as patch && git push --follow-tags origin master"
   },
   "config": {
     "commitizen": {

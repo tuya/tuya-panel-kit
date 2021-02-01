@@ -2,6 +2,46 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.3.3](https://github.com/tuya/tuya-panel-kit/compare/v4.3.2...v4.3.3) (2021-01-29)
+
+
+### Bug Fixes
+
+* **react-navigation:** 修复react-navigation在二级页面首页无法接受参数的问题 ([#34](https://github.com/tuya/tuya-panel-kit/issues/34)) ([f71ebda](https://github.com/tuya/tuya-panel-kit/commit/f71ebda9a2e5103cb69f263bb74e6810013acb5a))
+
+
+### Features
+
+* **Beacon:** 新增蓝牙Beacon 协议 ([#35](https://github.com/tuya/tuya-panel-kit/issues/35)) ([5fedcfb](https://github.com/tuya/tuya-panel-kit/commit/5fedcfb854ab58d8db42575da41620cf8f9b2fcb))
+
+
+
+## [4.3.2](https://github.com/tuya/tuya-panel-kit/compare/v4.3.1...v4.3.2) (2021-01-27)
+
+
+### Bug Fixes
+
+* **TYNativeApi:** fix parseJSON not defined ([83e41fe](https://github.com/tuya/tuya-panel-kit/commit/83e41fe837e9b31bb2e35e3fd95c5d9381eaf1a8))
+
+
+
+## [4.3.1](https://github.com/tuya/tuya-panel-kit/compare/v4.3.1-rc.0...v4.3.1) (2021-01-26)
+
+
+
+## [4.3.1-rc.0](https://github.com/tuya/tuya-panel-kit/compare/v4.3.0...v4.3.1-rc.0) (2021-01-26)
+
+
+
+# [4.3.0](https://github.com/tuya/tuya-panel-kit/compare/v4.2.1...v4.3.0) (2021-01-26)
+
+
+### Bug Fixes
+
+* use pascalgn/npm-publish-action@1.3.6 ([334510b](https://github.com/tuya/tuya-panel-kit/commit/334510b0b01386b8d1efa981b1cd9853e2e64c3a))
+
+
+
 ## [4.2.1](https://github.com/tuya/tuya-panel-kit/compare/v4.2.0...v4.2.1) (2021-01-19)
 
 ### Bug Fixes

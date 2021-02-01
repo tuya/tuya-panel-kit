@@ -10,10 +10,10 @@ exports[`Checkbox Component basic render radio 1`] = `
       "useNativeDriver": true,
     }
   }
-  finalScale={0}
+  finalScale={0.9}
   height={null}
   hideDuration={250}
-  initScale={0.5}
+  initScale={0.8}
   isAlign={true}
   onHide={[Function]}
   onShow={[Function]}
@@ -55,7 +55,8 @@ exports[`Checkbox Component basic render radio 1`] = `
     maxItemNum={5}
     motionConfig={
       Object {
-        "initScale": 0.5,
+        "finalScale": 0.9,
+        "initScale": 0.8,
       }
     }
     motionType="ScaleFadeIn"
@@ -84,7 +85,7 @@ exports[`Checkbox Component basic render switch 1`] = `
       "opacity": 0,
       "transform": Array [
         Object {
-          "scale": 0.5,
+          "scale": 0.8,
         },
       ],
     }
@@ -99,6 +100,7 @@ exports[`Checkbox Component basic render switch 1`] = `
           "backgroundColor": "#fff",
           "borderRadius": 32,
           "justifyContent": "center",
+          "overflow": "hidden",
           "width": 622,
         },
         null,
@@ -222,7 +224,8 @@ exports[`Checkbox Component basic render switch 1`] = `
       maxToRenderPerBatch={10}
       motionConfig={
         Object {
-          "initScale": 0.5,
+          "finalScale": 0.9,
+          "initScale": 0.8,
         }
       }
       motionType="ScaleFadeIn"
@@ -1180,6 +1183,7 @@ exports[`Checkbox Component basic render switch 1`] = `
         style={
           Object {
             "alignItems": "center",
+            "backgroundColor": "#fff",
             "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0.5,
             "flexBasis": 0,
@@ -1233,6 +1237,7 @@ exports[`Checkbox Component basic render switch 1`] = `
         style={
           Object {
             "alignItems": "center",
+            "backgroundColor": "#fff",
             "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0,
             "flexBasis": 0,
@@ -1259,7 +1264,7 @@ exports[`Checkbox Component basic render switch 1`] = `
               },
               Array [
                 Object {
-                  "color": "rgba(0, 0, 0, 0.9)",
+                  "color": "#FF4800",
                   "fontSize": 17,
                   "fontWeight": "bold",
                   "textAlign": "center",
@@ -1289,7 +1294,7 @@ exports[`Checkbox Component basic render switch 2`] = `
       "opacity": 0,
       "transform": Array [
         Object {
-          "scale": 0.5,
+          "scale": 0.8,
         },
       ],
     }
@@ -1304,6 +1309,7 @@ exports[`Checkbox Component basic render switch 2`] = `
           "backgroundColor": "#fff",
           "borderRadius": 32,
           "justifyContent": "center",
+          "overflow": "hidden",
           "width": 622,
         },
         null,
@@ -1427,7 +1433,8 @@ exports[`Checkbox Component basic render switch 2`] = `
       maxToRenderPerBatch={10}
       motionConfig={
         Object {
-          "initScale": 0.5,
+          "finalScale": 0.9,
+          "initScale": 0.8,
         }
       }
       motionType="ScaleFadeIn"
@@ -2385,6 +2392,7 @@ exports[`Checkbox Component basic render switch 2`] = `
         style={
           Object {
             "alignItems": "center",
+            "backgroundColor": "#fff",
             "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0.5,
             "flexBasis": 0,
@@ -2438,6 +2446,7 @@ exports[`Checkbox Component basic render switch 2`] = `
         style={
           Object {
             "alignItems": "center",
+            "backgroundColor": "#fff",
             "borderRightColor": "rgba(0, 0, 0, 0.1)",
             "borderRightWidth": 0,
             "flexBasis": 0,
@@ -2464,7 +2473,7 @@ exports[`Checkbox Component basic render switch 2`] = `
               },
               Array [
                 Object {
-                  "color": "rgba(0, 0, 0, 0.9)",
+                  "color": "#FF4800",
                   "fontSize": 17,
                   "fontWeight": "bold",
                   "textAlign": "center",

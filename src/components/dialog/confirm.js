@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { ViewPropTypes } from 'react-native';
+import { ViewPropTypes, Image } from 'react-native';
+import IconFont from '../iconfont';
 import TYText from '../TYText';
 import Footer from './footer';
 import { StyledContainer, StyledContent, StyledTitle, StyledSubTitle } from './styled';
@@ -22,10 +23,23 @@ const Confirm = ({
   cancelAccessibilityLabel,
   onConfirm,
   onCancel,
+  imageSource,
+  imageStyle,
+  iconPath,
+  iconSize,
 }) => {
   return (
     <StyledContainer style={style}>
       <StyledContent style={contentStyle}>
+        {imageSource && (
+          <Image
+            source={imageSource}
+            style={[{ width: 100, height: 100, marginBottom: 16 }, imageStyle]}
+          />
+        )}
+        {!!iconPath && (
+          <IconFont d={iconPath} size={iconSize} style={[{ marginBottom: 16 }, imageStyle]} />
+        )}
         <StyledTitle style={[!!subTitle && { fontSize: 16, marginBottom: 14 }, titleStyle]}>
           {title}
         </StyledTitle>
@@ -107,6 +121,22 @@ Confirm.propTypes = {
    * 确认回调函数
    */
   onConfirm: PropTypes.func,
+  /**
+   * 图片资源
+   */
+  imageSource: PropTypes.oneOfType([PropTypes.object, PropTypes.number]),
+  /**
+   * 图片样式
+   */
+  imageStyle: ViewPropTypes.style,
+  /**
+   * 图标路径
+   */
+  iconPath: PropTypes.string,
+  /**
+   * 图标尺寸
+   */
+  iconSize: PropTypes.number,
 };
 
 Confirm.defaultProps = {
@@ -122,6 +152,10 @@ Confirm.defaultProps = {
   confirmAccessibilityLabel: 'Dialog.Confirm',
   onCancel: null,
   onConfirm: null,
+  imageSource: null,
+  imageStyle: {},
+  iconPath: null,
+  iconSize: 100,
 };
 
 export default withMotion(Confirm);
