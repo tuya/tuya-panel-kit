@@ -177,7 +177,7 @@ exports[`TopBar Component basic render 1`] = `
           Object {
             "left": 70,
             "right": 70,
-            "width": 610,
+            "width": 598,
           },
         ]
       }
@@ -622,7 +622,7 @@ exports[`TopBar Component render gradient 1`] = `
           Object {
             "left": 70,
             "right": 70,
-            "width": 610,
+            "width": 598,
           },
         ]
       }
@@ -957,7 +957,7 @@ exports[`TopBar Component render gradient 2`] = `
           Object {
             "left": 70,
             "right": 70,
-            "width": 610,
+            "width": 598,
           },
         ]
       }
@@ -1216,7 +1216,7 @@ exports[`TopBar Component render multiple actions 1`] = `
           Object {
             "left": 87,
             "right": 87,
-            "width": 576,
+            "width": 564,
           },
         ]
       }
@@ -1871,7 +1871,7 @@ exports[`TopBar Component render multiple actions 2`] = `
           Object {
             "left": 119,
             "right": 119,
-            "width": 512,
+            "width": 500,
           },
         ]
       }
