@@ -124,7 +124,7 @@ export default class TopBarContainer extends PureComponent {
         style: {
           left: spacing,
           right: spacing,
-          width: RatioUtils.winWidth - spacing * 2,
+          width: RatioUtils.winWidth - spacing * 2 - 2 * TOPBAR_MARGIN,
           ...child.props.style,
         },
       });
