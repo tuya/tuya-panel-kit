@@ -38,7 +38,7 @@ class FullView extends Component {
     hideTopbar: PropTypes.bool,
     showMenu: PropTypes.bool,
     // backgroundStyle: PropTypes.oneOfType([ViewPropTypes.style, Image.propTypes.style]),
-    background: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
+    background: PropTypes.oneOfType([PropTypes.number, PropTypes.object, PropTypes.string]),
     onBack: PropTypes.func,
     capability: PropTypes.number,
     /**
