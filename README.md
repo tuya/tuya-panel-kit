@@ -32,7 +32,7 @@ English | [简体中文](./README-zh_CN.md)
 
 ## Preview
 
-Use the mobile phone to scan and download [涂鸦面板-RN App](https://smartapp.tuya.com/typaneldev)，Scan the following qrcode in **涂鸦面板-RN App**, you can view the currently open functional components of Tuya for use during development and accelerate the progress of panel development.
+Use the mobile phone to scan and download [Tuya Panel RN App](https://smartapp.tuya.com/typaneldev)，Scan the following qrcode in **Tuya Panel RN App**, you can view the currently open functional components of Tuya for use during development and accelerate the progress of panel development.
 
 <center><p align="center"><img src="https://images.tuyacn.com/fe-static/tuya-docs/773b84dd-df35-49e3-974c-77a965152e48.png" width="60%" height="60%" /></p></center>
 
