@@ -35,6 +35,10 @@ export default class OfflineView extends Component {
     isBleOfflineOverlay: PropTypes.bool,
     showDeviceImg: PropTypes.bool,
     maskColor: ColorPropType,
+    // 自定义 wifi 离线
+    customWifiView: PropTypes.element,
+    // 自定义蓝牙离线
+    customBleView: PropTypes.element,
   };
 
   static defaultProps = {
@@ -47,6 +51,8 @@ export default class OfflineView extends Component {
     isBleOfflineOverlay: true,
     showDeviceImg: true,
     maskColor: 'rgba(0, 0, 0, 0.8)',
+    customWifiView: null,
+    customBleView: null,
   };
 
   state = {
@@ -113,7 +119,8 @@ export default class OfflineView extends Component {
   };
 
   renderBleView() {
-    const { deviceOnline, capability, isBleOfflineOverlay } = this.props;
+    const { deviceOnline, capability, isBleOfflineOverlay, customBleView } = this.props;
+    if (React.isValidElement(customBleView)) return customBleView;
     const isJumpToWifi = this._handleVersionToJump();
     // 在蓝牙状态未获取到之前不渲染该页面
     if (typeof this.state.bluetoothStatus !== 'boolean') {
@@ -132,7 +139,8 @@ export default class OfflineView extends Component {
   }
 
   renderOldView() {
-    const { showDeviceImg, maskColor } = this.props;
+    const { showDeviceImg, maskColor, customWifiView } = this.props;
+    if (React.isValidElement(customWifiView)) return customWifiView;
     const { show } = this.state;
     const appRnVersion = get(TYNative, 'mobileInfo.appRnVersion');
     // app版本大于3.16 →  appRNVersion >= 5.23才会显示新离线弹框

@@ -45,6 +45,10 @@ class FullView extends Component {
      * 蓝牙离线提示是否覆盖整个面板(除头部栏外)
      */
     isBleOfflineOverlay: PropTypes.bool,
+    // 自定义 wifi 离线
+    customWifiView: PropTypes.element,
+    // 自定义蓝牙离线
+    customBleView: PropTypes.element,
   };
 
   static defaultProps = {
@@ -58,6 +62,8 @@ class FullView extends Component {
     onBack: null,
     capability: 0,
     isBleOfflineOverlay: true,
+    customWifiView: null,
+    customBleView: null,
   };
 
   constructor(props) {
@@ -199,13 +205,15 @@ class FullView extends Component {
       showOfflineView,
       capability,
       isBleOfflineOverlay,
+      customBleView,
+      customWifiView,
     } = this.props;
     const show = !appOnline || !deviceOnline;
     const tipText = !appOnline
       ? Strings.getLang('appoffline')
       : !deviceOnline
-        ? Strings.getLang('offline')
-        : '';
+      ? Strings.getLang('offline')
+      : '';
 
     if (!show) {
       return null;
@@ -228,6 +236,8 @@ class FullView extends Component {
         deviceOnline={deviceOnline}
         capability={capability}
         isBleOfflineOverlay={isBleOfflineOverlay}
+        customWifiView={customWifiView}
+        customBleView={customBleView}
       />
     );
   }
