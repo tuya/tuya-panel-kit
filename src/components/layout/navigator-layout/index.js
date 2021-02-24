@@ -265,6 +265,7 @@ export default class NavigatorLayout extends Component {
         devInfo={devInfo}
         customWifiView={opts.customWifiView}
         customBleView={opts.customBleView}
+        reconnectTextStyle={opts.reconnectTextStyle}
       >
         {contentLayout}
       </FullView>

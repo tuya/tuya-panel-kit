@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { View, Image, Dimensions, StyleSheet, ViewPropTypes, Platform } from 'react-native';
+import { View, Image, Dimensions, StyleSheet, ViewPropTypes, Platform, Text } from 'react-native';
 import { Rect } from 'react-native-svg';
 import { TYSdk, Strings } from '../../../TYNativeApi';
 import TopBar from '../topbar';
@@ -49,6 +49,8 @@ class FullView extends Component {
     customWifiView: PropTypes.element,
     // 自定义蓝牙离线
     customBleView: PropTypes.element,
+    // wifi 离线的时候用户不想要重新连接跳转
+    reconnectTextStyle: Text.propTypes.style,
   };
 
   static defaultProps = {
@@ -64,6 +66,7 @@ class FullView extends Component {
     isBleOfflineOverlay: true,
     customWifiView: null,
     customBleView: null,
+    reconnectTextStyle: null,
   };
 
   constructor(props) {
@@ -207,6 +210,7 @@ class FullView extends Component {
       isBleOfflineOverlay,
       customBleView,
       customWifiView,
+      reconnectTextStyle,
     } = this.props;
     const show = !appOnline || !deviceOnline;
     const tipText = !appOnline
@@ -238,6 +242,7 @@ class FullView extends Component {
         isBleOfflineOverlay={isBleOfflineOverlay}
         customWifiView={customWifiView}
         customBleView={customBleView}
+        reconnectTextStyle={reconnectTextStyle}
       />
     );
   }

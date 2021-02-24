@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Image, View, StyleSheet, ViewPropTypes, ColorPropType } from 'react-native';
+import { Image, View, StyleSheet, ViewPropTypes, ColorPropType, Text } from 'react-native';
 import { TYSdk } from '../../../TYNativeApi';
 import RefText from '../../TYText';
 import { RatioUtils, NumberUtils, CoreUtils } from '../../../utils';
@@ -39,6 +39,8 @@ export default class OfflineView extends Component {
     customWifiView: PropTypes.element,
     // 自定义蓝牙离线
     customBleView: PropTypes.element,
+    // wifi 离线的时候用户不想要重新连接跳转
+    reconnectTextStyle: Text.propTypes.style,
   };
 
   static defaultProps = {
@@ -53,6 +55,7 @@ export default class OfflineView extends Component {
     maskColor: 'rgba(0, 0, 0, 0.8)',
     customWifiView: null,
     customBleView: null,
+    reconnectTextStyle: null,
   };
 
   state = {
@@ -97,13 +100,17 @@ export default class OfflineView extends Component {
   };
 
   _handleMoreHelp = () => {
+    const { reconnectTextStyle } = this.props;
     const isJumpToWifi = this._handleVersionToJump();
     let linkJumpStyle;
     if (isJumpToWifi) {
-      linkJumpStyle = {
-        color: '#FF4800',
-        textDecorationLine: 'underline',
-      };
+      linkJumpStyle = [
+        {
+          color: '#FF4800',
+          textDecorationLine: 'underline',
+        },
+        reconnectTextStyle,
+      ];
     } else {
       linkJumpStyle = {
         textDecorationLine: 'none',
@@ -139,7 +146,7 @@ export default class OfflineView extends Component {
   }
 
   renderOldView() {
-    const { showDeviceImg, maskColor, customWifiView } = this.props;
+    const { showDeviceImg, maskColor, customWifiView, reconnectTextStyle } = this.props;
     if (React.isValidElement(customWifiView)) return customWifiView;
     const { show } = this.state;
     const appRnVersion = get(TYNative, 'mobileInfo.appRnVersion');
@@ -157,6 +164,7 @@ export default class OfflineView extends Component {
         onHelpPress={this._handleMoreHelp}
         maskColor={maskColor}
         isJumpToWifi={isJumpToWifi}
+        reconnectTextStyle={reconnectTextStyle}
       />
     ) : (
       <View accessibilityLabel="OfflineView_Wifi" style={[styles.container, this.props.style]}>
