@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { Image, View, StyleSheet, ViewPropTypes, ColorPropType } from 'react-native';
+import { Image, View, StyleSheet, ViewPropTypes, ColorPropType, Text } from 'react-native';
 import { TYSdk } from '../../../TYNativeApi';
 import RefText from '../../TYText';
 import { RatioUtils, NumberUtils, CoreUtils } from '../../../utils';
@@ -35,6 +35,12 @@ export default class OfflineView extends Component {
     isBleOfflineOverlay: PropTypes.bool,
     showDeviceImg: PropTypes.bool,
     maskColor: ColorPropType,
+    // 自定义 wifi 离线
+    renderWifiOfflineView: PropTypes.func,
+    // 自定义蓝牙离线
+    renderBleOfflineView: PropTypes.func,
+    // wifi 离线的时候用户不想要重新连接跳转
+    reconnectTextStyle: Text.propTypes.style,
   };
 
   static defaultProps = {
@@ -47,6 +53,9 @@ export default class OfflineView extends Component {
     isBleOfflineOverlay: true,
     showDeviceImg: true,
     maskColor: 'rgba(0, 0, 0, 0.8)',
+    renderWifiOfflineView: null,
+    renderBleOfflineView: null,
+    reconnectTextStyle: null,
   };
 
   state = {
@@ -91,13 +100,17 @@ export default class OfflineView extends Component {
   };
 
   _handleMoreHelp = () => {
+    const { reconnectTextStyle } = this.props;
     const isJumpToWifi = this._handleVersionToJump();
     let linkJumpStyle;
     if (isJumpToWifi) {
-      linkJumpStyle = {
-        color: '#FF4800',
-        textDecorationLine: 'underline',
-      };
+      linkJumpStyle = [
+        {
+          color: '#FF4800',
+          textDecorationLine: 'underline',
+        },
+        reconnectTextStyle,
+      ];
     } else {
       linkJumpStyle = {
         textDecorationLine: 'none',
@@ -113,11 +126,14 @@ export default class OfflineView extends Component {
   };
 
   renderBleView() {
-    const { deviceOnline, capability, isBleOfflineOverlay } = this.props;
+    const { deviceOnline, capability, isBleOfflineOverlay, renderBleOfflineView } = this.props;
     const isJumpToWifi = this._handleVersionToJump();
     // 在蓝牙状态未获取到之前不渲染该页面
     if (typeof this.state.bluetoothStatus !== 'boolean') {
       return null;
+    }
+    if (renderBleOfflineView) {
+      return renderBleOfflineView();
     }
     return (
       <BleOfflineView
@@ -132,8 +148,11 @@ export default class OfflineView extends Component {
   }
 
   renderOldView() {
-    const { showDeviceImg, maskColor } = this.props;
+    const { showDeviceImg, maskColor, renderWifiOfflineView, reconnectTextStyle } = this.props;
     const { show } = this.state;
+    if (renderWifiOfflineView) {
+      return renderWifiOfflineView();
+    }
     const appRnVersion = get(TYNative, 'mobileInfo.appRnVersion');
     // app版本大于3.16 →  appRNVersion >= 5.23才会显示新离线弹框
     const isGreater = appRnVersion && compareVersion(appRnVersion, requireRnVersion);
@@ -149,6 +168,7 @@ export default class OfflineView extends Component {
         onHelpPress={this._handleMoreHelp}
         maskColor={maskColor}
         isJumpToWifi={isJumpToWifi}
+        reconnectTextStyle={reconnectTextStyle}
       />
     ) : (
       <View accessibilityLabel="OfflineView_Wifi" style={[styles.container, this.props.style]}>
