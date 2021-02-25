@@ -39,6 +39,8 @@ export default class NewOfflineView extends PureComponent {
      */
 
     isJumpToWifi: PropTypes.bool,
+    // wifi 离线的时候用户不想要重新连接跳转
+    reconnectTextStyle: Text.propTypes.style,
   };
 
   static defaultProps = {
@@ -51,6 +53,7 @@ export default class NewOfflineView extends PureComponent {
     onLinkPress: () => {},
     onHelpPress: () => {},
     isJumpToWifi: false,
+    reconnectTextStyle: null,
   };
 
   constructor(props) {
@@ -116,6 +119,7 @@ export default class NewOfflineView extends PureComponent {
       onLinkPress,
       onHelpPress,
       isJumpToWifi,
+      reconnectTextStyle,
     } = this.props;
     const { value, show } = this.state;
     const textLineBefore = Strings.getLang('offline_textLinkBefore');
@@ -170,6 +174,7 @@ export default class NewOfflineView extends PureComponent {
                             color: '#FF4800',
                             textDecorationLine: 'underline',
                           },
+                          reconnectTextStyle,
                         ]}
                         onPress={onLinkPress}
                       >
