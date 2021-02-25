@@ -263,8 +263,8 @@ export default class NavigatorLayout extends Component {
         showOfflineView={showOfflineView}
         backgroundStyle={opts.backgroundStyle}
         devInfo={devInfo}
-        customWifiView={opts.customWifiView}
-        customBleView={opts.customBleView}
+        renderWifiOfflineView={opts.renderWifiOfflineView}
+        renderBleOfflineView={opts.renderBleOfflineView}
         reconnectTextStyle={opts.reconnectTextStyle}
       >
         {contentLayout}

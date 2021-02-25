@@ -36,9 +36,9 @@ export default class OfflineView extends Component {
     showDeviceImg: PropTypes.bool,
     maskColor: ColorPropType,
     // 自定义 wifi 离线
-    customWifiView: PropTypes.element,
+    renderWifiOfflineView: PropTypes.func,
     // 自定义蓝牙离线
-    customBleView: PropTypes.element,
+    renderBleOfflineView: PropTypes.func,
     // wifi 离线的时候用户不想要重新连接跳转
     reconnectTextStyle: Text.propTypes.style,
   };
@@ -53,8 +53,8 @@ export default class OfflineView extends Component {
     isBleOfflineOverlay: true,
     showDeviceImg: true,
     maskColor: 'rgba(0, 0, 0, 0.8)',
-    customWifiView: null,
-    customBleView: null,
+    renderWifiOfflineView: null,
+    renderBleOfflineView: null,
     reconnectTextStyle: null,
   };
 
@@ -126,12 +126,14 @@ export default class OfflineView extends Component {
   };
 
   renderBleView() {
-    const { deviceOnline, capability, isBleOfflineOverlay, customBleView } = this.props;
-    if (React.isValidElement(customBleView)) return customBleView;
+    const { deviceOnline, capability, isBleOfflineOverlay, renderBleOfflineView } = this.props;
     const isJumpToWifi = this._handleVersionToJump();
     // 在蓝牙状态未获取到之前不渲染该页面
     if (typeof this.state.bluetoothStatus !== 'boolean') {
       return null;
+    }
+    if (renderBleOfflineView) {
+      return renderBleOfflineView();
     }
     return (
       <BleOfflineView
@@ -146,9 +148,11 @@ export default class OfflineView extends Component {
   }
 
   renderOldView() {
-    const { showDeviceImg, maskColor, customWifiView, reconnectTextStyle } = this.props;
-    if (React.isValidElement(customWifiView)) return customWifiView;
+    const { showDeviceImg, maskColor, renderWifiOfflineView, reconnectTextStyle } = this.props;
     const { show } = this.state;
+    if (renderWifiOfflineView) {
+      return renderWifiOfflineView();
+    }
     const appRnVersion = get(TYNative, 'mobileInfo.appRnVersion');
     // app版本大于3.16 →  appRNVersion >= 5.23才会显示新离线弹框
     const isGreater = appRnVersion && compareVersion(appRnVersion, requireRnVersion);

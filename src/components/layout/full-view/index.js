@@ -46,9 +46,9 @@ class FullView extends Component {
      */
     isBleOfflineOverlay: PropTypes.bool,
     // 自定义 wifi 离线
-    customWifiView: PropTypes.element,
+    renderWifiOfflineView: PropTypes.func,
     // 自定义蓝牙离线
-    customBleView: PropTypes.element,
+    renderBleOfflineView: PropTypes.func,
     // wifi 离线的时候用户不想要重新连接跳转
     reconnectTextStyle: Text.propTypes.style,
   };
@@ -64,8 +64,8 @@ class FullView extends Component {
     onBack: null,
     capability: 0,
     isBleOfflineOverlay: true,
-    customWifiView: null,
-    customBleView: null,
+    renderWifiOfflineView: null,
+    renderBleOfflineView: null,
     reconnectTextStyle: null,
   };
 
@@ -208,8 +208,8 @@ class FullView extends Component {
       showOfflineView,
       capability,
       isBleOfflineOverlay,
-      customBleView,
-      customWifiView,
+      renderBleOfflineView,
+      renderWifiOfflineView,
       reconnectTextStyle,
     } = this.props;
     const show = !appOnline || !deviceOnline;
@@ -240,8 +240,8 @@ class FullView extends Component {
         deviceOnline={deviceOnline}
         capability={capability}
         isBleOfflineOverlay={isBleOfflineOverlay}
-        customWifiView={customWifiView}
-        customBleView={customBleView}
+        renderWifiOfflineView={renderWifiOfflineView}
+        renderBleOfflineView={renderBleOfflineView}
         reconnectTextStyle={reconnectTextStyle}
       />
     );
