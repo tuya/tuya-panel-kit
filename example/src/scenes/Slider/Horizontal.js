@@ -35,14 +35,17 @@ export default class SliderHorizontalScene extends Component {
         <Slider
           theme={{
             width: 200,
-            trackRadius: 8,
-            trackHeight: 16,
+            height: 50,
+            trackRadius: 25,
+            trackHeight: 50,
             thumbSize: 36,
             thumbRadius: 18,
             thumbTintColor: '#ff0000',
             minimumTrackTintColor: '#ff00ff',
             maximumTrackTintColor: '#00ffff',
           }}
+          type="parcel"
+          style={{ height: 50, width: 200 }}
         />
       </View>
     );
