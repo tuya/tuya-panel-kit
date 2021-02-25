@@ -103,7 +103,10 @@ export default class Slider extends Component {
     /**
      * 滑块大小
      */
-    thumbTouchSize: PropTypes.shape({ width: PropTypes.number, height: PropTypes.number }),
+    thumbTouchSize: PropTypes.shape({
+      width: PropTypes.number,
+      height: PropTypes.number,
+    }),
     /**
      * 滑动值变更回调
      */
@@ -172,6 +175,11 @@ export default class Slider extends Component {
      * 是否为水平方向
      */
     horizontal: PropTypes.bool,
+    /**
+     * 滑动条分为 2 种类型，parcel：轨道包裹滑块
+     *
+     */
+    type: PropTypes.oneOf(['parcel', 'normal']),
   };
 
   static defaultProps = {
@@ -191,6 +199,7 @@ export default class Slider extends Component {
     animationType: 'timing',
     horizontal: true,
     onlyMaximumTrack: false, // 大小滑动条一致时, 可以设置为True, 优化性能
+    type: 'normal',
   };
 
   constructor(props) {
@@ -543,23 +552,23 @@ export default class Slider extends Component {
 
     const rect = this.props.horizontal
       ? new Rect(
-        touchOverflowSize.width / 2 +
+          touchOverflowSize.width / 2 +
             this._getThumbLeft(this._getCurrentValue()) +
             (state.thumbSize.width - props.thumbTouchSize.width) / 2,
-        touchOverflowSize.height / 2 +
+          touchOverflowSize.height / 2 +
             (state.containerSize.height - props.thumbTouchSize.height) / 2,
-        props.thumbTouchSize.width,
-        props.thumbTouchSize.height
-      )
+          props.thumbTouchSize.width,
+          props.thumbTouchSize.height
+        )
       : new Rect(
-        touchOverflowSize.width / 2 +
+          touchOverflowSize.width / 2 +
             (state.containerSize.width - props.thumbTouchSize.width) / 2,
-        touchOverflowSize.height / 2 +
+          touchOverflowSize.height / 2 +
             this._getThumbLeft(this._getCurrentValue()) +
             (state.thumbSize.height - props.thumbTouchSize.height) / 2,
-        props.thumbTouchSize.width,
-        props.thumbTouchSize.height
-      );
+          props.thumbTouchSize.width,
+          props.thumbTouchSize.height
+        );
     return rect;
   }
 
@@ -567,17 +576,17 @@ export default class Slider extends Component {
     const thumbTouchRect = this._getThumbTouchRect();
     const positionStyle = this.props.horizontal
       ? {
-        left: thumbLeft,
-        top: thumbTouchRect.y,
-        width: thumbTouchRect.width,
-        height: thumbTouchRect.height,
-      }
+          left: thumbLeft,
+          top: thumbTouchRect.y,
+          width: thumbTouchRect.width,
+          height: thumbTouchRect.height,
+        }
       : {
-        left: thumbTouchRect.x,
-        top: thumbLeft,
-        width: thumbTouchRect.width,
-        height: thumbTouchRect.height,
-      };
+          left: thumbTouchRect.x,
+          top: thumbLeft,
+          width: thumbTouchRect.width,
+          height: thumbTouchRect.height,
+        };
 
     return (
       <Animated.View
@@ -605,6 +614,8 @@ export default class Slider extends Component {
       horizontal,
       thumbTouchSize,
       onlyMaximumTrack,
+      type,
+      reverseValue,
     } = this.props;
     const { value, containerSize, trackSize, thumbSize, allMeasured } = this.state;
     const mainStyles = styles || defaultStyles;
@@ -616,11 +627,19 @@ export default class Slider extends Component {
 
     if (horizontal) {
       containerStyle = { height: thumbTouchSize.height, flexDirection: 'column' };
+      const marginHeight = (containerSize.height - thumbSize.height) / 2;
       if (allMeasured) {
-        thumbTranslate = value.interpolate({
-          inputRange: [minimumValue, maximumValue],
-          outputRange: [0, containerSize.width - thumbSize.width],
-        });
+        thumbTranslate =
+          type === 'normal'
+            ? value.interpolate({
+                inputRange: [minimumValue, maximumValue],
+                outputRange: [0, containerSize.width - thumbSize.width],
+              })
+            : value.interpolate({
+                inputRange: [minimumValue, maximumValue],
+                outputRange: [marginHeight, containerSize.width - thumbSize.width - marginHeight],
+              });
+
         thumbTransformStyle = {
           transform: [
             { translateX: thumbTranslate },
@@ -629,19 +648,49 @@ export default class Slider extends Component {
           ],
         };
         if (!onlyMaximumTrack) {
-          minimumTrackStyle = {
-            width: Animated.add(thumbTranslate, thumbSize.width / 2),
-            // marginTop: -trackSize.height,
-          };
+          if (reverseValue) {
+            minimumTrackStyle = {
+              overflow: 'hidden',
+              position: 'absolute',
+              right: 0,
+              width:
+                type === 'normal'
+                  ? Animated.add(thumbTranslate, thumbSize.width / 2)
+                  : Animated.add(
+                      value.interpolate({
+                        inputRange: [minimumValue, maximumValue],
+                        outputRange: [
+                          containerSize.width - thumbSize.width - marginHeight,
+                          marginHeight,
+                        ],
+                      }),
+                      thumbSize.width + marginHeight
+                    ),
+            };
+          } else {
+            minimumTrackStyle = {
+              width:
+                type === 'normal'
+                  ? Animated.add(thumbTranslate, thumbSize.width / 2)
+                  : Animated.add(thumbTranslate, thumbSize.width + marginHeight),
+            };
+          }
         }
       }
     } else {
       containerStyle = { width: thumbTouchSize.width, flexDirection: 'row' };
+      const marginWidth = (containerSize.width - thumbSize.width) / 2;
       if (allMeasured) {
-        thumbTranslate = value.interpolate({
-          inputRange: [minimumValue, maximumValue],
-          outputRange: [0, containerSize.height - thumbSize.height],
-        });
+        thumbTranslate =
+          type === 'normal'
+            ? value.interpolate({
+                inputRange: [minimumValue, maximumValue],
+                outputRange: [0, containerSize.height - thumbSize.height],
+              })
+            : value.interpolate({
+                inputRange: [minimumValue, maximumValue],
+                outputRange: [marginWidth, containerSize.height - thumbSize.height - marginWidth],
+              });
         thumbTransformStyle = {
           transform: [
             { translateY: thumbTranslate },
@@ -649,12 +698,35 @@ export default class Slider extends Component {
           ],
         };
         if (!onlyMaximumTrack) {
-          minimumTrackStyle = {
-            overflow: 'hidden',
-            position: 'absolute',
-            height: Animated.add(thumbTranslate, thumbSize.height / 2),
-            // marginLeft: -trackSize.width,
-          };
+          if (reverseValue) {
+            minimumTrackStyle = {
+              overflow: 'hidden',
+              position: 'absolute',
+              bottom: 0,
+              height:
+                type === 'normal'
+                  ? Animated.add(thumbTranslate, thumbSize.height)
+                  : Animated.add(
+                      value.interpolate({
+                        inputRange: [minimumValue, maximumValue],
+                        outputRange: [
+                          containerSize.height - thumbSize.height - marginWidth,
+                          marginWidth,
+                        ],
+                      }),
+                      thumbSize.height + marginWidth
+                    ),
+            };
+          } else {
+            minimumTrackStyle = {
+              overflow: 'hidden',
+              position: 'absolute',
+              height:
+                type === 'normal'
+                  ? Animated.add(thumbTranslate, thumbSize.height)
+                  : Animated.add(thumbTranslate, thumbSize.height + marginWidth),
+            };
+          }
         }
       }
     }
@@ -684,7 +756,11 @@ export default class Slider extends Component {
         {!onlyMaximumTrack && (
           <Animated.View
             style={[
-              { overflow: 'hidden', position: 'absolute', backgroundColor: minimumTrackTintColor },
+              {
+                overflow: 'hidden',
+                position: 'absolute',
+                backgroundColor: minimumTrackTintColor,
+              },
               mainStyles.track,
               trackStyle,
               minimumTrackStyle,
