@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { View, Image, Dimensions, StyleSheet, ViewPropTypes, Platform } from 'react-native';
+import { View, Image, Dimensions, StyleSheet, ViewPropTypes, Platform, Text } from 'react-native';
 import { Rect } from 'react-native-svg';
 import { TYSdk, Strings } from '../../../TYNativeApi';
 import TopBar from '../topbar';
@@ -38,13 +38,19 @@ class FullView extends Component {
     hideTopbar: PropTypes.bool,
     showMenu: PropTypes.bool,
     // backgroundStyle: PropTypes.oneOfType([ViewPropTypes.style, Image.propTypes.style]),
-    background: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
+    background: PropTypes.oneOfType([PropTypes.number, PropTypes.object, PropTypes.string]),
     onBack: PropTypes.func,
     capability: PropTypes.number,
     /**
      * 蓝牙离线提示是否覆盖整个面板(除头部栏外)
      */
     isBleOfflineOverlay: PropTypes.bool,
+    // 自定义 wifi 离线
+    renderWifiOfflineView: PropTypes.func,
+    // 自定义蓝牙离线
+    renderBleOfflineView: PropTypes.func,
+    // wifi 离线的时候用户不想要重新连接跳转
+    reconnectTextStyle: Text.propTypes.style,
   };
 
   static defaultProps = {
@@ -58,6 +64,9 @@ class FullView extends Component {
     onBack: null,
     capability: 0,
     isBleOfflineOverlay: true,
+    renderWifiOfflineView: null,
+    renderBleOfflineView: null,
+    reconnectTextStyle: null,
   };
 
   constructor(props) {
@@ -199,13 +208,16 @@ class FullView extends Component {
       showOfflineView,
       capability,
       isBleOfflineOverlay,
+      renderBleOfflineView,
+      renderWifiOfflineView,
+      reconnectTextStyle,
     } = this.props;
     const show = !appOnline || !deviceOnline;
     const tipText = !appOnline
       ? Strings.getLang('appoffline')
       : !deviceOnline
-        ? Strings.getLang('offline')
-        : '';
+      ? Strings.getLang('offline')
+      : '';
 
     if (!show) {
       return null;
@@ -228,6 +240,9 @@ class FullView extends Component {
         deviceOnline={deviceOnline}
         capability={capability}
         isBleOfflineOverlay={isBleOfflineOverlay}
+        renderWifiOfflineView={renderWifiOfflineView}
+        renderBleOfflineView={renderBleOfflineView}
+        reconnectTextStyle={reconnectTextStyle}
       />
     );
   }

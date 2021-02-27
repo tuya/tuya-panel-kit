@@ -24,17 +24,17 @@ English | [简体中文](./README-zh_CN.md)
 
 ## Feature
 
-- 30+ High-quality components out of the box
-- Complete documentation and examples
+- 30+ High-quality components in use directly
+- Comprhensive documentation and examples
 - Theme customization capabilities that go deep into every detail
-- support TS，Complete type definition file
-- 90%+ Unit test coverage
+- Support TS and provide type definition file
+- 90%+ unit test coverage
 
 ## Preview
 
-Use the mobile phone to scan and download [涂鸦面板-RN App](https://smartapp.tuya.com/typaneldev)，Scan the following qrcode in **涂鸦面板-RN App**, you can view the currently open functional components of Tuya for use during development and accelerate the progress of panel development.
+Use the mobile phone to scan and download [Tuya Panel RN App](https://smartapp.tuya.com/typaneldev?lang=en)，Scan the following qrcode in **Tuya Panel RN App**, you can view the currently open functional components of Tuya for use during development and accelerate the progress of panel development.
 
-<center><p align="center"><img src="https://images.tuyacn.com/fe-static/tuya-docs/773b84dd-df35-49e3-974c-77a965152e48.png" width="60%" height="60%" /></p></center>
+<center><p align="center"><img src="https://images.tuyacn.com/rms-static/e34c9790-40e8-11eb-bf7f-5f284009845d-1608265455497.png?tyName=QR.png" width="30%" height="30%" /></p></center>
 
 ## Installation
 
@@ -48,10 +48,10 @@ yarn add tuya-panel-kit
 
 ## Support
 
-- Tuya Developer Center: https://developer.tuya.com/en/
-- Tuya Smart Help Center: https://support.tuya.com/en/help
-- Technical Support Council: https://iot.tuya.com/council/
-- Detail Docs : https://panel-docs.tuyaus.com/
+- [Tuya Developer Center](https://developer.tuya.com/en/)
+- [Tuya Smart Help Center](https://support.tuya.com/en/help)
+- [Technical Support Tickets](https://iot.tuya.com/council/)
+- [Support Docs](https://panel-docs.tuyaus.com/)
 
 ## License
 

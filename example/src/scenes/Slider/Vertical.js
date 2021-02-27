@@ -22,6 +22,25 @@ export default class SliderVerticalScene extends Component {
           minimumTrackTintColor="#ff0000"
           maximumTrackTintColor="#ff00ff"
         />
+        <Slider.Vertical
+          theme={{
+            trackRadius: 25,
+            trackHeight: 50,
+            thumbSize: 36,
+            thumbRadius: 18,
+            thumbTintColor: '#ff0000',
+            minimumTrackTintColor: '#ff00ff',
+            maximumTrackTintColor: '#00ffff',
+          }}
+          // reverseValue={true}
+          style={{ height: 200, width: 50 }}
+          value={this.state.value}
+          type="parcel"
+          minimumValue={0}
+          maximumValue={100}
+          minimumTrackTintColor="#ff0000"
+          maximumTrackTintColor="#ffff00"
+        />
       </View>
     );
   }

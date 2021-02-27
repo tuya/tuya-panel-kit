@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [4.4.0](https://github.com/tuya/tuya-panel-kit/compare/v4.3.4...v4.4.0) (2021-02-25)
+
+
+### Bug Fixes
+
+* **FullView:** fix background propType error ([#41](https://github.com/tuya/tuya-panel-kit/issues/41)) ([029a395](https://github.com/tuya/tuya-panel-kit/commit/029a395a059f82eca22b052d12b78154003d4ae4))
+* **TopBar:** 修复 TopBar 标题文案不居中问题, fixes [#37](https://github.com/tuya/tuya-panel-kit/issues/37) ([#38](https://github.com/tuya/tuya-panel-kit/issues/38)) ([17be0f4](https://github.com/tuya/tuya-panel-kit/commit/17be0f4cacb9715b5bc18d3140aa242216615591))
+
+
+### Features
+
+* **Slider:** Slider support parcel type ([#46](https://github.com/tuya/tuya-panel-kit/issues/46)) ([9435532](https://github.com/tuya/tuya-panel-kit/commit/9435532578156386ecd48e358c6e56c78be9c304)), closes [#44](https://github.com/tuya/tuya-panel-kit/issues/44)
+
+
+
+## [4.3.4](https://github.com/tuya/tuya-panel-kit/compare/v4.3.3...v4.3.4) (2021-02-04)
+
+
+
 ## [4.3.3](https://github.com/tuya/tuya-panel-kit/compare/v4.3.2...v4.3.3) (2021-01-29)
 
 
