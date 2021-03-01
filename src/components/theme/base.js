@@ -163,7 +163,7 @@ const slider = {
 const list = {
   light: {
     boardBg: '#f8f8f8',
-    iconColor: '#D4D4D4',
+    iconColor: 'rgba(0, 0, 0, 0.2)',
     fontColor: '#333',
     subFontColor: 'rgba(51, 51, 51, 0.5)',
     descFontColor: 'rgba(51, 51, 51, 0.5)',
@@ -176,7 +176,7 @@ const list = {
   dark: {
     boardBg: '#2b2c2a',
     fontColor: '#fff',
-    iconColor: '#8f8f8f',
+    iconColor: 'rgba(255, 255, 255, 0.5)',
     subFontColor: 'rgba(255, 255, 255, 0.5)',
     descFontColor: 'rgba(255, 255, 255, 0.5)',
     cellLine: 'rgba(255, 255, 255, 0.02)',
@@ -391,7 +391,7 @@ const popup = {
       maximumTrackTintColor: '#D8D8D8', // 大于当前值的轨道颜色
     },
     list: {
-      cellFontColor: '#666', // List 内容字体颜色
+      cellFontColor: 'rgba(0,0,0,0.9)', // List 内容字体颜色
     },
   },
   dark: {
@@ -421,7 +421,7 @@ const popup = {
       maximumTrackTintColor: '#1A1A1A', // 大于当前值的轨道颜色
     },
     list: {
-      cellFontColor: '#fff', // List 内容字体颜色
+      cellFontColor: 'rgba(255, 255, 255, 0.9)', // List 内容字体颜色
     },
   },
 };
