@@ -91,6 +91,8 @@ export const StyledCheckout = styled(View).attrs({})`
   height: 18px;
   border-radius: 9px;
   border-width: 1px;
+  align-items: center;
+  justify-content: center;
   border-color: ${props => (props.active ? confirmFontColor : '#e5e5e5')};
   background-color: ${props => (props.active ? confirmFontColor : 'transparent')};
 `;

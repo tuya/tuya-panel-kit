@@ -8,7 +8,7 @@ import { ThemeUtils, RatioUtils } from '../../utils';
 import { StyledIconFont, StyledFlatList, StyledCheckout } from './styled';
 
 const selectedPath =
-  'M288.67 521.63l18.69-25.26a5.217 5.217 0 0 1 7.29-1.09c0.02 0.01 0.04 0.03 0.06 0.04l113.01 86.01a5.216 5.216 0 0 0 6.48-0.13l275.9-228.25a5.22 5.22 0 0 1 6.97 0.29l17.32 16.98a5.212 5.212 0 0 1 0.07 7.37l-0.08 0.08-299.65 292.84a5.221 5.221 0 0 1-7.37-0.08l-0.01-0.01-138.22-142.06a5.206 5.206 0 0 1-0.46-6.73z';
+  'M788.053333 276.053333a32 32 0 0 1 48.341334 41.642667l-3.114667 3.584-384 384a32 32 0 0 1-41.642667 3.114667l-3.584-3.114667-170.666666-170.666667a32 32 0 0 1 41.642666-48.341333l3.584 3.114667L426.666667 637.397333l361.386666-361.386666z';
 const { getTheme, ThemeConsumer } = ThemeUtils;
 
 let itemHeight = 56;
@@ -83,7 +83,7 @@ class ListPopup extends React.Component {
   static defaultProps = {
     listWrapperStyle: null,
     dataSource: [],
-    maxItemNum: 5,
+    maxItemNum: 6,
     selectedIcon: null,
     type: 'radio',
     iconTintColor: '',
@@ -151,7 +151,7 @@ class ListPopup extends React.Component {
     const isActive = selectedArr.indexOf(value.toString()) !== -1;
     return (
       <StyledCheckout active={isActive} style={switchStyle}>
-        {isActive && <StyledIconFont d={selectedPath} color="#e5e5e5" size={18} />}
+        {isActive && <StyledIconFont d={selectedPath} color="#e5e5e5" size={16} />}
       </StyledCheckout>
     );
   };
@@ -159,7 +159,7 @@ class ListPopup extends React.Component {
   renderSelectIcon = value => {
     const { selectedIcon, iconTintColor } = this.props;
     if (this.state.selected === value) {
-      return selectedIcon || <StyledIconFont d={selectedPath} color={iconTintColor} />;
+      return selectedIcon || <StyledIconFont d={selectedPath} color={iconTintColor} size={26} />;
     }
     return null;
   };
@@ -206,14 +206,26 @@ class ListPopup extends React.Component {
           const itemStyle = {
             ...styles,
             container: [{ ...containerStyle, ...flatItemStyle }, styles.container],
-            content: [{ flex: 1, alignItems: 'center' }, styles.content],
+            content: [
+              {
+                flex: 1,
+                alignItems: 'center',
+                paddingLeft: 24,
+                paddingRight: 24,
+              },
+              styles.content,
+            ],
             title: [
-              { textAlign: titleAlign, fontSize: cellFontSize, color: cellFontColor },
-              !!contentCenter && { width: viewWidth - 28 },
+              {
+                textAlign: titleAlign,
+                fontSize: cellFontSize,
+                color: cellFontColor,
+              },
+              !!contentCenter && { width: viewWidth - 48 },
               styles.title,
             ],
             contentRight: [
-              !!contentCenter && { position: 'absolute', right: 14 },
+              !!contentCenter && { position: 'absolute', right: 24 },
               styles.contentRight,
             ],
             contentLeft: [{ marginRight: 8 }, styles.contentLeft],
@@ -257,7 +269,12 @@ class ListPopup extends React.Component {
         style={[listWrapperStyle, !switchValue && { opacity: 0.6 }, { height: totalHeight }]}
         pointerEvents={!switchValue ? 'none' : 'auto'}
       >
-        <StyledFlatList data={dataSource} renderItem={this.renderItem} {...FlatListProps} />
+        <StyledFlatList
+          data={dataSource}
+          renderItem={this.renderItem}
+          {...FlatListProps}
+          scrollEnabled={dataSource.length > maxItemNum}
+        />
       </View>
     );
   }

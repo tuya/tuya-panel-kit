@@ -24,9 +24,12 @@ export default {
   //   color: '#fff',
   //   background: 'transparent',
   // },
-  popup: {
-    type: 'dark',
-  },
+  // popup: {
+  //   type: 'dark',
+  // },
+  // list: {
+  //   type: 'dark',
+  // },
   // switchButton: {
   //   light: {
   //     tintColor: '#e5e5e5', // 关闭情况下背景色，不开放

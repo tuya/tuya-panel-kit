@@ -911,10 +911,10 @@ exports[`Checkbox Component basic render switch 1`] = `
                       fill={
                         Array [
                           0,
-                          0.8313725490196079,
-                          0.8313725490196079,
-                          0.8313725490196079,
-                          1,
+                          0,
+                          0,
+                          0,
+                          0.2,
                         ]
                       }
                       fillOpacity={1}
@@ -940,10 +940,10 @@ exports[`Checkbox Component basic render switch 1`] = `
                       stroke={
                         Array [
                           0,
-                          0.8313725490196079,
-                          0.8313725490196079,
-                          0.8313725490196079,
-                          1,
+                          0,
+                          0,
+                          0,
+                          0.2,
                         ]
                       }
                       strokeDasharray={null}
@@ -2120,10 +2120,10 @@ exports[`Checkbox Component basic render switch 2`] = `
                       fill={
                         Array [
                           0,
-                          0.8313725490196079,
-                          0.8313725490196079,
-                          0.8313725490196079,
-                          1,
+                          0,
+                          0,
+                          0,
+                          0.2,
                         ]
                       }
                       fillOpacity={1}
@@ -2149,10 +2149,10 @@ exports[`Checkbox Component basic render switch 2`] = `
                       stroke={
                         Array [
                           0,
-                          0.8313725490196079,
-                          0.8313725490196079,
-                          0.8313725490196079,
-                          1,
+                          0,
+                          0,
+                          0,
+                          0.2,
                         ]
                       }
                       strokeDasharray={null}
