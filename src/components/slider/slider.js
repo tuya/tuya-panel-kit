@@ -648,31 +648,26 @@ export default class Slider extends Component {
           ],
         };
         if (!onlyMaximumTrack) {
-          if (reverseValue) {
+          if (type === 'normal') {
+            minimumTrackStyle = {
+              width: Animated.add(thumbTranslate, thumbSize.width / 2),
+            };
+          } else if (type === 'parcel' && reverseValue) {
             minimumTrackStyle = {
               overflow: 'hidden',
               position: 'absolute',
               right: 0,
-              width:
-                type === 'normal'
-                  ? Animated.add(thumbTranslate, thumbSize.width / 2)
-                  : Animated.add(
-                      value.interpolate({
-                        inputRange: [minimumValue, maximumValue],
-                        outputRange: [
-                          containerSize.width - thumbSize.width - marginHeight,
-                          marginHeight,
-                        ],
-                      }),
-                      thumbSize.width + marginHeight
-                    ),
+              width: Animated.add(
+                value.interpolate({
+                  inputRange: [minimumValue, maximumValue],
+                  outputRange: [containerSize.width - thumbSize.width - marginHeight, marginHeight],
+                }),
+                thumbSize.width + marginHeight
+              ),
             };
-          } else {
+          } else if (type === 'parcel' && !reverseValue) {
             minimumTrackStyle = {
-              width:
-                type === 'normal'
-                  ? Animated.add(thumbTranslate, thumbSize.width / 2)
-                  : Animated.add(thumbTranslate, thumbSize.width + marginHeight),
+              width: Animated.add(thumbTranslate, thumbSize.width + marginHeight),
             };
           }
         }
@@ -698,33 +693,30 @@ export default class Slider extends Component {
           ],
         };
         if (!onlyMaximumTrack) {
-          if (reverseValue) {
+          if (type === 'normal') {
+            minimumTrackStyle = {
+              overflow: 'hidden',
+              position: 'absolute',
+              height: Animated.add(thumbTranslate, thumbSize.height),
+            };
+          } else if (type === 'parcel' && reverseValue) {
             minimumTrackStyle = {
               overflow: 'hidden',
               position: 'absolute',
               bottom: 0,
-              height:
-                type === 'normal'
-                  ? Animated.add(thumbTranslate, thumbSize.height)
-                  : Animated.add(
-                      value.interpolate({
-                        inputRange: [minimumValue, maximumValue],
-                        outputRange: [
-                          containerSize.height - thumbSize.height - marginWidth,
-                          marginWidth,
-                        ],
-                      }),
-                      thumbSize.height + marginWidth
-                    ),
+              height: Animated.add(
+                value.interpolate({
+                  inputRange: [minimumValue, maximumValue],
+                  outputRange: [containerSize.height - thumbSize.height - marginWidth, marginWidth],
+                }),
+                thumbSize.height + marginWidth
+              ),
             };
-          } else {
+          } else if (type === 'parcel' && !reverseValue) {
             minimumTrackStyle = {
               overflow: 'hidden',
               position: 'absolute',
-              height:
-                type === 'normal'
-                  ? Animated.add(thumbTranslate, thumbSize.height)
-                  : Animated.add(thumbTranslate, thumbSize.height + marginWidth),
+              height: Animated.add(thumbTranslate, thumbSize.height + marginWidth),
             };
           }
         }

@@ -296,9 +296,6 @@ exports[`ThemeSlider Component  render width animateTransitions 1`] = `
         },
         undefined,
         Object {
-          "overflow": "hidden",
-          "position": "absolute",
-          "right": 0,
           "width": 50,
         },
         Object {},
