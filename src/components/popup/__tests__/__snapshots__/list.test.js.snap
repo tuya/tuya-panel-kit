@@ -209,6 +209,7 @@ exports[`List Component basic render 1`] = `
         onScrollEndDrag={[Function]}
         onSwitchValueChange={null}
         renderItem={[Function]}
+        scrollEnabled={false}
         scrollEventThrottle={50}
         showBack={false}
         stickyHeaderIndices={Array []}
@@ -270,6 +271,8 @@ exports[`List Component basic render 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -318,7 +321,7 @@ exports[`List Component basic render 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -348,7 +351,7 @@ exports[`List Component basic render 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 />
@@ -423,6 +426,8 @@ exports[`List Component basic render 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -471,7 +476,7 @@ exports[`List Component basic render 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -501,7 +506,7 @@ exports[`List Component basic render 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 />
@@ -576,6 +581,8 @@ exports[`List Component basic render 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -624,7 +631,7 @@ exports[`List Component basic render 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -654,7 +661,7 @@ exports[`List Component basic render 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 />
@@ -729,6 +736,8 @@ exports[`List Component basic render 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -777,7 +786,7 @@ exports[`List Component basic render 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -807,7 +816,7 @@ exports[`List Component basic render 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 >
@@ -818,8 +827,8 @@ exports[`List Component basic render 1`] = `
                           "flexDirection": "row",
                         },
                         Object {
-                          "height": 56,
-                          "width": 56,
+                          "height": 26,
+                          "width": 26,
                         },
                         false,
                         null,
@@ -840,8 +849,8 @@ exports[`List Component basic render 1`] = `
                           false,
                           Object {
                             "flex": 0,
-                            "height": 56,
-                            "width": 56,
+                            "height": 26,
+                            "width": 26,
                           },
                         ]
                       }
@@ -849,7 +858,7 @@ exports[`List Component basic render 1`] = `
                       vbWidth={1024}
                     >
                       <RNSVGPath
-                        d="M288.67 521.63l18.69-25.26a5.217 5.217 0 0 1 7.29-1.09c0.02 0.01 0.04 0.03 0.06 0.04l113.01 86.01a5.216 5.216 0 0 0 6.48-0.13l275.9-228.25a5.22 5.22 0 0 1 6.97 0.29l17.32 16.98a5.212 5.212 0 0 1 0.07 7.37l-0.08 0.08-299.65 292.84a5.221 5.221 0 0 1-7.37-0.08l-0.01-0.01-138.22-142.06a5.206 5.206 0 0 1-0.46-6.73z"
+                        d="M788.053333 276.053333a32 32 0 0 1 48.341334 41.642667l-3.114667 3.584-384 384a32 32 0 0 1-41.642667 3.114667l-3.584-3.114667-170.666666-170.666667a32 32 0 0 1 41.642666-48.341333l3.584 3.114667L426.666667 637.397333l361.386666-361.386666z"
                         fill={
                           Array [
                             0,
@@ -970,6 +979,8 @@ exports[`List Component basic render 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -1018,7 +1029,7 @@ exports[`List Component basic render 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -1048,7 +1059,7 @@ exports[`List Component basic render 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 />
@@ -1123,6 +1134,8 @@ exports[`List Component basic render 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -1171,7 +1184,7 @@ exports[`List Component basic render 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -1201,7 +1214,7 @@ exports[`List Component basic render 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 />
@@ -1276,6 +1289,8 @@ exports[`List Component basic render 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -1324,7 +1339,7 @@ exports[`List Component basic render 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -1354,7 +1369,7 @@ exports[`List Component basic render 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 />
@@ -1719,6 +1734,7 @@ exports[`List Component basic render 2`] = `
         onScrollEndDrag={[Function]}
         onSwitchValueChange={null}
         renderItem={[Function]}
+        scrollEnabled={false}
         scrollEventThrottle={50}
         showBack={false}
         stickyHeaderIndices={Array []}
@@ -1779,6 +1795,8 @@ exports[`List Component basic render 2`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -1827,7 +1845,7 @@ exports[`List Component basic render 2`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -1857,7 +1875,7 @@ exports[`List Component basic render 2`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 >
@@ -1866,11 +1884,13 @@ exports[`List Component basic render 2`] = `
                     style={
                       Array [
                         Object {
+                          "alignItems": "center",
                           "backgroundColor": "transparent",
                           "borderColor": "#e5e5e5",
                           "borderRadius": 9,
                           "borderWidth": 1,
                           "height": 18,
+                          "justifyContent": "center",
                           "width": 18,
                         },
                         Object {},
@@ -1948,6 +1968,8 @@ exports[`List Component basic render 2`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -1996,7 +2018,7 @@ exports[`List Component basic render 2`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -2026,7 +2048,7 @@ exports[`List Component basic render 2`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 >
@@ -2035,11 +2057,13 @@ exports[`List Component basic render 2`] = `
                     style={
                       Array [
                         Object {
+                          "alignItems": "center",
                           "backgroundColor": "transparent",
                           "borderColor": "#e5e5e5",
                           "borderRadius": 9,
                           "borderWidth": 1,
                           "height": 18,
+                          "justifyContent": "center",
                           "width": 18,
                         },
                         Object {},
@@ -2117,6 +2141,8 @@ exports[`List Component basic render 2`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -2165,7 +2191,7 @@ exports[`List Component basic render 2`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -2195,7 +2221,7 @@ exports[`List Component basic render 2`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 >
@@ -2204,11 +2230,13 @@ exports[`List Component basic render 2`] = `
                     style={
                       Array [
                         Object {
+                          "alignItems": "center",
                           "backgroundColor": "transparent",
                           "borderColor": "#e5e5e5",
                           "borderRadius": 9,
                           "borderWidth": 1,
                           "height": 18,
+                          "justifyContent": "center",
                           "width": 18,
                         },
                         Object {},
@@ -2286,6 +2314,8 @@ exports[`List Component basic render 2`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -2334,7 +2364,7 @@ exports[`List Component basic render 2`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -2364,7 +2394,7 @@ exports[`List Component basic render 2`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 >
@@ -2373,11 +2403,13 @@ exports[`List Component basic render 2`] = `
                     style={
                       Array [
                         Object {
+                          "alignItems": "center",
                           "backgroundColor": "#FF4800",
                           "borderColor": "#FF4800",
                           "borderRadius": 9,
                           "borderWidth": 1,
                           "height": 18,
+                          "justifyContent": "center",
                           "width": 18,
                         },
                         Object {},
@@ -2391,8 +2423,8 @@ exports[`List Component basic render 2`] = `
                             "flexDirection": "row",
                           },
                           Object {
-                            "height": 18,
-                            "width": 18,
+                            "height": 16,
+                            "width": 16,
                           },
                           false,
                           null,
@@ -2413,8 +2445,8 @@ exports[`List Component basic render 2`] = `
                             false,
                             Object {
                               "flex": 0,
-                              "height": 18,
-                              "width": 18,
+                              "height": 16,
+                              "width": 16,
                             },
                           ]
                         }
@@ -2422,7 +2454,7 @@ exports[`List Component basic render 2`] = `
                         vbWidth={1024}
                       >
                         <RNSVGPath
-                          d="M288.67 521.63l18.69-25.26a5.217 5.217 0 0 1 7.29-1.09c0.02 0.01 0.04 0.03 0.06 0.04l113.01 86.01a5.216 5.216 0 0 0 6.48-0.13l275.9-228.25a5.22 5.22 0 0 1 6.97 0.29l17.32 16.98a5.212 5.212 0 0 1 0.07 7.37l-0.08 0.08-299.65 292.84a5.221 5.221 0 0 1-7.37-0.08l-0.01-0.01-138.22-142.06a5.206 5.206 0 0 1-0.46-6.73z"
+                          d="M788.053333 276.053333a32 32 0 0 1 48.341334 41.642667l-3.114667 3.584-384 384a32 32 0 0 1-41.642667 3.114667l-3.584-3.114667-170.666666-170.666667a32 32 0 0 1 41.642666-48.341333l3.584 3.114667L426.666667 637.397333l361.386666-361.386666z"
                           fill={
                             Array [
                               0,
@@ -2543,6 +2575,8 @@ exports[`List Component basic render 2`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -2591,7 +2625,7 @@ exports[`List Component basic render 2`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -2621,7 +2655,7 @@ exports[`List Component basic render 2`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 >
@@ -2630,11 +2664,13 @@ exports[`List Component basic render 2`] = `
                     style={
                       Array [
                         Object {
+                          "alignItems": "center",
                           "backgroundColor": "transparent",
                           "borderColor": "#e5e5e5",
                           "borderRadius": 9,
                           "borderWidth": 1,
                           "height": 18,
+                          "justifyContent": "center",
                           "width": 18,
                         },
                         Object {},
@@ -2712,6 +2748,8 @@ exports[`List Component basic render 2`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -2760,7 +2798,7 @@ exports[`List Component basic render 2`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -2790,7 +2828,7 @@ exports[`List Component basic render 2`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 >
@@ -2799,11 +2837,13 @@ exports[`List Component basic render 2`] = `
                     style={
                       Array [
                         Object {
+                          "alignItems": "center",
                           "backgroundColor": "transparent",
                           "borderColor": "#e5e5e5",
                           "borderRadius": 9,
                           "borderWidth": 1,
                           "height": 18,
+                          "justifyContent": "center",
                           "width": 18,
                         },
                         Object {},
@@ -2881,6 +2921,8 @@ exports[`List Component basic render 2`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -2929,7 +2971,7 @@ exports[`List Component basic render 2`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -2959,7 +3001,7 @@ exports[`List Component basic render 2`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 >
@@ -2968,11 +3010,13 @@ exports[`List Component basic render 2`] = `
                     style={
                       Array [
                         Object {
+                          "alignItems": "center",
                           "backgroundColor": "transparent",
                           "borderColor": "#e5e5e5",
                           "borderRadius": 9,
                           "borderWidth": 1,
                           "height": 18,
+                          "justifyContent": "center",
                           "width": 18,
                         },
                         Object {},
@@ -3341,6 +3385,7 @@ exports[`List Component basic render 3`] = `
         onScrollEndDrag={[Function]}
         onSwitchValueChange={null}
         renderItem={[Function]}
+        scrollEnabled={false}
         scrollEventThrottle={50}
         showBack={false}
         stickyHeaderIndices={Array []}
@@ -3402,6 +3447,8 @@ exports[`List Component basic render 3`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -3450,7 +3497,7 @@ exports[`List Component basic render 3`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -3480,7 +3527,7 @@ exports[`List Component basic render 3`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 />
@@ -3555,6 +3602,8 @@ exports[`List Component basic render 3`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -3603,7 +3652,7 @@ exports[`List Component basic render 3`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -3633,7 +3682,7 @@ exports[`List Component basic render 3`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 >
@@ -3644,8 +3693,8 @@ exports[`List Component basic render 3`] = `
                           "flexDirection": "row",
                         },
                         Object {
-                          "height": 56,
-                          "width": 56,
+                          "height": 26,
+                          "width": 26,
                         },
                         false,
                         null,
@@ -3666,8 +3715,8 @@ exports[`List Component basic render 3`] = `
                           false,
                           Object {
                             "flex": 0,
-                            "height": 56,
-                            "width": 56,
+                            "height": 26,
+                            "width": 26,
                           },
                         ]
                       }
@@ -3675,7 +3724,7 @@ exports[`List Component basic render 3`] = `
                       vbWidth={1024}
                     >
                       <RNSVGPath
-                        d="M288.67 521.63l18.69-25.26a5.217 5.217 0 0 1 7.29-1.09c0.02 0.01 0.04 0.03 0.06 0.04l113.01 86.01a5.216 5.216 0 0 0 6.48-0.13l275.9-228.25a5.22 5.22 0 0 1 6.97 0.29l17.32 16.98a5.212 5.212 0 0 1 0.07 7.37l-0.08 0.08-299.65 292.84a5.221 5.221 0 0 1-7.37-0.08l-0.01-0.01-138.22-142.06a5.206 5.206 0 0 1-0.46-6.73z"
+                        d="M788.053333 276.053333a32 32 0 0 1 48.341334 41.642667l-3.114667 3.584-384 384a32 32 0 0 1-41.642667 3.114667l-3.584-3.114667-170.666666-170.666667a32 32 0 0 1 41.642666-48.341333l3.584 3.114667L426.666667 637.397333l361.386666-361.386666z"
                         fill={
                           Array [
                             0,
@@ -3796,6 +3845,8 @@ exports[`List Component basic render 3`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -3844,7 +3895,7 @@ exports[`List Component basic render 3`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -3874,7 +3925,7 @@ exports[`List Component basic render 3`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 />
@@ -3949,6 +4000,8 @@ exports[`List Component basic render 3`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -3997,7 +4050,7 @@ exports[`List Component basic render 3`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -4027,7 +4080,7 @@ exports[`List Component basic render 3`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 />
@@ -4102,6 +4155,8 @@ exports[`List Component basic render 3`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -4150,7 +4205,7 @@ exports[`List Component basic render 3`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -4180,7 +4235,7 @@ exports[`List Component basic render 3`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 />
@@ -4255,6 +4310,8 @@ exports[`List Component basic render 3`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -4303,7 +4360,7 @@ exports[`List Component basic render 3`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -4333,7 +4390,7 @@ exports[`List Component basic render 3`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 />
@@ -4408,6 +4465,8 @@ exports[`List Component basic render 3`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -4456,7 +4515,7 @@ exports[`List Component basic render 3`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -4486,7 +4545,7 @@ exports[`List Component basic render 3`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 />
@@ -4851,6 +4910,7 @@ exports[`List Component render with contentCenter 1`] = `
         onScrollEndDrag={[Function]}
         onSwitchValueChange={null}
         renderItem={[Function]}
+        scrollEnabled={false}
         scrollEventThrottle={50}
         showBack={false}
         stickyHeaderIndices={Array []}
@@ -4911,6 +4971,8 @@ exports[`List Component render with contentCenter 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -4959,7 +5021,7 @@ exports[`List Component render with contentCenter 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -4989,7 +5051,7 @@ exports[`List Component render with contentCenter 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 />
@@ -5063,6 +5125,8 @@ exports[`List Component render with contentCenter 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -5111,7 +5175,7 @@ exports[`List Component render with contentCenter 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -5141,7 +5205,7 @@ exports[`List Component render with contentCenter 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 />
@@ -5215,6 +5279,8 @@ exports[`List Component render with contentCenter 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -5263,7 +5329,7 @@ exports[`List Component render with contentCenter 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -5293,7 +5359,7 @@ exports[`List Component render with contentCenter 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 />
@@ -5367,6 +5433,8 @@ exports[`List Component render with contentCenter 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -5415,7 +5483,7 @@ exports[`List Component render with contentCenter 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -5445,7 +5513,7 @@ exports[`List Component render with contentCenter 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 />
@@ -5519,6 +5587,8 @@ exports[`List Component render with contentCenter 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -5567,7 +5637,7 @@ exports[`List Component render with contentCenter 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -5597,7 +5667,7 @@ exports[`List Component render with contentCenter 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 />
@@ -5671,6 +5741,8 @@ exports[`List Component render with contentCenter 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -5719,7 +5791,7 @@ exports[`List Component render with contentCenter 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -5749,7 +5821,7 @@ exports[`List Component render with contentCenter 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 />
@@ -5823,6 +5895,8 @@ exports[`List Component render with contentCenter 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -5871,7 +5945,7 @@ exports[`List Component render with contentCenter 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -5901,7 +5975,7 @@ exports[`List Component render with contentCenter 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 />
@@ -6254,6 +6328,7 @@ exports[`List Component render with listItemStyle 1`] = `
       onScrollEndDrag={[Function]}
       onSwitchValueChange={null}
       renderItem={[Function]}
+      scrollEnabled={false}
       scrollEventThrottle={50}
       showBack={false}
       stickyHeaderIndices={Array []}
@@ -6314,6 +6389,8 @@ exports[`List Component render with listItemStyle 1`] = `
                       Object {
                         "alignItems": "center",
                         "flex": 1,
+                        "paddingLeft": 24,
+                        "paddingRight": 24,
                       },
                       undefined,
                     ],
@@ -6362,7 +6439,7 @@ exports[`List Component render with listItemStyle 1`] = `
                               "textAlign": "center",
                             },
                             Object {
-                              "width": 722,
+                              "width": 702,
                             },
                             undefined,
                           ],
@@ -6392,7 +6469,7 @@ exports[`List Component render with listItemStyle 1`] = `
                     "marginLeft": 20,
                     "opacity": 1,
                     "position": "absolute",
-                    "right": 14,
+                    "right": 24,
                   }
                 }
               >
@@ -6401,11 +6478,13 @@ exports[`List Component render with listItemStyle 1`] = `
                   style={
                     Array [
                       Object {
+                        "alignItems": "center",
                         "backgroundColor": "transparent",
                         "borderColor": "#e5e5e5",
                         "borderRadius": 9,
                         "borderWidth": 1,
                         "height": 18,
+                        "justifyContent": "center",
                         "width": 18,
                       },
                       Object {},
@@ -6483,6 +6562,8 @@ exports[`List Component render with listItemStyle 1`] = `
                       Object {
                         "alignItems": "center",
                         "flex": 1,
+                        "paddingLeft": 24,
+                        "paddingRight": 24,
                       },
                       undefined,
                     ],
@@ -6531,7 +6612,7 @@ exports[`List Component render with listItemStyle 1`] = `
                               "textAlign": "center",
                             },
                             Object {
-                              "width": 722,
+                              "width": 702,
                             },
                             undefined,
                           ],
@@ -6561,7 +6642,7 @@ exports[`List Component render with listItemStyle 1`] = `
                     "marginLeft": 20,
                     "opacity": 1,
                     "position": "absolute",
-                    "right": 14,
+                    "right": 24,
                   }
                 }
               >
@@ -6570,11 +6651,13 @@ exports[`List Component render with listItemStyle 1`] = `
                   style={
                     Array [
                       Object {
+                        "alignItems": "center",
                         "backgroundColor": "#FF4800",
                         "borderColor": "#FF4800",
                         "borderRadius": 9,
                         "borderWidth": 1,
                         "height": 18,
+                        "justifyContent": "center",
                         "width": 18,
                       },
                       Object {},
@@ -6588,8 +6671,8 @@ exports[`List Component render with listItemStyle 1`] = `
                           "flexDirection": "row",
                         },
                         Object {
-                          "height": 18,
-                          "width": 18,
+                          "height": 16,
+                          "width": 16,
                         },
                         false,
                         null,
@@ -6610,8 +6693,8 @@ exports[`List Component render with listItemStyle 1`] = `
                           false,
                           Object {
                             "flex": 0,
-                            "height": 18,
-                            "width": 18,
+                            "height": 16,
+                            "width": 16,
                           },
                         ]
                       }
@@ -6619,7 +6702,7 @@ exports[`List Component render with listItemStyle 1`] = `
                       vbWidth={1024}
                     >
                       <RNSVGPath
-                        d="M288.67 521.63l18.69-25.26a5.217 5.217 0 0 1 7.29-1.09c0.02 0.01 0.04 0.03 0.06 0.04l113.01 86.01a5.216 5.216 0 0 0 6.48-0.13l275.9-228.25a5.22 5.22 0 0 1 6.97 0.29l17.32 16.98a5.212 5.212 0 0 1 0.07 7.37l-0.08 0.08-299.65 292.84a5.221 5.221 0 0 1-7.37-0.08l-0.01-0.01-138.22-142.06a5.206 5.206 0 0 1-0.46-6.73z"
+                        d="M788.053333 276.053333a32 32 0 0 1 48.341334 41.642667l-3.114667 3.584-384 384a32 32 0 0 1-41.642667 3.114667l-3.584-3.114667-170.666666-170.666667a32 32 0 0 1 41.642666-48.341333l3.584 3.114667L426.666667 637.397333l361.386666-361.386666z"
                         fill={
                           Array [
                             0,
@@ -6740,6 +6823,8 @@ exports[`List Component render with listItemStyle 1`] = `
                       Object {
                         "alignItems": "center",
                         "flex": 1,
+                        "paddingLeft": 24,
+                        "paddingRight": 24,
                       },
                       undefined,
                     ],
@@ -6788,7 +6873,7 @@ exports[`List Component render with listItemStyle 1`] = `
                               "textAlign": "center",
                             },
                             Object {
-                              "width": 722,
+                              "width": 702,
                             },
                             undefined,
                           ],
@@ -6818,7 +6903,7 @@ exports[`List Component render with listItemStyle 1`] = `
                     "marginLeft": 20,
                     "opacity": 1,
                     "position": "absolute",
-                    "right": 14,
+                    "right": 24,
                   }
                 }
               >
@@ -6827,11 +6912,13 @@ exports[`List Component render with listItemStyle 1`] = `
                   style={
                     Array [
                       Object {
+                        "alignItems": "center",
                         "backgroundColor": "transparent",
                         "borderColor": "#e5e5e5",
                         "borderRadius": 9,
                         "borderWidth": 1,
                         "height": 18,
+                        "justifyContent": "center",
                         "width": 18,
                       },
                       Object {},
@@ -6909,6 +6996,8 @@ exports[`List Component render with listItemStyle 1`] = `
                       Object {
                         "alignItems": "center",
                         "flex": 1,
+                        "paddingLeft": 24,
+                        "paddingRight": 24,
                       },
                       undefined,
                     ],
@@ -6957,7 +7046,7 @@ exports[`List Component render with listItemStyle 1`] = `
                               "textAlign": "center",
                             },
                             Object {
-                              "width": 722,
+                              "width": 702,
                             },
                             undefined,
                           ],
@@ -6987,7 +7076,7 @@ exports[`List Component render with listItemStyle 1`] = `
                     "marginLeft": 20,
                     "opacity": 1,
                     "position": "absolute",
-                    "right": 14,
+                    "right": 24,
                   }
                 }
               >
@@ -6996,11 +7085,13 @@ exports[`List Component render with listItemStyle 1`] = `
                   style={
                     Array [
                       Object {
+                        "alignItems": "center",
                         "backgroundColor": "transparent",
                         "borderColor": "#e5e5e5",
                         "borderRadius": 9,
                         "borderWidth": 1,
                         "height": 18,
+                        "justifyContent": "center",
                         "width": 18,
                       },
                       Object {},
@@ -7078,6 +7169,8 @@ exports[`List Component render with listItemStyle 1`] = `
                       Object {
                         "alignItems": "center",
                         "flex": 1,
+                        "paddingLeft": 24,
+                        "paddingRight": 24,
                       },
                       undefined,
                     ],
@@ -7126,7 +7219,7 @@ exports[`List Component render with listItemStyle 1`] = `
                               "textAlign": "center",
                             },
                             Object {
-                              "width": 722,
+                              "width": 702,
                             },
                             undefined,
                           ],
@@ -7156,7 +7249,7 @@ exports[`List Component render with listItemStyle 1`] = `
                     "marginLeft": 20,
                     "opacity": 1,
                     "position": "absolute",
-                    "right": 14,
+                    "right": 24,
                   }
                 }
               >
@@ -7165,11 +7258,13 @@ exports[`List Component render with listItemStyle 1`] = `
                   style={
                     Array [
                       Object {
+                        "alignItems": "center",
                         "backgroundColor": "transparent",
                         "borderColor": "#e5e5e5",
                         "borderRadius": 9,
                         "borderWidth": 1,
                         "height": 18,
+                        "justifyContent": "center",
                         "width": 18,
                       },
                       Object {},
@@ -7247,6 +7342,8 @@ exports[`List Component render with listItemStyle 1`] = `
                       Object {
                         "alignItems": "center",
                         "flex": 1,
+                        "paddingLeft": 24,
+                        "paddingRight": 24,
                       },
                       undefined,
                     ],
@@ -7295,7 +7392,7 @@ exports[`List Component render with listItemStyle 1`] = `
                               "textAlign": "center",
                             },
                             Object {
-                              "width": 722,
+                              "width": 702,
                             },
                             undefined,
                           ],
@@ -7325,7 +7422,7 @@ exports[`List Component render with listItemStyle 1`] = `
                     "marginLeft": 20,
                     "opacity": 1,
                     "position": "absolute",
-                    "right": 14,
+                    "right": 24,
                   }
                 }
               >
@@ -7334,11 +7431,13 @@ exports[`List Component render with listItemStyle 1`] = `
                   style={
                     Array [
                       Object {
+                        "alignItems": "center",
                         "backgroundColor": "transparent",
                         "borderColor": "#e5e5e5",
                         "borderRadius": 9,
                         "borderWidth": 1,
                         "height": 18,
+                        "justifyContent": "center",
                         "width": 18,
                       },
                       Object {},
@@ -7416,6 +7515,8 @@ exports[`List Component render with listItemStyle 1`] = `
                       Object {
                         "alignItems": "center",
                         "flex": 1,
+                        "paddingLeft": 24,
+                        "paddingRight": 24,
                       },
                       undefined,
                     ],
@@ -7464,7 +7565,7 @@ exports[`List Component render with listItemStyle 1`] = `
                               "textAlign": "center",
                             },
                             Object {
-                              "width": 722,
+                              "width": 702,
                             },
                             undefined,
                           ],
@@ -7494,7 +7595,7 @@ exports[`List Component render with listItemStyle 1`] = `
                     "marginLeft": 20,
                     "opacity": 1,
                     "position": "absolute",
-                    "right": 14,
+                    "right": 24,
                   }
                 }
               >
@@ -7503,11 +7604,13 @@ exports[`List Component render with listItemStyle 1`] = `
                   style={
                     Array [
                       Object {
+                        "alignItems": "center",
                         "backgroundColor": "transparent",
                         "borderColor": "#e5e5e5",
                         "borderRadius": 9,
                         "borderWidth": 1,
                         "height": 18,
+                        "justifyContent": "center",
                         "width": 18,
                       },
                       Object {},
@@ -7875,6 +7978,7 @@ exports[`List Component render with type 1`] = `
         onScrollEndDrag={[Function]}
         onSwitchValueChange={null}
         renderItem={[Function]}
+        scrollEnabled={false}
         scrollEventThrottle={50}
         showBack={false}
         stickyHeaderIndices={Array []}
@@ -7935,6 +8039,8 @@ exports[`List Component render with type 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -7983,7 +8089,7 @@ exports[`List Component render with type 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -8013,7 +8119,7 @@ exports[`List Component render with type 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 />
@@ -8087,6 +8193,8 @@ exports[`List Component render with type 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -8135,7 +8243,7 @@ exports[`List Component render with type 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -8165,7 +8273,7 @@ exports[`List Component render with type 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 />
@@ -8239,6 +8347,8 @@ exports[`List Component render with type 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -8287,7 +8397,7 @@ exports[`List Component render with type 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -8317,7 +8427,7 @@ exports[`List Component render with type 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 />
@@ -8391,6 +8501,8 @@ exports[`List Component render with type 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -8439,7 +8551,7 @@ exports[`List Component render with type 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -8469,7 +8581,7 @@ exports[`List Component render with type 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 />
@@ -8543,6 +8655,8 @@ exports[`List Component render with type 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -8591,7 +8705,7 @@ exports[`List Component render with type 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -8621,7 +8735,7 @@ exports[`List Component render with type 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 />
@@ -8695,6 +8809,8 @@ exports[`List Component render with type 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -8743,7 +8859,7 @@ exports[`List Component render with type 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -8773,7 +8889,7 @@ exports[`List Component render with type 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 />
@@ -8847,6 +8963,8 @@ exports[`List Component render with type 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
+                          "paddingLeft": 24,
+                          "paddingRight": 24,
                         },
                         undefined,
                       ],
@@ -8895,7 +9013,7 @@ exports[`List Component render with type 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 722,
+                                "width": 702,
                               },
                               undefined,
                             ],
@@ -8925,7 +9043,7 @@ exports[`List Component render with type 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 14,
+                      "right": 24,
                     }
                   }
                 />

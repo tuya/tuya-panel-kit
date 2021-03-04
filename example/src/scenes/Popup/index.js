@@ -184,8 +184,8 @@ export default class PopupScene extends Component {
         onPress: () => {
           Popup.list({
             type: 'radio',
-            maxItemNum: 7,
-            dataSource: _.times(7, n => ({
+            maxItemNum: 6,
+            dataSource: _.times(6, n => ({
               key: `${n}`,
               title: `${n}`,
               value: `${n}`,
@@ -217,7 +217,7 @@ export default class PopupScene extends Component {
         onPress: () => {
           Popup.list({
             type: 'radio',
-            maxItemNum: 7,
+            maxItemNum: 6,
             dataSource: _.times(7, n => ({
               key: `${n}`,
               title: `列表第${n}条`,

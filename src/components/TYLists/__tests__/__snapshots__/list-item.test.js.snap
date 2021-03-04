@@ -548,7 +548,7 @@ exports[`ListItem Component should render with Action 4`] = `
           Array [
             null,
             Object {
-              "tintColor": "#D4D4D4",
+              "tintColor": "rgba(0, 0, 0, 0.2)",
             },
             undefined,
           ]
@@ -645,7 +645,7 @@ exports[`ListItem Component should render with Action 5`] = `
           Array [
             null,
             Object {
-              "tintColor": "#D4D4D4",
+              "tintColor": "rgba(0, 0, 0, 0.2)",
             },
             undefined,
           ]
@@ -1127,7 +1127,7 @@ exports[`ListItem Component should render with Icon 4`] = `
           Array [
             null,
             Object {
-              "tintColor": "#D4D4D4",
+              "tintColor": "rgba(0, 0, 0, 0.2)",
             },
             undefined,
           ]
@@ -1235,7 +1235,7 @@ exports[`ListItem Component should render with Icon 5`] = `
           Array [
             null,
             Object {
-              "tintColor": "#D4D4D4",
+              "tintColor": "rgba(0, 0, 0, 0.2)",
             },
             undefined,
           ]
@@ -1377,10 +1377,10 @@ exports[`ListItem Component should render with Icon 6`] = `
             fill={
               Array [
                 0,
-                0.8313725490196079,
-                0.8313725490196079,
-                0.8313725490196079,
-                1,
+                0,
+                0,
+                0,
+                0.2,
               ]
             }
             fillOpacity={1}
@@ -1406,10 +1406,10 @@ exports[`ListItem Component should render with Icon 6`] = `
             stroke={
               Array [
                 0,
-                0.8313725490196079,
-                0.8313725490196079,
-                0.8313725490196079,
-                1,
+                0,
+                0,
+                0,
+                0.2,
               ]
             }
             strokeDasharray={null}
@@ -1750,7 +1750,7 @@ exports[`ListItem Component should render with actionType 3`] = `
           Array [
             null,
             Object {
-              "tintColor": "#D4D4D4",
+              "tintColor": "rgba(0, 0, 0, 0.2)",
             },
             undefined,
           ]
@@ -1846,7 +1846,7 @@ exports[`ListItem Component should render with arrow 1`] = `
           Array [
             undefined,
             Object {
-              "tintColor": "#D4D4D4",
+              "tintColor": "rgba(0, 0, 0, 0.2)",
             },
             Object {
               "marginLeft": 12,
@@ -1975,7 +1975,7 @@ exports[`ListItem Component should render with arrowUseIcon 1`] = `
           vbWidth={1024}
         >
           <RNSVGPath
-            d="M213.333333 85.333333l426.666667 426.666667-426.666667 426.666667 85.333334 85.333333 512-512-512-512z"
+            d="M268.458667 55.125333A42.666667 42.666667 0 0 1 322.901333 50.346667l5.973334 4.864 426.666666 426.666666a42.666667 42.666667 0 0 1 4.864 54.442667l-4.864 5.973333-426.666666 426.666667a42.666667 42.666667 0 0 1-65.28-54.442667l4.864-5.973333L665.002667 512 268.458667 115.541333A42.666667 42.666667 0 0 1 263.68 61.098667l4.864-5.973334z"
             fill={
               Array [
                 0,
@@ -2254,10 +2254,10 @@ exports[`ListItem Component should render with iconType 2`] = `
             fill={
               Array [
                 0,
-                0.8313725490196079,
-                0.8313725490196079,
-                0.8313725490196079,
-                1,
+                0,
+                0,
+                0,
+                0.2,
               ]
             }
             fillOpacity={1}
@@ -2283,10 +2283,10 @@ exports[`ListItem Component should render with iconType 2`] = `
             stroke={
               Array [
                 0,
-                0.8313725490196079,
-                0.8313725490196079,
-                0.8313725490196079,
-                1,
+                0,
+                0,
+                0,
+                0.2,
               ]
             }
             strokeDasharray={null}
@@ -2401,7 +2401,7 @@ exports[`ListItem Component should render with iconType 3`] = `
           Array [
             null,
             Object {
-              "tintColor": "#D4D4D4",
+              "tintColor": "rgba(0, 0, 0, 0.2)",
             },
             undefined,
           ]
@@ -2728,7 +2728,7 @@ exports[`ListItem Component should render with styles 1`] = `
           Array [
             undefined,
             Object {
-              "tintColor": "#D4D4D4",
+              "tintColor": "rgba(0, 0, 0, 0.2)",
             },
             Object {
               "marginLeft": 12,
