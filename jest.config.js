@@ -23,6 +23,7 @@ module.exports = {
     '!src/components/image-upload/*.js',
     '!src/components/i18n/*.js',
     '!src/components/theme/*.js',
+    '!src/components/calendar/week/index.js',
   ],
   modulePathIgnorePatterns: ['<rootDir>/example/node_modules', '<rootDir>/demos'],
   collectCoverage: true,

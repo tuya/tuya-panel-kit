@@ -74,6 +74,7 @@
     "color": "^0.11.1",
     "events": "^1.1.1",
     "hoist-non-react-statics": "^3.3.0",
+    "moment": "^2.29.1",
     "prop-types": "^15.6.1",
     "react-addons-shallow-compare": "^15.6.2",
     "react-native-deprecated-custom-components": "0.1.2",
@@ -119,9 +120,9 @@
     "standard-version": "^5.0.2"
   },
   "peerDependencies": {
+    "@types/tuya-panel-kit": "*",
     "react": "16.8.3",
     "react-native": "0.59.10",
-    "react-native-svg": "5.5.1",
-    "@types/tuya-panel-kit": "*"
+    "react-native-svg": "5.5.1"
   }
 }

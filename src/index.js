@@ -100,3 +100,9 @@ export { default as TimerPicker } from './components/timer-picker';
 export { default as Progress } from './components/progress';
 
 export { default as GlobalToast } from './components/global-toast';
+
+export { default as Battery } from './components/battery';
+
+export { default as SliderProgress } from './components/slider-progress';
+
+export { default as SliderWithLine } from './components/slider-with-line';
