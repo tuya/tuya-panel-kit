@@ -697,7 +697,7 @@ export default class Slider extends Component {
             minimumTrackStyle = {
               overflow: 'hidden',
               position: 'absolute',
-              height: Animated.add(thumbTranslate, thumbSize.height),
+              height: Animated.add(thumbTranslate, thumbSize.height / 2),
             };
           } else if (type === 'parcel' && reverseValue) {
             minimumTrackStyle = {
