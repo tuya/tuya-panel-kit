@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [4.5.0](https://github.com/tuya/tuya-panel-kit/compare/v4.4.1...v4.5.0) (2021-03-18)
+
+
+### Bug Fixes
+
+* **TransitionPresets:** fix insets to fit App ([903718c](https://github.com/tuya/tuya-panel-kit/commit/903718c56e404563133ef632da890773cd5c5e13))
+
+
+### Features
+
+* add battery、slider-progress、slider-with-line ([#52](https://github.com/tuya/tuya-panel-kit/issues/52)) ([5915159](https://github.com/tuya/tuya-panel-kit/commit/59151596c772521b50db0d7db73594bfae3aaccf))
+* fit Slider to Studio ([9f2c694](https://github.com/tuya/tuya-panel-kit/commit/9f2c69445a3c53a636cb8d4eaa3e4b5619d6ead6))
+
+
+
 ## [4.4.1](https://github.com/tuya/tuya-panel-kit/compare/v4.4.0...v4.4.1) (2021-03-04)
 
 
