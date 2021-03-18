@@ -1,0 +1,601 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SliderWithLine basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 100,
+        "width": 100,
+      },
+      Object {
+        "backgroundColor": "#fff",
+        "overflow": "hidden",
+      },
+      Object {
+        "opacity": 1,
+      },
+    ]
+  }
+>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "height": 100,
+          "left": 0,
+          "position": "absolute",
+          "width": 100,
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+          },
+          Object {
+            "height": 100,
+            "width": 100,
+          },
+        ]
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "fontSize": 24,
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "color": "#000",
+              "left": 16,
+            },
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        1%
+      </TYText>
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "fontSize": 24,
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "color": "#000",
+              "right": 16,
+            },
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        100%
+      </TYText>
+    </View>
+    <Divider
+      color="#000"
+      flexDirection="row"
+      height={28}
+      key="0"
+      style={
+        Array [
+          Object {
+            "borderRadius": 1,
+            "opacity": 0.5,
+            "position": "absolute",
+          },
+          Object {
+            "left": 16.666666666666668,
+            "top": 36,
+          },
+        ]
+      }
+      visible={true}
+      width={1}
+    />
+    <Divider
+      color="#000"
+      flexDirection="row"
+      height={28}
+      key="1"
+      style={
+        Array [
+          Object {
+            "borderRadius": 1,
+            "opacity": 0.5,
+            "position": "absolute",
+          },
+          Object {
+            "left": 25,
+            "top": 36,
+          },
+        ]
+      }
+      visible={true}
+      width={1}
+    />
+    <Divider
+      color="#000"
+      flexDirection="row"
+      height={28}
+      key="2"
+      style={
+        Array [
+          Object {
+            "borderRadius": 1,
+            "opacity": 0.5,
+            "position": "absolute",
+          },
+          Object {
+            "left": 33.333333333333336,
+            "top": 36,
+          },
+        ]
+      }
+      visible={true}
+      width={1}
+    />
+    <Divider
+      color="#000"
+      flexDirection="row"
+      height={28}
+      key="3"
+      style={
+        Array [
+          Object {
+            "borderRadius": 1,
+            "opacity": 0.5,
+            "position": "absolute",
+          },
+          Object {
+            "left": 41.66666666666667,
+            "top": 36,
+          },
+        ]
+      }
+      visible={true}
+      width={1}
+    />
+    <Divider
+      color="#000"
+      flexDirection="row"
+      height={28}
+      key="4"
+      style={
+        Array [
+          Object {
+            "borderRadius": 1,
+            "opacity": 0.5,
+            "position": "absolute",
+          },
+          Object {
+            "left": 50,
+            "top": 36,
+          },
+        ]
+      }
+      visible={true}
+      width={1}
+    />
+    <Divider
+      color="#000"
+      flexDirection="row"
+      height={28}
+      key="5"
+      style={
+        Array [
+          Object {
+            "borderRadius": 1,
+            "opacity": 0.5,
+            "position": "absolute",
+          },
+          Object {
+            "left": 58.333333333333336,
+            "top": 36,
+          },
+        ]
+      }
+      visible={true}
+      width={1}
+    />
+    <Divider
+      color="#000"
+      flexDirection="row"
+      height={28}
+      key="6"
+      style={
+        Array [
+          Object {
+            "borderRadius": 1,
+            "opacity": 0.5,
+            "position": "absolute",
+          },
+          Object {
+            "left": 66.66666666666667,
+            "top": 36,
+          },
+        ]
+      }
+      visible={true}
+      width={1}
+    />
+    <Divider
+      color="#000"
+      flexDirection="row"
+      height={28}
+      key="7"
+      style={
+        Array [
+          Object {
+            "borderRadius": 1,
+            "opacity": 0.5,
+            "position": "absolute",
+          },
+          Object {
+            "left": 75,
+            "top": 36,
+          },
+        ]
+      }
+      visible={true}
+      width={1}
+    />
+    <Divider
+      color="#000"
+      flexDirection="row"
+      height={28}
+      key="8"
+      style={
+        Array [
+          Object {
+            "borderRadius": 1,
+            "opacity": 0.5,
+            "position": "absolute",
+          },
+          Object {
+            "left": 83.33333333333334,
+            "top": 36,
+          },
+        ]
+      }
+      visible={true}
+      width={1}
+    />
+  </AnimatedComponent>
+  <AnimatedComponent
+    style={
+      Array [
+        Array [
+          Object {
+            "borderRadius": 32,
+            "height": "100%",
+          },
+          Object {
+            "backgroundColor": "blue",
+          },
+        ],
+        Object {
+          "left": -1,
+          "width": 5,
+        },
+      ]
+    }
+  >
+    <AnimatedComponent
+      style={
+        Array [
+          Object {
+            "height": 100,
+            "left": 0,
+            "position": "absolute",
+            "width": 100,
+          },
+          Object {
+            "left": 1,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+            },
+            Object {
+              "height": 100,
+              "width": 100,
+            },
+          ]
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Array [
+              Object {
+                "fontSize": 24,
+                "opacity": 0.5,
+                "position": "absolute",
+              },
+              Object {
+                "color": "#fff",
+                "left": 16,
+              },
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          1%
+        </TYText>
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Array [
+              Object {
+                "fontSize": 24,
+                "opacity": 0.5,
+                "position": "absolute",
+              },
+              Object {
+                "color": "#fff",
+                "right": 16,
+              },
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          100%
+        </TYText>
+      </View>
+      <Divider
+        color="#fff"
+        flexDirection="row"
+        height={28}
+        key="0"
+        style={
+          Array [
+            Object {
+              "borderRadius": 1,
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "left": 16.666666666666668,
+              "top": 36,
+            },
+          ]
+        }
+        visible={true}
+        width={1}
+      />
+      <Divider
+        color="#fff"
+        flexDirection="row"
+        height={28}
+        key="1"
+        style={
+          Array [
+            Object {
+              "borderRadius": 1,
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "left": 25,
+              "top": 36,
+            },
+          ]
+        }
+        visible={true}
+        width={1}
+      />
+      <Divider
+        color="#fff"
+        flexDirection="row"
+        height={28}
+        key="2"
+        style={
+          Array [
+            Object {
+              "borderRadius": 1,
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "left": 33.333333333333336,
+              "top": 36,
+            },
+          ]
+        }
+        visible={true}
+        width={1}
+      />
+      <Divider
+        color="#fff"
+        flexDirection="row"
+        height={28}
+        key="3"
+        style={
+          Array [
+            Object {
+              "borderRadius": 1,
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "left": 41.66666666666667,
+              "top": 36,
+            },
+          ]
+        }
+        visible={true}
+        width={1}
+      />
+      <Divider
+        color="#fff"
+        flexDirection="row"
+        height={28}
+        key="4"
+        style={
+          Array [
+            Object {
+              "borderRadius": 1,
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "left": 50,
+              "top": 36,
+            },
+          ]
+        }
+        visible={true}
+        width={1}
+      />
+      <Divider
+        color="#fff"
+        flexDirection="row"
+        height={28}
+        key="5"
+        style={
+          Array [
+            Object {
+              "borderRadius": 1,
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "left": 58.333333333333336,
+              "top": 36,
+            },
+          ]
+        }
+        visible={true}
+        width={1}
+      />
+      <Divider
+        color="#fff"
+        flexDirection="row"
+        height={28}
+        key="6"
+        style={
+          Array [
+            Object {
+              "borderRadius": 1,
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "left": 66.66666666666667,
+              "top": 36,
+            },
+          ]
+        }
+        visible={true}
+        width={1}
+      />
+      <Divider
+        color="#fff"
+        flexDirection="row"
+        height={28}
+        key="7"
+        style={
+          Array [
+            Object {
+              "borderRadius": 1,
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "left": 75,
+              "top": 36,
+            },
+          ]
+        }
+        visible={true}
+        width={1}
+      />
+      <Divider
+        color="#fff"
+        flexDirection="row"
+        height={28}
+        key="8"
+        style={
+          Array [
+            Object {
+              "borderRadius": 1,
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "left": 83.33333333333334,
+              "top": 36,
+            },
+          ]
+        }
+        visible={true}
+        width={1}
+      />
+    </AnimatedComponent>
+  </AnimatedComponent>
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Array [
+        Object {
+          "height": 100,
+          "width": 100,
+        },
+        Object {
+          "backgroundColor": "#fff",
+          "overflow": "hidden",
+        },
+        Object {
+          "backgroundColor": "rgba(0,0,0,0)",
+          "position": "absolute",
+          "zIndex": 10,
+        },
+      ]
+    }
+  />
+</View>
+`;

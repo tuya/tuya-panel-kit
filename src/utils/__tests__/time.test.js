@@ -63,7 +63,7 @@ describe('TimeUtils stringToSecond', () => {
 });
 
 describe('TimeUtils dateToTimer', () => {
-  it('TimeUtils.dateToTimer("20110801") = 1312128000', () => {
+  it('TimeUtils.dateToTimer("20110801") = 1312156800', () => {
     const result = TimeUtils.dateToTimer('20110801');
     expect(result).toEqual(1312156800);
   });

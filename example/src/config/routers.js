@@ -6,6 +6,7 @@ import LinearGradient from '../scenes/LinearGradient';
 import RadialGradient from '../scenes/RadialGradient';
 import DatePicker from '../scenes/DatePicker';
 import Slider from '../scenes/Slider';
+import SliderProgress from '../scenes/SliderProgress'
 import TYText from '../scenes/TYText';
 import TYFlatList from '../scenes/TYFlatList';
 import TYSectionList from '../scenes/TYSectionList';
@@ -16,6 +17,7 @@ import Toast from '../scenes/Toast';
 import IconFont from '../scenes/IconFont';
 import TopBar from '../scenes/TopBar';
 import Button from '../scenes/Button';
+import Battery from '../scenes/Battery';
 import ButtonBrick from '../scenes/ButtonBrick';
 import Switch from '../scenes/Switch';
 import Modal from '../scenes/Modal';
@@ -37,6 +39,7 @@ import UnitText from '../scenes/UnitText';
 import Progress from '../scenes/Progress';
 import GlobalToast from '../scenes/GlobalToast';
 import Stepper from '../scenes/Stepper';
+import SliderWithLine from '../scenes/SliderWithLine'
 
 const mainRouter = [
   {
@@ -57,6 +60,10 @@ export const componentsRouters = _.sortBy(
     {
       id: 'Button',
       Scene: Button,
+    },
+    {
+      id: 'Battery',
+      Scene: Battery,
     },
     {
       id: 'ButtonBrick',
@@ -85,6 +92,14 @@ export const componentsRouters = _.sortBy(
     {
       id: 'Slider',
       Scene: Slider,
+    },
+    {
+      id: 'SliderProgress',
+      Scene: SliderProgress
+    },
+    {
+      id: 'SliderWithLine',
+      Scene: SliderWithLine
     },
     {
       id: 'TYText',
