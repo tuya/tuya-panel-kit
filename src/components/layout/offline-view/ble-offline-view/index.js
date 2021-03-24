@@ -48,6 +48,10 @@ export default class BleOfflineView extends Component {
      * 跳转链接
      */
     onLinkPress: PropTypes.func,
+    /**
+     * @description 蓝牙离线弹框显示·查看更多·的跳转链接
+     */
+    bleRedirectOptions: PropTypes.object,
   };
 
   static defaultProps = {
@@ -56,6 +60,7 @@ export default class BleOfflineView extends Component {
     isBleOfflineOverlay: true,
     isJumpToWifi: false,
     onLinkPress: () => {},
+    bleRedirectOptions: null,
   };
 
   componentDidMount() {
@@ -190,6 +195,7 @@ export default class BleOfflineView extends Component {
   };
 
   openH5HelpWebView = () => {
+    const { bleRedirectOptions } = this.props;
     Modal.close();
     TYSdk.Navigator.push({
       isOfflineWebView: true,
@@ -205,6 +211,7 @@ export default class BleOfflineView extends Component {
       },
       source: BLE_HELP_LINK,
       title: Strings.getLang('offlineHelp'),
+      ...bleRedirectOptions,
     });
   };
 

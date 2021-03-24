@@ -266,6 +266,7 @@ export default class NavigatorLayout extends Component {
         renderWifiOfflineView={opts.renderWifiOfflineView}
         renderBleOfflineView={opts.renderBleOfflineView}
         reconnectTextStyle={opts.reconnectTextStyle}
+        bleRedirectOptions={opts.bleRedirectOptions}
       >
         {contentLayout}
       </FullView>

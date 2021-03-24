@@ -51,6 +51,10 @@ class FullView extends Component {
     renderBleOfflineView: PropTypes.func,
     // wifi 离线的时候用户不想要重新连接跳转
     reconnectTextStyle: Text.propTypes.style,
+    /**
+     * @description 蓝牙离线弹框显示·查看更多·的跳转链接
+     */
+    bleRedirectOptions: PropTypes.object,
   };
 
   static defaultProps = {
@@ -67,6 +71,7 @@ class FullView extends Component {
     renderWifiOfflineView: null,
     renderBleOfflineView: null,
     reconnectTextStyle: null,
+    bleRedirectOptions: null,
   };
 
   constructor(props) {
@@ -211,6 +216,7 @@ class FullView extends Component {
       renderBleOfflineView,
       renderWifiOfflineView,
       reconnectTextStyle,
+      bleRedirectOptions,
     } = this.props;
     const show = !appOnline || !deviceOnline;
     const tipText = !appOnline
@@ -243,6 +249,7 @@ class FullView extends Component {
         renderWifiOfflineView={renderWifiOfflineView}
         renderBleOfflineView={renderBleOfflineView}
         reconnectTextStyle={reconnectTextStyle}
+        bleRedirectOptions={bleRedirectOptions}
       />
     );
   }

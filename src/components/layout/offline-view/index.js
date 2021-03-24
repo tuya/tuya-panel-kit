@@ -41,6 +41,10 @@ export default class OfflineView extends Component {
     renderBleOfflineView: PropTypes.func,
     // wifi 离线的时候用户不想要重新连接跳转
     reconnectTextStyle: Text.propTypes.style,
+    /**
+     * @description 蓝牙离线弹框显示·查看更多·的跳转链接
+     */
+    bleRedirectOptions: PropTypes.object,
   };
 
   static defaultProps = {
@@ -56,6 +60,7 @@ export default class OfflineView extends Component {
     renderWifiOfflineView: null,
     renderBleOfflineView: null,
     reconnectTextStyle: null,
+    bleRedirectOptions: null,
   };
 
   state = {
@@ -126,7 +131,13 @@ export default class OfflineView extends Component {
   };
 
   renderBleView() {
-    const { deviceOnline, capability, isBleOfflineOverlay, renderBleOfflineView } = this.props;
+    const {
+      deviceOnline,
+      capability,
+      isBleOfflineOverlay,
+      renderBleOfflineView,
+      bleRedirectOptions,
+    } = this.props;
     const isJumpToWifi = this._handleVersionToJump();
     // 在蓝牙状态未获取到之前不渲染该页面
     if (typeof this.state.bluetoothStatus !== 'boolean') {
@@ -143,6 +154,7 @@ export default class OfflineView extends Component {
         isBleOfflineOverlay={isBleOfflineOverlay}
         isJumpToWifi={isJumpToWifi}
         onLinkPress={this._handleLinkPress}
+        bleRedirectOptions={bleRedirectOptions}
       />
     );
   }
