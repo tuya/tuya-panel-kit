@@ -188,7 +188,7 @@ exports[`Stepper Component editable update 1`] = `
         "borderRadius": 2,
         "height": 24,
         "justifyContent": "center",
-        "opacity": 1,
+        "opacity": 0.4,
         "width": 36,
       }
     }
@@ -470,7 +470,7 @@ exports[`Stepper Component editable update 2`] = `
         "borderRadius": 2,
         "height": 24,
         "justifyContent": "center",
-        "opacity": 1,
+        "opacity": 0.4,
         "width": 36,
       }
     }
@@ -580,7 +580,12 @@ exports[`Stepper basic render with TextInput 1 1`] = `
     disabled={false}
     onPressIn={[Function]}
     onPressOut={[Function]}
-    style={Object {}}
+    style={
+      Array [
+        Object {},
+        false,
+      ]
+    }
   >
     <Styled(Component)
       fill="#333"
@@ -629,7 +634,12 @@ exports[`Stepper basic render with TextInput 1 1`] = `
     disabled={false}
     onPressIn={[Function]}
     onPressOut={[Function]}
-    style={Object {}}
+    style={
+      Array [
+        Object {},
+        false,
+      ]
+    }
   >
     <Styled(Component)
       fill="#333"
@@ -648,7 +658,14 @@ exports[`Stepper basic render with TextInput 2 1`] = `
     disabled={true}
     onPressIn={[Function]}
     onPressOut={[Function]}
-    style={Object {}}
+    style={
+      Array [
+        Object {},
+        Object {
+          "opacity": 0.4,
+        },
+      ]
+    }
   >
     <Styled(Component)
       fill="#333"
@@ -697,7 +714,12 @@ exports[`Stepper basic render with TextInput 2 1`] = `
     disabled={false}
     onPressIn={[Function]}
     onPressOut={[Function]}
-    style={Object {}}
+    style={
+      Array [
+        Object {},
+        false,
+      ]
+    }
   >
     <Styled(Component)
       fill="#333"
@@ -716,7 +738,12 @@ exports[`Stepper basic render with TextInput 3 1`] = `
     disabled={false}
     onPressIn={[Function]}
     onPressOut={[Function]}
-    style={Object {}}
+    style={
+      Array [
+        Object {},
+        false,
+      ]
+    }
   >
     <Styled(Component)
       fill="#333"
@@ -751,7 +778,14 @@ exports[`Stepper basic render with TextInput 3 1`] = `
     disabled={true}
     onPressIn={[Function]}
     onPressOut={[Function]}
-    style={Object {}}
+    style={
+      Array [
+        Object {},
+        Object {
+          "opacity": 0.4,
+        },
+      ]
+    }
   >
     <Styled(Component)
       fill="#333"
@@ -770,7 +804,12 @@ exports[`Stepper basic render with TextInput 4 1`] = `
     disabled={false}
     onPressIn={[Function]}
     onPressOut={[Function]}
-    style={Object {}}
+    style={
+      Array [
+        Object {},
+        false,
+      ]
+    }
   >
     <Styled(Component)
       fill="#333"
@@ -805,7 +844,12 @@ exports[`Stepper basic render with TextInput 4 1`] = `
     disabled={false}
     onPressIn={[Function]}
     onPressOut={[Function]}
-    style={Object {}}
+    style={
+      Array [
+        Object {},
+        false,
+      ]
+    }
   >
     <Styled(Component)
       fill="#333"
@@ -824,7 +868,12 @@ exports[`Stepper basic render with TextInput 5 1`] = `
     disabled={false}
     onPressIn={[Function]}
     onPressOut={[Function]}
-    style={Object {}}
+    style={
+      Array [
+        Object {},
+        false,
+      ]
+    }
   >
     <Styled(Component)
       fill="#333"
@@ -859,7 +908,12 @@ exports[`Stepper basic render with TextInput 5 1`] = `
     disabled={false}
     onPressIn={[Function]}
     onPressOut={[Function]}
-    style={Object {}}
+    style={
+      Array [
+        Object {},
+        false,
+      ]
+    }
   >
     <Styled(Component)
       fill="#333"
@@ -878,7 +932,12 @@ exports[`Stepper basic render with TextInput 6 1`] = `
     disabled={false}
     onPressIn={[Function]}
     onPressOut={[Function]}
-    style={Object {}}
+    style={
+      Array [
+        Object {},
+        false,
+      ]
+    }
   >
     <Styled(Component)
       fill="#333"
@@ -913,7 +972,12 @@ exports[`Stepper basic render with TextInput 6 1`] = `
     disabled={false}
     onPressIn={[Function]}
     onPressOut={[Function]}
-    style={Object {}}
+    style={
+      Array [
+        Object {},
+        false,
+      ]
+    }
   >
     <Styled(Component)
       fill="#333"
