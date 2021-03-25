@@ -236,7 +236,7 @@ export default class Stepper extends PureComponent {
     return (
       <BigButton style={style}>
         <TouchableOpacityView
-          style={buttonStyle}
+          style={[buttonStyle, (disabled || value === min) && { opacity: 0.4 }]}
           disabled={disabled || value === min}
           onPressOut={this._handlePressOut}
           onPressIn={this._handlePressIn(true)}
@@ -263,7 +263,7 @@ export default class Stepper extends PureComponent {
           editable={!disabled && editable}
         />
         <TouchableOpacityView
-          style={buttonStyle}
+          style={[buttonStyle, (disabled || value === max) && { opacity: 0.4 }]}
           disabled={disabled || value === max}
           onPressOut={this._handlePressOut}
           onPressIn={this._handlePressIn(false)}
@@ -297,7 +297,7 @@ export default class Stepper extends PureComponent {
     return (
       <RightView style={style}>
         <TouchableThreeView
-          style={buttonStyle}
+          style={[buttonStyle, (disabled || value === min) && { opacity: 0.4 }]}
           disabled={disabled || value === min}
           onPressOut={this._handlePressOut}
           onPressIn={this._handlePressIn(true)}
@@ -324,7 +324,7 @@ export default class Stepper extends PureComponent {
           enablesReturnKeyAutomatically={true}
         />
         <TouchableThreeView
-          style={buttonStyle}
+          style={[buttonStyle, (disabled || value === max) && { opacity: 0.4 }]}
           disabled={disabled || value === max}
           onPressOut={this._handlePressOut}
           onPressIn={this._handlePressIn(false)}
