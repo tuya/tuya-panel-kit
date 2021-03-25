@@ -49,6 +49,8 @@ export default class StepperScene extends PureComponent {
             stepValue={0.1}
             onValueChange={this.handleValue}
             inputStyle={{ width: 40 }}
+            buttonStyle={{ backgroundColor: '#f0f' }}
+            ellipseIconColor="#fff"
           />
         </View>
         <View
