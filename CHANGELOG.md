@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.5.1](https://github.com/tuya/tuya-panel-kit/compare/v4.5.0...v4.5.1) (2021-03-25)
+
+
+### Features
+
+* **Stepper:** add opacity in disabale ([#57](https://github.com/tuya/tuya-panel-kit/issues/57)) ([269ab32](https://github.com/tuya/tuya-panel-kit/commit/269ab3290a36e100468e6646435a13f9c711cd00))
+
+
+
 # [4.5.0](https://github.com/tuya/tuya-panel-kit/compare/v4.4.1...v4.5.0) (2021-03-18)
 
 
