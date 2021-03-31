@@ -1,5 +1,3 @@
-# Pull Request Template
-
 ## Description
 
 Please provide a brief summary of the changes. If it is related to an issue, please bring the issue number, like `fixes #${number}`.
