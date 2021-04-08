@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.5.2](https://github.com/tuya/tuya-panel-kit/compare/v4.5.1...v4.5.2) (2021-04-08)
+
+
+### Bug Fixes
+
+* **Offline:** fixing a successful network allocation but showing device removal ([#59](https://github.com/tuya/tuya-panel-kit/issues/59)) ([c4671c4](https://github.com/tuya/tuya-panel-kit/commit/c4671c44990595d132186cdffab193d0906a62e0))
+
+
+
 ## [4.5.1](https://github.com/tuya/tuya-panel-kit/compare/v4.5.0...v4.5.1) (2021-03-25)
 
 
