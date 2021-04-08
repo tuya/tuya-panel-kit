@@ -85,6 +85,7 @@ export default class OfflineView extends Component {
     const { devId } = TYSdk.devInfo;
     const isJumpToWifi = this._handleVersionToJump();
     if (isJumpToWifi) {
+      TYMobile.back();
       TYNative.jumpTo(`tuyaSmart://device_offline_reconnect?device_id=${devId}`);
     }
   };
