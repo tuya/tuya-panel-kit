@@ -70,7 +70,7 @@ const lang = {
     offline_textLinkBefore: '1. 请检查您的设备是否有电\n2. 您的设备连接的路由器是否正常工作',
     offline_linkFront: '3. 检查是否修改了路由器的名称或密码，可以尝试',
     offline_link: '重新连接',
-    offline_textLinkAfter: '4. 您的设备是否里路由器过远、信号较差或有遮挡物',
+    offline_textLinkAfter: '4. 您的设备是否离路由器过远、信号较差或有遮挡物',
     offline_textLinkMore: '',
   },
 };
