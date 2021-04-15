@@ -98,6 +98,8 @@ export default class BleOfflineView extends Component {
       return;
     }
     if (!bluetoothValue) {
+      // 处理弹出多个蓝牙离线提示框，导致进入 webView 页面弹框存在问题
+      Modal.close();
       if (isIos) {
         Modal.render(<BleTipModal disabled={true} maskColor="rgba(0, 0, 0, 0.6)" />, {
           mask: false,
@@ -119,6 +121,8 @@ export default class BleOfflineView extends Component {
       const routes =
         TYSdk.Navigator && TYSdk.Navigator.getCurrentRoutes && TYSdk.Navigator.getCurrentRoutes();
       const isOfflineWebView = get(routes, `${routes.length - 1}.isOfflineWebView`, false);
+      // 处理一直在 webView 页面弹框无法关闭 Toast 问题
+      Modal.close();
       if (isOfflineWebView) {
         return;
       }
