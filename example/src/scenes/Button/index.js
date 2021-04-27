@@ -2,6 +2,7 @@ import React from 'react';
 import { View, ScrollView } from 'react-native';
 import { Button } from 'tuya-panel-kit';
 import TesterTitle from '../../components/TesterTitle';
+import Strings from '../../i18n';
 
 const linearBackground = {
   x1: '20%',
@@ -46,30 +47,30 @@ class ButtonScene extends React.PureComponent {
   render() {
     return (
       <ScrollView>
-        <TesterTitle title="文字按钮" />
-        <Button text="点击一下我" />
-        <TesterTitle title="图片按钮" />
+        <TesterTitle title = {Strings.getLang('button_text')} />
+        <Button text={Strings.getLang('click_me')}/>
+        <TesterTitle title={Strings.getLang('button_picture')} />
         <Button image={require('../../res/close.png')} />
-        <TesterTitle title="图片按钮（大号）" />
+        <TesterTitle title={Strings.getLang('button_pic_large')} />
         <Button size="large" image={require('../../res/close.png')} />
-        <TesterTitle title="图片按钮（不可点击且着色为红）" />
+        <TesterTitle title={Strings.getLang('button_pic_noclickable')} />
         <Button image={require('../../res/2.png')} imageColor="#ff0000" disabled={true} />
-        <TesterTitle title="图标按钮" />
+        <TesterTitle title={Strings.getLang('button_icon')} />
         <Button icon={this.state.icon} />
-        <TesterTitle title="图标按钮（带文字）" />
-        <Button icon="selected" iconSize={24} text="文字" />
+        <TesterTitle title={Strings.getLang('button_icon_with_text')} />
+        <Button icon="selected" iconSize={24} text={Strings.getLang('text')} />
         {/* <TesterTitle title="图标按钮（带徽标）" />
         <Button badgeText="徽标" icon="selected" text="纯文字" /> */}
-        <TesterTitle title="图标按钮（带背景色ControllerBar常用）" />
+        <TesterTitle title={Strings.getLang('button_icon_with_background_color')} />
         <Button
           type="primary"
           icon="selected"
           size={48}
           iconSize={28}
-          text="点我"
+          text={Strings.getLang('click_me')}
           // onPress={this.tapBtn}
         />
-        <TesterTitle title="图标按钮（带背景渐变）" />
+        <TesterTitle title={Strings.getLang('button_icon_with_background_gradient')}/>
         <View style={row}>
           <Button
             textDirection="right"
@@ -77,7 +78,7 @@ class ButtonScene extends React.PureComponent {
             icon="selected"
             iconSize={24}
             iconColor="#fff"
-            text="文字"
+            text={Strings.getLang('text')}
             background={linearBackground}
           />
           <Button
@@ -86,11 +87,11 @@ class ButtonScene extends React.PureComponent {
             size={48}
             iconSize={28}
             iconColor="#f0f"
-            text="点我"
+            text={Strings.getLang('click_me')}
             background={radialBackground}
           />
         </View>
-        <TesterTitle title="图标按钮（多文字顺序）" />
+        <TesterTitle title={Strings.getLang('button_icon_multi_word')} />
         <View style={row}>
           <Button
             textDirection="top"
@@ -98,7 +99,7 @@ class ButtonScene extends React.PureComponent {
             icon="selected"
             iconSize={24}
             iconColor="#fff"
-            text="文字"
+            text={Strings.getLang('text')}
             background="#ff0000"
           />
           <Button
@@ -107,7 +108,7 @@ class ButtonScene extends React.PureComponent {
             icon="selected"
             iconSize={24}
             iconColor="#fff"
-            text="文字"
+            text={Strings.getLang('text')}
             background="#000fff"
           />
           <Button
@@ -117,7 +118,7 @@ class ButtonScene extends React.PureComponent {
             icon="selected"
             iconSize={24}
             iconColor="#fff"
-            text="文字"
+            text={Strings.getLang('text')}
           />
           <Button
             type="primary"
@@ -126,11 +127,11 @@ class ButtonScene extends React.PureComponent {
             icon="selected"
             iconSize={24}
             iconColor="#fff"
-            text="文字"
+            text={Strings.getLang('text')}
             background="#7ED321"
           />
         </View>
-        <TesterTitle title="测试localTheme" />
+        <TesterTitle title={Strings.getLang('button_local_theme_test')} />
         <Button
           theme={{
             margin: [6, 8, 14, 20],
@@ -145,7 +146,7 @@ class ButtonScene extends React.PureComponent {
           }}
           textDirection="bottom"
           icon="selected"
-          text="本地theme测试"
+          text={Strings.getLang('button_local_theme_test')}
         />
       </ScrollView>
     );

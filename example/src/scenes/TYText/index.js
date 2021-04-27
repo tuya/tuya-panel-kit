@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ScrollView, View } from 'react-native';
 import { TYText, Utils, defaultTheme } from 'tuya-panel-kit';
+import Strings from '../../i18n';
 
 const { withTheme } = Utils.ThemeUtils;
 
@@ -30,8 +31,8 @@ const TYTextScene = props => {
         })
       )}
       {/* Custom Size Text */}
-      <TYText color="red" align="center" weight="bold" size={36} text="自定义大小 36px" />
-      <TYText style={{ fontSize: 36, textAlign: 'center' }} text="自定义大小 36px" />
+      <TYText color="red" align="center" weight="bold" size={36} text={Strings.getLang('tytext_custom_size')} />
+      <TYText style={{ fontSize: 36, textAlign: 'center' }} text={Strings.getLang('tytext_custom_size')} />
     </ScrollView>
   );
 };

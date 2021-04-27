@@ -5,6 +5,7 @@ import { View, ScrollView } from 'react-native';
 import { Tabs, TYText, TYListItem } from 'tuya-panel-kit';
 import TesterTitle from '../../components/TesterTitle';
 import Panel from './components/Panel';
+import Strings from '../../i18n';
 
 export default class WithContentTabsScene extends React.PureComponent {
   constructor(props) {
@@ -13,16 +14,16 @@ export default class WithContentTabsScene extends React.PureComponent {
       activeKey1: '1',
       activeKey2: '3',
       d1: [
-        { value: '1', label: '探测器' },
-        { value: '2', label: '遥控器' },
+        { value: '1', label: Strings.getLang('tabs_detector') },
+        { value: '2', label: Strings.getLang('tabs_remote_control') },
         { value: '3', label: 'RFID' },
-        { value: '4', label: '有限探测器' },
+        { value: '4', label: Strings.getLang('tabs_limit_detector') },
       ],
       d2: [
         { value: '1', label: '1' },
         { value: '2', label: '22' },
         { value: '3', label: '333' },
-        { value: '4', label: '有限探测器' },
+        { value: '4', label: Strings.getLang('tabs_limit_detector') },
         { value: '5', label: '55555' },
         { value: '6', label: '666666' },
         { value: '7', label: '7777777' },
@@ -43,7 +44,7 @@ export default class WithContentTabsScene extends React.PureComponent {
     return (
       <View style={{ flex: 1 }}>
         {/* https://github.com/facebook/react-native/issues/11206 */}
-        <TesterTitle title="一屏存在可滚动内容的Tabs" />
+        <TesterTitle title={Strings.getLang('tabs_onescreen')} />
         <Tabs
           wrapperStyle={{ width: 300, alignSelf: 'center' }}
           activeKey={this.state.activeKey1}
@@ -55,21 +56,21 @@ export default class WithContentTabsScene extends React.PureComponent {
             <Tabs.TabScrollView>
               {_.times(10, n => (
                 // <TYListItem key={n} title={`测试_${n}`} />
-                <TYText key={n} text={`测试_${n}`} />
+                <TYText key={n} text={`${Strings.getLang('test')}${n}`} />
               ))}
             </Tabs.TabScrollView>
           </Tabs.TabPanel>
           <Tabs.TabPanel style={{ width: 300 }}>
-            <TYListItem title="第二页" />
+            <TYListItem title="Page two" />
           </Tabs.TabPanel>
           <Tabs.TabPanel style={{ width: 300 }}>
-            <TYListItem title="第三页" />
+            <TYListItem title="Page three" />
           </Tabs.TabPanel>
           <Tabs.TabPanel style={{ width: 300 }}>
-            <TYListItem title="第四页" />
+            <TYListItem title="Page four" />
           </Tabs.TabPanel>
         </Tabs>
-        <TesterTitle title="多屏存在内容的Tabs" />
+        <TesterTitle title={Strings.getLang('tabs_multiple_screens')} />
         <Tabs
           activeKey={this.state.activeKey2}
           dataSource={this.state.d2}
@@ -79,7 +80,7 @@ export default class WithContentTabsScene extends React.PureComponent {
             <Panel key={idx} title={data.label} />
           ))}
         </Tabs>
-        <TesterTitle title="多屏存在内容的Tabs且tabs位置在下面" />
+        <TesterTitle title={Strings.getLang('tabs_multiple_screens_below')} />
         <Tabs
           tabPosition="bottom"
           activeKey={this.state.activeKey2}
