@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import { View } from 'react-native';
-import strings from 'src/i18n/strings';
 import { Divider, TYText, SliderWithLine } from 'tuya-panel-kit';
 import Strings from '../../i18n';
 

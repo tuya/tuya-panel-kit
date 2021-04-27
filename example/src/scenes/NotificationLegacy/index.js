@@ -13,9 +13,6 @@ export default class NotificationLegacyScene extends Component {
   };
 
   render() {
-
-    t = Strings.getLang('show') + 'Notification';
-
     return (
       <View style={styles.container}>
         {this.state.visible && (

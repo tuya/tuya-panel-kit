@@ -52,8 +52,8 @@ export default class TYFlatListCustomItemScene extends Component {
           container: styles.listItem,
           subTitle: styles.textSubtitle,
         }}
-        title={Strings}
-        subTitle="数量: 13首"
+        title={Strings.getLang('tyflatlist_baby_favorite')}
+        subTitle={Strings.getLang('tyflatlist_number')}
         iconSize={60}
         Icon={Res.cover}
         Action={this.renderActions()}

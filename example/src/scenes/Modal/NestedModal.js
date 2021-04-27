@@ -39,7 +39,6 @@ class NestedModal extends React.Component {
   _hideAllModal = () => this.setState({ visible1: false, visible2: false });
 
   render() {
-    start = Strings.getLang('modal_start');
     return (
       <View>
         <TouchableOpacity onPress={this._showModal1} style={styles.buttonStyle}>

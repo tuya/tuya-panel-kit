@@ -36,7 +36,7 @@ class MotionPopupScene extends React.PureComponent {
       onConfirm: (value, { close }) => {
         console.log('switch value :', value);
         this.setState({ listValues: value });
-        Popup.close();
+        close();
       },
     });
   };

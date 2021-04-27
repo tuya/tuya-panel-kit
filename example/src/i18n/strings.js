@@ -11,9 +11,13 @@ module.exports = {
     test_theme: '测试主题配置',
 
     battery_default: '默认情况下',
-    battery_theme: '本地主题',
-    battery_power: '电量',
-    battery_rule: '修改电量颜色分配规则',
+    battery_p40_theme: '电量40% --- 本地主题',
+    battery_power100: '电量100%:  ',
+    battery_power60: '电量60%:  ',
+    battery_power19: '电量19%:  ',
+    battery_power9: '电量9%:  ',
+    battery_power0: '电量0%:  ',
+    battery_p60_rule: '电量60% --- 修改电量颜色分配规则',
 
     text: '文字',
     click_me: '点我',
@@ -123,7 +127,7 @@ module.exports = {
     popup_time_select: '时间段选择',
     popup_bubble: '我是气泡,点击遮罩空白处退出哦',
 
-    default:'默认',
+    slider_default:'测试默认',
     slider_bilateral: '双边',
     slider_unilateral: '单边',
     stepper_number_of_passengers: '乘客人数',
@@ -241,9 +245,13 @@ module.exports = {
     test_theme: 'Test theme configuration',
 
     battery_default: 'By Default',
-    battery_power: 'Power ',
-    battery_theme: 'Local theme',
-    battery_rule: 'Modify battery color allocation rules',
+    battery_power100: 'Power 100%: ',
+    battery_power60: 'Power 60%:  ',
+    battery_power19: 'Power 19%:  ',
+    battery_power9: 'Power 9%:  ',
+    battery_power0: 'Power 0%:  ',
+    battery_p40_theme: 'Power 40% --- Local theme',
+    battery_p60_rule: 'Power 60% --- Modify battery color allocation rules',
 
     text: 'Text',
     click_me: 'Click me',
@@ -353,7 +361,7 @@ module.exports = {
     popup_time_select: 'Time period selection',
     popup_bubble: 'I am a bubble, click on the blank space of the mask to exit.',
 
-    default:' default',
+    slider_default:'Test default',
     slider_bilateral: 'Bilateral',
     slider_unilateral: 'Unilateral',
     stepper_number_of_passengers: 'Number of passengers',

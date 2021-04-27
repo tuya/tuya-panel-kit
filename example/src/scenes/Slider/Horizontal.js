@@ -13,13 +13,9 @@ export default class SliderHorizontalScene extends Component {
   };
 
   render() {
-
-    t2 = Strings.getLang('test') + Strings.getLang('default');
-    t2 = Strings.getLang('test') + 'local theme';
-
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <TYText text={this.t1} />
+        <TYText text={Strings.getLang('slider_default')} />
         <Slider.Horizontal
           style={{ width: 295 }}
           maximumValue={100}
@@ -38,7 +34,7 @@ export default class SliderHorizontalScene extends Component {
         />
         
 
-        <TYText text={this.t2} />
+        <TYText text={Strings.getLang('switch_test_localtheme')} />
         <Slider
           theme={{
             width: 200,

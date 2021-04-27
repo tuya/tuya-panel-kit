@@ -17,52 +17,38 @@ export default class BatteryScreen extends Component {
     return lowColor;
   };
 
-  by_default = Strings.getLang('battery_default');
-  power = Strings.getLang('battery_power');
-  local_theme = Strings.getLang('battery_theme');
-  rule = Strings.getLang('battery_rule');
-  p1 = this.power + '100%:  ';
-  p2 = this.power + '60%:  ';
-  p22 = this.power + '60%';
-  p3 = this.power + '40%';
-  p4 = this.power + '19%:  ';
-  p5 = this.power + '9%:  ';
-  p6 = this.power + '0%:  ';
-  native = this.p3 + "  --- " + this.local_theme;
-  modify_rule = this.p22 + "  --- "+ this.rule;
-
   render() {
     return (
       <View style={styles.containerStyle}>
-        <TYText text= {this.by_default} />
+        <TYText text= {Strings.getLang('battery_default')} />
         <View style={{ height: 320 }}>
           <View style={styles.row}>
-            <TYText text= {this.p1}/>
+            <TYText text= {Strings.getLang('battery_power100')}/>
             <Battery value={100} />
           </View>
           <View style={styles.row}>
-            <TYText text={this.p2} />
+            <TYText text={Strings.getLang('battery_power60')} />
             <Battery value={60} />
           </View>
           <View style={styles.row}>
-            <TYText text={this.p4}/>
+            <TYText text={Strings.getLang('battery_power19')}/>
             <Battery value={19} />
           </View>
           <View style={styles.row}>
-            <TYText text={this.p5} />
+            <TYText text={Strings.getLang('battery_power9')}/>
             <Battery value={9} />
           </View>
           <View style={styles.row}>
-            <TYText text={this.p6}/>
+            <TYText text={Strings.getLang('battery_power0')}/>
             <Battery value={0} />
           </View>
         </View>
         <View style={{ height: 100 }}>
-          <TYText text={this.native} />
+          <TYText text={Strings.getLang('battery_p40_theme')} />
           <Battery value={40} size={30} theme={{ batteryColor: 'rgba(167,98,43,.5)' }} />
         </View>
         <View style={{ height: 100 }}>
-          <TYText text={this.modify_rule} />
+          <TYText text={Strings.getLang('battery_p60_rule')} />
           <Battery value={60} size={cx(30)} onCalcColor={this.calcColor} middleColor="#999" />
         </View>
       </View>
