@@ -227,14 +227,25 @@ export default class NavigatorLayout extends Component {
             if (ref) this.fullViewRef = ref;
           }}
           title={title}
+          style={[styles.container, opts.style]}
+          background={opts.background}
+          topbarStyle={[styles.topbarStyle, opts.topbarStyle]}
+          topbarTextStyle={opts.topbarTextStyle}
+          capability={devInfo.capability}
           onBack={this._onBack}
           appOnline={devInfo.appOnline}
           deviceOnline={devInfo.deviceOnline}
+          showMenu={route.id === 'main'}
+          isBleOfflineOverlay={opts.isBleOfflineOverlay}
           renderStatusBar={opts.renderStatusBar}
           renderTopBar={opts.renderTopBar}
           hideTopbar={!!opts.hideTopbar}
           showOfflineView={showOfflineView}
           devInfo={devInfo}
+          backgroundStyle={opts.backgroundStyle}
+          renderWifiOfflineView={opts.renderWifiOfflineView}
+          renderBleOfflineView={opts.renderBleOfflineView}
+          reconnectTextStyle={opts.reconnectTextStyle}
         >
           {contentLayout}
         </CustomFullView>
