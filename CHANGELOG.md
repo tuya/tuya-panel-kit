@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.5.3](https://github.com/tuya/tuya-panel-kit/compare/v4.5.2...v4.5.3) (2021-04-29)
+
+
+### Bug Fixes
+
+* **Navigation:** fix the flashback problem of transition animation mask ([8f35b4d](https://github.com/tuya/tuya-panel-kit/commit/8f35b4d81700739897ad10dad29de9e2a90f48d8))
+* **Navigation:** fix the flashback problem of transition animation mask ([62fc7cd](https://github.com/tuya/tuya-panel-kit/commit/62fc7cd32fe6015b159a7c7b84b23c4aeffdcc1d))
+* **Offline:** fix Bluetooth offline on Android occasionally can not jump to the matching network also buy it problem ([aaa9025](https://github.com/tuya/tuya-panel-kit/commit/aaa9025a1b164b26b8a36aa2041df1ef94bdb605))
+
+
+
 ## [4.5.2](https://github.com/tuya/tuya-panel-kit/compare/v4.5.1...v4.5.2) (2021-04-08)
 
 
