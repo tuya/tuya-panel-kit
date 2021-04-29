@@ -81,9 +81,6 @@ const Stack = createStackNavigator();
 
 export default function createNavigator({ router, screenOptions }) {
   const defaultScreenOptions = {
-    cardOverlay: () => {
-      return <View style={{ flex: 1, backgroundColor: 'rgba(0,0,0,0.3)' }} />;
-    },
     cardOverlayEnabled: true,
     ...TransitionPresets.SlideFromRightIOS,
   };
