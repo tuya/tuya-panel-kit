@@ -43,8 +43,8 @@ const SlideFromRightWithMargin = {
     );
 
     const overlayOpacity = progress.interpolate({
-      inputRange: [0, 1, 1.0001, 2],
-      outputRange: [0, 0.3, 1, 1],
+      inputRange: [0, 0.3, 0.6, 1, 1.3, 1.7, 2],
+      outputRange: [0, 0.1, 0.2, 0.3, 0.2, 0.1, 0],
     });
 
     const statusBarHeight = insets.top - (isIos ? 44 : 0);
@@ -56,7 +56,6 @@ const SlideFromRightWithMargin = {
         borderTopLeftRadius: 10,
         borderTopRightRadius: 10,
         marginTop: statusBarHeight + topOffset,
-        marginBottom: topOffset,
         transform: [{ translateX: translateFocused }],
       },
       overlayStyle: { opacity: overlayOpacity },
@@ -105,8 +104,8 @@ export const ModalPresentationIOS = {
     );
 
     const overlayOpacity = progress.interpolate({
-      inputRange: [0, 1, 1.0001, 2],
-      outputRange: [0, 0.3, 1, 1],
+      inputRange: [0, 0.5, 0.9, 1, 2],
+      outputRange: [0, 0.1, 0.2, 0.3, 0.3],
     });
 
     const scale = isLandscape
