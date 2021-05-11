@@ -99,6 +99,16 @@ export const StyledCancelButton = styled(TouchableOpacity).attrs({
   background-color: ${props => (props.pressActive ? pressColor : bgColor)};
 `;
 
+export const StyledButton = styled(TouchableOpacity).attrs({
+  activeOpacity: 0.8,
+})`
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  border-right-width: ${props => (props.bordered ? StyleSheet.hairlineWidth : 0)};
+  border-right-color: ${lineColor};
+`;
+
 export const StyledCancelText = styled(TYText)`
   font-size: ${cancelFontSize}px;
   text-align: center;
