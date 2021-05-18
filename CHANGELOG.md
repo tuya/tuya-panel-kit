@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.5.4](https://github.com/tuya/tuya-panel-kit/compare/v4.5.3...v4.5.4) (2021-05-18)
+
+
+### Bug Fixes
+
+* **Notifacation:** fix text and Icon misalignment on Android, fixes [#63](https://github.com/tuya/tuya-panel-kit/issues/63) ([fb4984b](https://github.com/tuya/tuya-panel-kit/commit/fb4984ba094f038ff5e9adfb20fd4be9654cd99d))
+
+
+### Features
+
+* **react-navigation:** add createModalPresentationIOS && SlideFromRightIOS to fit our template ([#69](https://github.com/tuya/tuya-panel-kit/issues/69)) ([f15d5d1](https://github.com/tuya/tuya-panel-kit/commit/f15d5d155cf5a015b44a44b31fb52737777ba590))
+
+
+
 ## [4.5.3](https://github.com/tuya/tuya-panel-kit/compare/v4.5.2...v4.5.3) (2021-04-29)
 
 
