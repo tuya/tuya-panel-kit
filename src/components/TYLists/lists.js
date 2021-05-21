@@ -175,6 +175,7 @@ export default class TYSectionLists extends Component {
               sections={sections}
               keyExtractor={item => item.key}
               stickySectionHeadersEnabled={false}
+              showsVerticalScrollIndicator={false}
               {...sectionListProps}
               ref={sectionListRef}
             />
