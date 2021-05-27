@@ -73,8 +73,6 @@ export const StyledTitle = styled(Row)`
   background-color: ${titleBg};
   border-top-left-radius: ${titleRadius};
   border-top-right-radius: ${titleRadius};
-  border-bottom-color: ${lineColor};
-  border-bottom-width: ${StyleSheet.hairlineWidth};
 `;
 
 export const StyledTitleText = styled(TYText)`
@@ -320,6 +318,15 @@ export const StyledDisplayText = styled(TYText).attrs({
   font-size: 56px;
   color: ${cellFontColor};
   background-color: transparent;
+`;
+
+export const StyleDividerView = styled(View)`
+  background-color: ${cellBg};
+`;
+
+export const StyleDivider = styled(View)`
+  background-color: ${lineColor};
+  height: ${StyleSheet.hairlineWidth};
 `;
 
 /**
