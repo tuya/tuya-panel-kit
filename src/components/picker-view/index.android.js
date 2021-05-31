@@ -67,7 +67,7 @@ export class PickerView extends Component {
     itemTextColor: '#cccccc',
     selectedItemTextColor: 'black',
     dividerColor: '#cccccc',
-    visibleItemCount: 8,
+    visibleItemCount: 5,
     itemAlign: 'center',
     textSize: 20,
   };

@@ -8,6 +8,7 @@ import { StyledPickerContainer, StyledPickerUnit, StyledPickerUnitText } from '.
 
 const { get } = CoreUtils;
 const { getTheme, ThemeConsumer } = ThemeUtils;
+const { convertX: cx, isIos } = RatioUtils;
 
 class PickerPopup extends React.PureComponent {
   static propTypes = {
@@ -71,7 +72,7 @@ class PickerPopup extends React.PureComponent {
   };
   static defaultProps = {
     label: '',
-    spacing: 0,
+    spacing: 60,
     labelOffset: 22,
     pickerWrapperStyle: null,
     pickerStyle: null,
@@ -126,7 +127,7 @@ class PickerPopup extends React.PureComponent {
     if (!label) return null;
     if (!height || !width) return null;
     const realLabel = Array.isArray(label) ? label[idx] : label;
-    const left = width / (2 * allDatas.length) + labelOffset;
+    const left = (width - 60) / (2 * allDatas.length) + labelOffset;
     return (
       <StyledPickerUnit style={{ height, left }}>
         <StyledPickerUnitText pickerUnitColor={pickerUnitColor}>{realLabel}</StyledPickerUnitText>
@@ -152,6 +153,14 @@ class PickerPopup extends React.PureComponent {
       ...props
     } = this.props;
     const pickerDatas = singlePicker ? [dataSource] : dataSource;
+    let pickerFontSize = 30;
+    if (pickerDatas.length < 3) {
+      pickerFontSize = 30;
+    } else if (pickerDatas.length === 3) {
+      pickerFontSize = 27;
+    } else {
+      pickerFontSize = 24;
+    }
     return (
       <ThemeConsumer>
         {globalTheme => {
@@ -160,11 +169,17 @@ class PickerPopup extends React.PureComponent {
           return pickerDatas.map((data, idx) => {
             return (
               // eslint-disable-next-line react/no-array-index-key
-              <StyledPickerContainer style={pickerWrapperStyle} key={idx}>
+              <StyledPickerContainer
+                style={[
+                  !isIos && { height: cx(254), paddingTop: cx(32), paddingBottom: cx(32) },
+                  pickerWrapperStyle,
+                ]}
+                key={idx}
+              >
                 {this.renderLabel(data, idx, pickerDatas)}
                 <Picker
+                  theme={{ fontColor: pickerColor, fontSize: pickerFontSize }}
                   {...props}
-                  theme={{ fontColor: pickerColor }}
                   selectedValue={singlePicker ? this.state.value : this.state.value[idx]}
                   onValueChange={v => this.onValueChange(v, idx)}
                   style={StyleSheet.flatten([
