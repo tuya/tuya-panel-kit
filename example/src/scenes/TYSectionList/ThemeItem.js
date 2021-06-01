@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { TYSectionList } from 'tuya-panel-kit';
+import Strings from '../../i18n';
 
 export default class TYSectionListBasicScene extends Component {
   get sections() {
     return [
       {
-        title: '测试一下local theme配置',
+        title: Strings.getLang('button_local_theme_test'),
         data: [
           {
             key: 0,
@@ -21,9 +22,9 @@ export default class TYSectionListBasicScene extends Component {
               margin: [24, 16, 8, 4],
               padding: [4, 8, 16, 24],
             },
-            title: '列表标题过长的情况列表标题过长的情况列表标题过长的情况',
-            subTitle: '警告信息',
-            Action: '哈哈蛤',
+            title: `${Strings.getLang('tysectionlist_longtitle')}${Strings.getLang('tysectionlist_longtitle')}${Strings.getLang('tysectionlist_longtitle')}`,
+            subTitle: Strings.getLang('tysectionlist_warning_message'),
+            Action: 'hahaha',
           },
         ],
       },

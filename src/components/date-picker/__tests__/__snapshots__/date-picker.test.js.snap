@@ -8,7 +8,7 @@ exports[`DatePicker Component basic render 1`] = `
         "alignItems": "center",
         "backgroundColor": "#fff",
         "flexDirection": "row",
-        "height": 200,
+        "height": 216,
         "paddingLeft": 5,
         "paddingRight": 5,
       },
@@ -194,6 +194,8 @@ exports[`DatePicker Component basic render 1`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }
@@ -282,6 +284,8 @@ exports[`DatePicker Component basic render 1`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }
@@ -465,6 +469,8 @@ exports[`DatePicker Component basic render 1`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }
@@ -481,7 +487,7 @@ exports[`DatePicker Component should picker mode is date 1`] = `
         "alignItems": "center",
         "backgroundColor": "#fff",
         "flexDirection": "row",
-        "height": 200,
+        "height": 216,
         "paddingLeft": 5,
         "paddingRight": 5,
       },
@@ -667,6 +673,8 @@ exports[`DatePicker Component should picker mode is date 1`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }
@@ -755,6 +763,8 @@ exports[`DatePicker Component should picker mode is date 1`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }
@@ -938,6 +948,8 @@ exports[`DatePicker Component should picker mode is date 1`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }
@@ -954,7 +966,7 @@ exports[`DatePicker Component should picker mode is date 2`] = `
         "alignItems": "center",
         "backgroundColor": "#fff",
         "flexDirection": "row",
-        "height": 200,
+        "height": 216,
         "paddingLeft": 5,
         "paddingRight": 5,
       },
@@ -1140,6 +1152,8 @@ exports[`DatePicker Component should picker mode is date 2`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }
@@ -1228,6 +1242,8 @@ exports[`DatePicker Component should picker mode is date 2`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }
@@ -1411,6 +1427,8 @@ exports[`DatePicker Component should picker mode is date 2`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }
@@ -1427,7 +1445,7 @@ exports[`DatePicker Component should picker mode is datetime 1`] = `
         "alignItems": "center",
         "backgroundColor": "#fff",
         "flexDirection": "row",
-        "height": 200,
+        "height": 216,
         "paddingLeft": 5,
         "paddingRight": 5,
       },
@@ -1753,6 +1771,8 @@ exports[`DatePicker Component should picker mode is datetime 1`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 24,
           },
         ]
       }
@@ -1786,6 +1806,8 @@ exports[`DatePicker Component should picker mode is datetime 1`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 24,
           },
         ]
       }
@@ -1914,6 +1936,8 @@ exports[`DatePicker Component should picker mode is datetime 1`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 24,
           },
         ]
       }
@@ -1947,6 +1971,8 @@ exports[`DatePicker Component should picker mode is datetime 1`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 24,
           },
         ]
       }
@@ -1980,6 +2006,8 @@ exports[`DatePicker Component should picker mode is datetime 1`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 24,
           },
         ]
       }
@@ -1996,7 +2024,7 @@ exports[`DatePicker Component should picker mode is datetime 2`] = `
         "alignItems": "center",
         "backgroundColor": "#fff",
         "flexDirection": "row",
-        "height": 200,
+        "height": 216,
         "paddingLeft": 5,
         "paddingRight": 5,
       },
@@ -2182,6 +2210,8 @@ exports[`DatePicker Component should picker mode is datetime 2`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 24,
           },
         ]
       }
@@ -2270,6 +2300,8 @@ exports[`DatePicker Component should picker mode is datetime 2`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 24,
           },
         ]
       }
@@ -2453,6 +2485,8 @@ exports[`DatePicker Component should picker mode is datetime 2`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 24,
           },
         ]
       }
@@ -2601,6 +2635,8 @@ exports[`DatePicker Component should picker mode is datetime 2`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 24,
           },
         ]
       }
@@ -2929,6 +2965,8 @@ exports[`DatePicker Component should picker mode is datetime 2`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 24,
           },
         ]
       }
@@ -2945,7 +2983,7 @@ exports[`DatePicker Component should picker mode is time 1`] = `
         "alignItems": "center",
         "backgroundColor": "#fff",
         "flexDirection": "row",
-        "height": 200,
+        "height": 216,
         "paddingLeft": 5,
         "paddingRight": 5,
       },
@@ -2981,6 +3019,8 @@ exports[`DatePicker Component should picker mode is time 1`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 30,
           },
         ]
       }
@@ -3014,6 +3054,8 @@ exports[`DatePicker Component should picker mode is time 1`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 30,
           },
         ]
       }
@@ -3030,7 +3072,7 @@ exports[`DatePicker Component should picker mode is time 2`] = `
         "alignItems": "center",
         "backgroundColor": "#fff",
         "flexDirection": "row",
-        "height": 200,
+        "height": 216,
         "paddingLeft": 5,
         "paddingRight": 5,
       },
@@ -3181,6 +3223,8 @@ exports[`DatePicker Component should picker mode is time 2`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 30,
           },
         ]
       }
@@ -3509,6 +3553,8 @@ exports[`DatePicker Component should picker mode is time 2`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 30,
           },
         ]
       }
@@ -3525,7 +3571,7 @@ exports[`DatePicker Component should picker which mode is date value change 1`] 
         "alignItems": "center",
         "backgroundColor": "#fff",
         "flexDirection": "row",
-        "height": 200,
+        "height": 216,
         "paddingLeft": 5,
         "paddingRight": 5,
       },
@@ -3711,6 +3757,8 @@ exports[`DatePicker Component should picker which mode is date value change 1`] 
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }
@@ -3799,6 +3847,8 @@ exports[`DatePicker Component should picker which mode is date value change 1`] 
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }
@@ -3982,6 +4032,8 @@ exports[`DatePicker Component should picker which mode is date value change 1`] 
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }
@@ -3998,7 +4050,7 @@ exports[`DatePicker Component should picker which mode is date value change 2`] 
         "alignItems": "center",
         "backgroundColor": "#fff",
         "flexDirection": "row",
-        "height": 200,
+        "height": 216,
         "paddingLeft": 5,
         "paddingRight": 5,
       },
@@ -4184,6 +4236,8 @@ exports[`DatePicker Component should picker which mode is date value change 2`] 
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }
@@ -4272,6 +4326,8 @@ exports[`DatePicker Component should picker which mode is date value change 2`] 
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }
@@ -4455,6 +4511,8 @@ exports[`DatePicker Component should picker which mode is date value change 2`] 
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }
@@ -4471,7 +4529,7 @@ exports[`DatePicker Component should picker which mode is maxDate 1`] = `
         "alignItems": "center",
         "backgroundColor": "#fff",
         "flexDirection": "row",
-        "height": 200,
+        "height": 216,
         "paddingLeft": 5,
         "paddingRight": 5,
       },
@@ -4657,6 +4715,8 @@ exports[`DatePicker Component should picker which mode is maxDate 1`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }
@@ -4745,6 +4805,8 @@ exports[`DatePicker Component should picker which mode is maxDate 1`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }
@@ -4928,6 +4990,8 @@ exports[`DatePicker Component should picker which mode is maxDate 1`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }
@@ -4944,7 +5008,7 @@ exports[`DatePicker Component should render picker which ampmFirst 1`] = `
         "alignItems": "center",
         "backgroundColor": "#fff",
         "flexDirection": "row",
-        "height": 200,
+        "height": 216,
         "paddingLeft": 5,
         "paddingRight": 5,
       },
@@ -4985,6 +5049,8 @@ exports[`DatePicker Component should render picker which ampmFirst 1`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }
@@ -5073,6 +5139,8 @@ exports[`DatePicker Component should render picker which ampmFirst 1`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }
@@ -5401,6 +5469,8 @@ exports[`DatePicker Component should render picker which ampmFirst 1`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }
@@ -5417,7 +5487,7 @@ exports[`DatePicker Component should render picker which locale is cn 1`] = `
         "alignItems": "center",
         "backgroundColor": "#fff",
         "flexDirection": "row",
-        "height": 200,
+        "height": 216,
         "paddingLeft": 5,
         "paddingRight": 5,
       },
@@ -5603,6 +5673,8 @@ exports[`DatePicker Component should render picker which locale is cn 1`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }
@@ -5691,6 +5763,8 @@ exports[`DatePicker Component should render picker which locale is cn 1`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }
@@ -5874,6 +5948,8 @@ exports[`DatePicker Component should render picker which locale is cn 1`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }
@@ -5890,7 +5966,7 @@ exports[`DatePicker Component should render picker which locale is defaultValue 
         "alignItems": "center",
         "backgroundColor": "#fff",
         "flexDirection": "row",
-        "height": 200,
+        "height": 216,
         "paddingLeft": 5,
         "paddingRight": 5,
       },
@@ -6076,6 +6152,8 @@ exports[`DatePicker Component should render picker which locale is defaultValue 
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }
@@ -6164,6 +6242,8 @@ exports[`DatePicker Component should render picker which locale is defaultValue 
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }
@@ -6347,6 +6427,8 @@ exports[`DatePicker Component should render picker which locale is defaultValue 
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }
@@ -6363,7 +6445,7 @@ exports[`DatePicker Component should render picker which locale is object 1`] = 
         "alignItems": "center",
         "backgroundColor": "#fff",
         "flexDirection": "row",
-        "height": 200,
+        "height": 216,
         "paddingLeft": 5,
         "paddingRight": 5,
       },
@@ -6549,6 +6631,8 @@ exports[`DatePicker Component should render picker which locale is object 1`] = 
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }
@@ -6637,6 +6721,8 @@ exports[`DatePicker Component should render picker which locale is object 1`] = 
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }
@@ -6820,6 +6906,8 @@ exports[`DatePicker Component should render picker which locale is object 1`] = 
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }
@@ -6836,7 +6924,7 @@ exports[`DatePicker Component should render picker which mode is datetime 1`] = 
         "alignItems": "center",
         "backgroundColor": "#fff",
         "flexDirection": "row",
-        "height": 200,
+        "height": 216,
         "paddingLeft": 5,
         "paddingRight": 5,
       },
@@ -7022,6 +7110,8 @@ exports[`DatePicker Component should render picker which mode is datetime 1`] = 
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 24,
           },
         ]
       }
@@ -7110,6 +7200,8 @@ exports[`DatePicker Component should render picker which mode is datetime 1`] = 
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 24,
           },
         ]
       }
@@ -7293,6 +7385,8 @@ exports[`DatePicker Component should render picker which mode is datetime 1`] = 
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 24,
           },
         ]
       }
@@ -7441,6 +7535,8 @@ exports[`DatePicker Component should render picker which mode is datetime 1`] = 
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 24,
           },
         ]
       }
@@ -7769,6 +7865,8 @@ exports[`DatePicker Component should render picker which mode is datetime 1`] = 
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 24,
           },
         ]
       }
@@ -7785,7 +7883,7 @@ exports[`DatePicker Component should render picker which mode is else 1`] = `
         "alignItems": "center",
         "backgroundColor": "#fff",
         "flexDirection": "row",
-        "height": 200,
+        "height": 216,
         "paddingLeft": 5,
         "paddingRight": 5,
       },
@@ -7803,7 +7901,7 @@ exports[`DatePicker Component should render picker which mode is month 1`] = `
         "alignItems": "center",
         "backgroundColor": "#fff",
         "flexDirection": "row",
-        "height": 200,
+        "height": 216,
         "paddingLeft": 5,
         "paddingRight": 5,
       },
@@ -7989,6 +8087,8 @@ exports[`DatePicker Component should render picker which mode is month 1`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 30,
           },
         ]
       }
@@ -8077,6 +8177,8 @@ exports[`DatePicker Component should render picker which mode is month 1`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 30,
           },
         ]
       }
@@ -8093,7 +8195,7 @@ exports[`DatePicker Component should render picker which mode is year 1`] = `
         "alignItems": "center",
         "backgroundColor": "#fff",
         "flexDirection": "row",
-        "height": 200,
+        "height": 216,
         "paddingLeft": 5,
         "paddingRight": 5,
       },
@@ -8279,6 +8381,8 @@ exports[`DatePicker Component should render picker which mode is year 1`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 30,
           },
         ]
       }
@@ -8295,7 +8399,7 @@ exports[`DatePicker Component should render picker which use12Hours 1`] = `
         "alignItems": "center",
         "backgroundColor": "#fff",
         "flexDirection": "row",
-        "height": 200,
+        "height": 216,
         "paddingLeft": 5,
         "paddingRight": 5,
       },
@@ -8331,6 +8435,8 @@ exports[`DatePicker Component should render picker which use12Hours 1`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }
@@ -8659,6 +8765,8 @@ exports[`DatePicker Component should render picker which use12Hours 1`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }
@@ -8697,6 +8805,8 @@ exports[`DatePicker Component should render picker which use12Hours 1`] = `
           },
           Object {
             "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 27,
           },
         ]
       }

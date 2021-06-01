@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import { Button, GlobalToast } from 'tuya-panel-kit';
+import Strings from '../../i18n';
 
 export default class GlobalToastScene extends Component {
   _handleClick = () => {
     GlobalToast.show({
-      text: '提示性文案建议最多展示十六个字符',
+      text: Strings.getLang('globalToast_suggest'),
       showIcon: false,
       contentStyle: {},
       showPosition: 'bottom',
       onFinish: () => {
-        console.log('Toast结束');
+        console.log(Strings.getLang('globalToast_end_toast'));
         GlobalToast.hide();
       },
     });
@@ -21,7 +22,7 @@ export default class GlobalToastScene extends Component {
       <View style={{ flex: 1 }}>
         <Button
           style={{ marginTop: 12 }}
-          text="显示Toast-挂在FullView"
+          text= {Strings.getLang('globalToast_show_toast')}
           textStyle={{ marginTop: 12, fontSize: 24, color: '#000' }}
           onPress={this._handleClick}
         />

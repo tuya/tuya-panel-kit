@@ -52,17 +52,17 @@ const text = {
  */
 const picker = {
   light: {
-    fontSize: 16,
-    fontColor: '#000',
-    dividerColor: getDividerColor, // 预留 IOS 暂不支持
-    unitFontSize: 16,
-    unitFontColor: '#000',
+    fontSize: 30,
+    fontColor: 'rgba(0,0,0,0.9)',
+    dividerColor: 'rgba(0, 0, 0, 0.05)',
+    unitFontSize: 14,
+    unitFontColor: 'rgba(0,0,0,0.9)',
   },
   dark: {
-    fontSize: 16,
+    fontSize: 30,
     fontColor: '#fff',
-    dividerColor: getDividerColor, // 预留 IOS 暂不支持
-    unitFontSize: 16,
+    dividerColor: 'rgba(255, 255, 255, 0.1)',
+    unitFontSize: 14,
     unitFontColor: '#fff',
   },
 };

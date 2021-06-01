@@ -617,6 +617,7 @@ exports[`Tabbar Component type radio 1`] = `
   style={
     Array [
       Object {
+        "backgroundColor": "#E3E9EE",
         "borderColor": "#fff",
         "borderRadius": 30,
         "height": 60,
@@ -657,6 +658,8 @@ exports[`Tabbar Component type radio 1`] = `
       onStartShouldSetResponder={[Function]}
       style={
         Object {
+          "alignItems": "center",
+          "justifyContent": "center",
           "opacity": 1,
           "width": 0,
         }
@@ -680,7 +683,9 @@ exports[`Tabbar Component type radio 1`] = `
             Array [
               Object {
                 "backgroundColor": "transparent",
-                "color": "#fff",
+                "color": "#9CA3A9",
+                "fontSize": 14,
+                "fontWeight": "400",
                 "textAlign": "center",
               },
               Array [
@@ -715,6 +720,8 @@ exports[`Tabbar Component type radio 1`] = `
       onStartShouldSetResponder={[Function]}
       style={
         Object {
+          "alignItems": "center",
+          "justifyContent": "center",
           "opacity": 1,
           "width": 0,
         }
@@ -738,7 +745,9 @@ exports[`Tabbar Component type radio 1`] = `
             Array [
               Object {
                 "backgroundColor": "transparent",
-                "color": "#fff",
+                "color": "#9CA3A9",
+                "fontSize": 14,
+                "fontWeight": "400",
                 "textAlign": "center",
               },
               Array [
@@ -752,7 +761,8 @@ exports[`Tabbar Component type radio 1`] = `
                 },
               ],
               Object {
-                "color": "#5190F3",
+                "color": "#57BCFB",
+                "fontWeight": "500",
               },
               Object {},
             ],
@@ -775,6 +785,8 @@ exports[`Tabbar Component type radio 1`] = `
       onStartShouldSetResponder={[Function]}
       style={
         Object {
+          "alignItems": "center",
+          "justifyContent": "center",
           "opacity": 1,
           "width": 0,
         }
@@ -798,7 +810,9 @@ exports[`Tabbar Component type radio 1`] = `
             Array [
               Object {
                 "backgroundColor": "transparent",
-                "color": "#fff",
+                "color": "#9CA3A9",
+                "fontSize": 14,
+                "fontWeight": "400",
                 "textAlign": "center",
               },
               Array [

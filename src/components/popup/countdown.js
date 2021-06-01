@@ -6,7 +6,12 @@ import PropTypes from 'prop-types';
 import Picker from '../picker-view';
 import { CoreUtils, NumberUtils, RatioUtils, ThemeUtils } from '../../utils';
 import withSkeleton from './withSkeleton';
-import { StyledCountdownContainer, StyledOverview, StyledPickerUnitText } from './styled';
+import {
+  StyledCountdownContainer,
+  StyledOverview,
+  StyledPickerUnitText,
+  StyledCountdownContent,
+} from './styled';
 
 const { toFixed } = CoreUtils;
 const { range, inMaxMin } = NumberUtils;
@@ -210,25 +215,27 @@ class CountdownPopup extends React.Component {
               style={[countdownWrapperStyle, !switchValue && { opacity: 0.6 }]}
               pointerEvents={!switchValue ? 'none' : 'auto'}
             >
-              <StyledOverview style={{ flex: 1 }}>
-                <Picker
-                  theme={{ fontColor: countFontColor }}
-                  accessibilityLabel="Popup_CountdownPicker_Minutes"
-                  style={StyleSheet.flatten([{ width, height: 220 }, minutePickerStyle])}
-                  selectedValue={this.state.minute}
-                  onValueChange={this.handleMinuteChange}
-                >
-                  {this.Minutes.map(k => (
-                    <Picker.Item key={k} label={`${k}`} value={k} />
-                  ))}
-                </Picker>
-                <StyledPickerUnitText
-                  style={StyleSheet.flatten([{ marginLeft: -(width / 2) + 20 }, minuteUnitStyle])}
-                  pointerEvents="none"
-                  pickerUnitColor={countUnitColor}
-                  text={minuteText}
-                />
-              </StyledOverview>
+              <StyledCountdownContent>
+                <StyledOverview style={{ flex: 1 }}>
+                  <Picker
+                    theme={{ fontColor: countFontColor }}
+                    accessibilityLabel="Popup_CountdownPicker_Minutes"
+                    style={StyleSheet.flatten([{ width, height: 220 }, minutePickerStyle])}
+                    selectedValue={this.state.minute}
+                    onValueChange={this.handleMinuteChange}
+                  >
+                    {this.Minutes.map(k => (
+                      <Picker.Item key={k} label={`${k}`} value={k} />
+                    ))}
+                  </Picker>
+                  <StyledPickerUnitText
+                    style={StyleSheet.flatten([{ marginLeft: -(width / 2) + 20 }, minuteUnitStyle])}
+                    pointerEvents="none"
+                    pickerUnitColor={countUnitColor}
+                    text={minuteText}
+                  />
+                </StyledOverview>
+              </StyledCountdownContent>
             </StyledCountdownContainer>
           );
         }}
@@ -274,74 +281,79 @@ class CountdownPopup extends React.Component {
               style={StyleSheet.flatten([countdownWrapperStyle, !switchValue && { opacity: 0.6 }])}
               pointerEvents={!switchValue ? 'none' : 'auto'}
             >
-              <StyledOverview
-                style={{
-                  flex: isIos ? 1.1 : 1.4,
-                  height: 240,
-                }}
-              >
-                <Picker
-                  theme={{ fontColor: countFontColor }}
-                  accessibilityLabel="Popup_CountdownPicker_Hours"
-                  style={StyleSheet.flatten([
-                    {
-                      width: width * (7 / 10),
-                      marginRight: isIos ? 0 : 20,
-                    },
-                    hourPickerStyle,
-                  ])}
-                  selectedValue={this.state.hour}
-                  onValueChange={this.handleHourChange}
+              <StyledCountdownContent>
+                <StyledOverview
+                  style={{
+                    flex: isIos ? 1.1 : 1.4,
+                    height: 240,
+                  }}
                 >
-                  {this.Hours.map(k => (
-                    <Picker.Item key={k} label={toFixed(k, 2)} value={k} />
-                  ))}
-                </Picker>
-                <StyledPickerUnitText
-                  style={StyleSheet.flatten([
-                    { marginLeft: -(width * (7 / 10 / 2)) + (isIos ? 15 : 0) },
-                    hourUnitStyle,
-                  ])}
-                  pointerEvents="none"
-                  pickerUnitColor={countUnitColor}
-                  text={hourText}
-                />
-              </StyledOverview>
+                  <Picker
+                    theme={{ fontColor: countFontColor }}
+                    accessibilityLabel="Popup_CountdownPicker_Hours"
+                    style={StyleSheet.flatten([
+                      {
+                        width: width * (7 / 10) - 60,
+                        marginRight: isIos ? 0 : 20,
+                      },
+                      hourPickerStyle,
+                    ])}
+                    selectedValue={this.state.hour}
+                    onValueChange={this.handleHourChange}
+                  >
+                    {this.Hours.map(k => (
+                      <Picker.Item key={k} label={toFixed(k, 2)} value={k} />
+                    ))}
+                  </Picker>
+                  <StyledPickerUnitText
+                    style={StyleSheet.flatten([
+                      { marginLeft: -(width * (7 / 10 / 2)) + 30 + (isIos ? 15 : 0) },
+                      hourUnitStyle,
+                    ])}
+                    pointerEvents="none"
+                    pickerUnitColor={countUnitColor}
+                    text={hourText}
+                  />
+                </StyledOverview>
 
-              <StyledOverview style={{ flex: 1 }}>
-                <Picker
-                  theme={{ fontColor: countFontColor }}
-                  accessibilityLabel="Popup_CountdownPicker_Minutes"
-                  selectedValue={this.state.minute}
-                  onValueChange={this.handleMinuteChange}
-                  itemAlign={I18nManager.isRTL ? 'flex-end' : 'flex-start'}
-                  style={StyleSheet.flatten([
-                    isIos
-                      ? {
-                          width: width * (8 / 10),
-                          marginLeft: -(width * 3) / 10,
-                        }
-                      : {
-                          width: width * (7 / 10),
-                        },
-                    minutePickerStyle,
-                  ])}
-                >
-                  {minuteValues.map(k => (
-                    <Picker.Item key={k} label={toFixed(k, 2)} value={k} />
-                  ))}
-                </Picker>
+                <StyledOverview style={{ flex: 1 }}>
+                  <Picker
+                    theme={{ fontColor: countFontColor }}
+                    accessibilityLabel="Popup_CountdownPicker_Minutes"
+                    selectedValue={this.state.minute}
+                    onValueChange={this.handleMinuteChange}
+                    itemAlign={isIos ? 'center' : I18nManager.isRTL ? 'flex-end' : 'flex-start'}
+                    style={StyleSheet.flatten([
+                      isIos
+                        ? {
+                            width: width * (8 / 10),
+                            marginLeft: -(width * 3) / 10,
+                          }
+                        : {
+                            width: width * (7 / 10),
+                            marginLeft: 20,
+                          },
+                      minutePickerStyle,
+                    ])}
+                  >
+                    {minuteValues.map(k => (
+                      <Picker.Item key={k} label={toFixed(k, 2)} value={k} />
+                    ))}
+                  </Picker>
 
-                <StyledPickerUnitText
-                  style={StyleSheet.flatten([
-                    { marginLeft: isIos ? -(width * (8 / 10 / 2)) + 15 : -(width * (7 / 10)) + 28 },
-                    minuteUnitStyle,
-                  ])}
-                  pointerEvents="none"
-                  pickerUnitColor={countUnitColor}
-                  text={minuteText}
-                />
-              </StyledOverview>
+                  <StyledPickerUnitText
+                    style={StyleSheet.flatten([
+                      {
+                        marginLeft: isIos ? -(width * (8 / 10 / 2)) + 15 : -(width * (7 / 10)) + 40,
+                      },
+                      minuteUnitStyle,
+                    ])}
+                    pointerEvents="none"
+                    pickerUnitColor={countUnitColor}
+                    text={minuteText}
+                  />
+                </StyledOverview>
+              </StyledCountdownContent>
             </StyledCountdownContainer>
           );
         }}

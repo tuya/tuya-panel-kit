@@ -1,6 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import { TYText, SwitchButton } from 'tuya-panel-kit';
+import Strings from '../../i18n';
 
 export default class extends React.Component {
   state = {
@@ -12,9 +13,9 @@ export default class extends React.Component {
   render() {
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <TYText text="滑块样式(IOS、安卓自适应)" />
+        <TYText text={Strings.getLang('switch_sliderstyle_adaptive')} />
         <SwitchButton value={this.state.value} onValueChange={this._handleValueChange} />
-        <TYText text="自定义滑块样式" />
+        <TYText text={Strings.getLang('switch_custom')} />
         <SwitchButton
           value={this.state.value}
           tintColor="#ff0000"
@@ -28,13 +29,13 @@ export default class extends React.Component {
           thumbStyle={{ elevation: 0 }}
           onValueChange={this._handleValueChange}
         />
-        <TYText text="测试本地主题" />
+        <TYText text={Strings.getLang('switch_test_localtheme')} />
         <SwitchButton
           theme={{ tintColor: '#00ffff', onThumbTintColor: '#ff0000' }}
           value={this.state.value}
           onValueChange={this._handleValueChange}
         />
-        <TYText text="滑块样式(IOS、安卓自适应) ----  渐变（不带字体）" />
+        <TYText text={Strings.getLang('switch_sliderstyle_withfont')}/>
         <SwitchButton
           value={this.state.value}
           onValueChange={this._handleValueChange}
@@ -46,7 +47,7 @@ export default class extends React.Component {
             '100%': '#FEDD44',
           }}
         />
-        <TYText text="滑块样式(IOS、安卓自适应) ----  渐变（带字体）" />
+        <TYText text={Strings.getLang('switch_sliderstyle_withoutfont')} />
         <SwitchButton
           value={this.state.value}
           onValueChange={this._handleValueChange}

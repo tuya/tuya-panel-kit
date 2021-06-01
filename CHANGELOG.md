@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.5.6](https://github.com/tuya/tuya-panel-kit/compare/v4.5.5...v4.5.6) (2021-06-08)
+
+
+### Features
+
+* **Picker:** add new style of Picker to support dividerColor ([#74](https://github.com/tuya/tuya-panel-kit/issues/74)) ([e1bdc5b](https://github.com/tuya/tuya-panel-kit/commit/e1bdc5bd1c9fa69100431dc79683c147f6c2703f))
+
+
+
+## [4.5.5](https://github.com/tuya/tuya-panel-kit/compare/v4.5.4...v4.5.5) (2021-06-03)
+
+
+### Bug Fixes
+
+* **Popup:** fix the problem of Popup hiding the horizontal line at the bottom of the top bar in dark mode, fixes [#71](https://github.com/tuya/tuya-panel-kit/issues/71) ([#72](https://github.com/tuya/tuya-panel-kit/issues/72)) ([b5f4949](https://github.com/tuya/tuya-panel-kit/commit/b5f4949f1cf861326bdfc4ddceaad8f6c710ea44))
+
+
+### Features
+
+* **bleOffline:** H5 changeTo subPage ([#67](https://github.com/tuya/tuya-panel-kit/issues/67)) ([181afd5](https://github.com/tuya/tuya-panel-kit/commit/181afd54b5144962f0daf8d1bc5f12dab5c5b706))
+
+
+
 ## [4.5.4](https://github.com/tuya/tuya-panel-kit/compare/v4.5.3...v4.5.4) (2021-05-18)
 
 

@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Tips, Button, Utils, TYText } from 'tuya-panel-kit';
+import Strings from '../../i18n';
 
 const { winWidth, convertX: cx } = Utils.RatioUtils;
 
@@ -21,7 +22,7 @@ class TipsView extends PureComponent {
       >
         <Button
           style={styles.button}
-          text="Tips气泡组件"
+          text={Strings.getLang('tips_component')}
           textStyle={styles.text}
           onPress={() => this.setState({ show: !this.state.show })}
         />
