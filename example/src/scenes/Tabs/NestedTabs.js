@@ -4,6 +4,7 @@ import { View, Image } from 'react-native';
 import { Tabs, TYListItem, TYText } from 'tuya-panel-kit';
 import TesterTitle from '../../components/TesterTitle';
 import Panel from './components/Panel';
+import Strings from '../../i18n';
 
 const Res = {
   hue: require('../../res/hue.png'),
@@ -22,14 +23,14 @@ export default class NestedTabsScene extends React.PureComponent {
             return (
               <View style={{ alignItems: 'center', justifyContent: 'center' }}>
                 <Image style={{ width: 36, height: 36 }} source={Res.hue} />
-                <TYText color={isActive ? 'red' : '#000'} text="探测器" />
+                <TYText color={isActive ? 'red' : '#000'} text={Strings.getLang('tabs_detector')} />
               </View>
             );
           },
         },
-        { value: '2', label: '遥控器' },
+        { value: '2', label: Strings.getLang('tabs_remote_control') },
         { value: '3', label: 'RFID' },
-        { value: '4', label: '有限探测器' },
+        { value: '4', label: Strings.getLang('tabs_limit_detector') },
       ],
       d2: [
         { value: '1', label: '1' },
@@ -55,7 +56,7 @@ export default class NestedTabsScene extends React.PureComponent {
   render() {
     return (
       <View style={{ flex: 1 }}>
-        <TesterTitle title="嵌套的Tabs" />
+        <TesterTitle title={Strings.getLang('tabs_nested')} />
         <Tabs
           tabPosition="bottom"
           underlineStyle={{ backgroundColor: 'transparent' }}
@@ -77,13 +78,13 @@ export default class NestedTabsScene extends React.PureComponent {
             </Tabs>
           </Tabs.TabPanel>
           <Tabs.TabPanel background="#fff">
-            <TYListItem title="第二页" />
+            <TYListItem title="Page two" />
           </Tabs.TabPanel>
           <Tabs.TabPanel background="#fff">
-            <TYListItem title="第三页" />
+            <TYListItem title="Page three" />
           </Tabs.TabPanel>
           <Tabs.TabPanel background="#fff">
-            <TYListItem title="第四页" />
+            <TYListItem title="Page four" />
           </Tabs.TabPanel>
         </Tabs>
       </View>

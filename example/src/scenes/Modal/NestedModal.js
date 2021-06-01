@@ -2,6 +2,7 @@ import React from 'react';
 import { Modal, Utils } from 'tuya-panel-kit';
 // import Alert from 'tuya-panel-kit/lib/components/dialog/alert'; // eslint-disable-line
 import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
+import Strings from '../../i18n';
 
 const { winWidth, winHeight } = Utils.RatioUtils;
 
@@ -41,7 +42,7 @@ class NestedModal extends React.Component {
     return (
       <View>
         <TouchableOpacity onPress={this._showModal1} style={styles.buttonStyle}>
-          <Text style={styles.textStyle}>点击我开启第一个Modal</Text>
+          <Text style={styles.textStyle}>{Strings.getLang('modal_first')}</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
@@ -49,28 +50,28 @@ class NestedModal extends React.Component {
           style={styles.buttonStyle}
         >
           <Text style={styles.textStyle}>
-            {this.state.onlyLastModalVisible ? '开启' : '关闭'}所有弹窗同时显示
+            {this.state.onlyLastModalVisible ? Strings.getLang('modal_start') : Strings.getLang('modal_end')}{Strings.getLang('modal_all_displayed')}
           </Text>
         </TouchableOpacity>
         <Modal
           visible={this.state.visible1}
           onMaskPress={this._hideAllModal}
           onlyLastModalVisible={this.state.onlyLastModalVisible}
-          onShow={() => console.log('第一个弹窗显示了')}
-          onHide={() => console.log('第一个弹窗消失了')}
-          onDismiss={() => console.log('弹窗 Dismiss 了')}
+          onShow={() => console.log(Strings.getLang('modal_first_window_showed'))}
+          onHide={() => console.log(Strings.getLang('modal_first_window_disappeared'))}
+          onDismiss={() => console.log(Strings.getLang('modal_dismiss_window'))}
         >
           <TouchableOpacity onPress={this._hideModal1} style={styles.buttonStyle}>
-            <Text style={styles.textStyle}>点击我或者点击蒙层关闭这个Modal</Text>
+            <Text style={styles.textStyle}>{Strings.getLang('modal_end_modal')}</Text>
           </TouchableOpacity>
           {/* <TouchableOpacity onPress={this._showDialog} style={styles.buttonStyle}>
             <Text style={styles.textStyle}>点击我测试Dialog</Text>
           </TouchableOpacity> */}
           <TouchableOpacity onPress={this._showPopup} style={styles.buttonStyle}>
-            <Text style={styles.textStyle}>点击我测试Popup</Text>
+            <Text style={styles.textStyle}>{Strings.getLang('modal_test_popup')}</Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={this._showModal2} style={styles.buttonStyle}>
-            <Text style={styles.textStyle}>点击我开启第二个Modal</Text>
+            <Text style={styles.textStyle}>{Strings.getLang('modal_second')}</Text>
           </TouchableOpacity>
         </Modal>
 
@@ -78,15 +79,15 @@ class NestedModal extends React.Component {
           visible={this.state.visible2}
           onMaskPress={this._hideModal2}
           onlyLastModalVisible={this.state.onlyLastModalVisible}
-          onShow={() => console.log('第二个弹窗显示了')}
-          onHide={() => console.log('第二个弹窗消失了')}
+          onShow={() => console.log(Strings.getLang('modal_second_window_showed'))}
+          onHide={() => console.log(Strings.getLang('modal_second_window_disappeared'))}
         >
           <View style={{ width: winWidth, height: winHeight, justifyContent: 'center' }}>
             <TouchableOpacity onPress={this._hideModal2} style={styles.buttonStyle}>
-              <Text style={styles.textStyle}>点击我关闭这个Modal</Text>
+              <Text style={styles.textStyle}>{Strings.getLang('modal_end_this')}</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={this._hideAllModal} style={styles.buttonStyle}>
-              <Text style={styles.textStyle}>点击我关闭所有Modal</Text>
+              <Text style={styles.textStyle}>{Strings.getLang('modal_end_all')}</Text>
             </TouchableOpacity>
           </View>
         </Modal>
@@ -104,18 +105,18 @@ class NestedModal extends React.Component {
         <Modal.Countdown
           visible={this.state.popupVisible}
           onlyLastModalVisible={this.state.onlyLastModalVisible}
-          onShow={() => console.log('Popup显示了')}
-          onHide={() => console.log('Popup消失了')}
+          onShow={() => console.log(Strings.getLang('modal_popup_showed'))}
+          onHide={() => console.log(Strings.getLang('modal_popup_disappeared'))}
           value={0}
           onMaskPress={this._hidePopup}
           onValueChange={() => {}}
           onCancel={this._hidePopup}
           onConfirm={this._hidePopup}
-          title="倒计时"
-          cancelText="取消"
-          confirmText="确认"
-          hourText="小时"
-          minuteText="分钟"
+          title={Strings.getLang('modal_countdown')}
+          cancelText={Strings.getLang('dialog_cancel')}
+          confirmText={Strings.getLang('dialog_confirm')}
+          hourText={Strings.getLang('modal_hour')}
+          minuteText={Strings.getLang('modal_minute')}
         />
       </View>
     );

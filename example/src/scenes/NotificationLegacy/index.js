@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Button, TopBar, NotificationLegacy } from 'tuya-panel-kit';
-
+import Strings from '../../i18n';
 // import defaultSvg from 'tuya-panel-kit/src/components/iconfont/svg/defaultSvg';
 
 export default class NotificationLegacyScene extends Component {
@@ -26,14 +26,14 @@ export default class NotificationLegacyScene extends Component {
             }}
             // icon={defaultSvg.close}
             // variant="warning"
-            message="警告提示框"
+            message={Strings.getLang('notification_warning_box')}
             onClose={this._handleClose}
             onPress={() => console.log('kkkk')}
           />
         )}
         {!this.state.visible && (
           <Button
-            text="显示Notification"
+            text={Strings.getLang('notification_show')}
             textStyle={{ marginTop: 12, fontSize: 24, color: '#000' }}
             onPress={() => this.setState({ visible: true })}
           />

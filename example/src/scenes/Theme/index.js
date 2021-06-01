@@ -6,6 +6,7 @@ import { TYSectionList, Dialog, Popup, Utils } from 'tuya-panel-kit';
 import ColorPicker from '../../components/color-picker';
 import { store } from '../../main';
 import { updateTheme } from '../../redux/modules/theme';
+import Strings from '../../i18n';
 
 const { CoreUtils, ColorUtils } = Utils;
 
@@ -25,7 +26,7 @@ class ThemeSettingScene extends Component {
         return {
           key,
           title: key,
-          data: [{ key, title: '全局type', value }],
+          data: [{ key, title: Strings.getLang('theme_global_type'), value }],
         };
       }
       const datas = value.type ? value[value.type] : value;
@@ -66,8 +67,8 @@ class ThemeSettingScene extends Component {
     if (typeof themeValue === 'number') {
       Popup.numberSelector({
         title: themePath,
-        cancelText: '取消',
-        confirmText: '确认',
+        cancelText: Strings.getLang('dialog_cancel'),
+        confirmText: Strings.getLang('dialog_confirm'),
         value: themeValue,
         min: 0,
         max: 375,
@@ -81,8 +82,8 @@ class ThemeSettingScene extends Component {
     }
     Dialog.custom({
       title: themePath,
-      cancelText: '取消',
-      confirmText: '确认',
+      cancelText: Strings.getLang('dialog_cancel'),
+      confirmText: Strings.getLang('dialog_confirm'),
       content: (
         <ColorPicker
           onComplete={color => {

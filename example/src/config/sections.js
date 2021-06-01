@@ -1,6 +1,7 @@
 import { TYSdk } from 'tuya-panel-kit';
 import { themeRouter, componentsRouters } from './routers';
 import ComponentInfo from '../../../package.json';
+import Strings from '../i18n';
 
 function dataProducers(router) {
   return router.map(({ id }) => ({
@@ -33,7 +34,7 @@ export default [
     data: dataProducers(componentsRouters),
   },
   {
-    title: '测试主题配置',
+    title: Strings.getLang('test_theme'),
     data: dataProducers(themeRouter),
   },
 ];

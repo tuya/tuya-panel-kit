@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-import { StyleSheet, ColorPropType, PickerIOS } from 'react-native';
+import { StyleSheet, ColorPropType, PickerIOS, NativeModules } from 'react-native';
 import { ThemeUtils } from '../../utils';
+import TYRCTPanelPicker from './TYRCTPicker';
 
 const { getTheme, ThemeConsumer } = ThemeUtils;
 
@@ -10,6 +11,7 @@ const MAX_ITEM_NUM = 1260;
 export class PickerView extends PureComponent {
   static propTypes = {
     ...PickerIOS.propTypes,
+    ...TYRCTPanelPicker.propTypes,
     /**
      * Picker是否循环滚动
      */
@@ -92,7 +94,7 @@ export class PickerView extends PureComponent {
 PickerView.Item = PickerIOS.Item;
 
 const ThemedPickerView = props => {
-  const { theme: localTheme, itemStyle, ...rest } = props;
+  const { theme: localTheme, itemStyle, useTYRCTPicker, ...rest } = props;
   return (
     <ThemeConsumer>
       {fullTheme => {
@@ -103,12 +105,23 @@ const ThemedPickerView = props => {
         const propsWithTheme = { theme, ...rest };
         const fontSize = getTheme(propsWithTheme, 'picker.fontSize');
         const fontColor = getTheme(propsWithTheme, 'picker.fontColor');
+        const dividerColor = getTheme(propsWithTheme, 'picker.dividerColor');
         const themedItemStyle = StyleSheet.flatten([
           typeof fontSize === 'number' && { fontSize },
           fontColor && { color: fontColor },
+          { fontFamily: 'DIN Alternate' },
           itemStyle,
         ]);
-        return <PickerView itemStyle={themedItemStyle} {...rest} />;
+        return useTYRCTPicker && 'TYRCTPicker' in NativeModules.UIManager ? (
+          <TYRCTPanelPicker
+            textSize={fontSize}
+            itemTextColor={fontColor}
+            dividerColor={dividerColor}
+            {...rest}
+          />
+        ) : (
+          <PickerView itemStyle={themedItemStyle} {...rest} />
+        );
       }}
     </ThemeConsumer>
   );
@@ -120,11 +133,14 @@ ThemedPickerView.propTypes = {
   theme: PropTypes.shape({
     fontSize: PropTypes.number,
     fontColor: ColorPropType,
+    dividerColor: ColorPropType,
   }),
+  useTYRCTPicker: PropTypes.bool,
 };
 
 ThemedPickerView.defaultProps = {
   theme: {},
+  useTYRCTPicker: false,
 };
 
 export default ThemedPickerView;

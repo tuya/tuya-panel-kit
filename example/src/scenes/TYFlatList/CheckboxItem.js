@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet } from 'react-native';
 import { TYFlatList } from 'tuya-panel-kit';
+import Strings from '../../i18n';
 
 export default class TYFlatListCheckboxItemScene extends Component {
   constructor(props) {
@@ -14,20 +15,20 @@ export default class TYFlatListCheckboxItemScene extends Component {
     return [
       {
         key: 0,
-        title: `04月10日 23:15`,
-        subTitle: `清扫 0平方米 | 工作 5分钟`,
+        title: Strings.getLang('tyflatlist_day1'),
+        subTitle: Strings.getLang('tyflatlist_work1'),
         status: 0,
       },
       {
         key: 1,
-        title: `04月11日 23:15`,
-        subTitle: `清扫 10平方米 | 工作 15分钟`,
+        title: Strings.getLang('tyflatlist_day2'),
+        subTitle: Strings.getLang('tyflatlist_work2'),
         status: 1,
       },
       {
         key: 2,
-        title: `04月12日 23:15`,
-        subTitle: `清扫 20平方米 | 工作 25分钟`,
+        title: Strings.getLang('tyflatlist_day3'),
+        subTitle: Strings.getLang('tyflatlist_work3'),
         status: 1,
         Icon: require('./res/cover.png'),
         hideOnUnselect: true,
@@ -47,7 +48,7 @@ export default class TYFlatListCheckboxItemScene extends Component {
         color="#4073fc"
         checked={this.state.value === index}
         onChange={checked => this.setState({ value: checked ? index : -1 })}
-        Action={status === 1 ? '清扫成功' : '清扫失败'}
+        Action={status === 1 ? Strings.getLang('tyflatlist_success') : Strings.getLang('tyflatlist_failure')}
         {...itemProps}
       />
     );

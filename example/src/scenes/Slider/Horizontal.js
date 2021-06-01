@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import { Slider, TYText } from 'tuya-panel-kit';
+import Strings from '../../i18n';
 
 export default class SliderHorizontalScene extends Component {
   state = {
@@ -14,7 +15,7 @@ export default class SliderHorizontalScene extends Component {
   render() {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <TYText text="测试默认" />
+        <TYText text={Strings.getLang('slider_default')} />
         <Slider.Horizontal
           style={{ width: 295 }}
           maximumValue={100}
@@ -31,7 +32,9 @@ export default class SliderHorizontalScene extends Component {
           // thumbStyle={{ width: 40, height: 40, borderRadius: 20 }}
           // maximumTrackStyle={{ height: 20 }}
         />
-        <TYText text="测试local theme" />
+        
+
+        <TYText text={Strings.getLang('switch_test_localtheme')} />
         <Slider
           theme={{
             width: 200,

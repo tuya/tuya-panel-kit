@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { TYSdk, TYFlatList } from 'tuya-panel-kit';
+import Strings from '../../i18n';
 
 const TYNative = TYSdk.native;
 
@@ -51,8 +52,8 @@ export default class TYFlatListCustomItemScene extends Component {
           container: styles.listItem,
           subTitle: styles.textSubtitle,
         }}
-        title="宝宝最爱"
-        subTitle="数量: 13首"
+        title={Strings.getLang('tyflatlist_baby_favorite')}
+        subTitle={Strings.getLang('tyflatlist_number')}
         iconSize={60}
         Icon={Res.cover}
         Action={this.renderActions()}

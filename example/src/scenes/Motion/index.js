@@ -11,6 +11,7 @@ import Custom from './Custom';
 import Alert from './Alert';
 import Prompt from './Prompt';
 import PushDown from './PushDown';
+import Strings from '../../i18n';
 
 export default class ToastScene extends Component {
   static Fade = Fade;
@@ -40,16 +41,16 @@ export default class ToastScene extends Component {
   }
 
   titleMap = {
-    'Motion.Fade': '淡入淡出',
-    'Motion.PullUp': '上拉下滑',
-    'Motion.PushDown': '下滑上拉',
-    'Motion.ScalePullDown': '放大淡入/下滑淡出',
-    'Motion.Toast': '无操作放大淡入/缩小淡出',
-    'Motion.ScaleFadeIn': '放大淡入/缩小淡出',
-    'Motion.Popup': '测试Popup',
-    'Motion.Custom': '测试Dialog',
-    'Motion.Alert': '测试Dialog',
-    'Motion.Prompt': '测试Prompt',
+    'Motion.Fade': Strings.getLang('motion_fade_inout'),
+    'Motion.PullUp': Strings.getLang('motion_swipe_updown'),
+    'Motion.PushDown': Strings.getLang('motion_swipe_downup'),
+    'Motion.ScalePullDown': Strings.getLang('motion_zoomin_swipeout'),
+    'Motion.Toast': Strings.getLang('motion_zoomswipe_without_operation'),
+    'Motion.ScaleFadeIn': Strings.getLang('motion_zoom_inout'),
+    'Motion.Popup': Strings.getLang('test') + 'Popup',
+    'Motion.Custom': Strings.getLang('test') + 'Dialog',
+    'Motion.Alert': Strings.getLang('test') + 'Dialog',
+    'Motion.Prompt': Strings.getLang('test') + 'Prompt',
   };
 
   render() {

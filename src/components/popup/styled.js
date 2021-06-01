@@ -19,7 +19,7 @@ const DEFAULT_PICKER_THEME = defaultTheme.picker.light;
 export const backIcon =
   'M770.673778 21.959111a56.888889 56.888889 0 0 1 0 80.440889l-402.204445 402.318222 402.204445 402.204445a56.888889 56.888889 0 0 1-80.440889 80.497777L247.751111 544.938667a56.888889 56.888889 0 0 1 0-80.497778L690.232889 21.959111a56.888889 56.888889 0 0 1 80.440889 0z';
 
-const { convertX: cx, isIphoneX } = RatioUtils;
+const { convertX: cx, isIphoneX, isIos } = RatioUtils;
 const { getTheme, ThemeConsumer } = ThemeUtils;
 const {
   cellHeight,
@@ -73,8 +73,6 @@ export const StyledTitle = styled(Row)`
   background-color: ${titleBg};
   border-top-left-radius: ${titleRadius};
   border-top-right-radius: ${titleRadius};
-  border-bottom-color: ${lineColor};
-  border-bottom-width: ${StyleSheet.hairlineWidth};
 `;
 
 export const StyledTitleText = styled(TYText)`
@@ -211,7 +209,8 @@ export const StyledPickerUnit = styled(View)`
 `;
 
 export const StyledPickerUnitText = styled(TYText)`
-  font-size: ${cellFontSize};
+  font-size: ${props => getTheme(props, 'picker.unitFontSize', DEFAULT_PICKER_THEME.unitFontSize)};
+  font-weight: bold;
   color: ${props => props.pickerUnitColor || cellFontColor};
 `;
 
@@ -222,6 +221,13 @@ export const StyledCountdownContainer = styled(View)`
   flex-direction: row;
   align-items: center;
   padding: 1px 0;
+  background-color: ${cellBg};
+`;
+
+export const StyledCountdownContent = styled(View)`
+  flex-direction: row;
+  align-items: center;
+  margin: 0px 30px;
   background-color: ${cellBg};
 `;
 
@@ -253,6 +259,16 @@ export const StyledSymbolText = styled(TYText)`
   color: ${props => getTheme(props, 'picker.unitFontColor', DEFAULT_PICKER_THEME.unitFontColor)};
 `;
 
+export const StyledTimerText = styled(TYText)`
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  font-size: 12;
+  text-align: center;
+  color: ${cellFontColor};
+  background-color: ${cellBg};
+`;
+
 export const StyledTimerPicker = props => {
   return (
     <ThemeConsumer>
@@ -271,7 +287,42 @@ export const StyledTimerPicker = props => {
         } else {
           timerStyle = { backgroundColor: getTheme(timerPickerTheme, 'popup.cellBg') };
         }
-        return <TimerPicker {...props} pickerFontColor={fontColor} style={timerStyle} />;
+        return (
+          <View
+            style={{
+              backgroundColor: getTheme(timerPickerTheme, 'popup.cellBg'),
+            }}
+          >
+            {props.startTitle && props.endTitle && (
+              <View
+                style={[
+                  {
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    paddingHorizontal: cx(30),
+                    position: 'absolute',
+                    top: cx(26),
+                    zIndex: 1,
+                    backgroundColor: getTheme(timerPickerTheme, 'popup.cellBg'),
+                    opacity: props.disabled ? 0.6 : 1,
+                  },
+                ]}
+              >
+                <StyledTimerText style={{ marginLeft: cx(15) }}>{props.startTitle}</StyledTimerText>
+                <StyledTimerText style={{ marginRight: cx(13) }}>{props.endTitle}</StyledTimerText>
+              </View>
+            )}
+            <TimerPicker
+              {...props}
+              pickerFontColor={fontColor}
+              style={[
+                isIos && { height: cx(216), marginTop: cx(36) },
+                !isIos && { height: cx(216), marginTop: cx(57), marginBottom: cx(26) },
+                timerStyle,
+              ]}
+            />
+          </View>
+        );
       }}
     </ThemeConsumer>
   );
@@ -322,6 +373,15 @@ export const StyledDisplayText = styled(TYText).attrs({
   background-color: transparent;
 `;
 
+export const StyleDividerView = styled(View)`
+  background-color: ${cellBg};
+`;
+
+export const StyleDivider = styled(View)`
+  background-color: ${lineColor};
+  height: ${StyleSheet.hairlineWidth};
+`;
+
 /**
  *  DatePicker
  */
@@ -344,7 +404,17 @@ export const StyledDatePicker = props => {
         } else {
           dateStyle = { backgroundColor: getTheme(datePickerTheme, 'popup.cellBg') };
         }
-        return <DatePicker {...props} pickerFontColor={fontColor} style={dateStyle} />;
+        return (
+          <DatePicker
+            {...props}
+            pickerFontColor={fontColor}
+            style={[
+              !isIos && { height: cx(260), paddingTop: cx(32), paddingBottom: cx(32) },
+              { paddingLeft: cx(30), paddingRight: cx(30) },
+              dateStyle,
+            ]}
+          />
+        );
       }}
     </ThemeConsumer>
   );
