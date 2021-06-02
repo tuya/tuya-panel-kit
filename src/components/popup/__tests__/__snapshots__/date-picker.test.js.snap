@@ -1691,11 +1691,13 @@ exports[`DatePicker Component basic render 2`] = `
           <View
             style={
               Object {
+                "alignItems": "center",
                 "alignSelf": "flex-start",
                 "backgroundColor": "#fff",
                 "borderRadius": NaN,
                 "elevation": 2,
                 "height": undefined,
+                "justifyContent": "center",
                 "position": "absolute",
                 "shadowColor": "rgba(0, 0, 0, 0.3)",
                 "shadowOffset": Object {

@@ -4019,11 +4019,13 @@ exports[`List Component should render with SwitchButton 1`] = `
                 <View
                   style={
                     Object {
+                      "alignItems": "center",
                       "alignSelf": "flex-start",
                       "backgroundColor": "#fff",
                       "borderRadius": NaN,
                       "elevation": 2,
                       "height": undefined,
+                      "justifyContent": "center",
                       "position": "absolute",
                       "shadowColor": "rgba(0, 0, 0, 0.3)",
                       "shadowOffset": Object {
@@ -4221,11 +4223,13 @@ exports[`List Component should render with SwitchButton 1`] = `
                 <View
                   style={
                     Object {
+                      "alignItems": "center",
                       "alignSelf": "flex-start",
                       "backgroundColor": "#fff",
                       "borderRadius": NaN,
                       "elevation": 2,
                       "height": undefined,
+                      "justifyContent": "center",
                       "position": "absolute",
                       "shadowColor": "rgba(0, 0, 0, 0.3)",
                       "shadowOffset": Object {
@@ -4472,11 +4476,13 @@ exports[`List Component should render with custom item 1`] = `
                 <View
                   style={
                     Object {
+                      "alignItems": "center",
                       "alignSelf": "flex-start",
                       "backgroundColor": "#fff",
                       "borderRadius": NaN,
                       "elevation": 2,
                       "height": undefined,
+                      "justifyContent": "center",
                       "position": "absolute",
                       "shadowColor": "rgba(0, 0, 0, 0.3)",
                       "shadowOffset": Object {
@@ -4674,11 +4680,13 @@ exports[`List Component should render with custom item 1`] = `
                 <View
                   style={
                     Object {
+                      "alignItems": "center",
                       "alignSelf": "flex-start",
                       "backgroundColor": "#fff",
                       "borderRadius": NaN,
                       "elevation": 2,
                       "height": undefined,
+                      "justifyContent": "center",
                       "position": "absolute",
                       "shadowColor": "rgba(0, 0, 0, 0.3)",
                       "shadowOffset": Object {

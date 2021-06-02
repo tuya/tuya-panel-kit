@@ -50,11 +50,13 @@ exports[`SwitchButton Component  render width no value 1`] = `
     <View
       style={
         Object {
+          "alignItems": "center",
           "alignSelf": "flex-start",
           "backgroundColor": "#fff",
           "borderRadius": NaN,
           "elevation": 2,
           "height": undefined,
+          "justifyContent": "center",
           "position": "absolute",
           "shadowColor": "rgba(0, 0, 0, 0.3)",
           "shadowOffset": Object {
@@ -126,11 +128,13 @@ exports[`SwitchButton Component  render width no value 2`] = `
     <View
       style={
         Object {
+          "alignItems": "center",
           "alignSelf": "flex-start",
           "backgroundColor": "#fff",
           "borderRadius": NaN,
           "elevation": 2,
           "height": undefined,
+          "justifyContent": "center",
           "position": "absolute",
           "shadowColor": "rgba(0, 0, 0, 0.3)",
           "shadowOffset": Object {
@@ -314,11 +318,13 @@ exports[`SwitchButton Component SwitchButton render width onTintColor 1`] = `
     <View
       style={
         Object {
+          "alignItems": "center",
           "alignSelf": "flex-start",
           "backgroundColor": "#fff",
           "borderRadius": NaN,
           "elevation": 2,
           "height": undefined,
+          "justifyContent": "center",
           "position": "absolute",
           "shadowColor": "rgba(0, 0, 0, 0.3)",
           "shadowOffset": Object {
@@ -499,80 +505,16 @@ exports[`SwitchButton Component SwitchButton render width onTintColor 2`] = `
         </RNSVGSvgView>
       </View>
     </View>
-    <Text
-      accessible={true}
-      align={null}
-      allowFontScaling={false}
-      color={null}
-      ellipsizeMode="tail"
-      size={10}
-      style={
-        Array [
-          Object {
-            "backgroundColor": "transparent",
-            "color": "#333",
-            "fontSize": 10,
-          },
-          Array [
-            Object {
-              "color": "#FFF",
-              "fontSize": 10,
-              "fontWeight": "500",
-              "left": 6,
-              "opacity": 1,
-              "position": "absolute",
-            },
-            null,
-          ],
-        ]
-      }
-      text="ON"
-      type={null}
-      weight={null}
-    >
-      ON
-    </Text>
-    <Text
-      accessible={true}
-      align={null}
-      allowFontScaling={false}
-      color={null}
-      ellipsizeMode="tail"
-      size={10}
-      style={
-        Array [
-          Object {
-            "backgroundColor": "transparent",
-            "color": "#333",
-            "fontSize": 10,
-          },
-          Array [
-            Object {
-              "color": "#999",
-              "fontSize": 10,
-              "fontWeight": "500",
-              "opacity": 0,
-              "position": "absolute",
-              "right": 6,
-            },
-            null,
-          ],
-        ]
-      }
-      text="OFF"
-      type={null}
-      weight={null}
-    >
-      OFF
-    </Text>
     <View
       style={
         Object {
+          "alignItems": "center",
           "alignSelf": "flex-start",
           "backgroundColor": "#fff",
           "borderRadius": NaN,
           "elevation": 2,
           "height": undefined,
+          "justifyContent": "center",
           "position": "absolute",
           "shadowColor": "rgba(0, 0, 0, 0.3)",
           "shadowOffset": Object {
@@ -644,11 +586,13 @@ exports[`SwitchButton Component SwitchButton size&theme conflict 1`] = `
     <View
       style={
         Object {
+          "alignItems": "center",
           "alignSelf": "flex-start",
           "backgroundColor": "#fff",
           "borderRadius": 27.5,
           "elevation": 2,
           "height": 55,
+          "justifyContent": "center",
           "position": "absolute",
           "shadowColor": "rgba(0, 0, 0, 0.3)",
           "shadowOffset": Object {
@@ -720,11 +664,13 @@ exports[`SwitchButton Component basic render 1`] = `
     <View
       style={
         Object {
+          "alignItems": "center",
           "alignSelf": "flex-start",
           "backgroundColor": "#fff",
           "borderRadius": NaN,
           "elevation": 2,
           "height": undefined,
+          "justifyContent": "center",
           "position": "absolute",
           "shadowColor": "rgba(0, 0, 0, 0.3)",
           "shadowOffset": Object {
@@ -796,11 +742,13 @@ exports[`SwitchButton Component basic render 2`] = `
     <View
       style={
         Object {
+          "alignItems": "center",
           "alignSelf": "flex-start",
           "backgroundColor": "#fff",
           "borderRadius": NaN,
           "elevation": 2,
           "height": undefined,
+          "justifyContent": "center",
           "position": "absolute",
           "shadowColor": "rgba(0, 0, 0, 0.3)",
           "shadowOffset": Object {
@@ -845,11 +793,14 @@ exports[`SwitchButton Component onSwitchChange disabled = true 1`] = `
               <SwitchButton
                 accessibilityLabel="SwitchButton"
                 borderColor="#e5e5e5"
+                d={null}
                 defaultValue={true}
                 disabled={true}
-                offText="OFF"
+                iconColor={null}
+                iconSize={18}
+                offText=""
                 offTextStyle={null}
-                onText="ON"
+                onText=""
                 onTextStyle={null}
                 onTintColor="#44DB5E"
                 onValueChange={[MockFunction]}
@@ -861,6 +812,8 @@ exports[`SwitchButton Component onSwitchChange disabled = true 1`] = `
                     "width": undefined,
                   }
                 }
+                smallThumbStyle={Object {}}
+                switchType={null}
                 thumbStyle={null}
                 thumbTintColor="#fff"
                 tintColor="#e5e5e5"
@@ -1006,38 +959,46 @@ exports[`SwitchButton Component onSwitchChange disabled = true 1`] = `
                               style={
                                 Array [
                                   Object {
-                                    "alignSelf": "flex-start",
-                                    "backgroundColor": "#fff",
-                                    "borderRadius": NaN,
-                                    "elevation": 2,
-                                    "height": undefined,
-                                    "position": "absolute",
-                                    "shadowColor": "rgba(0, 0, 0, 0.3)",
-                                    "shadowOffset": Object {
-                                      "height": 3,
-                                      "width": 0,
-                                    },
-                                    "shadowOpacity": 1,
-                                    "shadowRadius": 3,
-                                    "transform": Array [
-                                      Object {
-                                        "translateX": NaN,
-                                      },
-                                    ],
-                                    "width": undefined,
+                                    "alignItems": "center",
+                                    "justifyContent": "center",
                                   },
-                                  null,
+                                  Array [
+                                    Object {
+                                      "alignSelf": "flex-start",
+                                      "backgroundColor": "#fff",
+                                      "borderRadius": NaN,
+                                      "elevation": 2,
+                                      "height": undefined,
+                                      "position": "absolute",
+                                      "shadowColor": "rgba(0, 0, 0, 0.3)",
+                                      "shadowOffset": Object {
+                                        "height": 3,
+                                        "width": 0,
+                                      },
+                                      "shadowOpacity": 1,
+                                      "shadowRadius": 3,
+                                      "transform": Array [
+                                        Object {
+                                          "translateX": NaN,
+                                        },
+                                      ],
+                                      "width": undefined,
+                                    },
+                                    null,
+                                  ],
                                 ]
                               }
                             >
                               <View
                                 style={
                                   Object {
+                                    "alignItems": "center",
                                     "alignSelf": "flex-start",
                                     "backgroundColor": "#fff",
                                     "borderRadius": NaN,
                                     "elevation": 2,
                                     "height": undefined,
+                                    "justifyContent": "center",
                                     "position": "absolute",
                                     "shadowColor": "rgba(0, 0, 0, 0.3)",
                                     "shadowOffset": Object {
@@ -1058,11 +1019,13 @@ exports[`SwitchButton Component onSwitchChange disabled = true 1`] = `
                                 <View
                                   style={
                                     Object {
+                                      "alignItems": "center",
                                       "alignSelf": "flex-start",
                                       "backgroundColor": "#fff",
                                       "borderRadius": NaN,
                                       "elevation": 2,
                                       "height": undefined,
+                                      "justifyContent": "center",
                                       "position": "absolute",
                                       "shadowColor": "rgba(0, 0, 0, 0.3)",
                                       "shadowOffset": Object {
@@ -1120,11 +1083,14 @@ exports[`SwitchButton Component onSwitchChange disabled=false 1`] = `
               <SwitchButton
                 accessibilityLabel="SwitchButton"
                 borderColor="#e5e5e5"
+                d={null}
                 defaultValue={true}
                 disabled={false}
-                offText="OFF"
+                iconColor={null}
+                iconSize={18}
+                offText=""
                 offTextStyle={null}
-                onText="ON"
+                onText=""
                 onTextStyle={null}
                 onTintColor="#44DB5E"
                 onValueChange={[MockFunction]}
@@ -1136,6 +1102,8 @@ exports[`SwitchButton Component onSwitchChange disabled=false 1`] = `
                     "width": undefined,
                   }
                 }
+                smallThumbStyle={Object {}}
+                switchType={null}
                 thumbStyle={null}
                 thumbTintColor="#fff"
                 tintColor="#e5e5e5"
@@ -1277,38 +1245,46 @@ exports[`SwitchButton Component onSwitchChange disabled=false 1`] = `
                               style={
                                 Array [
                                   Object {
-                                    "alignSelf": "flex-start",
-                                    "backgroundColor": "#fff",
-                                    "borderRadius": NaN,
-                                    "elevation": 2,
-                                    "height": undefined,
-                                    "position": "absolute",
-                                    "shadowColor": "rgba(0, 0, 0, 0.3)",
-                                    "shadowOffset": Object {
-                                      "height": 3,
-                                      "width": 0,
-                                    },
-                                    "shadowOpacity": 1,
-                                    "shadowRadius": 3,
-                                    "transform": Array [
-                                      Object {
-                                        "translateX": NaN,
-                                      },
-                                    ],
-                                    "width": undefined,
+                                    "alignItems": "center",
+                                    "justifyContent": "center",
                                   },
-                                  null,
+                                  Array [
+                                    Object {
+                                      "alignSelf": "flex-start",
+                                      "backgroundColor": "#fff",
+                                      "borderRadius": NaN,
+                                      "elevation": 2,
+                                      "height": undefined,
+                                      "position": "absolute",
+                                      "shadowColor": "rgba(0, 0, 0, 0.3)",
+                                      "shadowOffset": Object {
+                                        "height": 3,
+                                        "width": 0,
+                                      },
+                                      "shadowOpacity": 1,
+                                      "shadowRadius": 3,
+                                      "transform": Array [
+                                        Object {
+                                          "translateX": NaN,
+                                        },
+                                      ],
+                                      "width": undefined,
+                                    },
+                                    null,
+                                  ],
                                 ]
                               }
                             >
                               <View
                                 style={
                                   Object {
+                                    "alignItems": "center",
                                     "alignSelf": "flex-start",
                                     "backgroundColor": "#fff",
                                     "borderRadius": NaN,
                                     "elevation": 2,
                                     "height": undefined,
+                                    "justifyContent": "center",
                                     "position": "absolute",
                                     "shadowColor": "rgba(0, 0, 0, 0.3)",
                                     "shadowOffset": Object {
@@ -1329,11 +1305,13 @@ exports[`SwitchButton Component onSwitchChange disabled=false 1`] = `
                                 <View
                                   style={
                                     Object {
+                                      "alignItems": "center",
                                       "alignSelf": "flex-start",
                                       "backgroundColor": "#fff",
                                       "borderRadius": NaN,
                                       "elevation": 2,
                                       "height": undefined,
+                                      "justifyContent": "center",
                                       "position": "absolute",
                                       "shadowColor": "rgba(0, 0, 0, 0.3)",
                                       "shadowOffset": Object {
@@ -1421,11 +1399,13 @@ exports[`SwitchButton Component render width disabled 1`] = `
     <View
       style={
         Object {
+          "alignItems": "center",
           "alignSelf": "flex-start",
           "backgroundColor": "#fff",
           "borderRadius": NaN,
           "elevation": 2,
           "height": undefined,
+          "justifyContent": "center",
           "position": "absolute",
           "shadowColor": "rgba(0, 0, 0, 0.3)",
           "shadowOffset": Object {

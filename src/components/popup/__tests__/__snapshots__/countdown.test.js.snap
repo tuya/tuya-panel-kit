@@ -150,11 +150,13 @@ exports[`countdown Component basic render 1`] = `
           <View
             style={
               Object {
+                "alignItems": "center",
                 "alignSelf": "flex-start",
                 "backgroundColor": "#fff",
                 "borderRadius": NaN,
                 "elevation": 2,
                 "height": undefined,
+                "justifyContent": "center",
                 "position": "absolute",
                 "shadowColor": "rgba(0, 0, 0, 0.3)",
                 "shadowOffset": Object {
@@ -1063,11 +1065,13 @@ exports[`countdown Component basic render 2`] = `
           <View
             style={
               Object {
+                "alignItems": "center",
                 "alignSelf": "flex-start",
                 "backgroundColor": "#fff",
                 "borderRadius": NaN,
                 "elevation": 2,
                 "height": undefined,
+                "justifyContent": "center",
                 "position": "absolute",
                 "shadowColor": "rgba(0, 0, 0, 0.3)",
                 "shadowOffset": Object {
@@ -1976,11 +1980,13 @@ exports[`countdown Component basic update 1`] = `
           <View
             style={
               Object {
+                "alignItems": "center",
                 "alignSelf": "flex-start",
                 "backgroundColor": "#fff",
                 "borderRadius": NaN,
                 "elevation": 2,
                 "height": undefined,
+                "justifyContent": "center",
                 "position": "absolute",
                 "shadowColor": "rgba(0, 0, 0, 0.3)",
                 "shadowOffset": Object {
@@ -2887,11 +2893,13 @@ exports[`countdown Component basic update 2`] = `
           <View
             style={
               Object {
+                "alignItems": "center",
                 "alignSelf": "flex-start",
                 "backgroundColor": "#fff",
                 "borderRadius": NaN,
                 "elevation": 2,
                 "height": undefined,
+                "justifyContent": "center",
                 "position": "absolute",
                 "shadowColor": "rgba(0, 0, 0, 0.3)",
                 "shadowOffset": Object {
