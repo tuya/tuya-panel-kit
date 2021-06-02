@@ -1,4 +1,4 @@
-name: Lint Commit Messages
+name: Pr Checker
 on: [pull_request]
 
 jobs:
@@ -12,6 +12,8 @@ jobs:
         with:
           node-version: '10.x'
       - run: yarn install
+      - name: Run Test
+        run: yarn test --silent --forceExit
       - name: Add dependencies for commitlint action
         env:
           ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
