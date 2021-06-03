@@ -136,6 +136,7 @@ export default class TYFlatList extends Component {
               renderItem={this.renderItem}
               data={data}
               keyExtractor={item => item.key}
+              showsVerticalScrollIndicator={false}
               {...flatListProps}
               ref={flatListRef}
             />
