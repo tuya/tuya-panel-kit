@@ -356,6 +356,7 @@ export default function createNavigator({ router, screenOptions }) {
               initialRouteName="main"
               screenOptions={({ route, navigation }) => {
                 this._navigation = navigation;
+                TYSdk.applyNavigator(navigation);
                 const options = this.getScreenOptions(
                   { route, navigation },
                   screenOptions,
