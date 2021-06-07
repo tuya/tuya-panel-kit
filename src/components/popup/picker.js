@@ -153,13 +153,13 @@ class PickerPopup extends React.PureComponent {
       ...props
     } = this.props;
     const pickerDatas = singlePicker ? [dataSource] : dataSource;
-    let pickerFontSize = 30;
+    let pickerFontSize = cx(30);
     if (pickerDatas.length < 3) {
-      pickerFontSize = 30;
+      pickerFontSize = cx(30);
     } else if (pickerDatas.length === 3) {
-      pickerFontSize = 27;
+      pickerFontSize = cx(27);
     } else {
-      pickerFontSize = 24;
+      pickerFontSize = cx(24);
     }
     return (
       <ThemeConsumer>

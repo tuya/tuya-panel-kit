@@ -1,6 +1,5 @@
-/* eslint-disable */
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, { Component, PureComponent } from 'react';
 import { ViewPropTypes, ColorPropType } from 'react-native';
 import Picker from './picker/index.ios';
 import { RatioUtils } from '../../utils';
@@ -9,12 +8,7 @@ const { viewWidth } = RatioUtils;
 
 const MAX_ITEM_NUM = 1260;
 
-class Item extends Component {
-  static propTypes = {
-    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]), // only support num or string for now
-    label: PropTypes.string,
-  };
-
+class Item extends PureComponent {
   render() {
     return null;
   }
@@ -57,7 +51,15 @@ export class PickerView extends Component {
     /**
      * 字体
      */
-    fontFamily: PropTypes.string,
+    fontFamily: PropTypes.oneOfType([
+      PropTypes.oneOfType([
+        'DIN Alternate',
+        'Times New Roman',
+        'PingFangHK-Regular',
+        'PingFangHK-Medium',
+      ]),
+      PropTypes.string,
+    ]),
     /**
      * 数值改变回调
      */
@@ -92,6 +94,8 @@ export class PickerView extends Component {
     fontWeight: 'normal',
     fontFamily: 'DIN Alternate',
     style: null,
+    selectedValue: '-1',
+    onValueChange: () => {},
   };
 
   constructor(props) {

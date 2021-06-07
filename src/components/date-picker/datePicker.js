@@ -5,6 +5,9 @@ import PropTypes from 'prop-types';
 import defaultLocale from './locale/en_US';
 import cnLocale from './locale/zh_CN';
 import Picker from '../picker-view';
+import { RatioUtils } from '../../utils';
+
+const { convertX: cx } = RatioUtils;
 
 const DATETIME = 'datetime';
 const DATE = 'date';
@@ -511,13 +514,13 @@ class DatePicker extends React.Component {
 
   render() {
     const { value, cols } = this.getIndexAndCols();
-    let pickerFontSize = 30;
+    let pickerFontSize = cx(30);
     if (cols.length < 3) {
-      pickerFontSize = 30;
+      pickerFontSize = cx(30);
     } else if (cols.length === 3) {
-      pickerFontSize = 27;
+      pickerFontSize = cx(27);
     } else {
-      pickerFontSize = 24;
+      pickerFontSize = cx(24);
     }
     const {
       locale,

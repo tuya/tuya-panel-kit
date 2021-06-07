@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { requireNativeComponent, processColor, ViewPropTypes } from 'react-native';
 
-const TYRCTPicker = requireNativeComponent('TYRCTPicker');
+const TYRCTPicker = requireNativeComponent('TYRCTPicker', null);
 
 export default class TYRCTNewPicker extends PureComponent {
   static propTypes = {
