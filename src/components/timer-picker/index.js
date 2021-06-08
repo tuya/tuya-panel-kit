@@ -1,17 +1,14 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { StyleSheet, ViewPropTypes } from 'react-native';
-import { CoreUtils, TimeUtils } from '../../utils';
+import { CoreUtils, TimeUtils, RatioUtils } from '../../utils';
 import Picker from '../picker-view';
 import { getHourSelections, getMinsSelections, getTimePrefixSelections, getPrefix } from './utils';
-import {
-  StyledTimerPickerContainer,
-  StyledTimerPickerRow,
-  StyledSymbolText,
-} from '../popup/styled';
+import { StyledTimerPickerContainer, StyledTimerPickerRow } from '../popup/styled';
 
 const { omit } = CoreUtils;
 const { parseTimer } = TimeUtils;
+const { convertX: cx } = RatioUtils;
 
 const TIME_PICKER_PROPS = [
   'style',
@@ -66,6 +63,10 @@ export default class TimerPicker extends Component {
      */
     pickerFontColor: PropTypes.string,
     /**
+     * picker 字体大小
+     */
+    pickerFontSize: PropTypes.number,
+    /**
      * 前缀字符
      */
     symbol: PropTypes.string,
@@ -84,9 +85,10 @@ export default class TimerPicker extends Component {
     onTimerChange: null,
     is12Hours: true,
     singlePicker: false,
-    prefixPosition: 'right',
+    prefixPosition: ['left', 'right'],
     pickerFontColor: '#333',
-    symbol: undefined,
+    symbol: '—',
+    pickerFontSize: 22,
     loop: true,
   };
 
@@ -191,22 +193,27 @@ export default class TimerPicker extends Component {
   }
 
   renderPickView(values, value, onValueChange, loop, key) {
-    const { accessibilityLabel, pickerFontColor } = this.props;
+    const { accessibilityLabel, pickerFontColor, pickerFontSize } = this.props;
     const pickerProps = omit(this.props, TIME_PICKER_PROPS);
     const style = StyleSheet.flatten([this.props.style]);
     return (
       <Picker
         {...pickerProps}
         accessibilityLabel={`${accessibilityLabel}_${key}`}
-        theme={{ fontColor: pickerFontColor }}
+        theme={{ fontColor: pickerFontColor, fontSize: pickerFontSize }}
         selectedValue={value}
         onValueChange={onValueChange}
         contentContainerStyle={{ flex: 1 }}
-        style={{
-          flex: 1,
-          height: style.height || 300,
-          justifyContent: 'center',
-        }}
+        style={[
+          {
+            flex: key === 'symbol' ? 0 : 1,
+            height: style.height || 200,
+            justifyContent: 'center',
+          },
+          key === 'symbol' && {
+            width: cx(48),
+          },
+        ]}
         loop={loop}
       >
         {values.map((d, idx) => (
@@ -218,16 +225,7 @@ export default class TimerPicker extends Component {
   }
 
   render() {
-    const {
-      style,
-      disabled,
-      is12Hours,
-      singlePicker,
-      pickerFontColor,
-      prefixPosition,
-      symbol,
-      loop,
-    } = this.props;
+    const { style, disabled, is12Hours, singlePicker, prefixPosition, symbol, loop } = this.props;
     const { startHour, startMin, endHour, endMin, hours } = this.state;
     const startPrefix = getPrefix(startHour);
     const endPrefix = getPrefix(endHour);
@@ -260,9 +258,14 @@ export default class TimerPicker extends Component {
               'StartAmpm'
             )}
         </StyledTimerPickerRow>
-        {!!symbol && (
-          <StyledSymbolText pickerFontColor={pickerFontColor}>{symbol}</StyledSymbolText>
-        )}
+        {!!symbol &&
+          this.renderPickView(
+            [{ value: symbol, label: symbol }],
+            symbol,
+            () => {},
+            false,
+            'symbol'
+          )}
         {!singlePicker && (
           <StyledTimerPickerRow>
             {is12Hours &&

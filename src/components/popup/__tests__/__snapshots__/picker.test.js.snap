@@ -121,14 +121,17 @@ exports[`Picker Component basic render 1`] = `
               "justifyContent": "center",
               "opacity": 1,
             },
-            null,
+            Array [
+              false,
+              null,
+            ],
           ]
         }
       >
         <View
           style={
             Object {
-              "width": 750,
+              "width": 690,
             }
           }
         >
@@ -156,7 +159,10 @@ exports[`Picker Component basic render 1`] = `
                 Object {
                   "height": 216,
                 },
-                Object {},
+                Object {
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 30,
+                },
               ]
             }
           />
@@ -430,14 +436,17 @@ exports[`Picker Component basic render 2`] = `
               "justifyContent": "center",
               "opacity": 1,
             },
-            null,
+            Array [
+              false,
+              null,
+            ],
           ]
         }
       >
         <View
           style={
             Object {
-              "width": 250,
+              "width": 230,
             }
           }
         >
@@ -470,7 +479,10 @@ exports[`Picker Component basic render 2`] = `
                 Object {
                   "height": 216,
                 },
-                Object {},
+                Object {
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 27,
+                },
               ]
             }
           />
@@ -486,14 +498,17 @@ exports[`Picker Component basic render 2`] = `
               "justifyContent": "center",
               "opacity": 1,
             },
-            null,
+            Array [
+              false,
+              null,
+            ],
           ]
         }
       >
         <View
           style={
             Object {
-              "width": 250,
+              "width": 230,
             }
           }
         >
@@ -526,7 +541,10 @@ exports[`Picker Component basic render 2`] = `
                 Object {
                   "height": 216,
                 },
-                Object {},
+                Object {
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 27,
+                },
               ]
             }
           />
@@ -542,14 +560,17 @@ exports[`Picker Component basic render 2`] = `
               "justifyContent": "center",
               "opacity": 1,
             },
-            null,
+            Array [
+              false,
+              null,
+            ],
           ]
         }
       >
         <View
           style={
             Object {
-              "width": 250,
+              "width": 230,
             }
           }
         >
@@ -582,7 +603,10 @@ exports[`Picker Component basic render 2`] = `
                 Object {
                   "height": 216,
                 },
-                Object {},
+                Object {
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 27,
+                },
               ]
             }
           />
@@ -856,14 +880,17 @@ exports[`Picker Component basic render with label 1`] = `
               "justifyContent": "center",
               "opacity": 1,
             },
-            null,
+            Array [
+              false,
+              null,
+            ],
           ]
         }
       >
         <View
           style={
             Object {
-              "width": 250,
+              "width": 230,
             }
           }
         >
@@ -896,7 +923,10 @@ exports[`Picker Component basic render with label 1`] = `
                 Object {
                   "height": 216,
                 },
-                Object {},
+                Object {
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 27,
+                },
               ]
             }
           />
@@ -912,14 +942,17 @@ exports[`Picker Component basic render with label 1`] = `
               "justifyContent": "center",
               "opacity": 1,
             },
-            null,
+            Array [
+              false,
+              null,
+            ],
           ]
         }
       >
         <View
           style={
             Object {
-              "width": 250,
+              "width": 230,
             }
           }
         >
@@ -952,7 +985,10 @@ exports[`Picker Component basic render with label 1`] = `
                 Object {
                   "height": 216,
                 },
-                Object {},
+                Object {
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 27,
+                },
               ]
             }
           />
@@ -968,14 +1004,17 @@ exports[`Picker Component basic render with label 1`] = `
               "justifyContent": "center",
               "opacity": 1,
             },
-            null,
+            Array [
+              false,
+              null,
+            ],
           ]
         }
       >
         <View
           style={
             Object {
-              "width": 250,
+              "width": 230,
             }
           }
         >
@@ -1008,7 +1047,10 @@ exports[`Picker Component basic render with label 1`] = `
                 Object {
                   "height": 216,
                 },
-                Object {},
+                Object {
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 27,
+                },
               ]
             }
           />

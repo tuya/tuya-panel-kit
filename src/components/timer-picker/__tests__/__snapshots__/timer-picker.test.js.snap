@@ -36,11 +36,14 @@ exports[`TimerPicker Component render width prefixPosition === array 1`] = `
   >
     <View
       style={
-        Object {
-          "flex": 1,
-          "height": 300,
-          "justifyContent": "center",
-        }
+        Array [
+          Object {
+            "flex": 1,
+            "height": 200,
+            "justifyContent": "center",
+          },
+          false,
+        ]
       }
     >
       <RCTPicker
@@ -69,6 +72,8 @@ exports[`TimerPicker Component render width prefixPosition === array 1`] = `
             },
             Object {
               "color": "#333",
+              "fontFamily": "DIN Alternate",
+              "fontSize": 22,
             },
           ]
         }
@@ -76,11 +81,14 @@ exports[`TimerPicker Component render width prefixPosition === array 1`] = `
     </View>
     <View
       style={
-        Object {
-          "flex": 1,
-          "height": 300,
-          "justifyContent": "center",
-        }
+        Array [
+          Object {
+            "flex": 1,
+            "height": 200,
+            "justifyContent": "center",
+          },
+          false,
+        ]
       }
     >
       <RCTPicker
@@ -6459,6 +6467,8 @@ exports[`TimerPicker Component render width prefixPosition === array 1`] = `
             },
             Object {
               "color": "#333",
+              "fontFamily": "DIN Alternate",
+              "fontSize": 22,
             },
           ]
         }
@@ -6466,11 +6476,14 @@ exports[`TimerPicker Component render width prefixPosition === array 1`] = `
     </View>
     <View
       style={
-        Object {
-          "flex": 1,
-          "height": 300,
-          "justifyContent": "center",
-        }
+        Array [
+          Object {
+            "flex": 1,
+            "height": 200,
+            "justifyContent": "center",
+          },
+          false,
+        ]
       }
     >
       <RCTPicker
@@ -12789,11 +12802,55 @@ exports[`TimerPicker Component render width prefixPosition === array 1`] = `
             },
             Object {
               "color": "#333",
+              "fontFamily": "DIN Alternate",
+              "fontSize": 22,
             },
           ]
         }
       />
     </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "flex": 0,
+          "height": 200,
+          "justifyContent": "center",
+        },
+        Object {
+          "width": 96,
+        },
+      ]
+    }
+  >
+    <RCTPicker
+      items={
+        Array [
+          Object {
+            "label": "—",
+            "textColor": undefined,
+            "value": "—",
+          },
+        ]
+      }
+      onChange={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      selectedIndex={0}
+      style={
+        Array [
+          Object {
+            "height": 216,
+          },
+          Object {
+            "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 22,
+          },
+        ]
+      }
+    />
   </View>
   <View
     style={
@@ -12810,11 +12867,14 @@ exports[`TimerPicker Component render width prefixPosition === array 1`] = `
   >
     <View
       style={
-        Object {
-          "flex": 1,
-          "height": 300,
-          "justifyContent": "center",
-        }
+        Array [
+          Object {
+            "flex": 1,
+            "height": 200,
+            "justifyContent": "center",
+          },
+          false,
+        ]
       }
     >
       <RCTPicker
@@ -19193,6 +19253,8 @@ exports[`TimerPicker Component render width prefixPosition === array 1`] = `
             },
             Object {
               "color": "#333",
+              "fontFamily": "DIN Alternate",
+              "fontSize": 22,
             },
           ]
         }
@@ -19200,11 +19262,14 @@ exports[`TimerPicker Component render width prefixPosition === array 1`] = `
     </View>
     <View
       style={
-        Object {
-          "flex": 1,
-          "height": 300,
-          "justifyContent": "center",
-        }
+        Array [
+          Object {
+            "flex": 1,
+            "height": 200,
+            "justifyContent": "center",
+          },
+          false,
+        ]
       }
     >
       <RCTPicker
@@ -25523,6 +25588,8 @@ exports[`TimerPicker Component render width prefixPosition === array 1`] = `
             },
             Object {
               "color": "#333",
+              "fontFamily": "DIN Alternate",
+              "fontSize": 22,
             },
           ]
         }
@@ -25530,11 +25597,14 @@ exports[`TimerPicker Component render width prefixPosition === array 1`] = `
     </View>
     <View
       style={
-        Object {
-          "flex": 1,
-          "height": 300,
-          "justifyContent": "center",
-        }
+        Array [
+          Object {
+            "flex": 1,
+            "height": 200,
+            "justifyContent": "center",
+          },
+          false,
+        ]
       }
     >
       <RCTPicker
@@ -25563,6 +25633,8 @@ exports[`TimerPicker Component render width prefixPosition === array 1`] = `
             },
             Object {
               "color": "#333",
+              "fontFamily": "DIN Alternate",
+              "fontSize": 22,
             },
           ]
         }
@@ -25608,11 +25680,14 @@ exports[`TimerPicker Component render width prefixPosition === left 1`] = `
   >
     <View
       style={
-        Object {
-          "flex": 1,
-          "height": 300,
-          "justifyContent": "center",
-        }
+        Array [
+          Object {
+            "flex": 1,
+            "height": 200,
+            "justifyContent": "center",
+          },
+          false,
+        ]
       }
     >
       <RCTPicker
@@ -25641,6 +25716,8 @@ exports[`TimerPicker Component render width prefixPosition === left 1`] = `
             },
             Object {
               "color": "#333",
+              "fontFamily": "DIN Alternate",
+              "fontSize": 22,
             },
           ]
         }
@@ -25648,11 +25725,14 @@ exports[`TimerPicker Component render width prefixPosition === left 1`] = `
     </View>
     <View
       style={
-        Object {
-          "flex": 1,
-          "height": 300,
-          "justifyContent": "center",
-        }
+        Array [
+          Object {
+            "flex": 1,
+            "height": 200,
+            "justifyContent": "center",
+          },
+          false,
+        ]
       }
     >
       <RCTPicker
@@ -32031,6 +32111,8 @@ exports[`TimerPicker Component render width prefixPosition === left 1`] = `
             },
             Object {
               "color": "#333",
+              "fontFamily": "DIN Alternate",
+              "fontSize": 22,
             },
           ]
         }
@@ -32038,11 +32120,14 @@ exports[`TimerPicker Component render width prefixPosition === left 1`] = `
     </View>
     <View
       style={
-        Object {
-          "flex": 1,
-          "height": 300,
-          "justifyContent": "center",
-        }
+        Array [
+          Object {
+            "flex": 1,
+            "height": 200,
+            "justifyContent": "center",
+          },
+          false,
+        ]
       }
     >
       <RCTPicker
@@ -38361,11 +38446,55 @@ exports[`TimerPicker Component render width prefixPosition === left 1`] = `
             },
             Object {
               "color": "#333",
+              "fontFamily": "DIN Alternate",
+              "fontSize": 22,
             },
           ]
         }
       />
     </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "flex": 0,
+          "height": 200,
+          "justifyContent": "center",
+        },
+        Object {
+          "width": 96,
+        },
+      ]
+    }
+  >
+    <RCTPicker
+      items={
+        Array [
+          Object {
+            "label": "—",
+            "textColor": undefined,
+            "value": "—",
+          },
+        ]
+      }
+      onChange={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      selectedIndex={0}
+      style={
+        Array [
+          Object {
+            "height": 216,
+          },
+          Object {
+            "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 22,
+          },
+        ]
+      }
+    />
   </View>
   <View
     style={
@@ -38382,11 +38511,14 @@ exports[`TimerPicker Component render width prefixPosition === left 1`] = `
   >
     <View
       style={
-        Object {
-          "flex": 1,
-          "height": 300,
-          "justifyContent": "center",
-        }
+        Array [
+          Object {
+            "flex": 1,
+            "height": 200,
+            "justifyContent": "center",
+          },
+          false,
+        ]
       }
     >
       <RCTPicker
@@ -38415,6 +38547,8 @@ exports[`TimerPicker Component render width prefixPosition === left 1`] = `
             },
             Object {
               "color": "#333",
+              "fontFamily": "DIN Alternate",
+              "fontSize": 22,
             },
           ]
         }
@@ -38422,11 +38556,14 @@ exports[`TimerPicker Component render width prefixPosition === left 1`] = `
     </View>
     <View
       style={
-        Object {
-          "flex": 1,
-          "height": 300,
-          "justifyContent": "center",
-        }
+        Array [
+          Object {
+            "flex": 1,
+            "height": 200,
+            "justifyContent": "center",
+          },
+          false,
+        ]
       }
     >
       <RCTPicker
@@ -44805,6 +44942,8 @@ exports[`TimerPicker Component render width prefixPosition === left 1`] = `
             },
             Object {
               "color": "#333",
+              "fontFamily": "DIN Alternate",
+              "fontSize": 22,
             },
           ]
         }
@@ -44812,11 +44951,14 @@ exports[`TimerPicker Component render width prefixPosition === left 1`] = `
     </View>
     <View
       style={
-        Object {
-          "flex": 1,
-          "height": 300,
-          "justifyContent": "center",
-        }
+        Array [
+          Object {
+            "flex": 1,
+            "height": 200,
+            "justifyContent": "center",
+          },
+          false,
+        ]
       }
     >
       <RCTPicker
@@ -51135,6 +51277,8 @@ exports[`TimerPicker Component render width prefixPosition === left 1`] = `
             },
             Object {
               "color": "#333",
+              "fontFamily": "DIN Alternate",
+              "fontSize": 22,
             },
           ]
         }
@@ -51180,11 +51324,14 @@ exports[`TimerPicker Component render width prefixPosition === left 2`] = `
   >
     <View
       style={
-        Object {
-          "flex": 1,
-          "height": 300,
-          "justifyContent": "center",
-        }
+        Array [
+          Object {
+            "flex": 1,
+            "height": 200,
+            "justifyContent": "center",
+          },
+          false,
+        ]
       }
     >
       <RCTPicker
@@ -51213,6 +51360,8 @@ exports[`TimerPicker Component render width prefixPosition === left 2`] = `
             },
             Object {
               "color": "#333",
+              "fontFamily": "DIN Alternate",
+              "fontSize": 22,
             },
           ]
         }
@@ -51220,11 +51369,14 @@ exports[`TimerPicker Component render width prefixPosition === left 2`] = `
     </View>
     <View
       style={
-        Object {
-          "flex": 1,
-          "height": 300,
-          "justifyContent": "center",
-        }
+        Array [
+          Object {
+            "flex": 1,
+            "height": 200,
+            "justifyContent": "center",
+          },
+          false,
+        ]
       }
     >
       <RCTPicker
@@ -57603,6 +57755,8 @@ exports[`TimerPicker Component render width prefixPosition === left 2`] = `
             },
             Object {
               "color": "#333",
+              "fontFamily": "DIN Alternate",
+              "fontSize": 22,
             },
           ]
         }
@@ -57610,11 +57764,14 @@ exports[`TimerPicker Component render width prefixPosition === left 2`] = `
     </View>
     <View
       style={
-        Object {
-          "flex": 1,
-          "height": 300,
-          "justifyContent": "center",
-        }
+        Array [
+          Object {
+            "flex": 1,
+            "height": 200,
+            "justifyContent": "center",
+          },
+          false,
+        ]
       }
     >
       <RCTPicker
@@ -63933,11 +64090,55 @@ exports[`TimerPicker Component render width prefixPosition === left 2`] = `
             },
             Object {
               "color": "#333",
+              "fontFamily": "DIN Alternate",
+              "fontSize": 22,
             },
           ]
         }
       />
     </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "flex": 0,
+          "height": 200,
+          "justifyContent": "center",
+        },
+        Object {
+          "width": 96,
+        },
+      ]
+    }
+  >
+    <RCTPicker
+      items={
+        Array [
+          Object {
+            "label": "—",
+            "textColor": undefined,
+            "value": "—",
+          },
+        ]
+      }
+      onChange={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      selectedIndex={0}
+      style={
+        Array [
+          Object {
+            "height": 216,
+          },
+          Object {
+            "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 22,
+          },
+        ]
+      }
+    />
   </View>
   <View
     style={
@@ -63954,11 +64155,14 @@ exports[`TimerPicker Component render width prefixPosition === left 2`] = `
   >
     <View
       style={
-        Object {
-          "flex": 1,
-          "height": 300,
-          "justifyContent": "center",
-        }
+        Array [
+          Object {
+            "flex": 1,
+            "height": 200,
+            "justifyContent": "center",
+          },
+          false,
+        ]
       }
     >
       <RCTPicker
@@ -63987,6 +64191,8 @@ exports[`TimerPicker Component render width prefixPosition === left 2`] = `
             },
             Object {
               "color": "#333",
+              "fontFamily": "DIN Alternate",
+              "fontSize": 22,
             },
           ]
         }
@@ -63994,11 +64200,14 @@ exports[`TimerPicker Component render width prefixPosition === left 2`] = `
     </View>
     <View
       style={
-        Object {
-          "flex": 1,
-          "height": 300,
-          "justifyContent": "center",
-        }
+        Array [
+          Object {
+            "flex": 1,
+            "height": 200,
+            "justifyContent": "center",
+          },
+          false,
+        ]
       }
     >
       <RCTPicker
@@ -70377,6 +70586,8 @@ exports[`TimerPicker Component render width prefixPosition === left 2`] = `
             },
             Object {
               "color": "#333",
+              "fontFamily": "DIN Alternate",
+              "fontSize": 22,
             },
           ]
         }
@@ -70384,11 +70595,14 @@ exports[`TimerPicker Component render width prefixPosition === left 2`] = `
     </View>
     <View
       style={
-        Object {
-          "flex": 1,
-          "height": 300,
-          "justifyContent": "center",
-        }
+        Array [
+          Object {
+            "flex": 1,
+            "height": 200,
+            "justifyContent": "center",
+          },
+          false,
+        ]
       }
     >
       <RCTPicker
@@ -76707,6 +76921,8 @@ exports[`TimerPicker Component render width prefixPosition === left 2`] = `
             },
             Object {
               "color": "#333",
+              "fontFamily": "DIN Alternate",
+              "fontSize": 22,
             },
           ]
         }
@@ -76752,11 +76968,14 @@ exports[`TimerPicker Component render width singlePicker  1`] = `
   >
     <View
       style={
-        Object {
-          "flex": 1,
-          "height": 300,
-          "justifyContent": "center",
-        }
+        Array [
+          Object {
+            "flex": 1,
+            "height": 200,
+            "justifyContent": "center",
+          },
+          false,
+        ]
       }
     >
       <RCTPicker
@@ -83135,6 +83354,8 @@ exports[`TimerPicker Component render width singlePicker  1`] = `
             },
             Object {
               "color": "#333",
+              "fontFamily": "DIN Alternate",
+              "fontSize": 22,
             },
           ]
         }
@@ -83142,11 +83363,14 @@ exports[`TimerPicker Component render width singlePicker  1`] = `
     </View>
     <View
       style={
-        Object {
-          "flex": 1,
-          "height": 300,
-          "justifyContent": "center",
-        }
+        Array [
+          Object {
+            "flex": 1,
+            "height": 200,
+            "justifyContent": "center",
+          },
+          false,
+        ]
       }
     >
       <RCTPicker
@@ -89465,6 +89689,8 @@ exports[`TimerPicker Component render width singlePicker  1`] = `
             },
             Object {
               "color": "#333",
+              "fontFamily": "DIN Alternate",
+              "fontSize": 22,
             },
           ]
         }
@@ -89472,11 +89698,14 @@ exports[`TimerPicker Component render width singlePicker  1`] = `
     </View>
     <View
       style={
-        Object {
-          "flex": 1,
-          "height": 300,
-          "justifyContent": "center",
-        }
+        Array [
+          Object {
+            "flex": 1,
+            "height": 200,
+            "justifyContent": "center",
+          },
+          false,
+        ]
       }
     >
       <RCTPicker
@@ -89505,44 +89734,55 @@ exports[`TimerPicker Component render width singlePicker  1`] = `
             },
             Object {
               "color": "#333",
+              "fontFamily": "DIN Alternate",
+              "fontSize": 22,
             },
           ]
         }
       />
     </View>
   </View>
-  <Text
-    accessible={true}
-    align={null}
-    allowFontScaling={false}
-    color={null}
-    ellipsizeMode="tail"
-    pickerFontColor="#333"
-    size={16}
+  <View
     style={
       Array [
         Object {
-          "backgroundColor": "transparent",
-          "color": "#333",
-          "fontSize": 16,
+          "flex": 0,
+          "height": 200,
+          "justifyContent": "center",
         },
-        Array [
-          Object {
-            "color": "#000",
-            "fontSize": 16,
-            "paddingBottom": 0,
-            "paddingLeft": 18,
-            "paddingRight": 18,
-            "paddingTop": 0,
-          },
-          undefined,
-        ],
+        Object {
+          "width": 96,
+        },
       ]
     }
-    type={null}
-    weight={null}
   >
-    tuya
-  </Text>
+    <RCTPicker
+      items={
+        Array [
+          Object {
+            "label": "tuya",
+            "textColor": undefined,
+            "value": "tuya",
+          },
+        ]
+      }
+      onChange={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      selectedIndex={0}
+      style={
+        Array [
+          Object {
+            "height": 216,
+          },
+          Object {
+            "color": "#333",
+            "fontFamily": "DIN Alternate",
+            "fontSize": 22,
+          },
+        ]
+      }
+    />
+  </View>
 </View>
 `;

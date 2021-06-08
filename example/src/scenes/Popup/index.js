@@ -12,7 +12,7 @@ export default class PopupScene extends Component {
     numberValue: 0,
     listValue: '1',
     listValues: ['1'],
-    pickerValue: '1',
+    pickerValue: '2',
     pickerValues: ['b', '2', 'm'],
     timerPickerValue: [0, 0],
     dropDownList: [
@@ -319,12 +319,16 @@ export default class PopupScene extends Component {
           Popup.picker({
             dataSource: [
               {
-                label: '1',
-                value: '1',
+                label: '11',
+                value: '111',
               },
               {
-                label: '2',
-                value: '2',
+                label: '22',
+                value: '222',
+              },
+              {
+                label: '33',
+                value: '3333',
               },
             ],
             title: 'Picker',
@@ -332,7 +336,7 @@ export default class PopupScene extends Component {
             confirmText: '确认',
             value: this.state.pickerValue,
             onBack: () => console.log('////'),
-            label: 'haha',
+            label: '小时',
             onMaskPress: ({ close }) => {
               close();
             },
@@ -396,6 +400,7 @@ export default class PopupScene extends Component {
             title: 'Picker',
             cancelText: '取消',
             confirmText: '确认',
+            pickerFontSize: 27,
             value: this.state.pickerValues,
             label: ['$', '%'],
             onValueChange: (value, idx) => {
@@ -424,6 +429,8 @@ export default class PopupScene extends Component {
             confirmText: '确认',
             startTime: this.state.timerPickerValue[0],
             endTime: this.state.timerPickerValue[1],
+            startTitle: '开始时间',
+            endTitle: '结束时间',
             is12Hours: true,
             onMaskPress: ({ close }) => {
               close();
