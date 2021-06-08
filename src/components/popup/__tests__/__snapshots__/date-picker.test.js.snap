@@ -105,13 +105,20 @@ exports[`DatePicker Component basic render 1`] = `
               "alignItems": "center",
               "backgroundColor": "#fff",
               "flexDirection": "row",
-              "height": 200,
+              "height": 216,
               "paddingLeft": 5,
               "paddingRight": 5,
             },
-            Object {
-              "backgroundColor": undefined,
-            },
+            Array [
+              false,
+              Object {
+                "paddingLeft": 60,
+                "paddingRight": 60,
+              },
+              Object {
+                "backgroundColor": undefined,
+              },
+            ],
           ]
         }
       >
@@ -643,6 +650,8 @@ exports[`DatePicker Component basic render 1`] = `
                 },
                 Object {
                   "color": "#333",
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 24,
                 },
               ]
             }
@@ -731,6 +740,8 @@ exports[`DatePicker Component basic render 1`] = `
                 },
                 Object {
                   "color": "#333",
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 24,
                 },
               ]
             }
@@ -914,6 +925,8 @@ exports[`DatePicker Component basic render 1`] = `
                 },
                 Object {
                   "color": "#333",
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 24,
                 },
               ]
             }
@@ -1062,6 +1075,8 @@ exports[`DatePicker Component basic render 1`] = `
                 },
                 Object {
                   "color": "#333",
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 24,
                 },
               ]
             }
@@ -1390,6 +1405,8 @@ exports[`DatePicker Component basic render 1`] = `
                 },
                 Object {
                   "color": "#333",
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 24,
                 },
               ]
             }
@@ -1727,13 +1744,20 @@ exports[`DatePicker Component basic render 2`] = `
               "alignItems": "center",
               "backgroundColor": "#fff",
               "flexDirection": "row",
-              "height": 200,
+              "height": 216,
               "paddingLeft": 5,
               "paddingRight": 5,
             },
-            Object {
-              "backgroundColor": undefined,
-            },
+            Array [
+              false,
+              Object {
+                "paddingLeft": 60,
+                "paddingRight": 60,
+              },
+              Object {
+                "backgroundColor": undefined,
+              },
+            ],
           ]
         }
       >
@@ -2265,6 +2289,8 @@ exports[`DatePicker Component basic render 2`] = `
                 },
                 Object {
                   "color": "#333",
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 24,
                 },
               ]
             }
@@ -2353,6 +2379,8 @@ exports[`DatePicker Component basic render 2`] = `
                 },
                 Object {
                   "color": "#333",
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 24,
                 },
               ]
             }
@@ -2536,6 +2564,8 @@ exports[`DatePicker Component basic render 2`] = `
                 },
                 Object {
                   "color": "#333",
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 24,
                 },
               ]
             }
@@ -2684,6 +2714,8 @@ exports[`DatePicker Component basic render 2`] = `
                 },
                 Object {
                   "color": "#333",
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 24,
                 },
               ]
             }
@@ -3012,6 +3044,8 @@ exports[`DatePicker Component basic render 2`] = `
                 },
                 Object {
                   "color": "#333",
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 24,
                 },
               ]
             }
