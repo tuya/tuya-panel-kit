@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - master # Change this to your default branch
+  pull_request:
+    branches:
+      - master # Change this to your default branch
 jobs:
   build:
     runs-on: ubuntu-latest
