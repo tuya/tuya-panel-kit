@@ -12,6 +12,7 @@ import {
   Easing,
   ViewPropTypes,
 } from 'react-native';
+import _ from 'lodash';
 
 // import Utils from '../../utils';
 import { NumberUtils } from '../../utils';
@@ -180,6 +181,21 @@ export default class Slider extends Component {
      *
      */
     type: PropTypes.oneOf(['parcel', 'normal']),
+    /**
+     * 是否使用刻度
+     *
+     */
+    useNoun: PropTypes.bool,
+    /**
+     * 大于当前值的刻度样式
+     *
+     */
+    maxNounStyle: ViewPropTypes.style,
+    /**
+     * 小于当前值的刻度样式
+     *
+     */
+    minNounStyle: ViewPropTypes.style,
   };
 
   static defaultProps = {
@@ -200,6 +216,9 @@ export default class Slider extends Component {
     horizontal: true,
     onlyMaximumTrack: false, // 大小滑动条一致时, 可以设置为True, 优化性能
     type: 'normal',
+    useNoun: false,
+    maxNounStyle: null,
+    minNounStyle: null,
   };
 
   constructor(props) {
@@ -230,6 +249,7 @@ export default class Slider extends Component {
       thumbSize: { width: 0, height: 0 },
       allMeasured: false,
       value: new Animated.Value(this.oldValue),
+      actualValue: this.oldValue,
     };
   }
 
@@ -237,6 +257,9 @@ export default class Slider extends Component {
     if (this.props.value !== nextProps.value && !this.touchLocked) {
       const newValue = this._testValue(nextProps.value, nextProps);
       this.oldValue = newValue;
+      this.setState({
+        actualValue: newValue,
+      });
       if (this.props.animateTransitions) {
         this._setCurrentValueAnimated(newValue);
       } else {
@@ -459,6 +482,9 @@ export default class Slider extends Component {
   }
 
   _setCurrentValue(value) {
+    this.setState({
+      actualValue: value,
+    });
     this.state.value.setValue(value);
   }
 
@@ -473,12 +499,6 @@ export default class Slider extends Component {
 
     Animated[animationType](this.state.value, animationConfig).start();
   }
-
-  // _fireScrollEvent(event, gestureState) {
-  //   if (this.props.onScrollEvent) {
-  //     this.props.onScrollEvent({value: this._getCurrentValue()});
-  //   }
-  // }
 
   _fireValueChange() {
     const value = this._getCurrentValue();
@@ -596,6 +616,271 @@ export default class Slider extends Component {
     );
   }
 
+  renderMaxNounView = () => {
+    const {
+      horizontal,
+      maxNounStyle,
+      stepValue,
+      minimumValue,
+      maximumValue,
+      type,
+      thumbTouchSize,
+      reverseValue,
+    } = this.props;
+    const { trackSize } = this.state;
+    const time = Math.floor((maximumValue - minimumValue) / stepValue);
+    if (horizontal) {
+      if (type === 'parcel') {
+        return _.times(time + 1, n => {
+          return (
+            <View
+              key={n}
+              style={[
+                {
+                  width: 3,
+                  height: 14,
+                  borderRadius: 1.5,
+                },
+                defaultStyles.parcelNumStyle,
+                reverseValue
+                  ? {
+                      right:
+                        thumbTouchSize.width / 2 +
+                        (n * (trackSize.width - thumbTouchSize.width)) / time,
+                    }
+                  : {
+                      left:
+                        thumbTouchSize.width / 2 +
+                        (n * (trackSize.width - thumbTouchSize.width)) / time,
+                    },
+                maxNounStyle,
+              ]}
+            />
+          );
+        });
+      }
+      return _.times(time + 1, n => {
+        return (
+          <View
+            key={n}
+            style={[
+              {
+                width: trackSize.height,
+                height: trackSize.height,
+                borderRadius: trackSize.height,
+              },
+              defaultStyles.parcelNumStyle,
+              reverseValue
+                ? {
+                    right:
+                      n * trackSize.height +
+                      (n * (trackSize.width - trackSize.height * (time + 1))) / time,
+                  }
+                : {
+                    left:
+                      n * trackSize.height +
+                      (n * (trackSize.width - trackSize.height * (time + 1))) / time,
+                  },
+              maxNounStyle,
+            ]}
+          />
+        );
+      });
+    }
+    if (type === 'parcel') {
+      return _.times(time + 1, n => {
+        return (
+          <View
+            key={n}
+            style={[
+              {
+                width: 14,
+                height: 3,
+                borderRadius: 1.5,
+              },
+              defaultStyles.parcelNumStyle,
+              reverseValue
+                ? {
+                    bottom:
+                      thumbTouchSize.height / 2 +
+                      (n * (trackSize.height - thumbTouchSize.height)) / time,
+                  }
+                : {
+                    top:
+                      thumbTouchSize.height / 2 +
+                      (n * (trackSize.height - thumbTouchSize.height)) / time,
+                  },
+              maxNounStyle,
+            ]}
+          />
+        );
+      });
+    }
+    return _.times(time + 1, n => {
+      return (
+        <View
+          key={n}
+          style={[
+            {
+              width: trackSize.width,
+              height: trackSize.width,
+              borderRadius: trackSize.width,
+            },
+            defaultStyles.parcelNumStyle,
+            reverseValue
+              ? {
+                  bottom:
+                    n * trackSize.width +
+                    (n * (trackSize.height - trackSize.width * (time + 1))) / time,
+                }
+              : {
+                  top:
+                    n * trackSize.width +
+                    (n * (trackSize.height - trackSize.width * (time + 1))) / time,
+                },
+            maxNounStyle,
+          ]}
+        />
+      );
+    });
+  };
+
+  renderMinNounView = () => {
+    const {
+      horizontal,
+      minNounStyle,
+      stepValue,
+      minimumValue,
+      maximumValue,
+      type,
+      reverseValue,
+      thumbTouchSize,
+    } = this.props;
+    const { actualValue, trackSize } = this.state;
+    const actualNounNum = reverseValue
+      ? Math.floor(maximumValue - actualValue) / stepValue + 1
+      : Math.floor(actualValue - minimumValue) / stepValue + 1;
+    const time = Math.floor(maximumValue - minimumValue) / stepValue;
+    if (horizontal) {
+      if (type === 'parcel') {
+        return _.times(actualNounNum, n => {
+          return (
+            <View
+              key={n}
+              style={[
+                {
+                  width: 3,
+                  height: 14,
+                  borderRadius: 1.5,
+                },
+                defaultStyles.parcelNumStyle,
+                reverseValue
+                  ? {
+                      right:
+                        thumbTouchSize.width / 2 +
+                        (n * (trackSize.width - thumbTouchSize.width)) / time,
+                    }
+                  : {
+                      left:
+                        thumbTouchSize.width / 2 +
+                        (n * (trackSize.width - thumbTouchSize.width)) / time,
+                    },
+                minNounStyle,
+              ]}
+            />
+          );
+        });
+      }
+      return _.times(actualNounNum, n => {
+        if (n === actualNounNum - 1) return null;
+        return (
+          <View
+            key={n}
+            style={[
+              {
+                width: trackSize.height,
+                height: trackSize.height,
+                borderRadius: trackSize.height,
+              },
+              defaultStyles.parcelNumStyle,
+              reverseValue
+                ? {
+                    right:
+                      n * trackSize.height +
+                      (n * (trackSize.width - trackSize.height * (time + 1))) / time,
+                  }
+                : {
+                    left:
+                      n * trackSize.height +
+                      (n * (trackSize.width - trackSize.height * (time + 1))) / time,
+                  },
+              minNounStyle,
+            ]}
+          />
+        );
+      });
+    }
+    if (type === 'parcel') {
+      return _.times(actualNounNum, n => {
+        return (
+          <View
+            key={n}
+            style={[
+              {
+                width: 14,
+                height: 3,
+                borderRadius: 1.5,
+              },
+              defaultStyles.parcelNumStyle,
+              reverseValue
+                ? {
+                    bottom:
+                      thumbTouchSize.height / 2 +
+                      n * 3 +
+                      (n * (trackSize.height - 3 * (time + 1) - thumbTouchSize.height)) / time,
+                  }
+                : {
+                    top:
+                      thumbTouchSize.height / 2 +
+                      n * 3 +
+                      (n * (trackSize.height - 3 * (time + 1) - thumbTouchSize.height)) / time,
+                  },
+              minNounStyle,
+            ]}
+          />
+        );
+      });
+    }
+    return _.times(actualNounNum, n => {
+      if (n === actualNounNum - 1) return null;
+      return (
+        <View
+          key={n}
+          style={[
+            {
+              width: trackSize.width,
+              height: trackSize.width,
+              borderRadius: trackSize.width,
+            },
+            defaultStyles.parcelNumStyle,
+            reverseValue
+              ? {
+                  bottom:
+                    n * trackSize.width +
+                    (n * (trackSize.height - trackSize.width * (time + 1))) / time,
+                }
+              : {
+                  top:
+                    n * trackSize.width +
+                    (n * (trackSize.height - trackSize.width * (time + 1))) / time,
+                },
+            minNounStyle,
+          ]}
+        />
+      );
+    });
+  };
+
   render() {
     const {
       minimumValue,
@@ -616,6 +901,8 @@ export default class Slider extends Component {
       onlyMaximumTrack,
       type,
       reverseValue,
+      stepValue,
+      useNoun,
     } = this.props;
     const { value, containerSize, trackSize, thumbSize, allMeasured } = this.state;
     const mainStyles = styles || defaultStyles;
@@ -745,6 +1032,7 @@ export default class Slider extends Component {
         >
           {!!renderMaximumTrack && renderMaximumTrack()}
         </View>
+        {!!stepValue && !!useNoun && this.renderMaxNounView()}
         {!onlyMaximumTrack && (
           <Animated.View
             style={[
@@ -753,6 +1041,7 @@ export default class Slider extends Component {
                 position: 'absolute',
                 backgroundColor: minimumTrackTintColor,
               },
+              horizontal ? { justifyContent: 'center' } : { alignItems: 'center' },
               mainStyles.track,
               trackStyle,
               minimumTrackStyle,
@@ -762,6 +1051,7 @@ export default class Slider extends Component {
             {!!renderMinimumTrack && renderMinimumTrack()}
           </Animated.View>
         )}
+        {!!stepValue && !!useNoun && reverseValue && type !== 'parcel' && this.renderMaxNounView()}
         <Animated.View
           renderToHardwareTextureAndroid={true}
           style={[
@@ -775,6 +1065,7 @@ export default class Slider extends Component {
         >
           {!!renderThumb && renderThumb()}
         </Animated.View>
+        {!!stepValue && !!useNoun && this.renderMinNounView()}
         <View
           style={[defaultStyles.touchArea, touchOverflowStyle]}
           {...this._panResponder.panHandlers}
@@ -838,6 +1129,11 @@ const defaultStyles = StyleSheet.create({
     position: 'absolute',
     backgroundColor: 'green',
     opacity: 0.5,
+  },
+  parcelNumStyle: {
+    backgroundColor: '#FFF',
+    position: 'absolute',
+    justifyContent: 'center',
   },
 });
 
