@@ -115,7 +115,7 @@ export default class SwitchButton extends React.PureComponent {
     /**
      * Switch 开关类型，默认不传，特殊情况传值 thumbMore
      */
-    switchType: PropTypes.string,
+    switchType: PropTypes.oneOfType([PropTypes.oneOf(['thumbMore']), PropTypes.string]),
     /**
      * 当 switchType = 'thumbMore' 时，开关左右定位的滑块样式
      */
