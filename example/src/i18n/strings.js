@@ -478,6 +478,8 @@ module.exports = {
     switch_default_3: 'Custom Slider Style III',
     switch_default_4: 'Custom Slider Style IV',
     switch_default_5: 'Custom Slider Style V',
-    switch_default_linearWithoutText: 'Slider style (IOS, Android adaptive) ---- Gradient (without font)',
+    switch_default_linearWithoutText:
+      'Slider style (IOS, Android adaptive) ---- Gradient (without font)',
     switch_default_linearWithText: 'Slider style (IOS, Android adaptive) ---- Gradient (with font)',
+  },
 };
