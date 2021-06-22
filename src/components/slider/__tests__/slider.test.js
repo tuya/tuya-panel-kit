@@ -449,4 +449,125 @@ describe('ThemeSlider Component', () => {
 
     expect(wrapper).toMatchSnapshot();
   });
+
+  it(' render with useNoun = true', () => {
+    const wrapper = shallow(
+      <Slider
+        theme={{
+          width: 318,
+          height: 6,
+          trackRadius: 3,
+          trackHeight: 6,
+          thumbSize: 26,
+          thumbRadius: 26,
+          thumbTintColor: '#FFF',
+          minimumTrackTintColor: '#57BCFB',
+          maximumTrackTintColor: '#E3E9EE',
+        }}
+        style={{ marginVertical: 10 }}
+        maximumValue={100}
+        minimumValue={0}
+        stepValue={25}
+        useNoun={true}
+        value={10}
+        onValueChange={jest.fn()}
+        minNounStyle={{ backgroundColor: '#f0f' }}
+      />
+    );
+
+    const wrapper2 = shallow(
+      <Slider
+        theme={{
+          width: 318,
+          height: 46,
+          trackRadius: 16,
+          trackHeight: 46,
+          thumbSize: 20,
+          thumbRadius: 20,
+          thumbTintColor: '#57BCFB',
+          minimumTrackTintColor: '#57BCFB',
+          maximumTrackTintColor: '#E3E9EE',
+        }}
+        maximumValue={100}
+        stepValue={25}
+        thumbStyle={{
+          shadowOffset: {
+            width: 0,
+            height: 0,
+          },
+          shadowOpacity: 0,
+          shadowRadius: 0,
+          elevation: 0,
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+        type="parcel"
+        useNoun={true}
+        style={{ marginVertical: 10 }}
+      />
+    );
+
+    expect(wrapper).toMatchSnapshot();
+    expect(wrapper2).toMatchSnapshot();
+  });
+
+  it(' render with useNoun = true vertical', () => {
+    const wrapper = shallow(
+      <Slider
+        theme={{
+          thumbSize: 20,
+          thumbRadius: 20,
+          thumbTintColor: '#57BCFB',
+          minimumTrackTintColor: '#57BCFB',
+          maximumTrackTintColor: '#E3E9EE',
+        }}
+        horizontal={false}
+        type="parcel"
+        trackStyle={{ width: 46, height: 200, borderRadius: 16 }}
+        style={{ marginHorizontal: 10 }}
+        value={0}
+        minimumValue={0}
+        maximumValue={100}
+        reverseValue={true}
+        thumbStyle={{
+          shadowOffset: {
+            width: 0,
+            height: 0,
+          },
+          shadowOpacity: 0,
+          shadowRadius: 0,
+          elevation: 0,
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+        useNoun={true}
+        stepValue={25}
+        minNounStyle={{ backgroundColor: '#f0f' }}
+      />
+    );
+    const wrapper2 = shallow(
+      <Slider
+        theme={{
+          thumbSize: 26,
+          thumbRadius: 26,
+          thumbTintColor: '#FFF',
+          minimumTrackTintColor: '#E3E9EE',
+          maximumTrackTintColor: '#57BCFB',
+        }}
+        trackStyle={{ width: 6, height: 200, borderRadius: 3 }}
+        style={{ marginHorizontal: 10 }}
+        value={0}
+        reverseValue={true}
+        minimumValue={0}
+        maximumValue={100}
+        useNoun={true}
+        stepValue={25}
+        minNounStyle={{ backgroundColor: '#f0f' }}
+        horizontal={false}
+      />
+    );
+
+    expect(wrapper).toMatchSnapshot();
+    expect(wrapper2).toMatchSnapshot();
+  });
 });
