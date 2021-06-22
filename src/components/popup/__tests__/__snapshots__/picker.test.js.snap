@@ -46,8 +46,6 @@ exports[`Picker Component basic render 1`] = `
           Array [
             Object {
               "backgroundColor": "#ffffff",
-              "borderBottomColor": "rgba(0, 0, 0, 0.1)",
-              "borderBottomWidth": 0.5,
               "borderTopLeftRadius": 16,
               "borderTopRightRadius": 16,
               "height": 56,
@@ -95,6 +93,28 @@ exports[`Picker Component basic render 1`] = `
       </Text>
     </View>
     <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+    <View
       disabled={false}
       onLayout={[Function]}
       pointerEvents="auto"
@@ -121,14 +141,17 @@ exports[`Picker Component basic render 1`] = `
               "justifyContent": "center",
               "opacity": 1,
             },
-            null,
+            Array [
+              false,
+              null,
+            ],
           ]
         }
       >
         <View
           style={
             Object {
-              "width": 750,
+              "width": 690,
             }
           }
         >
@@ -156,7 +179,10 @@ exports[`Picker Component basic render 1`] = `
                 Object {
                   "height": 216,
                 },
-                Object {},
+                Object {
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 60,
+                },
               ]
             }
           />
@@ -355,8 +381,6 @@ exports[`Picker Component basic render 2`] = `
           Array [
             Object {
               "backgroundColor": "#ffffff",
-              "borderBottomColor": "rgba(0, 0, 0, 0.1)",
-              "borderBottomWidth": 0.5,
               "borderTopLeftRadius": 16,
               "borderTopRightRadius": 16,
               "height": 56,
@@ -404,6 +428,28 @@ exports[`Picker Component basic render 2`] = `
       </Text>
     </View>
     <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+    <View
       disabled={false}
       onLayout={[Function]}
       pointerEvents="auto"
@@ -430,14 +476,17 @@ exports[`Picker Component basic render 2`] = `
               "justifyContent": "center",
               "opacity": 1,
             },
-            null,
+            Array [
+              false,
+              null,
+            ],
           ]
         }
       >
         <View
           style={
             Object {
-              "width": 250,
+              "width": 230,
             }
           }
         >
@@ -470,7 +519,10 @@ exports[`Picker Component basic render 2`] = `
                 Object {
                   "height": 216,
                 },
-                Object {},
+                Object {
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 54,
+                },
               ]
             }
           />
@@ -486,14 +538,17 @@ exports[`Picker Component basic render 2`] = `
               "justifyContent": "center",
               "opacity": 1,
             },
-            null,
+            Array [
+              false,
+              null,
+            ],
           ]
         }
       >
         <View
           style={
             Object {
-              "width": 250,
+              "width": 230,
             }
           }
         >
@@ -526,7 +581,10 @@ exports[`Picker Component basic render 2`] = `
                 Object {
                   "height": 216,
                 },
-                Object {},
+                Object {
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 54,
+                },
               ]
             }
           />
@@ -542,14 +600,17 @@ exports[`Picker Component basic render 2`] = `
               "justifyContent": "center",
               "opacity": 1,
             },
-            null,
+            Array [
+              false,
+              null,
+            ],
           ]
         }
       >
         <View
           style={
             Object {
-              "width": 250,
+              "width": 230,
             }
           }
         >
@@ -582,7 +643,10 @@ exports[`Picker Component basic render 2`] = `
                 Object {
                   "height": 216,
                 },
-                Object {},
+                Object {
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 54,
+                },
               ]
             }
           />
@@ -781,8 +845,6 @@ exports[`Picker Component basic render with label 1`] = `
           Array [
             Object {
               "backgroundColor": "#ffffff",
-              "borderBottomColor": "rgba(0, 0, 0, 0.1)",
-              "borderBottomWidth": 0.5,
               "borderTopLeftRadius": 16,
               "borderTopRightRadius": 16,
               "height": 56,
@@ -830,6 +892,28 @@ exports[`Picker Component basic render with label 1`] = `
       </Text>
     </View>
     <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+    <View
       disabled={false}
       onLayout={[Function]}
       pointerEvents="auto"
@@ -856,14 +940,17 @@ exports[`Picker Component basic render with label 1`] = `
               "justifyContent": "center",
               "opacity": 1,
             },
-            null,
+            Array [
+              false,
+              null,
+            ],
           ]
         }
       >
         <View
           style={
             Object {
-              "width": 250,
+              "width": 230,
             }
           }
         >
@@ -896,7 +983,10 @@ exports[`Picker Component basic render with label 1`] = `
                 Object {
                   "height": 216,
                 },
-                Object {},
+                Object {
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 54,
+                },
               ]
             }
           />
@@ -912,14 +1002,17 @@ exports[`Picker Component basic render with label 1`] = `
               "justifyContent": "center",
               "opacity": 1,
             },
-            null,
+            Array [
+              false,
+              null,
+            ],
           ]
         }
       >
         <View
           style={
             Object {
-              "width": 250,
+              "width": 230,
             }
           }
         >
@@ -952,7 +1045,10 @@ exports[`Picker Component basic render with label 1`] = `
                 Object {
                   "height": 216,
                 },
-                Object {},
+                Object {
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 54,
+                },
               ]
             }
           />
@@ -968,14 +1064,17 @@ exports[`Picker Component basic render with label 1`] = `
               "justifyContent": "center",
               "opacity": 1,
             },
-            null,
+            Array [
+              false,
+              null,
+            ],
           ]
         }
       >
         <View
           style={
             Object {
-              "width": 250,
+              "width": 230,
             }
           }
         >
@@ -1008,7 +1107,10 @@ exports[`Picker Component basic render with label 1`] = `
                 Object {
                   "height": 216,
                 },
-                Object {},
+                Object {
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 54,
+                },
               ]
             }
           />

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import { TYSdk, TYText, TYSectionList } from 'tuya-panel-kit';
+import Strings from '../../i18n';
 
 const TYNative = TYSdk.native;
 
@@ -13,31 +14,31 @@ export default class TYSectionListBasicScene extends Component {
   get sections() {
     return [
       {
-        title: '基础列表',
+        title: Strings.getLang('tysectionlist_basic_list'),
         data: new Array(2).fill(0).map((_, idx) => ({
           key: idx,
-          title: `列表标题${idx + 1}`,
-          value: idx === 0 ? '' : '详细信息',
+          title: `${Strings.getLang('tysectionlist_list_title')}${idx + 1}`,
+          value: idx === 0 ? '' : Strings.getLang('tysectionlist_details'),
           arrow: true,
           onPress: this._handleItemPress(idx),
         })),
       },
       {
-        title: 'Switch列表',
+        title: Strings.getLang('tysectionlist_switch_list'),
         data: new Array(2).fill(0).map((_, idx) => ({
           key: idx,
-          title: `列表标题${idx + 1}`,
+          title: `${Strings.getLang('tysectionlist_list_title')}${idx + 1}`,
           value: this.state[`switch${idx + 1}`],
           onValueChange: value => this.setState({ [`switch${idx + 1}`]: value }),
         })),
       },
       {
-        title: '定制文案颜色',
+        title: Strings.getLang('tysectionlist_custom_color'),
         data: new Array(3).fill(0).map((_, idx) => {
           const valueMap = {
-            0: '详细信息',
-            1: '新内容',
-            2: '警告信息',
+            0: Strings.getLang('tysectionlist_details'),
+            1: Strings.getLang('tysectionlist_new_content'),
+            2: Strings.getLang('tysectionlist_warning_message'),
           };
           const colorMap = {
             0: 'rgba(51, 51, 51, 0.5)',
@@ -47,14 +48,14 @@ export default class TYSectionListBasicScene extends Component {
           return {
             key: idx,
             theme: { descFontColor: colorMap[idx] },
-            title: `列表标题${idx + 1}`,
+            title: `${Strings.getLang('tysectionlist_list_title')}${idx + 1}`,
             value: valueMap[idx],
             onPress: this._handleItemPress(idx),
           };
         }),
       },
       {
-        title: '定制Action',
+        title: Strings.getLang('tysectionlist_custom_action'),
         data: new Array(3).fill(0).map((_, idx) => {
           const valueMap = {
             0: '8',
@@ -63,7 +64,7 @@ export default class TYSectionListBasicScene extends Component {
           };
           return {
             key: idx,
-            title: `列表标题${idx + 1}`,
+            title: `${Strings.getLang('tysectionlist_list_title')}${idx + 1}`,
             Action: (
               <View style={{ paddingHorizontal: 4, borderRadius: 8, backgroundColor: '#FF4444' }}>
                 <TYText type="paragraph" size="normal" text={valueMap[idx]} color="#fff" />
@@ -74,21 +75,21 @@ export default class TYSectionListBasicScene extends Component {
         }),
       },
       {
-        title: '分类标题',
+        title: Strings.getLang('tysectionlist_category_title'),
         data: [
           {
             key: 0,
-            title: '列表标题1',
+            title: Strings.getLang('tysectionlist_list_title'),
             arrow: true,
           },
         ],
       },
       {
-        footer: '这是这个列表的详细说明及解释',
+        footer: Strings.getLang('tysectionlist_description'),
         data: [
           {
             key: 0,
-            title: '列表标题1',
+            title: Strings.getLang('tysectionlist_list_title'),
             arrow: true,
           },
         ],
@@ -100,65 +101,65 @@ export default class TYSectionListBasicScene extends Component {
               type="paragraph"
               size="normal"
               color="#666"
-              text="这是这个列表的详细说明及解释"
+              text={Strings.getLang('tysectionlist_description')}
             />
-            <TYText type="paragraph" size="normal" color="#3388FF" text="了解详情" />
+            <TYText type="paragraph" size="normal" color="#3388FF" text={Strings.getLang('tysectionlist_learnmore')} />
           </View>
         ),
         data: [
           {
             key: 0,
-            title: '列表标题1',
+            title: Strings.getLang('tysectionlist_list_title'),
             arrow: true,
           },
         ],
       },
       {
         footer:
-          '这是这个列表的详细说明及解释这是这个列表的详细说明及解释这是这个列表的详细说明及解释',
+          `${Strings.getLang('tysectionlist_description')}${Strings.getLang('tysectionlist_description')}${Strings.getLang('tysectionlist_description')}`,
         data: [
           {
             key: 0,
-            title: '列表标题1',
+            title: Strings.getLang('tysectionlist_list_title'),
             arrow: true,
           },
         ],
       },
       {
-        title: '列表文案适配测试',
+        title: Strings.getLang('tysectionlist_adaptation_test'),
         data: [
           {
             key: 0,
-            title: '列表标题1',
-            subTitle: '这是这个列表的详细信息内容过长的情况这是这个列表的详细信息内容过长的情况',
+            title: Strings.getLang('tysectionlist_list_title'),
+            subTitle: `${Strings.getLang('tysectionlist_information')}${Strings.getLang('tysectionlist_information')}${Strings.getLang('tysectionlist_information')}`,
             arrow: true,
           },
           {
             key: 1,
-            title: '列表标题过长的情况列表标题过长的情况列表标题过长的情况',
-            subTitle: '详细信息',
+            title: `${Strings.getLang('tysectionlist_longtitle')}${Strings.getLang('tysectionlist_longtitle')}${Strings.getLang('tysectionlist_longtitle')}`,
+            subTitle: Strings.getLang('tysectionlist_details'),
             arrow: true,
           },
           {
             key: 2,
-            title: '列表标题过长的情况列表标题过长的情况列表标题过长的情况',
-            subTitle: '这是这个列表的详细信息内容过长的情况这是这个列表的详细信息内容过长的情况',
+            title: `${Strings.getLang('tysectionlist_longtitle')}${Strings.getLang('tysectionlist_longtitle')}${Strings.getLang('tysectionlist_longtitle')}`,
+            subTitle: `${Strings.getLang('tysectionlist_information')}${Strings.getLang('tysectionlist_information')}${Strings.getLang('tysectionlist_information')}`,
             arrow: true,
           },
           {
             key: 3,
-            title: '列表标题过长的情况列表标题过长的情况列表标题过长的情况',
+            title: `${Strings.getLang('tysectionlist_longtitle')}${Strings.getLang('tysectionlist_longtitle')}${Strings.getLang('tysectionlist_longtitle')}`,
             value: true,
           },
           {
             key: 4,
             theme: { subFontColor: '#FF4444' },
-            title: '列表标题过长的情况列表标题过长的情况列表标题过长的情况',
-            subTitle: '警告信息',
+            title: `${Strings.getLang('tysectionlist_longtitle')}${Strings.getLang('tysectionlist_longtitle')}${Strings.getLang('tysectionlist_longtitle')}`,
+            subTitle: Strings.getLang('tysectionlist_warning_message'),
           },
           {
             key: 5,
-            title: '列表标题过长的情况列表标题过长的情况列表标题过长的情况',
+            title: `${Strings.getLang('tysectionlist_longtitle')}${Strings.getLang('tysectionlist_longtitle')}${Strings.getLang('tysectionlist_longtitle')}`,
             children: (
               <View
                 style={{

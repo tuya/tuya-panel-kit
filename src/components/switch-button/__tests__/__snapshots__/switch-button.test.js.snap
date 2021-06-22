@@ -1347,6 +1347,178 @@ exports[`SwitchButton Component onSwitchChange disabled=false 1`] = `
 </ThemeProvider>
 `;
 
+exports[`SwitchButton Component render width Text 1`] = `
+<View
+  needsOffscreenAlphaCompositing={true}
+  style={
+    Array [
+      undefined,
+      false,
+    ]
+  }
+>
+  <View
+    accessibilityLabel="SwitchButton"
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "height": NaN,
+        "justifyContent": "center",
+        "opacity": 1,
+        "width": NaN,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "borderRadius": NaN,
+            "height": undefined,
+            "justifyContent": "center",
+            "width": undefined,
+          },
+          Object {
+            "backgroundColor": "#44DB5E",
+            "borderColor": "#44DB5E",
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFF",
+          "borderRadius": 1.5,
+          "height": 16,
+          "justifyContent": "center",
+          "left": NaN,
+          "position": "absolute",
+          "width": 3,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFF",
+          "borderRadius": 1.5,
+          "height": 3.2,
+          "justifyContent": "center",
+          "position": "absolute",
+          "right": NaN,
+          "width": 3,
+        }
+      }
+    />
+    <Text
+      accessible={true}
+      align={null}
+      allowFontScaling={false}
+      color={null}
+      ellipsizeMode="tail"
+      size={10}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#333",
+            "fontSize": 10,
+          },
+          Array [
+            Object {
+              "color": "#FFF",
+              "fontSize": 10,
+              "fontWeight": "500",
+              "left": 6,
+              "opacity": 1,
+              "position": "absolute",
+            },
+            null,
+          ],
+        ]
+      }
+      text="ON"
+      type={null}
+      weight={null}
+    >
+      ON
+    </Text>
+    <Text
+      accessible={true}
+      align={null}
+      allowFontScaling={false}
+      color={null}
+      ellipsizeMode="tail"
+      size={10}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#333",
+            "fontSize": 10,
+          },
+          Array [
+            Object {
+              "color": "#999",
+              "fontSize": 10,
+              "fontWeight": "500",
+              "opacity": 0,
+              "position": "absolute",
+              "right": 6,
+            },
+            null,
+          ],
+        ]
+      }
+      text="OFF"
+      type={null}
+      weight={null}
+    >
+      OFF
+    </Text>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "flex-start",
+          "backgroundColor": "#fff",
+          "borderRadius": NaN,
+          "elevation": 2,
+          "height": undefined,
+          "justifyContent": "center",
+          "position": "absolute",
+          "shadowColor": "rgba(0, 0, 0, 0.3)",
+          "shadowOffset": Object {
+            "height": 3,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 3,
+          "transform": Array [
+            Object {
+              "translateX": NaN,
+            },
+          ],
+          "width": undefined,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
 exports[`SwitchButton Component render width disabled 1`] = `
 <View
   needsOffscreenAlphaCompositing={true}
@@ -1394,6 +1566,112 @@ exports[`SwitchButton Component render width disabled 1`] = `
             "borderColor": "#44DB5E",
           },
         ]
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "flex-start",
+          "backgroundColor": "#fff",
+          "borderRadius": NaN,
+          "elevation": 2,
+          "height": undefined,
+          "justifyContent": "center",
+          "position": "absolute",
+          "shadowColor": "rgba(0, 0, 0, 0.3)",
+          "shadowOffset": Object {
+            "height": 3,
+            "width": 0,
+          },
+          "shadowOpacity": 1,
+          "shadowRadius": 3,
+          "transform": Array [
+            Object {
+              "translateX": NaN,
+            },
+          ],
+          "width": undefined,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`SwitchButton Component render width thumbMore 1`] = `
+<View
+  needsOffscreenAlphaCompositing={true}
+  style={
+    Array [
+      undefined,
+      false,
+    ]
+  }
+>
+  <View
+    accessibilityLabel="SwitchButton"
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "height": NaN,
+        "justifyContent": "center",
+        "opacity": 1,
+        "width": NaN,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "borderRadius": NaN,
+            "height": undefined,
+            "justifyContent": "center",
+            "width": undefined,
+          },
+          Object {
+            "backgroundColor": "#44DB5E",
+            "borderColor": "#44DB5E",
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFF",
+          "borderRadius": 1.5,
+          "height": 16,
+          "justifyContent": "center",
+          "left": NaN,
+          "position": "absolute",
+          "width": 3,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFF",
+          "borderRadius": 1.5,
+          "height": 3.2,
+          "justifyContent": "center",
+          "position": "absolute",
+          "right": NaN,
+          "width": 3,
+        }
       }
     />
     <View

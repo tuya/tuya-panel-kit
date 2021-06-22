@@ -46,8 +46,6 @@ exports[`DatePicker Component basic render 1`] = `
           Array [
             Object {
               "backgroundColor": "#ffffff",
-              "borderBottomColor": "rgba(0, 0, 0, 0.1)",
-              "borderBottomWidth": 0.5,
               "borderTopLeftRadius": 16,
               "borderTopRightRadius": 16,
               "height": 56,
@@ -95,6 +93,28 @@ exports[`DatePicker Component basic render 1`] = `
       </Text>
     </View>
     <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+    <View
       pointerEvents="auto"
       style={false}
     >
@@ -105,13 +125,20 @@ exports[`DatePicker Component basic render 1`] = `
               "alignItems": "center",
               "backgroundColor": "#fff",
               "flexDirection": "row",
-              "height": 200,
+              "height": 216,
               "paddingLeft": 5,
               "paddingRight": 5,
             },
-            Object {
-              "backgroundColor": undefined,
-            },
+            Array [
+              false,
+              Object {
+                "paddingLeft": 60,
+                "paddingRight": 60,
+              },
+              Object {
+                "backgroundColor": undefined,
+              },
+            ],
           ]
         }
       >
@@ -643,6 +670,8 @@ exports[`DatePicker Component basic render 1`] = `
                 },
                 Object {
                   "color": "#333",
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 48,
                 },
               ]
             }
@@ -731,6 +760,8 @@ exports[`DatePicker Component basic render 1`] = `
                 },
                 Object {
                   "color": "#333",
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 48,
                 },
               ]
             }
@@ -914,6 +945,8 @@ exports[`DatePicker Component basic render 1`] = `
                 },
                 Object {
                   "color": "#333",
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 48,
                 },
               ]
             }
@@ -1062,6 +1095,8 @@ exports[`DatePicker Component basic render 1`] = `
                 },
                 Object {
                   "color": "#333",
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 48,
                 },
               ]
             }
@@ -1390,6 +1425,8 @@ exports[`DatePicker Component basic render 1`] = `
                 },
                 Object {
                   "color": "#333",
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 48,
                 },
               ]
             }
@@ -1589,8 +1626,6 @@ exports[`DatePicker Component basic render 2`] = `
           Array [
             Object {
               "backgroundColor": "#ffffff",
-              "borderBottomColor": "rgba(0, 0, 0, 0.1)",
-              "borderBottomWidth": 0.5,
               "borderTopLeftRadius": 16,
               "borderTopRightRadius": 16,
               "height": 56,
@@ -1719,6 +1754,28 @@ exports[`DatePicker Component basic render 2`] = `
       </View>
     </View>
     <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+    <View
       pointerEvents="auto"
       style={false}
     >
@@ -1729,13 +1786,20 @@ exports[`DatePicker Component basic render 2`] = `
               "alignItems": "center",
               "backgroundColor": "#fff",
               "flexDirection": "row",
-              "height": 200,
+              "height": 216,
               "paddingLeft": 5,
               "paddingRight": 5,
             },
-            Object {
-              "backgroundColor": undefined,
-            },
+            Array [
+              false,
+              Object {
+                "paddingLeft": 60,
+                "paddingRight": 60,
+              },
+              Object {
+                "backgroundColor": undefined,
+              },
+            ],
           ]
         }
       >
@@ -2267,6 +2331,8 @@ exports[`DatePicker Component basic render 2`] = `
                 },
                 Object {
                   "color": "#333",
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 48,
                 },
               ]
             }
@@ -2355,6 +2421,8 @@ exports[`DatePicker Component basic render 2`] = `
                 },
                 Object {
                   "color": "#333",
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 48,
                 },
               ]
             }
@@ -2538,6 +2606,8 @@ exports[`DatePicker Component basic render 2`] = `
                 },
                 Object {
                   "color": "#333",
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 48,
                 },
               ]
             }
@@ -2686,6 +2756,8 @@ exports[`DatePicker Component basic render 2`] = `
                 },
                 Object {
                   "color": "#333",
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 48,
                 },
               ]
             }
@@ -3014,6 +3086,8 @@ exports[`DatePicker Component basic render 2`] = `
                 },
                 Object {
                   "color": "#333",
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 48,
                 },
               ]
             }

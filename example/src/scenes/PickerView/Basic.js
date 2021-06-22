@@ -23,7 +23,7 @@ export default class PickerViewScene extends Component {
       <View style={styles.pickerContainer}>
         <Text style={styles.tip}>Please Choose Your Favorite Language:</Text>
         <Picker
-          style={[styles.picker]}
+          // style={[styles.picker]}
           itemStyle={styles.pickerItem}
           selectedValue={this.state.value}
           onValueChange={this._handleChange}
@@ -48,13 +48,13 @@ export default class PickerViewScene extends Component {
 }
 
 const styles = StyleSheet.create({
-  pickerContainer: {
-    // height: 188,
-    flex: 1,
-    marginVertical: 24,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+  // pickerContainer: {
+  //   // height: 188,
+  //   flex: 1,
+  //   marginVertical: 24,
+  //   alignItems: 'center',
+  //   justifyContent: 'center',
+  // },
 
   tip: {
     fontSize: 15,

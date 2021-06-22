@@ -125,6 +125,7 @@ exports[`Lists Component basic render 1`] = `
       },
     ]
   }
+  showsVerticalScrollIndicator={false}
   stickyHeaderIndices={Array []}
   stickySectionHeadersEnabled={false}
   updateCellsBatchingPeriod={50}
@@ -440,6 +441,7 @@ exports[`Lists Component basic render 1 1`] = `
       },
     ]
   }
+  showsVerticalScrollIndicator={false}
   stickyHeaderIndices={Array []}
   stickySectionHeadersEnabled={false}
   updateCellsBatchingPeriod={50}
@@ -1054,6 +1056,7 @@ exports[`Lists Component should able to use SectionList props 1`] = `
       },
     ]
   }
+  showsVerticalScrollIndicator={false}
   stickyHeaderIndices={Array []}
   stickySectionHeadersEnabled={false}
   updateCellsBatchingPeriod={50}
@@ -1339,6 +1342,7 @@ exports[`Lists Component should not render SectionHeader without title 1`] = `
       },
     ]
   }
+  showsVerticalScrollIndicator={false}
   stickyHeaderIndices={Array []}
   stickySectionHeadersEnabled={false}
   updateCellsBatchingPeriod={50}

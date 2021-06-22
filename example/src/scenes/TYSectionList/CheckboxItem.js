@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import { View, Image } from 'react-native';
 import { TYSectionList, TYText } from 'tuya-panel-kit';
 import svgs from 'tuya-panel-kit/src/components/iconfont/svg/defaultSvg'; // eslint-disable-line
+import Strings from '../../i18n';
 
 const DetailAction = () => (
   <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-    <TYText type="paragraph" size="large" text="详细信息" color="rgba(51, 51, 51, 0.5)" />
+    <TYText type="paragraph" size="large" text={Strings.getLang('tysectionlist_details')} color="rgba(51, 51, 51, 0.5)" />
     <Image style={{ marginLeft: 6 }} source={require('./res/alert.png')} />
   </View>
 );
@@ -23,23 +24,23 @@ export default class TYSectionListCheckboxItemScene extends Component {
   get sections() {
     return [
       {
-        title: '单选',
+        title: Strings.getLang('motion_single_choice'),
         data: new Array(3).fill(0).map((_, idx) => ({
           key: idx,
           theme: { descFontColor: idx === 0 ? '#7ED321' : '#F5A623' },
-          Action: idx === 0 ? '清扫成功' : '清扫失败',
-          title: `04月1${idx}日 23:15`,
-          subTitle: `清扫 0平方米 | 工作 5分钟`,
+          Action: idx === 0 ? Strings.getLang('tyflatlist_success') : Strings.getLang('tyflatlist_failure'),
+          title: `${Strings.getLang('tysectionlist_april')}${idx}${Strings.getLang('tysectionlist_day')} 23:15`,
+          subTitle: Strings.getLang('tyflatlist_work1'),
           checked: this.state.value === idx,
           onChange: checked => this.setState({ value: checked ? idx : -1 }),
         })),
       },
       {
-        title: '多选',
+        title: Strings.getLang('motion_multiple_choice'),
         data: [
           {
             key: 0,
-            title: '多选项 - 选中情况',
+            title: Strings.getLang('tysectionlist_options_selected'),
             checked: this.state.values.includes(0),
             onChange: checked =>
               this.setState(({ values }) => ({
@@ -48,7 +49,7 @@ export default class TYSectionListCheckboxItemScene extends Component {
           },
           {
             key: 1,
-            title: '多选项 - 未选中情况',
+            title: Strings.getLang('tysectionlist_options_unselected'),
             Action: () => <DetailAction />,
             checked: this.state.values.includes(1),
             onChange: checked =>
@@ -58,14 +59,14 @@ export default class TYSectionListCheckboxItemScene extends Component {
           },
           {
             key: 2,
-            title: '多选项 - 无法操作的情况',
+            title: Strings.getLang('tysectionlist_options_inoperable'),
             Action: () => <DetailAction />,
             checked: false,
             disabled: true,
           },
           {
             key: 3,
-            title: '多选项 - 无法操作选中的情况',
+            title: Strings.getLang('tysectionlist_options_unableto_select'),
             Action: () => <DetailAction />,
             checked: true,
             disabled: true,
@@ -73,12 +74,12 @@ export default class TYSectionListCheckboxItemScene extends Component {
         ],
       },
       {
-        title: '适配测试',
+        title: Strings.getLang('tysectionlist_fit_test'),
         data: [
           {
             key: 0,
-            title: `单选项标题过长的情况单选项标题过长的情况单选项标题过长的情况`,
-            subTitle: '测试副标题',
+            title: Strings.getLang('tysectionlist_long_title'),
+            subTitle: Strings.getLang('tysectionlist_test_subtitle'),
             checked: this.state.value2 === 0,
             checkedIcon: svgs.selectedUnBordered,
             onChange: checked => this.setState({ value2: checked ? 0 : -1 }),
@@ -86,8 +87,8 @@ export default class TYSectionListCheckboxItemScene extends Component {
           },
           {
             key: 1,
-            title: `单选项标题过长的情况单选项标题过长的情况单选项标题过长的情况`,
-            subTitle: '测试副标题',
+            title: Strings.getLang('tysectionlist_long_title'),
+            subTitle: Strings.getLang('tysectionlist_test_subtitle'),
             checked: this.state.value2 === 1,
             checkedIcon: svgs.selectedUnBordered,
             onChange: checked => this.setState({ value2: checked ? 1 : -1 }),
@@ -95,7 +96,7 @@ export default class TYSectionListCheckboxItemScene extends Component {
           },
           {
             key: 2,
-            title: `单选项`,
+            title: Strings.getLang('motion_single_choice'),
             checked: this.state.value2 === 2,
             checkedIcon: svgs.selectedUnBordered,
             onChange: checked => this.setState({ value2: checked ? 2 : -1 }),

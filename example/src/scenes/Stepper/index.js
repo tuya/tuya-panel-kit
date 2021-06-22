@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { View } from 'react-native';
 import { Stepper, TYText } from 'tuya-panel-kit';
+import Strings from '../../i18n';
 
 export default class StepperScene extends PureComponent {
   constructor(props) {
@@ -29,7 +30,7 @@ export default class StepperScene extends PureComponent {
             marginTop: 30,
           }}
         >
-          <TYText size={16} text="乘客人数" style={{ marginRight: 16 }} />
+          <TYText size={16} text={Strings.getLang('stepper_number_of_passengers')} style={{ marginRight: 16 }} />
           <Stepper disabled={true} value={0} />
         </View>
         <View
@@ -43,7 +44,7 @@ export default class StepperScene extends PureComponent {
             marginTop: 30,
           }}
         >
-          <TYText size={16} text="乘客人数" style={{ marginRight: 16 }} />
+          <TYText size={16} text={Strings.getLang('stepper_number_of_passengers')} style={{ marginRight: 16 }} />
           <Stepper
             value={value}
             stepValue={0.1}
@@ -64,7 +65,7 @@ export default class StepperScene extends PureComponent {
             marginTop: 30,
           }}
         >
-          <TYText size={16} text="乘客人数" style={{ marginRight: 16 }} />
+          <TYText size={16} text={Strings.getLang('stepper_number_of_passengers')} style={{ marginRight: 16 }} />
           <Stepper buttonType="triangle" value={0} />
         </View>
         <View
@@ -78,7 +79,7 @@ export default class StepperScene extends PureComponent {
             marginTop: 30,
           }}
         >
-          <TYText size={16} text="乘客人数" style={{ marginRight: 16 }} />
+          <TYText size={16} text={Strings.getLang('stepper_number_of_passengers')} style={{ marginRight: 16 }} />
           <Stepper buttonType="triangle" editable={false} value={99} />
         </View>
       </View>

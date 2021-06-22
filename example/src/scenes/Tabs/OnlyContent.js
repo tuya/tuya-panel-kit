@@ -5,6 +5,7 @@ import { View } from 'react-native';
 import { Tabs } from 'tuya-panel-kit';
 import TesterTitle from '../../components/TesterTitle';
 import Panel from './components/Panel';
+import Strings from '../../i18n';
 
 export default class OnlyContentTabsScene extends React.PureComponent {
   constructor(props) {
@@ -27,7 +28,7 @@ export default class OnlyContentTabsScene extends React.PureComponent {
   render() {
     return (
       <View style={{ flex: 1 }}>
-        <TesterTitle title="我的内容都很轻量不需要预加载" />
+        <TesterTitle title={Strings.getLang('tabs_lightweight')} />
         <Tabs.TabContent
           preload={false}
           activeIndex={this.state.activeIndex}
@@ -37,7 +38,7 @@ export default class OnlyContentTabsScene extends React.PureComponent {
             <Panel key={idx} title={`${idx}`} />
           ))}
         </Tabs.TabContent>
-        <TesterTitle title="单独的TabContent" />
+        <TesterTitle title={Strings.getLang('tabs_separate_content')} />
         <Tabs.TabContent activeIndex={this.state.activeIndex} onRelease={this._handleRelease}>
           {this.state.d1.map((data, idx) => (
             <Panel key={idx} largeData={idx === 1} title={data.label} />

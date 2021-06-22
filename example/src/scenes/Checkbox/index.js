@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import { Checkbox } from 'tuya-panel-kit';
+import Strings from '../../i18n';
 
 export default class CheckboxScene extends Component {
   constructor(props) {
@@ -23,7 +24,7 @@ export default class CheckboxScene extends Component {
           disabled={this.state.disabled}
           onChange={checked => this.setState({ checked })}
         >
-          点击选中
+          {Strings.getLang('checkbox_select')}
         </Checkbox>
         <Checkbox
           color="red"
@@ -31,7 +32,7 @@ export default class CheckboxScene extends Component {
           hideOnUnselect={true}
           onChange={disabled => this.setState({ disabled })}
         >
-          点击禁用上面那个
+          {Strings.getLang('checkbox_disable')}
         </Checkbox>
       </View>
     );

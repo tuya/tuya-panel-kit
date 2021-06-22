@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { TYSectionList } from 'tuya-panel-kit';
+import Strings from '../../i18n';
 
 export default class TYSectionListInputItemScene extends Component {
   constructor(props) {
@@ -14,27 +15,27 @@ export default class TYSectionListInputItemScene extends Component {
   get sections() {
     return [
       {
-        title: '输入框列表项',
+        title: Strings.getLang('tysectionlist_inputbox_list'),
         data: [
           {
             key: 0,
-            title: `名字`,
+            title: Strings.getLang('tyflatlist_name'),
             value: this.state.name,
-            placeholder: '输入名字',
+            placeholder: Strings.getLang('tyflatlist_entername'),
             onChangeText: name => this.setState({ name }),
           },
           {
             key: 1,
-            title: `姓氏`,
+            title: Strings.getLang('tyflatlist_lastname'),
             value: this.state.surname,
-            placeholder: '输入姓氏',
+            placeholder: Strings.getLang('tyflatlist_enter_lastname'),
             onChangeText: surname => this.setState({ surname }),
           },
           {
             key: 2,
-            title: `学校`,
+            title: Strings.getLang('tyflatlist_school'),
             value: this.state.school,
-            placeholder: '输入学校名称',
+            placeholder: Strings.getLang('tyflatlist_enter_schoolname'),
             onChangeText: school => this.setState({ school }),
           },
         ],

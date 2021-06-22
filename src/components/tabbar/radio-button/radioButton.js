@@ -1,18 +1,27 @@
 /* eslint-disable react/require-default-props */
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { TouchableOpacity, Text, ViewPropTypes, StyleSheet } from 'react-native';
+import { TouchableOpacity, Text, ViewPropTypes, StyleSheet, View } from 'react-native';
 import PropTypes from 'prop-types';
 import TYText from '../../TYText';
 
 const styles = StyleSheet.create({
   textStyle: {
-    color: '#fff',
+    color: '#9CA3A9',
     textAlign: 'center',
     backgroundColor: 'transparent',
+    fontSize: 14,
+    fontWeight: '400',
   },
   activeTextStyle: {
-    color: '#5190F3',
+    color: '#57BCFB',
+    fontWeight: '500',
+  },
+  circleStyle: {
+    width: 4,
+    height: 4,
+    borderRadius: 2,
+    backgroundColor: '#57BCFB',
   },
 });
 
@@ -24,8 +33,10 @@ const RadioButton = props => {
     isActive,
     textStyle,
     activeTextStyle,
+    circleStyle,
     accessibilityLabel,
     textAccessibilityLabel,
+    type,
   } = props;
   const customTextStyle = [
     styles.textStyle,
@@ -34,15 +45,23 @@ const RadioButton = props => {
     isActive && activeTextStyle && activeTextStyle,
   ];
   return (
-    <TouchableOpacity onPress={onItemPress} style={style} accessibilityLabel={accessibilityLabel}>
+    <TouchableOpacity
+      onPress={onItemPress}
+      style={[{ alignItems: 'center', justifyContent: 'center' }, style]}
+      accessibilityLabel={accessibilityLabel}
+    >
       {typeof title === 'string' || typeof title === 'number' ? (
-        <TYText
-          style={customTextStyle}
-          numberOfLines={1}
-          accessibilityLabel={textAccessibilityLabel}
-        >
-          {title}
-        </TYText>
+        isActive || type === 'radio' ? (
+          <TYText
+            style={customTextStyle}
+            numberOfLines={1}
+            accessibilityLabel={textAccessibilityLabel}
+          >
+            {title}
+          </TYText>
+        ) : (
+          <View style={[styles.circleStyle, circleStyle]} />
+        )
       ) : (
         title
       )}
@@ -62,6 +81,8 @@ RadioButton.propTypes = {
   activeTextStyle: Text.propTypes.style,
 
   onItemPress: PropTypes.func.isRequired,
+  type: PropTypes.oneOfType([PropTypes.oneOf(['radio', 'radioCircle']), PropTypes.string]),
+  circleStyle: ViewPropTypes.style,
 };
 
 RadioButton.defaultProps = {
@@ -69,6 +90,8 @@ RadioButton.defaultProps = {
   style: {},
   textStyle: {},
   activeTextStyle: {},
+  type: 'radio',
+  circleStyle: {},
 };
 
 export default RadioButton;

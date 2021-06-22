@@ -5,6 +5,9 @@ import PropTypes from 'prop-types';
 import defaultLocale from './locale/en_US';
 import cnLocale from './locale/zh_CN';
 import Picker from '../picker-view';
+import { RatioUtils } from '../../utils';
+
+const { convertX: cx } = RatioUtils;
 
 const DATETIME = 'datetime';
 const DATE = 'date';
@@ -511,6 +514,14 @@ class DatePicker extends React.Component {
 
   render() {
     const { value, cols } = this.getIndexAndCols();
+    let pickerFontSize = cx(30);
+    if (cols.length < 3) {
+      pickerFontSize = cx(30);
+    } else if (cols.length === 3) {
+      pickerFontSize = cx(27);
+    } else {
+      pickerFontSize = cx(24);
+    }
     const {
       locale,
       mode,
@@ -534,19 +545,19 @@ class DatePicker extends React.Component {
       paddingLeft: 5,
       paddingRight: 5,
       backgroundColor: '#fff',
-      height: 200,
+      height: 216,
     };
     return (
       <View style={[multiStyle, style]}>
         {cols.map((pItem, pindex) => (
           <Picker
+            theme={{ fontColor: pickerFontColor, fontSize: pickerFontSize }}
             {...PickerProps}
             style={{ flex: 1 }}
             key={pItem.key}
             accessibilityLabel={`${accessibilityLabel}_${capitalized(pItem.key)}`}
             // disabled={disabled}
             loop={pItem.key !== 'ampm' && loop}
-            theme={{ fontColor: pickerFontColor }}
             selectedItemTextColor={pickerFontColor}
             itemStyle={StyleSheet.flatten([{ color: pickerFontColor }, PickerProps.itemStyle])}
             selectedValue={value[pindex]}

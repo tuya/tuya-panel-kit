@@ -10,10 +10,15 @@ import {
   Text,
   NativeModules,
 } from 'react-native';
-import { NavigationContainer, useNavigation, useNavigationState } from '@react-navigation/native';
+import {
+  NavigationContainer,
+  useNavigation,
+  useNavigationState,
+  DefaultTheme,
+} from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import 'react-native-gesture-handler';
-import TransitionPresets from './TransitionPresets';
+import { SlideFromRightIOS } from './TransitionPresets';
 import { TYSdk } from '../../../TYNativeApi';
 
 import MaskView from '../../modal/portalOut';
@@ -23,6 +28,8 @@ import TYNativeModules, { getRssi } from '../api';
 import AnimatedModal from '../detect-net-modal';
 import Strings from '../../i18n/strings';
 import { CoreUtils, RatioUtils } from '../../../utils';
+
+/* eslint-disable max-len */
 
 export const moreIcon =
   'M353.152 237.76a52.736 52.736 0 0 0 1.28 75.776l210.432 196.352-204.16 202.944a52.928 52.928 0 0 0-0.64 74.496 51.712 51.712 0 0 0 73.6 0.512l230.144-229.568a64 64 0 0 0-0.256-90.88l-232.96-229.888a54.912 54.912 0 0 0-77.44 0.256z';
@@ -82,14 +89,13 @@ const Stack = createStackNavigator();
 export default function createNavigator({ router, screenOptions }) {
   const defaultScreenOptions = {
     cardOverlayEnabled: true,
-    ...TransitionPresets.SlideFromRightIOS,
+    ...SlideFromRightIOS,
   };
 
   return class Navigator extends PureComponent {
     static propTypes = {
       devInfo: PropTypes.object.isRequired,
     };
-    _navigation = {};
 
     /**
      * 推送到云端的事件名
@@ -346,16 +352,25 @@ export default function createNavigator({ router, screenOptions }) {
       return options;
     };
 
+    _navigation = {};
+
     render() {
       const { modalVisible } = this.state;
 
       return (
         <View style={{ flex: 1 }}>
-          <NavigationContainer onStateChange={this.handleNavigationStateChange}>
+          <NavigationContainer
+            theme={{
+              ...DefaultTheme,
+              colors: { ...DefaultTheme.colors, background: 'transparent' },
+            }}
+            onStateChange={this.handleNavigationStateChange}
+          >
             <Stack.Navigator
               initialRouteName="main"
               screenOptions={({ route, navigation }) => {
                 this._navigation = navigation;
+                TYSdk.applyNavigator(navigation);
                 const options = this.getScreenOptions(
                   { route, navigation },
                   screenOptions,

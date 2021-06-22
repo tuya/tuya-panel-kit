@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import { TYFlatList, Dialog, TYSdk } from 'tuya-panel-kit';
+import Strings from '../../i18n';
 
 export default class DialogScene extends Component {
   state = {
@@ -18,9 +19,9 @@ export default class DialogScene extends Component {
         onPress: () => {
           Dialog.alert(
             {
-              title: '标题',
-              subTitle: '副标题',
-              confirmText: '确认',
+              title: Strings.getLang('dialog_title'),
+              subTitle: Strings.getLang('dialog_sub_title'),
+              confirmText: Strings.getLang('dialog_confirm'),
               onConfirm: (data, { close }) => {
                 close();
               },
@@ -42,11 +43,11 @@ export default class DialogScene extends Component {
         onPress: () => {
           Dialog.confirm({
             title:
-              '这是标题这是标题这是标题这是标题这是标题这是标题这是标题这是标题这是标题这是标题这是标题这是标题',
+              Strings.getLang('dialog_long_title'),
             subTitle:
-              '这是内容这是内容这是内容这是内容这这是内容这是内容是内容这是内容这是内容这是内容这是内容这这是内容这是内容是内容这是内容这是内容这是内容这是内容这这是内容这是内容是内容',
-            cancelText: '取消',
-            confirmText: '确认',
+              Strings.getLang('dialog_long_sub_title'),
+            cancelText: Strings.getLang('dialog_cancel'),
+            confirmText: Strings.getLang('dialog_confirm'),
             onConfirm: (data, { close }) => {
               close();
             },
@@ -59,10 +60,10 @@ export default class DialogScene extends Component {
         onPress: () => {
           Dialog.confirm({
             imageSource: require('../../res/Logo.png'),
-            title: '标题名称',
-            subTitle: '这里展示辅助信息',
-            cancelText: '取消',
-            confirmText: '确认',
+            title: Strings.getLang('dialog_title_name'),
+            subTitle: Strings.getLang('dialog_supplementary_information'),
+            cancelText: Strings.getLang('dialog_cancel'),
+            confirmText: Strings.getLang('dialog_confirm'),
             onConfirm: (data, { close }) => {
               close();
             },
@@ -74,9 +75,9 @@ export default class DialogScene extends Component {
         title: 'Dialog.prompt(UnControlled)',
         onPress: () => {
           Dialog.prompt({
-            title: '非受控输入框',
-            cancelText: '取消',
-            confirmText: '确认',
+            title: Strings.getLang('dialog_uncontrolled_input_box'),
+            cancelText: Strings.getLang('dialog_cancel'),
+            confirmText: Strings.getLang('dialog_confirm'),
             defaultValue: this.state.promptUnControlled,
             placeholder: 'Password',
             onConfirm: text => {
@@ -92,10 +93,10 @@ export default class DialogScene extends Component {
         title: 'Dialog.prompt(Controlled)',
         onPress: () => {
           Dialog.prompt({
-            title: '受控输入框',
-            subTitle: '副标题',
-            cancelText: '取消',
-            confirmText: '确认',
+            title: Strings.getLang('dialog_controlled_input_box'),
+            subTitle: Strings.getLang('dialog_sub_title'),
+            cancelText: Strings.getLang('dialog_cancel'),
+            confirmText: Strings.getLang('dialog_confirm'),
             value: this.state.promptControlled,
             placeholder: 'Password',
             onChangeText: text => {
@@ -118,26 +119,26 @@ export default class DialogScene extends Component {
       },
       {
         key: 'checkbox.radio',
-        title: 'Dialog.checkbox(radio)',
+        title: 'Dialog.checkbox(Radio)',
         onPress: () => {
           Dialog.checkbox({
             title: 'Required',
-            cancelText: '取消',
-            confirmText: '确认',
+            cancelText: Strings.getLang('dialog_cancel'),
+            confirmText: Strings.getLang('dialog_confirm'),
             type: 'radio',
             value: this.state.checkValueRadio,
             dataSource: [
               {
                 value: 'code1',
-                title: '传感器选择',
+                title: Strings.getLang('dialog_sensor_selection'),
               },
               {
                 value: 'code2',
-                title: '房间传感器校准',
+                title: Strings.getLang('dialog_room_sensor'),
               },
               {
                 value: 'code3',
-                title: '地板传感器校准',
+                title: Strings.getLang('dialog_floor_sensor'),
                 iconSize: 20,
                 Icon: 'warning',
                 reverse: true,
@@ -153,34 +154,34 @@ export default class DialogScene extends Component {
       },
       {
         key: 'checkbox.switch',
-        title: 'Dialog.checkbox(switch)',
+        title: 'Dialog.checkbox(Switch)',
         onPress: () => {
           Dialog.checkbox({
             title: 'Required',
-            cancelText: '取消',
-            confirmText: '确认',
+            cancelText: Strings.getLang('dialog_cancel'),
+            confirmText: Strings.getLang('dialog_confirm'),
             type: 'switch',
             value: this.state.checkValueSwitch,
             dataSource: [
               {
                 value: 'code1',
-                title: '传感器选择',
+                title: Strings.getLang('dialog_sensor_selection'),
               },
               {
                 value: 'code2',
-                title: '房间传感器校准',
+                title: Strings.getLang('dialog_room_sensor'),
               },
               {
                 value: 'code3',
-                title: '地板传感器校准',
+                title: Strings.getLang('dialog_floor_sensor'),
               },
               {
                 value: 'code4',
-                title: '自适应功能',
+                title: Strings.getLang('dialog_adaptive_function'),
               },
               {
                 value: 'code5',
-                title: '防冻保护功能',
+                title: Strings.getLang('dialog_frost_protection_function'),
                 iconSize: 20,
                 Icon: 'warning',
                 reverse: true,
@@ -188,7 +189,7 @@ export default class DialogScene extends Component {
               },
               {
                 value: 'code6',
-                title: '测试滚动功能',
+                title: Strings.getLang('dialog_scrolling_function'),
                 reverse: true,
               },
             ],
@@ -204,17 +205,17 @@ export default class DialogScene extends Component {
         title: 'Dialog.list',
         onPress: () => {
           Dialog.list({
-            title: '这是标题',
-            subTitle: '这是内容',
+            title: Strings.getLang('dialog_title'),
+            subTitle: Strings.getLang('dialog_sub_title'),
             dataSource: new Array(6).fill(1).map((_, idx) => ({
-              title: idx === 0 ? '点我关闭' : `选项${idx}`,
+              title: idx === 0 ? Strings.getLang('click_me') : `${Strings.getLang('dialog_option')}${idx}`,
               onPress: () => {
                 idx === 0 && Dialog.close();
                 console.log('Press', idx);
               },
             })),
-            cancelText: '取消',
-            confirmText: '确认',
+            cancelText: Strings.getLang('dialog_cancel'),
+            confirmText: Strings.getLang('dialog_confirm'),
             onConfirm: (value, { close }) => {
               close();
             },
@@ -241,11 +242,11 @@ export default class DialogScene extends Component {
         onPress: () => {
           Dialog.custom({
             title: 'Custom',
-            cancelText: '取消',
-            confirmText: '确认',
+            cancelText: Strings.getLang('dialog_cancel'),
+            confirmText: Strings.getLang('dialog_confirm'),
             content: (
               <View style={{ height: 300, alignItems: 'center', justifyContent: 'center' }}>
-                <Text style={{ fontSize: 32, color: '#000' }}>自定义内容</Text>
+                <Text style={{ fontSize: 32, color: '#000' }}> {Strings.getLang('dialog_custom_content')} </Text>
               </View>
             ),
             onConfirm: (value, { close }) => {
@@ -265,9 +266,9 @@ export default class DialogScene extends Component {
         onPress: () => {
           Dialog.alert(
             {
-              title: '这是第一个弹框标题',
-              subTitle: '这是第一个弹框副标题',
-              confirmText: '确认',
+              title: Strings.getLang('dialog_bullet_title1'),
+              subTitle: Strings.getLang('dialog_bullet_subtitle1'),
+              confirmText: Strings.getLang('dialog_confirm'),
               onConfirm: (data, { close }) => {
                 close();
               },
@@ -280,10 +281,10 @@ export default class DialogScene extends Component {
 
           Dialog.confirm({
             titleNumberOfLines: 1,
-            title: '这是第二个弹框标题',
-            subTitle: '这是第二个弹框副标题',
-            cancelText: '取消',
-            confirmText: '确认',
+            title: Strings.getLang('dialog_bullet_title2'),
+            subTitle: Strings.getLang('dialog_bullet_subtitle2'),
+            cancelText: Strings.getLang('dialog_cancel'),
+            confirmText: Strings.getLang('dialog_confirm'),
             onConfirm: (data, { close }) => {
               close();
             },

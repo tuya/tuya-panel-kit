@@ -1,32 +1,33 @@
 import React, { Component } from 'react';
 import { TYFlatList } from 'tuya-panel-kit';
+import Strings from '../../i18n';
 
 export default class TYFlatListWithValueScene extends Component {
   state = {
     boolValue: true,
-    strValue: '随机数字',
+    strValue: Strings.getLang('tyflatlist_boolean_value'),
   };
 
   get data() {
     return [
       {
         key: 1,
-        title: '布尔型value',
+        title: Strings.getLang('tyflatlist_boolean_value'),
         value: this.state.boolValue,
         onValueChange: boolValue => this.setState({ boolValue }),
       },
       {
         key: 2,
-        title: '字符型value',
+        title: Strings.getLang('tyflatlist_character_value'),
         value: this.state.strValue,
         onPress: () =>
           this.setState({
-            strValue: `随机数字: ${Math.random().toFixed(2) * 100}`,
+            strValue: `${Strings.getLang('tyflatlist_random_number')}${Math.random().toFixed(2) * 100}`,
           }),
       },
       {
         key: 3,
-        title: '定制SwitchButton',
+        title: Strings.getLang('tyflatlist_custom_switchButton'),
         value: this.state.boolValue,
         onValueChange: boolValue => this.setState({ boolValue }),
         SwitchButtonProps: {
@@ -35,12 +36,12 @@ export default class TYFlatListWithValueScene extends Component {
       },
       {
         key: 4,
-        title: '我不需要重新渲染也不可点击',
+        title: Strings.getLang('tyflatlist_norender'),
         disabled: true,
         value: this.state.strValue,
         onPress: () =>
           this.setState({
-            strValue: `随机数字: ${Math.random().toFixed(2) * 100}`,
+            strValue: `${Strings.getLang('tyflatlist_random_number')}${Math.random().toFixed(2) * 100}`,
           }),
         needUpdate: false,
       },

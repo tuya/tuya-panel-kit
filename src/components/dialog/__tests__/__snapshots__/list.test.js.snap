@@ -170,6 +170,7 @@ exports[`List Component basic render 1`] = `
       renderItem={[Function]}
       scrollEnabled={true}
       scrollEventThrottle={50}
+      showsVerticalScrollIndicator={false}
       stickyHeaderIndices={Array []}
       style={
         Array [

@@ -21,6 +21,8 @@ import {
   StyledTouchView,
   backIcon,
   StyledBackText,
+  StyleDividerView,
+  StyleDivider,
 } from './styled';
 
 export const MOTION_TYPES = Object.keys(Motion)
@@ -455,6 +457,9 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
       let element = (
         <StyledContainer style={wrapperStyle}>
           {this.renderTitle()}
+          <StyleDividerView>
+            <StyleDivider />
+          </StyleDividerView>
           <WrappedComponent
             {...props}
             switchValue={typeof switchValue === 'undefined' ? true : switchValue}
