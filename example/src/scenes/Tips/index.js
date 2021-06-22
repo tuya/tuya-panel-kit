@@ -3,6 +3,7 @@ import { TYSdk, TYFlatList } from 'tuya-panel-kit';
 import { subRouters } from '../../config/routers';
 import Special from './SpecialShow';
 import Basic from './BasicShow';
+import Strings from '../../i18n';
 
 export default class ToastScene extends Component {
   get data() {
@@ -23,8 +24,8 @@ export default class ToastScene extends Component {
   static Basic = Basic;
 
   titleMap = {
-    'Tips.Basic': '角标的六种显示位置',
-    'Tips.Special': '定位气泡',
+    'Tips.Basic': Strings.getLang('tips_positions'),
+    'Tips.Special': Strings.getLang('tips_bubbles'),
   };
 
   render() {

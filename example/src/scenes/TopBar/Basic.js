@@ -1,6 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import { TYSdk, TopBar } from 'tuya-panel-kit';
+import Strings from '../../i18n';
 
 const TYNative = TYSdk.native;
 
@@ -32,7 +33,7 @@ export default () => (
     {/* 文字版Action */}
     <TopBar
       style={{ marginTop: 24 }}
-      title="产品文案"
+      title={Strings.getLang('topbar_copywriting')}
       leftActions={[
         {
           name: 'close',
@@ -41,7 +42,7 @@ export default () => (
       ]}
       actions={[
         {
-          source: '最多字符',
+          source: Strings.getLang('topbar_maximum'),
           onPress: () => {},
         },
       ]}
@@ -51,16 +52,16 @@ export default () => (
     {/* 纯文字版Action */}
     <TopBar
       style={{ marginTop: 24 }}
-      title="产品文案"
+      title={Strings.getLang('topbar_copywriting')}
       leftActions={[
         {
-          source: '最多字符',
+          source: Strings.getLang('topbar_maximum'),
           onPress: () => {},
         },
       ]}
       actions={[
         {
-          source: '最多字符',
+          source: Strings.getLang('topbar_maximum'),
           onPress: () => {},
         },
       ]}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { Modal } from 'tuya-panel-kit';
+import Strings from '../../i18n';
 
 export default class DatePickerModalScene extends React.Component {
   constructor(props) {
@@ -34,11 +35,11 @@ export default class DatePickerModalScene extends React.Component {
           onMaskPress={this.closeModal}
           onCancel={this.closeModal}
           onConfirm={this.handleConfirm}
-          title="生日"
-          cancelText="取消"
-          confirmText="确认"
-          hourText="小时"
-          minuteText="分钟"
+          title={Strings.getLang('modal_birthday')}
+          cancelText={Strings.getLang('dialog_cancel')}
+          confirmText={Strings.getLang('dialog_confirm')}
+          hourText={Strings.getLang('modal_hour')}
+          minuteText={Strings.getLang('modal_minute')}
           defaultDate={this.state.date}
           mode="datetime"
           minDate={new Date(1918, 0, 1, 0, 0, 0)}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { TYSectionList } from 'tuya-panel-kit';
+import Strings from '../../i18n';
 
 export default class TYSectionListSwitchItemScene extends Component {
   constructor(props) {
@@ -12,7 +13,7 @@ export default class TYSectionListSwitchItemScene extends Component {
   get sections() {
     return [
       {
-        title: '开关列表项',
+        title: Strings.getLang('tysectionlist_switch_list'),
         data: [
           {
             key: 0,
@@ -25,25 +26,25 @@ export default class TYSectionListSwitchItemScene extends Component {
             key: 1,
             Icon: 'warning',
             title: 'Warning',
-            subTitle: '哈哈哈',
+            subTitle: 'hahaha',
             value: this.state.value,
             onValueChange: value => this.setState({ value }),
           },
         ],
       },
       {
-        title: '开关列表项适配',
+        title: Strings.getLang('tysectionlist_switch_adaptation'),
         data: [
           {
             key: 0,
-            title: '列表标题过长的情况列表标题过长的情况列表标题过长的情况',
+            title: `${Strings.getLang('tysectionlist_longtitle')}${Strings.getLang('tysectionlist_longtitle')}${Strings.getLang('tysectionlist_longtitle')}`,
             value: this.state.value,
             onValueChange: value => this.setState({ value }),
           },
           {
             key: 1,
-            title: '列表标题过长的情况列表标题过长的情况列表标题过长的情况',
-            subTitle: '这是这个列表的详细信息内容过长的情况这是这个列表的详细信息内容过长的情况',
+            title: `${Strings.getLang('tysectionlist_longtitle')}${Strings.getLang('tysectionlist_longtitle')}${Strings.getLang('tysectionlist_longtitle')}`,
+            subTitle: `${Strings.getLang('tysectionlist_information')}${Strings.getLang('tysectionlist_information')}${Strings.getLang('tysectionlist_information')}`,
             value: this.state.value,
             onValueChange: value => this.setState({ value }),
           },

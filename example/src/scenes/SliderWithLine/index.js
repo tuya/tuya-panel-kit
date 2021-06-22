@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
 import { View } from 'react-native';
+import strings from 'src/i18n/strings';
 import { Divider, TYText, SliderWithLine } from 'tuya-panel-kit';
+import Strings from '../../i18n';
 
 class SliderWithLineScene extends PureComponent {
   setText1 = data => {
@@ -18,7 +20,7 @@ class SliderWithLineScene extends PureComponent {
   render() {
     return (
       <View style={{ flex: 1, alignItems: 'center' }}>
-        <TYText>双边</TYText>
+        <TYText>{Strings.getLang('slider_bilateral')}</TYText>
         <TYText
           ref={ref => {
             this.text1Ref = ref;
@@ -34,7 +36,7 @@ class SliderWithLineScene extends PureComponent {
           style={{ width: 330, height: 68, borderRadius: 16 }}
         />
         <Divider style={{ marginVertical: 20 }} />
-        <TYText>单边</TYText>
+        <TYText>{Strings.getLang('slider_unilateral')}</TYText>
         <TYText
           ref={ref => {
             this.text2Ref = ref;

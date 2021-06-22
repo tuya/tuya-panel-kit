@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { TYSdk, TYFlatList } from 'tuya-panel-kit';
+import Strings from '../../i18n';
 
 const TYNative = TYSdk.native;
 
@@ -35,7 +36,7 @@ export default class TYFlatListBasicScene extends Component {
     return (
       <View style={{ backgroundColor: 'red', height: 100 }}>
         <Text style={styles.title}>
-          {`我是定制的列表项${item.title}，我下面那个是更改了样式的列表项`}
+          {`${Strings.getLang('tyflatlist_customized')}${item.title}${Strings.getLang('tyflatlist_changedstyle')}`}
         </Text>
       </View>
     );

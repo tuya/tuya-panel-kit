@@ -8,6 +8,7 @@ import SliderItem from './SliderItem';
 import SwitchItem from './SwitchItem';
 import ImageItem from './ImageItem';
 import ThemeItem from './ThemeItem';
+import Strings from '../../i18n';
 
 export default class TYSectionListScene extends Component {
   static Basic = Basic;
@@ -34,13 +35,13 @@ export default class TYSectionListScene extends Component {
   }
 
   titleMap = {
-    'TYSectionList.Basic': '基础列表',
-    'TYSectionList.CheckboxItem': '选择框列表',
-    'TYSectionList.InputItem': '输入框列表',
-    'TYSectionList.SliderItem': '滑块列表',
-    'TYSectionList.SwitchItem': '开关列表',
-    'TYSectionList.ImageItem': '图文列表',
-    'TYSectionList.ThemeItem': '测试本地主题',
+    'TYSectionList.Basic': Strings.getLang('tysectionlist_basic_list'),
+    'TYSectionList.CheckboxItem': Strings.getLang('tysectionlist_selectbox_list'),
+    'TYSectionList.InputItem': Strings.getLang('tysectionlist_inputbox_list'),
+    'TYSectionList.SliderItem': Strings.getLang('tysectionlist_slider_list'),
+    'TYSectionList.SwitchItem': Strings.getLang('tysectionlist_switch_list'),
+    'TYSectionList.ImageItem': Strings.getLang('tysectionlist_graphic_list'),
+    'TYSectionList.ThemeItem': Strings.getLang('switch_test_localtheme'),
   };
 
   render() {
