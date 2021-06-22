@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { View, StyleSheet, Image } from 'react-native';
 import { Tips, Button, Utils, TYText } from 'tuya-panel-kit';
+import Strings from '../../i18n';
 
 const { convertX: cx } = Utils.RatioUtils;
 const Res = require('../../res/button.png');
@@ -23,7 +24,7 @@ class TipsView extends PureComponent {
         <Button
           style={styles.button}
           wrapperStyle={{ position: 'absolute', top: cx(500), left: cx(20) }}
-          text="Tips气泡组件"
+          text={Strings.getLang('tips_component')}
           textStyle={styles.text}
           onPress={() => this.setState({ show: !this.state.show })}
         />
@@ -34,7 +35,7 @@ class TipsView extends PureComponent {
           tipStyle={{ position: 'absolute', top: cx(430), left: cx(20) }}
         >
           <TYText
-            text="我是气泡组件"
+            text={Strings.getLang('tips_bubble_component')}
             style={{ alignItems: 'center', justifyContent: 'center', fontSize: cx(28) }}
           />
         </Tips>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import { Slider, TYText } from 'tuya-panel-kit';
+import Strings from '../../i18n';
 
 export default class SliderHorizontalScene extends Component {
   state = {

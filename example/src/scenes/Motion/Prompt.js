@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Button, Dialog, Utils } from 'tuya-panel-kit';
+import Strings from '../../i18n';
 
 const { winWidth } = Utils.RatioUtils;
 
@@ -11,9 +12,9 @@ class MotionPromptScene extends React.PureComponent {
 
   _openDialog = () => {
     Dialog.prompt({
-      title: '非受控输入框',
-      cancelText: '取消',
-      confirmText: '确认',
+      title: Strings.getLang('dialog_uncontrolled_input_box'),
+      cancelText: Strings.getLang('dialog_cancel'),
+      confirmText: Strings.getLang('dialog_confirm'),
       defaultValue: this.state.promptUnControlled,
       placeholder: 'Password',
       onConfirm: (text, { close }) => {
@@ -36,7 +37,7 @@ class MotionPromptScene extends React.PureComponent {
       <View style={{ flex: 1 }}>
         <Button
           style={styles.button}
-          text="Motion.ScaleFadeIn 应用于 Dialog"
+          text={Strings.getLang('motion_prompt')}
           textStyle={styles.text}
           onPress={this._openDialog}
         />

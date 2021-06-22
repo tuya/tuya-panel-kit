@@ -21,7 +21,7 @@ export default class TYFlatListSwitchItemScene extends Component {
         key: 1,
         Icon: 'warning',
         title: 'Warning',
-        subTitle: '哈哈哈',
+        subTitle: 'hahaha',
         value: this.state.value,
         onValueChange: value => this.setState({ value }),
       },

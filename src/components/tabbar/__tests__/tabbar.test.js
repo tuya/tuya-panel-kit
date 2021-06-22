@@ -35,12 +35,18 @@ describe('Tabbar Component', () => {
   it('onChange', () => {
     const wrapper = mount(<TabBar tabs={tabs} type="radio" />);
     const target2 = wrapper.findWhere(c => !!c.prop('onChange'));
-    target2.at(1).props().onChange(1);
+    target2
+      .at(1)
+      .props()
+      .onChange(1);
   });
   it('events trigger', () => {
     const wrapper = mount(<TabBar tabs={tabs} />);
     const target = wrapper.findWhere(c => !!c.prop('onPress'));
-    target.first().props().onPress();
+    target
+      .first()
+      .props()
+      .onPress();
     target
       .first()
       .props()
@@ -116,6 +122,20 @@ describe('Tabbar Component', () => {
             marginTop: 10,
           }}
           isUnderlineCenter={false}
+        />
+      )
+      .toJSON();
+    expect(component).toMatchSnapshot();
+  });
+  it('type radioCircle', () => {
+    const component = renderer
+      .create(
+        <TabBar
+          type="radioCircle"
+          tabs={tabRadios}
+          activeKey="2"
+          onChange={jest.fn()}
+          activeColor="#57BCFB"
         />
       )
       .toJSON();

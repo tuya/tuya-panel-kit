@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { Modal } from 'tuya-panel-kit';
+import Strings from '../../i18n';
 
 export default class CountdownModalScene extends React.Component {
   constructor(props) {
@@ -51,11 +52,11 @@ export default class CountdownModalScene extends React.Component {
           onDismiss={() => console.log('dismiss')}
           onCancel={this.closeModal}
           onConfirm={this.handleConfirm}
-          title="倒计时"
-          cancelText="取消"
-          confirmText="确认"
-          hourText="小时"
-          minuteText="分钟"
+          title={Strings.getLang('modal_countdown')}
+          cancelText={Strings.getLang('dialog_cancel')}
+          confirmText={Strings.getLang('dialog_confirm')}
+          hourText={Strings.getLang('modal_hour')}
+          minuteText={Strings.getLang('modal_minute')}
         />
       </View>
     );

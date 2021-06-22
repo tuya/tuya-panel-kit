@@ -2,6 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import { Tabs } from 'tuya-panel-kit';
 import TesterTitle from '../../components/TesterTitle';
+import Strings from '../../i18n';
 
 export default class OnlyTabsScene extends React.PureComponent {
   constructor(props) {
@@ -10,18 +11,18 @@ export default class OnlyTabsScene extends React.PureComponent {
       activeKey1: '1',
       activeKey2: '3',
       d1: [
-        { value: '1', label: '探测器', disabled: true },
-        { value: '2', label: '遥控器', disabled: true },
+        { value: '1', label: Strings.getLang('tabs_detector'), disabled: true },
+        { value: '2', label: Strings.getLang('tabs_remote_control'), disabled: true },
         { value: '3', label: 'RFID' },
-        { value: '4', label: '卫生间', disabled: true },
+        { value: '4', label: Strings.getLang('tabs_bathroom'), disabled: true },
       ],
       d2: [
-        { value: '1', label: '所有设备' },
-        { value: '2', label: '卧室' },
-        { value: '3', label: '厨房' },
-        { value: '4', label: '卫生间' },
-        { value: '5', label: '客厅' },
-        { value: '6', label: '书房' },
+        { value: '1', label: Strings.getLang('tabs_all_equipment') },
+        { value: '2', label: Strings.getLang('tabs_bedroom') },
+        { value: '3', label: Strings.getLang('tabs_kitchen') },
+        { value: '4', label: Strings.getLang('tabs_bathroom') },
+        { value: '5', label: Strings.getLang('tabs_living_room') },
+        { value: '6', label: Strings.getLang('tabs_study_room') },
         { value: '7', label: '7777777' },
         { value: '8', label: '88888888' },
       ],
@@ -39,13 +40,13 @@ export default class OnlyTabsScene extends React.PureComponent {
   render() {
     return (
       <View style={{ flex: 1 }}>
-        <TesterTitle title="基础Tabs" />
+        <TesterTitle title={Strings.getLang('tabs_basic')}/>
         <Tabs
           activeKey={this.state.activeKey1}
           dataSource={this.state.d1}
           onChange={this._handleD1Change}
         />
-        <TesterTitle title="多屏Tabs" />
+        <TesterTitle title={Strings.getLang('tabs_multi_screen')} />
         <Tabs
           activeKey={this.state.activeKey2}
           dataSource={this.state.d2}
@@ -54,13 +55,13 @@ export default class OnlyTabsScene extends React.PureComponent {
           maxItem={3}
           extraSpace={50}
         />
-        <TesterTitle title="基础Tabs（无状态组件）" />
+        <TesterTitle title={Strings.getLang('tabs_basic_stateless')} />
         <Tabs dataSource={this.state.d1} />
-        <TesterTitle title="多屏Tabs（无状态组件）" />
+        <TesterTitle title={Strings.getLang('tabs_multi_screen_stateless')} />
         <Tabs dataSource={this.state.d2} />
-        <TesterTitle title="下划线宽度固定的Tabs" />
+        <TesterTitle title={Strings.getLang('tabs_fixed_underline')}/>
         <Tabs underlineWidth={30} dataSource={this.state.d2} />
-        <TesterTitle title="自定义宽度的Tabs" />
+        <TesterTitle title={Strings.getLang('tabs_custom_width')} />
         <Tabs style={{ width: 300, alignSelf: 'center' }} dataSource={this.state.d2} />
       </View>
     );

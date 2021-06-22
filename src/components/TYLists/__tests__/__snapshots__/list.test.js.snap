@@ -70,6 +70,7 @@ exports[`List Component basic render 1`] = `
   onScrollEndDrag={[Function]}
   renderItem={[Function]}
   scrollEventThrottle={50}
+  showsVerticalScrollIndicator={false}
   stickyHeaderIndices={Array []}
   updateCellsBatchingPeriod={50}
   useART={false}
@@ -298,6 +299,7 @@ exports[`List Component should able to use FlatList props 1`] = `
   onScrollEndDrag={[Function]}
   renderItem={[Function]}
   scrollEventThrottle={50}
+  showsVerticalScrollIndicator={false}
   stickyHeaderIndices={Array []}
   updateCellsBatchingPeriod={50}
   useART={false}
@@ -537,6 +539,7 @@ exports[`List Component should render with Checkbox 1`] = `
   onScrollEndDrag={[Function]}
   renderItem={[Function]}
   scrollEventThrottle={50}
+  showsVerticalScrollIndicator={false}
   stickyHeaderIndices={Array []}
   updateCellsBatchingPeriod={50}
   useART={false}
@@ -1251,6 +1254,7 @@ exports[`List Component should render with InputItem 1`] = `
   onScrollEndDrag={[Function]}
   renderItem={[Function]}
   scrollEventThrottle={50}
+  showsVerticalScrollIndicator={false}
   stickyHeaderIndices={Array []}
   updateCellsBatchingPeriod={50}
   useART={false}
@@ -1686,6 +1690,7 @@ exports[`List Component should render with SliderItem 1`] = `
   onScrollEndDrag={[Function]}
   renderItem={[Function]}
   scrollEventThrottle={50}
+  showsVerticalScrollIndicator={false}
   stickyHeaderIndices={Array []}
   updateCellsBatchingPeriod={50}
   useART={false}
@@ -1824,6 +1829,7 @@ exports[`List Component should render with SliderItem 1`] = `
                   "backgroundColor": "#3f3f3f",
                   "borderRadius": undefined,
                   "height": undefined,
+                  "justifyContent": "center",
                   "opacity": 0,
                   "overflow": "hidden",
                   "position": "absolute",
@@ -2005,6 +2011,7 @@ exports[`List Component should render with SliderItem 1`] = `
                   "backgroundColor": "#3f3f3f",
                   "borderRadius": undefined,
                   "height": undefined,
+                  "justifyContent": "center",
                   "opacity": 0,
                   "overflow": "hidden",
                   "position": "absolute",
@@ -2373,6 +2380,7 @@ exports[`List Component should render with SliderItem 1`] = `
                   "backgroundColor": "#3f3f3f",
                   "borderRadius": undefined,
                   "height": undefined,
+                  "justifyContent": "center",
                   "opacity": 0,
                   "overflow": "hidden",
                   "position": "absolute",
@@ -2671,6 +2679,7 @@ exports[`List Component should render with SliderItem 1`] = `
                   "backgroundColor": "#3f3f3f",
                   "borderRadius": undefined,
                   "height": undefined,
+                  "justifyContent": "center",
                   "opacity": 0,
                   "overflow": "hidden",
                   "position": "absolute",
@@ -2890,6 +2899,7 @@ exports[`List Component should render with SliderItem 2`] = `
   onScrollEndDrag={[Function]}
   renderItem={[Function]}
   scrollEventThrottle={50}
+  showsVerticalScrollIndicator={false}
   stickyHeaderIndices={Array []}
   updateCellsBatchingPeriod={50}
   useART={false}
@@ -3010,6 +3020,7 @@ exports[`List Component should render with SliderItem 2`] = `
                   "backgroundColor": "#3f3f3f",
                   "borderRadius": undefined,
                   "height": undefined,
+                  "justifyContent": "center",
                   "opacity": 0,
                   "overflow": "hidden",
                   "position": "absolute",
@@ -3238,6 +3249,7 @@ exports[`List Component should render with SliderItem 2`] = `
                   "backgroundColor": "#3f3f3f",
                   "borderRadius": undefined,
                   "height": undefined,
+                  "justifyContent": "center",
                   "opacity": 0,
                   "overflow": "hidden",
                   "position": "absolute",
@@ -3405,6 +3417,7 @@ exports[`List Component should render with SliderItem 3`] = `
   onScrollEndDrag={[Function]}
   renderItem={[Function]}
   scrollEventThrottle={50}
+  showsVerticalScrollIndicator={false}
   stickyHeaderIndices={Array []}
   updateCellsBatchingPeriod={50}
   useART={false}
@@ -3509,6 +3522,7 @@ exports[`List Component should render with SliderItem 3`] = `
                   "backgroundColor": "#3f3f3f",
                   "borderRadius": undefined,
                   "height": undefined,
+                  "justifyContent": "center",
                   "opacity": 0,
                   "overflow": "hidden",
                   "position": "absolute",
@@ -3711,6 +3725,7 @@ exports[`List Component should render with SliderItem 3`] = `
                   "backgroundColor": "#3f3f3f",
                   "borderRadius": undefined,
                   "height": undefined,
+                  "justifyContent": "center",
                   "opacity": 0,
                   "overflow": "hidden",
                   "position": "absolute",
@@ -3850,6 +3865,7 @@ exports[`List Component should render with SwitchButton 1`] = `
   onScrollEndDrag={[Function]}
   renderItem={[Function]}
   scrollEventThrottle={50}
+  showsVerticalScrollIndicator={false}
   stickyHeaderIndices={Array []}
   updateCellsBatchingPeriod={50}
   useART={false}
@@ -4019,11 +4035,13 @@ exports[`List Component should render with SwitchButton 1`] = `
                 <View
                   style={
                     Object {
+                      "alignItems": "center",
                       "alignSelf": "flex-start",
                       "backgroundColor": "#fff",
                       "borderRadius": NaN,
                       "elevation": 2,
                       "height": undefined,
+                      "justifyContent": "center",
                       "position": "absolute",
                       "shadowColor": "rgba(0, 0, 0, 0.3)",
                       "shadowOffset": Object {
@@ -4221,11 +4239,13 @@ exports[`List Component should render with SwitchButton 1`] = `
                 <View
                   style={
                     Object {
+                      "alignItems": "center",
                       "alignSelf": "flex-start",
                       "backgroundColor": "#fff",
                       "borderRadius": NaN,
                       "elevation": 2,
                       "height": undefined,
+                      "justifyContent": "center",
                       "position": "absolute",
                       "shadowColor": "rgba(0, 0, 0, 0.3)",
                       "shadowOffset": Object {
@@ -4303,6 +4323,7 @@ exports[`List Component should render with custom item 1`] = `
   onScrollEndDrag={[Function]}
   renderItem={[Function]}
   scrollEventThrottle={50}
+  showsVerticalScrollIndicator={false}
   stickyHeaderIndices={Array []}
   updateCellsBatchingPeriod={50}
   useART={false}
@@ -4472,11 +4493,13 @@ exports[`List Component should render with custom item 1`] = `
                 <View
                   style={
                     Object {
+                      "alignItems": "center",
                       "alignSelf": "flex-start",
                       "backgroundColor": "#fff",
                       "borderRadius": NaN,
                       "elevation": 2,
                       "height": undefined,
+                      "justifyContent": "center",
                       "position": "absolute",
                       "shadowColor": "rgba(0, 0, 0, 0.3)",
                       "shadowOffset": Object {
@@ -4674,11 +4697,13 @@ exports[`List Component should render with custom item 1`] = `
                 <View
                   style={
                     Object {
+                      "alignItems": "center",
                       "alignSelf": "flex-start",
                       "backgroundColor": "#fff",
                       "borderRadius": NaN,
                       "elevation": 2,
                       "height": undefined,
+                      "justifyContent": "center",
                       "position": "absolute",
                       "shadowColor": "rgba(0, 0, 0, 0.3)",
                       "shadowOffset": Object {
@@ -4821,6 +4846,7 @@ exports[`TYList basic render 1`] = `
         onEndReachedThreshold={2}
         renderItem={[Function]}
         scrollEventThrottle={50}
+        showsVerticalScrollIndicator={false}
         updateCellsBatchingPeriod={50}
         useART={false}
         windowSize={21}
@@ -4876,6 +4902,7 @@ exports[`TYList basic render 1`] = `
           onEndReachedThreshold={2}
           renderItem={[Function]}
           scrollEventThrottle={50}
+          showsVerticalScrollIndicator={false}
           updateCellsBatchingPeriod={50}
           useART={false}
           viewabilityConfigCallbackPairs={Array []}
@@ -4938,6 +4965,7 @@ exports[`TYList basic render 1`] = `
             onScrollEndDrag={[Function]}
             renderItem={[Function]}
             scrollEventThrottle={50}
+            showsVerticalScrollIndicator={false}
             stickyHeaderIndices={Array []}
             updateCellsBatchingPeriod={50}
             useART={false}
@@ -5001,6 +5029,7 @@ exports[`TYList basic render 1`] = `
               onScrollEndDrag={[Function]}
               renderItem={[Function]}
               scrollEventThrottle={50}
+              showsVerticalScrollIndicator={false}
               stickyHeaderIndices={Array []}
               updateCellsBatchingPeriod={50}
               useART={false}
@@ -5064,6 +5093,7 @@ exports[`TYList basic render 1`] = `
                 onScrollEndDrag={[Function]}
                 renderItem={[Function]}
                 scrollEventThrottle={50}
+                showsVerticalScrollIndicator={false}
                 stickyHeaderIndices={Array []}
                 updateCellsBatchingPeriod={50}
                 useART={false}
@@ -5166,6 +5196,7 @@ exports[`TYList basic render 1`] = `
                           "onEndReachedThreshold": 2,
                           "renderItem": [Function],
                           "scrollEventThrottle": 50,
+                          "showsVerticalScrollIndicator": false,
                           "updateCellsBatchingPeriod": 50,
                           "useART": false,
                           "viewabilityConfigCallbackPairs": Array [],
@@ -6483,6 +6514,7 @@ exports[`TYList basic render 1`] = `
                           "onEndReachedThreshold": 2,
                           "renderItem": [Function],
                           "scrollEventThrottle": 50,
+                          "showsVerticalScrollIndicator": false,
                           "updateCellsBatchingPeriod": 50,
                           "useART": false,
                           "viewabilityConfigCallbackPairs": Array [],
@@ -7757,6 +7789,7 @@ exports[`TYList basic render value != undefined 1`] = `
         onEndReachedThreshold={2}
         renderItem={[Function]}
         scrollEventThrottle={50}
+        showsVerticalScrollIndicator={false}
         updateCellsBatchingPeriod={50}
         useART={false}
         windowSize={21}
@@ -7808,6 +7841,7 @@ exports[`TYList basic render value != undefined 1`] = `
           onEndReachedThreshold={2}
           renderItem={[Function]}
           scrollEventThrottle={50}
+          showsVerticalScrollIndicator={false}
           updateCellsBatchingPeriod={50}
           useART={false}
           viewabilityConfigCallbackPairs={Array []}
@@ -7866,6 +7900,7 @@ exports[`TYList basic render value != undefined 1`] = `
             onScrollEndDrag={[Function]}
             renderItem={[Function]}
             scrollEventThrottle={50}
+            showsVerticalScrollIndicator={false}
             stickyHeaderIndices={Array []}
             updateCellsBatchingPeriod={50}
             useART={false}
@@ -7925,6 +7960,7 @@ exports[`TYList basic render value != undefined 1`] = `
               onScrollEndDrag={[Function]}
               renderItem={[Function]}
               scrollEventThrottle={50}
+              showsVerticalScrollIndicator={false}
               stickyHeaderIndices={Array []}
               updateCellsBatchingPeriod={50}
               useART={false}
@@ -7984,6 +8020,7 @@ exports[`TYList basic render value != undefined 1`] = `
                 onScrollEndDrag={[Function]}
                 renderItem={[Function]}
                 scrollEventThrottle={50}
+                showsVerticalScrollIndicator={false}
                 stickyHeaderIndices={Array []}
                 updateCellsBatchingPeriod={50}
                 useART={false}
@@ -8080,6 +8117,7 @@ exports[`TYList basic render value != undefined 1`] = `
                           "onEndReachedThreshold": 2,
                           "renderItem": [Function],
                           "scrollEventThrottle": 50,
+                          "showsVerticalScrollIndicator": false,
                           "updateCellsBatchingPeriod": 50,
                           "useART": false,
                           "viewabilityConfigCallbackPairs": Array [],
@@ -9011,6 +9049,7 @@ exports[`TYList basic render value != undefined 1`] = `
                           "onEndReachedThreshold": 2,
                           "renderItem": [Function],
                           "scrollEventThrottle": 50,
+                          "showsVerticalScrollIndicator": false,
                           "updateCellsBatchingPeriod": 50,
                           "useART": false,
                           "viewabilityConfigCallbackPairs": Array [],
@@ -9907,6 +9946,7 @@ exports[`TYList basic render value = undefined 1`] = `
         onEndReachedThreshold={2}
         renderItem={[Function]}
         scrollEventThrottle={50}
+        showsVerticalScrollIndicator={false}
         updateCellsBatchingPeriod={50}
         useART={false}
         windowSize={21}
@@ -9958,6 +9998,7 @@ exports[`TYList basic render value = undefined 1`] = `
           onEndReachedThreshold={2}
           renderItem={[Function]}
           scrollEventThrottle={50}
+          showsVerticalScrollIndicator={false}
           updateCellsBatchingPeriod={50}
           useART={false}
           viewabilityConfigCallbackPairs={Array []}
@@ -10016,6 +10057,7 @@ exports[`TYList basic render value = undefined 1`] = `
             onScrollEndDrag={[Function]}
             renderItem={[Function]}
             scrollEventThrottle={50}
+            showsVerticalScrollIndicator={false}
             stickyHeaderIndices={Array []}
             updateCellsBatchingPeriod={50}
             useART={false}
@@ -10075,6 +10117,7 @@ exports[`TYList basic render value = undefined 1`] = `
               onScrollEndDrag={[Function]}
               renderItem={[Function]}
               scrollEventThrottle={50}
+              showsVerticalScrollIndicator={false}
               stickyHeaderIndices={Array []}
               updateCellsBatchingPeriod={50}
               useART={false}
@@ -10134,6 +10177,7 @@ exports[`TYList basic render value = undefined 1`] = `
                 onScrollEndDrag={[Function]}
                 renderItem={[Function]}
                 scrollEventThrottle={50}
+                showsVerticalScrollIndicator={false}
                 stickyHeaderIndices={Array []}
                 updateCellsBatchingPeriod={50}
                 useART={false}
@@ -10230,6 +10274,7 @@ exports[`TYList basic render value = undefined 1`] = `
                           "onEndReachedThreshold": 2,
                           "renderItem": [Function],
                           "scrollEventThrottle": 50,
+                          "showsVerticalScrollIndicator": false,
                           "updateCellsBatchingPeriod": 50,
                           "useART": false,
                           "viewabilityConfigCallbackPairs": Array [],
@@ -11073,6 +11118,7 @@ exports[`TYList basic render value = undefined 1`] = `
                           "onEndReachedThreshold": 2,
                           "renderItem": [Function],
                           "scrollEventThrottle": 50,
+                          "showsVerticalScrollIndicator": false,
                           "updateCellsBatchingPeriod": 50,
                           "useART": false,
                           "viewabilityConfigCallbackPairs": Array [],

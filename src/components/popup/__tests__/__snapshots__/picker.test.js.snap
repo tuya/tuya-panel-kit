@@ -46,8 +46,6 @@ exports[`Picker Component basic render 1`] = `
           Array [
             Object {
               "backgroundColor": "#ffffff",
-              "borderBottomColor": "rgba(0, 0, 0, 0.1)",
-              "borderBottomWidth": 0.5,
               "borderTopLeftRadius": 16,
               "borderTopRightRadius": 16,
               "height": 56,
@@ -93,6 +91,28 @@ exports[`Picker Component basic render 1`] = `
       >
         生日
       </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
     </View>
     <View
       disabled={false}
@@ -161,7 +181,7 @@ exports[`Picker Component basic render 1`] = `
                 },
                 Object {
                   "fontFamily": "DIN Alternate",
-                  "fontSize": 30,
+                  "fontSize": 60,
                 },
               ]
             }
@@ -361,8 +381,6 @@ exports[`Picker Component basic render 2`] = `
           Array [
             Object {
               "backgroundColor": "#ffffff",
-              "borderBottomColor": "rgba(0, 0, 0, 0.1)",
-              "borderBottomWidth": 0.5,
               "borderTopLeftRadius": 16,
               "borderTopRightRadius": 16,
               "height": 56,
@@ -408,6 +426,28 @@ exports[`Picker Component basic render 2`] = `
       >
         生日
       </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
     </View>
     <View
       disabled={false}
@@ -481,7 +521,7 @@ exports[`Picker Component basic render 2`] = `
                 },
                 Object {
                   "fontFamily": "DIN Alternate",
-                  "fontSize": 27,
+                  "fontSize": 54,
                 },
               ]
             }
@@ -543,7 +583,7 @@ exports[`Picker Component basic render 2`] = `
                 },
                 Object {
                   "fontFamily": "DIN Alternate",
-                  "fontSize": 27,
+                  "fontSize": 54,
                 },
               ]
             }
@@ -605,7 +645,7 @@ exports[`Picker Component basic render 2`] = `
                 },
                 Object {
                   "fontFamily": "DIN Alternate",
-                  "fontSize": 27,
+                  "fontSize": 54,
                 },
               ]
             }
@@ -805,8 +845,6 @@ exports[`Picker Component basic render with label 1`] = `
           Array [
             Object {
               "backgroundColor": "#ffffff",
-              "borderBottomColor": "rgba(0, 0, 0, 0.1)",
-              "borderBottomWidth": 0.5,
               "borderTopLeftRadius": 16,
               "borderTopRightRadius": 16,
               "height": 56,
@@ -852,6 +890,28 @@ exports[`Picker Component basic render with label 1`] = `
       >
         生日
       </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
     </View>
     <View
       disabled={false}
@@ -925,7 +985,7 @@ exports[`Picker Component basic render with label 1`] = `
                 },
                 Object {
                   "fontFamily": "DIN Alternate",
-                  "fontSize": 27,
+                  "fontSize": 54,
                 },
               ]
             }
@@ -987,7 +1047,7 @@ exports[`Picker Component basic render with label 1`] = `
                 },
                 Object {
                   "fontFamily": "DIN Alternate",
-                  "fontSize": 27,
+                  "fontSize": 54,
                 },
               ]
             }
@@ -1049,7 +1109,7 @@ exports[`Picker Component basic render with label 1`] = `
                 },
                 Object {
                   "fontFamily": "DIN Alternate",
-                  "fontSize": 27,
+                  "fontSize": 54,
                 },
               ]
             }

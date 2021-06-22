@@ -79,7 +79,33 @@ describe('SwitchButton Component', () => {
     expect(component.toJSON()).toMatchSnapshot();
   });
 
-  it('SwitchButton size&theme conflict', function () {
+  it('render width thumbMore', () => {
+    const onValueChange = jest.fn();
+    const component = renderer.create(
+      <ThemeProvider>
+        <SwitchButton switchType="thumbMore" value={true} onValueChange={onValueChange} />
+      </ThemeProvider>
+    );
+    expect(component.toJSON()).toMatchSnapshot();
+  });
+
+  it('render width Text', () => {
+    const onValueChange = jest.fn();
+    const component = renderer.create(
+      <ThemeProvider>
+        <SwitchButton
+          switchType="thumbMore"
+          onText="ON"
+          offText="OFF"
+          value={true}
+          onValueChange={onValueChange}
+        />
+      </ThemeProvider>
+    );
+    expect(component.toJSON()).toMatchSnapshot();
+  });
+
+  it('SwitchButton size&theme conflict', function() {
     const component = renderer.create(
       <ThemeProvider>
         <SwitchButton
@@ -93,7 +119,7 @@ describe('SwitchButton Component', () => {
     expect(component.toJSON()).toMatchSnapshot();
   });
 
-  it('SwitchButton render width onTintColor', function () {
+  it('SwitchButton render width onTintColor', function() {
     const onValueChange = jest.fn();
     const component1 = renderer.create(
       <ThemeProvider>

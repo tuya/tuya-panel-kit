@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
     // borderWidth: StyleSheet.hairlineWidth,
     borderColor: '#fff',
     justifyContent: 'center',
+    backgroundColor: '#E3E9EE',
   },
   wrapperStyle: {
     flexDirection: 'row',
@@ -35,6 +36,7 @@ class Group extends React.PureComponent {
     defaultActiveIndex: PropTypes.number,
     gutter: PropTypes.number,
     onChange: PropTypes.func,
+    type: PropTypes.oneOfType([PropTypes.oneOf(['radio', 'radioCircle']), PropTypes.string]),
   };
 
   static defaultProps = {
@@ -44,6 +46,7 @@ class Group extends React.PureComponent {
     defaultActiveIndex: 0,
     gutter: 2,
     onChange: () => {},
+    type: 'radio',
   };
 
   constructor(props) {
@@ -67,7 +70,7 @@ class Group extends React.PureComponent {
   }
 
   getItem = () => {
-    const { tabs } = this.props;
+    const { tabs, type } = this.props;
     const buttonStyle = [{ width: this.state.wrapperWidth / tabs.length }];
     const defaultTextStyle = [{ opacity: this.state.activeViewHidden ? 0 : 1 }];
     return tabs.map((item, index) => {
@@ -77,6 +80,7 @@ class Group extends React.PureComponent {
           {...other}
           // eslint-disable-next-line react/no-array-index-key
           key={`tab_${index}`}
+          type={type}
           style={[buttonStyle, style]}
           textStyle={[defaultTextStyle, textStyle]}
           onItemPress={() => this.changeTab(index, item, item.onItemPress)}
