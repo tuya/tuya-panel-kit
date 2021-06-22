@@ -46,8 +46,6 @@ exports[`List Component basic render 1`] = `
           Array [
             Object {
               "backgroundColor": "#ffffff",
-              "borderBottomColor": "rgba(0, 0, 0, 0.1)",
-              "borderBottomWidth": 0.5,
               "borderTopLeftRadius": 16,
               "borderTopRightRadius": 16,
               "height": 56,
@@ -125,6 +123,28 @@ exports[`List Component basic render 1`] = `
       >
         副标题
       </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
     </View>
     <View
       pointerEvents="auto"
@@ -212,6 +232,7 @@ exports[`List Component basic render 1`] = `
         scrollEnabled={false}
         scrollEventThrottle={50}
         showBack={false}
+        showsVerticalScrollIndicator={false}
         stickyHeaderIndices={Array []}
         subTitle="副标题"
         switchStyle={Object {}}
@@ -1571,8 +1592,6 @@ exports[`List Component basic render 2`] = `
           Array [
             Object {
               "backgroundColor": "#ffffff",
-              "borderBottomColor": "rgba(0, 0, 0, 0.1)",
-              "borderBottomWidth": 0.5,
               "borderTopLeftRadius": 16,
               "borderTopRightRadius": 16,
               "height": 56,
@@ -1650,6 +1669,28 @@ exports[`List Component basic render 2`] = `
       >
         副标题
       </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
     </View>
     <View
       pointerEvents="auto"
@@ -1737,6 +1778,7 @@ exports[`List Component basic render 2`] = `
         scrollEnabled={false}
         scrollEventThrottle={50}
         showBack={false}
+        showsVerticalScrollIndicator={false}
         stickyHeaderIndices={Array []}
         subTitle="副标题"
         switchStyle={Object {}}
@@ -3222,8 +3264,6 @@ exports[`List Component basic render 3`] = `
           Array [
             Object {
               "backgroundColor": "#ffffff",
-              "borderBottomColor": "rgba(0, 0, 0, 0.1)",
-              "borderBottomWidth": 0.5,
               "borderTopLeftRadius": 16,
               "borderTopRightRadius": 16,
               "height": 56,
@@ -3301,6 +3341,28 @@ exports[`List Component basic render 3`] = `
       >
         副标题
       </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
     </View>
     <View
       pointerEvents="auto"
@@ -3388,6 +3450,7 @@ exports[`List Component basic render 3`] = `
         scrollEnabled={false}
         scrollEventThrottle={50}
         showBack={false}
+        showsVerticalScrollIndicator={false}
         stickyHeaderIndices={Array []}
         subTitle="副标题"
         switchStyle={Object {}}
@@ -4747,8 +4810,6 @@ exports[`List Component render with contentCenter 1`] = `
           Array [
             Object {
               "backgroundColor": "#ffffff",
-              "borderBottomColor": "rgba(0, 0, 0, 0.1)",
-              "borderBottomWidth": 0.5,
               "borderTopLeftRadius": 16,
               "borderTopRightRadius": 16,
               "height": 56,
@@ -4826,6 +4887,28 @@ exports[`List Component render with contentCenter 1`] = `
       >
         副标题
       </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
     </View>
     <View
       pointerEvents="auto"
@@ -4913,6 +4996,7 @@ exports[`List Component render with contentCenter 1`] = `
         scrollEnabled={false}
         scrollEventThrottle={50}
         showBack={false}
+        showsVerticalScrollIndicator={false}
         stickyHeaderIndices={Array []}
         subTitle="副标题"
         switchStyle={Object {}}
@@ -6165,8 +6249,6 @@ exports[`List Component render with listItemStyle 1`] = `
         Array [
           Object {
             "backgroundColor": "#ffffff",
-            "borderBottomColor": "rgba(0, 0, 0, 0.1)",
-            "borderBottomWidth": 0.5,
             "borderTopLeftRadius": 16,
             "borderTopRightRadius": 16,
             "height": 56,
@@ -6244,6 +6326,28 @@ exports[`List Component render with listItemStyle 1`] = `
     >
       副标题
     </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "rgba(0, 0, 0, 0.1)",
+            "height": 0.5,
+          },
+          undefined,
+        ]
+      }
+    />
   </View>
   <View
     pointerEvents="auto"
@@ -6331,6 +6435,7 @@ exports[`List Component render with listItemStyle 1`] = `
       scrollEnabled={false}
       scrollEventThrottle={50}
       showBack={false}
+      showsVerticalScrollIndicator={false}
       stickyHeaderIndices={Array []}
       subTitle="副标题"
       switchStyle={Object {}}
@@ -7815,8 +7920,6 @@ exports[`List Component render with type 1`] = `
           Array [
             Object {
               "backgroundColor": "#ffffff",
-              "borderBottomColor": "rgba(0, 0, 0, 0.1)",
-              "borderBottomWidth": 0.5,
               "borderTopLeftRadius": 16,
               "borderTopRightRadius": 16,
               "height": 56,
@@ -7894,6 +7997,28 @@ exports[`List Component render with type 1`] = `
       >
         副标题
       </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
     </View>
     <View
       pointerEvents="auto"
@@ -7981,6 +8106,7 @@ exports[`List Component render with type 1`] = `
         scrollEnabled={false}
         scrollEventThrottle={50}
         showBack={false}
+        showsVerticalScrollIndicator={false}
         stickyHeaderIndices={Array []}
         subTitle="副标题"
         switchStyle={Object {}}

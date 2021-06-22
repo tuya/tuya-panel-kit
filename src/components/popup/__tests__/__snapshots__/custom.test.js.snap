@@ -46,8 +46,6 @@ exports[`Custom Component basic render 1`] = `
           Array [
             Object {
               "backgroundColor": "#ffffff",
-              "borderBottomColor": "rgba(0, 0, 0, 0.1)",
-              "borderBottomWidth": 0.5,
               "borderTopLeftRadius": 16,
               "borderTopRightRadius": 16,
               "height": 56,
@@ -229,6 +227,28 @@ exports[`Custom Component basic render 1`] = `
       >
         自定义
       </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
     </View>
     <View
       style={
@@ -446,8 +466,6 @@ exports[`Custom Component basic render with visible 1`] = `
           Array [
             Object {
               "backgroundColor": "#ffffff",
-              "borderBottomColor": "rgba(0, 0, 0, 0.1)",
-              "borderBottomWidth": 0.5,
               "borderTopLeftRadius": 16,
               "borderTopRightRadius": 16,
               "height": 56,
@@ -629,6 +647,28 @@ exports[`Custom Component basic render with visible 1`] = `
       >
         自定义
       </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
     </View>
     <View
       style={

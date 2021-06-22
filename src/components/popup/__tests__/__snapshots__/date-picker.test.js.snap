@@ -46,8 +46,6 @@ exports[`DatePicker Component basic render 1`] = `
           Array [
             Object {
               "backgroundColor": "#ffffff",
-              "borderBottomColor": "rgba(0, 0, 0, 0.1)",
-              "borderBottomWidth": 0.5,
               "borderTopLeftRadius": 16,
               "borderTopRightRadius": 16,
               "height": 56,
@@ -93,6 +91,28 @@ exports[`DatePicker Component basic render 1`] = `
       >
         生日
       </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
     </View>
     <View
       pointerEvents="auto"
@@ -651,7 +671,7 @@ exports[`DatePicker Component basic render 1`] = `
                 Object {
                   "color": "#333",
                   "fontFamily": "DIN Alternate",
-                  "fontSize": 24,
+                  "fontSize": 48,
                 },
               ]
             }
@@ -741,7 +761,7 @@ exports[`DatePicker Component basic render 1`] = `
                 Object {
                   "color": "#333",
                   "fontFamily": "DIN Alternate",
-                  "fontSize": 24,
+                  "fontSize": 48,
                 },
               ]
             }
@@ -926,7 +946,7 @@ exports[`DatePicker Component basic render 1`] = `
                 Object {
                   "color": "#333",
                   "fontFamily": "DIN Alternate",
-                  "fontSize": 24,
+                  "fontSize": 48,
                 },
               ]
             }
@@ -1076,7 +1096,7 @@ exports[`DatePicker Component basic render 1`] = `
                 Object {
                   "color": "#333",
                   "fontFamily": "DIN Alternate",
-                  "fontSize": 24,
+                  "fontSize": 48,
                 },
               ]
             }
@@ -1406,7 +1426,7 @@ exports[`DatePicker Component basic render 1`] = `
                 Object {
                   "color": "#333",
                   "fontFamily": "DIN Alternate",
-                  "fontSize": 24,
+                  "fontSize": 48,
                 },
               ]
             }
@@ -1606,8 +1626,6 @@ exports[`DatePicker Component basic render 2`] = `
           Array [
             Object {
               "backgroundColor": "#ffffff",
-              "borderBottomColor": "rgba(0, 0, 0, 0.1)",
-              "borderBottomWidth": 0.5,
               "borderTopLeftRadius": 16,
               "borderTopRightRadius": 16,
               "height": 56,
@@ -1708,11 +1726,13 @@ exports[`DatePicker Component basic render 2`] = `
           <View
             style={
               Object {
+                "alignItems": "center",
                 "alignSelf": "flex-start",
                 "backgroundColor": "#fff",
                 "borderRadius": NaN,
                 "elevation": 2,
                 "height": undefined,
+                "justifyContent": "center",
                 "position": "absolute",
                 "shadowColor": "rgba(0, 0, 0, 0.3)",
                 "shadowOffset": Object {
@@ -1732,6 +1752,28 @@ exports[`DatePicker Component basic render 2`] = `
           />
         </View>
       </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
     </View>
     <View
       pointerEvents="auto"
@@ -2290,7 +2332,7 @@ exports[`DatePicker Component basic render 2`] = `
                 Object {
                   "color": "#333",
                   "fontFamily": "DIN Alternate",
-                  "fontSize": 24,
+                  "fontSize": 48,
                 },
               ]
             }
@@ -2380,7 +2422,7 @@ exports[`DatePicker Component basic render 2`] = `
                 Object {
                   "color": "#333",
                   "fontFamily": "DIN Alternate",
-                  "fontSize": 24,
+                  "fontSize": 48,
                 },
               ]
             }
@@ -2565,7 +2607,7 @@ exports[`DatePicker Component basic render 2`] = `
                 Object {
                   "color": "#333",
                   "fontFamily": "DIN Alternate",
-                  "fontSize": 24,
+                  "fontSize": 48,
                 },
               ]
             }
@@ -2715,7 +2757,7 @@ exports[`DatePicker Component basic render 2`] = `
                 Object {
                   "color": "#333",
                   "fontFamily": "DIN Alternate",
-                  "fontSize": 24,
+                  "fontSize": 48,
                 },
               ]
             }
@@ -3045,7 +3087,7 @@ exports[`DatePicker Component basic render 2`] = `
                 Object {
                   "color": "#333",
                   "fontFamily": "DIN Alternate",
-                  "fontSize": 24,
+                  "fontSize": 48,
                 },
               ]
             }

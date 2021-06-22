@@ -242,6 +242,7 @@ exports[`Checkbox Component basic render switch 1`] = `
       renderItem={[Function]}
       scrollEnabled={false}
       scrollEventThrottle={50}
+      showsVerticalScrollIndicator={false}
       stickyHeaderIndices={Array []}
       style={
         Array [
@@ -1451,6 +1452,7 @@ exports[`Checkbox Component basic render switch 2`] = `
       renderItem={[Function]}
       scrollEnabled={false}
       scrollEventThrottle={50}
+      showsVerticalScrollIndicator={false}
       stickyHeaderIndices={Array []}
       style={
         Array [
