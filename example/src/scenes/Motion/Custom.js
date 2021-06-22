@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 import { Button, Dialog, Utils } from 'tuya-panel-kit';
+import Strings from '../../i18n';
 
 const { winWidth } = Utils.RatioUtils;
 
@@ -9,11 +10,11 @@ class MotionDialogScene extends React.PureComponent {
     Dialog.custom({
       motionType: 'ScalePullDown',
       title: 'Custom',
-      cancelText: '取消',
-      confirmText: '确认',
+      cancelText: Strings.getLang('dialog_cancel'),
+      confirmText: Strings.getLang('dialog_confirm'),
       content: (
         <View style={{ height: 300, alignItems: 'center', justifyContent: 'center' }}>
-          <Text style={{ fontSize: 32, color: '#000' }}>自定义内容</Text>
+          <Text style={{ fontSize: 32, color: '#000' }}>{Strings.getLang('dialog_custom_content')}</Text>
         </View>
       ),
       onConfirm: () => {
@@ -27,7 +28,7 @@ class MotionDialogScene extends React.PureComponent {
       <View style={{ flex: 1 }}>
         <Button
           style={styles.button}
-          text="Motion.ScalePullDown 应用于 Dialog"
+          text={Strings.getLang('motion_custom')}
           textStyle={styles.text}
           onPress={this._openDialog}
         />

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { TYSectionList } from 'tuya-panel-kit';
+import Strings from '../../i18n';
 
 export default class TYSectionListSliderItemScene extends Component {
   constructor(props) {
@@ -13,7 +14,7 @@ export default class TYSectionListSliderItemScene extends Component {
   get sections() {
     return [
       {
-        title: '滑块列表项',
+        title: Strings.getLang('tysectionlist_slider_list'),
         data: [
           {
             key: 0,
@@ -45,7 +46,7 @@ export default class TYSectionListSliderItemScene extends Component {
         ],
       },
       {
-        title: '测试本地主题',
+        title: Strings.getLang('switch_test_localtheme'),
         data: [
           {
             key: 0,

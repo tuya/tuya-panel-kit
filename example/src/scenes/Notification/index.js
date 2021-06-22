@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import { Button, Notification } from 'tuya-panel-kit';
+import Strings from '../../i18n';
 
 export default class NotificationScene extends Component {
   state = {
@@ -10,7 +11,7 @@ export default class NotificationScene extends Component {
   componentWillUpdate(nextProps, nextState) {
     if (nextState.visible) {
       Notification.show({
-        message: '警告提示框',
+        message: Strings.getLang('notification_warning_box'),
         onClose: this._handleClose,
         theme: {
           // iconColor: 'blue',
@@ -36,7 +37,7 @@ export default class NotificationScene extends Component {
         {!this.state.visible && (
           <Button
             style={{ marginTop: 12 }}
-            text="显示Notification"
+            text={Strings.getLang('notification_show')}
             textStyle={{ marginTop: 12, fontSize: 24, color: '#000' }}
             onPress={() => this.setState({ visible: true })}
           />

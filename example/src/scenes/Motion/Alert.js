@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Button, Dialog, Utils } from 'tuya-panel-kit';
+import Strings from '../../i18n';
 
 const { winWidth } = Utils.RatioUtils;
 
@@ -8,9 +9,9 @@ class MotionDialogScene extends React.PureComponent {
   _openDialog = () => {
     Dialog.alert(
       {
-        title: '标题',
-        subTitle: '副标题',
-        confirmText: '确认',
+        title: Strings.getLang('dialog_title'),
+        subTitle: Strings.getLang('dialog_sub_title'),
+        confirmText: Strings.getLang('dialog_confirm'),
         motionType: 'ScaleFadeIn',
         motionConfig: {
           fadeOpacity: 1,
@@ -30,7 +31,7 @@ class MotionDialogScene extends React.PureComponent {
       <View style={{ flex: 1 }}>
         <Button
           style={styles.button}
-          text="Motion.ScaleFadeIn 应用于 Dialog"
+          text={Strings.getLang('motion_alert')}
           textStyle={styles.text}
           onPress={this._openDialog}
         />

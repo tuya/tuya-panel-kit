@@ -16,6 +16,13 @@ class TabBarScene extends React.PureComponent {
     const tabRadios = Array.from(Array(3), (v, k) => k + 1).map(v => {
       return { key: `${v}`, title: `Tab${v}` };
     });
+    const tabRadiosCircle = Array.from(Array(3), (v, k) => k + 1).map(v => {
+      return {
+        key: `${v}`,
+        title: `Tab${v}`,
+        activeTextStyle: { color: '#FFF' },
+      };
+    });
     return (
       <View>
         <TabBar
@@ -29,7 +36,15 @@ class TabBarScene extends React.PureComponent {
           tabs={tabRadios}
           activeKey={this.state.tab}
           onChange={value => this.setState({ tab: value })}
-          style={{ margin: 10, backgroundColor: '#333', marginTop: 200 }}
+          style={{ margin: 10, marginTop: 200 }}
+        />
+        <TabBar
+          type="radioCircle"
+          tabs={tabRadiosCircle}
+          activeKey={this.state.tab}
+          onChange={value => this.setState({ tab: value })}
+          style={{ margin: 10, marginTop: 200 }}
+          activeColor="#57BCFB"
         />
       </View>
     );

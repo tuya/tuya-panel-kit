@@ -9,7 +9,7 @@ const WrapperComponent = WrappedComponent => {
       this.props.onChange && this.props.onChange(key);
     };
     render() {
-      if (this.props.type === 'radio') {
+      if (this.props.type === 'radio' || this.props.type === 'radioCircle') {
         const { activeKey, defaultActiveKey, onChange, ...otherProps } = this.props;
         const radioProps = {};
         if (typeof activeKey !== 'undefined') {
