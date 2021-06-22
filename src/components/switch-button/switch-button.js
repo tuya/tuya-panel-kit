@@ -1,9 +1,10 @@
 /* eslint-disable react/require-default-props */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Animated, TouchableOpacity, View, ViewPropTypes } from 'react-native';
+import { Animated, TouchableOpacity, View, ViewPropTypes, Text } from 'react-native';
 import { Rect } from 'react-native-svg';
 import LinearGradient from '../gradient/linear-gradient';
+import IconFont from '../iconfont';
 import TYText from '../TYText';
 
 const DEFAULT_SIZE = {
@@ -94,11 +95,31 @@ export default class SwitchButton extends React.PureComponent {
     /**
      * switchButton的value值为false时左侧显示的字符样式
      */
-    onTextStyle: ViewPropTypes.style,
+    onTextStyle: Text.propTypes.style,
     /**
      * switchButton的value值为true时右侧显示的字符样式
      */
-    offTextStyle: ViewPropTypes.style,
+    offTextStyle: Text.propTypes.style,
+    /**
+     * 滑块上的图标路径
+     */
+    d: PropTypes.string,
+    /**
+     * 滑块上的图标大小
+     */
+    iconSize: PropTypes.number,
+    /**
+     * 滑块上的图标颜色
+     */
+    iconColor: PropTypes.string,
+    /**
+     * Switch 开关类型，默认不传，特殊情况传值 thumbMore
+     */
+    switchType: PropTypes.oneOfType([PropTypes.oneOf(['thumbMore']), PropTypes.string]),
+    /**
+     * 当 switchType = 'thumbMore' 时，开关左右定位的滑块样式
+     */
+    smallThumbStyle: ViewPropTypes.style,
   };
   static defaultProps = {
     accessibilityLabel: 'SwitchButton',
@@ -110,24 +131,31 @@ export default class SwitchButton extends React.PureComponent {
     borderColor: '#e5e5e5',
     thumbStyle: null,
     useNativeDriver: true,
-    onText: 'ON',
-    offText: 'OFF',
+    onText: '',
+    offText: '',
     onTextStyle: null,
     offTextStyle: null,
+    d: null,
+    iconSize: 18,
+    iconColor: null,
+    switchType: null,
+    smallThumbStyle: {},
   };
   constructor(props) {
     super(props);
     this.value = 'value' in props ? props.value : props.defaultValue;
+    const { height } = props.smallThumbStyle;
     const left = this.calcLeft(this.value);
     this.state = {
       thumbLeft: new Animated.Value(left),
+      leftThumbHeight: new Animated.Value(this.value ? height || 16 : 0.2 * (height || 16)),
+      rightThumbHeight: new Animated.Value(this.value ? 0.2 * (height || 16) : height || 16),
     };
   }
 
   // eslint-disable-next-line react/sort-comp
   get CGSize() {
-    this.isGradient = this.props.onTintColor && typeof this.props.onTintColor === 'object';
-    if (this.isGradient && !!this.props.onText && !!this.props.offText) {
+    if (!!this.props.onText && !!this.props.offText) {
       return { ...DEFAULT_GRADIENT_SIZE, ...this.props.size };
     }
 
@@ -168,7 +196,8 @@ export default class SwitchButton extends React.PureComponent {
   };
 
   valueChange = value => {
-    const { useNativeDriver } = this.props;
+    const { useNativeDriver, switchType, smallThumbStyle } = this.props;
+    const { height } = smallThumbStyle;
     const color = this.calcColor(value);
     const borderColor = this.calcColor(value, 'border');
     const thumbColor = this.calcColor(value, 'thumb');
@@ -186,17 +215,31 @@ export default class SwitchButton extends React.PureComponent {
       duration: 200,
       useNativeDriver,
     }).start();
+    if (switchType === 'thumbMore') {
+      Animated.parallel([
+        Animated.spring(this.state.leftThumbHeight, {
+          toValue: value ? height || 16 : 0.2 * (height || 16),
+          duration: 200,
+          useNativeDriver: false,
+        }),
+        Animated.spring(this.state.rightThumbHeight, {
+          toValue: value ? 0.2 * (height || 16) : height || 16,
+          duration: 200,
+          useNativeDriver: false,
+        }),
+      ]).start();
+    }
   };
 
   renderBackground() {
     const { tintColor, onTintColor } = this.props;
-    const { width, height } = this.CGSize;
+    const { borderRadius, width, height } = this.CGSize;
     const backgroundColor = this.calcColor(this.value);
     const borderColor = this.calcColor(this.value, 'border');
     const wrapperStyle = {
       width,
       height,
-      borderRadius: (15.5 / 28) * height,
+      borderRadius: borderRadius || (15.5 / 28) * height,
       justifyContent: 'center',
     };
     const color = this.value ? onTintColor : tintColor;
@@ -238,7 +281,7 @@ export default class SwitchButton extends React.PureComponent {
   }
 
   render() {
-    const { width, height, activeSize } = this.CGSize;
+    const { width, height, activeSize, margin } = this.CGSize;
     const {
       accessibilityLabel,
       style,
@@ -247,7 +290,12 @@ export default class SwitchButton extends React.PureComponent {
       offText,
       onTextStyle,
       offTextStyle,
+      d,
+      iconSize,
+      iconColor,
+      switchType,
     } = this.props;
+    const { leftThumbHeight, rightThumbHeight } = this.state;
     const thumbColor = this.calcColor(this.value, 'thumb');
     const containerStyle = [style, disabled && { opacity: 0.8 }];
     const contentStyle = {
@@ -277,6 +325,17 @@ export default class SwitchButton extends React.PureComponent {
       },
       this.props.thumbStyle,
     ];
+    const smallThumbStyle = [
+      {
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: 3,
+        position: 'absolute',
+        borderRadius: 1.5,
+        backgroundColor: '#FFF',
+      },
+      this.props.smallThumbStyle,
+    ];
     const textOn = onText.length > 3 ? `${onText.substr(0, 2)}...` : onText;
     const textOff = offText.length > 3 ? `${offText.substr(0, 2)}...` : offText;
     return (
@@ -288,8 +347,23 @@ export default class SwitchButton extends React.PureComponent {
           onPress={this.onSwitchChange}
         >
           {this.renderBackground()}
-
-          {this.isGradient && !!onText && (
+          {switchType === 'thumbMore' && (
+            <Animated.View
+              style={[smallThumbStyle, { left: 3 * margin, height: leftThumbHeight }]}
+            />
+          )}
+          {switchType === 'thumbMore' && (
+            <Animated.View
+              style={[
+                smallThumbStyle,
+                {
+                  right: 3 * margin,
+                  height: rightThumbHeight,
+                },
+              ]}
+            />
+          )}
+          {!!onText && (
             <TYText
               text={textOn}
               style={[
@@ -305,7 +379,7 @@ export default class SwitchButton extends React.PureComponent {
               ]}
             />
           )}
-          {this.isGradient && !!offText && (
+          {!!offText && (
             <TYText
               text={textOff}
               style={[
@@ -322,11 +396,13 @@ export default class SwitchButton extends React.PureComponent {
             />
           )}
           <Animated.View
-            style={thumbStyle}
+            style={[{ alignItems: 'center', justifyContent: 'center' }, thumbStyle]}
             ref={ref => {
               this.thumb = ref;
             }}
-          />
+          >
+            {!!d && <IconFont d={d} size={iconSize} color={iconColor} />}
+          </Animated.View>
         </TouchableOpacity>
       </View>
     );

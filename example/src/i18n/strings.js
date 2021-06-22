@@ -21,12 +21,12 @@ module.exports = {
     button_picture: '图片按钮',
     button_icon: '图标按钮',
 
-    button_pic_large:'图片按钮（大号）',
+    button_pic_large: '图片按钮（大号）',
     button_pic_noclickable: '图片按钮（不可点击且着色为红）',
     button_icon_with_text: '图标按钮（带文字）',
-    button_icon_with_background_color:'图标按钮（带背景色ControllerBar常用）',
+    button_icon_with_background_color: '图标按钮（带背景色ControllerBar常用）',
     button_icon_with_background_gradient: '图标按钮（带背景渐变）',
-    button_icon_multi_word:'图标按钮（多文字顺序）',
+    button_icon_multi_word: '图标按钮（多文字顺序）',
     button_local_theme_test: '本地主题测试',
 
     checkbox_select: '点击选中',
@@ -47,9 +47,11 @@ module.exports = {
     dialog_sub_title: '副标题',
     dialog_confirm: '确认',
     dialog_cancel: '取消',
-    dialog_long_title: '这是标题这是标题这是标题这是标题这是标题这是标题这是标题这是标题这是标题这是标题这是标题这是标题',
-    dialog_long_sub_title: '这是内容这是内容这是内容这是内容这这是内容这是内容是内容这是内容这是内容这是内容这是内容这这是内容这是内容是内容这是内容这是内容这是内容这是内容这这是内容这是内容是内容',
-    dialog_title_name: '标题名称', 
+    dialog_long_title:
+      '这是标题这是标题这是标题这是标题这是标题这是标题这是标题这是标题这是标题这是标题这是标题这是标题',
+    dialog_long_sub_title:
+      '这是内容这是内容这是内容这是内容这这是内容这是内容是内容这是内容这是内容这是内容这是内容这这是内容这是内容是内容这是内容这是内容这是内容这是内容这这是内容这是内容是内容',
+    dialog_title_name: '标题名称',
     dialog_supplementary_information: '这里展示辅助信息',
     dialog_uncontrolled_input_box: '非受控输入框',
     dialog_controlled_input_box: '受控输入框',
@@ -113,7 +115,7 @@ module.exports = {
     test: '测试',
     motion_single_choice: '单选',
     motion_multiple_choice: '多选',
-    
+
     notification_warning_box: '警告提示框',
     notification_show: '显示 Notification',
 
@@ -123,7 +125,7 @@ module.exports = {
     popup_time_select: '时间段选择',
     popup_bubble: '我是气泡,点击遮罩空白处退出哦',
 
-    default:'默认',
+    default: '默认',
     slider_bilateral: '双边',
     slider_unilateral: '单边',
     stepper_number_of_passengers: '乘客人数',
@@ -227,6 +229,13 @@ module.exports = {
     unitText_custom_color_art: '自定义UnitText每个值的颜色 (ART版本)',
 
     theme_global_type: '全局type',
+    switch_default_1: '自定义滑块样式一',
+    switch_default_2: '自定义滑块样式二',
+    switch_default_3: '自定义滑块样式三',
+    switch_default_4: '自定义滑块样式四',
+    switch_default_5: '自定义滑块样式五',
+    switch_default_linearWithoutText: '滑块样式(IOS、安卓自适应) ----  渐变（不带字体）',
+    switch_default_linearWithText: '滑块样式(IOS、安卓自适应) ----  渐变（带字体）',
   },
 
   en: {
@@ -251,17 +260,18 @@ module.exports = {
     button_picture: 'Picture button',
     button_icon: 'Icon button',
 
-    button_pic_large:'Picture button (Large)',
+    button_pic_large: 'Picture button (Large)',
     button_pic_noclickable: 'Picture button (Not clickable and colored in red)',
     button_icon_with_text: 'Icon button (With text)',
-    button_icon_with_background_color:'Icon button (Commonly used for ControllerBar with background color)',
+    button_icon_with_background_color:
+      'Icon button (Commonly used for ControllerBar with background color)',
     button_icon_with_background_gradient: 'Icon button (With background gradient)',
-    button_icon_multi_word:'Icon button (Multi-word order)',
+    button_icon_multi_word: 'Icon button (Multi-word order)',
     button_local_theme_test: 'Local theme test',
 
     checkbox_select: 'Click to select',
     checkbox_disable: 'Click to disable the one above',
-    
+
     controllerbar_icon_bottom_bar: 'Icon bottom bar',
     controllerbar_waitbackground_iconbottombar: 'Icon bottom bar with bottom color to be painted',
     controllerbar_Multi_screen_swiped: 'Multi-screen can be swiped',
@@ -277,9 +287,11 @@ module.exports = {
     dialog_sub_title: 'Sub Title',
     dialog_confirm: 'Confirm',
     dialog_cancel: 'Cancel',
-    dialog_long_title: 'This is the title.This is the title.This is the title.This is the title.This is the title.This is the title.This is the title.',
-    dialog_long_sub_title: 'This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.',
-    dialog_title_name: 'Title Name', 
+    dialog_long_title:
+      'This is the title.This is the title.This is the title.This is the title.This is the title.This is the title.This is the title.',
+    dialog_long_sub_title:
+      'This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.',
+    dialog_title_name: 'Title Name',
     dialog_supplementary_information: 'Show supplementary information here',
     dialog_uncontrolled_input_box: 'Uncontrolled input box',
     dialog_controlled_input_box: 'Controlled input box',
@@ -334,7 +346,8 @@ module.exports = {
     motion_swipe_updown: 'Swipe up / Swipe down',
     motion_swipe_downup: 'Swipe down / Swipe up',
     motion_zoomin_swipeout: 'Zoom in and fade in / Swipe down and fade out',
-    motion_zoomswipe_without_operation: 'Zoom in and fade in / Swipe down and fade out without operation',
+    motion_zoomswipe_without_operation:
+      'Zoom in and fade in / Swipe down and fade out without operation',
     motion_zoom_inout: 'Zoom in and fade in / Zoom out and fade out',
     motion_alert: 'Motion.ScaleFadeIn applied to Dialog',
     motion_popup: 'Motion.PullUp applied to Popup',
@@ -353,7 +366,7 @@ module.exports = {
     popup_time_select: 'Time period selection',
     popup_bubble: 'I am a bubble, click on the blank space of the mask to exit.',
 
-    default:' default',
+    default: ' default',
     slider_bilateral: 'Bilateral',
     slider_unilateral: 'Unilateral',
     stepper_number_of_passengers: 'Number of passengers',
@@ -404,7 +417,8 @@ module.exports = {
     tysectionlist_category_title: 'Category title',
     tysectionlist_adaptation_test: 'List text adaptation test',
     tysectionlist_description: 'This is a detailed description and explanation of this list.',
-    tysectionlist_information: 'This is the case where the detailed information content of this list is too long.',
+    tysectionlist_information:
+      'This is the case where the detailed information content of this list is too long.',
     tysectionlist_longtitle: 'List title is too long.',
     tysectionlist_learnmore: 'Learn more',
     tysectionlist_april: 'April 1',
@@ -414,7 +428,8 @@ module.exports = {
     tysectionlist_options_inoperable: 'Multiple options - inoperable situations',
     tysectionlist_options_unableto_select: 'Multiple options - unable to operate the selected case',
     tysectionlist_fit_test: 'Fit test',
-    tysectionlist_long_title: 'Single option title is too long.Single option title is too long.Single option title is too long.',
+    tysectionlist_long_title:
+      'Single option title is too long.Single option title is too long.Single option title is too long.',
     tysectionlist_test_subtitle: 'Test subtitle',
     tysectionlist_switch_adaptation: 'Switch list item adaptation',
     tysectionlist_picture_adaptation: 'Graphic list item adaptation',
@@ -439,7 +454,8 @@ module.exports = {
     tabs_study_room: 'Study room',
     tabs_onescreen: 'Tabs with scrollable content on a screen',
     tabs_multiple_screens: 'Tabs with content on multiple screens',
-    tabs_multiple_screens_below: 'Tabs with content in multiple screens and the tabs position is below',
+    tabs_multiple_screens_below:
+      'Tabs with content in multiple screens and the tabs position is below',
     tabs_lightweight: 'The content is very lightweight and does not require pre-loading',
     tabs_separate_content: 'Separate TabContent',
 
@@ -457,5 +473,13 @@ module.exports = {
     unitText_custom_color_art: 'Customize the color of each value of UnitText(ART version)',
 
     theme_global_type: 'Global type',
+    switch_default_1: 'Custom Slider Style I',
+    switch_default_2: 'Custom Slider Style II',
+    switch_default_3: 'Custom Slider Style III',
+    switch_default_4: 'Custom Slider Style IV',
+    switch_default_5: 'Custom Slider Style V',
+    switch_default_linearWithoutText:
+      'Slider style (IOS, Android adaptive) ---- Gradient (without font)',
+    switch_default_linearWithText: 'Slider style (IOS, Android adaptive) ---- Gradient (with font)',
   },
 };

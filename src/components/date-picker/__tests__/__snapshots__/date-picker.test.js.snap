@@ -195,7 +195,7 @@ exports[`DatePicker Component basic render 1`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }
@@ -285,7 +285,7 @@ exports[`DatePicker Component basic render 1`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }
@@ -470,7 +470,7 @@ exports[`DatePicker Component basic render 1`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }
@@ -674,7 +674,7 @@ exports[`DatePicker Component should picker mode is date 1`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }
@@ -764,7 +764,7 @@ exports[`DatePicker Component should picker mode is date 1`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }
@@ -949,7 +949,7 @@ exports[`DatePicker Component should picker mode is date 1`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }
@@ -1153,7 +1153,7 @@ exports[`DatePicker Component should picker mode is date 2`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }
@@ -1243,7 +1243,7 @@ exports[`DatePicker Component should picker mode is date 2`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }
@@ -1428,7 +1428,7 @@ exports[`DatePicker Component should picker mode is date 2`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }
@@ -1772,7 +1772,7 @@ exports[`DatePicker Component should picker mode is datetime 1`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 24,
+            "fontSize": 48,
           },
         ]
       }
@@ -1807,7 +1807,7 @@ exports[`DatePicker Component should picker mode is datetime 1`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 24,
+            "fontSize": 48,
           },
         ]
       }
@@ -1937,7 +1937,7 @@ exports[`DatePicker Component should picker mode is datetime 1`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 24,
+            "fontSize": 48,
           },
         ]
       }
@@ -1972,7 +1972,7 @@ exports[`DatePicker Component should picker mode is datetime 1`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 24,
+            "fontSize": 48,
           },
         ]
       }
@@ -2007,7 +2007,7 @@ exports[`DatePicker Component should picker mode is datetime 1`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 24,
+            "fontSize": 48,
           },
         ]
       }
@@ -2211,7 +2211,7 @@ exports[`DatePicker Component should picker mode is datetime 2`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 24,
+            "fontSize": 48,
           },
         ]
       }
@@ -2301,7 +2301,7 @@ exports[`DatePicker Component should picker mode is datetime 2`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 24,
+            "fontSize": 48,
           },
         ]
       }
@@ -2486,7 +2486,7 @@ exports[`DatePicker Component should picker mode is datetime 2`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 24,
+            "fontSize": 48,
           },
         ]
       }
@@ -2636,7 +2636,7 @@ exports[`DatePicker Component should picker mode is datetime 2`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 24,
+            "fontSize": 48,
           },
         ]
       }
@@ -2966,7 +2966,7 @@ exports[`DatePicker Component should picker mode is datetime 2`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 24,
+            "fontSize": 48,
           },
         ]
       }
@@ -3020,7 +3020,7 @@ exports[`DatePicker Component should picker mode is time 1`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 30,
+            "fontSize": 60,
           },
         ]
       }
@@ -3055,7 +3055,7 @@ exports[`DatePicker Component should picker mode is time 1`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 30,
+            "fontSize": 60,
           },
         ]
       }
@@ -3224,7 +3224,7 @@ exports[`DatePicker Component should picker mode is time 2`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 30,
+            "fontSize": 60,
           },
         ]
       }
@@ -3554,7 +3554,7 @@ exports[`DatePicker Component should picker mode is time 2`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 30,
+            "fontSize": 60,
           },
         ]
       }
@@ -3758,7 +3758,7 @@ exports[`DatePicker Component should picker which mode is date value change 1`] 
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }
@@ -3848,7 +3848,7 @@ exports[`DatePicker Component should picker which mode is date value change 1`] 
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }
@@ -4033,7 +4033,7 @@ exports[`DatePicker Component should picker which mode is date value change 1`] 
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }
@@ -4237,7 +4237,7 @@ exports[`DatePicker Component should picker which mode is date value change 2`] 
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }
@@ -4327,7 +4327,7 @@ exports[`DatePicker Component should picker which mode is date value change 2`] 
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }
@@ -4512,7 +4512,7 @@ exports[`DatePicker Component should picker which mode is date value change 2`] 
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }
@@ -4716,7 +4716,7 @@ exports[`DatePicker Component should picker which mode is maxDate 1`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }
@@ -4806,7 +4806,7 @@ exports[`DatePicker Component should picker which mode is maxDate 1`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }
@@ -4991,7 +4991,7 @@ exports[`DatePicker Component should picker which mode is maxDate 1`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }
@@ -5050,7 +5050,7 @@ exports[`DatePicker Component should render picker which ampmFirst 1`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }
@@ -5140,7 +5140,7 @@ exports[`DatePicker Component should render picker which ampmFirst 1`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }
@@ -5470,7 +5470,7 @@ exports[`DatePicker Component should render picker which ampmFirst 1`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }
@@ -5674,7 +5674,7 @@ exports[`DatePicker Component should render picker which locale is cn 1`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }
@@ -5764,7 +5764,7 @@ exports[`DatePicker Component should render picker which locale is cn 1`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }
@@ -5949,7 +5949,7 @@ exports[`DatePicker Component should render picker which locale is cn 1`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }
@@ -6153,7 +6153,7 @@ exports[`DatePicker Component should render picker which locale is defaultValue 
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }
@@ -6243,7 +6243,7 @@ exports[`DatePicker Component should render picker which locale is defaultValue 
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }
@@ -6428,7 +6428,7 @@ exports[`DatePicker Component should render picker which locale is defaultValue 
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }
@@ -6632,7 +6632,7 @@ exports[`DatePicker Component should render picker which locale is object 1`] = 
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }
@@ -6722,7 +6722,7 @@ exports[`DatePicker Component should render picker which locale is object 1`] = 
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }
@@ -6907,7 +6907,7 @@ exports[`DatePicker Component should render picker which locale is object 1`] = 
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }
@@ -7111,7 +7111,7 @@ exports[`DatePicker Component should render picker which mode is datetime 1`] = 
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 24,
+            "fontSize": 48,
           },
         ]
       }
@@ -7201,7 +7201,7 @@ exports[`DatePicker Component should render picker which mode is datetime 1`] = 
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 24,
+            "fontSize": 48,
           },
         ]
       }
@@ -7386,7 +7386,7 @@ exports[`DatePicker Component should render picker which mode is datetime 1`] = 
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 24,
+            "fontSize": 48,
           },
         ]
       }
@@ -7536,7 +7536,7 @@ exports[`DatePicker Component should render picker which mode is datetime 1`] = 
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 24,
+            "fontSize": 48,
           },
         ]
       }
@@ -7866,7 +7866,7 @@ exports[`DatePicker Component should render picker which mode is datetime 1`] = 
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 24,
+            "fontSize": 48,
           },
         ]
       }
@@ -8088,7 +8088,7 @@ exports[`DatePicker Component should render picker which mode is month 1`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 30,
+            "fontSize": 60,
           },
         ]
       }
@@ -8178,7 +8178,7 @@ exports[`DatePicker Component should render picker which mode is month 1`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 30,
+            "fontSize": 60,
           },
         ]
       }
@@ -8382,7 +8382,7 @@ exports[`DatePicker Component should render picker which mode is year 1`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 30,
+            "fontSize": 60,
           },
         ]
       }
@@ -8436,7 +8436,7 @@ exports[`DatePicker Component should render picker which use12Hours 1`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }
@@ -8766,7 +8766,7 @@ exports[`DatePicker Component should render picker which use12Hours 1`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }
@@ -8806,7 +8806,7 @@ exports[`DatePicker Component should render picker which use12Hours 1`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 27,
+            "fontSize": 54,
           },
         ]
       }

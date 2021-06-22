@@ -28,31 +28,23 @@ export default class MainLayout extends React.Component {
     const ControlBoolean = ({ txt, fn }) => (
       <View style={styles.controlBoolean}>
         <Text style={styles.controlBooleanTxt}>{txt}</Text>
-        <SwitchButton
-          value={true}
-          onValueChange={fn}
-        />
+        <SwitchButton value={true} onValueChange={fn} />
       </View>
     );
     return (
-      <FullView
-        {...this.state}
-      >
+      <FullView {...this.state}>
         <Text>This is a baisc FullView Children</Text>
-        {
-          [
-            { txt: '切换显示TopBar', fn: v => this.setState({ hideTopbar: v }) },
-            { txt: '切换显示Menu', fn: v => this.setState({ showMenu: v }) },
-            { txt: '切换显示OfflineView', fn: v => this.setState({ showOfflineView: v }) },
-          ].map(({ txt, fn }) => (
-            <ControlBoolean key={txt} txt={txt} fn={fn} />
-          ))
-        }
+        {[
+          { txt: '切换显示TopBar', fn: v => this.setState({ hideTopbar: v }) },
+          { txt: '切换显示Menu', fn: v => this.setState({ showMenu: v }) },
+          { txt: '切换显示OfflineView', fn: v => this.setState({ showOfflineView: v }) },
+        ].map(({ txt, fn }) => (
+          <ControlBoolean key={txt} txt={txt} fn={fn} />
+        ))}
       </FullView>
     );
   }
 }
-
 
 const styles = StyleSheet.create({
   controlBoolean: {
@@ -62,5 +54,5 @@ const styles = StyleSheet.create({
   controlBooleanTxt: {
     fontSize: 15,
     color: 'black',
-  }
+  },
 });
