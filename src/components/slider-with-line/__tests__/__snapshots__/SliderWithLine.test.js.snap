@@ -1,0 +1,1321 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SliderWithLine basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#FFF",
+        "borderRadius": 32,
+        "height": 120,
+        "width": 654,
+      },
+      Object {
+        "opacity": 1,
+        "overflow": "hidden",
+      },
+      Object {
+        "height": 100,
+        "width": 100,
+      },
+    ]
+  }
+>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "left": 0,
+        },
+        Object {},
+        Object {
+          "height": 120,
+          "position": "absolute",
+          "width": 654,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "justifyContent": "space-between",
+          },
+          Object {
+            "height": 120,
+            "width": 654,
+          },
+          Object {
+            "flexDirection": "row",
+          },
+        ]
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "fontWeight": "400",
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "color": "#000",
+              "fontSize": 24,
+            },
+            Object {
+              "left": 24,
+            },
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        0%
+      </TYText>
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "fontWeight": "400",
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "color": "#000",
+              "fontSize": 24,
+            },
+            Object {
+              "right": 24,
+            },
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        100%
+      </TYText>
+    </View>
+    <Divider
+      color="#000"
+      flexDirection="row"
+      height={28}
+      key="0"
+      style={
+        Array [
+          Object {
+            "opacity": 0.5,
+            "position": "absolute",
+          },
+          Object {
+            "borderRadius": 1,
+          },
+          Object {
+            "left": 106,
+            "top": 46,
+          },
+        ]
+      }
+      visible={true}
+      width={2}
+    />
+    <Divider
+      color="#000"
+      flexDirection="row"
+      height={28}
+      key="1"
+      style={
+        Array [
+          Object {
+            "opacity": 0.5,
+            "position": "absolute",
+          },
+          Object {
+            "borderRadius": 1,
+          },
+          Object {
+            "left": 158,
+            "top": 46,
+          },
+        ]
+      }
+      visible={true}
+      width={2}
+    />
+    <Divider
+      color="#000"
+      flexDirection="row"
+      height={28}
+      key="2"
+      style={
+        Array [
+          Object {
+            "opacity": 0.5,
+            "position": "absolute",
+          },
+          Object {
+            "borderRadius": 1,
+          },
+          Object {
+            "left": 210,
+            "top": 46,
+          },
+        ]
+      }
+      visible={true}
+      width={2}
+    />
+    <Divider
+      color="#000"
+      flexDirection="row"
+      height={28}
+      key="3"
+      style={
+        Array [
+          Object {
+            "opacity": 0.5,
+            "position": "absolute",
+          },
+          Object {
+            "borderRadius": 1,
+          },
+          Object {
+            "left": 262,
+            "top": 46,
+          },
+        ]
+      }
+      visible={true}
+      width={2}
+    />
+    <Divider
+      color="#000"
+      flexDirection="row"
+      height={28}
+      key="4"
+      style={
+        Array [
+          Object {
+            "opacity": 0.5,
+            "position": "absolute",
+          },
+          Object {
+            "borderRadius": 1,
+          },
+          Object {
+            "left": 314,
+            "top": 46,
+          },
+        ]
+      }
+      visible={true}
+      width={2}
+    />
+    <Divider
+      color="#000"
+      flexDirection="row"
+      height={28}
+      key="5"
+      style={
+        Array [
+          Object {
+            "opacity": 0.5,
+            "position": "absolute",
+          },
+          Object {
+            "borderRadius": 1,
+          },
+          Object {
+            "left": 366,
+            "top": 46,
+          },
+        ]
+      }
+      visible={true}
+      width={2}
+    />
+    <Divider
+      color="#000"
+      flexDirection="row"
+      height={28}
+      key="6"
+      style={
+        Array [
+          Object {
+            "opacity": 0.5,
+            "position": "absolute",
+          },
+          Object {
+            "borderRadius": 1,
+          },
+          Object {
+            "left": 418,
+            "top": 46,
+          },
+        ]
+      }
+      visible={true}
+      width={2}
+    />
+    <Divider
+      color="#000"
+      flexDirection="row"
+      height={28}
+      key="7"
+      style={
+        Array [
+          Object {
+            "opacity": 0.5,
+            "position": "absolute",
+          },
+          Object {
+            "borderRadius": 1,
+          },
+          Object {
+            "left": 470,
+            "top": 46,
+          },
+        ]
+      }
+      visible={true}
+      width={2}
+    />
+    <Divider
+      color="#000"
+      flexDirection="row"
+      height={28}
+      key="8"
+      style={
+        Array [
+          Object {
+            "opacity": 0.5,
+            "position": "absolute",
+          },
+          Object {
+            "borderRadius": 1,
+          },
+          Object {
+            "left": 522,
+            "top": 46,
+          },
+        ]
+      }
+      visible={true}
+      width={2}
+    />
+  </AnimatedComponent>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#FFF",
+          "borderRadius": 32,
+          "height": 120,
+          "width": 654,
+        },
+        Object {
+          "backgroundColor": "#57BCFB",
+          "overflow": "hidden",
+        },
+        Object {
+          "left": 0,
+          "width": 327,
+        },
+      ]
+    }
+  >
+    <AnimatedComponent
+      style={
+        Array [
+          Object {
+            "left": 0,
+          },
+          Object {
+            "left": -0,
+          },
+          Object {
+            "height": 120,
+            "position": "absolute",
+            "width": 654,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "justifyContent": "space-between",
+            },
+            Object {
+              "height": 120,
+              "width": 654,
+            },
+            Object {
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Array [
+              Object {
+                "fontWeight": "400",
+                "opacity": 0.5,
+                "position": "absolute",
+              },
+              Object {
+                "color": "#FFF",
+                "fontSize": 24,
+              },
+              Object {
+                "left": 24,
+              },
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          0%
+        </TYText>
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Array [
+              Object {
+                "fontWeight": "400",
+                "opacity": 0.5,
+                "position": "absolute",
+              },
+              Object {
+                "color": "#FFF",
+                "fontSize": 24,
+              },
+              Object {
+                "right": 24,
+              },
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          100%
+        </TYText>
+      </View>
+      <Divider
+        color="#FFF"
+        flexDirection="row"
+        height={28}
+        key="0"
+        style={
+          Array [
+            Object {
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "borderRadius": 1,
+            },
+            Object {
+              "left": 106,
+              "top": 46,
+            },
+          ]
+        }
+        visible={true}
+        width={2}
+      />
+      <Divider
+        color="#FFF"
+        flexDirection="row"
+        height={28}
+        key="1"
+        style={
+          Array [
+            Object {
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "borderRadius": 1,
+            },
+            Object {
+              "left": 158,
+              "top": 46,
+            },
+          ]
+        }
+        visible={true}
+        width={2}
+      />
+      <Divider
+        color="#FFF"
+        flexDirection="row"
+        height={28}
+        key="2"
+        style={
+          Array [
+            Object {
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "borderRadius": 1,
+            },
+            Object {
+              "left": 210,
+              "top": 46,
+            },
+          ]
+        }
+        visible={true}
+        width={2}
+      />
+      <Divider
+        color="#FFF"
+        flexDirection="row"
+        height={28}
+        key="3"
+        style={
+          Array [
+            Object {
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "borderRadius": 1,
+            },
+            Object {
+              "left": 262,
+              "top": 46,
+            },
+          ]
+        }
+        visible={true}
+        width={2}
+      />
+      <Divider
+        color="#FFF"
+        flexDirection="row"
+        height={28}
+        key="4"
+        style={
+          Array [
+            Object {
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "borderRadius": 1,
+            },
+            Object {
+              "left": 314,
+              "top": 46,
+            },
+          ]
+        }
+        visible={true}
+        width={2}
+      />
+      <Divider
+        color="#FFF"
+        flexDirection="row"
+        height={28}
+        key="5"
+        style={
+          Array [
+            Object {
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "borderRadius": 1,
+            },
+            Object {
+              "left": 366,
+              "top": 46,
+            },
+          ]
+        }
+        visible={true}
+        width={2}
+      />
+      <Divider
+        color="#FFF"
+        flexDirection="row"
+        height={28}
+        key="6"
+        style={
+          Array [
+            Object {
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "borderRadius": 1,
+            },
+            Object {
+              "left": 418,
+              "top": 46,
+            },
+          ]
+        }
+        visible={true}
+        width={2}
+      />
+      <Divider
+        color="#FFF"
+        flexDirection="row"
+        height={28}
+        key="7"
+        style={
+          Array [
+            Object {
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "borderRadius": 1,
+            },
+            Object {
+              "left": 470,
+              "top": 46,
+            },
+          ]
+        }
+        visible={true}
+        width={2}
+      />
+      <Divider
+        color="#FFF"
+        flexDirection="row"
+        height={28}
+        key="8"
+        style={
+          Array [
+            Object {
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "borderRadius": 1,
+            },
+            Object {
+              "left": 522,
+              "top": 46,
+            },
+          ]
+        }
+        visible={true}
+        width={2}
+      />
+    </AnimatedComponent>
+  </AnimatedComponent>
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    pointerEvents="box-only"
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#FFF",
+          "borderRadius": 32,
+          "height": 120,
+          "width": 654,
+        },
+        Object {
+          "backgroundColor": "transparent",
+          "overflow": "hidden",
+          "position": "absolute",
+          "zIndex": 10,
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`SliderWithLine minDisabled render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#FFF",
+        "borderRadius": 32,
+        "height": 120,
+        "width": 654,
+      },
+      Object {
+        "opacity": 1,
+        "overflow": "hidden",
+      },
+      Object {
+        "height": 100,
+        "width": 100,
+      },
+    ]
+  }
+>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "left": 0,
+        },
+        Object {},
+        Object {
+          "height": 120,
+          "position": "absolute",
+          "width": 654,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "justifyContent": "space-between",
+          },
+          Object {
+            "height": 120,
+            "width": 654,
+          },
+          Object {
+            "flexDirection": "row",
+          },
+        ]
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "fontWeight": "400",
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "color": "#000",
+              "fontSize": 24,
+            },
+            Object {
+              "left": 24,
+            },
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        0%
+      </TYText>
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "fontWeight": "400",
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "color": "#000",
+              "fontSize": 24,
+            },
+            Object {
+              "right": 24,
+            },
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        100%
+      </TYText>
+    </View>
+    <Divider
+      color="#000"
+      flexDirection="row"
+      height={28}
+      key="0"
+      style={
+        Array [
+          Object {
+            "opacity": 0.5,
+            "position": "absolute",
+          },
+          Object {
+            "borderRadius": 1,
+          },
+          Object {
+            "left": 106,
+            "top": 46,
+          },
+        ]
+      }
+      visible={true}
+      width={2}
+    />
+    <Divider
+      color="#000"
+      flexDirection="row"
+      height={28}
+      key="1"
+      style={
+        Array [
+          Object {
+            "opacity": 0.5,
+            "position": "absolute",
+          },
+          Object {
+            "borderRadius": 1,
+          },
+          Object {
+            "left": 158,
+            "top": 46,
+          },
+        ]
+      }
+      visible={true}
+      width={2}
+    />
+    <Divider
+      color="#000"
+      flexDirection="row"
+      height={28}
+      key="2"
+      style={
+        Array [
+          Object {
+            "opacity": 0.5,
+            "position": "absolute",
+          },
+          Object {
+            "borderRadius": 1,
+          },
+          Object {
+            "left": 210,
+            "top": 46,
+          },
+        ]
+      }
+      visible={true}
+      width={2}
+    />
+    <Divider
+      color="#000"
+      flexDirection="row"
+      height={28}
+      key="3"
+      style={
+        Array [
+          Object {
+            "opacity": 0.5,
+            "position": "absolute",
+          },
+          Object {
+            "borderRadius": 1,
+          },
+          Object {
+            "left": 262,
+            "top": 46,
+          },
+        ]
+      }
+      visible={true}
+      width={2}
+    />
+    <Divider
+      color="#000"
+      flexDirection="row"
+      height={28}
+      key="4"
+      style={
+        Array [
+          Object {
+            "opacity": 0.5,
+            "position": "absolute",
+          },
+          Object {
+            "borderRadius": 1,
+          },
+          Object {
+            "left": 314,
+            "top": 46,
+          },
+        ]
+      }
+      visible={true}
+      width={2}
+    />
+    <Divider
+      color="#000"
+      flexDirection="row"
+      height={28}
+      key="5"
+      style={
+        Array [
+          Object {
+            "opacity": 0.5,
+            "position": "absolute",
+          },
+          Object {
+            "borderRadius": 1,
+          },
+          Object {
+            "left": 366,
+            "top": 46,
+          },
+        ]
+      }
+      visible={true}
+      width={2}
+    />
+    <Divider
+      color="#000"
+      flexDirection="row"
+      height={28}
+      key="6"
+      style={
+        Array [
+          Object {
+            "opacity": 0.5,
+            "position": "absolute",
+          },
+          Object {
+            "borderRadius": 1,
+          },
+          Object {
+            "left": 418,
+            "top": 46,
+          },
+        ]
+      }
+      visible={true}
+      width={2}
+    />
+    <Divider
+      color="#000"
+      flexDirection="row"
+      height={28}
+      key="7"
+      style={
+        Array [
+          Object {
+            "opacity": 0.5,
+            "position": "absolute",
+          },
+          Object {
+            "borderRadius": 1,
+          },
+          Object {
+            "left": 470,
+            "top": 46,
+          },
+        ]
+      }
+      visible={true}
+      width={2}
+    />
+    <Divider
+      color="#000"
+      flexDirection="row"
+      height={28}
+      key="8"
+      style={
+        Array [
+          Object {
+            "opacity": 0.5,
+            "position": "absolute",
+          },
+          Object {
+            "borderRadius": 1,
+          },
+          Object {
+            "left": 522,
+            "top": 46,
+          },
+        ]
+      }
+      visible={true}
+      width={2}
+    />
+  </AnimatedComponent>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#FFF",
+          "borderRadius": 32,
+          "height": 120,
+          "width": 654,
+        },
+        Object {
+          "backgroundColor": "#57BCFB",
+          "overflow": "hidden",
+        },
+        Object {
+          "left": 0,
+          "width": 327,
+        },
+      ]
+    }
+  >
+    <AnimatedComponent
+      style={
+        Array [
+          Object {
+            "left": 0,
+          },
+          Object {
+            "left": -0,
+          },
+          Object {
+            "height": 120,
+            "position": "absolute",
+            "width": 654,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "justifyContent": "space-between",
+            },
+            Object {
+              "height": 120,
+              "width": 654,
+            },
+            Object {
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Array [
+              Object {
+                "fontWeight": "400",
+                "opacity": 0.5,
+                "position": "absolute",
+              },
+              Object {
+                "color": "#FFF",
+                "fontSize": 24,
+              },
+              Object {
+                "left": 24,
+              },
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          0%
+        </TYText>
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Array [
+              Object {
+                "fontWeight": "400",
+                "opacity": 0.5,
+                "position": "absolute",
+              },
+              Object {
+                "color": "#FFF",
+                "fontSize": 24,
+              },
+              Object {
+                "right": 24,
+              },
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          100%
+        </TYText>
+      </View>
+      <Divider
+        color="#FFF"
+        flexDirection="row"
+        height={28}
+        key="0"
+        style={
+          Array [
+            Object {
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "borderRadius": 1,
+            },
+            Object {
+              "left": 106,
+              "top": 46,
+            },
+          ]
+        }
+        visible={true}
+        width={2}
+      />
+      <Divider
+        color="#FFF"
+        flexDirection="row"
+        height={28}
+        key="1"
+        style={
+          Array [
+            Object {
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "borderRadius": 1,
+            },
+            Object {
+              "left": 158,
+              "top": 46,
+            },
+          ]
+        }
+        visible={true}
+        width={2}
+      />
+      <Divider
+        color="#FFF"
+        flexDirection="row"
+        height={28}
+        key="2"
+        style={
+          Array [
+            Object {
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "borderRadius": 1,
+            },
+            Object {
+              "left": 210,
+              "top": 46,
+            },
+          ]
+        }
+        visible={true}
+        width={2}
+      />
+      <Divider
+        color="#FFF"
+        flexDirection="row"
+        height={28}
+        key="3"
+        style={
+          Array [
+            Object {
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "borderRadius": 1,
+            },
+            Object {
+              "left": 262,
+              "top": 46,
+            },
+          ]
+        }
+        visible={true}
+        width={2}
+      />
+      <Divider
+        color="#FFF"
+        flexDirection="row"
+        height={28}
+        key="4"
+        style={
+          Array [
+            Object {
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "borderRadius": 1,
+            },
+            Object {
+              "left": 314,
+              "top": 46,
+            },
+          ]
+        }
+        visible={true}
+        width={2}
+      />
+      <Divider
+        color="#FFF"
+        flexDirection="row"
+        height={28}
+        key="5"
+        style={
+          Array [
+            Object {
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "borderRadius": 1,
+            },
+            Object {
+              "left": 366,
+              "top": 46,
+            },
+          ]
+        }
+        visible={true}
+        width={2}
+      />
+      <Divider
+        color="#FFF"
+        flexDirection="row"
+        height={28}
+        key="6"
+        style={
+          Array [
+            Object {
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "borderRadius": 1,
+            },
+            Object {
+              "left": 418,
+              "top": 46,
+            },
+          ]
+        }
+        visible={true}
+        width={2}
+      />
+      <Divider
+        color="#FFF"
+        flexDirection="row"
+        height={28}
+        key="7"
+        style={
+          Array [
+            Object {
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "borderRadius": 1,
+            },
+            Object {
+              "left": 470,
+              "top": 46,
+            },
+          ]
+        }
+        visible={true}
+        width={2}
+      />
+      <Divider
+        color="#FFF"
+        flexDirection="row"
+        height={28}
+        key="8"
+        style={
+          Array [
+            Object {
+              "opacity": 0.5,
+              "position": "absolute",
+            },
+            Object {
+              "borderRadius": 1,
+            },
+            Object {
+              "left": 522,
+              "top": 46,
+            },
+          ]
+        }
+        visible={true}
+        width={2}
+      />
+    </AnimatedComponent>
+  </AnimatedComponent>
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    pointerEvents="box-only"
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#FFF",
+          "borderRadius": 32,
+          "height": 120,
+          "width": 654,
+        },
+        Object {
+          "backgroundColor": "transparent",
+          "overflow": "hidden",
+          "position": "absolute",
+          "zIndex": 10,
+        },
+      ]
+    }
+  />
+</View>
+`;

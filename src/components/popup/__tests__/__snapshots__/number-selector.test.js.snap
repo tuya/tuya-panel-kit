@@ -1048,6 +1048,7 @@ exports[`NumberSelector Component basic render type 1`] = `
                   "backgroundColor": "#0B7CFF",
                   "borderRadius": undefined,
                   "height": undefined,
+                  "justifyContent": "center",
                   "opacity": 0,
                   "overflow": "hidden",
                   "position": "absolute",

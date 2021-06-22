@@ -12,27 +12,30 @@ describe('SliderWithLine', () => {
   it('basic render', () => {
     const wrapper = setup();
     expect(wrapper).toMatchSnapshot();
+    wrapper.setProps({ maxValue: 43 });
+    wrapper.instance().moving = true;
+    wrapper.setProps({});
+  });
+  it('minDisabled render', () => {
+    const wrapper = setup({ minDisabled: false, onSlidingStart: res => console.log(res) });
+    let target = wrapper.findWhere(c => !!c.prop('onMoveShouldSetResponder'));
+    target.simulate('startShouldSetResponder');
+    target.simulate('startShouldSetResponderCapture', {
+      nativeEvent: { touches: [] },
+      touchHistory: { touchBank: [] },
+    });
+    target.simulate('panResponderGrant', {
+      nativeEvent: { touches: [] },
+      touchHistory: { touchBank: [] },
+    });
+    expect(wrapper).toMatchSnapshot();
     wrapper.setProps({});
     wrapper.instance().moving = true;
     wrapper.setProps({});
   });
-  it('Test method', () => {
-    let wrapper = setup({ style: {} });
-    wrapper.instance().toValue();
-    wrapper.instance().calcValues();
-    wrapper.instance().releaseMove();
-    jest.runOnlyPendingTimers();
-    inRangeNumber();
-
-    wrapper = setup({ style: {}, onMoveRelease: () => {} });
-    wrapper.instance().releaseMove();
-    wrapper.instance().onValueChange();
-
-    wrapper = setup({ style: {}, onValueChange: () => {} });
-    wrapper.instance().onValueChange();
-  });
   it('PanResponder', () => {
-    let wrapper = setup({ maxValuePercentRange: [1, 2] });
+    let wrapper = setup({ horizontal: false, width: 40, height: 327 });
+    const instance = wrapper.instance();
     let target = wrapper.findWhere(c => !!c.prop('onMoveShouldSetResponder'));
     target.simulate('startShouldSetResponder');
     target.simulate('startShouldSetResponderCapture', {
@@ -43,8 +46,11 @@ describe('SliderWithLine', () => {
       nativeEvent: { touches: [] },
       touchHistory: { touchBank: [] },
     });
+    instance._handleToValues();
+    target.simulate('responderTerminate');
+    target.simulate('responderRelease');
     target.simulate('responderTerminationRequest');
-    wrapper = setup({ minValuePercentRange: [1, 2], maxValuePercentRange: {} });
+    wrapper = setup({ stepValue: 20 });
     target = wrapper.findWhere(c => !!c.prop('onMoveShouldSetResponder'));
     target.simulate('responderGrant', {
       nativeEvent: { locationX: 60, locationY: 0 },
