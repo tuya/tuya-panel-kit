@@ -23,6 +23,7 @@ import {
   StyledBackText,
   StyleDividerView,
   StyleDivider,
+  StyledMiddleDivider,
 } from './styled';
 
 export const MOTION_TYPES = Object.keys(Motion)
@@ -148,6 +149,10 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
        * 是否显示返回按钮
        */
       showBack: PropTypes.bool,
+      /**
+       * 是否显示头部栏与内容框的分割线
+       */
+      showTitleDivider: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -174,6 +179,7 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
       onBack: null,
       backText: 'Back',
       showBack: false,
+      showTitleDivider: true,
     };
 
     constructor(props) {
@@ -406,6 +412,7 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
               </StyledCancelText>
             </StyledCancelButton>
           ) : null}
+          {footerType === 'both' && <StyledMiddleDivider />}
           {showConfirm ? (
             <StyledConfirmButton
               accessibilityLabel={`${accessPrefix}_Confirm`}
@@ -450,6 +457,7 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
         wrapperStyle,
         motionType,
         motionConfig,
+        showTitleDivider,
         isAlign,
         ...props
       } = this.props;
@@ -457,9 +465,11 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
       let element = (
         <StyledContainer style={wrapperStyle}>
           {this.renderTitle()}
-          <StyleDividerView>
-            <StyleDivider />
-          </StyleDividerView>
+          {showTitleDivider && (
+            <StyleDividerView>
+              <StyleDivider />
+            </StyleDividerView>
+          )}
           <WrappedComponent
             {...props}
             switchValue={typeof switchValue === 'undefined' ? true : switchValue}

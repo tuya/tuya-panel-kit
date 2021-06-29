@@ -127,9 +127,16 @@ export const StyledCancelButton = styled(TouchableOpacity).attrs({
   align-self: stretch;
   align-items: center;
   justify-content: center;
-  border-right-width: ${props => (props.bordered ? StyleSheet.hairlineWidth : 0)};
-  border-right-color: ${lineColor};
   background-color: ${props => (props.pressActive ? pressColor : cellBg)};
+`;
+
+export const StyledMiddleDivider = styled(View).attrs({})`
+  width: ${StyleSheet.hairlineWidth};
+  height: ${props => {
+    const height = cellHeight(props);
+    return height - 32;
+  }}px;
+  background-color: ${lineColor};
 `;
 
 export const StyledCancelText = styled(TYText)`
