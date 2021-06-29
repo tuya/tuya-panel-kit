@@ -227,8 +227,6 @@ exports[`Picker Component basic render 1`] = `
             "alignItems": "center",
             "alignSelf": "stretch",
             "backgroundColor": "#fff",
-            "borderRightColor": "rgba(0, 0, 0, 0.1)",
-            "borderRightWidth": 0.5,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
@@ -271,6 +269,18 @@ exports[`Picker Component basic render 1`] = `
           取消
         </Text>
       </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 24,
+              "width": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
       <View
         accessibilityLabel="Popup_Confirm"
         accessible={true}
@@ -691,8 +701,6 @@ exports[`Picker Component basic render 2`] = `
             "alignItems": "center",
             "alignSelf": "stretch",
             "backgroundColor": "#fff",
-            "borderRightColor": "rgba(0, 0, 0, 0.1)",
-            "borderRightWidth": 0.5,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
@@ -735,6 +743,18 @@ exports[`Picker Component basic render 2`] = `
           取消
         </Text>
       </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 24,
+              "width": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
       <View
         accessibilityLabel="Popup_Confirm"
         accessible={true}
@@ -1155,8 +1175,6 @@ exports[`Picker Component basic render with label 1`] = `
             "alignItems": "center",
             "alignSelf": "stretch",
             "backgroundColor": "#fff",
-            "borderRightColor": "rgba(0, 0, 0, 0.1)",
-            "borderRightWidth": 0.5,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
@@ -1199,6 +1217,18 @@ exports[`Picker Component basic render with label 1`] = `
           取消
         </Text>
       </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 24,
+              "width": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
       <View
         accessibilityLabel="Popup_Confirm"
         accessible={true}
