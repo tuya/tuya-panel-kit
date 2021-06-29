@@ -852,8 +852,6 @@ exports[`countdown Component basic render 1`] = `
             "alignItems": "center",
             "alignSelf": "stretch",
             "backgroundColor": "#fff",
-            "borderRightColor": "rgba(0, 0, 0, 0.1)",
-            "borderRightWidth": 0.5,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
@@ -896,6 +894,18 @@ exports[`countdown Component basic render 1`] = `
           取消
         </Text>
       </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 24,
+              "width": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
       <View
         accessibilityLabel="Popup_Confirm"
         accessible={true}
@@ -1810,8 +1820,6 @@ exports[`countdown Component basic render 2`] = `
             "alignItems": "center",
             "alignSelf": "stretch",
             "backgroundColor": "#fff",
-            "borderRightColor": "rgba(0, 0, 0, 0.1)",
-            "borderRightWidth": 0.5,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
@@ -1854,6 +1862,18 @@ exports[`countdown Component basic render 2`] = `
           取消
         </Text>
       </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 24,
+              "width": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
       <View
         accessibilityLabel="Popup_Confirm"
         accessible={true}
@@ -2766,8 +2786,6 @@ exports[`countdown Component basic update 1`] = `
             "alignItems": "center",
             "alignSelf": "stretch",
             "backgroundColor": "#fff",
-            "borderRightColor": "rgba(0, 0, 0, 0.1)",
-            "borderRightWidth": 0.5,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
@@ -2810,6 +2828,18 @@ exports[`countdown Component basic update 1`] = `
           取消
         </Text>
       </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 24,
+              "width": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
       <View
         accessibilityLabel="Popup_Confirm"
         accessible={true}
@@ -3722,8 +3752,6 @@ exports[`countdown Component basic update 2`] = `
             "alignItems": "center",
             "alignSelf": "stretch",
             "backgroundColor": "#fff",
-            "borderRightColor": "rgba(0, 0, 0, 0.1)",
-            "borderRightWidth": 0.5,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
@@ -3766,6 +3794,18 @@ exports[`countdown Component basic update 2`] = `
           取消
         </Text>
       </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 24,
+              "width": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
       <View
         accessibilityLabel="Popup_Confirm"
         accessible={true}
@@ -4427,8 +4467,6 @@ exports[`countdown Component render width hour 1`] = `
             "alignItems": "center",
             "alignSelf": "stretch",
             "backgroundColor": "#fff",
-            "borderRightColor": "rgba(0, 0, 0, 0.1)",
-            "borderRightWidth": 0.5,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
@@ -4471,6 +4509,18 @@ exports[`countdown Component render width hour 1`] = `
           取消
         </Text>
       </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 24,
+              "width": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
       <View
         accessibilityLabel="Popup_Confirm"
         accessible={true}
@@ -5087,8 +5137,6 @@ exports[`countdown Component render width hour 2`] = `
             "alignItems": "center",
             "alignSelf": "stretch",
             "backgroundColor": "#fff",
-            "borderRightColor": "rgba(0, 0, 0, 0.1)",
-            "borderRightWidth": 0.5,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
@@ -5131,6 +5179,18 @@ exports[`countdown Component render width hour 2`] = `
           取消
         </Text>
       </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 24,
+              "width": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
       <View
         accessibilityLabel="Popup_Confirm"
         accessible={true}
@@ -5797,8 +5857,6 @@ exports[`countdown Component render width hour 3`] = `
             "alignItems": "center",
             "alignSelf": "stretch",
             "backgroundColor": "#fff",
-            "borderRightColor": "rgba(0, 0, 0, 0.1)",
-            "borderRightWidth": 0.5,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
@@ -5841,6 +5899,18 @@ exports[`countdown Component render width hour 3`] = `
           取消
         </Text>
       </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 24,
+              "width": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
       <View
         accessibilityLabel="Popup_Confirm"
         accessible={true}
@@ -13377,8 +13447,6 @@ exports[`countdown Component render width onlyone 1`] = `
             "alignItems": "center",
             "alignSelf": "stretch",
             "backgroundColor": "#fff",
-            "borderRightColor": "rgba(0, 0, 0, 0.1)",
-            "borderRightWidth": 0.5,
             "flexBasis": 0,
             "flexGrow": 1,
             "flexShrink": 1,
@@ -13421,6 +13489,18 @@ exports[`countdown Component render width onlyone 1`] = `
           取消
         </Text>
       </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 24,
+              "width": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
       <View
         accessibilityLabel="Popup_Confirm"
         accessible={true}
