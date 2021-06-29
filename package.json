@@ -42,6 +42,7 @@
     "commit": "git-cz",
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
     "format": "prettier --write src/**/*/*.{js,jsx,ts,tsx}",
+    "prepublishOnly": "yarn build",
     "release:major:pre": "standard-version --release-as major --prerelease rc && git push --follow-tags origin master",
     "release:major": "standard-version --release-as major && git push --follow-tags origin master",
     "release:minor:pre": "standard-version --release-as minor --prerelease rc --skip.changelog=true --skip.tag=true && git push --follow-tags origin master",
