@@ -9,9 +9,10 @@ module.exports = {
         extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
         alias: {
           'tuya-panel-kit/lib/components/iconfont/svg/defaultSvg':
-            '../src/components/iconfont/svg/defaultSvg',
-          'tuya-panel-kit/lib/components/modal/portalOut': '../src/components/modal/portalOut',
-          'tuya-panel-kit': '../src/index',
+            '../packages/tuya-panel-kit/src/components/iconfont/svg/defaultSvg',
+          'tuya-panel-kit/lib/components/modal/portalOut':
+            '../packages/tuya-panel-kit/src/components/modal/portalOut',
+          'tuya-panel-kit': '../packages/tuya-panel-kit/src/index.js',
           '#components': './src/components',
           '#config': './src/config',
           '#i18n': './src/i18n',
