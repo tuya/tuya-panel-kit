@@ -6,13 +6,17 @@ module.exports = {
       'module-resolver',
       {
         root: ['./'],
+        extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
         alias: {
-          'tuya-panel-kit/src/components/iconfont/svg/defaultSvg':
+          'tuya-panel-kit/lib/components/iconfont/svg/defaultSvg':
             '../src/components/iconfont/svg/defaultSvg',
-          'tuya-panel-kit/src/components/iconfont/art/defaultSvg':
-            '../src/components/iconfont/art/defaultSvg',
-          'tuya-panel-kit/src/components/dialog/alert': '../src/components/dialog/alert',
+          'tuya-panel-kit/lib/components/modal/portalOut': '../src/components/modal/portalOut',
           'tuya-panel-kit': '../src/index',
+          '#components': './src/components',
+          '#config': './src/config',
+          '#i18n': './src/i18n',
+          '#hooks': './src/hooks',
+          '#models': './src/models',
         },
       },
     ],

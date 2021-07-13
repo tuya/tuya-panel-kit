@@ -49,11 +49,13 @@ export default class Battery extends PureComponent {
     }
     if (top <= 14.2 && top >= 3) {
       return highColor;
-    } else if (top <= 15.6 && top > 14.2) {
+    }
+    if (top <= 15.6 && top > 14.2) {
       return middleColor;
     }
     return lowColor;
   };
+
   render() {
     const { batteryColor, size } = this.props;
     const top = this.calcBattery();
