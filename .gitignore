@@ -79,4 +79,4 @@ __tests__/build/*
 build
 
 dist
-lib/*
+lib
