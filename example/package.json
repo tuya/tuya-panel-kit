@@ -30,7 +30,9 @@
     "@react-navigation/stack": "5.9.0",
     "@types/qs": "^6.9.6",
     "@umijs/plugin-locale": "^0.12.2",
+    "core-js": "^3.15.2",
     "events": "^1.1.1",
+    "immutable": "^4.0.0-rc.14",
     "lodash": "^4.17.19",
     "moment": "^2.20.1",
     "prop-types": "^15.6.1",
@@ -38,12 +40,13 @@
     "react": "16.8.3",
     "react-addons-shallow-compare": "^15.6.2",
     "react-native": "0.59.10",
-    "react-native-safe-area-context": "3.1.7",
-    "react-native-screens": "2.10.1",
     "react-native-gesture-handler": "^1.10.3",
+    "react-native-safe-area-context": "3.1.7",
     "react-native-safe-area-view": "^1.1.1",
+    "react-native-screens": "2.10.1",
     "react-native-svg": "5.5.1",
     "react-redux": "^7.2.1",
+    "rebound": "^0.1.0",
     "redux": "^4.0.0",
     "redux-actions": "^2.6.1",
     "redux-logger": "^3.0.6",
@@ -52,7 +55,8 @@
     "rxjs": "^6.3.1",
     "rxjs-compat": "^6.3.1",
     "style-equal": "^1.0.0",
-    "tuya-panel-kit": "4.6.2"
+    "styled-components": "^5.3.0",
+    "tuya-panel-kit": "file:.yalc/tuya-panel-kit"
   },
   "resolutions": {
     "react-native-web": "^0.11.7"
@@ -60,6 +64,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.12.1",
     "@babel/preset-flow": "^7.14.5",
+    "@babel/runtime": "^7.14.6",
     "@commitlint/cli": "^11.0.0",
     "@tuya-smart/tuya-panel-patches": "^0.59.10",
     "@types/lodash": "^4.14.137",
