@@ -80,3 +80,8 @@ build
 
 dist
 lib/*
+
+# umi
+.umi
+.umi-production
+.env.local
