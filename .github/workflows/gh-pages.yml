@@ -10,6 +10,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: |
           cd example
+          npx yalc update
           yarn install
           yarn build:umi
       - name: Deploy
