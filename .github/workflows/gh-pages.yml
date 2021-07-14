@@ -2,15 +2,16 @@ name: github pages
 on:
   push:
     branches:
-      - main # default branch
+      - docs/demo # default branch
 jobs:
   deploy:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-      - run: |
+      - name: Build
+        run: |
           cd example
-          yarn install
+          yarn add tuya-panel-kit --registry=https://registry.npmjs.org
           yarn build:umi
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
