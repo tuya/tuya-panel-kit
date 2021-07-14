@@ -1,0 +1,458 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Name of the group componentWillReceiveProps 1`] = `
+<View
+  accessibilityLabel="SliderProgress"
+  style={
+    Array [
+      Object {
+        "height": 33,
+        "width": 300,
+      },
+      Object {},
+    ]
+  }
+>
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {
+          "height": 33,
+          "width": 300,
+        },
+      ]
+    }
+  >
+    <View
+      pointerEvents="box-only"
+      style={
+        Array [
+          Object {
+            "bottom": 0,
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        key="3"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="5"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="8"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="11"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="13"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="16"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="18"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="21"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="24"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="26"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="29"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="32"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="34"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="37"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="39"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="42"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="45"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="47"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="50"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="53"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="55"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="58"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="61"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="63"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="66"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="68"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="71"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="74"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="76"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="79"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="82"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="84"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="87"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="89"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="92"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="95"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="97"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+      <View
+        key="100"
+        style={
+          Object {
+            "backgroundColor": "rgba(94,113,159,0.2)",
+            "height": 33,
+            "width": 4,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;

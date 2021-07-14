@@ -1,0 +1,993 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stepper Component basic render 1`] = `[Function]`;
+
+exports[`Stepper Component buttonType render 1`] = `[Function]`;
+
+exports[`Stepper Component editable render 1`] = `[Function]`;
+
+exports[`Stepper Component editable update 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "width": 208,
+      },
+      Object {},
+    ]
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "borderRadius": 2,
+        "height": 24,
+        "justifyContent": "center",
+        "opacity": 1,
+        "width": 36,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "height": 32,
+            "width": 32,
+          },
+          false,
+          Array [
+            Object {},
+            undefined,
+          ],
+        ]
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+            false,
+            Object {
+              "flex": 0,
+              "height": 32,
+              "width": 32,
+            },
+          ]
+        }
+        vbHeight={1024}
+        vbWidth={1024}
+      >
+        <RNSVGPath
+          d="M563.20064 827.712l448-597.312A64 64 0 0 0 960.00064 128H64.00064a64 64 0 0 0-51.2 102.4l448 597.312a64 64 0 0 0 102.4 0z"
+          fill={
+            Array [
+              0,
+              0,
+              1,
+              1,
+              1,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "fill",
+              "fillOpacity",
+            ]
+          }
+          stroke={
+            Array [
+              0,
+              0,
+              0,
+              0,
+              1,
+            ]
+          }
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={1}
+        />
+      </RNSVGSvgView>
+    </View>
+  </View>
+  <TextInput
+    allowFontScaling={true}
+    buttonType="triangle"
+    editable={false}
+    ellipseIconColor="#333"
+    enablesReturnKeyAutomatically={true}
+    getTextInputRef={[Function]}
+    keyboardType="numeric"
+    maxLength={4}
+    onChangeText={[Function]}
+    onEndEditing={[Function]}
+    onValueChange={[Function]}
+    selectionColor="#FF4800"
+    stepValue={1}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "color": "#333",
+          "fontSize": 16,
+          "height": 44,
+          "justifyContent": "center",
+          "paddingBottom": 0,
+          "paddingLeft": 0,
+          "paddingRight": 0,
+          "paddingTop": 0,
+          "textAlign": "center",
+          "width": 44,
+        },
+        Array [
+          false,
+          Object {},
+        ],
+      ]
+    }
+    underlineColorAndroid="transparent"
+    value="99"
+  />
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "borderRadius": 2,
+        "height": 24,
+        "justifyContent": "center",
+        "opacity": 0.4,
+        "width": 36,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "height": 32,
+            "width": 32,
+          },
+          false,
+          Array [
+            Object {},
+            undefined,
+          ],
+        ]
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+            false,
+            Object {
+              "flex": 0,
+              "height": 32,
+              "width": 32,
+            },
+          ]
+        }
+        vbHeight={1024}
+        vbWidth={1024}
+      >
+        <RNSVGPath
+          d="M563.20064 196.288l448 597.312A64 64 0 0 1 960.00064 896H64.00064a64 64 0 0 1-51.2-102.4l448-597.312a64 64 0 0 1 102.4 0z"
+          fill={
+            Array [
+              0,
+              0,
+              1,
+              1,
+              1,
+            ]
+          }
+          fillOpacity={0.4}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "fill",
+              "fillOpacity",
+            ]
+          }
+          stroke={
+            Array [
+              0,
+              0,
+              0,
+              0,
+              1,
+            ]
+          }
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={1}
+        />
+      </RNSVGSvgView>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Stepper Component editable update 2`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "width": 208,
+      },
+      Object {},
+    ]
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "borderRadius": 2,
+        "height": 24,
+        "justifyContent": "center",
+        "opacity": 1,
+        "width": 36,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "height": 32,
+            "width": 32,
+          },
+          false,
+          Array [
+            Object {},
+            undefined,
+          ],
+        ]
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+            false,
+            Object {
+              "flex": 0,
+              "height": 32,
+              "width": 32,
+            },
+          ]
+        }
+        vbHeight={1024}
+        vbWidth={1024}
+      >
+        <RNSVGPath
+          d="M563.20064 827.712l448-597.312A64 64 0 0 0 960.00064 128H64.00064a64 64 0 0 0-51.2 102.4l448 597.312a64 64 0 0 0 102.4 0z"
+          fill={
+            Array [
+              0,
+              0,
+              1,
+              1,
+              1,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "fill",
+              "fillOpacity",
+            ]
+          }
+          stroke={
+            Array [
+              0,
+              0,
+              0,
+              0,
+              1,
+            ]
+          }
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={1}
+        />
+      </RNSVGSvgView>
+    </View>
+  </View>
+  <TextInput
+    allowFontScaling={true}
+    buttonType="triangle"
+    editable={false}
+    ellipseIconColor="#333"
+    enablesReturnKeyAutomatically={true}
+    getTextInputRef={[Function]}
+    keyboardType="numeric"
+    maxLength={4}
+    onChangeText={[Function]}
+    onEndEditing={[Function]}
+    onValueChange={[Function]}
+    selectionColor="#FF4800"
+    stepValue={1}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "color": "#333",
+          "fontSize": 16,
+          "height": 44,
+          "justifyContent": "center",
+          "paddingBottom": 0,
+          "paddingLeft": 0,
+          "paddingRight": 0,
+          "paddingTop": 0,
+          "textAlign": "center",
+          "width": 44,
+        },
+        Array [
+          false,
+          Object {},
+        ],
+      ]
+    }
+    underlineColorAndroid="transparent"
+    value="45"
+  />
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "borderRadius": 2,
+        "height": 24,
+        "justifyContent": "center",
+        "opacity": 0.4,
+        "width": 36,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "height": 32,
+            "width": 32,
+          },
+          false,
+          Array [
+            Object {},
+            undefined,
+          ],
+        ]
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+            false,
+            Object {
+              "flex": 0,
+              "height": 32,
+              "width": 32,
+            },
+          ]
+        }
+        vbHeight={1024}
+        vbWidth={1024}
+      >
+        <RNSVGPath
+          d="M563.20064 196.288l448 597.312A64 64 0 0 1 960.00064 896H64.00064a64 64 0 0 1-51.2-102.4l448-597.312a64 64 0 0 1 102.4 0z"
+          fill={
+            Array [
+              0,
+              0,
+              1,
+              1,
+              1,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "fill",
+              "fillOpacity",
+            ]
+          }
+          stroke={
+            Array [
+              0,
+              0,
+              0,
+              0,
+              1,
+            ]
+          }
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={1}
+        />
+      </RNSVGSvgView>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Stepper Component onValueChange render 1`] = `[Function]`;
+
+exports[`Stepper basic render with TextInput 1 1`] = `
+<Styled(View)
+  style={Object {}}
+>
+  <Styled(TouchableOpacity)
+    disabled={false}
+    onPressIn={[Function]}
+    onPressOut={[Function]}
+    style={
+      Array [
+        Object {},
+        false,
+      ]
+    }
+  >
+    <Styled(Component)
+      fill="#333"
+      fillOpacity={1}
+      name="minus"
+    />
+  </Styled(TouchableOpacity)>
+  <Styled(TextInput)
+    buttonType="ellipse"
+    editable={true}
+    enablesReturnKeyAutomatically={true}
+    getTextInputRef={[Function]}
+    iconMinusPath="M563.20064 827.712l448-597.312A64 64 0 0 0 960.00064 128H64.00064a64 64 0 0 0-51.2 102.4l448 597.312a64 64 0 0 0 102.4 0z"
+    iconPlusPath="M563.20064 196.288l448 597.312A64 64 0 0 1 960.00064 896H64.00064a64 64 0 0 1-51.2-102.4l448-597.312a64 64 0 0 1 102.4 0z"
+    keyboardType="numeric"
+    maxLength={4}
+    onChangeText={[Function]}
+    onEndEditing={[Function]}
+    onValueChange={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            12,
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    selectionColor="#FF4800"
+    stepValue={1}
+    style={
+      Array [
+        false,
+        Object {},
+      ]
+    }
+    triangleIconColor="#FF4800"
+    value="12"
+  />
+  <Styled(TouchableOpacity)
+    disabled={false}
+    onPressIn={[Function]}
+    onPressOut={[Function]}
+    style={
+      Array [
+        Object {},
+        false,
+      ]
+    }
+  >
+    <Styled(Component)
+      fill="#333"
+      fillOpacity={1}
+      name="plus"
+    />
+  </Styled(TouchableOpacity)>
+</Styled(View)>
+`;
+
+exports[`Stepper basic render with TextInput 2 1`] = `
+<Styled(View)
+  style={Object {}}
+>
+  <Styled(TouchableOpacity)
+    disabled={true}
+    onPressIn={[Function]}
+    onPressOut={[Function]}
+    style={
+      Array [
+        Object {},
+        Object {
+          "opacity": 0.4,
+        },
+      ]
+    }
+  >
+    <Styled(Component)
+      fill="#333"
+      fillOpacity={0.4}
+      name="minus"
+    />
+  </Styled(TouchableOpacity)>
+  <Styled(TextInput)
+    buttonType="ellipse"
+    editable={true}
+    enablesReturnKeyAutomatically={true}
+    getTextInputRef={[Function]}
+    iconMinusPath="M563.20064 827.712l448-597.312A64 64 0 0 0 960.00064 128H64.00064a64 64 0 0 0-51.2 102.4l448 597.312a64 64 0 0 0 102.4 0z"
+    iconPlusPath="M563.20064 196.288l448 597.312A64 64 0 0 1 960.00064 896H64.00064a64 64 0 0 1-51.2-102.4l448-597.312a64 64 0 0 1 102.4 0z"
+    keyboardType="numeric"
+    maxLength={4}
+    onChangeText={[Function]}
+    onEndEditing={[Function]}
+    onValueChange={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            0,
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    selectionColor="#FF4800"
+    stepValue={1}
+    style={
+      Array [
+        false,
+        Object {},
+      ]
+    }
+    triangleIconColor="#FF4800"
+    value="0"
+  />
+  <Styled(TouchableOpacity)
+    disabled={false}
+    onPressIn={[Function]}
+    onPressOut={[Function]}
+    style={
+      Array [
+        Object {},
+        false,
+      ]
+    }
+  >
+    <Styled(Component)
+      fill="#333"
+      fillOpacity={1}
+      name="plus"
+    />
+  </Styled(TouchableOpacity)>
+</Styled(View)>
+`;
+
+exports[`Stepper basic render with TextInput 3 1`] = `
+<Styled(View)
+  style={Object {}}
+>
+  <Styled(TouchableOpacity)
+    disabled={false}
+    onPressIn={[Function]}
+    onPressOut={[Function]}
+    style={
+      Array [
+        Object {},
+        false,
+      ]
+    }
+  >
+    <Styled(Component)
+      fill="#333"
+      fillOpacity={1}
+      name="minus"
+    />
+  </Styled(TouchableOpacity)>
+  <Styled(TextInput)
+    buttonType="ellipse"
+    editable={true}
+    enablesReturnKeyAutomatically={true}
+    getTextInputRef={[Function]}
+    iconMinusPath="M563.20064 827.712l448-597.312A64 64 0 0 0 960.00064 128H64.00064a64 64 0 0 0-51.2 102.4l448 597.312a64 64 0 0 0 102.4 0z"
+    iconPlusPath="M563.20064 196.288l448 597.312A64 64 0 0 1 960.00064 896H64.00064a64 64 0 0 1-51.2-102.4l448-597.312a64 64 0 0 1 102.4 0z"
+    keyboardType="numeric"
+    maxLength={4}
+    onChangeText={[Function]}
+    onEndEditing={[Function]}
+    onValueChange={[Function]}
+    selectionColor="#FF4800"
+    stepValue={1}
+    style={
+      Array [
+        false,
+        Object {},
+      ]
+    }
+    triangleIconColor="#FF4800"
+    value="99"
+  />
+  <Styled(TouchableOpacity)
+    disabled={true}
+    onPressIn={[Function]}
+    onPressOut={[Function]}
+    style={
+      Array [
+        Object {},
+        Object {
+          "opacity": 0.4,
+        },
+      ]
+    }
+  >
+    <Styled(Component)
+      fill="#333"
+      fillOpacity={0.4}
+      name="plus"
+    />
+  </Styled(TouchableOpacity)>
+</Styled(View)>
+`;
+
+exports[`Stepper basic render with TextInput 4 1`] = `
+<Styled(View)
+  style={Object {}}
+>
+  <Styled(TouchableOpacity)
+    disabled={false}
+    onPressIn={[Function]}
+    onPressOut={[Function]}
+    style={
+      Array [
+        Object {},
+        false,
+      ]
+    }
+  >
+    <Styled(Component)
+      fill="#333"
+      fillOpacity={1}
+      name="minus"
+    />
+  </Styled(TouchableOpacity)>
+  <Styled(TextInput)
+    buttonType="ellipse"
+    editable={true}
+    enablesReturnKeyAutomatically={true}
+    getTextInputRef={[Function]}
+    iconMinusPath="M563.20064 827.712l448-597.312A64 64 0 0 0 960.00064 128H64.00064a64 64 0 0 0-51.2 102.4l448 597.312a64 64 0 0 0 102.4 0z"
+    iconPlusPath="M563.20064 196.288l448 597.312A64 64 0 0 1 960.00064 896H64.00064a64 64 0 0 1-51.2-102.4l448-597.312a64 64 0 0 1 102.4 0z"
+    keyboardType="numeric"
+    maxLength={4}
+    onChangeText={[Function]}
+    onEndEditing={[Function]}
+    onValueChange={[Function]}
+    selectionColor="#FF4800"
+    stepValue={1}
+    style={
+      Array [
+        false,
+        Object {},
+      ]
+    }
+    triangleIconColor="#FF4800"
+    value="12"
+  />
+  <Styled(TouchableOpacity)
+    disabled={false}
+    onPressIn={[Function]}
+    onPressOut={[Function]}
+    style={
+      Array [
+        Object {},
+        false,
+      ]
+    }
+  >
+    <Styled(Component)
+      fill="#333"
+      fillOpacity={1}
+      name="plus"
+    />
+  </Styled(TouchableOpacity)>
+</Styled(View)>
+`;
+
+exports[`Stepper basic render with TextInput 5 1`] = `
+<Styled(View)
+  style={Object {}}
+>
+  <Styled(TouchableOpacity)
+    disabled={false}
+    onPressIn={[Function]}
+    onPressOut={[Function]}
+    style={
+      Array [
+        Object {},
+        false,
+      ]
+    }
+  >
+    <Styled(Component)
+      fill="#333"
+      fillOpacity={1}
+      name="minus"
+    />
+  </Styled(TouchableOpacity)>
+  <Styled(TextInput)
+    buttonType="ellipse"
+    editable={true}
+    enablesReturnKeyAutomatically={true}
+    getTextInputRef={[Function]}
+    iconMinusPath="M563.20064 827.712l448-597.312A64 64 0 0 0 960.00064 128H64.00064a64 64 0 0 0-51.2 102.4l448 597.312a64 64 0 0 0 102.4 0z"
+    iconPlusPath="M563.20064 196.288l448 597.312A64 64 0 0 1 960.00064 896H64.00064a64 64 0 0 1-51.2-102.4l448-597.312a64 64 0 0 1 102.4 0z"
+    keyboardType="numeric"
+    maxLength={4}
+    onChangeText={[Function]}
+    onEndEditing={[Function]}
+    onValueChange={[Function]}
+    selectionColor="#FF4800"
+    stepValue={1}
+    style={
+      Array [
+        false,
+        Object {},
+      ]
+    }
+    triangleIconColor="#FF4800"
+    value="12"
+  />
+  <Styled(TouchableOpacity)
+    disabled={false}
+    onPressIn={[Function]}
+    onPressOut={[Function]}
+    style={
+      Array [
+        Object {},
+        false,
+      ]
+    }
+  >
+    <Styled(Component)
+      fill="#333"
+      fillOpacity={1}
+      name="plus"
+    />
+  </Styled(TouchableOpacity)>
+</Styled(View)>
+`;
+
+exports[`Stepper basic render with TextInput 6 1`] = `
+<Styled(View)
+  style={Object {}}
+>
+  <Styled(TouchableOpacity)
+    disabled={false}
+    onPressIn={[Function]}
+    onPressOut={[Function]}
+    style={
+      Array [
+        Object {},
+        false,
+      ]
+    }
+  >
+    <Styled(Component)
+      fill="#333"
+      fillOpacity={1}
+      name="minus"
+    />
+  </Styled(TouchableOpacity)>
+  <Styled(TextInput)
+    buttonType="ellipse"
+    editable={true}
+    enablesReturnKeyAutomatically={true}
+    getTextInputRef={[Function]}
+    iconMinusPath="M563.20064 827.712l448-597.312A64 64 0 0 0 960.00064 128H64.00064a64 64 0 0 0-51.2 102.4l448 597.312a64 64 0 0 0 102.4 0z"
+    iconPlusPath="M563.20064 196.288l448 597.312A64 64 0 0 1 960.00064 896H64.00064a64 64 0 0 1-51.2-102.4l448-597.312a64 64 0 0 1 102.4 0z"
+    keyboardType="numeric"
+    maxLength={4}
+    onChangeText={[Function]}
+    onEndEditing={[Function]}
+    onValueChange={[Function]}
+    selectionColor="#FF4800"
+    stepValue={1}
+    style={
+      Array [
+        false,
+        Object {},
+      ]
+    }
+    triangleIconColor="#FF4800"
+    value="10.9"
+  />
+  <Styled(TouchableOpacity)
+    disabled={false}
+    onPressIn={[Function]}
+    onPressOut={[Function]}
+    style={
+      Array [
+        Object {},
+        false,
+      ]
+    }
+  >
+    <Styled(Component)
+      fill="#333"
+      fillOpacity={1}
+      name="plus"
+    />
+  </Styled(TouchableOpacity)>
+</Styled(View)>
+`;
+
+exports[`Stepper basic render with onPressIn 1`] = `""`;
+
+exports[`Stepper basic render with onPressOut 1`] = `""`;

@@ -1,6 +1,6 @@
 # Triggered when code is pushed to any branch in a repository
 name: Sync TYNativeApi
-on: 
+on:
   push:
     branches:
       - TYNativeApi

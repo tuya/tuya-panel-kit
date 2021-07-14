@@ -1,0 +1,21 @@
+name: Upload coverage to Codecov
+on:
+  push:
+    branches:
+      - master # Change this to your default branch
+  pull_request:
+    branches:
+      - master # Change this to your default branch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Install modules
+        run: yarn
+      - name: Run Test
+        run: yarn test --silent --forceExit
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          directory: ./coverage/

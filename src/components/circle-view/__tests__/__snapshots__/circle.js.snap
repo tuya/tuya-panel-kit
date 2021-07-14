@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CircleView Component basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": null,
+      },
+      undefined,
+      Object {
+        "borderRadius": 5,
+        "height": 10,
+        "overflow": "hidden",
+        "width": 10,
+      },
+    ]
+  }
+/>
+`;
+
+exports[`CircleView Component render with background 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "red",
+        "borderColor": "#fefefe",
+        "borderWidth": 1.5,
+      },
+      Object {
+        "backgroundColor": "yellow",
+      },
+      Object {
+        "borderRadius": 25,
+        "height": 50,
+        "overflow": "hidden",
+        "width": 50,
+      },
+    ]
+  }
+/>
+`;

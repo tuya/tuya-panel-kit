@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toast.Error Component basic render 1`] = `
+<View
+  pointerEvents="none"
+  style={
+    Array [
+      false,
+      Object {
+        "alignItems": "center",
+        "bottom": 0,
+        "flex": 1,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      },
+      null,
+      Object {
+        "justifyContent": "center",
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(0,0,0,.7)",
+        "borderRadius": 24,
+        "justifyContent": "center",
+        "marginBottom": 64,
+        "marginHorizontal": 132,
+        "opacity": 0,
+        "paddingHorizontal": 36,
+        "paddingVertical": 36,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "height": 84,
+            "width": 84,
+          },
+          false,
+          null,
+        ]
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+            false,
+            Object {
+              "flex": 0,
+              "height": 84,
+              "width": 84,
+            },
+          ]
+        }
+        vbHeight={1024}
+        vbWidth={1024}
+      >
+        <RNSVGPath
+          d="M512 0c282.770286 0 512 229.229714 512 512s-229.229714 512-512 512S0 794.770286 0 512 229.229714 0 512 0z m0 48.761905C256.170667 48.761905 48.761905 256.170667 48.761905 512s207.408762 463.238095 463.238095 463.238095 463.238095-207.408762 463.238095-463.238095S767.829333 48.761905 512 48.761905z m-103.448381 325.315047l103.472762 103.424 103.424-103.424a24.380952 24.380952 0 1 1 34.474667 34.474667L546.474667 512l103.448381 103.448381a24.380952 24.380952 0 1 1-34.474667 34.474667L512 546.474667l-103.448381 103.448381a24.380952 24.380952 0 1 1-34.474667-34.474667L477.525333 512l-103.448381-103.448381a24.380952 24.380952 0 1 1 34.474667-34.474667z"
+          fill={
+            Array [
+              0,
+              1,
+              1,
+              1,
+              1,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "fill",
+            ]
+          }
+          stroke={
+            Array [
+              0,
+              1,
+              1,
+              1,
+              1,
+            ]
+          }
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={1}
+        />
+      </RNSVGSvgView>
+    </View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#FFFFFF",
+            "flexWrap": "wrap",
+            "fontSize": 14,
+            "lineHeight": 20,
+            "textAlign": "center",
+          },
+          Object {
+            "marginTop": 12,
+          },
+          null,
+        ]
+      }
+    >
+      I'm Iron man
+    </Text>
+  </View>
+</View>
+`;

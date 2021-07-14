@@ -1,0 +1,430 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Prompt Component basic render defaultValue 1`] = `
+<Motion.ScaleFadeIn
+  animationConfig={
+    Object {
+      "delay": 0,
+      "duration": 250,
+      "isInteraction": true,
+      "useNativeDriver": true,
+    }
+  }
+  finalScale={0.9}
+  height={null}
+  hideDuration={250}
+  initScale={0.8}
+  isAlign={true}
+  onHide={[Function]}
+  onShow={[Function]}
+  show={true}
+  showDuration={250}
+  style={null}
+  width={null}
+>
+  <Prompt
+    cancelAccessibilityLabel="Dialog.Cancel"
+    cancelText="取消"
+    cancelTextStyle={null}
+    confirmAccessibilityLabel="Dialog.Confirm"
+    confirmText="确认"
+    confirmTextStyle={null}
+    contentStyle={null}
+    defaultValue=""
+    footerWrapperStyle={null}
+    inputStyle={null}
+    inputWrapperStyle={null}
+    motionConfig={
+      Object {
+        "finalScale": 0.9,
+        "initScale": 0.8,
+      }
+    }
+    motionType="ScaleFadeIn"
+    onCancel={[Function]}
+    onConfirm={[Function]}
+    onHelpPress={null}
+    placeholder="Password"
+    showHelp={false}
+    style={null}
+    subTitle="副标题"
+    title="标题"
+    titleStyle={null}
+  />
+</Motion.ScaleFadeIn>
+`;
+
+exports[`Prompt Component basic render value 1`] = `
+<View
+  renderToHardwareTextureAndroid={false}
+  style={
+    Object {
+      "alignItems": "center",
+      "justifyContent": "center",
+      "opacity": 0,
+      "transform": Array [
+        Object {
+          "scale": 0.8,
+        },
+      ],
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "#fff",
+          "borderRadius": 32,
+          "justifyContent": "center",
+          "overflow": "hidden",
+          "width": 622,
+        },
+        null,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "justifyContent": "center",
+            "paddingBottom": 64,
+            "paddingLeft": 64,
+            "paddingRight": 64,
+            "paddingTop": 64,
+          },
+          Array [
+            Object {
+              "paddingBottom": 24,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 24,
+            },
+            null,
+          ],
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        size={17}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 17,
+            },
+            Array [
+              Object {
+                "color": "rgba(0, 0, 0, 0.9)",
+                "flexWrap": "wrap",
+                "fontSize": 17,
+                "fontWeight": "500",
+                "textAlign": "center",
+              },
+              null,
+            ],
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        标题
+      </Text>
+      <View
+        style={
+          Array [
+            Object {
+              "alignSelf": "stretch",
+              "justifyContent": "center",
+              "marginTop": 28,
+              "paddingBottom": 12,
+              "paddingLeft": 0,
+              "paddingRight": 0,
+              "paddingTop": 12,
+            },
+            null,
+          ]
+        }
+      >
+        <TextInput
+          allowFontScaling={true}
+          autoFocus={true}
+          motionConfig={
+            Object {
+              "finalScale": 0.9,
+              "initScale": 0.8,
+            }
+          }
+          motionType="ScaleFadeIn"
+          onChangeText={[Function]}
+          onConfirm={[Function]}
+          placeholder="Password"
+          placeholderTextColor="rgba(0, 0, 0, 0.3)"
+          selectionColor="#FF4800"
+          style={
+            Array [
+              Object {
+                "color": "rgba(0, 0, 0, 0.5)",
+                "fontSize": 16,
+                "paddingBottom": 0,
+                "paddingLeft": 0,
+                "paddingRight": 0,
+                "paddingTop": 0,
+              },
+              null,
+            ]
+          }
+          subTitle="副标题"
+          underlineColorAndroid="transparent"
+          value=""
+        />
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+              "position": "absolute",
+              "right": 12,
+            }
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "flexDirection": "row",
+                },
+                Object {
+                  "height": 17,
+                  "width": 17,
+                },
+                false,
+                null,
+              ]
+            }
+          >
+            <RNSVGSvgView
+              align="xMidYMid"
+              meetOrSlice={0}
+              minX={0}
+              minY={0}
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                  },
+                  undefined,
+                  false,
+                  Object {
+                    "flex": 0,
+                    "height": 17,
+                    "width": 17,
+                  },
+                ]
+              }
+              vbHeight={1024}
+              vbWidth={1024}
+            >
+              <RNSVGPath
+                d="M512 0c282.7776 0 512 229.2224 512 512s-229.2224 512-512 512S0 794.7776 0 512 229.2224 0 512 0z m0 768a51.2 51.2 0 1 0 0 102.4 51.2 51.2 0 0 0 0-102.4z m0-563.2a204.8 204.8 0 0 0-204.8 204.8 51.2 51.2 0 1 0 102.4 0 102.4 102.4 0 1 1 102.4 102.4l-5.9904 0.3584A51.2 51.2 0 0 0 460.8 563.2v102.4l0.3584 5.9904A51.2 51.2 0 0 0 512 716.8l5.9904-0.3584A51.2 51.2 0 0 0 563.2 665.6v-57.7024l7.936-2.1504A204.9024 204.9024 0 0 0 512 204.8z"
+                fill={
+                  Array [
+                    0,
+                    0.7098039215686275,
+                    0.7098039215686275,
+                    0.7098039215686275,
+                    1,
+                  ]
+                }
+                fillOpacity={1}
+                fillRule={1}
+                matrix={
+                  Array [
+                    1,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                  ]
+                }
+                opacity={1}
+                propList={
+                  Array [
+                    "stroke",
+                    "strokeWidth",
+                    "fill",
+                  ]
+                }
+                stroke={
+                  Array [
+                    0,
+                    0.7098039215686275,
+                    0.7098039215686275,
+                    0.7098039215686275,
+                    1,
+                  ]
+                }
+                strokeDasharray={null}
+                strokeDashoffset={null}
+                strokeLinecap={0}
+                strokeLinejoin={0}
+                strokeMiterlimit={4}
+                strokeOpacity={1}
+                strokeWidth={1}
+              />
+            </RNSVGSvgView>
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "borderTopColor": "rgba(0, 0, 0, 0.1)",
+            "borderTopWidth": 0.5,
+            "flexDirection": "row",
+            "height": 55,
+          },
+          null,
+        ]
+      }
+    >
+      <View
+        accessibilityLabel="Dialog.Cancel"
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
+            "borderRightWidth": 0.5,
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          align={null}
+          allowFontScaling={false}
+          color={null}
+          ellipsizeMode="tail"
+          size={17}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#333",
+                "fontSize": 17,
+              },
+              Array [
+                Object {
+                  "color": "rgba(0, 0, 0, 0.7)",
+                  "fontSize": 17,
+                  "textAlign": "center",
+                },
+                null,
+              ],
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          取消
+        </Text>
+      </View>
+      <View
+        accessibilityLabel="Dialog.Confirm"
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
+            "borderRightWidth": 0,
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          align={null}
+          allowFontScaling={false}
+          color={null}
+          ellipsizeMode="tail"
+          size={17}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#333",
+                "fontSize": 17,
+              },
+              Array [
+                Object {
+                  "color": "#FF4800",
+                  "fontSize": 17,
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                },
+                Array [
+                  Object {
+                    "opacity": 0.3,
+                  },
+                  null,
+                ],
+              ],
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          确认
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;

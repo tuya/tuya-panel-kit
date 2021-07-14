@@ -1,0 +1,1294 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Picker Component basic render 1`] = `
+<View
+  style={
+    Object {
+      "transform": Array [
+        Object {
+          "translateY": 1334,
+        },
+      ],
+    }
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onLayout={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#f8f8f8",
+        "borderBottomLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderTopLeftRadius": 16,
+        "borderTopRightRadius": 16,
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "flexDirection": "row",
+            "height": 56,
+            "justifyContent": "center",
+          },
+          Array [
+            Object {
+              "backgroundColor": "#ffffff",
+              "borderTopLeftRadius": 16,
+              "borderTopRightRadius": 16,
+              "height": 56,
+              "justifyContent": "space-around",
+              "paddingBottom": 0,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 0,
+            },
+            Array [
+              null,
+              "",
+            ],
+          ],
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        size={14}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 14,
+            },
+            Array [
+              Object {
+                "color": "rgba(0,0,0,0.9)",
+                "fontSize": 14,
+              },
+              null,
+            ],
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        生日
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+    <View
+      disabled={false}
+      onLayout={[Function]}
+      pointerEvents="auto"
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "opacity": 1,
+          },
+          null,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "opacity": 1,
+            },
+            Array [
+              false,
+              null,
+            ],
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "width": 690,
+            }
+          }
+        >
+          <RCTPicker
+            items={
+              Array [
+                Object {
+                  "label": "1",
+                  "textColor": undefined,
+                  "value": "1",
+                },
+                Object {
+                  "label": "2",
+                  "textColor": undefined,
+                  "value": "2",
+                },
+              ]
+            }
+            onChange={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            selectedIndex={0}
+            style={
+              Array [
+                Object {
+                  "height": 216,
+                },
+                Object {
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 60,
+                },
+              ]
+            }
+          />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "flexDirection": "row",
+            "height": 56,
+            "justifyContent": "center",
+          },
+          Array [
+            Object {
+              "borderBottomLeftRadius": 0,
+              "borderBottomRightRadius": 0,
+              "height": 76,
+              "marginTop": 12,
+              "paddingBottom": 20,
+            },
+            null,
+          ],
+        ]
+      }
+    >
+      <View
+        accessibilityLabel="Popup_Cancel"
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "backgroundColor": "#fff",
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          align={null}
+          allowFontScaling={false}
+          color={null}
+          ellipsizeMode="tail"
+          single={false}
+          size={16}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#333",
+                "fontSize": 16,
+              },
+              Array [
+                Object {
+                  "color": "rgba(0,0,0,0.7)",
+                  "fontSize": 16,
+                },
+                null,
+              ],
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          取消
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 24,
+              "width": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
+      <View
+        accessibilityLabel="Popup_Confirm"
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
+            "borderRightWidth": 0,
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          align={null}
+          allowFontScaling={false}
+          color={null}
+          ellipsizeMode="tail"
+          size={16}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#333",
+                "fontSize": 16,
+              },
+              Array [
+                Object {
+                  "color": "#FF4800",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                },
+                null,
+              ],
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          确认
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Picker Component basic render 2`] = `
+<View
+  style={
+    Object {
+      "transform": Array [
+        Object {
+          "translateY": 1334,
+        },
+      ],
+    }
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onLayout={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#f8f8f8",
+        "borderBottomLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderTopLeftRadius": 16,
+        "borderTopRightRadius": 16,
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "flexDirection": "row",
+            "height": 56,
+            "justifyContent": "center",
+          },
+          Array [
+            Object {
+              "backgroundColor": "#ffffff",
+              "borderTopLeftRadius": 16,
+              "borderTopRightRadius": 16,
+              "height": 56,
+              "justifyContent": "space-around",
+              "paddingBottom": 0,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 0,
+            },
+            Array [
+              null,
+              "",
+            ],
+          ],
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        size={14}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 14,
+            },
+            Array [
+              Object {
+                "color": "rgba(0,0,0,0.9)",
+                "fontSize": 14,
+              },
+              null,
+            ],
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        生日
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+    <View
+      disabled={false}
+      onLayout={[Function]}
+      pointerEvents="auto"
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "opacity": 1,
+          },
+          null,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "opacity": 1,
+            },
+            Array [
+              false,
+              null,
+            ],
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "width": 230,
+            }
+          }
+        >
+          <RCTPicker
+            items={
+              Array [
+                Object {
+                  "label": "a",
+                  "textColor": undefined,
+                  "value": "a",
+                },
+                Object {
+                  "label": "b",
+                  "textColor": undefined,
+                  "value": "b",
+                },
+                Object {
+                  "label": "c",
+                  "textColor": undefined,
+                  "value": "c",
+                },
+              ]
+            }
+            onChange={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            selectedIndex={1}
+            style={
+              Array [
+                Object {
+                  "height": 216,
+                },
+                Object {
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 54,
+                },
+              ]
+            }
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "opacity": 1,
+            },
+            Array [
+              false,
+              null,
+            ],
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "width": 230,
+            }
+          }
+        >
+          <RCTPicker
+            items={
+              Array [
+                Object {
+                  "label": "1",
+                  "textColor": undefined,
+                  "value": "1",
+                },
+                Object {
+                  "label": "2",
+                  "textColor": undefined,
+                  "value": "2",
+                },
+                Object {
+                  "label": "3",
+                  "textColor": undefined,
+                  "value": "3",
+                },
+              ]
+            }
+            onChange={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            selectedIndex={1}
+            style={
+              Array [
+                Object {
+                  "height": 216,
+                },
+                Object {
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 54,
+                },
+              ]
+            }
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "opacity": 1,
+            },
+            Array [
+              false,
+              null,
+            ],
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "width": 230,
+            }
+          }
+        >
+          <RCTPicker
+            items={
+              Array [
+                Object {
+                  "label": "m",
+                  "textColor": undefined,
+                  "value": "m",
+                },
+                Object {
+                  "label": "x",
+                  "textColor": undefined,
+                  "value": "x",
+                },
+                Object {
+                  "label": "d",
+                  "textColor": undefined,
+                  "value": "d",
+                },
+              ]
+            }
+            onChange={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            selectedIndex={0}
+            style={
+              Array [
+                Object {
+                  "height": 216,
+                },
+                Object {
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 54,
+                },
+              ]
+            }
+          />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "flexDirection": "row",
+            "height": 56,
+            "justifyContent": "center",
+          },
+          Array [
+            Object {
+              "borderBottomLeftRadius": 0,
+              "borderBottomRightRadius": 0,
+              "height": 76,
+              "marginTop": 12,
+              "paddingBottom": 20,
+            },
+            null,
+          ],
+        ]
+      }
+    >
+      <View
+        accessibilityLabel="Popup_Cancel"
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "backgroundColor": "#fff",
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          align={null}
+          allowFontScaling={false}
+          color={null}
+          ellipsizeMode="tail"
+          single={false}
+          size={16}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#333",
+                "fontSize": 16,
+              },
+              Array [
+                Object {
+                  "color": "rgba(0,0,0,0.7)",
+                  "fontSize": 16,
+                },
+                null,
+              ],
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          取消
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 24,
+              "width": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
+      <View
+        accessibilityLabel="Popup_Confirm"
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
+            "borderRightWidth": 0,
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          align={null}
+          allowFontScaling={false}
+          color={null}
+          ellipsizeMode="tail"
+          size={16}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#333",
+                "fontSize": 16,
+              },
+              Array [
+                Object {
+                  "color": "#FF4800",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                },
+                null,
+              ],
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          确认
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Picker Component basic render with label 1`] = `
+<View
+  style={
+    Object {
+      "transform": Array [
+        Object {
+          "translateY": 1334,
+        },
+      ],
+    }
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onLayout={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#f8f8f8",
+        "borderBottomLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderTopLeftRadius": 16,
+        "borderTopRightRadius": 16,
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "flexDirection": "row",
+            "height": 56,
+            "justifyContent": "center",
+          },
+          Array [
+            Object {
+              "backgroundColor": "#ffffff",
+              "borderTopLeftRadius": 16,
+              "borderTopRightRadius": 16,
+              "height": 56,
+              "justifyContent": "space-around",
+              "paddingBottom": 0,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 0,
+            },
+            Array [
+              null,
+              "",
+            ],
+          ],
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        size={14}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 14,
+            },
+            Array [
+              Object {
+                "color": "rgba(0,0,0,0.9)",
+                "fontSize": 14,
+              },
+              null,
+            ],
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        生日
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+    <View
+      disabled={false}
+      onLayout={[Function]}
+      pointerEvents="auto"
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "opacity": 1,
+          },
+          null,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "opacity": 1,
+            },
+            Array [
+              false,
+              null,
+            ],
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "width": 230,
+            }
+          }
+        >
+          <RCTPicker
+            items={
+              Array [
+                Object {
+                  "label": "a",
+                  "textColor": undefined,
+                  "value": "a",
+                },
+                Object {
+                  "label": "b",
+                  "textColor": undefined,
+                  "value": "b",
+                },
+                Object {
+                  "label": "c",
+                  "textColor": undefined,
+                  "value": "c",
+                },
+              ]
+            }
+            onChange={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            selectedIndex={0}
+            style={
+              Array [
+                Object {
+                  "height": 216,
+                },
+                Object {
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 54,
+                },
+              ]
+            }
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "opacity": 1,
+            },
+            Array [
+              false,
+              null,
+            ],
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "width": 230,
+            }
+          }
+        >
+          <RCTPicker
+            items={
+              Array [
+                Object {
+                  "label": "1",
+                  "textColor": undefined,
+                  "value": "1",
+                },
+                Object {
+                  "label": "2",
+                  "textColor": undefined,
+                  "value": "2",
+                },
+                Object {
+                  "label": "3",
+                  "textColor": undefined,
+                  "value": "3",
+                },
+              ]
+            }
+            onChange={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            selectedIndex={0}
+            style={
+              Array [
+                Object {
+                  "height": 216,
+                },
+                Object {
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 54,
+                },
+              ]
+            }
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "opacity": 1,
+            },
+            Array [
+              false,
+              null,
+            ],
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "width": 230,
+            }
+          }
+        >
+          <RCTPicker
+            items={
+              Array [
+                Object {
+                  "label": "m",
+                  "textColor": undefined,
+                  "value": "m",
+                },
+                Object {
+                  "label": "x",
+                  "textColor": undefined,
+                  "value": "x",
+                },
+                Object {
+                  "label": "d",
+                  "textColor": undefined,
+                  "value": "d",
+                },
+              ]
+            }
+            onChange={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            selectedIndex={0}
+            style={
+              Array [
+                Object {
+                  "height": 216,
+                },
+                Object {
+                  "fontFamily": "DIN Alternate",
+                  "fontSize": 54,
+                },
+              ]
+            }
+          />
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "flexDirection": "row",
+            "height": 56,
+            "justifyContent": "center",
+          },
+          Array [
+            Object {
+              "borderBottomLeftRadius": 0,
+              "borderBottomRightRadius": 0,
+              "height": 76,
+              "marginTop": 12,
+              "paddingBottom": 20,
+            },
+            null,
+          ],
+        ]
+      }
+    >
+      <View
+        accessibilityLabel="Popup_Cancel"
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "backgroundColor": "#fff",
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          align={null}
+          allowFontScaling={false}
+          color={null}
+          ellipsizeMode="tail"
+          single={false}
+          size={16}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#333",
+                "fontSize": 16,
+              },
+              Array [
+                Object {
+                  "color": "rgba(0,0,0,0.7)",
+                  "fontSize": 16,
+                },
+                null,
+              ],
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          取消
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 24,
+              "width": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
+      <View
+        accessibilityLabel="Popup_Confirm"
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
+            "borderRightWidth": 0,
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          align={null}
+          allowFontScaling={false}
+          color={null}
+          ellipsizeMode="tail"
+          size={16}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#333",
+                "fontSize": 16,
+              },
+              Array [
+                Object {
+                  "color": "#FF4800",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                },
+                null,
+              ],
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          确认
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;

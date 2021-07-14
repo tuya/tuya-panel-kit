@@ -1,0 +1,863 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Custom Component basic render 1`] = `
+<View
+  style={
+    Object {
+      "transform": Array [
+        Object {
+          "translateY": 1334,
+        },
+      ],
+    }
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onLayout={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#f8f8f8",
+        "borderBottomLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderTopLeftRadius": 16,
+        "borderTopRightRadius": 16,
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "flexDirection": "row",
+            "height": 56,
+            "justifyContent": "center",
+          },
+          Array [
+            Object {
+              "backgroundColor": "#ffffff",
+              "borderTopLeftRadius": 16,
+              "borderTopRightRadius": 16,
+              "height": 56,
+              "justifyContent": "space-around",
+              "paddingBottom": 0,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 0,
+            },
+            Array [
+              null,
+              "",
+            ],
+          ],
+        ]
+      }
+    >
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "left": 12,
+            "opacity": 1,
+            "position": "absolute",
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "row",
+              },
+              Object {
+                "height": 36,
+                "width": 36,
+              },
+              false,
+              null,
+            ]
+          }
+        >
+          <RNSVGSvgView
+            align="xMidYMid"
+            meetOrSlice={0}
+            minX={0}
+            minY={0}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                },
+                undefined,
+                false,
+                Object {
+                  "flex": 0,
+                  "height": 36,
+                  "width": 36,
+                },
+              ]
+            }
+            vbHeight={1024}
+            vbWidth={1024}
+          >
+            <RNSVGPath
+              d="M770.673778 21.959111a56.888889 56.888889 0 0 1 0 80.440889l-402.204445 402.318222 402.204445 402.204445a56.888889 56.888889 0 0 1-80.440889 80.497777L247.751111 544.938667a56.888889 56.888889 0 0 1 0-80.497778L690.232889 21.959111a56.888889 56.888889 0 0 1 80.440889 0z"
+              fill={
+                Array [
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                ]
+              }
+              fillOpacity={1}
+              fillRule={1}
+              matrix={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
+              }
+              opacity={1}
+              propList={
+                Array [
+                  "stroke",
+                  "strokeWidth",
+                  "fill",
+                ]
+              }
+              stroke={
+                Array [
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                ]
+              }
+              strokeDasharray={null}
+              strokeDashoffset={null}
+              strokeLinecap={0}
+              strokeLinejoin={0}
+              strokeMiterlimit={4}
+              strokeOpacity={1}
+              strokeWidth={1}
+            />
+          </RNSVGSvgView>
+        </View>
+        <Text
+          accessible={true}
+          align={null}
+          allowFontScaling={false}
+          color="#000"
+          ellipsizeMode="tail"
+          size={14}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#000",
+                "fontSize": 14,
+              },
+              Array [
+                Object {
+                  "marginLeft": 2,
+                },
+                undefined,
+              ],
+            ]
+          }
+          text="Back"
+          type={null}
+          weight={null}
+        >
+          Back
+        </Text>
+      </View>
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        size={14}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 14,
+            },
+            Array [
+              Object {
+                "color": "rgba(0,0,0,0.9)",
+                "fontSize": 14,
+              },
+              null,
+            ],
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        自定义
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#fff",
+          "height": 200,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#000",
+            "fontSize": 36,
+          }
+        }
+      >
+        Custom Content
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "flexDirection": "row",
+            "height": 56,
+            "justifyContent": "center",
+          },
+          Array [
+            Object {
+              "borderBottomLeftRadius": 0,
+              "borderBottomRightRadius": 0,
+              "height": 76,
+              "marginTop": 12,
+              "paddingBottom": 20,
+            },
+            null,
+          ],
+        ]
+      }
+    >
+      <View
+        accessibilityLabel="Popup_Custom_Cancel"
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "backgroundColor": "#fff",
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          align={null}
+          allowFontScaling={false}
+          color={null}
+          ellipsizeMode="tail"
+          single={false}
+          size={16}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#333",
+                "fontSize": 16,
+              },
+              Array [
+                Object {
+                  "color": "rgba(0,0,0,0.7)",
+                  "fontSize": 16,
+                },
+                null,
+              ],
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          取消
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 24,
+              "width": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
+      <View
+        accessibilityLabel="Popup_Custom_Confirm"
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
+            "borderRightWidth": 0,
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          align={null}
+          allowFontScaling={false}
+          color={null}
+          ellipsizeMode="tail"
+          size={16}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#333",
+                "fontSize": 16,
+              },
+              Array [
+                Object {
+                  "color": "#FF4800",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                },
+                null,
+              ],
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          确认
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Custom Component basic render with visible 1`] = `
+<View
+  style={
+    Object {
+      "transform": Array [
+        Object {
+          "translateY": 1334,
+        },
+      ],
+    }
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onLayout={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#f8f8f8",
+        "borderBottomLeftRadius": 0,
+        "borderBottomRightRadius": 0,
+        "borderTopLeftRadius": 16,
+        "borderTopRightRadius": 16,
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "flexDirection": "row",
+            "height": 56,
+            "justifyContent": "center",
+          },
+          Array [
+            Object {
+              "backgroundColor": "#ffffff",
+              "borderTopLeftRadius": 16,
+              "borderTopRightRadius": 16,
+              "height": 56,
+              "justifyContent": "space-around",
+              "paddingBottom": 0,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 0,
+            },
+            Array [
+              null,
+              "",
+            ],
+          ],
+        ]
+      }
+    >
+      <View
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "left": 12,
+            "opacity": 1,
+            "position": "absolute",
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "row",
+              },
+              Object {
+                "height": 36,
+                "width": 36,
+              },
+              false,
+              null,
+            ]
+          }
+        >
+          <RNSVGSvgView
+            align="xMidYMid"
+            meetOrSlice={0}
+            minX={0}
+            minY={0}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                },
+                undefined,
+                false,
+                Object {
+                  "flex": 0,
+                  "height": 36,
+                  "width": 36,
+                },
+              ]
+            }
+            vbHeight={1024}
+            vbWidth={1024}
+          >
+            <RNSVGPath
+              d="M770.673778 21.959111a56.888889 56.888889 0 0 1 0 80.440889l-402.204445 402.318222 402.204445 402.204445a56.888889 56.888889 0 0 1-80.440889 80.497777L247.751111 544.938667a56.888889 56.888889 0 0 1 0-80.497778L690.232889 21.959111a56.888889 56.888889 0 0 1 80.440889 0z"
+              fill={
+                Array [
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                ]
+              }
+              fillOpacity={1}
+              fillRule={1}
+              matrix={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
+              }
+              opacity={1}
+              propList={
+                Array [
+                  "stroke",
+                  "strokeWidth",
+                  "fill",
+                ]
+              }
+              stroke={
+                Array [
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                ]
+              }
+              strokeDasharray={null}
+              strokeDashoffset={null}
+              strokeLinecap={0}
+              strokeLinejoin={0}
+              strokeMiterlimit={4}
+              strokeOpacity={1}
+              strokeWidth={1}
+            />
+          </RNSVGSvgView>
+        </View>
+        <Text
+          accessible={true}
+          align={null}
+          allowFontScaling={false}
+          color="#000"
+          ellipsizeMode="tail"
+          size={14}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#000",
+                "fontSize": 14,
+              },
+              Array [
+                Object {
+                  "marginLeft": 2,
+                },
+                undefined,
+              ],
+            ]
+          }
+          text="Back"
+          type={null}
+          weight={null}
+        >
+          Back
+        </Text>
+      </View>
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        size={14}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 14,
+            },
+            Array [
+              Object {
+                "color": "rgba(0,0,0,0.9)",
+                "fontSize": 14,
+              },
+              null,
+            ],
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        自定义
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#fff",
+          "height": 200,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#000",
+            "fontSize": 36,
+          }
+        }
+      >
+        Custom Content
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "flexDirection": "row",
+            "height": 56,
+            "justifyContent": "center",
+          },
+          Array [
+            Object {
+              "borderBottomLeftRadius": 0,
+              "borderBottomRightRadius": 0,
+              "height": 76,
+              "marginTop": 12,
+              "paddingBottom": 20,
+            },
+            null,
+          ],
+        ]
+      }
+    >
+      <View
+        accessibilityLabel="Popup_Custom_Cancel"
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "backgroundColor": "#fff",
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          align={null}
+          allowFontScaling={false}
+          color={null}
+          ellipsizeMode="tail"
+          single={false}
+          size={16}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#333",
+                "fontSize": 16,
+              },
+              Array [
+                Object {
+                  "color": "rgba(0,0,0,0.7)",
+                  "fontSize": 16,
+                },
+                null,
+              ],
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          取消
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.1)",
+              "height": 24,
+              "width": 0.5,
+            },
+            undefined,
+          ]
+        }
+      />
+      <View
+        accessibilityLabel="Popup_Custom_Confirm"
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
+            "borderRightWidth": 0,
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+            "paddingBottom": 12,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "paddingTop": 12,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          align={null}
+          allowFontScaling={false}
+          color={null}
+          ellipsizeMode="tail"
+          size={16}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#333",
+                "fontSize": 16,
+              },
+              Array [
+                Object {
+                  "color": "#FF4800",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                },
+                null,
+              ],
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          确认
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Popup Component basic render 1`] = `null`;

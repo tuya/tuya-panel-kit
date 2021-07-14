@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Battery basic render 1`] = `undefined`;
+
+exports[`Battery render with value == 0.5 1`] = `undefined`;
+
+exports[`Battery render with value == 50 1`] = `undefined`;

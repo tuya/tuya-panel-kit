@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert Component basic render 1`] = `
+<View
+  renderToHardwareTextureAndroid={false}
+  style={
+    Object {
+      "alignItems": "center",
+      "justifyContent": "center",
+      "opacity": 0,
+      "transform": Array [
+        Object {
+          "scale": 0.8,
+        },
+      ],
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "#fff",
+          "borderRadius": 32,
+          "justifyContent": "center",
+          "overflow": "hidden",
+          "width": 622,
+        },
+        null,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "alignSelf": "stretch",
+            "justifyContent": "center",
+            "paddingBottom": 64,
+            "paddingLeft": 64,
+            "paddingRight": 64,
+            "paddingTop": 64,
+          },
+          null,
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        size={16}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 16,
+            },
+            Array [
+              Object {
+                "color": "rgba(0, 0, 0, 0.9)",
+                "flexWrap": "wrap",
+                "fontSize": 17,
+                "fontWeight": "500",
+                "textAlign": "center",
+              },
+              Array [
+                Object {
+                  "fontSize": 16,
+                  "marginBottom": 14,
+                },
+                null,
+              ],
+            ],
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        标题
+      </Text>
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        size={15}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 15,
+            },
+            Array [
+              Object {
+                "color": "rgba(0, 0, 0, 0.5)",
+                "flexWrap": "wrap",
+                "fontSize": 15,
+                "textAlign": "center",
+              },
+              null,
+            ],
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        副标题
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignSelf": "stretch",
+            "borderTopColor": "rgba(0, 0, 0, 0.1)",
+            "borderTopWidth": 0.5,
+            "flexDirection": "row",
+            "height": 55,
+          },
+          null,
+        ]
+      }
+    >
+      <View
+        accessibilityLabel="Dialog.Confirm"
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRightColor": "rgba(0, 0, 0, 0.1)",
+            "borderRightWidth": 0,
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "justifyContent": "center",
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          align={null}
+          allowFontScaling={false}
+          color={null}
+          ellipsizeMode="tail"
+          size={17}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#333",
+                "fontSize": 17,
+              },
+              Array [
+                Object {
+                  "color": "#FF4800",
+                  "fontSize": 17,
+                  "fontWeight": "bold",
+                  "textAlign": "center",
+                },
+                null,
+              ],
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          确认
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;

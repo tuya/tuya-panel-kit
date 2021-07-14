@@ -1,0 +1,2139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Component basic render 1`] = `
+<View
+  onLayout={[Function]}
+  stretch={false}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "justifyContent": "center",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+      },
+      Array [
+        false,
+        undefined,
+      ],
+    ]
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onLayout={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      onLayout={[Function]}
+      size="noSet"
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "justifyContent": "center",
+            "overflow": "hidden",
+          },
+          Array [
+            false,
+            false,
+            false,
+            undefined,
+            undefined,
+          ],
+        ]
+      }
+      type="normal"
+    >
+      <Text
+        accessibilityLabel="Button_Text"
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        disabled={false}
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        size={10}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 10,
+            },
+            Array [
+              Object {
+                "color": "#333",
+                "fontSize": 10,
+                "opacity": 1,
+                "textAlign": "center",
+              },
+              Array [
+                Array [
+                  false,
+                  undefined,
+                  undefined,
+                ],
+                Object {
+                  "opacity": 1,
+                },
+              ],
+            ],
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Button Component should have onPress event 1`] = `
+<View
+  onLayout={[Function]}
+  stretch={false}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "justifyContent": "center",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+      },
+      Array [
+        false,
+        undefined,
+      ],
+    ]
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onLayout={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      onLayout={[Function]}
+      size="noSet"
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "justifyContent": "center",
+            "overflow": "hidden",
+          },
+          Array [
+            false,
+            false,
+            false,
+            undefined,
+            Object {
+              "backgroundColor": "yellow",
+              "height": 68,
+              "width": 200,
+            },
+          ],
+        ]
+      }
+      type="normal"
+    >
+      <Text
+        accessibilityLabel="Button_Text"
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        disabled={false}
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        size={10}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 10,
+            },
+            Array [
+              Object {
+                "color": "#333",
+                "fontSize": 10,
+                "opacity": 1,
+                "textAlign": "center",
+              },
+              Array [
+                Array [
+                  false,
+                  undefined,
+                  undefined,
+                ],
+                Object {
+                  "opacity": 1,
+                },
+              ],
+            ],
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Button Component should render with Icon 1`] = `
+<View
+  onLayout={[Function]}
+  stretch={false}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "justifyContent": "center",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+      },
+      Array [
+        false,
+        undefined,
+      ],
+    ]
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onLayout={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "opacity": 1,
+      }
+    }
+  >
+    <Text
+      accessibilityLabel="Button_Text"
+      accessible={true}
+      align={null}
+      allowFontScaling={false}
+      color={null}
+      disabled={false}
+      ellipsizeMode="tail"
+      numberOfLines={1}
+      size={16}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#333",
+            "fontSize": 16,
+          },
+          Array [
+            Object {
+              "color": "#333",
+              "fontSize": 16,
+              "marginRight": 8,
+              "opacity": 1,
+              "textAlign": "center",
+            },
+            Array [
+              false,
+              undefined,
+              undefined,
+            ],
+          ],
+        ]
+      }
+      textDirection="left"
+      type={null}
+      weight={null}
+    >
+      文字
+    </Text>
+    <View
+      onLayout={[Function]}
+      size={40}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#FF4800",
+            "borderRadius": 20,
+            "height": 40,
+            "justifyContent": "center",
+            "overflow": "hidden",
+            "width": 40,
+          },
+          Array [
+            false,
+            false,
+            false,
+            undefined,
+            undefined,
+          ],
+        ]
+      }
+      type="primary"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+            Object {
+              "backgroundColor": "#7ED321",
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            Object {
+              "height": 24,
+              "width": 24,
+            },
+            false,
+            Array [
+              undefined,
+              Object {
+                "opacity": 1,
+              },
+            ],
+          ]
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+              false,
+              Object {
+                "flex": 0,
+                "height": 24,
+                "width": 24,
+              },
+            ]
+          }
+          vbHeight={1024}
+          vbWidth={1024}
+        >
+          <RNSVGPath
+            d="M512 0c282.7776 0 512 229.2224 512 512s-229.2224 512-512 512S0 794.7776 0 512 229.2224 0 512 0z m279.04 362.8032a51.2 51.2 0 0 0-72.3968 0l-253.44 253.3888-108.6464-108.544a51.2 51.2 0 0 0-72.3968 72.3456l144.2304 144.1792 0.6144 0.6656a51.2 51.2 0 0 0 72.3968 0L791.04 435.2a51.2 51.2 0 0 0 0-72.3968z"
+            fill={
+              Array [
+                0,
+                1,
+                1,
+                1,
+                1,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            propList={
+              Array [
+                "stroke",
+                "strokeWidth",
+                "fill",
+              ]
+            }
+            stroke={
+              Array [
+                0,
+                1,
+                1,
+                1,
+                1,
+              ]
+            }
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+          />
+        </RNSVGSvgView>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Button Component should render with Icon Theme 1`] = `
+<View
+  onLayout={[Function]}
+  stretch={false}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "justifyContent": "center",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+      },
+      Array [
+        false,
+        undefined,
+      ],
+    ]
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onLayout={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      onLayout={[Function]}
+      size="noSet"
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "justifyContent": "center",
+            "overflow": "hidden",
+          },
+          Array [
+            Object {
+              "width": 36,
+            },
+            false,
+            false,
+            undefined,
+            undefined,
+          ],
+        ]
+      }
+      type="normal"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            Object {
+              "height": 24,
+              "width": 24,
+            },
+            false,
+            Array [
+              undefined,
+              Object {
+                "opacity": 1,
+              },
+            ],
+          ]
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+              false,
+              Object {
+                "flex": 0,
+                "height": 24,
+                "width": 24,
+              },
+            ]
+          }
+          vbHeight={1024}
+          vbWidth={1024}
+        >
+          <RNSVGPath
+            d="M512 0c282.7776 0 512 229.2224 512 512s-229.2224 512-512 512S0 794.7776 0 512 229.2224 0 512 0z m279.04 362.8032a51.2 51.2 0 0 0-72.3968 0l-253.44 253.3888-108.6464-108.544a51.2 51.2 0 0 0-72.3968 72.3456l144.2304 144.1792 0.6144 0.6656a51.2 51.2 0 0 0 72.3968 0L791.04 435.2a51.2 51.2 0 0 0 0-72.3968z"
+            fill={
+              Array [
+                0,
+                0.2,
+                0.2,
+                0.2,
+                1,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            propList={
+              Array [
+                "stroke",
+                "strokeWidth",
+                "fill",
+              ]
+            }
+            stroke={
+              Array [
+                0,
+                0.2,
+                0.2,
+                0.2,
+                1,
+              ]
+            }
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+          />
+        </RNSVGSvgView>
+      </View>
+    </View>
+    <Text
+      accessibilityLabel="Button_Text"
+      accessible={true}
+      align={null}
+      allowFontScaling={false}
+      color={null}
+      disabled={false}
+      ellipsizeMode="tail"
+      numberOfLines={1}
+      size={10}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#333",
+            "fontSize": 10,
+          },
+          Array [
+            Object {
+              "color": "#333",
+              "fontSize": 10,
+              "marginTop": 4,
+              "opacity": 1,
+              "textAlign": "center",
+            },
+            Array [
+              false,
+              undefined,
+              undefined,
+            ],
+          ],
+        ]
+      }
+      textDirection="bottom"
+      type={null}
+      weight={null}
+    >
+      文字
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Button Component should render with IconPath 1`] = `
+<View
+  onLayout={[Function]}
+  stretch={false}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "justifyContent": "center",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+      },
+      Array [
+        false,
+        undefined,
+      ],
+    ]
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onLayout={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      onLayout={[Function]}
+      size="noSet"
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "justifyContent": "center",
+            "overflow": "hidden",
+          },
+          Array [
+            false,
+            false,
+            false,
+            undefined,
+            undefined,
+          ],
+        ]
+      }
+      type="normal"
+    >
+      <View
+        style={
+          Object {
+            "height": 80,
+            "width": 80,
+          }
+        }
+      >
+        <ARTSurfaceView
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "opacity": 1,
+              },
+              Object {
+                "height": 80,
+                "width": 80,
+              },
+            ]
+          }
+        >
+          <ARTShape
+            d={
+              Array [
+                0,
+                512,
+                0,
+                3,
+                794.752,
+                0,
+                1024,
+                229.248,
+                1024,
+                512,
+                3,
+                1024,
+                794.752,
+                794.752,
+                1024,
+                512,
+                1024,
+                3,
+                229.24800000000005,
+                1024,
+                0,
+                794.752,
+                0,
+                512,
+                3,
+                0,
+                229.24800000000005,
+                229.248,
+                0,
+                512,
+                0,
+                1,
+                0,
+                512,
+                85.333333,
+                3,
+                276.352,
+                85.333333,
+                85.333333,
+                276.352,
+                85.333333,
+                512,
+                3,
+                85.333333,
+                747.648,
+                276.352,
+                938.666667,
+                512,
+                938.666667,
+                3,
+                747.648,
+                938.666667,
+                938.666667,
+                747.6479999999999,
+                938.666667,
+                511.99999999999994,
+                3,
+                938.666667,
+                276.352,
+                747.648,
+                85.333333,
+                512,
+                85.333333,
+                1,
+              ]
+            }
+            fill={
+              Array [
+                0,
+                0.2,
+                0.2,
+                0.2,
+                1,
+              ]
+            }
+            opacity={1}
+            stroke={
+              Array [
+                0.2,
+                0.2,
+                0.2,
+                1,
+              ]
+            }
+            strokeCap={1}
+            strokeDash={
+              Array [
+                0,
+                0,
+              ]
+            }
+            strokeJoin={1}
+            strokeWidth={1}
+            transform={
+              Array [
+                0.078125,
+                0,
+                0,
+                -0.078125,
+                0,
+                70,
+              ]
+            }
+          />
+        </ARTSurfaceView>
+      </View>
+    </View>
+    <Text
+      accessibilityLabel="Button_Text"
+      accessible={true}
+      align={null}
+      allowFontScaling={false}
+      color={null}
+      disabled={false}
+      ellipsizeMode="tail"
+      numberOfLines={1}
+      size={10}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#333",
+            "fontSize": 10,
+          },
+          Array [
+            Object {
+              "color": "#333",
+              "fontSize": 10,
+              "marginTop": 4,
+              "opacity": 1,
+              "textAlign": "center",
+            },
+            Array [
+              false,
+              undefined,
+              undefined,
+            ],
+          ],
+        ]
+      }
+      textDirection="bottom"
+      type={null}
+      weight={null}
+    >
+      中文按钮
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Button Component should render with LinearBackground 1`] = `
+<View
+  onLayout={[Function]}
+  stretch={false}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "justifyContent": "center",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+      },
+      Array [
+        false,
+        undefined,
+      ],
+    ]
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onLayout={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      onLayout={[Function]}
+      size="noSet"
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "justifyContent": "center",
+            "overflow": "hidden",
+          },
+          Array [
+            false,
+            false,
+            false,
+            undefined,
+            undefined,
+          ],
+        ]
+      }
+      type="normal"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "bottom": 0,
+              "flex": 1,
+              "height": 1334,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": 750,
+            },
+            Object {
+              "height": undefined,
+              "width": undefined,
+            },
+          ]
+        }
+      >
+        <RNSVGSvgView
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+              false,
+              undefined,
+            ]
+          }
+        >
+          <RNSVGDefs>
+            <RNSVGLinearGradient
+              gradient={
+                Array [
+                  1,
+                  1,
+                  0,
+                  1,
+                  0,
+                  0,
+                  0,
+                  1,
+                  0,
+                  1,
+                ]
+              }
+              gradientTransform={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
+              }
+              gradientUnits={0}
+              name="linear-gradient"
+              x1="20%"
+              x2="30%"
+              y1="20%"
+              y2="100%"
+            />
+          </RNSVGDefs>
+          <RNSVGRect
+            fill={
+              Array [
+                1,
+                "linear-gradient",
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            height="0"
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            propList={
+              Array [
+                "fill",
+              ]
+            }
+            rx="0"
+            ry="0"
+            stroke={null}
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={null}
+            width="0"
+            x="0"
+            y="0"
+          />
+        </RNSVGSvgView>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            Object {
+              "height": 24,
+              "width": 24,
+            },
+            false,
+            Array [
+              undefined,
+              Object {
+                "opacity": 1,
+              },
+            ],
+          ]
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+              false,
+              Object {
+                "flex": 0,
+                "height": 24,
+                "width": 24,
+              },
+            ]
+          }
+          vbHeight={1024}
+          vbWidth={1024}
+        >
+          <RNSVGPath
+            d="M512 0c282.7776 0 512 229.2224 512 512s-229.2224 512-512 512S0 794.7776 0 512 229.2224 0 512 0z m279.04 362.8032a51.2 51.2 0 0 0-72.3968 0l-253.44 253.3888-108.6464-108.544a51.2 51.2 0 0 0-72.3968 72.3456l144.2304 144.1792 0.6144 0.6656a51.2 51.2 0 0 0 72.3968 0L791.04 435.2a51.2 51.2 0 0 0 0-72.3968z"
+            fill={
+              Array [
+                0,
+                1,
+                0,
+                1,
+                1,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            propList={
+              Array [
+                "stroke",
+                "strokeWidth",
+                "fill",
+              ]
+            }
+            stroke={
+              Array [
+                0,
+                1,
+                0,
+                1,
+                1,
+              ]
+            }
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+          />
+        </RNSVGSvgView>
+      </View>
+    </View>
+    <Text
+      accessibilityLabel="Button_Text"
+      accessible={true}
+      align={null}
+      allowFontScaling={false}
+      color={null}
+      disabled={false}
+      ellipsizeMode="tail"
+      numberOfLines={1}
+      size={10}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#333",
+            "fontSize": 10,
+          },
+          Array [
+            Object {
+              "color": "#333",
+              "fontSize": 10,
+              "marginTop": 4,
+              "opacity": 1,
+              "textAlign": "center",
+            },
+            Array [
+              false,
+              undefined,
+              undefined,
+            ],
+          ],
+        ]
+      }
+      textDirection="bottom"
+      type={null}
+      weight={null}
+    >
+      文字
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Button Component should render with RadialGradient 1`] = `
+<View
+  onLayout={[Function]}
+  stretch={false}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "justifyContent": "center",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+      },
+      Array [
+        false,
+        undefined,
+      ],
+    ]
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onLayout={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      onLayout={[Function]}
+      size="noSet"
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "justifyContent": "center",
+            "overflow": "hidden",
+          },
+          Array [
+            false,
+            false,
+            false,
+            undefined,
+            undefined,
+          ],
+        ]
+      }
+      type="normal"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "bottom": 0,
+              "flex": 1,
+              "height": 1334,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": 750,
+            },
+            Object {
+              "height": undefined,
+              "width": undefined,
+            },
+          ]
+        }
+      >
+        <RNSVGSvgView
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              Object {
+                "height": undefined,
+                "width": undefined,
+              },
+              false,
+              undefined,
+            ]
+          }
+        >
+          <RNSVGDefs>
+            <RNSVGRadialGradient
+              cx="50%"
+              cy="50%"
+              fx="50%"
+              fy="50%"
+              gradient={
+                Array [
+                  1,
+                  1,
+                  0,
+                  1,
+                  0,
+                  0,
+                  1,
+                  1,
+                  0.4,
+                  1,
+                ]
+              }
+              gradientTransform={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
+              }
+              gradientUnits={0}
+              name="radial-gradient"
+              rx="50%"
+              ry="50%"
+            />
+          </RNSVGDefs>
+          <RNSVGRect
+            fill={
+              Array [
+                1,
+                "radial-gradient",
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            height="0"
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            propList={
+              Array [
+                "fill",
+              ]
+            }
+            rx="0"
+            ry="0"
+            stroke={null}
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={null}
+            width="0"
+            x="0"
+            y="0"
+          />
+        </RNSVGSvgView>
+      </View>
+      <Text
+        accessibilityLabel="Button_Text"
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        disabled={false}
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        size={10}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 10,
+            },
+            Array [
+              Object {
+                "color": "#333",
+                "fontSize": 10,
+                "opacity": 1,
+                "textAlign": "center",
+              },
+              Array [
+                Array [
+                  false,
+                  undefined,
+                  undefined,
+                ],
+                Object {
+                  "opacity": 1,
+                },
+              ],
+            ],
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        
+      </Text>
+    </View>
+    <View
+      accessibilityLabel="Button_Badge"
+      onLayout={[Function]}
+      style={
+        Array [
+          Object {
+            "borderRadius": 16,
+            "paddingBottom": 2,
+            "paddingLeft": 16,
+            "paddingRight": 16,
+            "paddingTop": 2,
+            "position": "absolute",
+          },
+          Array [
+            null,
+            Object {
+              "height": 32,
+              "width": 48,
+            },
+          ],
+        ]
+      }
+    >
+      <Text
+        accessibilityLabel="Button_Badge_Text"
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        size={14}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 14,
+            },
+            Array [
+              Object {
+                "fontSize": 10,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#333",
+                "fontSize": 14,
+              },
+            ],
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        涂鸦智能
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Button Component should render with Stretch Size Type 1`] = `
+<View
+  onLayout={[Function]}
+  stretch={true}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "justifyContent": "center",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+      },
+      Array [
+        false,
+        undefined,
+      ],
+    ]
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onLayout={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      onLayout={[Function]}
+      size="large"
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#FF4800",
+            "borderRadius": 48,
+            "height": 96,
+            "justifyContent": "center",
+            "overflow": "hidden",
+            "width": 96,
+          },
+          Array [
+            false,
+            false,
+            false,
+            undefined,
+            undefined,
+          ],
+        ]
+      }
+      type="primary"
+    >
+      <Text
+        accessibilityLabel="Button_Text"
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        disabled={false}
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        size={10}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 10,
+            },
+            Array [
+              Object {
+                "color": "#333",
+                "fontSize": 10,
+                "opacity": 1,
+                "textAlign": "center",
+              },
+              Array [
+                Array [
+                  false,
+                  undefined,
+                  undefined,
+                ],
+                Object {
+                  "opacity": 1,
+                },
+              ],
+            ],
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Button Component should render with Theme 1`] = `
+<View
+  onLayout={[Function]}
+  stretch={false}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "justifyContent": "center",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+      },
+      Array [
+        Object {
+          "marginBottom": 2,
+          "marginLeft": 2,
+          "marginRight": 2,
+          "marginTop": 2,
+        },
+        undefined,
+      ],
+    ]
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onLayout={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      onLayout={[Function]}
+      size="noSet"
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "justifyContent": "center",
+            "overflow": "hidden",
+          },
+          Array [
+            Object {
+              "width": 120,
+            },
+            Object {
+              "height": 64,
+            },
+            Object {
+              "borderRadius": 16,
+            },
+            Object {
+              "backgroundColor": "#f8f8f8",
+            },
+            undefined,
+          ],
+        ]
+      }
+      type="normal"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            Object {
+              "height": 18,
+              "width": 18,
+            },
+            false,
+            Array [
+              undefined,
+              Object {
+                "opacity": 1,
+              },
+            ],
+          ]
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+              false,
+              Object {
+                "flex": 0,
+                "height": 18,
+                "width": 18,
+              },
+            ]
+          }
+          vbHeight={1024}
+          vbWidth={1024}
+        >
+          <RNSVGPath
+            d="M512 0c282.7776 0 512 229.2224 512 512s-229.2224 512-512 512S0 794.7776 0 512 229.2224 0 512 0z m279.04 362.8032a51.2 51.2 0 0 0-72.3968 0l-253.44 253.3888-108.6464-108.544a51.2 51.2 0 0 0-72.3968 72.3456l144.2304 144.1792 0.6144 0.6656a51.2 51.2 0 0 0 72.3968 0L791.04 435.2a51.2 51.2 0 0 0 0-72.3968z"
+            fill={
+              Array [
+                0,
+                0.2,
+                0.2,
+                0.2,
+                1,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            propList={
+              Array [
+                "stroke",
+                "strokeWidth",
+                "fill",
+              ]
+            }
+            stroke={
+              Array [
+                0,
+                0.2,
+                0.2,
+                0.2,
+                1,
+              ]
+            }
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+          />
+        </RNSVGSvgView>
+      </View>
+    </View>
+    <Text
+      accessibilityLabel="Button_Text"
+      accessible={true}
+      align={null}
+      allowFontScaling={false}
+      color={null}
+      disabled={false}
+      ellipsizeMode="tail"
+      numberOfLines={1}
+      size={14}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#333",
+            "fontSize": 14,
+          },
+          Array [
+            Object {
+              "color": "#333",
+              "fontSize": 10,
+              "marginTop": 4,
+              "opacity": 1,
+              "textAlign": "center",
+            },
+            Array [
+              Object {
+                "fontSize": 14,
+              },
+              Object {
+                "color": "#666",
+              },
+              undefined,
+            ],
+          ],
+        ]
+      }
+      textDirection="bottom"
+      type={null}
+      weight={null}
+    >
+      本地theme测试
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Button Component should render with background 1`] = `
+<View
+  onLayout={[Function]}
+  stretch={false}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "justifyContent": "center",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+      },
+      Array [
+        false,
+        undefined,
+      ],
+    ]
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onLayout={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      onLayout={[Function]}
+      size="noSet"
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "justifyContent": "center",
+            "overflow": "hidden",
+          },
+          Array [
+            false,
+            false,
+            false,
+            undefined,
+            undefined,
+          ],
+        ]
+      }
+      type="normal"
+    >
+      <Text
+        accessibilityLabel="Button_Text"
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        disabled={false}
+        ellipsizeMode="tail"
+        numberOfLines={null}
+        size={10}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 10,
+            },
+            Array [
+              Object {
+                "color": "#333",
+                "fontSize": 10,
+                "opacity": 1,
+                "textAlign": "center",
+              },
+              Array [
+                Array [
+                  false,
+                  undefined,
+                  undefined,
+                ],
+                Object {
+                  "opacity": 1,
+                },
+              ],
+            ],
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        点我一下
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Button Component should render with background 2`] = `
+<View
+  onLayout={[Function]}
+  stretch={true}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "justifyContent": "center",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+      },
+      Array [
+        false,
+        Object {
+          "height": 48,
+          "width": 100,
+        },
+      ],
+    ]
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onLayout={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "stretch",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      onLayout={[Function]}
+      size="noSet"
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "justifyContent": "center",
+            "overflow": "hidden",
+          },
+          Array [
+            false,
+            false,
+            false,
+            undefined,
+            undefined,
+          ],
+        ]
+      }
+      type="normal"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+            Object {
+              "backgroundColor": "#346545",
+            },
+          ]
+        }
+      />
+      <Text
+        accessibilityLabel="Button_Text"
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        disabled={true}
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        size={10}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 10,
+            },
+            Array [
+              Object {
+                "color": "#333",
+                "fontSize": 10,
+                "opacity": 0.5,
+                "textAlign": "center",
+              },
+              Array [
+                Array [
+                  false,
+                  undefined,
+                  undefined,
+                ],
+                Object {
+                  "opacity": 0.2,
+                },
+              ],
+            ],
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Button Component should render with image 1`] = `
+<View
+  onLayout={[Function]}
+  stretch={false}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "justifyContent": "center",
+        "marginBottom": 0,
+        "marginLeft": 0,
+        "marginRight": 0,
+        "marginTop": 0,
+      },
+      Array [
+        false,
+        undefined,
+      ],
+    ]
+  }
+>
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onLayout={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      onLayout={[Function]}
+      size="noSet"
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "justifyContent": "center",
+            "overflow": "hidden",
+          },
+          Array [
+            false,
+            false,
+            false,
+            undefined,
+            undefined,
+          ],
+        ]
+      }
+      type="normal"
+    >
+      <Image
+        source={1}
+        style={
+          Array [
+            Array [
+              Object {
+                "resizeMode": "stretch",
+                "tintColor": "#666",
+              },
+              Object {
+                "borderRadius": 24,
+                "height": 48,
+                "width": 48,
+              },
+            ],
+            Object {
+              "opacity": 1,
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;

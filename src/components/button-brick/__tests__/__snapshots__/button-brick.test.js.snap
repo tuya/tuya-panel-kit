@@ -1,0 +1,567 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BrickButton Component BrickButton render LinearBackground 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+      },
+      Array [
+        Object {},
+        Object {
+          "height": 0,
+          "width": 0,
+        },
+      ],
+    ]
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": undefined,
+          "borderColor": "transparent",
+          "borderRadius": 24,
+          "flexDirection": "row",
+          "height": 48,
+          "justifyContent": "center",
+          "paddingHorizontal": 16,
+          "width": 686,
+        },
+        Object {
+          "backgroundColor": "transparent",
+          "borderColor": "transparent",
+        },
+      ]
+    }
+  >
+    <View
+      accessibilityLabel="RotationView"
+      style={
+        Object {
+          "transform": Array [
+            Object {
+              "rotate": "0deg",
+            },
+          ],
+        }
+      }
+    >
+      <RNSVGSvgView
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+            false,
+            Object {
+              "flex": 0,
+              "height": 40,
+              "width": 40,
+            },
+          ]
+        }
+      >
+        <RNSVGCircle
+          cx="20"
+          cy="20"
+          fill={
+            Array [
+              0,
+              0,
+              0,
+              0,
+              0,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "fill",
+            ]
+          }
+          r="16"
+          stroke={
+            Array [
+              0,
+              0,
+              0,
+              0,
+              0.1,
+            ]
+          }
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={4}
+        />
+        <RNSVGCircle
+          cx="20"
+          cy="20"
+          fill={
+            Array [
+              0,
+              0,
+              0,
+              0,
+              0,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "strokeDasharray",
+              "strokeDashoffset",
+              "strokeLinecap",
+              "fill",
+            ]
+          }
+          r="16"
+          stroke={
+            Array [
+              0,
+              1,
+              1,
+              1,
+              1,
+            ]
+          }
+          strokeDasharray={
+            Array [
+              25.132741228718345,
+              75.39822368615503,
+            ]
+          }
+          strokeDashoffset={20}
+          strokeLinecap={1}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={4}
+        />
+      </RNSVGSvgView>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`BrickButton Component BrickButton render Theme 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+      },
+      Array [
+        Object {},
+        Object {
+          "height": 0,
+          "width": 0,
+        },
+      ],
+    ]
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#353535",
+          "borderColor": "transparent",
+          "borderRadius": 24,
+          "flexDirection": "row",
+          "height": 48,
+          "justifyContent": "center",
+          "paddingHorizontal": 16,
+          "width": 300,
+        },
+        Object {
+          "backgroundColor": "#353535",
+          "borderColor": "transparent",
+        },
+      ]
+    }
+  >
+    <View
+      accessibilityLabel="RotationView"
+      style={
+        Object {
+          "transform": Array [
+            Object {
+              "rotate": "0deg",
+            },
+          ],
+        }
+      }
+    >
+      <RNSVGSvgView
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+            false,
+            Object {
+              "flex": 0,
+              "height": 40,
+              "width": 40,
+            },
+          ]
+        }
+      >
+        <RNSVGCircle
+          cx="20"
+          cy="20"
+          fill={
+            Array [
+              0,
+              0,
+              0,
+              0,
+              0,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "fill",
+            ]
+          }
+          r="16"
+          stroke={
+            Array [
+              0,
+              0,
+              0,
+              0,
+              0.1,
+            ]
+          }
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={4}
+        />
+        <RNSVGCircle
+          cx="20"
+          cy="20"
+          fill={
+            Array [
+              0,
+              0,
+              0,
+              0,
+              0,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "strokeDasharray",
+              "strokeDashoffset",
+              "strokeLinecap",
+              "fill",
+            ]
+          }
+          r="16"
+          stroke={
+            Array [
+              0,
+              1,
+              1,
+              0,
+              1,
+            ]
+          }
+          strokeDasharray={
+            Array [
+              25.132741228718345,
+              75.39822368615503,
+            ]
+          }
+          strokeDashoffset={20}
+          strokeLinecap={1}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={4}
+        />
+      </RNSVGSvgView>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`BrickButton Component basic render 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+      },
+      Array [
+        Object {},
+        Object {
+          "height": 0,
+          "width": 0,
+        },
+      ],
+    ]
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FF4800",
+          "borderRadius": 24,
+          "flexDirection": "row",
+          "height": 36,
+          "justifyContent": "center",
+          "paddingHorizontal": 16,
+          "width": 36,
+        },
+        Object {
+          "backgroundColor": "#FF4800",
+          "borderColor": undefined,
+        },
+      ]
+    }
+  >
+    <View
+      accessibilityLabel="RotationView"
+      style={
+        Object {
+          "transform": Array [
+            Object {
+              "rotate": "0deg",
+            },
+          ],
+        }
+      }
+    >
+      <RNSVGSvgView
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+            false,
+            Object {
+              "flex": 0,
+              "height": 28,
+              "width": 28,
+            },
+          ]
+        }
+      >
+        <RNSVGCircle
+          cx="14"
+          cy="14"
+          fill={
+            Array [
+              0,
+              0,
+              0,
+              0,
+              0,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "fill",
+            ]
+          }
+          r="11.200000000000001"
+          stroke={
+            Array [
+              0,
+              0,
+              0,
+              0,
+              0.1,
+            ]
+          }
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={4}
+        />
+        <RNSVGCircle
+          cx="14"
+          cy="14"
+          fill={
+            Array [
+              0,
+              0,
+              0,
+              0,
+              0,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "strokeDasharray",
+              "strokeDashoffset",
+              "strokeLinecap",
+              "fill",
+            ]
+          }
+          r="11.200000000000001"
+          stroke={
+            Array [
+              0,
+              1,
+              1,
+              1,
+              1,
+            ]
+          }
+          strokeDasharray={
+            Array [
+              17.59291886010284,
+              52.778756580308524,
+            ]
+          }
+          strokeDashoffset={14}
+          strokeLinecap={1}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={4}
+        />
+      </RNSVGSvgView>
+    </View>
+  </View>
+</View>
+`;
