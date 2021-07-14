@@ -56,6 +56,6 @@ export default defineConfig({
   chunks: ['vendors', 'umi-plugin-react-native', 'tuya-panel-kit', 'umi'],
   hash: isProd,
   publicPath: isProd
-    ? '//cdn.jsdelivr.net/gh/TuyaInc/tuya-panel-kit-example@gh-pages/'
+    ? 'https://cdn.jsdelivr.net/gh/tuya/tuya-panel-kit@gh-pages/'
     : '/',
 } as IConfig);

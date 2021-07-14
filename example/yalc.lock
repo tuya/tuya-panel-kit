@@ -1,0 +1,10 @@
+{
+  "version": "v1",
+  "packages": {
+    "tuya-panel-kit": {
+      "signature": "9887a41291d7882bfa65c5304334648d",
+      "file": true,
+      "replaced": "4.6.2"
+    }
+  }
+}
