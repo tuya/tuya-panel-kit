@@ -9,13 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build
-      - run: |
-          cd packages/tuya-panel-kit
-          npx yalc publish
-      - run: |
+        run: |
           cd example
-          npx yalc update
-          yarn install
+          yarn add tuya-panel-kit
           yarn build:umi
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
