@@ -86,3 +86,5 @@ lib/*
 .umi
 .umi-production
 .env.local
+
+.yalc
