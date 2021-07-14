@@ -12,6 +12,7 @@ jobs:
         run: |
           cd example
           sed -i 's/"tuya-panel-kit": "link:.yalc\/tuya-panel-kit"/"tuya-panel-kit": "^4.6.2"/g' ./package.json
+          yarn install
           yarn build:umi
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
