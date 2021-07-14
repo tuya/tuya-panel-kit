@@ -13,7 +13,7 @@
     "build:umi": "cross-env DEV_MODE=umi umi build",
     "lint": "prettier --write '**/*.{js,jsx,ts,tsx}'",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "patch-package --patch-dir node_modules/@tuya-smart/tuya-panel-patches/patches && yalc publish ../packages/tuya-panel-kit && yalc add tuya-panel-kit --link",
+    "postinstall": "patch-package --patch-dir node_modules/@tuya-smart/tuya-panel-patches/patches",
     "readResource": "node scripts/read.js",
     "release:init": "standard-version --first-release -t @template/basic-ts-navigation@",
     "release:major:pre": "standard-version --release-as major --prerelease rc --skip.tag=true",
@@ -56,7 +56,7 @@
     "rxjs-compat": "^6.3.1",
     "style-equal": "^1.0.0",
     "styled-components": "^5.3.0",
-    "tuya-panel-kit": "link:.yalc/tuya-panel-kit"
+    "tuya-panel-kit": "^4.6.2"
   },
   "resolutions": {
     "react-native-web": "^0.11.7"
