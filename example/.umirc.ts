@@ -24,19 +24,13 @@ export default defineConfig({
   // code split
   ignoreMomentLocale: true,
   chainWebpack(config) {
-    config.optimization.splitChunks({
+    isProd && config.optimization.splitChunks({
       chunks: 'all',
       automaticNameDelimiter: '～',
       name: true,
       minSize: 30000,
       minChunks: 1,
       cacheGroups: {
-        'tuya-panel-kit': {
-          name: 'tuya-panel-kit',
-          test: /[\\/]node_modules[\\/](tuya-panel-kit)[\\/]/,
-          priority: -9,
-          enforce: true,
-        },
         'umi-plugin-react-native': {
           name: 'umi-plugin-react-native',
           test: /[\\/]node_modules[\\/](umi-plugin-react-native)[\\/]/,
@@ -53,7 +47,7 @@ export default defineConfig({
     });
   },
   // https://umijs.org/zh-CN/config#chunks
-  chunks: ['vendors', 'umi-plugin-react-native', 'tuya-panel-kit', 'umi'],
+  chunks: isProd ? ['vendors', 'umi-plugin-react-native', 'umi'] : undefined,
   hash: isProd,
   publicPath: isProd
     ? 'https://cdn.jsdelivr.net/gh/tuya/tuya-panel-kit@gh-pages/'

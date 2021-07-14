@@ -2688,7 +2688,7 @@ chalk@^2.0.0, chalk@^2.0.1, chalk@^2.4.0, chalk@^2.4.1, chalk@^2.4.2:
     escape-string-regexp "^1.0.5"
     supports-color "^5.3.0"
 
-chalk@^4.0.0:
+chalk@^4.0.0, chalk@^4.1.0:
   version "4.1.1"
   resolved "https://registry.nlark.com/chalk/download/chalk-4.1.1.tgz#c80b3fab28bf6371e6863325eee67e618b77e6ad"
   integrity sha1-yAs/qyi/Y3HmhjMl7uZ+YYt35q0=
@@ -4482,7 +4482,7 @@ fs-access@^1.0.1:
   dependencies:
     null-check "^1.0.0"
 
-fs-extra@8.1.0:
+fs-extra@8.1.0, fs-extra@^8.0.1:
   version "8.1.0"
   resolved "https://registry.nlark.com/fs-extra/download/fs-extra-8.1.0.tgz#49d43c45a88cd9677668cb7be1b46efdb8d2e1c0"
   integrity sha1-SdQ8RaiM2Wd2aMt74bRu/bjS4cA=
@@ -4706,6 +4706,18 @@ glob@^7.0.3, glob@^7.1.1, glob@^7.1.2, glob@^7.1.3, glob@^7.1.6:
   version "7.1.6"
   resolved "https://registry.npm.taobao.org/glob/download/glob-7.1.6.tgz#141f33b81a7c2492e125594307480c46679278a6"
   integrity sha1-FB8zuBp8JJLhJVlDB0gMRmeSeKY=
+  dependencies:
+    fs.realpath "^1.0.0"
+    inflight "^1.0.4"
+    inherits "2"
+    minimatch "^3.0.4"
+    once "^1.3.0"
+    path-is-absolute "^1.0.0"
+
+glob@^7.1.4:
+  version "7.1.7"
+  resolved "https://registry.nlark.com/glob/download/glob-7.1.7.tgz?cache=0&sync_timestamp=1620337382269&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fglob%2Fdownload%2Fglob-7.1.7.tgz#3b193e9233f01d42d0b3f78294bbeeb418f94a90"
+  integrity sha1-Oxk+kjPwHULQs/eClLvutBj5SpA=
   dependencies:
     fs.realpath "^1.0.0"
     inflight "^1.0.4"
@@ -5058,6 +5070,18 @@ ieee754@^1.1.4:
   resolved "https://registry.npm.taobao.org/ieee754/download/ieee754-1.2.1.tgz?cache=0&sync_timestamp=1603838418666&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fieee754%2Fdownload%2Fieee754-1.2.1.tgz#8eb7a10a63fff25d15a57b001586d177d1b0d352"
   integrity sha1-jrehCmP/8l0VpXsAFYbRd9Gw01I=
 
+ignore-walk@^3.0.3:
+  version "3.0.4"
+  resolved "https://registry.nlark.com/ignore-walk/download/ignore-walk-3.0.4.tgz#c9a09f69b7c7b479a5d74ac1a3c0d4236d2a6335"
+  integrity sha1-yaCfabfHtHml10rBo8DUI20qYzU=
+  dependencies:
+    minimatch "^3.0.4"
+
+ignore@^5.0.4:
+  version "5.1.8"
+  resolved "https://registry.nlark.com/ignore/download/ignore-5.1.8.tgz#f150a8b50a34289b33e22f5889abd4d8016f0e57"
+  integrity sha1-8VCotQo0KJsz4i9YiavU2AFvDlc=
+
 image-size@^0.6.0:
   version "0.6.3"
   resolved "https://registry.npm.taobao.org/image-size/download/image-size-0.6.3.tgz?cache=0&sync_timestamp=1603731285656&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fimage-size%2Fdownload%2Fimage-size-0.6.3.tgz#e7e5c65bb534bd7cdcedd6cb5166272a85f75fb2"
@@ -5148,6 +5172,11 @@ ini@^1.3.2, ini@^1.3.4:
   version "1.3.8"
   resolved "https://registry.nlark.com/ini/download/ini-1.3.8.tgz#a29da425b48806f34767a4efce397269af28432c"
   integrity sha1-op2kJbSIBvNHZ6Tvzjlyaa8oQyw=
+
+ini@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.nlark.com/ini/download/ini-2.0.0.tgz#e5fd556ecdd5726be978fa1001862eacb0a94bc5"
+  integrity sha1-5f1Vbs3VcmvpePoQAYYurLCpS8U=
 
 inline-style-prefixer@^5.0.3:
   version "5.1.2"
@@ -7198,6 +7227,28 @@ normalize-url@1.9.1:
     prepend-http "^1.0.0"
     query-string "^4.1.0"
     sort-keys "^1.0.0"
+
+npm-bundled@^1.1.1:
+  version "1.1.2"
+  resolved "https://registry.nlark.com/npm-bundled/download/npm-bundled-1.1.2.tgz#944c78789bd739035b70baa2ca5cc32b8d860bc1"
+  integrity sha1-lEx4eJvXOQNbcLqiylzDK42GC8E=
+  dependencies:
+    npm-normalize-package-bin "^1.0.1"
+
+npm-normalize-package-bin@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npm.taobao.org/npm-normalize-package-bin/download/npm-normalize-package-bin-1.0.1.tgz#6e79a41f23fd235c0623218228da7d9c23b8f6e2"
+  integrity sha1-bnmkHyP9I1wGIyGCKNp9nCO49uI=
+
+npm-packlist@^2.1.5:
+  version "2.2.2"
+  resolved "https://registry.nlark.com/npm-packlist/download/npm-packlist-2.2.2.tgz#076b97293fa620f632833186a7a8f65aaa6148c8"
+  integrity sha1-B2uXKT+mIPYygzGGp6j2WqphSMg=
+  dependencies:
+    glob "^7.1.6"
+    ignore-walk "^3.0.3"
+    npm-bundled "^1.1.1"
+    npm-normalize-package-bin "^1.0.1"
 
 npm-run-path@^2.0.0:
   version "2.0.2"
@@ -10210,8 +10261,9 @@ tunnel-agent@^0.6.0:
   dependencies:
     safe-buffer "^5.0.1"
 
-"tuya-panel-kit@file:.yalc/tuya-panel-kit":
-  version "4.6.2"
+"tuya-panel-kit@link:.yalc/tuya-panel-kit":
+  version "0.0.0"
+  uid ""
 
 tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
@@ -10758,6 +10810,20 @@ y18n@^5.0.5:
   resolved "https://registry.nlark.com/y18n/download/y18n-5.0.8.tgz#7f4934d0f7ca8c56f95314939ddcd2dd91ce1d55"
   integrity sha1-f0k00PfKjFb5UxSTndzS3ZHOHVU=
 
+yalc@^1.0.0-pre.53:
+  version "1.0.0-pre.53"
+  resolved "https://registry.nlark.com/yalc/download/yalc-1.0.0-pre.53.tgz#c51db2bb924a6908f4cb7e82af78f7e5606810bc"
+  integrity sha1-xR2yu5JKaQj0y36Cr3j35WBoELw=
+  dependencies:
+    chalk "^4.1.0"
+    detect-indent "^6.0.0"
+    fs-extra "^8.0.1"
+    glob "^7.1.4"
+    ignore "^5.0.4"
+    ini "^2.0.0"
+    npm-packlist "^2.1.5"
+    yargs "^16.1.1"
+
 yallist@^2.1.2:
   version "2.1.2"
   resolved "https://registry.npm.taobao.org/yallist/download/yallist-2.1.2.tgz#1c11f9218f076089a47dd512f93c6699a6a81d52"
@@ -10835,7 +10901,7 @@ yargs@^15.1.0:
     y18n "^4.0.0"
     yargs-parser "^18.1.2"
 
-yargs@^16.0.0:
+yargs@^16.0.0, yargs@^16.1.1:
   version "16.2.0"
   resolved "https://registry.nlark.com/yargs/download/yargs-16.2.0.tgz#1c82bf0f6b6a66eafce7ef30e376f49a12477f66"
   integrity sha1-HIK/D2tqZur85+8w43b0mhJHf2Y=

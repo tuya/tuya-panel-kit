@@ -7,6 +7,7 @@ var getRNAlias = () => {
         'tuya-panel-kit/lib/components/modal/portalOut':
           '../packages/tuya-panel-kit/src/components/modal/portalOut',
         'tuya-panel-kit': '../packages/tuya-panel-kit/src/index.js',
+        'react-native-gesture-handler': './node_modules/react-native-gesture-handler',
       };
 };
 
