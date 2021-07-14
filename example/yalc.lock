@@ -4,7 +4,7 @@
     "tuya-panel-kit": {
       "signature": "0eb4a344d57da326826b177293e9d7e1",
       "link": true,
-      "replaced": "4.6.2"
+      "replaced": "^4.6.2"
     }
   }
 }
