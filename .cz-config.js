@@ -10,6 +10,7 @@ module.exports = {
     {value: 'perf',     name: 'perf:     性能优化'},
     {value: 'test',     name: 'test:     测试相关'},
     {value: 'chore',    name: 'chore:    重新打包或更新依赖工具等杂活'},
+    {value: 'ci',       name: 'ci:       持续集成'},
     {value: 'revert',   name: 'revert:   Revert to a commit'},
     {value: 'wip',      name: 'wip:      Work in progress'}
   ],
