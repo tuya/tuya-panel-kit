@@ -8,6 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - uses: uesteibar/reviewer-lottery@v1
+    - name: Add Reviewers
+      if: |
+        github.event_name == 'push' ||
+        !startsWith(github.event.pull_request.head.label, 'tuya:')
+      uses: uesteibar/reviewer-lottery@v1
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
