@@ -1,0 +1,35 @@
+{
+  "name": "tuya-panel-utils",
+  "version": "0.0.0",
+  "description": "Tuya tool collection kit",
+  "author": "曾照 <zengzhao@tuya.com>",
+  "homepage": "https://github.com/tuya/tuya-panel-kit#readme",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuya/tuya-panel-kit.git"
+  },
+  "scripts": {
+    "prebuild": "rimraf lib/*",
+    "build": "tsc -d",
+    "dev": "tsc -w",
+    "test": "NODE_ENV=testing TZ=UTC jest -u",
+    "test:watch": "jest --watch"
+  },
+  "bugs": {
+    "url": "https://github.com/tuya/tuya-panel-kit/issues"
+  },
+  "peerDependencies": {
+    "react": "16.8.3",
+    "react-native": "0.59.10",
+    "react-native-svg": "5.5.1"
+  }
+}

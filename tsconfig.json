@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "*": ["*"]
+    },
+    "allowJs": true,
+    "jsx": "react-native",
+    "module": "esnext",
+    "target": "es2018",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    // "removeComments": true,
+    // "preserveConstEnums": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "types": ["react", "react-native"],
+    "outDir": "./lib"
+    // "sourceMap": true,
+    // "resolveJsonModule": true,
+    // "skipLibCheck": true,
+    // "lib": ["es5", "es6", "es2015", "es2016", "es2017", "es2018", "esnext"],
+    // "typeRoots": ["./"]
+  },
+  "include": ["./packages/**/**/*"],
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "jest.config.js",
+    "jest.setup.js",
+    "commitlint.config.js"
+  ]
+}
