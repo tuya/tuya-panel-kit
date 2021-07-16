@@ -11,6 +11,7 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "start:umi": "cross-env DEV_MODE=umi umi dev",
     "build:umi": "cross-env DEV_MODE=umi umi build",
+    "update:yalc":"yalc publish ../packages/tuya-panel-kit && yalc add tuya-panel-kit --link",
     "lint": "prettier --write '**/*.{js,jsx,ts,tsx}'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "patch-package --patch-dir node_modules/@tuya-smart/tuya-panel-patches/patches",
@@ -56,7 +57,7 @@
     "rxjs-compat": "^6.3.1",
     "style-equal": "^1.0.0",
     "styled-components": "^5.3.0",
-    "tuya-panel-kit": "file:.yalc/tuya-panel-kit"
+    "tuya-panel-kit": "link:.yalc/tuya-panel-kit"
   },
   "resolutions": {
     "react-native-web": "^0.11.7"
@@ -94,7 +95,8 @@
     "typescript": "^4.1.2",
     "umi": "^3.4.24",
     "umi-plugin-react-native": "^0.5.0",
-    "umi-plugin-tuya-panel-kit": "^0.4.0"
+    "umi-plugin-tuya-panel-kit": "^0.4.0",
+    "yalc": "^1.0.0-pre.53"
   },
   "jest": {
     "preset": "react-native"
