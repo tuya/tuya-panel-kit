@@ -2,7 +2,7 @@
   "name": "tuya-panel-theme",
   "version": "0.0.0",
   "description": "tuya-panel-theme",
-  "author": "曾照 <zengzhao@tuya.com>",
+  "author": "ZengBeauty<2497752603@qq.com>",
   "homepage": "https://github.com/tuya/tuya-panel-kit#readme",
   "license": "MIT",
   "main": "src/index.js",
@@ -14,7 +14,7 @@
     "lib"
   ],
   "publishConfig": {
-    "registry": "https://registry.npm.taobao.org"
+    "registry": "https://registry.npmjs.org"
   },
   "repository": {
     "type": "git",
