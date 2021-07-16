@@ -7,7 +7,7 @@ module.exports = {
   displayName: pkg.name,
   rootDir: '../..',
   coverageDirectory: '<rootDir>/packages/tuya-panel-kit/coverage/',
-  // testMatch: ['<rootDir>/src/components/global-toast/__tests__/*.test.js'],
+  testMatch: ['<rootDir>/packages/tuya-panel-kit/src/*/__tests__/?(*.)+(test).js'],
   collectCoverageFrom: [
     '<rootDir>/packages/tuya-panel-kit/src/components/**/*.js',
     '<rootDir>/packages/tuya-panel-kit/src/utils/*.js',
@@ -24,5 +24,13 @@ module.exports = {
     '!<rootDir>/packages/tuya-panel-kit/src/components/i18n/*.js',
     '!<rootDir>/packages/tuya-panel-kit/src/components/theme/*.js',
     '!<rootDir>/packages/tuya-panel-kit/src/TYNativeApi.js',
+  ],
+  modulePathIgnorePatterns: [
+    '<rootDir>/example/node_modules',
+    '<rootDir>/demos',
+    '<rootDir>/example',
+    '<rootDir>/lib',
+    '<rootDir>/packages/*/lib',
+    '<rootDir>/packages/tuya-panel-utils',
   ],
 };

@@ -9,7 +9,6 @@ module.exports = {
   moduleFileExtensions: ['js', 'json', 'jsx', 'ts', 'tsx', 'node'],
   modulePathIgnorePatterns: [
     '<rootDir>/example/node_modules',
-    '<rootDir>/demos',
     '<rootDir>/example',
     '<rootDir>/packages/*/lib',
   ],
