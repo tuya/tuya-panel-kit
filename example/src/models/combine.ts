@@ -2,9 +2,13 @@ import { combineReducers } from 'redux';
 import { combineEpics } from 'redux-observable';
 
 import { epics as commonEpics, reducers as commonReducers } from './modules/common';
+import { reducers as uiStateReducers } from './modules/uiState';
+import { reducers as themeReducer } from './modules/theme';
 
 export const reducers = {
   ...commonReducers,
+  ...uiStateReducers,
+  ...themeReducer,
 };
 
 type Reducers = typeof reducers;

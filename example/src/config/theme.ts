@@ -5,6 +5,7 @@
  */
 export default {
   global: {
+    brand: '#f00',
     background: '#fff',
   },
 };

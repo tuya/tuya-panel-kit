@@ -6,5 +6,7 @@ module.exports = {
     'no-shadow': 'off',
     'no-bitwise': 'off',
     'prefer-spread': 'off',
+    'import/no-named-as-default': 'off',
+    'react-native/sort-styles': 'off',
   },
 };

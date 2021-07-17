@@ -11,7 +11,7 @@ import { ActionsObservable } from 'redux-observable';
 import { Observable } from 'rxjs/Observable';
 import { DevInfo, DpValue, TYSdk } from 'tuya-panel-kit';
 
-const { putDeviceData } = TYSdk.device;
+const { putDeviceData } = TYSdk?.device ?? {};
 
 interface DpState {
   switch: boolean;
@@ -27,7 +27,7 @@ interface Log {
 
 type Logs = Array<Log>;
 
-type UpdateDevInfoPayload = DevInfo;
+type UpdateDevInfoPayload = Partial<DevInfo>;
 type UpdateDpStatePayload = Partial<DpState> & { [key: string]: DpValue }; // 保证起码有一个键值对存在
 
 /**
@@ -106,7 +106,7 @@ const formatLogs = (state: Logs, action: { payload: UpdateDpStatePayload }, send
   return s.slice(0, 30);
 };
 
-const logs = handleActions<Logs, undefined | UpdateDpStatePayload | DevInfo>(
+const logs = handleActions<Logs, undefined | UpdateDpStatePayload | Partial<DevInfo>>(
   {
     [consoleChange.toString()]: state => {
       isSend = true;
@@ -120,7 +120,7 @@ const logs = handleActions<Logs, undefined | UpdateDpStatePayload | DevInfo>(
 
     [devInfoChange.toString()]: (state, action: Actions['devInfoChange']) => {
       const formatAction = { payload: action.payload.state };
-      return formatLogs(state, formatAction, isSend);
+      return formatLogs(state, formatAction as any, isSend);
     },
 
     [responseUpdateDp.toString()]: (state, action: Actions['responseUpdateDp']) => {

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { applyMiddleware, compose, createStore } from 'redux';
 import { createLogger } from 'redux-logger';
 import { createEpicMiddleware } from 'redux-observable';
@@ -23,6 +25,7 @@ export default function configureStore(initialState?: Partial<ReduxState>) {
     initialState,
     compose(
       appliedMiddleware,
+      // @ts-ignore
       isDebuggingInChrome && window.devToolsExtension ? window.devToolsExtension() : (f: any) => f
     )
   );

@@ -1,6 +1,8 @@
+/* eslint-disable no-console */
 import React from 'react';
 import { SafeAreaView, ScrollView, StatusBar } from 'react-native';
 import { createNavigator, GlobalTheme, NavigationRoute } from 'tuya-panel-kit';
+import DebugView from './components/debug/DebugView';
 
 import composeLayout from './composeLayout';
 import { store } from './models';
@@ -9,12 +11,13 @@ import { routes } from './routes';
 
 console.disableYellowBox = true;
 
-const withScroll = (Compnent: React.ComponentType) => (props: any) => {
+const withScroll = (Compnent: React.ComponentType<any>) => (props: any) => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <ScrollView style={{ flex: 1 }}>
         <Compnent navigation={props.navigation} />
       </ScrollView>
+      <DebugView />
     </SafeAreaView>
   );
 };
