@@ -31,7 +31,8 @@
     "build": "babel src --ignore __tests__ --out-dir lib --copy-files",
     "dev": "babel src --watch --ignore __tests__ --out-dir lib --copy-files",
     "test": "NODE_ENV=testing TZ=UTC jest -u",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "prepublishOnly": "yarn build"
   },
   "bugs": {
     "url": "https://github.com/tuya/tuya-panel-kit/issues"
