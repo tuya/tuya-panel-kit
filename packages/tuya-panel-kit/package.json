@@ -30,7 +30,7 @@
     "prebuild": "rimraf lib/*",
     "build": "babel src --ignore __tests__ --out-dir lib --copy-files",
     "dev": "babel src --watch --ignore __tests__ --out-dir lib --copy-files",
-    "test": "NODE_ENV=testing TZ=UTC jest -u",
+    "test": "NODE_ENV=testing TZ=UTC jest -u --silent --forceExit",
     "test:watch": "jest --watch",
     "prepublishOnly": "yarn build"
   },

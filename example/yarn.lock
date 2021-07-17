@@ -10099,8 +10099,9 @@ tunnel-agent@^0.6.0:
   dependencies:
     safe-buffer "^5.0.1"
 
-"tuya-panel-kit@file:.yalc/tuya-panel-kit":
-  version "4.6.2"
+"tuya-panel-kit@link:.yalc/tuya-panel-kit":
+  version "0.0.0"
+  uid ""
 
 tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
