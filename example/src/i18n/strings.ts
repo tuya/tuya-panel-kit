@@ -1,5 +1,16 @@
 export default {
   en: {
+    // debug
+    test_I18N: 'Test I18N',
+    switch_theme: 'Switch theme',
+    switch_device_status: 'Switch device status',
+    switch_network_status: 'Switch network status',
+    switch_bluetooth: 'Switch Bluetooth',
+    switch_wifi: 'Switch Wifi',
+    show_toolbox: 'Show toolbox',
+    hide_toolbox: 'Hide toolbox',
+    test_theme: 'Test theme configuration',
+
     // common
     text_title: 'Title',
     text_subTitle: 'Sub Title',
@@ -325,6 +336,17 @@ export default {
       'This is the case where the detailed information content of this list is too long',
   },
   zh: {
+    // debug
+    test_I18N: '测试I18N',
+    switch_theme: '切换主题',
+    switch_device_status: '切换设备状态',
+    switch_network_status: '切换网络状态',
+    switch_bluetooth: '切换蓝牙',
+    switch_wifi: '切换WIFI',
+    show_toolbox: '显示工具箱',
+    hide_toolbox: '隐藏工具箱',
+    test_theme: '测试主题配置',
+
     // common
     text_title: '标题',
     text_subTitle: '副标题',

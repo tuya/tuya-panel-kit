@@ -13,6 +13,7 @@ import {
   View,
   ViewProps,
 } from 'react-native';
+import { Provider } from 'react-redux';
 import {
   GlobalToast,
   Notification,
@@ -21,7 +22,10 @@ import {
   TYSdk,
   Utils,
 } from 'tuya-panel-kit';
+// @ts-ignore
 import MaskView from 'tuya-panel-kit/lib/components/modal/portalOut';
+import { store } from '#models';
+import DebugView from './debug/DebugView';
 
 const TYEvent = TYSdk.event;
 
@@ -218,6 +222,7 @@ class FullView extends React.Component<Props, State> {
 
   render() {
     const { style, theme } = this.props;
+    // @ts-ignore
     const background = this.props.background || get(theme, 'global.background', '#f8f8f8');
     const isBgColor = typeof background === 'string';
     return (
@@ -234,6 +239,7 @@ class FullView extends React.Component<Props, State> {
   }
 }
 
+// @ts-ignore
 const Wrapper = withTheme(FullView);
 
 export interface TuyaWrapperProps {
@@ -246,31 +252,34 @@ export interface TuyaWrapperProps {
 const { width, height } = Dimensions.get('window');
 
 export const TuyaWrapper = ({ onBack, children, hideTopbar, title }: TuyaWrapperProps) => (
-  <ThemeProvider
-    theme={{
-      button: {
-        fontSize: 16,
-      },
-    }}
-  >
-    <Wrapper
-      style={{
-        // @ts-ignore
-        overflow: 'hidden',
-        scrollbarWidth: 'none' as const,
-        width,
-        height,
+  <Provider store={store}>
+    <ThemeProvider
+      theme={{
+        button: {
+          fontSize: 16,
+        },
       }}
-      title={title}
-      showMenu={false}
-      background="transparent"
-      // @ts-ignore
-      topbarStyle={{ backgroundColor: 'transparent' }}
-      renderTopBar={null}
-      hideTopbar={hideTopbar}
-      onBack={onBack}
     >
-      {children}
-    </Wrapper>
-  </ThemeProvider>
+      <Wrapper
+        style={{
+          // @ts-ignore
+          overflow: 'hidden',
+          scrollbarWidth: 'none' as const,
+          width,
+          height,
+        }}
+        title={title}
+        showMenu={false}
+        background="transparent"
+        // @ts-ignore
+        topbarStyle={{ backgroundColor: 'transparent' }}
+        renderTopBar={null}
+        hideTopbar={hideTopbar}
+        onBack={onBack}
+      >
+        {children}
+        {/* <DebugView /> */}
+      </Wrapper>
+    </ThemeProvider>
+  </Provider>
 );
