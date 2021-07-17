@@ -9,9 +9,9 @@
   "version": "1.0.1",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "prestart:umi": "yalc publish ../packages/tuya-panel-kit && yalc update",
     "start:umi": "cross-env DEV_MODE=umi umi dev",
     "build:umi": "cross-env DEV_MODE=umi umi build",
-    "update:yalc":"yalc publish ../packages/tuya-panel-kit && yalc add tuya-panel-kit --link",
     "lint": "prettier --write '**/*.{js,jsx,ts,tsx}'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "patch-package --patch-dir node_modules/@tuya-smart/tuya-panel-patches/patches",
