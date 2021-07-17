@@ -18,4 +18,4 @@ jobs:
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
         with:
-          directory: ./coverage/
+          directory: ${{ hashFiles('./packages/**/coverage/coverage-final.json', './packages/**/coverage/clover.xml', './packages/**/coverage/lcov.info') }}
