@@ -7,7 +7,7 @@ module.exports = {
   displayName: pkg.name,
   rootDir: '../..',
   coverageDirectory: '<rootDir>/packages/tuya-panel-kit/coverage/',
-  testMatch: ['<rootDir>/packages/tuya-panel-kit/src/*/__tests__/?(*.)+(test).js'],
+  // testMatch: ['<rootDir>/packages/tuya-panel-kit/src/components/__tests__/?(*.)+(test).js'],
   collectCoverageFrom: [
     '<rootDir>/packages/tuya-panel-kit/src/components/**/*.js',
     '<rootDir>/packages/tuya-panel-kit/src/utils/*.js',

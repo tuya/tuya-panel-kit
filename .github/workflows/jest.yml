@@ -14,7 +14,7 @@ jobs:
       - name: Install modules
         run: yarn
       - name: Run Test
-        run: yarn test --silent --forceExit
+        run: yarn test
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
         with:
