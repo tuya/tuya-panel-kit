@@ -15,7 +15,7 @@ import {
 
 const { toFixed } = CoreUtils;
 const { range, inMaxMin } = NumberUtils;
-const { isIos, width } = RatioUtils;
+const { isIos, width, convertX: cx } = RatioUtils;
 const { getTheme, ThemeConsumer } = ThemeUtils;
 
 class CountdownPopup extends React.Component {
@@ -284,7 +284,7 @@ class CountdownPopup extends React.Component {
               <StyledCountdownContent>
                 <StyledOverview
                   style={{
-                    flex: isIos ? 1.1 : 1.4,
+                    flex: isIos ? 1.1 : 1.2,
                     height: 240,
                   }}
                 >
@@ -293,8 +293,8 @@ class CountdownPopup extends React.Component {
                     accessibilityLabel="Popup_CountdownPicker_Hours"
                     style={StyleSheet.flatten([
                       {
-                        width: width * (7 / 10) - 60,
-                        marginRight: isIos ? 0 : 20,
+                        width: isIos ? width * (7 / 10) - 60 : width * (1 / 2),
+                        marginRight: isIos ? 0 : cx(20),
                       },
                       hourPickerStyle,
                     ])}
@@ -307,7 +307,7 @@ class CountdownPopup extends React.Component {
                   </Picker>
                   <StyledPickerUnitText
                     style={StyleSheet.flatten([
-                      { marginLeft: -(width * (7 / 10 / 2)) + 30 + (isIos ? 15 : 0) },
+                      { marginLeft: isIos ? -(width * (7 / 10 / 2)) + 45 : -width * (1 / 4) },
                       hourUnitStyle,
                     ])}
                     pointerEvents="none"
@@ -330,8 +330,8 @@ class CountdownPopup extends React.Component {
                             marginLeft: -(width * 3) / 10,
                           }
                         : {
-                            width: width * (7 / 10),
-                            marginLeft: 20,
+                            width: width * (1 / 2),
+                            marginRight: cx(40),
                           },
                       minutePickerStyle,
                     ])}
@@ -344,7 +344,7 @@ class CountdownPopup extends React.Component {
                   <StyledPickerUnitText
                     style={StyleSheet.flatten([
                       {
-                        marginLeft: isIos ? -(width * (8 / 10 / 2)) + 15 : -(width * (7 / 10)) + 40,
+                        marginLeft: isIos ? -(width * (8 / 10 / 2)) + 15 : -width * (1 / 2),
                       },
                       minuteUnitStyle,
                     ])}
