@@ -25,7 +25,8 @@
     "build": "tsc -d",
     "dev": "tsc -w",
     "test": "NODE_ENV=testing TZ=UTC jest -u --silent --forceExit",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "prepublishOnly": "yarn build"
   },
   "bugs": {
     "url": "https://github.com/tuya/tuya-panel-kit/issues"

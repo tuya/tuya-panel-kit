@@ -23,7 +23,8 @@
   "scripts": {
     "prebuild": "rimraf lib/*",
     "build": "tsc -d",
-    "dev": "tsc -w"
+    "dev": "tsc -w",
+    "prepublishOnly": "yarn build"
   },
   "bugs": {
     "url": "https://github.com/tuya/tuya-panel-kit/issues"
