@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable react/require-default-props */
 /* eslint-disable no-var */
 /* eslint-disable react-native/no-raw-text */
@@ -7,10 +8,12 @@
 import React, { Component } from 'react';
 import { ScrollView, TouchableOpacity, View } from 'react-native';
 import { connect } from 'react-redux';
-import { Button, ButtonProps, DevInfo, Modal, TYText, useTheme } from 'tuya-panel-kit';
+import { Button, ButtonProps, DevInfo, Modal, TYText, useTheme, Utils } from 'tuya-panel-kit';
 
 import { Strings } from '../../i18n';
 import { actions, store } from '../../models';
+
+const { isIphoneX } = Utils.RatioUtils;
 
 const { deviceChange } = actions.common;
 const { toggleTheme } = actions.theme;
@@ -21,12 +24,11 @@ const StyledButton = (props: ButtonProps & { bottom?: number; theme?: any }) => 
     <Button
       {...props}
       style={{
-        position: 'absolute',
-        bottom: props?.bottom || 16,
-        right: 16,
         padding: 6,
         borderRadius: 4,
         backgroundColor: theme?.global?.brand,
+        // @ts-ignore
+        ...(props.style ?? {}),
       }}
     />
   );
@@ -89,27 +91,35 @@ class DebugView extends Component<{ devInfo?: DevInfo; theme?: any }, { visible:
       <View
         style={{
           position: 'absolute',
-          bottom: 16,
-          right: 0,
+          bottom: isIphoneX ? 16 + 34 : 16,
+          right: 16,
+          flex: 1,
+          flexDirection: 'column',
+          alignItems: 'flex-end',
         }}
       >
+        {toolbars.map((data, idx) => (
+          <StyledButton
+            key={idx}
+            activeOpacity={0.8}
+            textStyle={{ fontSize: 16, color: '#fff' }}
+            style={{
+              marginTop: 6,
+            }}
+            {...data}
+          />
+        ))}
         <StyledButton
           activeOpacity={0.8}
           textStyle={{ fontSize: 16, color: '#fff' }}
           text={
             this.state.visible ? Strings.getLang('hide_toolbox') : Strings.getLang('show_toolbox')
           }
+          style={{
+            marginTop: 6,
+          }}
           onPress={() => this.setState(prevState => ({ visible: !prevState.visible }))}
         />
-        {toolbars.map((data, idx) => (
-          <StyledButton
-            key={idx}
-            activeOpacity={0.8}
-            bottom={64 + 48 * idx}
-            textStyle={{ fontSize: 16, color: '#fff' }}
-            {...data}
-          />
-        ))}
       </View>
     );
   }
