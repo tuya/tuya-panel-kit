@@ -1,0 +1,16 @@
+{
+  "version": "independent",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "ignoreChanges": ["ignored-file", "**/__tests__/**"],
+  "command": {
+    "publish": {
+      "access": "public",
+      "registry": "https://registry.npmjs.org"
+    },
+    "version": {
+      "conventionalCommits": true,
+      "message": "chore(release): publish"
+    }
+  }
+}

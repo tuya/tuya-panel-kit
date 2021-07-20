@@ -14,8 +14,14 @@ jobs:
       - name: Install modules
         run: yarn
       - name: Run Test
-        run: yarn test --silent --forceExit
-      - name: Upload coverage to Codecov
+        run: yarn test
+      - name: Upload Kit coverage to Codecov
         uses: codecov/codecov-action@v1
         with:
-          directory: ./coverage/
+          override_branch: kit
+          directory: ./packages/tuya-panel-kit/coverage/
+      - name: Upload Utils coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          override_branch: Utils
+          directory: ./packages/tuya-panel-utils/coverage/

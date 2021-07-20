@@ -1,3 +1,16 @@
+var getRNAlias = () => {
+  return process.env.DEV_MODE === 'umi'
+    ? {}
+    : {
+        'tuya-panel-kit/lib/components/iconfont/svg/defaultSvg':
+          '../packages/tuya-panel-kit/src/components/iconfont/svg/defaultSvg',
+        'tuya-panel-kit/lib/components/modal/portalOut':
+          '../packages/tuya-panel-kit/src/components/modal/portalOut',
+        'tuya-panel-kit': '../packages/tuya-panel-kit/src/index.js',
+        'react-native-gesture-handler': './node_modules/react-native-gesture-handler',
+      };
+};
+
 module.exports = {
   presets: ['module:metro-react-native-babel-preset'],
   plugins: [
@@ -6,13 +19,14 @@ module.exports = {
       'module-resolver',
       {
         root: ['./'],
+        extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
         alias: {
-          'tuya-panel-kit/src/components/iconfont/svg/defaultSvg':
-            '../src/components/iconfont/svg/defaultSvg',
-          'tuya-panel-kit/src/components/iconfont/art/defaultSvg':
-            '../src/components/iconfont/art/defaultSvg',
-          'tuya-panel-kit/src/components/dialog/alert': '../src/components/dialog/alert',
-          'tuya-panel-kit': '../src/index',
+          ...getRNAlias(),
+          '#components': './src/components',
+          '#config': './src/config',
+          '#i18n': './src/i18n',
+          '#hooks': './src/hooks',
+          '#models': './src/models',
         },
       },
     ],

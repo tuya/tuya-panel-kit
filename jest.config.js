@@ -1,35 +1,5 @@
 module.exports = {
-  preset: 'react-native',
-  verbose: true,
-  moduleNameMapper: {
-    '^image![a-zA-Z0-9$_-]+$': 'GlobalImageStub',
-    '^[@./a-zA-Z0-9$_-]+\\.(png|gif)$':
-      '<rootDir>/node_modules/react-native/Libraries/Image/RelativeImageStub',
-  },
-  coverageDirectory: './coverage/',
-  // testMatch: ['<rootDir>/src/components/global-toast/__tests__/*.test.js'],
-  collectCoverageFrom: [
-    'src/components/**/*.js',
-    'src/utils/*.js',
-    '!src/components/layout/+(navigator-layout|full-view|offline-view|api|detect-net-modal|react-navigation)/*.js',
-    '!src/components/layout/offline-view/ble-offline-view/*.js',
-    '!src/components/dialog/password.js',
-    '!src/components/popup/dropdown/*.js',
-    '!src/components/feature-slider/*.js',
-    '!src/index.js',
-    '!src/helpers/*.js',
-    '!src/components/barchart/*.js',
-    '!src/components/linechart/*.js',
-    '!src/components/image-upload/*.js',
-    '!src/components/i18n/*.js',
-    '!src/components/theme/*.js',
-  ],
-  modulePathIgnorePatterns: ['<rootDir>/example/node_modules', '<rootDir>/demos'],
-  collectCoverage: true,
-  testEnvironment: 'node',
-  globals: {
-    __DEV__: true,
-  },
-  setupTestFrameworkScriptFile: '<rootDir>/jest.setup.js',
-  snapshotSerializers: ['enzyme-to-json/serializer'],
+  ...require('./jest.config.base.js'),
+  projects: ['<rootDir>/packages/*/jest.config.js'],
+  coverageDirectory: '<rootDir>/coverage/',
 };

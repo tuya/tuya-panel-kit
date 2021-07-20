@@ -1,0 +1,46 @@
+{
+  "name": "tuya-panel-kit",
+  "version": "4.6.2",
+  "description": "a functional component library for developing tuya device panels!",
+  "keywords": [
+    "tuya",
+    "react-native",
+    "panel"
+  ],
+  "author": "ZengBeauty<2497752603@qq.com>",
+  "homepage": "https://github.com/tuya/tuya-panel-kit",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuya/tuya-panel-kit.git"
+  },
+  "scripts": {
+    "prebuild": "rimraf lib/*",
+    "build": "babel src --ignore __tests__ --out-dir lib --copy-files",
+    "dev": "babel src --watch --ignore __tests__ --out-dir lib --copy-files",
+    "test": "NODE_ENV=testing TZ=UTC jest -u --silent --forceExit",
+    "test:watch": "jest --watch",
+    "prepublishOnly": "yarn build"
+  },
+  "bugs": {
+    "url": "https://github.com/tuya/tuya-panel-kit/issues"
+  },
+  "peerDependencies": {
+    "@types/tuya-panel-kit": "*",
+    "react": "16.8.3",
+    "react-native": "0.59.10",
+    "react-native-svg": "5.5.1"
+  }
+}
