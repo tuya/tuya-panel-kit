@@ -1,0 +1,38 @@
+{
+  "name": "tuya-panel-theme",
+  "version": "0.0.0",
+  "description": "tuya-panel-theme",
+  "author": "ZengBeauty<2497752603@qq.com>",
+  "homepage": "https://github.com/tuya/tuya-panel-kit#readme",
+  "license": "MIT",
+  "main": "src/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuya/tuya-panel-kit.git"
+  },
+  "scripts": {
+    "prebuild": "rimraf lib/*",
+    "build": "tsc -d",
+    "dev": "tsc -w"
+  },
+  "bugs": {
+    "url": "https://github.com/tuya/tuya-panel-kit/issues"
+  },
+  "dependencies": {
+    "tuya-panel-utils": "^0.0.0"
+  },
+  "peerDependencies": {
+    "react": "16.8.3",
+    "react-native": "0.59.10"
+  }
+}

@@ -1,12 +1,12 @@
 module.exports = {
-  extends: '../.eslintrc.js',
-  settings: {
-    'import/core-modules': ['tuya-panel-kit'],
-    'import/no-unresolved': [2, { ignore: ['.png$', '.webp$', '.jpg$'] }],
-  },
+  extends: ['tuya-panel'],
+  plugins: ['literal-check'],
   rules: {
-    'import/no-extraneous-dependencies': 0,
-    'react/prefer-stateless-function': 0,
-    'react/jsx-filename-extension': 0,
+    'import/no-unresolved': 'off',
+    'no-shadow': 'off',
+    'no-bitwise': 'off',
+    'prefer-spread': 'off',
+    'import/no-named-as-default': 'off',
+    'react-native/sort-styles': 'off',
   },
 };
