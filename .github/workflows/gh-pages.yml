@@ -11,7 +11,7 @@ jobs:
       - name: Build
         run: |
           cd example
-          yarn add tuya-panel-kit
+          yarn add tuya-panel-kit --registry=https://registry.npmjs.org
           yarn build:umi
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
