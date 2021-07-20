@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Install modules
-        run: yarn
+        run: yarn install --registry=https://registry.npmjs.org
       - name: Run Test
         run: yarn test
       - name: Upload Kit coverage to Codecov
