@@ -6,11 +6,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: startsWith(github.event.pull_request.head.label, 'tuya:')
     steps:
     - name: Add Reviewers
-      if: |
-        github.event_name == 'push' ||
-        !startsWith(github.event.pull_request.head.label, 'tuya:')
       uses: madrapps/add-reviewers@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
