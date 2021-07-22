@@ -37,6 +37,9 @@
   "bugs": {
     "url": "https://github.com/tuya/tuya-panel-kit/issues"
   },
+  "dependencies": {
+    "tuya-panel-mall-access": "^0.0.1"
+  },
   "peerDependencies": {
     "@types/tuya-panel-kit": "*",
     "react": "16.8.3",
