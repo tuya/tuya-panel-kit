@@ -2644,12 +2644,12 @@ append-transform@^0.4.0:
 
 aproba@^1.0.3, aproba@^1.1.1:
   version "1.2.0"
-  resolved "https://registry.npm.taobao.org/aproba/download/aproba-1.2.0.tgz#6802e6264efd18c790a1b0d517f0f2627bf2c94a"
+  resolved "https://registry.nlark.com/aproba/download/aproba-1.2.0.tgz#6802e6264efd18c790a1b0d517f0f2627bf2c94a"
   integrity sha1-aALmJk79GMeQobDVF/DyYnvyyUo=
 
 aproba@^2.0.0:
   version "2.0.0"
-  resolved "https://registry.npm.taobao.org/aproba/download/aproba-2.0.0.tgz#52520b8ae5b569215b354efc0caa3fe1e45a8adc"
+  resolved "https://registry.nlark.com/aproba/download/aproba-2.0.0.tgz#52520b8ae5b569215b354efc0caa3fe1e45a8adc"
   integrity sha1-UlILiuW1aSFbNU78DKo/4eRaitw=
 
 arch@^2.1.0:
