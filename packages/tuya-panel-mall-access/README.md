@@ -1,4 +1,4 @@
-# `tuya-panel-utils`
+# `tuya-panel-topbar-mall-indicator`
 
 Tuya tool collection kit
 
