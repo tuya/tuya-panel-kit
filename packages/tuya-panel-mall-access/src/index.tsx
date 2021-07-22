@@ -132,9 +132,9 @@ const ToolBarIndicator: React.FC<IProps> = ({
 
 const styles = StyleSheet.create({
   container: {
+    height: 36,
     position: 'relative',
     width: 36,
-    height: 36,
   },
 });
 
