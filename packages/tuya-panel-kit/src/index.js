@@ -107,4 +107,4 @@ export { default as SliderProgress } from './components/slider-progress';
 
 export { default as SliderWithLine } from './components/slider-with-line';
 
-export { default as TuyaMallAccess } from 'tuya-panel-mall-access';
+export { default as ToolBarMallIndicator } from 'tuya-panel-topbar-mall-indicator';

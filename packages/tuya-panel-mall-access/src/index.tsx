@@ -13,10 +13,9 @@ type IProps = {
   imageStyle?: any;
   rightPress?: () => void;
   rightActionType?: string;
-  uiId: string;
 };
 
-const ToolBarIndicator: React.FC<IProps> = ({
+const ToolBarMallIndicator: React.FC<IProps> = ({
   title,
   titlePress,
   subTitle,
@@ -138,4 +137,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default memo(ToolBarIndicator);
+export default memo(ToolBarMallIndicator);
