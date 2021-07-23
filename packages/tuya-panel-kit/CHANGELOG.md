@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.6.4](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.6.3...tuya-panel-kit@4.6.4) (2021-07-23)
+
+
+### Bug Fixes
+
+* **kit:** add dependencies ([6789d70](https://github.com/tuya/tuya-panel-kit/commit/6789d700a8de2cc0b4161cf9ca498842cefded4a))
+
+
+
+
+
 ## 4.6.3 (2021-07-20)
 
 
