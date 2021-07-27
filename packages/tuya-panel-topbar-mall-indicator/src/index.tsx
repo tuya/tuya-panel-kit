@@ -1,5 +1,5 @@
 import { View, StyleSheet, Animated, NativeModules, NativeEventEmitter } from 'react-native';
-import React, { memo, useState, useEffect, useMemo } from 'react';
+import React, { memo, useState, useEffect, useMemo, Children } from 'react';
 import { TYSdk, TopBar } from 'tuya-panel-kit';
 import { useNavigation } from '@react-navigation/core';
 
@@ -8,12 +8,20 @@ const NativeNotificationModule = new NativeEventEmitter(TYRCTPublicManager);
 
 type IProps = {
   title: string;
+  titleColor?: string;
+  titleStyle?: StyleSheet.TextStyle;
+  subTitleStyle?: StyleSheet.TextStyle;
   subTitle?: string;
+  position?: string;
   onTitlePress?: () => void;
   containerStyle?: any;
   imageStyle?: any;
   onRightPress?: () => void;
   rightActionType?: string;
+  children?: Children;
+  wrapStyle?: StyleSheet.ViewStyle;
+  contentStyle?: StyleSheet.ViewStyle;
+  contentBackground?: string;
 };
 
 const ToolBarMallIndicator: React.FC<IProps> = ({
@@ -24,6 +32,14 @@ const ToolBarMallIndicator: React.FC<IProps> = ({
   imageStyle,
   onRightPress,
   rightActionType,
+  children = null,
+  titleColor = null,
+  titleStyle = null,
+  subTitleStyle = null,
+  position = 'center',
+  wrapStyle = null,
+  contentStyle = null,
+  contentBackground = undefined,
 }) => {
   const { productId, groupId } = TYSdk.devInfo;
 
@@ -100,7 +116,7 @@ const ToolBarMallIndicator: React.FC<IProps> = ({
   };
 
   return (
-    <TopBar.Container>
+    <TopBar.Container style={wrapStyle} contentStyle={contentStyle} background={contentBackground}>
       <TopBar.Action name="backIos" onPress={handleBack} />
       <TopBar.Content
         title={title}
@@ -108,7 +124,13 @@ const ToolBarMallIndicator: React.FC<IProps> = ({
         onPress={() => {
           onTitlePress && onTitlePress();
         }}
-      />
+        titleStyle={titleStyle}
+        subTitleStyle={subTitleStyle}
+        color={titleColor}
+        position={position}
+      >
+        {children}
+      </TopBar.Content>
       <TopBar.Action
         name={rightActionType || 'edit'}
         onPress={() => {
