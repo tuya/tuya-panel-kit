@@ -1,10 +1,5 @@
-const c2f = c => Math.round(1.8 * c + 32, 10);
+import { Utils } from 'tuya-panel-utils';
 
-const f2c = f => parseInt(((f - 32) / 1.8).toFixed(0), 10);
+const { TemperatureUtils } = Utils;
 
-const TemperatureUitls = {
-  c2f,
-  f2c,
-};
-
-export default TemperatureUitls;
+export default TemperatureUtils;

@@ -1,11 +1,9 @@
 # `tuya-panel-theme`
 
-> TODO: description
+Tuya theme collection library
 
 ## Usage
 
-```
-const tuyaPanelTheme = require('tuya-panel-theme');
-
-// TODO: DEMONSTRATE API
+```jsx
+import { Theme, defaultTheme, getDefaultTheme, CoreTheme, useTheme } from 'tuya-panel-theme';
 ```

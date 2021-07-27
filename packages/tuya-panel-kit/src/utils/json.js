@@ -1,26 +1,5 @@
-const JsonUtil = {
-  parseJSON(str) {
-    let rst;
-    if (str && {}.toString.call(str) === '[object String]') {
-      // 当JSON字符串解析
-      try {
-        rst = JSON.parse(str);
-      } catch (e) {
-        // 出错，用eval继续解析JSON字符串
-        try {
-          // eslint-disable-next-line
-          rst = eval(`(${str})`);
-        } catch (e2) {
-          // 当成普通字符串
-          rst = str;
-        }
-      }
-    } else {
-      rst = typeof str === 'undefined' ? {} : str;
-    }
+import { Utils } from 'tuya-panel-utils';
 
-    return rst;
-  },
-};
+const { JsonUtils } = Utils;
 
-export default JsonUtil;
+export default JsonUtils;

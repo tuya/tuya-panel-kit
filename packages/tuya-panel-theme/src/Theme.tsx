@@ -15,7 +15,7 @@ const Theme: React.FunctionComponent<IProps> = props => {
   const { theme, children } = props;
   const finalTheme = deepMerge(defaultTheme, theme);
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={finalTheme}>
       <ThemeContextProvider theme={finalTheme}>{children}</ThemeContextProvider>
     </ThemeProvider>
   );

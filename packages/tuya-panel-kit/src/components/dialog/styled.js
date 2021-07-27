@@ -3,7 +3,7 @@ import styled from 'styled-components/native';
 import { RatioUtils } from '../../utils';
 import TYFlatList from '../TYLists/list';
 import TYText from '../TYText';
-import { dialog } from '../theme/theme-get';
+import { getDefaultTheme } from '../theme';
 
 const { convertX: cx } = RatioUtils;
 
@@ -23,7 +23,7 @@ const {
   confirmFontColor,
   prompt,
   pressColor,
-} = dialog;
+} = getDefaultTheme.dialog;
 
 /**
  * Common Dialog Variants
