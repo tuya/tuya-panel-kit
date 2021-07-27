@@ -4981,14 +4981,6 @@ cp-file@^7.0.0:
     nested-error-stacks "^2.0.0"
     p-event "^4.1.0"
 
-cpy-cli@^3.1.1:
-  version "3.1.1"
-  resolved "https://registry.npm.taobao.org/cpy-cli/download/cpy-cli-3.1.1.tgz#2adb06544102c948ce098e522d5b8ddcf4f7c0b4"
-  integrity sha1-KtsGVEECyUjOCY5SLVuN3PT3wLQ=
-  dependencies:
-    cpy "^8.0.0"
-    meow "^6.1.1"
-
 cpy@^8.0.0:
   version "8.1.2"
   resolved "https://registry.npm.taobao.org/cpy/download/cpy-8.1.2.tgz?cache=0&sync_timestamp=1614947856293&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcpy%2Fdownload%2Fcpy-8.1.2.tgz#e339ea54797ad23f8e3919a5cffd37bfc3f25935"
@@ -5348,14 +5340,6 @@ define-property@^2.0.2:
   dependencies:
     is-descriptor "^1.0.2"
     isobject "^3.0.1"
-
-del-cli@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.nlark.com/del-cli/download/del-cli-4.0.1.tgz#2303ccaa45708ee8c6211568344cf87336abf30a"
-  integrity sha1-IwPMqkVwjujGIRVoNEz4czar8wo=
-  dependencies:
-    del "^6.0.0"
-    meow "^10.1.0"
 
 del@^3.0.0:
   version "3.0.0"

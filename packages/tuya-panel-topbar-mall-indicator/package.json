@@ -24,7 +24,7 @@
     "prebuild": "rimraf lib/*",
     "build": "babel src --ignore __tests__ --out-dir lib --copy-files",
     "dev": "tsc -w",
-    "test": "NODE_ENV=testing TZ=UTC jest -u",
+    "test": "npx lerna exec --scope tuya-panel-kit -- yarn run build && NODE_ENV=testing TZ=UTC jest -u",
     "test:watch": "jest --watch",
     "prepublishOnly": "yarn build"
   },
