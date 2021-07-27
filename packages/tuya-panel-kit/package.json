@@ -55,7 +55,9 @@
     "react-native-screens": "2.10.1",
     "react-native-svg": "5.5.1",
     "style-equal": "^1.0.0",
-    "styled-components": "^3.4.10"
+    "styled-components": "^3.4.10",
+    "tuya-panel-theme": "^0.0.1",
+    "tuya-panel-utils": "^0.0.1"
   },
   "peerDependencies": {
     "@types/tuya-panel-kit": "*",
