@@ -8,5 +8,11 @@ NativeModules.TYRCTPublicModule = {};
 NativeModules.TYRCTDeviceModule = {};
 NativeModules.TYRCTPublicManager = {};
 NativeModules.TYRCTPanelManager = {};
+NativeModules.RNGestureHandlerModule = {
+  Direction: {},
+};
+NativeModules.TYRCTPanelManager = {
+  getRedPointVisibleForProduct: () => undefined,
+};
 
 Enzyme.configure({ adapter: new Adapter() });
