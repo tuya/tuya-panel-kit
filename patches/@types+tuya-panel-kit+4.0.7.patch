@@ -1,0 +1,13 @@
+diff --git a/node_modules/@types/tuya-panel-kit/index.d.ts b/node_modules/@types/tuya-panel-kit/index.d.ts
+index a9cc4c4..4cf8462 100755
+--- a/node_modules/@types/tuya-panel-kit/index.d.ts
++++ b/node_modules/@types/tuya-panel-kit/index.d.ts
+@@ -2325,7 +2325,7 @@ export const GlobalToast: {
+ };
+ 
+ // IconFont
+-type IconFontName =
++export type IconFontName =
+     | 0
+     | 1
+     | 2

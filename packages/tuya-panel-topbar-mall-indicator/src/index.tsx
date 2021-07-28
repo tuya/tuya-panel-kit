@@ -9,7 +9,7 @@ import {
   NativeEventEmitter,
 } from 'react-native';
 import React, { memo, useState, useEffect, useMemo } from 'react';
-import { TYSdk, TopBar, IconFontProps } from 'tuya-panel-kit';
+import { TYSdk, TopBar, IconFontName } from 'tuya-panel-kit';
 import { useNavigation } from '@react-navigation/core';
 
 const { TYRCTPublicManager } = NativeModules;
@@ -26,7 +26,7 @@ interface IProps {
   containerStyle?: ViewStyle;
   imageStyle?: ImageStyle;
   onRightPress?: () => void;
-  rightActionType?: any;
+  rightActionType?: IconFontName;
   children?: React.ReactNode;
   wrapStyle?: ViewStyle;
   contentStyle?: ViewStyle;

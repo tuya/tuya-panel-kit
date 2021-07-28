@@ -27,6 +27,7 @@
     "registry": "https://registry.npmjs.org"
   },
   "scripts": {
+    "postinstall": "npx patch-package",
     "prebuild": "rimraf lib/*",
     "build": "lerna run build",
     "dev": "lerna run dev --parallel",
