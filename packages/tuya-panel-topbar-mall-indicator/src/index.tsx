@@ -1,6 +1,14 @@
-import { View, StyleSheet, Animated, NativeModules, NativeEventEmitter } from 'react-native';
-import React, { memo, useState, useEffect, useMemo, Children } from 'react';
-import { TYSdk, TopBar } from 'tuya-panel-kit';
+import {
+  View,
+  TextStyle,
+  ViewStyle,
+  StyleSheet,
+  Animated,
+  NativeModules,
+  NativeEventEmitter,
+} from 'react-native';
+import React, { memo, useState, useEffect, useMemo } from 'react';
+import { TYSdk, TopBar, IconFontProps } from 'tuya-panel-kit';
 import { useNavigation } from '@react-navigation/core';
 
 const { TYRCTPublicManager } = NativeModules;
@@ -9,18 +17,18 @@ const NativeNotificationModule = new NativeEventEmitter(TYRCTPublicManager);
 type IProps = {
   title: string;
   titleColor?: string;
-  titleStyle?: StyleSheet.TextStyle;
-  subTitleStyle?: StyleSheet.TextStyle;
+  titleStyle?: TextStyle;
+  subTitleStyle?: TextStyle;
   subTitle?: string;
-  position?: string;
+  position?: 'left' | 'center' | 'right';
   onTitlePress?: () => void;
   containerStyle?: any;
   imageStyle?: any;
   onRightPress?: () => void;
-  rightActionType?: string;
-  children?: Children;
-  wrapStyle?: StyleSheet.ViewStyle;
-  contentStyle?: StyleSheet.ViewStyle;
+  rightActionType?: IconFontProps['name'];
+  children?: React.ReactNode;
+  wrapStyle?: ViewStyle;
+  contentStyle?: ViewStyle;
   contentBackground?: string;
 };
 
@@ -56,6 +64,7 @@ const ToolBarMallIndicator: React.FC<IProps> = ({
     Animated.spring(springVale, {
       toValue: 1,
       friction: 2,
+      useNativeDriver: false,
     }).start();
   };
 
@@ -64,6 +73,7 @@ const ToolBarMallIndicator: React.FC<IProps> = ({
     Animated.timing(scaleVale, {
       toValue: 1,
       duration: 200,
+      useNativeDriver: false,
     }).start(() => spring());
   };
 
