@@ -16,8 +16,6 @@ module.exports = {
     '<rootDir>/example',
     '<rootDir>/lib',
     '<rootDir>/packages/*/lib',
-    '<rootDir>/packages/tuya-panel-theme',
-    '<rootDir>/packages/tuya-panel-kit',
   ],
   transform: {
     '^.+\\.(t|j)sx?$': 'babel-jest',

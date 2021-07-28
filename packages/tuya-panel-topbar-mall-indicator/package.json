@@ -22,9 +22,9 @@
   },
   "scripts": {
     "prebuild": "rimraf lib/*",
-    "build": "babel src --ignore __tests__ --out-dir lib --copy-files",
+    "build": "tsc -d",
     "dev": "tsc -w",
-    "test": "npx lerna exec --scope tuya-panel-kit -- yarn run build && NODE_ENV=testing TZ=UTC jest -u",
+    "test": "NODE_ENV=testing TZ=UTC jest -u",
     "test:watch": "jest --watch",
     "prepublishOnly": "yarn build"
   },

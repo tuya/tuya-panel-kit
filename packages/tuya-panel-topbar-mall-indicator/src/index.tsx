@@ -3,6 +3,7 @@ import {
   TextStyle,
   ViewStyle,
   StyleSheet,
+  ImageStyle,
   Animated,
   NativeModules,
   NativeEventEmitter,
@@ -14,7 +15,7 @@ import { useNavigation } from '@react-navigation/core';
 const { TYRCTPublicManager } = NativeModules;
 const NativeNotificationModule = new NativeEventEmitter(TYRCTPublicManager);
 
-type IProps = {
+interface IProps {
   title: string;
   titleColor?: string;
   titleStyle?: TextStyle;
@@ -22,15 +23,15 @@ type IProps = {
   subTitle?: string;
   position?: 'left' | 'center' | 'right';
   onTitlePress?: () => void;
-  containerStyle?: any;
-  imageStyle?: any;
+  containerStyle?: ViewStyle;
+  imageStyle?: ImageStyle;
   onRightPress?: () => void;
-  rightActionType?: IconFontProps['name'];
+  rightActionType?: any;
   children?: React.ReactNode;
   wrapStyle?: ViewStyle;
   contentStyle?: ViewStyle;
   contentBackground?: string;
-};
+}
 
 const ToolBarMallIndicator: React.FC<IProps> = ({
   title,
@@ -98,13 +99,13 @@ const ToolBarMallIndicator: React.FC<IProps> = ({
           }
         }
       );
-    }
 
-    NativeNotificationModule.addListener('onRedPointRefreshEvent', ({ pid }) => {
-      if (pid === productId) {
-        setExistMsg(false);
-      }
-    });
+      NativeNotificationModule.addListener('onRedPointRefreshEvent', ({ pid }) => {
+        if (pid === productId) {
+          setExistMsg(false);
+        }
+      });
+    }
   }, []);
 
   const boundsScaleWidth = scaleVale.interpolate({
@@ -173,7 +174,7 @@ const ToolBarMallIndicator: React.FC<IProps> = ({
                     transform: [{ scale: springVale }],
                   },
                 ]}
-                source={require('./msg.png')}
+                source={require('../assets/msg.png')}
               />
             )}
           </View>
