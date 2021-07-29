@@ -200,7 +200,7 @@ exports[`TimerPicker Component basic render 1`] = `
                   Object {
                     "color": "#333",
                     "fontFamily": "DIN Alternate",
-                    "fontSize": 22,
+                    "fontSize": 40,
                   },
                 ]
               }
@@ -6595,7 +6595,7 @@ exports[`TimerPicker Component basic render 1`] = `
                   Object {
                     "color": "#333",
                     "fontFamily": "DIN Alternate",
-                    "fontSize": 22,
+                    "fontSize": 40,
                   },
                 ]
               }
@@ -12930,7 +12930,7 @@ exports[`TimerPicker Component basic render 1`] = `
                   Object {
                     "color": "#333",
                     "fontFamily": "DIN Alternate",
-                    "fontSize": 22,
+                    "fontSize": 40,
                   },
                 ]
               }
@@ -12973,7 +12973,7 @@ exports[`TimerPicker Component basic render 1`] = `
                 Object {
                   "color": "#333",
                   "fontFamily": "DIN Alternate",
-                  "fontSize": 22,
+                  "fontSize": 40,
                 },
               ]
             }
@@ -19381,7 +19381,7 @@ exports[`TimerPicker Component basic render 1`] = `
                   Object {
                     "color": "#333",
                     "fontFamily": "DIN Alternate",
-                    "fontSize": 22,
+                    "fontSize": 40,
                   },
                 ]
               }
@@ -25716,7 +25716,7 @@ exports[`TimerPicker Component basic render 1`] = `
                   Object {
                     "color": "#333",
                     "fontFamily": "DIN Alternate",
-                    "fontSize": 22,
+                    "fontSize": 40,
                   },
                 ]
               }
@@ -25761,7 +25761,7 @@ exports[`TimerPicker Component basic render 1`] = `
                   Object {
                     "color": "#333",
                     "fontFamily": "DIN Alternate",
-                    "fontSize": 22,
+                    "fontSize": 40,
                   },
                 ]
               }

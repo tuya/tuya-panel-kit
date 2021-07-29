@@ -88,7 +88,7 @@ export default class TimerPicker extends Component {
     prefixPosition: ['left', 'right'],
     pickerFontColor: '#333',
     symbol: '—',
-    pickerFontSize: 22,
+    pickerFontSize: cx(20),
     loop: true,
   };
 

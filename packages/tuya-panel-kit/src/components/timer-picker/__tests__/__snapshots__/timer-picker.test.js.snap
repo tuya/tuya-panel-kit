@@ -73,7 +73,7 @@ exports[`TimerPicker Component render width prefixPosition === array 1`] = `
             Object {
               "color": "#333",
               "fontFamily": "DIN Alternate",
-              "fontSize": 22,
+              "fontSize": 40,
             },
           ]
         }
@@ -6468,7 +6468,7 @@ exports[`TimerPicker Component render width prefixPosition === array 1`] = `
             Object {
               "color": "#333",
               "fontFamily": "DIN Alternate",
-              "fontSize": 22,
+              "fontSize": 40,
             },
           ]
         }
@@ -12803,7 +12803,7 @@ exports[`TimerPicker Component render width prefixPosition === array 1`] = `
             Object {
               "color": "#333",
               "fontFamily": "DIN Alternate",
-              "fontSize": 22,
+              "fontSize": 40,
             },
           ]
         }
@@ -12846,7 +12846,7 @@ exports[`TimerPicker Component render width prefixPosition === array 1`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 22,
+            "fontSize": 40,
           },
         ]
       }
@@ -19254,7 +19254,7 @@ exports[`TimerPicker Component render width prefixPosition === array 1`] = `
             Object {
               "color": "#333",
               "fontFamily": "DIN Alternate",
-              "fontSize": 22,
+              "fontSize": 40,
             },
           ]
         }
@@ -25589,7 +25589,7 @@ exports[`TimerPicker Component render width prefixPosition === array 1`] = `
             Object {
               "color": "#333",
               "fontFamily": "DIN Alternate",
-              "fontSize": 22,
+              "fontSize": 40,
             },
           ]
         }
@@ -25634,7 +25634,7 @@ exports[`TimerPicker Component render width prefixPosition === array 1`] = `
             Object {
               "color": "#333",
               "fontFamily": "DIN Alternate",
-              "fontSize": 22,
+              "fontSize": 40,
             },
           ]
         }
@@ -25717,7 +25717,7 @@ exports[`TimerPicker Component render width prefixPosition === left 1`] = `
             Object {
               "color": "#333",
               "fontFamily": "DIN Alternate",
-              "fontSize": 22,
+              "fontSize": 40,
             },
           ]
         }
@@ -32112,7 +32112,7 @@ exports[`TimerPicker Component render width prefixPosition === left 1`] = `
             Object {
               "color": "#333",
               "fontFamily": "DIN Alternate",
-              "fontSize": 22,
+              "fontSize": 40,
             },
           ]
         }
@@ -38447,7 +38447,7 @@ exports[`TimerPicker Component render width prefixPosition === left 1`] = `
             Object {
               "color": "#333",
               "fontFamily": "DIN Alternate",
-              "fontSize": 22,
+              "fontSize": 40,
             },
           ]
         }
@@ -38490,7 +38490,7 @@ exports[`TimerPicker Component render width prefixPosition === left 1`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 22,
+            "fontSize": 40,
           },
         ]
       }
@@ -38548,7 +38548,7 @@ exports[`TimerPicker Component render width prefixPosition === left 1`] = `
             Object {
               "color": "#333",
               "fontFamily": "DIN Alternate",
-              "fontSize": 22,
+              "fontSize": 40,
             },
           ]
         }
@@ -44943,7 +44943,7 @@ exports[`TimerPicker Component render width prefixPosition === left 1`] = `
             Object {
               "color": "#333",
               "fontFamily": "DIN Alternate",
-              "fontSize": 22,
+              "fontSize": 40,
             },
           ]
         }
@@ -51278,7 +51278,7 @@ exports[`TimerPicker Component render width prefixPosition === left 1`] = `
             Object {
               "color": "#333",
               "fontFamily": "DIN Alternate",
-              "fontSize": 22,
+              "fontSize": 40,
             },
           ]
         }
@@ -51361,7 +51361,7 @@ exports[`TimerPicker Component render width prefixPosition === left 2`] = `
             Object {
               "color": "#333",
               "fontFamily": "DIN Alternate",
-              "fontSize": 22,
+              "fontSize": 40,
             },
           ]
         }
@@ -57756,7 +57756,7 @@ exports[`TimerPicker Component render width prefixPosition === left 2`] = `
             Object {
               "color": "#333",
               "fontFamily": "DIN Alternate",
-              "fontSize": 22,
+              "fontSize": 40,
             },
           ]
         }
@@ -64091,7 +64091,7 @@ exports[`TimerPicker Component render width prefixPosition === left 2`] = `
             Object {
               "color": "#333",
               "fontFamily": "DIN Alternate",
-              "fontSize": 22,
+              "fontSize": 40,
             },
           ]
         }
@@ -64134,7 +64134,7 @@ exports[`TimerPicker Component render width prefixPosition === left 2`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 22,
+            "fontSize": 40,
           },
         ]
       }
@@ -64192,7 +64192,7 @@ exports[`TimerPicker Component render width prefixPosition === left 2`] = `
             Object {
               "color": "#333",
               "fontFamily": "DIN Alternate",
-              "fontSize": 22,
+              "fontSize": 40,
             },
           ]
         }
@@ -70587,7 +70587,7 @@ exports[`TimerPicker Component render width prefixPosition === left 2`] = `
             Object {
               "color": "#333",
               "fontFamily": "DIN Alternate",
-              "fontSize": 22,
+              "fontSize": 40,
             },
           ]
         }
@@ -76922,7 +76922,7 @@ exports[`TimerPicker Component render width prefixPosition === left 2`] = `
             Object {
               "color": "#333",
               "fontFamily": "DIN Alternate",
-              "fontSize": 22,
+              "fontSize": 40,
             },
           ]
         }
@@ -83355,7 +83355,7 @@ exports[`TimerPicker Component render width singlePicker  1`] = `
             Object {
               "color": "#333",
               "fontFamily": "DIN Alternate",
-              "fontSize": 22,
+              "fontSize": 40,
             },
           ]
         }
@@ -89690,7 +89690,7 @@ exports[`TimerPicker Component render width singlePicker  1`] = `
             Object {
               "color": "#333",
               "fontFamily": "DIN Alternate",
-              "fontSize": 22,
+              "fontSize": 40,
             },
           ]
         }
@@ -89735,7 +89735,7 @@ exports[`TimerPicker Component render width singlePicker  1`] = `
             Object {
               "color": "#333",
               "fontFamily": "DIN Alternate",
-              "fontSize": 22,
+              "fontSize": 40,
             },
           ]
         }
@@ -89778,7 +89778,7 @@ exports[`TimerPicker Component render width singlePicker  1`] = `
           Object {
             "color": "#333",
             "fontFamily": "DIN Alternate",
-            "fontSize": 22,
+            "fontSize": 40,
           },
         ]
       }
