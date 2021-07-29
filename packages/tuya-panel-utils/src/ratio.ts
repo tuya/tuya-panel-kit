@@ -35,6 +35,7 @@ export const isSmallH = height < 667;
 const getDimension = () => {
   if (isWeb) {
     try {
+      // @ts-ignore
       return Dimensions.get('osWindow');
     } catch (error) {
       return Dimensions.get('window');

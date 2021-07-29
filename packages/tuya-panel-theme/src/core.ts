@@ -31,3 +31,10 @@ export const normalizeFont = (
     lineHeight: Math.round(lineHeight * baseline), // 不为整数小米会crash
   };
 };
+
+export const CoreTheme = {
+  getBrandColor,
+  getDividerColor,
+  getTypedFontColor,
+  normalizeFont,
+};
