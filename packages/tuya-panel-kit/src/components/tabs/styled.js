@@ -1,7 +1,9 @@
 import { Animated, View } from 'react-native';
 import styled from 'styled-components/native';
-import { getBrandColor, getTypedFontColor } from '../theme/core';
+import { CoreTheme } from '../theme';
 import TYText from '../TYText';
+
+const { getBrandColor, getTypedFontColor } = CoreTheme;
 
 export const StyledTab = styled(View)`
   flex-direction: row;

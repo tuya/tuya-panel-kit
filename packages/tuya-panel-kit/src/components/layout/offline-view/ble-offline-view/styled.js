@@ -1,10 +1,10 @@
 /* eslint-disable import/prefer-default-export */
 import { Text } from 'react-native';
 import styled from 'styled-components/native';
-import { dialog } from '../../../theme/theme-get';
+import { getDefaultTheme } from '../../../theme';
 import TYText from '../../../TYText';
 
-const { titleFontColor, confirmFontColor, confirmFontSize } = dialog;
+const { titleFontColor, confirmFontColor, confirmFontSize } = getDefaultTheme.dialog;
 
 export const StyledTitle = styled(Text)`
   text-align: center;

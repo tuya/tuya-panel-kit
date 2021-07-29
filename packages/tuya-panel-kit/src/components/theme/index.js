@@ -1,2 +1,1 @@
-export { default } from './Theme';
-export { default as defaultTheme } from './base';
+export { Theme, defaultTheme, getDefaultTheme, CoreTheme, useTheme } from 'tuya-panel-theme';

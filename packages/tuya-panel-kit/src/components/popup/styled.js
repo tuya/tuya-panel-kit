@@ -10,8 +10,7 @@ import TimerPicker from '../timer-picker';
 import TYFlatList from '../TYLists/list';
 import DatePicker from '../date-picker';
 import SwitchButton from '../switch-button';
-import { defaultTheme } from '../theme';
-import { popup } from '../theme/theme-get';
+import { defaultTheme, getDefaultTheme } from '../theme';
 
 const DEFAULT_LIST_THEME = defaultTheme.popup.basic;
 const DEFAULT_PICKER_THEME = defaultTheme.picker.light;
@@ -41,7 +40,7 @@ const {
   subTitleFontColor,
   backIconColor,
   pressColor,
-} = popup;
+} = getDefaultTheme.popup;
 
 /**
  * Common Popup
@@ -302,18 +301,16 @@ export const StyledTimerPicker = props => {
           >
             {props.startTitle && props.endTitle && (
               <View
-                style={[
-                  {
-                    flexDirection: 'row',
-                    justifyContent: 'space-between',
-                    paddingHorizontal: cx(30),
-                    position: 'absolute',
-                    top: cx(26),
-                    zIndex: 1,
-                    backgroundColor: getTheme(timerPickerTheme, 'popup.cellBg'),
-                    opacity: props.disabled ? 0.6 : 1,
-                  },
-                ]}
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  paddingHorizontal: cx(30),
+                  position: 'absolute',
+                  top: cx(26),
+                  zIndex: 1,
+                  backgroundColor: getTheme(timerPickerTheme, 'popup.cellBg'),
+                  opacity: props.disabled ? 0.6 : 1,
+                }}
               >
                 <StyledTimerText style={{ marginLeft: cx(15) }}>{props.startTitle}</StyledTimerText>
                 <StyledTimerText style={{ marginRight: cx(13) }}>{props.endTitle}</StyledTimerText>
