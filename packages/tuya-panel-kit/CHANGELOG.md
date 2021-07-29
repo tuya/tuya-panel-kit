@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.6.5](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.6.4...tuya-panel-kit@4.6.5) (2021-07-29)
+
+
+### Bug Fixes
+
+* **TimerPicker:** TimerPicker font is cut off in some IOS ([#95](https://github.com/tuya/tuya-panel-kit/issues/95)) ([d6f9631](https://github.com/tuya/tuya-panel-kit/commit/d6f9631680a1122fc0f74b61bb630239b5a2e364))
+
+
+
+
+
 ## [4.6.4](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.6.3...tuya-panel-kit@4.6.4) (2021-07-23)
 
 
