@@ -1,0 +1,41 @@
+{
+  "name": "tuya-panel-topbar-mall-indicator",
+  "version": "0.0.1",
+  "description": "Tuya tool collection kit",
+  "author": "lianghui<978702126@qq.com>",
+  "homepage": "https://github.com/tuya/tuya-panel-kit#readme",
+  "license": "MIT",
+  "main": "lib/index",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuya/tuya-panel-kit.git"
+  },
+  "scripts": {
+    "prebuild": "rimraf lib/*",
+    "build": "tsc -d",
+    "dev": "tsc -w",
+    "test": "NODE_ENV=testing TZ=UTC jest -u",
+    "test:watch": "jest --watch",
+    "prepublishOnly": "yarn build"
+  },
+  "bugs": {
+    "url": "https://github.com/tuya/tuya-panel-kit/issues"
+  },
+  "dependencies": {
+    "tuya-panel-kit": "^4.6.2"
+  },
+  "peerDependencies": {
+    "react": "16.8.3",
+    "react-native": "0.59.10"
+  }
+}

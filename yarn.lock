@@ -2187,6 +2187,11 @@
   resolved "https://registry.nlark.com/@types/node/download/@types/node-16.4.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-16.4.0.tgz#2c219eaa3b8d1e4d04f4dd6e40bc68c7467d5272"
   integrity sha1-LCGeqjuNHk0E9N1uQLxox0Z9UnI=
 
+"@types/node@^16.4.7":
+  version "16.4.7"
+  resolved "https://registry.nlark.com/@types/node/download/@types/node-16.4.7.tgz?cache=0&sync_timestamp=1627563815571&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-16.4.7.tgz#f7afa78769d4b477f5092d7c3468e2e8653d779c"
+  integrity sha1-96+nh2nUtHf1CS18NGji6GU9d5w=
+
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
   resolved "https://registry.nlark.com/@types/normalize-package-data/download/@types/normalize-package-data-2.4.1.tgz#d3357479a0fdfdd5907fe67e17e0a85c906e1301"
@@ -2202,10 +2207,47 @@
   resolved "https://registry.nlark.com/@types/prettier/download/@types/prettier-2.3.2.tgz#fc8c2825e4ed2142473b4a81064e6e081463d1b3"
   integrity sha1-/IwoJeTtIUJHO0qBBk5uCBRj0bM=
 
+"@types/prop-types@*":
+  version "15.7.4"
+  resolved "https://registry.nlark.com/@types/prop-types/download/@types/prop-types-15.7.4.tgz#fcf7205c25dff795ee79af1e30da2c9790808f11"
+  integrity sha1-/PcgXCXf95Xuea8eMNosl5CAjxE=
+
+"@types/react-native@*", "@types/react-native@^0.64.12":
+  version "0.64.12"
+  resolved "https://registry.nlark.com/@types/react-native/download/@types/react-native-0.64.12.tgz#1c6a3226c26d7a5949cdf8878e6cfe95fe0951d6"
+  integrity sha1-HGoyJsJtellJzfiHjmz+lf4JUdY=
+  dependencies:
+    "@types/react" "*"
+
+"@types/react@*", "@types/react@^17.0.15":
+  version "17.0.15"
+  resolved "https://registry.nlark.com/@types/react/download/@types/react-17.0.15.tgz?cache=0&sync_timestamp=1627124654713&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Freact%2Fdownload%2F%40types%2Freact-17.0.15.tgz#c7533dc38025677e312606502df7656a6ea626d0"
+  integrity sha1-x1M9w4AlZ34xJgZQLfdlam6mJtA=
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
+"@types/scheduler@*":
+  version "0.16.2"
+  resolved "https://registry.nlark.com/@types/scheduler/download/@types/scheduler-0.16.2.tgz?cache=0&sync_timestamp=1625590236866&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fscheduler%2Fdownload%2F%40types%2Fscheduler-0.16.2.tgz#1a62f89525723dde24ba1b01b092bf5df8ad4d39"
+  integrity sha1-GmL4lSVyPd4kuhsBsJK/XfitTTk=
+
 "@types/stack-utils@^2.0.0":
   version "2.0.1"
   resolved "https://registry.nlark.com/@types/stack-utils/download/@types/stack-utils-2.0.1.tgz?cache=0&sync_timestamp=1625265919072&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fstack-utils%2Fdownload%2F%40types%2Fstack-utils-2.0.1.tgz#20f18294f797f2209b5f65c8e3b5c8e8261d127c"
   integrity sha1-IPGClPeX8iCbX2XI47XI6CYdEnw=
+
+"@types/tuya-panel-kit@^4.0.8":
+  version "4.0.8"
+  resolved "https://registry.nlark.com/@types/tuya-panel-kit/download/@types/tuya-panel-kit-4.0.8.tgz#01aa1da5e423f73675445740ad4b6b55667505ab"
+  integrity sha1-AaodpeQj9zZ1RFdArUtrVWZ1Bas=
+  dependencies:
+    "@types/react" "*"
+    "@types/react-native" "*"
+    react-native-gesture-handler "1.8.0"
+    react-native-safe-area-context "3.1.7"
+    react-native-svg "5.5.1"
 
 "@types/yargs-parser@*":
   version "20.2.1"
@@ -5048,6 +5090,11 @@ cssstyle@^2.3.0:
   integrity sha1-/2ZaDdvcMYZLCWR/NBY0Q9kLCFI=
   dependencies:
     cssom "~0.3.6"
+
+csstype@^3.0.2:
+  version "3.0.8"
+  resolved "https://registry.nlark.com/csstype/download/csstype-3.0.8.tgz#d2266a792729fb227cd216fb572f43728e1ad340"
+  integrity sha1-0iZqeScp+yJ80hb7Vy9Dco4a00A=
 
 csurf@~1.8.3:
   version "1.8.3"
@@ -13524,6 +13571,11 @@ tuya-panel-theme@^0.0.1:
   integrity sha1-XqgB6K+KePeLnfbuTjzGWYpd80c=
   dependencies:
     tuya-panel-utils "^0.0.1"
+
+tuya-panel-utils@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.nlark.com/tuya-panel-utils/download/tuya-panel-utils-0.0.1.tgz#910a1fc163ae61c63e0f5c2938983fcbd55b739a"
+  integrity sha1-kQofwWOuYcY+D1wpOJg/y9Vbc5o=
 
 tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
