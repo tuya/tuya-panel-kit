@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.6.6](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.6.5...tuya-panel-kit@4.6.6) (2021-07-31)
+
+
+### Bug Fixes
+
+* fix tuya-panel-theme version ([f834058](https://github.com/tuya/tuya-panel-kit/commit/f834058d83bcfa3166c2c8ec1981c56f53664791))
+
+
+
+
+
 ## [4.6.5](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.6.4...tuya-panel-kit@4.6.5) (2021-07-29)
 
 
