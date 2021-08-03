@@ -1,36 +1,41 @@
 import React from 'react';
 import { View } from 'react-native';
-import { Button, Collapsible, TYText } from 'tuya-panel-kit';
-
+import { Button, Collapsible, Utils } from 'tuya-panel-kit';
 import Strings from '#i18n';
+
+const { convertX: cx } = Utils.RatioUtils;
 
 export default () => {
   const [collapsed, setCollapsed] = React.useState(false);
 
   return (
-    <>
+    <View style={{ flex: 1, backgroundColor: '#F5F5F6', height: cx(600) }}>
       <Button
         stretch={true}
         onPress={() => setCollapsed(!collapsed)}
         text={Strings.getLang('collapsible_label')}
+        textStyle={{
+          fontSize: cx(14),
+        }}
         style={{
           height: 40,
-          backgroundColor: '#dfdfdf',
+          backgroundColor: '#fff',
           width: '100%',
+          borderColor: '#F5F5F6',
+          borderTopWidth: 1,
         }}
       />
       <Collapsible
         collapsed={collapsed}
         align="top"
         style={{
-          width: 375,
           height: 260,
-          backgroundColor: '#ff0',
-          justifyContent: 'center',
-          alignItems: 'center',
+          backgroundColor: '#fff',
+          // justifyContent: 'center',
+          // alignItems: 'center',
         }}
       >
-        <View
+        {/* <View
           style={{
             width: 308,
             height: 185,
@@ -57,8 +62,8 @@ export default () => {
             }}
             text={Strings.getLang('collapsible_content')}
           />
-        </View>
+        </View> */}
       </Collapsible>
-    </>
+    </View>
   );
 };
