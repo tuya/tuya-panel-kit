@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Utils } from 'tuya-panel-kit';
-import { Svg } from '#components';
+import { Icons } from '#components';
 
 import { routes } from '../routes';
 
@@ -37,7 +37,7 @@ export const PageHome: React.FC<PageHomeProps> = ({ navigate }) => {
             }}
           >
             <Text>{item.name}</Text>
-            {Svg.right}
+            {Icons.right}
           </TouchableOpacity>
         ))}
       </View>

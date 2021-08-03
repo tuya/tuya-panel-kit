@@ -1,6 +1,7 @@
 import React from 'react';
 import { Battery, Utils } from 'tuya-panel-kit';
 
+import { View } from 'react-native';
 import { ListView } from '#components';
 import Strings from '#i18n';
 
@@ -21,56 +22,45 @@ export default () => {
 
   return (
     <ListView
+      contentPadding={false}
       list={[
         {
-          title: Strings.formatValue('battery_power', '100'),
-          content: <Battery value={100} />,
+          title: Strings.getLang('style_basic'),
           contentStyle: {
-            width: cx(100),
+            marginTop: cx(24),
+          },
+          content: (
+            <View
+              style={{
+                flex: 1,
+                flexDirection: 'row',
+              }}
+            >
+              {[100, 50, 20, 10].map((val, i) => (
+                <View key={val} style={{ flexGrow: 1 }}>
+                  <Battery value={val} />
+                </View>
+              ))}
+            </View>
+          ),
+        },
+        {
+          title: Strings.getLang('battery_power_cus2'),
+          content: <Battery value={100} theme={{ batteryColor: '#FF4800' }} />,
+          contentStyle: {
+            width: cx(86),
+            marginTop: cx(24),
+          },
+          itemStyle: {
+            marginTop: cx(20),
           },
         },
         {
-          title: Strings.formatValue('battery_power', '60'),
-          content: <Battery value={60} />,
+          title: Strings.getLang('battery_power_mod2'),
+          content: <Battery value={100} onCalcColor={calcColor} highColor="#999" />,
           contentStyle: {
-            width: cx(100),
-          },
-        },
-        {
-          title: Strings.formatValue('battery_power', '19'),
-          content: <Battery value={19} />,
-          contentStyle: {
-            width: cx(100),
-          },
-        },
-        {
-          title: Strings.formatValue('battery_power', '9'),
-          content: <Battery value={9} />,
-          contentStyle: {
-            width: cx(100),
-          },
-        },
-        {
-          title: Strings.formatValue('battery_power', '0'),
-          content: <Battery value={0} />,
-          contentStyle: {
-            width: cx(100),
-          },
-        },
-        {
-          title: Strings.formatValue('battery_power_cus', '40'),
-          content: <Battery value={40} size={30} theme={{ batteryColor: 'rgba(167,98,43,.5)' }} />,
-          contentStyle: {
-            width: cx(100),
-            marginTop: cx(40),
-          },
-        },
-        {
-          title: Strings.formatValue('battery_power_mod', '60'),
-          content: <Battery value={60} size={30} onCalcColor={calcColor} middleColor="#999" />,
-          contentStyle: {
-            width: cx(100),
-            marginTop: cx(40),
+            width: cx(86),
+            marginTop: cx(24),
           },
           itemStyle: {
             marginTop: cx(20),

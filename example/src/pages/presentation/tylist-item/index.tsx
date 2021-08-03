@@ -1,66 +1,69 @@
 import React from 'react';
 import { IconFont, TYListItem } from 'tuya-panel-kit';
 
-import { ListView } from '#components';
+import { Icons, ListView } from '#components';
 import Strings from '#i18n';
 
 export default () => {
   return (
     <ListView
+      style={{ backgroundColor: '#F5F5F6', flex: 1 }}
+      contentPadding={false}
+      dot={false}
       list={[
         {
           title: Strings.getLang('tylistitem_basic'),
           content: (
             <TYListItem
               theme={{
-                fontColor: '#fff',
+                fontColor: '#333333',
                 subFontColor: '#999',
                 descFontColor: 'red',
-                cellBg: '#222',
+                cellBg: 'white',
               }}
               title={Strings.getLang('text_title')}
               subTitle={Strings.getLang('text_subTitle')}
-              Action="Action"
+              Action={<IconFont color="rgba(0, 0, 0, 0.2)" name="arrow" />}
               onPress={() => console.log(111)}
             />
           ),
         },
         {
-          title: Strings.getLang('tylistitem_long'),
+          title: `${Strings.getLang('tylistitem_basic')} - ${Strings.getLang('tylistitem_long')}`,
           content: (
             <TYListItem
               theme={{
-                fontColor: '#fff',
+                fontColor: '#333333',
                 subFontColor: '#999',
                 descFontColor: 'red',
-                cellBg: '#222',
+                cellBg: 'white',
               }}
-              style={{ backgroundColor: '#666' }}
               title={Strings.getLang('tylistitem_long_title')}
               subTitle={Strings.getLang('text_subTitle')}
               arrow={true}
               arrowColor="#fff"
               onPress={() => console.log(111)}
+              Action={<IconFont color="rgba(0, 0, 0, 0.2)" name="arrow" />}
             />
           ),
         },
         {
-          title: Strings.getLang('tylistitem_ada'),
+          title: `${Strings.getLang('tylistitem_basic')} - ${Strings.getLang('tylistitem_ada')}`,
           content: (
             <TYListItem
               theme={{
-                fontColor: '#346734',
+                fontColor: '#333333',
                 subFontColor: '#999',
                 descFontColor: 'red',
-                cellBg: '#222',
-                cellRadius: 8,
+                cellBg: 'white',
               }}
-              style={{ backgroundColor: '#452389' }}
-              title={Strings.getLang('tylistitem_ada_title')}
               arrow={true}
               arrowColor="#f00"
-              Icon={<IconFont name="power" color="#00f" size={36} />}
+              title={Strings.getLang('text_title')}
+              subTitle={Strings.getLang('text_subTitle')}
+              Icon={Icons.flower}
               onPress={() => console.log(111)}
+              Action={<IconFont color="rgba(0, 0, 0, 0.2)" name="arrow" />}
             />
           ),
         },
