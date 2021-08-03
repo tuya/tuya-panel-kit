@@ -110,6 +110,12 @@ describe('Tabbar Component', () => {
       .create(
         <TabBar
           type="radio"
+          tabTextStyle={{
+            color: '#F84803',
+          }}
+          tabActiveTextStyle={{
+            color: '#F84803',
+          }}
           tabs={tabRadios}
           activeKey="2"
           onChange={jest.fn()}
@@ -132,6 +138,12 @@ describe('Tabbar Component', () => {
       .create(
         <TabBar
           type="radioCircle"
+          tabTextStyle={{
+            color: '#F84803',
+          }}
+          tabActiveTextStyle={{
+            color: '#F84803',
+          }}
           tabs={tabRadios}
           activeKey="2"
           onChange={jest.fn()}
