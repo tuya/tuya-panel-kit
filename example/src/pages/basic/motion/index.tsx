@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import { Motion } from 'tuya-panel-kit';
 
-import { BlockList, Svg } from '#components';
+import { BlockList, Icons } from '#components';
 import Strings from '#i18n';
 
 export default () => {
@@ -24,32 +24,32 @@ export default () => {
           {
             name: Strings.getLang('motion_fade'),
             onPress: () => setFadeShow(!fadeShow),
-            component: <>{Svg.right}</>,
+            component: <>{Icons.right}</>,
           },
           {
             name: Strings.getLang('motion_pullup'),
             onPress: () => setPullUpShow(!pullUpShow),
-            component: <>{Svg.right}</>,
+            component: <>{Icons.right}</>,
           },
           {
             name: Strings.getLang('motion_scalefadein'),
             onPress: () => setScaleFadeInShow(!scaleFadeInShow),
-            component: <>{Svg.right}</>,
+            component: <>{Icons.right}</>,
           },
           {
             name: Strings.getLang('motion_scalefadeout'),
             onPress: () => setScalePullDownShow(!scalePullDownShow),
-            component: <>{Svg.right}</>,
+            component: <>{Icons.right}</>,
           },
           {
             name: Strings.getLang('motion_pushdown'),
             onPress: () => setPushDownShow(!pushDownShow),
-            component: <>{Svg.right}</>,
+            component: <>{Icons.right}</>,
           },
           {
             name: Strings.getLang('motion_toast'),
             onPress: () => setToastShow(!toastShow),
-            component: <>{Svg.right}</>,
+            component: <>{Icons.right}</>,
           },
         ]}
       />

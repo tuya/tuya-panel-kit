@@ -1,7 +1,7 @@
 import React from 'react';
 import { Toast } from 'tuya-panel-kit';
 
-import { BlockView, Svg } from '#components';
+import { BlockView, Icons } from '#components';
 import Strings from '#i18n';
 
 export default () => {
@@ -20,22 +20,22 @@ export default () => {
               {
                 name: Strings.getLang('toastview_hasicon_success'),
                 onPress: () => setSuccessShow(true),
-                component: <>{Svg.right}</>,
+                component: <>{Icons.right}</>,
               },
               {
                 name: Strings.getLang('toastview_hasicon_warn'),
                 onPress: () => setWarningShow(true),
-                component: <>{Svg.right}</>,
+                component: <>{Icons.right}</>,
               },
               {
                 name: Strings.getLang('toastview_hasicon_error'),
                 onPress: () => setErrorShow(true),
-                component: <>{Svg.right}</>,
+                component: <>{Icons.right}</>,
               },
               {
                 name: Strings.getLang('toastview_hasicon_loading'),
                 onPress: () => setLoadingShow(true),
-                component: <>{Svg.right}</>,
+                component: <>{Icons.right}</>,
               },
             ],
           },
@@ -45,7 +45,7 @@ export default () => {
               {
                 name: Strings.getLang('toastview_light'),
                 onPress: () => setShow(true),
-                component: <>{Svg.right}</>,
+                component: <>{Icons.right}</>,
               },
             ],
           },
