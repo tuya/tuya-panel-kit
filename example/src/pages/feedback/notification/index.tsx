@@ -1,7 +1,7 @@
 import React from 'react';
 import { Notification } from 'tuya-panel-kit';
 
-import { BlockList, Svg } from '#components';
+import { BlockList, Icons } from '#components';
 import Strings from '#i18n';
 
 export default () => {
@@ -22,7 +22,7 @@ export default () => {
                 warningIcon: 'black',
               },
             }),
-          component: <>{Svg.right}</>,
+          component: <>{Icons.right}</>,
         },
       ]}
     />

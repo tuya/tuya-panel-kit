@@ -2,9 +2,9 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import { Dialog } from 'tuya-panel-kit';
 
-import { BlockList, Svg } from '#components';
-import { useSetParticalState } from '#hooks/useSetParticalState';
+import { BlockList, Icons } from '#components';
 import Strings from '#i18n';
+import { useSetParticalState } from '../../../hooks/useSetParticalState';
 
 export default () => {
   const [state, setState] = useSetParticalState({
@@ -27,7 +27,7 @@ export default () => {
                 close();
               },
             }),
-          component: <>{Svg.right}</>,
+          component: <>{Icons.right}</>,
         },
         {
           name: Strings.getLang('dialog_confirm'),
@@ -41,7 +41,7 @@ export default () => {
                 close();
               },
             }),
-          component: <>{Svg.right}</>,
+          component: <>{Icons.right}</>,
         },
         {
           name: Strings.getLang('dialog_prompt'),
@@ -58,11 +58,11 @@ export default () => {
                 close();
               },
             }),
-          component: <>{Svg.right}</>,
+          component: <>{Icons.right}</>,
         },
         {
           name: Strings.getLang('dialog_prompt_control'),
-          component: <>{Svg.right}</>,
+          component: <>{Icons.right}</>,
           onPress: () =>
             Dialog.prompt({
               title: Strings.getLang('dialog_prompt_control'),
@@ -86,7 +86,7 @@ export default () => {
         },
         {
           name: Strings.getLang('dialog_single'),
-          component: <>{Svg.right}</>,
+          component: <>{Icons.right}</>,
           onPress: () =>
             Dialog.checkbox({
               title: 'Required',
@@ -120,7 +120,7 @@ export default () => {
         },
         {
           name: Strings.getLang('dialog_multi'),
-          component: <>{Svg.right}</>,
+          component: <>{Icons.right}</>,
           onPress: () =>
             Dialog.checkbox({
               title: 'Required',
@@ -167,7 +167,7 @@ export default () => {
         },
         {
           name: Strings.getLang('dialog_list'),
-          component: <>{Svg.right}</>,
+          component: <>{Icons.right}</>,
           onPress: () =>
             Dialog.list({
               title: Strings.getLang('text_title'),
@@ -191,7 +191,7 @@ export default () => {
         },
         {
           name: Strings.getLang('dialog_custom'),
-          component: <>{Svg.right}</>,
+          component: <>{Icons.right}</>,
           onPress: () =>
             Dialog.custom({
               title: 'Custom',

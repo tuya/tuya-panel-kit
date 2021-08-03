@@ -16,22 +16,29 @@ export interface ListViewProps {
   contentPadding?: boolean;
   contentCenter?: boolean;
   nthItemStyle?: StyleProp<ViewStyle>;
+  dot?: boolean;
+  style?: StyleProp<ViewStyle>;
 }
 
 export const ListView = ({
   list,
+  style,
   contentPadding = true,
   contentCenter = false,
   nthItemStyle: itemStyle,
+  dot = true,
 }: ListViewProps) => {
   return (
-    <View style={styles.list}>
+    <View style={[styles.list, style]}>
       {list.map((item, i) => (
         <View style={[styles.list_item, i > 0 ? itemStyle : {}, item.itemStyle]} key={item.title}>
-          <TYText style={styles.list_item_title}>{`· ${item.title}`}</TYText>
+          <TYText
+            style={[styles.list_item_title, dot ? {} : { paddingHorizontal: convertX(16) }]}
+          >{`${dot ? '· ' : ''}${item.title}`}</TYText>
           <View
             style={[
               styles.list_item_content,
+              dot ? {} : { marginTop: convertX(7) },
               contentPadding ? { paddingHorizontal: convertX(24) } : {},
               contentCenter ? { flex: 1, justifyContent: 'center', flexDirection: 'row' } : {},
               item.contentStyle,

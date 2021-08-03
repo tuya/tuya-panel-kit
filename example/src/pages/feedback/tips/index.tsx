@@ -2,9 +2,9 @@ import React from 'react';
 import { View } from 'react-native';
 import { Tips } from 'tuya-panel-kit';
 
-import { BlockList, Svg } from '#components';
-import { useSetParticalState } from '#hooks/useSetParticalState';
+import { BlockList, Icons } from '#components';
 import Strings from '#i18n';
+import { useSetParticalState } from '../../../hooks/useSetParticalState';
 
 export default () => {
   const [state, setState] = useSetParticalState({
@@ -28,32 +28,32 @@ export default () => {
           {
             name: Strings.getLang('tips_top_left'),
             onPress: () => setState({ topLeft: !state.topLeft }),
-            component: <>{Svg.right}</>,
+            component: <>{Icons.right}</>,
           },
           {
             name: Strings.getLang('tips_top_mid'),
             onPress: () => setState({ topCenter: !state.topCenter }),
-            component: <>{Svg.right}</>,
+            component: <>{Icons.right}</>,
           },
           {
             name: Strings.getLang('tips_top_right'),
             onPress: () => setState({ topRight: !state.topRight }),
-            component: <>{Svg.right}</>,
+            component: <>{Icons.right}</>,
           },
           {
             name: Strings.getLang('tips_bottom_left'),
             onPress: () => setState({ bottomLeft: !state.bottomLeft }),
-            component: <>{Svg.right}</>,
+            component: <>{Icons.right}</>,
           },
           {
             name: Strings.getLang('tips_bottom_mid'),
             onPress: () => setState({ bottomCenter: !state.bottomCenter }),
-            component: <>{Svg.right}</>,
+            component: <>{Icons.right}</>,
           },
           {
             name: Strings.getLang('tips_bottom_right'),
             onPress: () => setState({ bottomRight: !state.bottomRight }),
-            component: <>{Svg.right}</>,
+            component: <>{Icons.right}</>,
           },
         ]}
       />

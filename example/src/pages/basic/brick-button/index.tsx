@@ -14,16 +14,21 @@ export default () => {
       list={[
         {
           title: Strings.getLang('brick_button_text'),
-          content: <BrickButton text="loading" loading={true} />,
+          content: (
+            <BrickButton
+              text={Strings.getLang('button_text')}
+              wrapperStyle={{ backgroundColor: '#F84803' }}
+            />
+          ),
         },
         {
           title: Strings.getLang('brick_button_bg'),
           itemStyle: {
-            marginTop: cx(50),
+            marginTop: cx(32),
           },
           content: (
             <BrickButton
-              loading={true}
+              text={Strings.getLang('button_text')}
               loadingSize="large"
               type="primaryGradient"
               background={{
@@ -32,9 +37,8 @@ export default () => {
                 x2: '0%',
                 y2: '100%',
                 stops: {
-                  '0%': 'red',
-                  '30%': 'blue',
-                  '100%': 'yellow',
+                  '0%': '#F97E05',
+                  '100%': '#F84803',
                 },
               }}
             />
