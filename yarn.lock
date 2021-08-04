@@ -13565,18 +13565,6 @@ tunnel-agent@^0.6.0:
   dependencies:
     safe-buffer "^5.0.1"
 
-tuya-panel-theme@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.nlark.com/tuya-panel-theme/download/tuya-panel-theme-0.0.1.tgz#5ea801e8af8a78f78b9df6ee4e3cc6598a5df347"
-  integrity sha1-XqgB6K+KePeLnfbuTjzGWYpd80c=
-  dependencies:
-    tuya-panel-utils "^0.0.1"
-
-tuya-panel-utils@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.nlark.com/tuya-panel-utils/download/tuya-panel-utils-0.0.1.tgz#910a1fc163ae61c63e0f5c2938983fcbd55b739a"
-  integrity sha1-kQofwWOuYcY+D1wpOJg/y9Vbc5o=
-
 tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
   resolved "https://registry.npm.taobao.org/tweetnacl/download/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
