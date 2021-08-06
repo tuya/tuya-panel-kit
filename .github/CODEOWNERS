@@ -1,0 +1,17 @@
+# This is a comment.
+# Each line is a file pattern followed by one or more owners.
+
+# These owners will be the default owners for everything in
+# the repo. Unless a later match takes precedence,
+# @youngjuning will be requested for review when someone opens a pull request.
+*       @youngjuning @ShinyLeee
+
+# In this example, @doctocat owns any files in the build/logs
+# directory at the root of the repository and any of its
+# subdirectories.
+
+# youngjuning@洛竹、Saber2pr@睦海、ZengBeauty@多肉 ShinyLeee@咕噜
+/example/ @Saber2pr
+/packages/tuya-panel-kit/ @ZengBeauty
+/packages/tuya-panel-theme/ @ZengBeauty
+/packages/tuya-panel-utils/ @ZengBeauty
