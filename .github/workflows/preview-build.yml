@@ -16,7 +16,7 @@ jobs:
 
       - name: build
         run: |
-          yarn
+          yarn add tuya-panel-kit tuya-panel-utils tuya-panel-theme
           NODE_OPTIONS='--max-old-space-size=4096' PREVIEW_PR=true
           cd example
           yarn build:umi
