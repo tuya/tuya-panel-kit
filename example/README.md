@@ -9,4 +9,3 @@ yarn dev
 2、在 `example` 目录下执行 `yarn start:umi` 调试 web 端
 
 3、在 `example` 目录下执行 `yarn start` 调试原生端
-
