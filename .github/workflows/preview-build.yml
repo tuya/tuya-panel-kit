@@ -17,16 +17,19 @@ jobs:
       - name: build
         run: |
           yarn
-          NODE_OPTIONS='--max-old-space-size=4096' PREVIEW_PR=true yarn build:umi
+          NODE_OPTIONS='--max-old-space-size=4096' PREVIEW_PR=true
+          cd example
+          yarn build:umi
 
       - run: |
+          cd example
           zip -r dist.zip dist
 
       - name: upload dist artifact
         uses: actions/upload-artifact@v2
         with:
           name: dist
-          path: dist.zip
+          path: example/dist.zip
           retention-days: 5
 
       - name: Save PR number
