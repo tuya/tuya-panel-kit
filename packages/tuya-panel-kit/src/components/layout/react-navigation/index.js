@@ -119,6 +119,7 @@ export default function createNavigator({ router, screenOptions }) {
       this.state = {
         modalVisible: false,
       };
+      this.navigationRef = null;
     }
 
     componentDidMount() {
@@ -365,12 +366,15 @@ export default function createNavigator({ router, screenOptions }) {
               colors: { ...DefaultTheme.colors, background: 'transparent' },
             }}
             onStateChange={this.handleNavigationStateChange}
+            ref={value => {
+              this.navigationRef = value;
+            }}
           >
             <Stack.Navigator
               initialRouteName="main"
               screenOptions={({ route, navigation }) => {
                 this._navigation = navigation;
-                TYSdk.applyNavigator(navigation);
+                TYSdk.applyNavigator({ ...navigation, ...this.navigationRef });
                 const options = this.getScreenOptions(
                   { route, navigation },
                   screenOptions,
@@ -383,7 +387,7 @@ export default function createNavigator({ router, screenOptions }) {
             </Stack.Navigator>
           </NavigationContainer>
 
-          {modalVisible && <AnimatedModal onClose={() => this.setState({ modalVisible: false })} />}
+          {}
           <MaskView />
         </View>
       );
