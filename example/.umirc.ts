@@ -1,7 +1,8 @@
 import { join } from 'path';
 import { defineConfig, IConfig } from 'umi';
 
-const isProd = process.env.NODE_ENV === 'production';
+const isProd =
+  process.env.NODE_ENV === 'production' && process.env.PREVIEW_PR !== 'true';
 
 const flatDep = ['react-native-gesture-handler',]
 
