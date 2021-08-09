@@ -16,10 +16,10 @@ jobs:
 
       - name: build
         run: |
-          NODE_OPTIONS='--max-old-space-size=4096' PREVIEW_PR=true DEV_MODE=umi
+          NODE_OPTIONS='--max-old-space-size=4096'
           cd example
           yarn add tuya-panel-kit tuya-panel-utils tuya-panel-theme --registry=https://registry.npmjs.org
-          yarn umi build
+          PREVIEW_PR=true DEV_MODE=umi yarn umi build
 
       - run: |
           cd example
