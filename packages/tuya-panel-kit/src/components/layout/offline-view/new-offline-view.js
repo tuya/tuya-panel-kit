@@ -165,7 +165,7 @@ export default class NewOfflineView extends PureComponent {
                   )}
                 {!!textLink && (
                   <View style={{ flexDirection: 'row' }}>
-                    <Text style={styles.firstLine}>
+                    <RefText style={styles.firstLine}>
                       {Strings.getLang('offline_linkFront')}
                       <Text
                         style={[
@@ -180,7 +180,7 @@ export default class NewOfflineView extends PureComponent {
                       >
                         {textLink}
                       </Text>
-                    </Text>
+                    </RefText>
                   </View>
                 )}
                 {!!textLineAfter && (
