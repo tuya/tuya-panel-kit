@@ -11,7 +11,7 @@
 # subdirectories.
 
 # youngjuning@洛竹、Saber2pr@睦海、ZengBeauty@多肉 ShinyLeee@咕噜
-/example/ @Saber2pr
+/example/ @Saber2pr @youngjuning
 /packages/tuya-panel-kit/ @ZengBeauty
 /packages/tuya-panel-theme/ @ZengBeauty
 /packages/tuya-panel-utils/ @ZengBeauty
