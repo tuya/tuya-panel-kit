@@ -695,6 +695,9 @@ exports[`Tabbar Component type radio 1`] = `
                   },
                 ],
                 Object {
+                  "color": "#F84803",
+                },
+                Object {
                   "fontSize": 16,
                 },
               ],
@@ -757,6 +760,9 @@ exports[`Tabbar Component type radio 1`] = `
                   },
                 ],
                 Object {
+                  "color": "#F84803",
+                },
+                Object {
                   "fontSize": 16,
                 },
               ],
@@ -764,7 +770,9 @@ exports[`Tabbar Component type radio 1`] = `
                 "color": "#57BCFB",
                 "fontWeight": "500",
               },
-              Object {},
+              Object {
+                "color": "#F84803",
+              },
             ],
           ]
         }
@@ -821,6 +829,9 @@ exports[`Tabbar Component type radio 1`] = `
                     "opacity": 0,
                   },
                 ],
+                Object {
+                  "color": "#F84803",
+                },
                 Object {
                   "fontSize": 16,
                 },
@@ -897,7 +908,9 @@ exports[`Tabbar Component type radioCircle 1`] = `
               "height": 4,
               "width": 4,
             },
-            Object {},
+            Object {
+              "backgroundColor": "#F84803",
+            },
           ]
         }
       />
@@ -950,6 +963,9 @@ exports[`Tabbar Component type radioCircle 1`] = `
                   },
                 ],
                 Object {
+                  "color": "#F84803",
+                },
+                Object {
                   "fontSize": 16,
                 },
               ],
@@ -957,7 +973,9 @@ exports[`Tabbar Component type radioCircle 1`] = `
                 "color": "#57BCFB",
                 "fontWeight": "500",
               },
-              Object {},
+              Object {
+                "color": "#F84803",
+              },
             ],
           ]
         }
@@ -994,7 +1012,9 @@ exports[`Tabbar Component type radioCircle 1`] = `
               "height": 4,
               "width": 4,
             },
-            Object {},
+            Object {
+              "backgroundColor": "#F84803",
+            },
           ]
         }
       />

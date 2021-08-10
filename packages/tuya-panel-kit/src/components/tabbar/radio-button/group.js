@@ -70,25 +70,29 @@ class Group extends React.PureComponent {
   }
 
   getItem = () => {
-    const { tabs, type } = this.props;
+    const { tabs, type, tabTextStyle, tabActiveTextStyle } = this.props;
     const buttonStyle = [{ width: this.state.wrapperWidth / tabs.length }];
     const defaultTextStyle = [{ opacity: this.state.activeViewHidden ? 0 : 1 }];
+    const circleStyle = tabTextStyle && tabTextStyle.color && { backgroundColor: tabTextStyle.color }
     return tabs.map((item, index) => {
       const { style, textStyle, ...other } = item;
       return (
         <RadioButton
+          activeTextStyle={tabActiveTextStyle}
+          circleStyle={circleStyle}
           {...other}
           // eslint-disable-next-line react/no-array-index-key
           key={`tab_${index}`}
           type={type}
           style={[buttonStyle, style]}
-          textStyle={[defaultTextStyle, textStyle]}
+          textStyle={[defaultTextStyle, tabTextStyle, textStyle]}
           onItemPress={() => this.changeTab(index, item, item.onItemPress)}
           isActive={this.state.activeIndex === index}
         />
       );
     });
   };
+
   moveActiveView = index => {
     const { gutter } = this.props;
     const currentLeft = index * this.state.everyWidth + gutter;
