@@ -49,11 +49,17 @@ const getDimension = () => {
  */
 export default {
   get hRatio(): number {
-    const { width: actualWidth } = getDimension();
+    const { width: actualWidth, height: actualHeight } = getDimension();
+    if (actualWidth > actualHeight) {
+      return actualWidth / baseHeight;
+    }
     return actualWidth / baseWidth;
   },
   get vRatio(): number {
-    const { height: actualHeight } = getDimension();
+    const { width: actualWidth, height: actualHeight } = getDimension();
+    if (actualWidth > actualHeight) {
+      return actualHeight / baseWidth;
+    }
     return actualHeight / baseHeight;
   },
   get ratio(): number {
@@ -84,13 +90,23 @@ export default {
     return getDimension().height - (isIos ? (isIphoneX ? 88 : 64) : 56 + statusHeight);
   },
   convertX: (number: number): number => {
-    const { width: actualWidth } = getDimension();
-    const hRatio = actualWidth / baseWidth;
+    const { width: actualWidth, height: actualHeight } = getDimension();
+    let hRatio = 0;
+    if (actualWidth > actualHeight) {
+      hRatio = actualWidth / baseHeight;
+    } else {
+      hRatio = actualWidth / baseWidth;
+    }
     return number * hRatio;
   },
   convertY: (number: number): number => {
-    const { height: actualHeight } = getDimension();
-    const vRatio = actualHeight / baseHeight;
+    const { width: actualWidth, height: actualHeight } = getDimension();
+    let vRatio = 0;
+    if (actualWidth > actualHeight) {
+      vRatio = actualHeight / baseWidth;
+    } else {
+      vRatio = actualHeight / baseHeight;
+    }
     return number * vRatio;
   },
   convert: (number: number): number => {
