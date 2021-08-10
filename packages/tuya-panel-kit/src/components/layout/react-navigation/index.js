@@ -86,7 +86,7 @@ function RouteIntercept(props) {
 
 const Stack = createStackNavigator();
 
-export default function createNavigator({ router, screenOptions }) {
+export default function createNavigator({ router, screenOptions }, navigationContainerProps = {}) {
   const defaultScreenOptions = {
     cardOverlayEnabled: true,
     ...SlideFromRightIOS,
@@ -119,6 +119,7 @@ export default function createNavigator({ router, screenOptions }) {
       this.state = {
         modalVisible: false,
       };
+      this.navigationRef = null;
     }
 
     componentDidMount() {
@@ -356,21 +357,28 @@ export default function createNavigator({ router, screenOptions }) {
 
     render() {
       const { modalVisible } = this.state;
-
       return (
         <View style={{ flex: 1 }}>
           <NavigationContainer
+            {...navigationContainerProps}
             theme={{
               ...DefaultTheme,
               colors: { ...DefaultTheme.colors, background: 'transparent' },
             }}
-            onStateChange={this.handleNavigationStateChange}
+            onStateChange={state => {
+              this.handleNavigationStateChange();
+              navigationContainerProps.onStateChange &&
+                navigationContainerProps.onStateChange(state);
+            }}
+            ref={value => {
+              this.navigationRef = value;
+            }}
           >
             <Stack.Navigator
               initialRouteName="main"
               screenOptions={({ route, navigation }) => {
                 this._navigation = navigation;
-                TYSdk.applyNavigator(navigation);
+                TYSdk.applyNavigator({ ...navigation, ...this.navigationRef });
                 const options = this.getScreenOptions(
                   { route, navigation },
                   screenOptions,
