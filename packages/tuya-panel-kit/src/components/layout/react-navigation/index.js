@@ -387,7 +387,7 @@ export default function createNavigator({ router, screenOptions }, navigationCon
             </Stack.Navigator>
           </NavigationContainer>
 
-          {}
+          {modalVisible && <AnimatedModal onClose={() => this.setState({ modalVisible: false })} />}
           <MaskView />
         </View>
       );
