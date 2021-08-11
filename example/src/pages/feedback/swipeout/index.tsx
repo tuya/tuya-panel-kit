@@ -1,13 +1,18 @@
 import React from 'react';
 import { View } from 'react-native';
 import { Swipeout, TYText } from 'tuya-panel-kit';
-
-import { ListView } from '#components';
 import Strings from '#i18n';
+import { Icons, ListView } from '#components';
 
 export default () => {
   return (
     <ListView
+      style={{
+        backgroundColor: '#F5F5F6',
+        flex: 1,
+      }}
+      contentPadding={false}
+      dot={false}
       list={[
         {
           title: Strings.getLang('swipeout_left'),
@@ -18,16 +23,17 @@ export default () => {
                 {
                   text: 'action',
                   type: 'primary',
-                  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                  backgroundColor: '#FAAD21',
                   // @ts-ignore
                   fontStyle: { color: '#fff', fontSize: 16 },
+                  content: Icons.Heart,
                 },
               ]}
             >
               <View
                 style={{
                   height: 44,
-                  backgroundColor: '#f99',
+                  backgroundColor: '#fff',
                   justifyContent: 'center',
                   alignItems: 'center',
                   paddingHorizontal: 16,
@@ -49,16 +55,16 @@ export default () => {
                 {
                   text: 'delete',
                   type: 'delete',
-                  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                   // @ts-ignore
                   fontStyle: { color: '#fff', fontSize: 16 },
+                  content: Icons.DeleteIcon,
                 },
               ]}
             >
               <View
                 style={{
                   height: 44,
-                  backgroundColor: '#66f',
+                  backgroundColor: '#fff',
                   justifyContent: 'center',
                   alignItems: 'center',
                   paddingHorizontal: 16,
@@ -81,7 +87,6 @@ export default () => {
                 {
                   text: 'delete',
                   type: 'delete',
-                  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                   // @ts-ignore
                   fontStyle: { color: '#fff', fontSize: 16 },
                 },
@@ -90,13 +95,13 @@ export default () => {
               <View
                 style={{
                   height: 44,
-                  backgroundColor: '#333',
+                  backgroundColor: 'white',
                   justifyContent: 'center',
                   alignItems: 'center',
                   paddingHorizontal: 16,
                 }}
               >
-                <TYText style={{ color: '#e5e5e5' }}>{Strings.getLang('swipeout_disable')}</TYText>
+                <TYText style={{ color: '#FF4444' }}>{Strings.getLang('swipeout_disable')}</TYText>
               </View>
             </Swipeout>
           ),

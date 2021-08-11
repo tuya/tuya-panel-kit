@@ -8,5 +8,9 @@ module.exports = {
     'prefer-spread': 'off',
     'import/no-named-as-default': 'off',
     'react-native/sort-styles': 'off',
+    'react/jsx-boolean-value': 'off',
+    '@typescript-eslint/ban-ts-comment': 'off',
+    'react-native/no-raw-text': 'off',
+    'consistent-return': 'off',
   },
 };
