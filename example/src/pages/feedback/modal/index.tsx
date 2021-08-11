@@ -1,9 +1,9 @@
 import React from 'react';
 import { Modal, TYText } from 'tuya-panel-kit';
 
-import { BlockList, Svg } from '#components';
-import { useSetParticalState } from '#hooks/useSetParticalState';
+import { BlockList, Icons } from '#components';
 import Strings from '#i18n';
+import { useSetParticalState } from '../../../hooks/useSetParticalState';
 
 export default () => {
   const [state, setState] = useSetParticalState({
@@ -58,32 +58,32 @@ export default () => {
           {
             name: Strings.getLang('text_basic'),
             onPress: () => setState({ basicVisible: !state.basicVisible }),
-            component: <>{Svg.right}</>,
+            component: <>{Icons.right}</>,
           },
           {
             name: Strings.getLang('modal_count'),
             onPress: () => setState({ countDownVisible: !state.countDownVisible }),
-            component: <>{Svg.right}</>,
+            component: <>{Icons.right}</>,
           },
           {
             name: Strings.getLang('modal_date'),
             onPress: () => setState({ datePickerVisible: !state.datePickerVisible }),
-            component: <>{Svg.right}</>,
+            component: <>{Icons.right}</>,
           },
           {
             name: Strings.getLang('modal_list_single'),
             onPress: () => setState({ listOneVisible: !state.listOneVisible }),
-            component: <>{Svg.right}</>,
+            component: <>{Icons.right}</>,
           },
           {
             name: Strings.getLang('modal_list_mul'),
             onPress: () => setState({ listMoreVisible: !state.listMoreVisible }),
-            component: <>{Svg.right}</>,
+            component: <>{Icons.right}</>,
           },
           {
             name: Strings.getLang('modal_list_pick'),
             onPress: () => setState({ pickerOneVisible: !state.pickerOneVisible }),
-            component: <>{Svg.right}</>,
+            component: <>{Icons.right}</>,
           },
         ]}
       />

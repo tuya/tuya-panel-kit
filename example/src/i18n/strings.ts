@@ -17,19 +17,24 @@ export default {
     text_confirm: 'Confirm',
     text_cancel: 'Cancel',
     text_basic: 'Basic Usage',
+    style_basic: 'Basic Style',
     text_hour: 'hour',
     text_minute: 'minute',
     text_single: 'single selection',
     text_mul: 'multiple selection',
+    power: 'power',
 
     // basic
     // battery
     battery: 'Battery',
     battery_power: 'Power {0}%',
     battery_power_cus: 'Power {0}%（custom theme）',
+    battery_power_cus2: 'custom theme',
     battery_power_mod: 'Power {0}% (modify the electricity color distribution rules)',
+    battery_power_mod2: 'Modify the power color assignment rule',
     // button
     button: 'Button',
+    button_text: 'button',
     pure_text_button: 'Plain text button',
     pure_icon_button: 'Plain text button',
     with_text_icon_button: 'Text button with icon',
@@ -222,8 +227,8 @@ export default {
     // tabbar
     tabbar: 'TabBar',
     tabbar_basic: 'Basic usage',
-    tabbar_radio: 'radio type',
-    tabbar_radioCircle: 'radioCircle type',
+    tabbar_radio: 'Radio type',
+    tabbar_radioCircle: 'RadioCircle type',
     // tabs
     tabs: 'Tabs',
     tabs_basic: 'Basic Tabs',
@@ -271,7 +276,7 @@ export default {
     // collapsible
     collapsible: 'Collapsible',
     collapsible_content: 'Respond to ever-changing things with no change, no tricks.',
-    collapsible_label: 'Click me',
+    collapsible_label: 'Click expand',
     // divider
     divider: 'Divider',
     divider_basic: 'Basic form',
@@ -314,7 +319,8 @@ export default {
     tylistitem: 'TYListItem',
     tylistitem_basic: 'Basic list',
     tylistitem_long: 'Long copy adaptation',
-    tylistitem_long_title: 'This is an adaptive English title with a long copy',
+    tylistitem_long_title:
+      'When the main heading exceeds the specified width of one line, it wraps itself',
     tylistitem_ada: 'Adapt Icon',
     tylistitem_ada_title: 'This is a title',
     // tysection-list
@@ -353,19 +359,24 @@ export default {
     text_confirm: '确认',
     text_cancel: '取消',
     text_basic: '基础使用',
+    style_basic: '基础样式',
     text_hour: '小时',
     text_minute: '分钟',
     text_single: '单选',
     text_mul: '多选',
+    power: '开关',
 
     // basic
     // battery
     battery: 'Battery 电池',
     battery_power: '电量 {0}%',
     battery_power_cus: '电量 {0}%（本地主题）',
+    battery_power_cus2: '本地主题色',
     battery_power_mod: '电量 {0}% (修改电量颜色分配规则)',
+    battery_power_mod2: '修改电量颜色分配规则',
     // button
     button: 'Button 按钮',
+    button_text: '按钮',
     pure_text_button: '纯文本按钮',
     pure_icon_button: '纯icon按钮',
     with_text_icon_button: '带icon的文字按钮',
@@ -516,9 +527,9 @@ export default {
     // swipeout
     swipeout: 'Swipeout 侧滑',
     swipeout_left: '左侧滑',
-    swipeout_left_content: '试试左滑',
+    swipeout_left_content: '请尝试左侧滑',
     swipeout_right: '右侧滑',
-    swipeout_right_content: '试试右滑',
+    swipeout_right_content: '请尝试右侧滑',
     swipeout_disable: '禁用侧滑',
     // tips
     tips: 'Tips 气泡',
@@ -558,8 +569,8 @@ export default {
     // tabbar
     tabbar: 'TabBar 标签栏拆分版',
     tabbar_basic: '基础类型',
-    tabbar_radio: 'radio 类型',
-    tabbar_radioCircle: 'radioCircle 类型',
+    tabbar_radio: 'Radio 类型',
+    tabbar_radioCircle: 'RadioCircle 类型',
     // tabs
     tabs: 'Tabs 纯手势标签栏',
     tabs_basic: '基础 Tabs',
@@ -607,7 +618,7 @@ export default {
     // collapsible
     collapsible: 'Collapsible 折叠',
     collapsible_content: '以不变应万变，无招胜有招。',
-    collapsible_label: '点我试试',
+    collapsible_label: '点击展开',
     // divider
     divider: 'Divider 分割线',
     divider_basic: '基础形式',
@@ -650,8 +661,8 @@ export default {
     tylistitem: 'TYListItem 列表项',
     tylistitem_basic: '基础列表',
     tylistitem_long: '文案过长适配',
-    tylistitem_long_title: '这是一个标题这是一个标题这是一个标题这是一个标题',
-    tylistitem_ada: '适配 Icon',
+    tylistitem_long_title: '主标题超过一行规定的宽度时，文案将自行换行',
+    tylistitem_ada: '适配 Icon 样式',
     tylistitem_ada_title: '这是一个标题',
     // tysection-list
     tysectionlist: 'TYSectionList 分组列表',

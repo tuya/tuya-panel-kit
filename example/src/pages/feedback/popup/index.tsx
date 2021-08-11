@@ -2,9 +2,9 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import { Popup } from 'tuya-panel-kit';
 
-import { BlockList, Svg } from '#components';
-import { useSetParticalState } from '#hooks/useSetParticalState';
+import { BlockList, Icons } from '#components';
 import Strings from '#i18n';
+import { useSetParticalState } from '../../../hooks/useSetParticalState';
 
 export default () => {
   const [state, setState] = useSetParticalState({
@@ -37,7 +37,7 @@ export default () => {
                 close();
               },
             }),
-          component: <>{Svg.right}</>,
+          component: <>{Icons.right}</>,
         },
         {
           name: Strings.getLang('modal_date'),
@@ -60,7 +60,7 @@ export default () => {
                 close();
               },
             }),
-          component: <>{Svg.right}</>,
+          component: <>{Icons.right}</>,
         },
         {
           name: Strings.getLang('popup_time'),
@@ -79,7 +79,7 @@ export default () => {
                 close();
               },
             }),
-          component: <>{Svg.right}</>,
+          component: <>{Icons.right}</>,
         },
         {
           name: Strings.getLang('popup_number'),
@@ -97,7 +97,7 @@ export default () => {
                 close();
               },
             }),
-          component: <>{Svg.right}</>,
+          component: <>{Icons.right}</>,
         },
         {
           name: Strings.getLang('popup_list'),
@@ -139,7 +139,7 @@ export default () => {
                 close();
               },
             }),
-          component: <>{Svg.right}</>,
+          component: <>{Icons.right}</>,
         },
         {
           name: Strings.getLang('popup_listmore'),
@@ -169,7 +169,7 @@ export default () => {
                 close();
               },
             }),
-          component: <>{Svg.right}</>,
+          component: <>{Icons.right}</>,
         },
         {
           name: Strings.getLang('popup_picker'),
@@ -196,7 +196,7 @@ export default () => {
                 close();
               },
             }),
-          component: <>{Svg.right}</>,
+          component: <>{Icons.right}</>,
         },
         {
           name: Strings.getLang('popup_pickermore'),
@@ -258,7 +258,7 @@ export default () => {
                 close();
               },
             }),
-          component: <>{Svg.right}</>,
+          component: <>{Icons.right}</>,
         },
         {
           name: Strings.getLang('popup_cus'),
@@ -284,7 +284,7 @@ export default () => {
                 close();
               },
             }),
-          component: <>{Svg.right}</>,
+          component: <>{Icons.right}</>,
         },
       ]}
     />

@@ -9,7 +9,7 @@
   "version": "1.0.1",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "prestart:umi": "yalc publish ../packages/tuya-panel-kit ../packages/tuya-panel-theme ../packages/tuya-panel-utils && yalc update",
+    "prestart:umi": "yalc publish ../packages/tuya-panel-kit && yalc publish ../packages/tuya-panel-utils && yalc publish ../packages/tuya-panel-theme && yalc update",
     "start:umi": "cross-env DEV_MODE=umi umi dev",
     "build:umi": "cross-env DEV_MODE=umi umi build",
     "lint": "prettier --write '**/*.{js,jsx,ts,tsx}'",
@@ -56,7 +56,7 @@
     "rxjs": "^6.3.1",
     "rxjs-compat": "^6.3.1",
     "style-equal": "^1.0.0",
-    "styled-components": "^5.3.0",
+    "styled-components": "3.4.10",
     "tuya-panel-kit": "link:.yalc/tuya-panel-kit",
     "tuya-panel-utils": "link:.yalc/tuya-panel-utils",
     "tuya-panel-theme": "link:.yalc/tuya-panel-theme"
@@ -77,7 +77,7 @@
     "@types/redux": "^3.6.0",
     "@types/redux-actions": "^2.6.1",
     "@types/redux-logger": "^3.0.7",
-    "@types/tuya-panel-kit": "^4.0.5",
+    "@types/tuya-panel-kit": "^4.0.8",
     "babel-jest": "^22.1.0",
     "babel-plugin-import": "^1.11.0",
     "babel-plugin-module-resolver": "^4.0.0",
