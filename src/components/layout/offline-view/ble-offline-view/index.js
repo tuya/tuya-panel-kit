@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, requireNativeComponent } from 'react-native';
 import { TYSdk } from '../../../../TYNativeApi';
 import Modal from '../../../modal';
 import H5WebView from '../webview';
@@ -18,13 +18,12 @@ const { isIos } = RatioUtils;
 
 const TYDevice = TYSdk.device;
 const TYNative = TYSdk.native;
+const TYMobile = TYSdk.mobile;
 
 const Res = {
   arrow: require('../../../res/arrow.png'),
   question: require('../../../res/question.png'),
 };
-
-const BLE_HELP_LINK = 'https://smartapp.tuya.com/faq/mesh1';
 
 export default class BleOfflineView extends Component {
   static propTypes = {
@@ -191,21 +190,33 @@ export default class BleOfflineView extends Component {
 
   openH5HelpWebView = () => {
     Modal.close();
-    TYSdk.Navigator.push({
-      isOfflineWebView: true,
-      element: H5WebView,
-      hideFullView: true,
-      barStyle: 'default',
-      titleStyle: { color: '#000' },
-      appStyle: { backgroundColor: '#fff' },
-      topBarStyle: {
-        borderBottomWidth: StyleSheet.hairlineWidth,
-        borderBottomColor: '#E1E1E1',
-        backgroundColor: '#fff',
-      },
-      source: BLE_HELP_LINK,
-      title: Strings.getLang('offlineHelp'),
-    });
+    if (requireNativeComponent('TYRCTNavManager', null)) {
+      TYMobile.jumpSubPage({ uiId: '0000012lky' }, {});
+    } else {
+      try {
+        const commonConfigStr = get(TYNative, 'devInfo.panelCommonConfig');
+        const commonConfig = JSON.parse(commonConfigStr);
+        const bleOfflineHelpLink = get(commonConfig, 'bleOfflineHelpLink');
+        if (!bleOfflineHelpLink) return;
+        TYSdk.Navigator.push({
+          isOfflineWebView: true,
+          element: H5WebView,
+          hideFullView: true,
+          barStyle: 'default',
+          titleStyle: { color: '#000' },
+          appStyle: { backgroundColor: '#fff' },
+          topBarStyle: {
+            borderBottomWidth: StyleSheet.hairlineWidth,
+            borderBottomColor: '#E1E1E1',
+            backgroundColor: '#fff',
+          },
+          source: bleOfflineHelpLink,
+          title: Strings.getLang('offlineHelp'),
+        });
+      } catch (error) {
+        console.warn('get bleOfflineHelpLink failed :>> ', error);
+      }
+    }
   };
 
   _handleToastPress = () => {

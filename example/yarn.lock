@@ -7011,10 +7011,13 @@ tuya-panel-kit-types@^2.0.1-rc.0:
   resolved "https://registry.npm.taobao.org/tuya-panel-kit-types/download/tuya-panel-kit-types-2.0.1-rc.1.tgz#329c49bfdd565655fd96b637567e3011dfae3496"
   integrity sha1-MpxJv91WVlX9lrY3Vn4wEd+uNJY=
 
-"tuya-panel-kit@git://github.com/TuyaInc/tuya-panel-kit":
+"tuya-panel-kit@git://github.com/TuyaInc/tuya-panel-kit#develop_2.0":
   version "2.0.0-rc.7"
-  resolved "git://github.com/TuyaInc/tuya-panel-kit#135b6ed1959bc54e4feda320d16c29138e373d8a"
+  resolved "git://github.com/TuyaInc/tuya-panel-kit#8a2419a584a820793392feeac4c31aac9f18ae24"
   dependencies:
+    "@react-native-community/masked-view" "0.1.10"
+    "@react-navigation/native" "5.7.3"
+    "@react-navigation/stack" "5.9.0"
     babel-cli "^6.26.0"
     color "^0.11.1"
     events "^1.1.1"
@@ -7022,6 +7025,10 @@ tuya-panel-kit-types@^2.0.1-rc.0:
     prop-types "^15.6.1"
     react-addons-shallow-compare "^15.6.2"
     react-native-deprecated-custom-components "git+https://github.com/facebookarchive/react-native-custom-components.git#83c4fa19ccc9b6cd48ff80e457c493332819b486"
+    react-native-gesture-handler "1.8.0"
+    react-native-reanimated "1.13.0"
+    react-native-safe-area-context "3.1.7"
+    react-native-screens "2.10.1"
     react-native-svg "5.5.1"
     style-equal "^1.0.0"
     styled-components "^3.4.10"
