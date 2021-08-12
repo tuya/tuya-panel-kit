@@ -13,7 +13,7 @@ import Strings from '../../../i18n/strings';
 import H5WebView from '../../webview';
 import RefText from '../../TYText';
 import IconFont from '../../iconfont';
-import { RatioUtils } from '../../../utils';
+import { RatioUtils, CoreUtils } from '../../../utils';
 
 const TYEvent = TYSdk.event;
 const TYMobile = TYSdk.mobile;
@@ -21,6 +21,7 @@ const TYNative = TYSdk.native;
 const TYDevice = TYSdk.device;
 
 const { convert, viewWidth } = RatioUtils;
+const { get } = CoreUtils;
 
 const OFFLINE_API_SUPPORT = TYMobile.verSupported('2.91');
 
@@ -36,7 +37,6 @@ const BlueToothOffData = {
   row2: Strings.getLang('offlineHelp'),
   beNotInUseTitle: Strings.getLang('beNotInUse'),
   beNotInUse: Strings.getLang('beNotInUseContent'),
-  helpLink: 'https://smartapp.tuya.com/faq/mesh1'
 };
 
 const BlueToothOnData = {
@@ -45,7 +45,6 @@ const BlueToothOnData = {
   row2: Strings.getLang('offlineHelp'),
   beNotInUseTitle: Strings.getLang('beNotInUse'),
   beNotInUse: Strings.getLang('beNotInUseContent'),
-  helpLink: 'https://smartapp.tuya.com/faq/mesh1'
 };
 
 // const WiFiData = {
@@ -56,7 +55,6 @@ const BlueToothOnData = {
 //   row2: Strings.getLang('offlineHelp'),
 //   beNotInUseTitle: Strings.getLang('beNotInUse'),
 //   beNotInUse: Strings.getLang('beNotInUseContent'),
-//   helpLink: 'https://smartapp.tuya.com/tuyasmart/help'
 // };
 
 export default class OfflineView extends Component {
@@ -98,24 +96,32 @@ export default class OfflineView extends Component {
     this.setState({ bluetoothStatus });
   }
 
-  openH5WebView(source, title) {
-    TYSdk.Navigator.push({
-      element: H5WebView,
-      noFullView: true,
-      barStyle: 'default',
-      titleStyle: {
-        color: '#000'
-      },
-      appStyle: {
-        backgroundColor: '#fff'
-      },
-      topBarStyle: {
-        borderBottomWidth: StyleSheet.hairlineWidth,
-        borderBottomColor: '#E1E1E1',
-        backgroundColor: '#fff',
-      },
-      source,
-      title,
+  openH5WebView(title) {
+    TYDevice.getDeviceInfo().then(devInfo => {
+      const { panelCommonConfig } = devInfo;
+      const commonConfig = JSON.parse(panelCommonConfig);
+      const bleOfflineHelpLink = get(commonConfig, 'bleOfflineHelpLink');
+      if (!bleOfflineHelpLink) return;
+      TYSdk.Navigator.push({
+        element: H5WebView,
+        noFullView: true,
+        barStyle: 'default',
+        titleStyle: {
+          color: '#000'
+        },
+        appStyle: {
+          backgroundColor: '#fff'
+        },
+        topBarStyle: {
+          borderBottomWidth: StyleSheet.hairlineWidth,
+          borderBottomColor: '#E1E1E1',
+          backgroundColor: '#fff',
+        },
+        source: bleOfflineHelpLink,
+        title,
+      });
+    }).catch(error => {
+      console.warn('get bleOfflineHelpLink failed :>> ', error);
     });
   }
 
@@ -166,7 +172,7 @@ export default class OfflineView extends Component {
           ) : null}
           <TouchableWithoutFeedback
             onPress={() => {
-              data.helpHandle(data.helpLink, data.row2);
+              data.helpHandle(data.row2);
             }}
           >
             <View style={[styles.row, { borderBottomWidth: isShare ? 0 : 1 }]}>
