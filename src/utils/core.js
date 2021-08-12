@@ -69,8 +69,25 @@ const isBoolean = obj => (Object.prototype.toString.call(obj) === '[object Boole
 
 const isNumerical = obj => (Object.prototype.toString.call(obj) === '[object Number]');
 
+const get = function(object, pathString, defaultValue) {
+  // Coerce pathString to a string (even it turns into "[object Object]").
+  const parts = `${pathString}`.split('.');
+  const { length } = parts;
+  let i = 0;
+
+  // In case object isn't a real object, set it to undefined.
+  let value = object === Object(object) ? object : undefined;
+
+  while (value != null && i < length) {
+    value = value[parts[i++]];
+  }
+
+  return i && i === length && value !== undefined ? value : defaultValue;
+};
+
 
 export default CoreUtils = {
+  get,
   toFixed,
   toFilled,
   partition,
