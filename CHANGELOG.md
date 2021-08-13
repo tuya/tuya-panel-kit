@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [2.0.0](https://github.com/TuyaInc/tuya-panel-kit/compare/v2.0.0-rc.7...v2.0.0) (2021-08-13)
+
+
+### Bug Fixes
+
+* set default value for wrapperWidth ([34066eb](https://github.com/TuyaInc/tuya-panel-kit/commit/34066ebd590b2bff19498fbae08760c97cfc71d9))
+
+
+### Performance Improvements
+
+* **bleOffline:** change bleOffline to multi-region ([b781062](https://github.com/TuyaInc/tuya-panel-kit/commit/b7810622cc4a00355a00469c1847bb365cf01db2))
+
+
+
 # [2.0.0-rc.7](https://github.com/TuyaInc/tuya-panel-kit/compare/v2.0.0-rc.6...v2.0.0-rc.7) (2020-09-25)
 
 
