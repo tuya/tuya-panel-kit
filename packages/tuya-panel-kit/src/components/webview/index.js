@@ -14,12 +14,11 @@ export default class H5WebView extends Component {
     /**
      * 网页资源
      */
-    source: PropTypes.string,
+    source: PropTypes.string.isRequired,
   };
 
   static defaultProps = {
     title: 'webview',
-    source: 'https://www.tuya.com',
   };
 
   // onLeftHandle = () => {
@@ -56,7 +55,7 @@ export default class H5WebView extends Component {
 
 const styles = StyleSheet.create({
   webView: {
-    height: viewHeight,
     flex: 1,
+    height: viewHeight,
   },
 });
