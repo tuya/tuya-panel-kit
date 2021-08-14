@@ -366,7 +366,7 @@ export default function createNavigator({ router, screenOptions }, navigationCon
               colors: { ...DefaultTheme.colors, background: 'transparent' },
             }}
             onStateChange={state => {
-              this.handleNavigationStateChange();
+              this.handleNavigationStateChange(state);
               navigationContainerProps.onStateChange &&
                 navigationContainerProps.onStateChange(state);
             }}
