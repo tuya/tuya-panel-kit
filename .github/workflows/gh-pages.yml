@@ -12,7 +12,7 @@ jobs:
         run: |
           cd example
           yarn add tuya-panel-kit tuya-panel-utils tuya-panel-theme --registry=https://registry.npmjs.org
-          yarn build:umi
+          DEV_MODE=umi yarn umi build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
