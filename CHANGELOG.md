@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [2.1.0](https://github.com/TuyaInc/tuya-panel-kit/compare/v2.0.0-rc.7...v2.1.0) (2021-08-14)
+
+
+### Performance Improvements
+
+* **bleOffline:** change bleOffline to multi-region --- 2.x ([417b18b](https://github.com/TuyaInc/tuya-panel-kit/commit/417b18b705ba38f632c67512ac70aff4c821fee1))
+
+
+
 # [2.0.0](https://github.com/TuyaInc/tuya-panel-kit/compare/v2.0.0-rc.7...v2.0.0) (2021-08-14)
 
 
