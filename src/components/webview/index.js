@@ -8,12 +8,11 @@ const { viewHeight } = RatioUtils;
 export default class H5WebView extends Component {
   static propTypes = {
     title: PropTypes.string,
-    source: PropTypes.string,
+    source: PropTypes.string.isRequired,
   };
 
   static defaultProps = {
     title: 'webview',
-    source: 'https://www.tuya.com',
   };
 
   onLeftHandle = () => {
