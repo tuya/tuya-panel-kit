@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "tuya-panel-kit": ["../tuya-panel-kit/lib"],
+      "tuya-panel-utils": ["../tuya-panel-utils/lib"],
+      "tuya-panel-style-icon-background": ["../tuya-panel-style-icon-background/lib"]
+    },
+    "allowJs": true,
+    "declaration": true,
+    "jsx": "react",
+    "module": "commonjs",
+    "target": "es2018",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "removeComments": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "./lib",
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "lib": ["dom", "es5", "es6", "es2015", "es2016", "es2017", "es2018", "esnext"],
+  },
+  "include": ["./src/"],
+  "exclude": ["./node_modules"]
+}

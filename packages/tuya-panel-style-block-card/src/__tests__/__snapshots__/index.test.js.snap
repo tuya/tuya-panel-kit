@@ -1,0 +1,618 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BlockCard AcrylicBlockCard 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#FFF",
+        "borderRadius": 32,
+        "paddingBottom": 54,
+        "paddingLeft": 40,
+        "paddingRight": 40,
+        "paddingTop": 40,
+        "width": 300,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+        },
+        Object {
+          "height": 80,
+          "width": 80,
+        },
+        false,
+        null,
+      ]
+    }
+  >
+    <RNSVGSvgView
+      align="xMidYMid"
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+          },
+          undefined,
+          false,
+          Object {
+            "flex": 0,
+            "height": 80,
+            "width": 80,
+          },
+        ]
+      }
+      vbHeight={1024}
+      vbWidth={1024}
+    >
+      <RNSVGPath
+        d="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+        fill={
+          Array [
+            0,
+            0.8274509803921568,
+            0.8274509803921568,
+            0.8274509803921568,
+            1,
+          ]
+        }
+        fillOpacity={1}
+        fillRule={1}
+        matrix={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+        opacity={1}
+        propList={
+          Array [
+            "stroke",
+            "strokeWidth",
+            "fill",
+          ]
+        }
+        stroke={
+          Array [
+            0,
+            0.8274509803921568,
+            0.8274509803921568,
+            0.8274509803921568,
+            1,
+          ]
+        }
+        strokeDasharray={null}
+        strokeDashoffset={null}
+        strokeLinecap={0}
+        strokeLinejoin={0}
+        strokeMiterlimit={4}
+        strokeOpacity={1}
+        strokeWidth={1}
+      />
+    </RNSVGSvgView>
+  </View>
+  <View
+    needsOffscreenAlphaCompositing={true}
+    style={
+      Array [
+        Array [
+          Object {
+            "marginBottom": 20,
+            "marginTop": 56,
+          },
+          undefined,
+        ],
+        false,
+      ]
+    }
+  >
+    <View
+      accessibilityLabel="SwitchButton"
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "height": 55,
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": 102,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 20,
+              "height": 52,
+              "justifyContent": "center",
+              "width": 100,
+            },
+            Object {
+              "backgroundColor": "#FE7862",
+              "borderColor": "#FE7862",
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#FFF",
+            "borderRadius": 1,
+            "height": 12,
+            "justifyContent": "center",
+            "left": 9,
+            "position": "absolute",
+            "width": 2,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#FFF",
+            "borderRadius": 1,
+            "height": 2.4000000000000004,
+            "justifyContent": "center",
+            "position": "absolute",
+            "right": 9,
+            "width": 2,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#fff",
+            "borderRadius": 17,
+            "elevation": 2,
+            "height": 46,
+            "justifyContent": "center",
+            "position": "absolute",
+            "shadowColor": "rgba(0, 0, 0, 0.3)",
+            "shadowOffset": Object {
+              "height": 3,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 3,
+            "transform": Array [
+              Object {
+                "translateX": 52,
+              },
+            ],
+            "width": 46,
+          }
+        }
+      />
+    </View>
+  </View>
+  <Text
+    accessible={true}
+    align={null}
+    allowFontScaling={false}
+    color="#000"
+    ellipsizeMode="tail"
+    size={28}
+    style={
+      Array [
+        false,
+        Array [
+          false,
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#000",
+              "fontSize": 28,
+              "fontWeight": "500",
+            },
+            Array [
+              Object {
+                "lineHeight": 38,
+              },
+              undefined,
+            ],
+          ],
+        ],
+      ]
+    }
+    text="Block Card"
+    type={null}
+    weight={500}
+  >
+    Block Card
+  </Text>
+</View>
+`;
+
+exports[`BlockCard ClassicBlockCard 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#FFF",
+        "borderRadius": 28,
+        "paddingBottom": 40,
+        "paddingLeft": 48,
+        "paddingRight": 40,
+        "paddingTop": 44,
+        "width": 350,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-around",
+        "marginBottom": 70,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "height": 44,
+            "width": 44,
+          },
+          false,
+          null,
+        ]
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+            false,
+            Object {
+              "flex": 0,
+              "height": 44,
+              "width": 44,
+            },
+          ]
+        }
+        vbHeight={1024}
+        vbWidth={1024}
+      >
+        <RNSVGPath
+          d="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+          fill={
+            Array [
+              0,
+              0.8274509803921568,
+              0.8274509803921568,
+              0.8274509803921568,
+              1,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "fill",
+            ]
+          }
+          stroke={
+            Array [
+              0,
+              0.8274509803921568,
+              0.8274509803921568,
+              0.8274509803921568,
+              1,
+            ]
+          }
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={1}
+        />
+      </RNSVGSvgView>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    />
+    <View
+      needsOffscreenAlphaCompositing={true}
+      style={
+        Array [
+          undefined,
+          false,
+        ]
+      }
+    >
+      <View
+        accessibilityLabel="SwitchButton"
+        accessible={true}
+        isTVSelectable={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "height": 51,
+            "justifyContent": "center",
+            "opacity": 1,
+            "width": 82,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "borderRadius": 26.571428571428573,
+                "height": 48,
+                "justifyContent": "center",
+                "width": 80,
+              },
+              Object {
+                "backgroundColor": "#1082FE",
+                "borderColor": "#1082FE",
+              },
+            ]
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "alignSelf": "flex-start",
+              "backgroundColor": "#fff",
+              "borderRadius": 20,
+              "elevation": 2,
+              "height": 40,
+              "justifyContent": "center",
+              "position": "absolute",
+              "shadowColor": "rgba(0, 0, 0, 0.3)",
+              "shadowOffset": Object {
+                "height": 3,
+                "width": 0,
+              },
+              "shadowOpacity": 1,
+              "shadowRadius": 3,
+              "transform": Array [
+                Object {
+                  "translateX": 37,
+                },
+              ],
+              "width": 40,
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+  <Text
+    accessible={true}
+    align={null}
+    allowFontScaling={false}
+    color="#3D3D3D"
+    ellipsizeMode="tail"
+    size={30}
+    style={
+      Array [
+        false,
+        Array [
+          false,
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#3D3D3D",
+              "fontSize": 30,
+              "fontWeight": "400",
+            },
+            Array [
+              Object {
+                "lineHeight": 48,
+              },
+              undefined,
+            ],
+          ],
+        ],
+      ]
+    }
+    text="Block Card"
+    type={null}
+    weight={400}
+  >
+    Block Card
+  </Text>
+</View>
+`;
+
+exports[`BlockCard NordicBlockCard 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#FFF",
+        "borderRadius": 32,
+        "paddingBottom": 48,
+        "paddingLeft": 40,
+        "paddingRight": 40,
+        "paddingTop": 48,
+        "width": 368,
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    accessible={true}
+    align={null}
+    allowFontScaling={false}
+    color="#000"
+    ellipsizeMode="tail"
+    size={32}
+    style={
+      Array [
+        false,
+        Array [
+          false,
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#000",
+              "fontSize": 32,
+            },
+            Array [
+              Object {
+                "lineHeight": 48,
+                "marginBottom": 172,
+              },
+              undefined,
+            ],
+          ],
+        ],
+      ]
+    }
+    text="Block Card"
+    type={null}
+    weight={null}
+  >
+    Block Card
+  </Text>
+  <View
+    needsOffscreenAlphaCompositing={true}
+    style={
+      Array [
+        undefined,
+        false,
+      ]
+    }
+  >
+    <View
+      accessibilityLabel="SwitchButton"
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "height": 59,
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": 106,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 31,
+              "height": 56,
+              "justifyContent": "center",
+              "width": 104,
+            },
+            Object {
+              "backgroundColor": "#1082FE",
+              "borderColor": "#1082FE",
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#fff",
+            "borderRadius": 20.8,
+            "elevation": 2,
+            "height": 41.6,
+            "justifyContent": "center",
+            "position": "absolute",
+            "shadowColor": "rgba(0, 0, 0, 0.3)",
+            "shadowOffset": Object {
+              "height": 3,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 3,
+            "transform": Array [
+              Object {
+                "translateX": 54.8,
+              },
+            ],
+            "width": 41.6,
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;

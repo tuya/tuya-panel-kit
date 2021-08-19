@@ -1,0 +1,410 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClassicIconBackground Background 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 100,
+        "width": 100,
+      },
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "marginTop": 20,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "bottom": 0,
+          "flex": 1,
+          "height": 1334,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": 750,
+        },
+        Object {
+          "height": 100,
+          "width": 100,
+        },
+      ]
+    }
+  >
+    <RNSVGSvgView
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+          },
+          undefined,
+          false,
+          Object {
+            "flex": 0,
+            "height": 100,
+            "width": 100,
+          },
+        ]
+      }
+    >
+      <RNSVGDefs>
+        <RNSVGLinearGradient
+          gradient={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              1,
+              1,
+              0,
+              1,
+              0,
+              1,
+            ]
+          }
+          gradientTransform={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          gradientUnits={0}
+          name="base-background"
+          x1="0%"
+          x2="0%"
+          y1="0%"
+          y2="100%"
+        />
+      </RNSVGDefs>
+      <RNSVGRect
+        fill={
+          Array [
+            1,
+            "base-background",
+          ]
+        }
+        fillOpacity={1}
+        fillRule={1}
+        height="100"
+        matrix={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+        opacity={1}
+        propList={
+          Array [
+            "fill",
+          ]
+        }
+        rx="0"
+        ry="0"
+        stroke={null}
+        strokeDasharray={null}
+        strokeDashoffset={null}
+        strokeLinecap={0}
+        strokeLinejoin={0}
+        strokeMiterlimit={4}
+        strokeOpacity={1}
+        strokeWidth={null}
+        width="100"
+        x="0"
+        y="0"
+      />
+    </RNSVGSvgView>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "flex": 1,
+          "zIndex": 2,
+        },
+        undefined,
+      ]
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          false,
+          Array [
+            false,
+            Object {
+              "color": "#fff",
+            },
+          ],
+        ]
+      }
+    >
+      hello world
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`ClassicIconBackground icon and background 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#158CFB",
+        "height": 50,
+        "width": 50,
+      },
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 5,
+          "display": "flex",
+          "height": 50,
+          "justifyContent": "center",
+          "overflow": "hidden",
+          "width": 50,
+        },
+        Object {},
+      ],
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+        },
+        Object {
+          "height": 24,
+          "width": 24,
+        },
+        false,
+        null,
+      ]
+    }
+  >
+    <RNSVGSvgView
+      align="xMidYMid"
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+          },
+          undefined,
+          false,
+          Object {
+            "flex": 0,
+            "height": 24,
+            "width": 24,
+          },
+        ]
+      }
+      vbHeight={1024}
+      vbWidth={1024}
+    >
+      <RNSVGPath
+        d="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+        fill={
+          Array [
+            0,
+            1,
+            1,
+            1,
+            1,
+          ]
+        }
+        fillOpacity={1}
+        fillRule={1}
+        matrix={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+        opacity={1}
+        propList={
+          Array [
+            "stroke",
+            "strokeWidth",
+            "fill",
+          ]
+        }
+        stroke={
+          Array [
+            0,
+            1,
+            1,
+            1,
+            1,
+          ]
+        }
+        strokeDasharray={null}
+        strokeDashoffset={null}
+        strokeLinecap={0}
+        strokeLinejoin={0}
+        strokeMiterlimit={4}
+        strokeOpacity={1}
+        strokeWidth={1}
+      />
+    </RNSVGSvgView>
+  </View>
+</View>
+`;
+
+exports[`ClassicIconBackground image 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#158CFB",
+        "height": 50,
+        "width": 50,
+      },
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 50,
+          "display": "flex",
+          "height": 50,
+          "justifyContent": "center",
+          "overflow": "hidden",
+          "width": 50,
+        },
+        Object {},
+      ],
+    ]
+  }
+>
+  <Image
+    source={
+      Object {
+        "uri": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg==",
+      }
+    }
+    style={
+      Object {
+        "borderRadius": 0,
+        "height": 24,
+        "width": 24,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`ClassicIconBackground no icon 1`] = `null`;
+
+exports[`ClassicIconBackground only icon 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+      Object {
+        "height": 24,
+        "width": 24,
+      },
+      false,
+      null,
+    ]
+  }
+>
+  <RNSVGSvgView
+    align="xMidYMid"
+    meetOrSlice={0}
+    minX={0}
+    minY={0}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        undefined,
+        false,
+        Object {
+          "flex": 0,
+          "height": 24,
+          "width": 24,
+        },
+      ]
+    }
+    vbHeight={1024}
+    vbWidth={1024}
+  >
+    <RNSVGPath
+      d="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+      fill={
+        Array [
+          0,
+          1,
+          1,
+          1,
+          1,
+        ]
+      }
+      fillOpacity={1}
+      fillRule={1}
+      matrix={
+        Array [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+        ]
+      }
+      opacity={1}
+      propList={
+        Array [
+          "stroke",
+          "strokeWidth",
+          "fill",
+        ]
+      }
+      stroke={
+        Array [
+          0,
+          1,
+          1,
+          1,
+          1,
+        ]
+      }
+      strokeDasharray={null}
+      strokeDashoffset={null}
+      strokeLinecap={0}
+      strokeLinejoin={0}
+      strokeMiterlimit={4}
+      strokeOpacity={1}
+      strokeWidth={1}
+    />
+  </RNSVGSvgView>
+</View>
+`;

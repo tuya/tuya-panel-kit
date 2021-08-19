@@ -1,0 +1,685 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyleListCard NordicListCard 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#FFF",
+        "borderRadius": 32,
+        "paddingBottom": 48,
+        "paddingLeft": 32,
+        "paddingRight": 32,
+        "paddingTop": 48,
+        "width": 654,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "flexDirection": "row",
+        "marginBottom": 40,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "height": 32,
+            "width": 32,
+          },
+          false,
+          null,
+        ]
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+            false,
+            Object {
+              "flex": 0,
+              "height": 32,
+              "width": 32,
+            },
+          ]
+        }
+        vbHeight={1024}
+        vbWidth={1024}
+      >
+        <RNSVGPath
+          d="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+          fill={
+            Array [
+              0,
+              0.06274509803921569,
+              0.5098039215686274,
+              0.996078431372549,
+              1,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "fill",
+            ]
+          }
+          stroke={
+            Array [
+              0,
+              0.06274509803921569,
+              0.5098039215686274,
+              0.996078431372549,
+              1,
+            ]
+          }
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={1}
+        />
+      </RNSVGSvgView>
+    </View>
+    <Text
+      accessible={true}
+      align={null}
+      allowFontScaling={false}
+      color="rgba(0, 0, 0, 0.9)"
+      ellipsizeMode="tail"
+      size={32}
+      style={
+        Array [
+          false,
+          Array [
+            false,
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "rgba(0, 0, 0, 0.9)",
+                "fontSize": 32,
+                "fontWeight": "400",
+              },
+              Array [
+                Object {
+                  "lineHeight": 48,
+                  "marginLeft": 24,
+                },
+                undefined,
+              ],
+            ],
+          ],
+        ]
+      }
+      text="Temp"
+      type={null}
+      weight={400}
+    >
+      Temp
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-around",
+      }
+    }
+  />
+  <View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(16, 130, 254, 0.09)",
+          "borderRadius": 24,
+          "flexDirection": "row",
+          "opacity": 1,
+          "padding": 32,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#1082FE",
+              "height": 72,
+              "width": 72,
+            },
+            Array [
+              Object {
+                "alignItems": "center",
+                "borderRadius": 50,
+                "display": "flex",
+                "height": 72,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "width": 72,
+              },
+              Array [
+                Object {
+                  "borderRadius": 16,
+                },
+                undefined,
+              ],
+            ],
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "row",
+              },
+              Object {
+                "height": 40,
+                "width": 40,
+              },
+              false,
+              null,
+            ]
+          }
+        >
+          <RNSVGSvgView
+            align="xMidYMid"
+            meetOrSlice={0}
+            minX={0}
+            minY={0}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                },
+                undefined,
+                false,
+                Object {
+                  "flex": 0,
+                  "height": 40,
+                  "width": 40,
+                },
+              ]
+            }
+            vbHeight={1024}
+            vbWidth={1024}
+          >
+            <RNSVGPath
+              d="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+              fill={
+                Array [
+                  0,
+                  1,
+                  1,
+                  1,
+                  1,
+                ]
+              }
+              fillOpacity={1}
+              fillRule={1}
+              matrix={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
+              }
+              opacity={1}
+              propList={
+                Array [
+                  "stroke",
+                  "strokeWidth",
+                  "fill",
+                ]
+              }
+              stroke={
+                Array [
+                  0,
+                  1,
+                  1,
+                  1,
+                  1,
+                ]
+              }
+              strokeDasharray={null}
+              strokeDashoffset={null}
+              strokeLinecap={0}
+              strokeLinejoin={0}
+              strokeMiterlimit={4}
+              strokeOpacity={1}
+              strokeWidth={1}
+            />
+          </RNSVGSvgView>
+        </View>
+      </View>
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color="rgba(0, 0, 0, 0.9)"
+        ellipsizeMode="tail"
+        size={32}
+        style={
+          Array [
+            false,
+            Array [
+              false,
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "rgba(0, 0, 0, 0.9)",
+                  "fontSize": 32,
+                  "fontWeight": "400",
+                },
+                Array [
+                  Object {
+                    "lineHeight": 48,
+                    "marginLeft": 32,
+                  },
+                  undefined,
+                ],
+              ],
+            ],
+          ]
+        }
+        text="Hello World"
+        type={null}
+        weight={400}
+      >
+        Hello World
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "borderRadius": 24,
+          "flexDirection": "row",
+          "opacity": 1,
+          "padding": 32,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#158CFB",
+              "height": 72,
+              "width": 72,
+            },
+            Array [
+              Object {
+                "alignItems": "center",
+                "borderRadius": 50,
+                "display": "flex",
+                "height": 72,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "width": 72,
+              },
+              Array [
+                Object {
+                  "borderRadius": 16,
+                },
+                undefined,
+              ],
+            ],
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "row",
+              },
+              Object {
+                "height": 40,
+                "width": 40,
+              },
+              false,
+              null,
+            ]
+          }
+        >
+          <RNSVGSvgView
+            align="xMidYMid"
+            meetOrSlice={0}
+            minX={0}
+            minY={0}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                },
+                undefined,
+                false,
+                Object {
+                  "flex": 0,
+                  "height": 40,
+                  "width": 40,
+                },
+              ]
+            }
+            vbHeight={1024}
+            vbWidth={1024}
+          >
+            <RNSVGPath
+              d="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+              fill={
+                Array [
+                  0,
+                  1,
+                  1,
+                  1,
+                  1,
+                ]
+              }
+              fillOpacity={1}
+              fillRule={1}
+              matrix={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
+              }
+              opacity={1}
+              propList={
+                Array [
+                  "stroke",
+                  "strokeWidth",
+                  "fill",
+                ]
+              }
+              stroke={
+                Array [
+                  0,
+                  1,
+                  1,
+                  1,
+                  1,
+                ]
+              }
+              strokeDasharray={null}
+              strokeDashoffset={null}
+              strokeLinecap={0}
+              strokeLinejoin={0}
+              strokeMiterlimit={4}
+              strokeOpacity={1}
+              strokeWidth={1}
+            />
+          </RNSVGSvgView>
+        </View>
+      </View>
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color="rgba(0, 0, 0, 0.5)"
+        ellipsizeMode="tail"
+        size={32}
+        style={
+          Array [
+            false,
+            Array [
+              false,
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "rgba(0, 0, 0, 0.5)",
+                  "fontSize": 32,
+                  "fontWeight": "400",
+                },
+                Array [
+                  Object {
+                    "lineHeight": 48,
+                    "marginLeft": 32,
+                  },
+                  undefined,
+                ],
+              ],
+            ],
+          ]
+        }
+        text="Hello Tuya"
+        type={null}
+        weight={400}
+      >
+        Hello Tuya
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "borderRadius": 24,
+          "flexDirection": "row",
+          "opacity": 1,
+          "padding": 32,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#158CFB",
+              "height": 72,
+              "width": 72,
+            },
+            Array [
+              Object {
+                "alignItems": "center",
+                "borderRadius": 50,
+                "display": "flex",
+                "height": 72,
+                "justifyContent": "center",
+                "overflow": "hidden",
+                "width": 72,
+              },
+              Array [
+                Object {
+                  "borderRadius": 16,
+                },
+                undefined,
+              ],
+            ],
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "row",
+              },
+              Object {
+                "height": 40,
+                "width": 40,
+              },
+              false,
+              null,
+            ]
+          }
+        >
+          <RNSVGSvgView
+            align="xMidYMid"
+            meetOrSlice={0}
+            minX={0}
+            minY={0}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                },
+                undefined,
+                false,
+                Object {
+                  "flex": 0,
+                  "height": 40,
+                  "width": 40,
+                },
+              ]
+            }
+            vbHeight={1024}
+            vbWidth={1024}
+          >
+            <RNSVGPath
+              d="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+              fill={
+                Array [
+                  0,
+                  1,
+                  1,
+                  1,
+                  1,
+                ]
+              }
+              fillOpacity={1}
+              fillRule={1}
+              matrix={
+                Array [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0,
+                  0,
+                ]
+              }
+              opacity={1}
+              propList={
+                Array [
+                  "stroke",
+                  "strokeWidth",
+                  "fill",
+                ]
+              }
+              stroke={
+                Array [
+                  0,
+                  1,
+                  1,
+                  1,
+                  1,
+                ]
+              }
+              strokeDasharray={null}
+              strokeDashoffset={null}
+              strokeLinecap={0}
+              strokeLinejoin={0}
+              strokeMiterlimit={4}
+              strokeOpacity={1}
+              strokeWidth={1}
+            />
+          </RNSVGSvgView>
+        </View>
+      </View>
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color="rgba(0, 0, 0, 0.5)"
+        ellipsizeMode="tail"
+        size={32}
+        style={
+          Array [
+            false,
+            Array [
+              false,
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "rgba(0, 0, 0, 0.5)",
+                  "fontSize": 32,
+                  "fontWeight": "400",
+                },
+                Array [
+                  Object {
+                    "lineHeight": 48,
+                    "marginLeft": 32,
+                  },
+                  undefined,
+                ],
+              ],
+            ],
+          ]
+        }
+        text="Hello China"
+        type={null}
+        weight={400}
+      >
+        Hello China
+      </Text>
+    </View>
+  </View>
+</View>
+`;

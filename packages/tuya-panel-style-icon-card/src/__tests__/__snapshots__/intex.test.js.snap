@@ -1,0 +1,690 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconCard AcrylicIconBlockCard 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "borderRadius": 32,
+        "paddingBottom": 54,
+        "paddingLeft": 40,
+        "paddingRight": 40,
+        "paddingTop": 40,
+        "width": 300,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#158CFB",
+          "height": 50,
+          "width": 50,
+        },
+        Array [
+          Object {
+            "alignItems": "center",
+            "borderRadius": 50,
+            "display": "flex",
+            "height": 50,
+            "justifyContent": "center",
+            "overflow": "hidden",
+            "width": 50,
+          },
+          Object {},
+        ],
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "height": 80,
+            "width": 80,
+          },
+          false,
+          null,
+        ]
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+            false,
+            Object {
+              "flex": 0,
+              "height": 80,
+              "width": 80,
+            },
+          ]
+        }
+        vbHeight={1024}
+        vbWidth={1024}
+      >
+        <RNSVGPath
+          d="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+          fill={
+            Array [
+              0,
+              1,
+              1,
+              1,
+              1,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "fill",
+            ]
+          }
+          stroke={
+            Array [
+              0,
+              1,
+              1,
+              1,
+              1,
+            ]
+          }
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={1}
+        />
+      </RNSVGSvgView>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "baseline",
+        "flexDirection": "row",
+        "marginBottom": 6,
+        "marginTop": 40,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      align={null}
+      allowFontScaling={false}
+      color="rgba(0, 0, 0, 0.9)"
+      ellipsizeMode="tail"
+      size={64}
+      style={
+        Array [
+          false,
+          Array [
+            false,
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "rgba(0, 0, 0, 0.9)",
+                "fontSize": 64,
+                "fontWeight": "600",
+              },
+              Array [
+                Object {
+                  "lineHeight": 88,
+                },
+                undefined,
+              ],
+            ],
+          ],
+        ]
+      }
+      text="42"
+      type={null}
+      weight={600}
+    >
+      42
+    </Text>
+    <Text
+      accessible={true}
+      align={null}
+      allowFontScaling={false}
+      color="rgba(0, 0, 0, 0.5)"
+      ellipsizeMode="tail"
+      size={32}
+      style={
+        Array [
+          false,
+          Array [
+            false,
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "rgba(0, 0, 0, 0.5)",
+                "fontSize": 32,
+                "fontWeight": "400",
+              },
+              Array [
+                Object {
+                  "lineHeight": 44,
+                },
+                undefined,
+              ],
+            ],
+          ],
+        ]
+      }
+      text="°C"
+      type={null}
+      weight={400}
+    >
+      °C
+    </Text>
+  </View>
+  <Text
+    accessible={true}
+    align={null}
+    allowFontScaling={false}
+    color="rgba(0, 0, 0, 0.5)"
+    ellipsizeMode="tail"
+    size={28}
+    style={
+      Array [
+        false,
+        Array [
+          false,
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "rgba(0, 0, 0, 0.5)",
+              "fontSize": 28,
+              "fontWeight": "500",
+            },
+            Array [
+              Object {
+                "lineHeight": 38,
+              },
+              undefined,
+            ],
+          ],
+        ],
+      ]
+    }
+    text="Temp"
+    type={null}
+    weight={500}
+  >
+    Temp
+  </Text>
+</View>
+`;
+
+exports[`IconCard ClassicIconBlockCard 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "borderRadius": 28,
+        "paddingBottom": 42,
+        "paddingLeft": 32,
+        "paddingRight": 42,
+        "paddingTop": 32,
+        "width": 350,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "flexDirection": "row",
+        "marginBottom": 46,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#158CFB",
+            "height": 50,
+            "width": 50,
+          },
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderRadius": 50,
+              "display": "flex",
+              "height": 50,
+              "justifyContent": "center",
+              "overflow": "hidden",
+              "width": 50,
+            },
+            Object {},
+          ],
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            Object {
+              "height": 72,
+              "width": 72,
+            },
+            false,
+            null,
+          ]
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+              false,
+              Object {
+                "flex": 0,
+                "height": 72,
+                "width": 72,
+              },
+            ]
+          }
+          vbHeight={1024}
+          vbWidth={1024}
+        >
+          <RNSVGPath
+            d="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+            fill={
+              Array [
+                0,
+                1,
+                1,
+                1,
+                1,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            propList={
+              Array [
+                "stroke",
+                "strokeWidth",
+                "fill",
+              ]
+            }
+            stroke={
+              Array [
+                0,
+                1,
+                1,
+                1,
+                1,
+              ]
+            }
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+          />
+        </RNSVGSvgView>
+      </View>
+    </View>
+    <Text
+      accessible={true}
+      align={null}
+      allowFontScaling={false}
+      color="#3D3D3D"
+      ellipsizeMode="tail"
+      size={32}
+      style={
+        Array [
+          false,
+          Array [
+            false,
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#3D3D3D",
+                "fontSize": 32,
+                "fontWeight": "400",
+              },
+              Array [
+                Object {
+                  "lineHeight": 48,
+                  "marginLeft": 24,
+                },
+                undefined,
+              ],
+            ],
+          ],
+        ]
+      }
+      text="Temp"
+      type={null}
+      weight={400}
+    >
+      Temp
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      align={null}
+      allowFontScaling={false}
+      color="#505050"
+      ellipsizeMode="tail"
+      size={48}
+      style={
+        Array [
+          false,
+          Array [
+            false,
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#505050",
+                "fontSize": 48,
+                "fontWeight": "600",
+              },
+              Array [
+                Object {
+                  "lineHeight": 52,
+                },
+                undefined,
+              ],
+            ],
+          ],
+        ]
+      }
+      text="42%"
+      type={null}
+      weight={600}
+    >
+      42%
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`IconCard NordicIconBlockCard 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "borderRadius": 32,
+        "paddingBottom": 36,
+        "paddingLeft": 40,
+        "paddingRight": 40,
+        "paddingTop": 48,
+        "width": 310,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#1082FE",
+          "height": 96,
+          "width": 96,
+        },
+        Array [
+          Object {
+            "alignItems": "center",
+            "borderRadius": 24,
+            "display": "flex",
+            "height": 96,
+            "justifyContent": "center",
+            "overflow": "hidden",
+            "width": 96,
+          },
+          Object {},
+        ],
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "height": 42,
+            "width": 42,
+          },
+          false,
+          null,
+        ]
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+            false,
+            Object {
+              "flex": 0,
+              "height": 42,
+              "width": 42,
+            },
+          ]
+        }
+        vbHeight={1024}
+        vbWidth={1024}
+      >
+        <RNSVGPath
+          d="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+          fill={
+            Array [
+              0,
+              1,
+              1,
+              1,
+              1,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "fill",
+            ]
+          }
+          stroke={
+            Array [
+              0,
+              1,
+              1,
+              1,
+              1,
+            ]
+          }
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={1}
+        />
+      </RNSVGSvgView>
+    </View>
+  </View>
+  <Text
+    accessible={true}
+    align={null}
+    allowFontScaling={false}
+    color="rgba(0, 0, 0, 0.9)"
+    ellipsizeMode="tail"
+    size={32}
+    style={
+      Array [
+        false,
+        Array [
+          false,
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "rgba(0, 0, 0, 0.9)",
+              "fontSize": 32,
+              "fontWeight": "400",
+            },
+            Array [
+              Object {
+                "lineHeight": 44,
+                "marginBottom": 8,
+                "marginTop": 58,
+              },
+              undefined,
+            ],
+          ],
+        ],
+      ]
+    }
+    text="Temp"
+    type={null}
+    weight={400}
+  >
+    Temp
+  </Text>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-around",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color="rgba(0, 0, 0, 0.5)"
+        ellipsizeMode="tail"
+        size={56}
+        style={
+          Array [
+            false,
+            Array [
+              false,
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "rgba(0, 0, 0, 0.5)",
+                  "fontSize": 56,
+                  "fontWeight": "400",
+                },
+                Array [
+                  Object {
+                    "lineHeight": 78,
+                  },
+                  undefined,
+                ],
+              ],
+            ],
+          ]
+        }
+        text="42%"
+        type={null}
+        weight={400}
+      >
+        42%
+      </Text>
+    </View>
+  </View>
+</View>
+`;

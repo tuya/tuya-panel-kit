@@ -30,7 +30,7 @@
     "url": "https://github.com/tuya/tuya-panel-kit/issues"
   },
   "dependencies": {
-    "tuya-panel-utils": "^0.1.0"
+    "tuya-panel-utils": "0.1.0"
   },
   "peerDependencies": {
     "react": "16.8.3",
