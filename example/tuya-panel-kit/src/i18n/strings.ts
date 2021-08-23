@@ -682,4 +682,4 @@ export default {
     tysectionlist_switch_subTitle:
       '这是这个列表的详细信息内容过长的情况这是这个列表的详细信息内容过长的情况',
   },
-};
+} as const;
