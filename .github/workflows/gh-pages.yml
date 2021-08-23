@@ -8,11 +8,28 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-      - name: Build
+
+      - name: Make Output Dir
         run: |
           cd example
+          mkdir dist
+
+      - name: Build tuya-panel-kit
+        run: |
+          project=tuya-panel-kit
+          cd example/$project
           yarn add tuya-panel-kit tuya-panel-utils tuya-panel-theme --registry=https://registry.npmjs.org
           DEV_MODE=umi yarn umi build
+          cp -r ./dist ../dist/$project
+
+      - name: Build tuya-components-styled
+        run: |
+          project=tuya-components-styled
+          cd example/$project
+          yarn add tuya-panel-kit tuya-panel-utils tuya-panel-theme --registry=https://registry.npmjs.org
+          DEV_MODE=umi yarn umi build
+          cp -r ./dist ../dist/$project
+        
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:

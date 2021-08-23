@@ -9,7 +9,7 @@
   "version": "1.0.1",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "prestart:umi": "yalc publish ../packages/tuya-panel-kit && yalc publish ../packages/tuya-panel-utils && yalc publish ../packages/tuya-panel-theme && yalc update",
+    "prestart:umi": "yalc publish ../../packages/tuya-panel-kit && yalc publish ../../packages/tuya-panel-utils && yalc publish ../../packages/tuya-panel-theme && yalc update",
     "start:umi": "cross-env DEV_MODE=umi umi dev",
     "build:umi": "cross-env DEV_MODE=umi umi build",
     "lint": "prettier --write '**/*.{js,jsx,ts,tsx}'",

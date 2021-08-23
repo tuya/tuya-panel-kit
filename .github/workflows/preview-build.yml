@@ -17,19 +17,19 @@ jobs:
       - name: build
         run: |
           NODE_OPTIONS='--max-old-space-size=4096'
-          cd example
+          cd example/tuya-panel-kit
           yarn add tuya-panel-kit tuya-panel-utils tuya-panel-theme --registry=https://registry.npmjs.org
           PREVIEW_PR=true DEV_MODE=umi yarn umi build
 
       - run: |
-          cd example
+          cd example/tuya-panel-kit
           zip -r dist.zip dist
 
       - name: upload dist artifact
         uses: actions/upload-artifact@v2
         with:
           name: dist
-          path: example/dist.zip
+          path: example/tuya-panel-kit/dist.zip
           retention-days: 5
 
       - name: Save PR number

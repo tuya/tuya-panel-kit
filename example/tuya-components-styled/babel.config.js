@@ -3,10 +3,10 @@ var getRNAlias = () => {
     ? {}
     : {
         'tuya-panel-kit/lib/components/iconfont/svg/defaultSvg':
-          '../packages/tuya-panel-kit/src/components/iconfont/svg/defaultSvg',
+          '../../packages/tuya-panel-kit/src/components/iconfont/svg/defaultSvg',
         'tuya-panel-kit/lib/components/modal/portalOut':
-          '../packages/tuya-panel-kit/src/components/modal/portalOut',
-        'tuya-panel-kit': '../packages/tuya-panel-kit/src/index.js',
+          '../../packages/tuya-panel-kit/src/components/modal/portalOut',
+        'tuya-panel-kit': '../../packages/tuya-panel-kit/src/index.js',
         'react-native-gesture-handler': './node_modules/react-native-gesture-handler',
       };
 };

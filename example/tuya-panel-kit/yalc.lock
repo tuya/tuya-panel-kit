@@ -1,0 +1,10 @@
+{
+  "version": "v1",
+  "packages": {
+    "tuya-panel-kit": {
+      "signature": "bf23d67b47b51749547ef8be605c7125",
+      "link": true,
+      "replaced": "file:.yalc/tuya-panel-kit"
+    }
+  }
+}

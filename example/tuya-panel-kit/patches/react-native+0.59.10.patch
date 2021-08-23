@@ -1,0 +1,48 @@
+diff --git a/node_modules/react-native/Libraries/Core/ReactNativeVersionCheck.js b/node_modules/react-native/Libraries/Core/ReactNativeVersionCheck.js
+index 578b205..b118b51 100644
+--- a/node_modules/react-native/Libraries/Core/ReactNativeVersionCheck.js
++++ b/node_modules/react-native/Libraries/Core/ReactNativeVersionCheck.js
+@@ -22,25 +22,25 @@ const ReactNativeVersion = require('ReactNativeVersion');
+  * and rely on its existence as a separate module.
+  */
+ exports.checkVersions = function checkVersions(): void {
+-  if (!PlatformConstants) {
+-    return;
+-  }
++  // if (!PlatformConstants) {
++  //   return;
++  // }
+ 
+-  const nativeVersion = PlatformConstants.reactNativeVersion;
+-  if (
+-    ReactNativeVersion.version.major !== nativeVersion.major ||
+-    ReactNativeVersion.version.minor !== nativeVersion.minor
+-  ) {
+-    console.error(
+-      `React Native version mismatch.\n\nJavaScript version: ${_formatVersion(
+-        ReactNativeVersion.version,
+-      )}\n` +
+-        `Native version: ${_formatVersion(nativeVersion)}\n\n` +
+-        'Make sure that you have rebuilt the native code. If the problem ' +
+-        'persists try clearing the Watchman and packager caches with ' +
+-        '`watchman watch-del-all && react-native start --reset-cache`.',
+-    );
+-  }
++  // const nativeVersion = PlatformConstants.reactNativeVersion;
++  // if (
++  //   ReactNativeVersion.version.major !== nativeVersion.major ||
++  //   ReactNativeVersion.version.minor !== nativeVersion.minor
++  // ) {
++  //   console.error(
++  //     `React Native version mismatch.\n\nJavaScript version: ${_formatVersion(
++  //       ReactNativeVersion.version,
++  //     )}\n` +
++  //       `Native version: ${_formatVersion(nativeVersion)}\n\n` +
++  //       'Make sure that you have rebuilt the native code. If the problem ' +
++  //       'persists try clearing the Watchman and packager caches with ' +
++  //       '`watchman watch-del-all && react-native start --reset-cache`.',
++  //   );
++  // }
+ };
+ 
+ function _formatVersion(version): string {
