@@ -1,9 +1,12 @@
 import React from 'react';
-import { View } from 'react-native';
+import { Dimensions, View } from 'react-native';
+import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 import { Motion } from 'tuya-panel-kit';
-
-import { BlockList, Icons } from '#components';
 import Strings from '#i18n';
+import { BlockList, Icons } from '#components';
+
+const window = Dimensions.get('window');
+const { width, height } = window;
 
 export default () => {
   const [fadeShow, setFadeShow] = React.useState(false);
@@ -53,8 +56,33 @@ export default () => {
           },
         ]}
       />
+      {(fadeShow ||
+        pullUpShow ||
+        scaleFadeInShow ||
+        scalePullDownShow ||
+        pushDownShow ||
+        toastShow) && (
+        <TouchableWithoutFeedback
+          style={{
+            width,
+            height,
+            backgroundColor: 'rgba(0, 0, 0, 0.4)',
+            position: 'absolute',
+            left: 0,
+            bottom: 0,
+          }}
+          onPress={() => {
+            fadeShow && setFadeShow(!fadeShow);
+            pullUpShow && setPullUpShow(!pullUpShow);
+            scaleFadeInShow && setScaleFadeInShow(!scaleFadeInShow);
+            scalePullDownShow && setScalePullDownShow(!scalePullDownShow);
+            pushDownShow && setPushDownShow(!pushDownShow);
+            toastShow && setToastShow(!toastShow);
+          }}
+        />
+      )}
       <Motion.Fade
-        style={{ position: 'absolute', bottom: 50 }}
+        style={{ position: 'absolute', bottom: 0 }}
         show={fadeShow}
         onHide={() => setFadeShow(false)}
       >
@@ -69,7 +97,7 @@ export default () => {
         <View style={[contentStyles, { bottom: 0 }]} />
       </Motion.PullUp>
       <Motion.ScaleFadeIn
-        style={{ position: 'absolute', bottom: 50 }}
+        style={{ position: 'absolute', bottom: 0 }}
         show={scaleFadeInShow}
         onHide={() => setScaleFadeInShow(false)}
       >
@@ -79,7 +107,7 @@ export default () => {
         <View style={contentStyles} />
       </Motion.ScalePullDown>
       <Motion.PushDown
-        style={{ position: 'absolute', bottom: 100 }}
+        style={{ position: 'absolute', bottom: 0 }}
         show={pushDownShow}
         onHide={() => setPushDownShow(false)}
         dropHeight={100}
@@ -87,7 +115,7 @@ export default () => {
         <View style={contentStyles} />
       </Motion.PushDown>
       <Motion.Toast
-        style={{ position: 'absolute', bottom: 50 }}
+        style={{ position: 'absolute', bottom: 0 }}
         show={toastShow}
         onFinish={() => setToastShow(false)}
       >
