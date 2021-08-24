@@ -2,11 +2,11 @@
  * @jest-environment jsdom
  */
 
- import React from 'react';
- import renderer from 'react-test-renderer';
- import TuyaRNSvgs from 'tuya-panel-kit/lib/components/iconfont/svg/defaultSvg';
- import { AcrylicEnumButtonGroup } from '../index';
- import { mount } from 'enzyme';
+import React from 'react';
+import renderer from 'react-test-renderer';
+import TuyaRNSvgs from 'tuya-panel-kit/lib/components/iconfont/svg/defaultSvg';
+import { AcrylicEnumButtonGroup } from '../index';
+import { mount } from 'enzyme';
 
 const data = {
   label: '开关1',

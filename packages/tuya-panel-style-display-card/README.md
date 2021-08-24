@@ -1,4 +1,4 @@
-# `tuya-panel-style-dispaly-card`
+# `tuya-panel-style-display-card`
 
 ## Usage
 
