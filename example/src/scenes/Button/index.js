@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, ScrollView } from 'react-native';
-import { Button } from 'tuya-panel-kit';
+import { Button, TYSdk } from 'tuya-panel-kit';
 import TesterTitle from '../../components/TesterTitle';
 
 const linearBackground = {
@@ -47,7 +47,13 @@ class ButtonScene extends React.PureComponent {
     return (
       <ScrollView>
         <TesterTitle title="文字按钮" />
-        <Button text="点击一下我" />
+        <Button
+          text="点击一下我"
+          onPress={() => {
+            console.log(111);
+            TYSdk.mobile.jumpTo('https://www.baidu.com');
+          }}
+        />
         <TesterTitle title="图片按钮" />
         <Button image={require('../../res/close.png')} />
         <TesterTitle title="图片按钮（大号）" />
