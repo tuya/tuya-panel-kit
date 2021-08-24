@@ -10,7 +10,7 @@ export type SliderCardComponentProps = ISliderProps;
 
 const { convertX: cx } = Utils.RatioUtils;
 const SliderCard: React.FC<ISliderProps> = ({
-  silderProps,
+  sliderProps,
   padding,
   style, // 最外层容器 样式  优先级最高
   titleStyle, // title容器样式 优先级最高
@@ -230,7 +230,7 @@ const SliderCard: React.FC<ISliderProps> = ({
             // minimumTrackTintColor="#ff6700"
             canTouchTrack={canTouchTrack}
             disabled={disabled}
-            {...silderProps}
+            {...sliderProps}
           />
           {bothSideIcons && Array.isArray(bothSideIcons) && (
             <View style={{marginLeft: cx(8)}}>

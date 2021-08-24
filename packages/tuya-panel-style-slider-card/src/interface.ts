@@ -79,7 +79,7 @@ type FontWeight =
   | '900';
 
 type Props = {
-  silderProps?: SliderProps; // slider props 设置slider组件的参数 优先级最最高 ，slider组件文档：https://panel-docs.tuyacn.com/docs/data-entry/slider
+  sliderProps?: SliderProps; // slider props 设置slider组件的参数 优先级最最高 ，slider组件文档：https://panel-docs.tuyacn.com/docs/data-entry/slider
   width?: number;
   style?: StyleProp<ViewStyle>;
   titleStyle?: StyleProp<ViewStyle>;
