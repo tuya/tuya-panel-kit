@@ -29,7 +29,7 @@
   "scripts": {
     "prebuild": "rimraf lib/*",
     "build": "lerna run build",
-    "dev": "lerna run dev --parallel",
+    "dev": "lerna run dev",
     "test": "lerna run test --parallel",
     "test:kit": "cd packages/tuya-panel-kit && yarn test",
     "test:utils": "cd packages/tuya-panel-utils && yarn test",
