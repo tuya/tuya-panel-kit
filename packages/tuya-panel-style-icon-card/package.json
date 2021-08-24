@@ -19,7 +19,7 @@
     "tuya-panel-kit": "4.7.4"
   },
   "publishConfig": {
-    "registry": "https://registry.npm.taobao.org"
+    "registry": "https://registry.npmjs.org"
   },
   "repository": {
     "type": "git",
