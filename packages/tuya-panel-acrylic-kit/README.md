@@ -5,5 +5,5 @@ Acrylic style component collection package
 ## Usage
 
 ```jsx
-import { AcrylicBlockCard } from 'tuya-pannel-acrylic-kit';
+import { AcrylicBlockCard } from 'tuya-panel-acrylic-kit';
 ```

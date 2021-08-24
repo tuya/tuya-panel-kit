@@ -5,5 +5,5 @@ Nordic style component collection package
 ## Usage
 
 ```jsx
-import { NordicBlockCard } from 'tuya-pannel-nordic-kit';
+import { NordicBlockCard } from 'tuya-panel-nordic-kit';
 ```
