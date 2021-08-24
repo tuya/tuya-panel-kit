@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import React from 'react';
 import { View } from 'react-native';
-import { SliderWithLine, TYText, Utils } from 'tuya-panel-kit';
-import { ListView } from '#components';
+import { SliderWithLine, Utils } from 'tuya-panel-kit';
 import Strings from '#i18n';
+import { ListView } from '#components';
 
 const { convertX: cx } = Utils.RatioUtils;
 
@@ -22,7 +22,11 @@ export default () => {
                 onSlidingComplete={value => console.log(value, 'res')}
                 style={{ marginBottom: 20 }}
                 // @ts-ignore
-                nounWidth={4}
+                nounWidth={2}
+                nounColor="#F84803"
+                activeNounColor="#fff"
+                backgroundColor="#E5E5E5"
+                activeBackgroundColor="#F84803"
               />
               <SliderWithLine
                 stepValue={10}
@@ -30,7 +34,10 @@ export default () => {
                 maxValue={80}
                 minDisabled={false}
                 onSlidingComplete={value => console.log(value, 'res')}
-                activeNounColor="#f00"
+                nounColor="#F84803"
+                activeNounColor="#fff"
+                backgroundColor="#E5E5E5"
+                activeBackgroundColor="#F84803"
               />
             </View>
           ),
@@ -44,7 +51,10 @@ export default () => {
                 // onSlidingStart={value => console.log(value, 'res')}
                 onSlidingComplete={value => console.log(value, 'res')}
                 // @ts-ignore
-                activeNounColor="#f00"
+                nounColor="#F84803"
+                activeNounColor="#fff"
+                backgroundColor="#E5E5E5"
+                activeBackgroundColor="#F84803"
                 nounWidth={cx(14)}
                 nounHeight={cx(1)}
                 width={cx(60)}
@@ -57,6 +67,10 @@ export default () => {
                 stepValue={10}
                 horizontal={false}
                 minValue={10}
+                nounColor="#F84803"
+                activeNounColor="#fff"
+                backgroundColor="#E5E5E5"
+                activeBackgroundColor="#F84803"
                 maxValue={80}
                 onSlidingComplete={value => console.log(value, 'res')}
                 nounWidth={cx(14)}

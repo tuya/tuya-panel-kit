@@ -257,6 +257,8 @@ export default {
     tabs_nested: 'Nested Tabs',
     // topbar
     topbar: 'TopBar',
+    topbar_title: 'TopBar',
+    topbar_back: 'Back',
     topbar_basic_split: 'Basic usage - split version',
     topbar_basic_pack: 'Basic use - package version',
     topbar_rad_pack: 'Radial Gradient - package version',
@@ -599,6 +601,8 @@ export default {
     tabs_nested: '嵌套的 Tabs',
     // topbar
     topbar: 'TopBar 头部栏',
+    topbar_title: '头部栏',
+    topbar_back: '返回',
     topbar_basic_split: '基础使用 - 拆分版',
     topbar_basic_pack: '基础使用 - 封装版',
     topbar_rad_pack: '径向渐变 - 封装版',
