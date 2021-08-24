@@ -93,7 +93,7 @@ const AcrylicComponent: React.FC<Props> = props => {
 
   return (
     <AcrylicSliderCard
-      silderProps={sliderProps}
+      sliderProps={sliderProps}
       value={value}
       renderValue={_value => data[_value].label}
       {...props}

@@ -12,7 +12,7 @@ export const classicLargeSliderProps: Partial<ISliderProps> = {
     height: cx(36),
     borderRadius: cx(36),
   },
-  silderProps: {
+  sliderProps: {
     thumbTouchSize: { width: cx(38), height: cx(38) },
   },
   thumbStyle: {
@@ -51,7 +51,7 @@ export const NorDicSliderCardProps: Partial<ISliderProps> = {
     width: cx(3),
     height: cx(14),
   },
-  silderProps: {
+  sliderProps: {
     thumbTouchSize: { width: cx(46), height: cx(46) },
   },
   renderMinimumTrack: () => (

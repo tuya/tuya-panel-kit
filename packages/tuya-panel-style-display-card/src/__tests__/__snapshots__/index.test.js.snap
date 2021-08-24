@@ -48,19 +48,25 @@ exports[`DisplayCard AcrylicDisplayCard 1`] = `
             Array [
               false,
               Array [
-                Object {
-                  "backgroundColor": "transparent",
-                  "color": "#000",
-                  "fontSize": 128,
-                  "fontWeight": "600",
-                },
+                false,
                 Array [
-                  Object {
-                    "lineHeight": 180,
-                  },
-                  Object {
-                    "lineHeight": 175,
-                  },
+                  false,
+                  Array [
+                    Object {
+                      "backgroundColor": "transparent",
+                      "color": "#000",
+                      "fontSize": 128,
+                      "fontWeight": "600",
+                    },
+                    Array [
+                      Object {
+                        "lineHeight": 180,
+                      },
+                      Object {
+                        "lineHeight": 175,
+                      },
+                    ],
+                  ],
                 ],
               ],
             ],
@@ -85,22 +91,28 @@ exports[`DisplayCard AcrylicDisplayCard 1`] = `
             Array [
               false,
               Array [
-                Object {
-                  "backgroundColor": "transparent",
-                  "color": "rgba(0, 0, 0, 0.5)",
-                  "fontSize": 36,
-                  "fontWeight": "normal",
-                },
+                false,
                 Array [
-                  Object {
-                    "lineHeight": 48,
-                    "marginLeft": 10,
-                    "marginTop": 20,
-                  },
-                  Object {
-                    "lineHeight": 50,
-                    "paddingBottom": 28,
-                  },
+                  false,
+                  Array [
+                    Object {
+                      "backgroundColor": "transparent",
+                      "color": "rgba(0, 0, 0, 0.5)",
+                      "fontSize": 36,
+                      "fontWeight": "normal",
+                    },
+                    Array [
+                      Object {
+                        "lineHeight": 48,
+                        "marginLeft": 10,
+                        "marginTop": 20,
+                      },
+                      Object {
+                        "lineHeight": 50,
+                        "paddingBottom": 28,
+                      },
+                    ],
+                  ],
                 ],
               ],
             ],
@@ -126,18 +138,24 @@ exports[`DisplayCard AcrylicDisplayCard 1`] = `
           Array [
             false,
             Array [
-              Object {
-                "backgroundColor": "transparent",
-                "color": "rgba(0, 0, 0, 0.5)",
-                "fontSize": 28,
-                "fontWeight": "500",
-              },
+              false,
               Array [
-                Object {
-                  "lineHeight": 40,
-                  "marginTop": 8,
-                },
-                undefined,
+                false,
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "color": "rgba(0, 0, 0, 0.5)",
+                    "fontSize": 28,
+                    "fontWeight": "500",
+                  },
+                  Array [
+                    Object {
+                      "lineHeight": 40,
+                      "marginTop": 8,
+                    },
+                    undefined,
+                  ],
+                ],
               ],
             ],
           ],
@@ -201,17 +219,23 @@ exports[`DisplayCard ClassicDisplayCard 1`] = `
             Array [
               false,
               Array [
-                Object {
-                  "backgroundColor": "transparent",
-                  "color": "#000",
-                  "fontSize": 148,
-                  "fontWeight": "700",
-                },
+                false,
                 Array [
-                  Object {
-                    "lineHeight": 180,
-                  },
-                  undefined,
+                  false,
+                  Array [
+                    Object {
+                      "backgroundColor": "transparent",
+                      "color": "#000",
+                      "fontSize": 148,
+                      "fontWeight": "700",
+                    },
+                    Array [
+                      Object {
+                        "lineHeight": 180,
+                      },
+                      undefined,
+                    ],
+                  ],
                 ],
               ],
             ],
@@ -236,19 +260,25 @@ exports[`DisplayCard ClassicDisplayCard 1`] = `
             Array [
               false,
               Array [
-                Object {
-                  "backgroundColor": "transparent",
-                  "color": "#000",
-                  "fontSize": 40,
-                  "fontWeight": "500",
-                },
+                false,
                 Array [
-                  Object {
-                    "lineHeight": 48,
-                    "marginLeft": 10,
-                    "marginTop": 20,
-                  },
-                  undefined,
+                  false,
+                  Array [
+                    Object {
+                      "backgroundColor": "transparent",
+                      "color": "#000",
+                      "fontSize": 40,
+                      "fontWeight": "500",
+                    },
+                    Array [
+                      Object {
+                        "lineHeight": 48,
+                        "marginLeft": 10,
+                        "marginTop": 20,
+                      },
+                      undefined,
+                    ],
+                  ],
                 ],
               ],
             ],
@@ -274,18 +304,24 @@ exports[`DisplayCard ClassicDisplayCard 1`] = `
           Array [
             false,
             Array [
-              Object {
-                "backgroundColor": "transparent",
-                "color": "rgba(0, 0, 0, 0.5)",
-                "fontSize": 28,
-                "fontWeight": "400",
-              },
+              false,
               Array [
-                Object {
-                  "lineHeight": 40,
-                  "marginTop": 8,
-                },
-                undefined,
+                false,
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "color": "rgba(0, 0, 0, 0.5)",
+                    "fontSize": 28,
+                    "fontWeight": "400",
+                  },
+                  Array [
+                    Object {
+                      "lineHeight": 40,
+                      "marginTop": 8,
+                    },
+                    undefined,
+                  ],
+                ],
               ],
             ],
           ],
@@ -467,19 +503,25 @@ exports[`DisplayCard NordicDisplayCard 1`] = `
             Array [
               false,
               Array [
-                Object {
-                  "backgroundColor": "transparent",
-                  "color": "rgba(0, 0, 0, 0.9)",
-                  "fontSize": 48,
-                  "fontWeight": "700",
-                },
+                false,
                 Array [
-                  Object {
-                    "lineHeight": 180,
-                  },
-                  Object {
-                    "lineHeight": 68,
-                  },
+                  false,
+                  Array [
+                    Object {
+                      "backgroundColor": "transparent",
+                      "color": "rgba(0, 0, 0, 0.9)",
+                      "fontSize": 48,
+                      "fontWeight": "700",
+                    },
+                    Array [
+                      Object {
+                        "lineHeight": 180,
+                      },
+                      Object {
+                        "lineHeight": 68,
+                      },
+                    ],
+                  ],
                 ],
               ],
             ],
@@ -505,21 +547,27 @@ exports[`DisplayCard NordicDisplayCard 1`] = `
           Array [
             false,
             Array [
-              Object {
-                "backgroundColor": "transparent",
-                "color": "rgba(0, 0, 0, 0.5)",
-                "fontSize": 24,
-                "fontWeight": "400",
-              },
+              false,
               Array [
-                Object {
-                  "lineHeight": 40,
-                  "marginTop": 8,
-                },
-                Object {
-                  "lineHeight": 34,
-                  "marginTop": 0,
-                },
+                false,
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                    "color": "rgba(0, 0, 0, 0.5)",
+                    "fontSize": 24,
+                    "fontWeight": "400",
+                  },
+                  Array [
+                    Object {
+                      "lineHeight": 40,
+                      "marginTop": 8,
+                    },
+                    Object {
+                      "lineHeight": 34,
+                      "marginTop": 0,
+                    },
+                  ],
+                ],
               ],
             ],
           ],
