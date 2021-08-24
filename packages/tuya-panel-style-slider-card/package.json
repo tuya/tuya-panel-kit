@@ -31,7 +31,7 @@
     "url": "https://github.com/tuya/tuya-panel-kit/issues"
   },
   "dependencies": {
-    "tuya-panel-utils": "0.1.0",
+    "tuya-panel-utils": "^0.1.0",
     "tuya-panel-kit": "^4.7.5",
     "tuya-panel-style-icon-background": "0.0.0"
   },
