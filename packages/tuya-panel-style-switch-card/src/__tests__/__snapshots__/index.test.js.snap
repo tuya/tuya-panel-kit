@@ -1,0 +1,3754 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SwitchCard AcrylicSwitchCard 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#FFF",
+      "borderRadius": 32,
+      "flexDirection": "row",
+      "justifyContent": "space-around",
+      "opacity": 1,
+      "paddingBottom": 40,
+      "paddingLeft": 50,
+      "paddingRight": 48,
+      "paddingTop": 38,
+      "width": 556,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "height": 80,
+            "width": 80,
+          },
+          false,
+          null,
+        ]
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+            false,
+            Object {
+              "flex": 0,
+              "height": 80,
+              "width": 80,
+            },
+          ]
+        }
+        vbHeight={1024}
+        vbWidth={1024}
+      >
+        <RNSVGPath
+          d="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+          fill={
+            Array [
+              0,
+              0.8274509803921568,
+              0.8274509803921568,
+              0.8274509803921568,
+              1,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "fill",
+            ]
+          }
+          stroke={
+            Array [
+              0,
+              0.8274509803921568,
+              0.8274509803921568,
+              0.8274509803921568,
+              1,
+            ]
+          }
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={1}
+        />
+      </RNSVGSvgView>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+          "marginLeft": 24,
+          "marginRight": 24,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color="rgba(0, 0, 0, 0.87)"
+        ellipsizeMode="tail"
+        size={32}
+        style={
+          Array [
+            false,
+            Array [
+              false,
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "rgba(0, 0, 0, 0.87)",
+                  "fontSize": 32,
+                  "fontWeight": "400",
+                },
+                Array [
+                  Object {
+                    "lineHeight": 48,
+                  },
+                  undefined,
+                ],
+              ],
+            ],
+          ]
+        }
+        text="Switch Card"
+        type={null}
+        weight={400}
+      >
+        Switch Card
+      </Text>
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color="rgba(0, 0, 0, 0.35)"
+        ellipsizeMode="tail"
+        size={28}
+        style={
+          Array [
+            false,
+            Array [
+              false,
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "rgba(0, 0, 0, 0.35)",
+                  "fontSize": 28,
+                  "fontWeight": "400",
+                },
+                Array [
+                  Object {
+                    "lineHeight": 48,
+                  },
+                  Object {
+                    "lineHeight": 38,
+                  },
+                ],
+              ],
+            ],
+          ]
+        }
+        text="switch card"
+        type={null}
+        weight={400}
+      >
+        switch card
+      </Text>
+    </View>
+  </View>
+  <View
+    needsOffscreenAlphaCompositing={true}
+    style={
+      Array [
+        undefined,
+        false,
+      ]
+    }
+  >
+    <View
+      accessibilityLabel="SwitchButton"
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "height": 57,
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": 106,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 20,
+              "height": 54,
+              "justifyContent": "center",
+              "width": 104,
+            },
+            Object {
+              "backgroundColor": "#FE7862",
+              "borderColor": "#FE7862",
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#FFF",
+            "borderRadius": 1,
+            "height": 12,
+            "justifyContent": "center",
+            "left": 9,
+            "position": "absolute",
+            "width": 2,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#FFF",
+            "borderRadius": 1,
+            "height": 2.4000000000000004,
+            "justifyContent": "center",
+            "position": "absolute",
+            "right": 9,
+            "width": 2,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#fff",
+            "borderRadius": 17.6,
+            "elevation": 2,
+            "height": 48,
+            "justifyContent": "center",
+            "position": "absolute",
+            "shadowColor": "rgba(0, 0, 0, 0.3)",
+            "shadowOffset": Object {
+              "height": 3,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 3,
+            "transform": Array [
+              Object {
+                "translateX": 54,
+              },
+            ],
+            "width": 48,
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`SwitchCard AcrylicSwitchCard 2`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#FFF",
+      "borderRadius": 28,
+      "flexDirection": "row",
+      "justifyContent": "space-around",
+      "opacity": 1,
+      "paddingBottom": 40,
+      "paddingLeft": 50,
+      "paddingRight": 48,
+      "paddingTop": 38,
+      "width": 620,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "height": 64,
+            "width": 64,
+          },
+          false,
+          null,
+        ]
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+            false,
+            Object {
+              "flex": 0,
+              "height": 64,
+              "width": 64,
+            },
+          ]
+        }
+        vbHeight={1024}
+        vbWidth={1024}
+      >
+        <RNSVGPath
+          d="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+          fill={
+            Array [
+              0,
+              0.8274509803921568,
+              0.8274509803921568,
+              0.8274509803921568,
+              1,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "fill",
+            ]
+          }
+          stroke={
+            Array [
+              0,
+              0.8274509803921568,
+              0.8274509803921568,
+              0.8274509803921568,
+              1,
+            ]
+          }
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={1}
+        />
+      </RNSVGSvgView>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+          "marginLeft": 24,
+          "marginRight": 24,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color="rgba(0, 0, 0, 0.87)"
+        ellipsizeMode="tail"
+        size={32}
+        style={
+          Array [
+            false,
+            Array [
+              false,
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "rgba(0, 0, 0, 0.87)",
+                  "fontSize": 32,
+                  "fontWeight": "400",
+                },
+                Array [
+                  Object {
+                    "lineHeight": 48,
+                  },
+                  Object {
+                    "lineHeight": 44,
+                  },
+                ],
+              ],
+            ],
+          ]
+        }
+        text="List Card"
+        type={null}
+        weight={400}
+      >
+        List Card
+      </Text>
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color="rgba(0, 0, 0, 0.35)"
+        ellipsizeMode="tail"
+        size={28}
+        style={
+          Array [
+            false,
+            Array [
+              false,
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "rgba(0, 0, 0, 0.35)",
+                  "fontSize": 28,
+                  "fontWeight": "400",
+                },
+                Array [
+                  Object {
+                    "lineHeight": 48,
+                  },
+                  Object {
+                    "lineHeight": 38,
+                  },
+                ],
+              ],
+            ],
+          ]
+        }
+        text="200L"
+        type={null}
+        weight={400}
+      >
+        200L
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "height": 24,
+            "width": 24,
+          },
+          false,
+          null,
+        ]
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+            false,
+            Object {
+              "flex": 0,
+              "height": 24,
+              "width": 24,
+            },
+          ]
+        }
+        vbHeight={1024}
+        vbWidth={1024}
+      >
+        <RNSVGPath
+          d="M268.458667 55.125333A42.666667 42.666667 0 0 1 322.901333 50.346667l5.973334 4.864 426.666666 426.666666a42.666667 42.666667 0 0 1 4.864 54.442667l-4.864 5.973333-426.666666 426.666667a42.666667 42.666667 0 0 1-65.28-54.442667l4.864-5.973333L665.002667 512 268.458667 115.541333A42.666667 42.666667 0 0 1 263.68 61.098667l4.864-5.973334z"
+          fill={
+            Array [
+              0,
+              0,
+              0,
+              0,
+              0.25,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "fill",
+            ]
+          }
+          stroke={
+            Array [
+              0,
+              0,
+              0,
+              0,
+              0.25,
+            ]
+          }
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={1}
+        />
+      </RNSVGSvgView>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`SwitchCard AcrylicSwitchCard 3`] = `
+<ThemeProvider
+  theme={null}
+>
+  <WithTheme(ThemeConsumer)>
+    <ThemeConsumer
+      theme={null}
+    >
+      <ThemeProvider
+        theme={Object {}}
+      >
+        <AcrylicItemCard
+          icon="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+          onLongPress={[Function]}
+        >
+          <StyleSwitchCard
+            backgroundColor="#FFF"
+            disabled={true}
+            fontColor="#3D3D3D"
+            fontSize={32}
+            fontWeight={400}
+            icon="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+            iconSize={64}
+            milliseconds={500}
+            onLongPress={[Function]}
+            padding={
+              Array [
+                38,
+                48,
+                40,
+                50,
+              ]
+            }
+            radius={28}
+            showIcon={true}
+            subFontColor="rgba(61, 61, 61, 0.5)"
+            subFontSize={28}
+            subFontWeight={400}
+            switchSize={
+              Object {
+                "activeSize": 40,
+                "height": 48,
+                "margin": 4,
+                "width": 80,
+              }
+            }
+            text="List Card"
+            textStyle={
+              Object {
+                "lineHeight": 44,
+              }
+            }
+            unit="°C"
+            unitColor="rgba(0, 0, 0, 0.5)"
+            unitSize={24}
+            unitStyle={
+              Object {
+                "marginTop": 10,
+              }
+            }
+            unitWeight={400}
+            value="26"
+            valueColor="rgba(0, 0, 0, 0.87)"
+            valueFontWeight={500}
+            valueSize={40}
+            valueStyle={
+              Object {
+                "lineHeight": 54,
+              }
+            }
+            width={620}
+          >
+            <TouchableOpacity
+              activeOpacity={0.8}
+              disabled={true}
+              onPressIn={[Function]}
+              onPressOut={[Function]}
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#FFF",
+                    "borderRadius": 28,
+                    "flexDirection": "row",
+                    "justifyContent": "space-around",
+                    "paddingBottom": 40,
+                    "paddingLeft": 50,
+                    "paddingRight": 48,
+                    "paddingTop": 38,
+                    "width": 620,
+                  },
+                  undefined,
+                ]
+              }
+            >
+              <AnimatedComponent
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Array [
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "#FFF",
+                        "borderRadius": 28,
+                        "flexDirection": "row",
+                        "justifyContent": "space-around",
+                        "paddingBottom": 40,
+                        "paddingLeft": 50,
+                        "paddingRight": 48,
+                        "paddingTop": 38,
+                        "width": 620,
+                      },
+                      undefined,
+                    ],
+                    Object {
+                      "opacity": 1,
+                    },
+                  ]
+                }
+              >
+                <View
+                  accessible={true}
+                  isTVSelectable={true}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#FFF",
+                      "borderRadius": 28,
+                      "flexDirection": "row",
+                      "justifyContent": "space-around",
+                      "opacity": 1,
+                      "paddingBottom": 40,
+                      "paddingLeft": 50,
+                      "paddingRight": 48,
+                      "paddingTop": 38,
+                      "width": 620,
+                    }
+                  }
+                >
+                  <View
+                    accessible={true}
+                    isTVSelectable={true}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "#FFF",
+                        "borderRadius": 28,
+                        "flexDirection": "row",
+                        "justifyContent": "space-around",
+                        "opacity": 1,
+                        "paddingBottom": 40,
+                        "paddingLeft": 50,
+                        "paddingRight": 48,
+                        "paddingTop": 38,
+                        "width": 620,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "flex": 1,
+                          "flexDirection": "row",
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "flex": 1,
+                            "flexDirection": "row",
+                          }
+                        }
+                      >
+                        <ClassicIconBackground
+                          icon="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+                          iconBgColor="#158CFB"
+                          iconBgRadius={50}
+                          iconBgSize={50}
+                          iconColor="#D3D3D3"
+                          iconSize={64}
+                          imageRadius={0}
+                          showIcon={true}
+                          showIconBg={false}
+                          style={Object {}}
+                        >
+                          <Component
+                            color="#D3D3D3"
+                            d="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+                            size={64}
+                          >
+                            <IconFont
+                              color="#D3D3D3"
+                              d="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+                              fill={null}
+                              hFlip={false}
+                              height={null}
+                              name={null}
+                              size={64}
+                              stroke={null}
+                              strokeCap="round"
+                              strokeDash={
+                                Array [
+                                  0,
+                                  0,
+                                ]
+                              }
+                              strokeJoin="round"
+                              strokeWidth={1}
+                              style={null}
+                              vFlip={false}
+                              viewBox="0 0 1024 1024"
+                              width={null}
+                            >
+                              <View
+                                style={
+                                  Array [
+                                    Object {
+                                      "flexDirection": "row",
+                                    },
+                                    Object {
+                                      "height": 64,
+                                      "width": 64,
+                                    },
+                                    false,
+                                    null,
+                                  ]
+                                }
+                              >
+                                <View
+                                  style={
+                                    Array [
+                                      Object {
+                                        "flexDirection": "row",
+                                      },
+                                      Object {
+                                        "height": 64,
+                                        "width": 64,
+                                      },
+                                      false,
+                                      null,
+                                    ]
+                                  }
+                                >
+                                  <Svg
+                                    height={64}
+                                    key="0"
+                                    preserveAspectRatio="xMidYMid meet"
+                                    viewBox="0 0 1024 1024"
+                                    width={64}
+                                  >
+                                    <_class
+                                      align="xMidYMid"
+                                      meetOrSlice={0}
+                                      minX={0}
+                                      minY={0}
+                                      style={
+                                        Array [
+                                          Object {
+                                            "backgroundColor": "transparent",
+                                          },
+                                          undefined,
+                                          false,
+                                          Object {
+                                            "flex": 0,
+                                            "height": 64,
+                                            "width": 64,
+                                          },
+                                        ]
+                                      }
+                                      vbHeight={1024}
+                                      vbWidth={1024}
+                                    >
+                                      <RNSVGSvgView
+                                        align="xMidYMid"
+                                        meetOrSlice={0}
+                                        minX={0}
+                                        minY={0}
+                                        style={
+                                          Array [
+                                            Object {
+                                              "backgroundColor": "transparent",
+                                            },
+                                            undefined,
+                                            false,
+                                            Object {
+                                              "flex": 0,
+                                              "height": 64,
+                                              "width": 64,
+                                            },
+                                          ]
+                                        }
+                                        vbHeight={1024}
+                                        vbWidth={1024}
+                                      >
+                                        <Path
+                                          d="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+                                          fill="#D3D3D3"
+                                          height={null}
+                                          stroke="#D3D3D3"
+                                          strokeCap="round"
+                                          strokeDash={
+                                            Array [
+                                              0,
+                                              0,
+                                            ]
+                                          }
+                                          strokeJoin="round"
+                                          strokeWidth={1}
+                                          width={null}
+                                        >
+                                          <RNSVGPath
+                                            d="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+                                            fill={
+                                              Array [
+                                                0,
+                                                0.8274509803921568,
+                                                0.8274509803921568,
+                                                0.8274509803921568,
+                                                1,
+                                              ]
+                                            }
+                                            fillOpacity={1}
+                                            fillRule={1}
+                                            matrix={
+                                              Array [
+                                                1,
+                                                0,
+                                                0,
+                                                1,
+                                                0,
+                                                0,
+                                              ]
+                                            }
+                                            opacity={1}
+                                            propList={
+                                              Array [
+                                                "stroke",
+                                                "strokeWidth",
+                                                "fill",
+                                              ]
+                                            }
+                                            stroke={
+                                              Array [
+                                                0,
+                                                0.8274509803921568,
+                                                0.8274509803921568,
+                                                0.8274509803921568,
+                                                1,
+                                              ]
+                                            }
+                                            strokeDasharray={null}
+                                            strokeDashoffset={null}
+                                            strokeLinecap={0}
+                                            strokeLinejoin={0}
+                                            strokeMiterlimit={4}
+                                            strokeOpacity={1}
+                                            strokeWidth={1}
+                                          />
+                                        </Path>
+                                      </RNSVGSvgView>
+                                    </_class>
+                                  </Svg>
+                                </View>
+                              </View>
+                            </IconFont>
+                          </Component>
+                        </ClassicIconBackground>
+                        <View
+                          style={
+                            Object {
+                              "flex": 1,
+                              "justifyContent": "center",
+                              "marginLeft": 24,
+                              "marginRight": 24,
+                            }
+                          }
+                        >
+                          <View
+                            style={
+                              Object {
+                                "flex": 1,
+                                "justifyContent": "center",
+                                "marginLeft": 24,
+                                "marginRight": 24,
+                              }
+                            }
+                          >
+                            <TYText
+                              align={null}
+                              color="#3D3D3D"
+                              size={32}
+                              style={
+                                Array [
+                                  Object {
+                                    "lineHeight": 48,
+                                  },
+                                  Object {
+                                    "lineHeight": 44,
+                                  },
+                                ]
+                              }
+                              text="List Card"
+                              type={null}
+                              weight={400}
+                            >
+                              <Styled(Text)
+                                align={null}
+                                allowFontScaling={false}
+                                color="#3D3D3D"
+                                size={32}
+                                style={
+                                  Array [
+                                    Object {
+                                      "lineHeight": 48,
+                                    },
+                                    Object {
+                                      "lineHeight": 44,
+                                    },
+                                  ]
+                                }
+                                text="List Card"
+                                type={null}
+                                weight={400}
+                              >
+                                <Text
+                                  accessible={true}
+                                  align={null}
+                                  allowFontScaling={false}
+                                  color="#3D3D3D"
+                                  ellipsizeMode="tail"
+                                  size={32}
+                                  style={
+                                    Array [
+                                      Object {
+                                        "backgroundColor": "transparent",
+                                        "color": "#3D3D3D",
+                                        "fontSize": 32,
+                                        "fontWeight": "400",
+                                      },
+                                      Array [
+                                        Object {
+                                          "lineHeight": 48,
+                                        },
+                                        Object {
+                                          "lineHeight": 44,
+                                        },
+                                      ],
+                                    ]
+                                  }
+                                  text="List Card"
+                                  type={null}
+                                  weight={400}
+                                >
+                                  <Text
+                                    accessible={true}
+                                    align={null}
+                                    allowFontScaling={false}
+                                    color="#3D3D3D"
+                                    ellipsizeMode="tail"
+                                    size={32}
+                                    style={
+                                      Array [
+                                        false,
+                                        Array [
+                                          false,
+                                          Array [
+                                            Object {
+                                              "backgroundColor": "transparent",
+                                              "color": "#3D3D3D",
+                                              "fontSize": 32,
+                                              "fontWeight": "400",
+                                            },
+                                            Array [
+                                              Object {
+                                                "lineHeight": 48,
+                                              },
+                                              Object {
+                                                "lineHeight": 44,
+                                              },
+                                            ],
+                                          ],
+                                        ],
+                                      ]
+                                    }
+                                    text="List Card"
+                                    type={null}
+                                    weight={400}
+                                  >
+                                    List Card
+                                  </Text>
+                                </Text>
+                              </Styled(Text)>
+                            </TYText>
+                          </View>
+                        </View>
+                      </View>
+                    </View>
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "flexDirection": "row",
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "flexDirection": "row",
+                          }
+                        }
+                      >
+                        <TYText
+                          align={null}
+                          color="rgba(0, 0, 0, 0.87)"
+                          size={40}
+                          style={
+                            Array [
+                              Object {
+                                "lineHeight": 64,
+                              },
+                              Object {
+                                "lineHeight": 54,
+                              },
+                            ]
+                          }
+                          text="26"
+                          type={null}
+                          weight={500}
+                        >
+                          <Styled(Text)
+                            align={null}
+                            allowFontScaling={false}
+                            color="rgba(0, 0, 0, 0.87)"
+                            size={40}
+                            style={
+                              Array [
+                                Object {
+                                  "lineHeight": 64,
+                                },
+                                Object {
+                                  "lineHeight": 54,
+                                },
+                              ]
+                            }
+                            text="26"
+                            type={null}
+                            weight={500}
+                          >
+                            <Text
+                              accessible={true}
+                              align={null}
+                              allowFontScaling={false}
+                              color="rgba(0, 0, 0, 0.87)"
+                              ellipsizeMode="tail"
+                              size={40}
+                              style={
+                                Array [
+                                  Object {
+                                    "backgroundColor": "transparent",
+                                    "color": "rgba(0, 0, 0, 0.87)",
+                                    "fontSize": 40,
+                                    "fontWeight": "500",
+                                  },
+                                  Array [
+                                    Object {
+                                      "lineHeight": 64,
+                                    },
+                                    Object {
+                                      "lineHeight": 54,
+                                    },
+                                  ],
+                                ]
+                              }
+                              text="26"
+                              type={null}
+                              weight={500}
+                            >
+                              <Text
+                                accessible={true}
+                                align={null}
+                                allowFontScaling={false}
+                                color="rgba(0, 0, 0, 0.87)"
+                                ellipsizeMode="tail"
+                                size={40}
+                                style={
+                                  Array [
+                                    false,
+                                    Array [
+                                      false,
+                                      Array [
+                                        Object {
+                                          "backgroundColor": "transparent",
+                                          "color": "rgba(0, 0, 0, 0.87)",
+                                          "fontSize": 40,
+                                          "fontWeight": "500",
+                                        },
+                                        Array [
+                                          Object {
+                                            "lineHeight": 64,
+                                          },
+                                          Object {
+                                            "lineHeight": 54,
+                                          },
+                                        ],
+                                      ],
+                                    ],
+                                  ]
+                                }
+                                text="26"
+                                type={null}
+                                weight={500}
+                              >
+                                26
+                              </Text>
+                            </Text>
+                          </Styled(Text)>
+                        </TYText>
+                        <TYText
+                          align={null}
+                          color="rgba(0, 0, 0, 0.5)"
+                          size={24}
+                          style={
+                            Array [
+                              Object {
+                                "lineHeight": 48,
+                              },
+                              Object {
+                                "marginTop": 10,
+                              },
+                            ]
+                          }
+                          text="°C"
+                          type={null}
+                          weight={400}
+                        >
+                          <Styled(Text)
+                            align={null}
+                            allowFontScaling={false}
+                            color="rgba(0, 0, 0, 0.5)"
+                            size={24}
+                            style={
+                              Array [
+                                Object {
+                                  "lineHeight": 48,
+                                },
+                                Object {
+                                  "marginTop": 10,
+                                },
+                              ]
+                            }
+                            text="°C"
+                            type={null}
+                            weight={400}
+                          >
+                            <Text
+                              accessible={true}
+                              align={null}
+                              allowFontScaling={false}
+                              color="rgba(0, 0, 0, 0.5)"
+                              ellipsizeMode="tail"
+                              size={24}
+                              style={
+                                Array [
+                                  Object {
+                                    "backgroundColor": "transparent",
+                                    "color": "rgba(0, 0, 0, 0.5)",
+                                    "fontSize": 24,
+                                    "fontWeight": "400",
+                                  },
+                                  Array [
+                                    Object {
+                                      "lineHeight": 48,
+                                    },
+                                    Object {
+                                      "marginTop": 10,
+                                    },
+                                  ],
+                                ]
+                              }
+                              text="°C"
+                              type={null}
+                              weight={400}
+                            >
+                              <Text
+                                accessible={true}
+                                align={null}
+                                allowFontScaling={false}
+                                color="rgba(0, 0, 0, 0.5)"
+                                ellipsizeMode="tail"
+                                size={24}
+                                style={
+                                  Array [
+                                    false,
+                                    Array [
+                                      false,
+                                      Array [
+                                        Object {
+                                          "backgroundColor": "transparent",
+                                          "color": "rgba(0, 0, 0, 0.5)",
+                                          "fontSize": 24,
+                                          "fontWeight": "400",
+                                        },
+                                        Array [
+                                          Object {
+                                            "lineHeight": 48,
+                                          },
+                                          Object {
+                                            "marginTop": 10,
+                                          },
+                                        ],
+                                      ],
+                                    ],
+                                  ]
+                                }
+                                text="°C"
+                                type={null}
+                                weight={400}
+                              >
+                                °C
+                              </Text>
+                            </Text>
+                          </Styled(Text)>
+                        </TYText>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </AnimatedComponent>
+            </TouchableOpacity>
+          </StyleSwitchCard>
+        </AcrylicItemCard>
+      </ThemeProvider>
+    </ThemeConsumer>
+  </WithTheme(ThemeConsumer)>
+</ThemeProvider>
+`;
+
+exports[`SwitchCard ClassicSwitchCard 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#FFF",
+      "borderRadius": 28,
+      "flexDirection": "row",
+      "justifyContent": "space-around",
+      "opacity": 1,
+      "paddingBottom": 40,
+      "paddingLeft": 50,
+      "paddingRight": 48,
+      "paddingTop": 38,
+      "width": 620,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "height": 44,
+            "width": 44,
+          },
+          false,
+          null,
+        ]
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+            false,
+            Object {
+              "flex": 0,
+              "height": 44,
+              "width": 44,
+            },
+          ]
+        }
+        vbHeight={1024}
+        vbWidth={1024}
+      >
+        <RNSVGPath
+          d="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+          fill={
+            Array [
+              0,
+              0.8274509803921568,
+              0.8274509803921568,
+              0.8274509803921568,
+              1,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "fill",
+            ]
+          }
+          stroke={
+            Array [
+              0,
+              0.8274509803921568,
+              0.8274509803921568,
+              0.8274509803921568,
+              1,
+            ]
+          }
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={1}
+        />
+      </RNSVGSvgView>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+          "marginLeft": 24,
+          "marginRight": 24,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color="#3D3D3D"
+        ellipsizeMode="tail"
+        size={30}
+        style={
+          Array [
+            false,
+            Array [
+              false,
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "#3D3D3D",
+                  "fontSize": 30,
+                  "fontWeight": "400",
+                },
+                Array [
+                  Object {
+                    "lineHeight": 48,
+                  },
+                  undefined,
+                ],
+              ],
+            ],
+          ]
+        }
+        text="Switch Card"
+        type={null}
+        weight={400}
+      >
+        Switch Card
+      </Text>
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color="rgba(61, 61, 61, 0.5)"
+        ellipsizeMode="tail"
+        size={28}
+        style={
+          Array [
+            false,
+            Array [
+              false,
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "rgba(61, 61, 61, 0.5)",
+                  "fontSize": 28,
+                  "fontWeight": "400",
+                },
+                Array [
+                  Object {
+                    "lineHeight": 48,
+                  },
+                  undefined,
+                ],
+              ],
+            ],
+          ]
+        }
+        text="switch card"
+        type={null}
+        weight={400}
+      >
+        switch card
+      </Text>
+    </View>
+  </View>
+  <View
+    needsOffscreenAlphaCompositing={true}
+    style={
+      Array [
+        undefined,
+        false,
+      ]
+    }
+  >
+    <View
+      accessibilityLabel="SwitchButton"
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "height": 51,
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": 82,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 26.571428571428573,
+              "height": 48,
+              "justifyContent": "center",
+              "width": 80,
+            },
+            Object {
+              "backgroundColor": "#1082FE",
+              "borderColor": "#1082FE",
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#fff",
+            "borderRadius": 20,
+            "elevation": 2,
+            "height": 40,
+            "justifyContent": "center",
+            "position": "absolute",
+            "shadowColor": "rgba(0, 0, 0, 0.3)",
+            "shadowOffset": Object {
+              "height": 3,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 3,
+            "transform": Array [
+              Object {
+                "translateX": 37,
+              },
+            ],
+            "width": 40,
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`SwitchCard ClassicSwitchCard 2`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#FFF",
+      "borderRadius": 28,
+      "flexDirection": "row",
+      "justifyContent": "space-around",
+      "marginTop": 20,
+      "opacity": 1,
+      "paddingBottom": 40,
+      "paddingLeft": 50,
+      "paddingRight": 48,
+      "paddingTop": 38,
+      "width": 620,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "height": 44,
+            "width": 44,
+          },
+          false,
+          null,
+        ]
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+            false,
+            Object {
+              "flex": 0,
+              "height": 44,
+              "width": 44,
+            },
+          ]
+        }
+        vbHeight={1024}
+        vbWidth={1024}
+      >
+        <RNSVGPath
+          d="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+          fill={
+            Array [
+              0,
+              0.8274509803921568,
+              0.8274509803921568,
+              0.8274509803921568,
+              1,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "fill",
+            ]
+          }
+          stroke={
+            Array [
+              0,
+              0.8274509803921568,
+              0.8274509803921568,
+              0.8274509803921568,
+              1,
+            ]
+          }
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={1}
+        />
+      </RNSVGSvgView>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+          "marginLeft": 24,
+          "marginRight": 24,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color="#3D3D3D"
+        ellipsizeMode="tail"
+        size={30}
+        style={
+          Array [
+            false,
+            Array [
+              false,
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "#3D3D3D",
+                  "fontSize": 30,
+                  "fontWeight": "400",
+                },
+                Array [
+                  Object {
+                    "lineHeight": 48,
+                  },
+                  undefined,
+                ],
+              ],
+            ],
+          ]
+        }
+        text="List Card"
+        type={null}
+        weight={400}
+      >
+        List Card
+      </Text>
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color="rgba(61, 61, 61, 0.5)"
+        ellipsizeMode="tail"
+        size={28}
+        style={
+          Array [
+            false,
+            Array [
+              false,
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "rgba(61, 61, 61, 0.5)",
+                  "fontSize": 28,
+                  "fontWeight": "400",
+                },
+                Array [
+                  Object {
+                    "lineHeight": 48,
+                  },
+                  undefined,
+                ],
+              ],
+            ],
+          ]
+        }
+        text="switch card"
+        type={null}
+        weight={400}
+      >
+        switch card
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      align={null}
+      allowFontScaling={false}
+      color="rgba(0, 0, 0, 0.5)"
+      ellipsizeMode="tail"
+      size={28}
+      style={
+        Array [
+          false,
+          Array [
+            false,
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "rgba(0, 0, 0, 0.5)",
+                "fontSize": 28,
+                "fontWeight": "400",
+              },
+              Array [
+                Object {
+                  "lineHeight": 64,
+                  "marginRight": 8,
+                },
+                Object {
+                  "lineHeight": 48,
+                },
+              ],
+            ],
+          ],
+        ]
+      }
+      text="45%"
+      type={null}
+      weight={400}
+    >
+      45%
+    </Text>
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "height": 24,
+            "width": 24,
+          },
+          false,
+          null,
+        ]
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+            false,
+            Object {
+              "flex": 0,
+              "height": 24,
+              "width": 24,
+            },
+          ]
+        }
+        vbHeight={1024}
+        vbWidth={1024}
+      >
+        <RNSVGPath
+          d="M268.458667 55.125333A42.666667 42.666667 0 0 1 322.901333 50.346667l5.973334 4.864 426.666666 426.666666a42.666667 42.666667 0 0 1 4.864 54.442667l-4.864 5.973333-426.666666 426.666667a42.666667 42.666667 0 0 1-65.28-54.442667l4.864-5.973333L665.002667 512 268.458667 115.541333A42.666667 42.666667 0 0 1 263.68 61.098667l4.864-5.973334z"
+          fill={
+            Array [
+              0,
+              0,
+              0,
+              0,
+              0.5,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "fill",
+            ]
+          }
+          stroke={
+            Array [
+              0,
+              0,
+              0,
+              0,
+              0.5,
+            ]
+          }
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={1}
+        />
+      </RNSVGSvgView>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`SwitchCard ClassicSwitchCard 3`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#FFF",
+      "borderRadius": 28,
+      "flexDirection": "row",
+      "justifyContent": "space-around",
+      "opacity": 1,
+      "paddingBottom": 40,
+      "paddingLeft": 50,
+      "paddingRight": 48,
+      "paddingTop": 38,
+      "width": 620,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "height": 44,
+            "width": 44,
+          },
+          false,
+          null,
+        ]
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+            false,
+            Object {
+              "flex": 0,
+              "height": 44,
+              "width": 44,
+            },
+          ]
+        }
+        vbHeight={1024}
+        vbWidth={1024}
+      >
+        <RNSVGPath
+          d="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+          fill={
+            Array [
+              0,
+              0.8274509803921568,
+              0.8274509803921568,
+              0.8274509803921568,
+              1,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "fill",
+            ]
+          }
+          stroke={
+            Array [
+              0,
+              0.8274509803921568,
+              0.8274509803921568,
+              0.8274509803921568,
+              1,
+            ]
+          }
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={1}
+        />
+      </RNSVGSvgView>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+          "marginLeft": 24,
+          "marginRight": 24,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color="#3D3D3D"
+        ellipsizeMode="tail"
+        size={30}
+        style={
+          Array [
+            false,
+            Array [
+              false,
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "#3D3D3D",
+                  "fontSize": 30,
+                  "fontWeight": "400",
+                },
+                Array [
+                  Object {
+                    "lineHeight": 48,
+                  },
+                  undefined,
+                ],
+              ],
+            ],
+          ]
+        }
+        text="List Card"
+        type={null}
+        weight={400}
+      >
+        List Card
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      align={null}
+      allowFontScaling={false}
+      color="#505050"
+      ellipsizeMode="tail"
+      size={44}
+      style={
+        Array [
+          false,
+          Array [
+            false,
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#505050",
+                "fontSize": 44,
+                "fontWeight": "600",
+              },
+              Array [
+                Object {
+                  "lineHeight": 64,
+                },
+                undefined,
+              ],
+            ],
+          ],
+        ]
+      }
+      text="attitude"
+      type={null}
+      weight={600}
+    >
+      attitude
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`SwitchCard NordicSwitchCard 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#FFF",
+      "borderRadius": 32,
+      "flexDirection": "row",
+      "justifyContent": "space-around",
+      "opacity": 1,
+      "paddingBottom": 40,
+      "paddingLeft": 50,
+      "paddingRight": 48,
+      "paddingTop": 38,
+      "width": 556,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+          "marginLeft": 0,
+          "marginRight": 24,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color="#000"
+        ellipsizeMode="tail"
+        size={32}
+        style={
+          Array [
+            false,
+            Array [
+              false,
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "#000",
+                  "fontSize": 32,
+                  "fontWeight": "400",
+                },
+                Array [
+                  Object {
+                    "lineHeight": 48,
+                  },
+                  Object {
+                    "lineHeight": 44,
+                    "marginLeft": 16,
+                  },
+                ],
+              ],
+            ],
+          ]
+        }
+        text="Switch Card"
+        type={null}
+        weight={400}
+      >
+        Switch Card
+      </Text>
+    </View>
+  </View>
+  <View
+    needsOffscreenAlphaCompositing={true}
+    style={
+      Array [
+        undefined,
+        false,
+      ]
+    }
+  >
+    <View
+      accessibilityLabel="SwitchButton"
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "height": 53,
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": 94,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 27.67857142857143,
+              "height": 50,
+              "justifyContent": "center",
+              "width": 92,
+            },
+            Object {
+              "backgroundColor": "#1082FE",
+              "borderColor": "#1082FE",
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#fff",
+            "borderRadius": 18,
+            "elevation": 2,
+            "height": 36,
+            "justifyContent": "center",
+            "position": "absolute",
+            "shadowColor": "rgba(0, 0, 0, 0.3)",
+            "shadowOffset": Object {
+              "height": 3,
+              "width": 0,
+            },
+            "shadowOpacity": 1,
+            "shadowRadius": 3,
+            "transform": Array [
+              Object {
+                "translateX": 49,
+              },
+            ],
+            "width": 36,
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`SwitchCard NordicSwitchCard 2`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#FFF",
+      "borderRadius": 28,
+      "flexDirection": "row",
+      "justifyContent": "space-around",
+      "opacity": 1,
+      "paddingBottom": 40,
+      "paddingLeft": 50,
+      "paddingRight": 48,
+      "paddingTop": 38,
+      "width": 620,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#1082FE",
+            "height": 72,
+            "width": 72,
+          },
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderRadius": 16,
+              "display": "flex",
+              "height": 72,
+              "justifyContent": "center",
+              "overflow": "hidden",
+              "width": 72,
+            },
+            Object {},
+          ],
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            Object {
+              "height": 28,
+              "width": 28,
+            },
+            false,
+            null,
+          ]
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+              false,
+              Object {
+                "flex": 0,
+                "height": 28,
+                "width": 28,
+              },
+            ]
+          }
+          vbHeight={1024}
+          vbWidth={1024}
+        >
+          <RNSVGPath
+            d="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+            fill={
+              Array [
+                0,
+                0.8274509803921568,
+                0.8274509803921568,
+                0.8274509803921568,
+                1,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            propList={
+              Array [
+                "stroke",
+                "strokeWidth",
+                "fill",
+              ]
+            }
+            stroke={
+              Array [
+                0,
+                0.8274509803921568,
+                0.8274509803921568,
+                0.8274509803921568,
+                1,
+              ]
+            }
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+          />
+        </RNSVGSvgView>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+          "marginLeft": 24,
+          "marginRight": 24,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color="#3D3D3D"
+        ellipsizeMode="tail"
+        size={32}
+        style={
+          Array [
+            false,
+            Array [
+              false,
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "#3D3D3D",
+                  "fontSize": 32,
+                  "fontWeight": "400",
+                },
+                Array [
+                  Object {
+                    "lineHeight": 48,
+                  },
+                  Object {
+                    "lineHeight": 44,
+                    "marginLeft": 16,
+                  },
+                ],
+              ],
+            ],
+          ]
+        }
+        text="List Card"
+        type={null}
+        weight={400}
+      >
+        List Card
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      align={null}
+      allowFontScaling={false}
+      color="rgba(0, 0, 0, 0.5)"
+      ellipsizeMode="tail"
+      size={24}
+      style={
+        Array [
+          false,
+          Array [
+            false,
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "rgba(0, 0, 0, 0.5)",
+                "fontSize": 24,
+                "fontWeight": "400",
+              },
+              Array [
+                Object {
+                  "lineHeight": 64,
+                  "marginRight": 8,
+                },
+                Object {
+                  "lineHeight": 32,
+                },
+              ],
+            ],
+          ],
+        ]
+      }
+      text="Power off"
+      type={null}
+      weight={400}
+    >
+      Power off
+    </Text>
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "height": 24,
+            "width": 24,
+          },
+          false,
+          null,
+        ]
+      }
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+            false,
+            Object {
+              "flex": 0,
+              "height": 24,
+              "width": 24,
+            },
+          ]
+        }
+        vbHeight={1024}
+        vbWidth={1024}
+      >
+        <RNSVGPath
+          d="M268.458667 55.125333A42.666667 42.666667 0 0 1 322.901333 50.346667l5.973334 4.864 426.666666 426.666666a42.666667 42.666667 0 0 1 4.864 54.442667l-4.864 5.973333-426.666666 426.666667a42.666667 42.666667 0 0 1-65.28-54.442667l4.864-5.973333L665.002667 512 268.458667 115.541333A42.666667 42.666667 0 0 1 263.68 61.098667l4.864-5.973334z"
+          fill={
+            Array [
+              0,
+              0,
+              0,
+              0,
+              0.5,
+            ]
+          }
+          fillOpacity={1}
+          fillRule={1}
+          matrix={
+            Array [
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+            ]
+          }
+          opacity={1}
+          propList={
+            Array [
+              "stroke",
+              "strokeWidth",
+              "fill",
+            ]
+          }
+          stroke={
+            Array [
+              0,
+              0,
+              0,
+              0,
+              0.5,
+            ]
+          }
+          strokeDasharray={null}
+          strokeDashoffset={null}
+          strokeLinecap={0}
+          strokeLinejoin={0}
+          strokeMiterlimit={4}
+          strokeOpacity={1}
+          strokeWidth={1}
+        />
+      </RNSVGSvgView>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`SwitchCard NordicSwitchCard 3`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#FFF",
+      "borderRadius": 28,
+      "flexDirection": "row",
+      "justifyContent": "space-around",
+      "opacity": 1,
+      "paddingBottom": 40,
+      "paddingLeft": 50,
+      "paddingRight": 48,
+      "paddingTop": 38,
+      "width": 620,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#1082FE",
+            "height": 72,
+            "width": 72,
+          },
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderRadius": 16,
+              "display": "flex",
+              "height": 72,
+              "justifyContent": "center",
+              "overflow": "hidden",
+              "width": 72,
+            },
+            Object {},
+          ],
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            Object {
+              "height": 28,
+              "width": 28,
+            },
+            false,
+            null,
+          ]
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              undefined,
+              false,
+              Object {
+                "flex": 0,
+                "height": 28,
+                "width": 28,
+              },
+            ]
+          }
+          vbHeight={1024}
+          vbWidth={1024}
+        >
+          <RNSVGPath
+            d="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+            fill={
+              Array [
+                0,
+                0.8274509803921568,
+                0.8274509803921568,
+                0.8274509803921568,
+                1,
+              ]
+            }
+            fillOpacity={1}
+            fillRule={1}
+            matrix={
+              Array [
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+              ]
+            }
+            opacity={1}
+            propList={
+              Array [
+                "stroke",
+                "strokeWidth",
+                "fill",
+              ]
+            }
+            stroke={
+              Array [
+                0,
+                0.8274509803921568,
+                0.8274509803921568,
+                0.8274509803921568,
+                1,
+              ]
+            }
+            strokeDasharray={null}
+            strokeDashoffset={null}
+            strokeLinecap={0}
+            strokeLinejoin={0}
+            strokeMiterlimit={4}
+            strokeOpacity={1}
+            strokeWidth={1}
+          />
+        </RNSVGSvgView>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+          "marginLeft": 24,
+          "marginRight": 24,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color="#3D3D3D"
+        ellipsizeMode="tail"
+        size={32}
+        style={
+          Array [
+            false,
+            Array [
+              false,
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "#3D3D3D",
+                  "fontSize": 32,
+                  "fontWeight": "400",
+                },
+                Array [
+                  Object {
+                    "lineHeight": 48,
+                  },
+                  Object {
+                    "lineHeight": 44,
+                    "marginLeft": 16,
+                  },
+                ],
+              ],
+            ],
+          ]
+        }
+        text="List Card"
+        type={null}
+        weight={400}
+      >
+        List Card
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      align={null}
+      allowFontScaling={false}
+      color="rgba(0, 0, 0, 0.5)"
+      ellipsizeMode="tail"
+      size={32}
+      style={
+        Array [
+          false,
+          Array [
+            false,
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "rgba(0, 0, 0, 0.5)",
+                "fontSize": 32,
+                "fontWeight": "400",
+              },
+              Array [
+                Object {
+                  "lineHeight": 64,
+                },
+                undefined,
+              ],
+            ],
+          ],
+        ]
+      }
+      text="26%"
+      type={null}
+      weight={400}
+    >
+      26%
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`SwitchCard PaintSwitchCard 1`] = `
+<ThemeProvider
+  theme={null}
+>
+  <WithTheme(ThemeConsumer)>
+    <ThemeConsumer
+      theme={null}
+    >
+      <ThemeProvider
+        theme={Object {}}
+      >
+        <PaintSwitchCard
+          icon="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+        >
+          <StyleSwitchCard
+            backgroundColor="#FFF"
+            disabled={true}
+            fontColor="#000"
+            fontSize={30}
+            fontWeight={400}
+            icon="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+            iconSize={44}
+            milliseconds={500}
+            onTintColor="#76A6E4"
+            padding={
+              Array [
+                38,
+                48,
+                40,
+                50,
+              ]
+            }
+            radius={28}
+            showIcon={true}
+            subFontColor="rgba(61, 61, 61, 0.5)"
+            subFontSize={28}
+            subFontWeight={400}
+            switchSize={
+              Object {
+                "activeSize": 4,
+                "margin": 6,
+              }
+            }
+            text="Switch Card"
+            thumbStyle={
+              Object {
+                "borderRadius": 4,
+                "height": 24,
+                "width": 8,
+              }
+            }
+            type="switch"
+            width={588}
+          >
+            <TouchableOpacity
+              activeOpacity={0.8}
+              disabled={true}
+              onPressIn={[Function]}
+              onPressOut={[Function]}
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#FFF",
+                    "borderRadius": 28,
+                    "flexDirection": "row",
+                    "justifyContent": "space-around",
+                    "paddingBottom": 40,
+                    "paddingLeft": 50,
+                    "paddingRight": 48,
+                    "paddingTop": 38,
+                    "width": 588,
+                  },
+                  undefined,
+                ]
+              }
+            >
+              <AnimatedComponent
+                accessible={true}
+                isTVSelectable={true}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Array [
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "#FFF",
+                        "borderRadius": 28,
+                        "flexDirection": "row",
+                        "justifyContent": "space-around",
+                        "paddingBottom": 40,
+                        "paddingLeft": 50,
+                        "paddingRight": 48,
+                        "paddingTop": 38,
+                        "width": 588,
+                      },
+                      undefined,
+                    ],
+                    Object {
+                      "opacity": 1,
+                    },
+                  ]
+                }
+              >
+                <View
+                  accessible={true}
+                  isTVSelectable={true}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#FFF",
+                      "borderRadius": 28,
+                      "flexDirection": "row",
+                      "justifyContent": "space-around",
+                      "opacity": 1,
+                      "paddingBottom": 40,
+                      "paddingLeft": 50,
+                      "paddingRight": 48,
+                      "paddingTop": 38,
+                      "width": 588,
+                    }
+                  }
+                >
+                  <View
+                    accessible={true}
+                    isTVSelectable={true}
+                    onResponderGrant={[Function]}
+                    onResponderMove={[Function]}
+                    onResponderRelease={[Function]}
+                    onResponderTerminate={[Function]}
+                    onResponderTerminationRequest={[Function]}
+                    onStartShouldSetResponder={[Function]}
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "#FFF",
+                        "borderRadius": 28,
+                        "flexDirection": "row",
+                        "justifyContent": "space-around",
+                        "opacity": 1,
+                        "paddingBottom": 40,
+                        "paddingLeft": 50,
+                        "paddingRight": 48,
+                        "paddingTop": 38,
+                        "width": 588,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "flex": 1,
+                          "flexDirection": "row",
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "flex": 1,
+                            "flexDirection": "row",
+                          }
+                        }
+                      >
+                        <ClassicIconBackground
+                          icon="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+                          iconBgColor="#158CFB"
+                          iconBgRadius={50}
+                          iconBgSize={50}
+                          iconColor="#D3D3D3"
+                          iconSize={44}
+                          imageRadius={0}
+                          onTintColor="#76A6E4"
+                          showIcon={true}
+                          showIconBg={false}
+                          style={Object {}}
+                          thumbStyle={
+                            Object {
+                              "borderRadius": 4,
+                              "height": 24,
+                              "width": 8,
+                            }
+                          }
+                        >
+                          <Component
+                            color="#D3D3D3"
+                            d="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+                            size={44}
+                          >
+                            <IconFont
+                              color="#D3D3D3"
+                              d="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+                              fill={null}
+                              hFlip={false}
+                              height={null}
+                              name={null}
+                              size={44}
+                              stroke={null}
+                              strokeCap="round"
+                              strokeDash={
+                                Array [
+                                  0,
+                                  0,
+                                ]
+                              }
+                              strokeJoin="round"
+                              strokeWidth={1}
+                              style={null}
+                              vFlip={false}
+                              viewBox="0 0 1024 1024"
+                              width={null}
+                            >
+                              <View
+                                style={
+                                  Array [
+                                    Object {
+                                      "flexDirection": "row",
+                                    },
+                                    Object {
+                                      "height": 44,
+                                      "width": 44,
+                                    },
+                                    false,
+                                    null,
+                                  ]
+                                }
+                              >
+                                <View
+                                  style={
+                                    Array [
+                                      Object {
+                                        "flexDirection": "row",
+                                      },
+                                      Object {
+                                        "height": 44,
+                                        "width": 44,
+                                      },
+                                      false,
+                                      null,
+                                    ]
+                                  }
+                                >
+                                  <Svg
+                                    height={44}
+                                    key="0"
+                                    preserveAspectRatio="xMidYMid meet"
+                                    viewBox="0 0 1024 1024"
+                                    width={44}
+                                  >
+                                    <_class
+                                      align="xMidYMid"
+                                      meetOrSlice={0}
+                                      minX={0}
+                                      minY={0}
+                                      style={
+                                        Array [
+                                          Object {
+                                            "backgroundColor": "transparent",
+                                          },
+                                          undefined,
+                                          false,
+                                          Object {
+                                            "flex": 0,
+                                            "height": 44,
+                                            "width": 44,
+                                          },
+                                        ]
+                                      }
+                                      vbHeight={1024}
+                                      vbWidth={1024}
+                                    >
+                                      <RNSVGSvgView
+                                        align="xMidYMid"
+                                        meetOrSlice={0}
+                                        minX={0}
+                                        minY={0}
+                                        style={
+                                          Array [
+                                            Object {
+                                              "backgroundColor": "transparent",
+                                            },
+                                            undefined,
+                                            false,
+                                            Object {
+                                              "flex": 0,
+                                              "height": 44,
+                                              "width": 44,
+                                            },
+                                          ]
+                                        }
+                                        vbHeight={1024}
+                                        vbWidth={1024}
+                                      >
+                                        <Path
+                                          d="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+                                          fill="#D3D3D3"
+                                          height={null}
+                                          stroke="#D3D3D3"
+                                          strokeCap="round"
+                                          strokeDash={
+                                            Array [
+                                              0,
+                                              0,
+                                            ]
+                                          }
+                                          strokeJoin="round"
+                                          strokeWidth={1}
+                                          width={null}
+                                        >
+                                          <RNSVGPath
+                                            d="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+                                            fill={
+                                              Array [
+                                                0,
+                                                0.8274509803921568,
+                                                0.8274509803921568,
+                                                0.8274509803921568,
+                                                1,
+                                              ]
+                                            }
+                                            fillOpacity={1}
+                                            fillRule={1}
+                                            matrix={
+                                              Array [
+                                                1,
+                                                0,
+                                                0,
+                                                1,
+                                                0,
+                                                0,
+                                              ]
+                                            }
+                                            opacity={1}
+                                            propList={
+                                              Array [
+                                                "stroke",
+                                                "strokeWidth",
+                                                "fill",
+                                              ]
+                                            }
+                                            stroke={
+                                              Array [
+                                                0,
+                                                0.8274509803921568,
+                                                0.8274509803921568,
+                                                0.8274509803921568,
+                                                1,
+                                              ]
+                                            }
+                                            strokeDasharray={null}
+                                            strokeDashoffset={null}
+                                            strokeLinecap={0}
+                                            strokeLinejoin={0}
+                                            strokeMiterlimit={4}
+                                            strokeOpacity={1}
+                                            strokeWidth={1}
+                                          />
+                                        </Path>
+                                      </RNSVGSvgView>
+                                    </_class>
+                                  </Svg>
+                                </View>
+                              </View>
+                            </IconFont>
+                          </Component>
+                        </ClassicIconBackground>
+                        <View
+                          style={
+                            Object {
+                              "flex": 1,
+                              "justifyContent": "center",
+                              "marginLeft": 24,
+                              "marginRight": 24,
+                            }
+                          }
+                        >
+                          <View
+                            style={
+                              Object {
+                                "flex": 1,
+                                "justifyContent": "center",
+                                "marginLeft": 24,
+                                "marginRight": 24,
+                              }
+                            }
+                          >
+                            <TYText
+                              align={null}
+                              color="#000"
+                              size={30}
+                              style={
+                                Array [
+                                  Object {
+                                    "lineHeight": 48,
+                                  },
+                                  undefined,
+                                ]
+                              }
+                              text="Switch Card"
+                              type={null}
+                              weight={400}
+                            >
+                              <Styled(Text)
+                                align={null}
+                                allowFontScaling={false}
+                                color="#000"
+                                size={30}
+                                style={
+                                  Array [
+                                    Object {
+                                      "lineHeight": 48,
+                                    },
+                                    undefined,
+                                  ]
+                                }
+                                text="Switch Card"
+                                type={null}
+                                weight={400}
+                              >
+                                <Text
+                                  accessible={true}
+                                  align={null}
+                                  allowFontScaling={false}
+                                  color="#000"
+                                  ellipsizeMode="tail"
+                                  size={30}
+                                  style={
+                                    Array [
+                                      Object {
+                                        "backgroundColor": "transparent",
+                                        "color": "#000",
+                                        "fontSize": 30,
+                                        "fontWeight": "400",
+                                      },
+                                      Array [
+                                        Object {
+                                          "lineHeight": 48,
+                                        },
+                                        undefined,
+                                      ],
+                                    ]
+                                  }
+                                  text="Switch Card"
+                                  type={null}
+                                  weight={400}
+                                >
+                                  <Text
+                                    accessible={true}
+                                    align={null}
+                                    allowFontScaling={false}
+                                    color="#000"
+                                    ellipsizeMode="tail"
+                                    size={30}
+                                    style={
+                                      Array [
+                                        false,
+                                        Array [
+                                          false,
+                                          Array [
+                                            Object {
+                                              "backgroundColor": "transparent",
+                                              "color": "#000",
+                                              "fontSize": 30,
+                                              "fontWeight": "400",
+                                            },
+                                            Array [
+                                              Object {
+                                                "lineHeight": 48,
+                                              },
+                                              undefined,
+                                            ],
+                                          ],
+                                        ],
+                                      ]
+                                    }
+                                    text="Switch Card"
+                                    type={null}
+                                    weight={400}
+                                  >
+                                    Switch Card
+                                  </Text>
+                                </Text>
+                              </Styled(Text)>
+                            </TYText>
+                          </View>
+                        </View>
+                      </View>
+                    </View>
+                    <ThemedSwitchButton
+                      icon="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+                      onTintColor="#76A6E4"
+                      size={
+                        Object {
+                          "activeSize": 4,
+                          "margin": 6,
+                        }
+                      }
+                      theme={null}
+                      thumbStyle={
+                        Object {
+                          "borderRadius": 4,
+                          "height": 24,
+                          "width": 8,
+                        }
+                      }
+                    >
+                      <WithTheme(ThemeConsumer)>
+                        <ThemeConsumer
+                          theme={Object {}}
+                        >
+                          <SwitchButton
+                            accessibilityLabel="SwitchButton"
+                            borderColor="#e5e5e5"
+                            d={null}
+                            defaultValue={true}
+                            disabled={false}
+                            icon="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
+                            iconColor={null}
+                            iconSize={18}
+                            offText=""
+                            offTextStyle={null}
+                            onText=""
+                            onTextStyle={null}
+                            onTintColor="#76A6E4"
+                            size={
+                              Object {
+                                "activeSize": 4,
+                                "height": undefined,
+                                "margin": 6,
+                                "width": undefined,
+                              }
+                            }
+                            smallThumbStyle={Object {}}
+                            switchType={null}
+                            thumbStyle={
+                              Object {
+                                "borderRadius": 4,
+                                "height": 24,
+                                "width": 8,
+                              }
+                            }
+                            thumbTintColor="#fff"
+                            tintColor="#e5e5e5"
+                            useNativeDriver={true}
+                          >
+                            <View
+                              needsOffscreenAlphaCompositing={true}
+                              style={
+                                Array [
+                                  undefined,
+                                  false,
+                                ]
+                              }
+                            >
+                              <View
+                                needsOffscreenAlphaCompositing={true}
+                                style={
+                                  Array [
+                                    undefined,
+                                    false,
+                                  ]
+                                }
+                              >
+                                <TouchableOpacity
+                                  accessibilityLabel="SwitchButton"
+                                  activeOpacity={1}
+                                  onPress={[Function]}
+                                  style={
+                                    Object {
+                                      "alignItems": "center",
+                                      "backgroundColor": "transparent",
+                                      "height": NaN,
+                                      "justifyContent": "center",
+                                      "width": NaN,
+                                    }
+                                  }
+                                >
+                                  <AnimatedComponent
+                                    accessibilityLabel="SwitchButton"
+                                    accessible={true}
+                                    isTVSelectable={true}
+                                    onResponderGrant={[Function]}
+                                    onResponderMove={[Function]}
+                                    onResponderRelease={[Function]}
+                                    onResponderTerminate={[Function]}
+                                    onResponderTerminationRequest={[Function]}
+                                    onStartShouldSetResponder={[Function]}
+                                    style={
+                                      Array [
+                                        Object {
+                                          "alignItems": "center",
+                                          "backgroundColor": "transparent",
+                                          "height": NaN,
+                                          "justifyContent": "center",
+                                          "width": NaN,
+                                        },
+                                        Object {
+                                          "opacity": 1,
+                                        },
+                                      ]
+                                    }
+                                  >
+                                    <View
+                                      accessibilityLabel="SwitchButton"
+                                      accessible={true}
+                                      isTVSelectable={true}
+                                      onResponderGrant={[Function]}
+                                      onResponderMove={[Function]}
+                                      onResponderRelease={[Function]}
+                                      onResponderTerminate={[Function]}
+                                      onResponderTerminationRequest={[Function]}
+                                      onStartShouldSetResponder={[Function]}
+                                      style={
+                                        Object {
+                                          "alignItems": "center",
+                                          "backgroundColor": "transparent",
+                                          "height": NaN,
+                                          "justifyContent": "center",
+                                          "opacity": 1,
+                                          "width": NaN,
+                                        }
+                                      }
+                                    >
+                                      <View
+                                        accessibilityLabel="SwitchButton"
+                                        accessible={true}
+                                        isTVSelectable={true}
+                                        onResponderGrant={[Function]}
+                                        onResponderMove={[Function]}
+                                        onResponderRelease={[Function]}
+                                        onResponderTerminate={[Function]}
+                                        onResponderTerminationRequest={[Function]}
+                                        onStartShouldSetResponder={[Function]}
+                                        style={
+                                          Object {
+                                            "alignItems": "center",
+                                            "backgroundColor": "transparent",
+                                            "height": NaN,
+                                            "justifyContent": "center",
+                                            "opacity": 1,
+                                            "width": NaN,
+                                          }
+                                        }
+                                      >
+                                        <View
+                                          style={
+                                            Array [
+                                              Object {
+                                                "borderRadius": NaN,
+                                                "height": undefined,
+                                                "justifyContent": "center",
+                                                "width": undefined,
+                                              },
+                                              Object {
+                                                "backgroundColor": "#76A6E4",
+                                                "borderColor": "#76A6E4",
+                                              },
+                                            ]
+                                          }
+                                        >
+                                          <View
+                                            style={
+                                              Array [
+                                                Object {
+                                                  "borderRadius": NaN,
+                                                  "height": undefined,
+                                                  "justifyContent": "center",
+                                                  "width": undefined,
+                                                },
+                                                Object {
+                                                  "backgroundColor": "#76A6E4",
+                                                  "borderColor": "#76A6E4",
+                                                },
+                                              ]
+                                            }
+                                          />
+                                        </View>
+                                        <AnimatedComponent
+                                          style={
+                                            Array [
+                                              Object {
+                                                "alignItems": "center",
+                                                "justifyContent": "center",
+                                              },
+                                              Array [
+                                                Object {
+                                                  "alignSelf": "flex-start",
+                                                  "backgroundColor": "#fff",
+                                                  "borderRadius": 2,
+                                                  "elevation": 2,
+                                                  "height": 4,
+                                                  "position": "absolute",
+                                                  "shadowColor": "rgba(0, 0, 0, 0.3)",
+                                                  "shadowOffset": Object {
+                                                    "height": 3,
+                                                    "width": 0,
+                                                  },
+                                                  "shadowOpacity": 1,
+                                                  "shadowRadius": 3,
+                                                  "transform": Array [
+                                                    Object {
+                                                      "translateX": NaN,
+                                                    },
+                                                  ],
+                                                  "width": 4,
+                                                },
+                                                Object {
+                                                  "borderRadius": 4,
+                                                  "height": 24,
+                                                  "width": 8,
+                                                },
+                                              ],
+                                            ]
+                                          }
+                                        >
+                                          <View
+                                            style={
+                                              Object {
+                                                "alignItems": "center",
+                                                "alignSelf": "flex-start",
+                                                "backgroundColor": "#fff",
+                                                "borderRadius": 4,
+                                                "elevation": 2,
+                                                "height": 24,
+                                                "justifyContent": "center",
+                                                "position": "absolute",
+                                                "shadowColor": "rgba(0, 0, 0, 0.3)",
+                                                "shadowOffset": Object {
+                                                  "height": 3,
+                                                  "width": 0,
+                                                },
+                                                "shadowOpacity": 1,
+                                                "shadowRadius": 3,
+                                                "transform": Array [
+                                                  Object {
+                                                    "translateX": NaN,
+                                                  },
+                                                ],
+                                                "width": 8,
+                                              }
+                                            }
+                                          >
+                                            <View
+                                              style={
+                                                Object {
+                                                  "alignItems": "center",
+                                                  "alignSelf": "flex-start",
+                                                  "backgroundColor": "#fff",
+                                                  "borderRadius": 4,
+                                                  "elevation": 2,
+                                                  "height": 24,
+                                                  "justifyContent": "center",
+                                                  "position": "absolute",
+                                                  "shadowColor": "rgba(0, 0, 0, 0.3)",
+                                                  "shadowOffset": Object {
+                                                    "height": 3,
+                                                    "width": 0,
+                                                  },
+                                                  "shadowOpacity": 1,
+                                                  "shadowRadius": 3,
+                                                  "transform": Array [
+                                                    Object {
+                                                      "translateX": NaN,
+                                                    },
+                                                  ],
+                                                  "width": 8,
+                                                }
+                                              }
+                                            />
+                                          </View>
+                                        </AnimatedComponent>
+                                      </View>
+                                    </View>
+                                  </AnimatedComponent>
+                                </TouchableOpacity>
+                              </View>
+                            </View>
+                          </SwitchButton>
+                        </ThemeConsumer>
+                      </WithTheme(ThemeConsumer)>
+                    </ThemedSwitchButton>
+                  </View>
+                </View>
+              </AnimatedComponent>
+            </TouchableOpacity>
+          </StyleSwitchCard>
+        </PaintSwitchCard>
+      </ThemeProvider>
+    </ThemeConsumer>
+  </WithTheme(ThemeConsumer)>
+</ThemeProvider>
+`;

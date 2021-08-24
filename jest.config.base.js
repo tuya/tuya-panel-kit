@@ -11,6 +11,7 @@ module.exports = {
     '<rootDir>/example/node_modules',
     '<rootDir>/example',
     '<rootDir>/packages/*/lib',
+    '<rootDir>/packages/tuya-panel-theme',
   ],
   collectCoverage: true,
   testEnvironment: 'node',
@@ -19,4 +20,7 @@ module.exports = {
   },
   setupTestFrameworkScriptFile: '<rootDir>/jest.setup.js',
   snapshotSerializers: ['enzyme-to-json/serializer'],
+  transformIgnorePatterns: [
+    'node_modules/(?!react-native|@react-navigation|react-native-gesture-handler|react-native-svg/|@react-native-community/blur/)',
+  ],
 };

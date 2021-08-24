@@ -1,0 +1,38 @@
+{
+  "name": "tuya-panel-style-step-card",
+  "version": "0.0.0",
+  "description": "tuya-panel-style-step-card",
+  "author": "ZengBeauty <2497752603@qq.com>",
+  "homepage": "https://github.com/tuya/tuya-panel-kit#readme",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "tuya-panel-utils": "0.1.0",
+    "tuya-panel-kit": "4.7.4",
+    "tuya-panel-style-icon-background": "0.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npm.taobao.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuya/tuya-panel-kit.git"
+  },
+  "scripts": {
+    "prebuild": "rimraf lib/*",
+    "build": "tsc -d",
+    "dev": "tsc -w",
+    "test": "jest -u --silent --forceExit",
+    "test:watch": "jest --watch"
+  },
+  "bugs": {
+    "url": "https://github.com/tuya/tuya-panel-kit/issues"
+  }
+}

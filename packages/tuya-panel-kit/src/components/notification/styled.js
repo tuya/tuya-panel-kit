@@ -1,4 +1,4 @@
-import { View, TouchableOpacity, Image, Text } from 'react-native';
+import { View, TouchableOpacity, Image } from 'react-native';
 import styled from 'styled-components/native';
 import { RatioUtils } from '../../utils';
 import TYText from '../TYText';
