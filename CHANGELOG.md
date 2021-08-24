@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.1](https://github.com/TuyaInc/tuya-panel-kit/compare/v2.1.0...v2.1.1) (2021-08-24)
+
+
+### Bug Fixes
+
+* **jumpTo:** if url jumpTo browser ([65c60ef](https://github.com/TuyaInc/tuya-panel-kit/commit/65c60efbf08054a059cb8adbc11811266f7d5da1))
+
+
+
 # [2.1.0](https://github.com/TuyaInc/tuya-panel-kit/compare/v2.0.0-rc.7...v2.1.0) (2021-08-14)
 
 
