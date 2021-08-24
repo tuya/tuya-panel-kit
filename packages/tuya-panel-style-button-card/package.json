@@ -33,7 +33,7 @@
   "dependencies": {
     "tuya-panel-style-icon-background": "0.0.0",
     "tuya-panel-utils": "0.1.0",
-    "tuya-panel-kit": "4.7.4"
+    "tuya-panel-kit": "^4.7.5"
   },
   "devDependencies": {
     "@types/tuya-panel-kit": "^4.0.5"
