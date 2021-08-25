@@ -18,8 +18,8 @@ export default () => {
     <Tab.TabPane key={`${item}`} tab={`${item}`}>
       <View
         style={{
-          height: 530,
-          backgroundColor: '#f8f8f8',
+          height: 323,
+          backgroundColor: '#fff',
           alignItems: 'center',
           justifyContent: 'center',
         }}
@@ -30,20 +30,39 @@ export default () => {
   ));
 
   return (
-    <Tab
-      activeKey={state.tab}
-      animated={true}
-      onChange={value => setState({ tab: value })}
-      tabsContainerStyle={{
-        height: 60,
-        alignItems: 'center',
-        justifyContent: 'center',
+    <View
+      style={{
+        backgroundColor: '#F5F5F6',
+        flex: 1,
       }}
-      style={{ backgroundColor: '#fff' }}
-      tabBarBackgroundColor="#e5e5e5"
-      tabTextStyle={{ fontSize: 16 }}
     >
-      {tabPanes}
-    </Tab>
+      <Tab
+        activeKey={state.tab}
+        animated={true}
+        onChange={value => setState({ tab: value })}
+        tabsContainerStyle={{
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: '#fff',
+        }}
+        tabBarBackgroundColor="#F5F5F6"
+        tabTextStyle={{ fontSize: 16 }}
+        tabStyle={{
+          height: 42,
+          backgroundColor: '#fff',
+          borderTopColor: '#F5F5F6',
+          borderTopWidth: 1,
+        }}
+        tabActiveTextStyle={{
+          color: '#FF4800',
+        }}
+        tabBarUnderlineStyle={{
+          backgroundColor: '#FF4800',
+          height: 2,
+        }}
+      >
+        {tabPanes}
+      </Tab>
+    </View>
   );
 };
