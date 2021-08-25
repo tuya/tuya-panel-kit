@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { Image, View } from 'react-native';
 import { IconFont, RotationView, TYText, Utils } from 'tuya-panel-kit';
 
 import { ListView } from '#components';
@@ -14,39 +14,43 @@ export default () => {
       nthItemStyle={{
         marginTop: cx(180),
       }}
+      style={{
+        backgroundColor: '#F5F5F6',
+      }}
       list={[
         {
           title: Strings.getLang('rotationview_round'),
           content: (
-            <RotationView style={{ width: 160, height: 160, marginTop: 20 }} active={true}>
-              <View
+            <RotationView style={{ width: 198, height: 198, marginTop: 20 }} active={true}>
+              <Image
                 style={{
-                  width: 160,
-                  height: 160,
-                  borderRadius: 80,
-                  backgroundColor: '#0ff',
-                  justifyContent: 'center',
+                  width: 198,
+                  height: 198,
+                  resizeMode: 'contain',
                 }}
-              >
-                <IconFont name="power" size={48} color="#ff0" />
-              </View>
+                source={{
+                  uri:
+                    'https://images.tuyacn.com/rms-static/24872e70-0559-11ec-8caa-bf190bbd93b6-1629864096471.png?tyName=rotate-view-3.png',
+                }}
+              />
             </RotationView>
           ),
         },
         {
           title: Strings.getLang('rotationview_circle'),
           content: (
-            <RotationView style={{ width: 160, height: 160, marginTop: 40 }} active={true}>
-              <View
+            <RotationView style={{ width: 198, height: 198, marginTop: 20 }} active={true}>
+              <Image
                 style={{
-                  width: 140,
-                  height: 140,
-                  backgroundColor: 'red',
-                  justifyContent: 'center',
+                  width: 198,
+                  height: 198,
+                  resizeMode: 'contain',
                 }}
-              >
-                <TYText style={{ textAlign: 'center' }}>Rotation!!!</TYText>
-              </View>
+                source={{
+                  uri:
+                    'https://images.tuyacn.com/rms-static/7ee5cb60-0559-11ec-8caa-bf190bbd93b6-1629864248086.png?tyName=rotate-view-4.png',
+                }}
+              />
             </RotationView>
           ),
         },
