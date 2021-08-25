@@ -2254,14 +2254,14 @@
   resolved "https://registry.nlark.com/@types/prop-types/download/@types/prop-types-15.7.4.tgz?cache=0&sync_timestamp=1629708737049&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fprop-types%2Fdownload%2F%40types%2Fprop-types-15.7.4.tgz#fcf7205c25dff795ee79af1e30da2c9790808f11"
   integrity sha1-/PcgXCXf95Xuea8eMNosl5CAjxE=
 
-"@types/react-native@*":
+"@types/react-native@*", "@types/react-native@^0.64.12":
   version "0.64.13"
   resolved "https://registry.nlark.com/@types/react-native/download/@types/react-native-0.64.13.tgz?cache=0&sync_timestamp=1629708895138&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Freact-native%2Fdownload%2F%40types%2Freact-native-0.64.13.tgz#9e57b85631380b75979a09f5a97e1884299e8d5a"
   integrity sha1-nle4VjE4C3WXmgn1qX4YhCmejVo=
   dependencies:
     "@types/react" "*"
 
-"@types/react@*":
+"@types/react@*", "@types/react@^17.0.15":
   version "17.0.19"
   resolved "https://registry.nlark.com/@types/react/download/@types/react-17.0.19.tgz#8f2a85e8180a43b57966b237d26a29481dacc991"
   integrity sha1-jyqF6BgKQ7V5ZrI30mopSB2syZE=
@@ -2280,7 +2280,7 @@
   resolved "https://registry.nlark.com/@types/stack-utils/download/@types/stack-utils-2.0.1.tgz#20f18294f797f2209b5f65c8e3b5c8e8261d127c"
   integrity sha1-IPGClPeX8iCbX2XI47XI6CYdEnw=
 
-"@types/tuya-panel-kit@^4.0.5":
+"@types/tuya-panel-kit@^4.0.5", "@types/tuya-panel-kit@^4.0.8":
   version "4.0.8"
   resolved "https://registry.nlark.com/@types/tuya-panel-kit/download/@types/tuya-panel-kit-4.0.8.tgz#01aa1da5e423f73675445740ad4b6b55667505ab"
   integrity sha1-AaodpeQj9zZ1RFdArUtrVWZ1Bas=
