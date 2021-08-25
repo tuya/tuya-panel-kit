@@ -1,9 +1,10 @@
-/* eslint-disable react/no-array-index-key */
 import React from 'react';
-import { Tabs, TYListItem, Utils } from 'tuya-panel-kit';
-
+import { IconFont, Tabs, TYListItem, Utils } from 'tuya-panel-kit';
+import { TouchableOpacity } from 'react-native';
 import { ListView } from '#components';
 import Strings from '#i18n';
+/* eslint-disable react/no-array-index-key */
+
 import { useSetParticalState } from '../../../hooks/useSetParticalState';
 
 const { convertX: cx } = Utils.RatioUtils;
@@ -14,7 +15,7 @@ const Panel = ({ title, largeData = null, ...rest }) => {
       {largeData ? (
         new Array(99).fill(0).map((_, idx) => <TYListItem key={idx} title={`${title}_${idx}`} />)
       ) : (
-        <TYListItem title={title} />
+        <TYListItem title={title} styles={{ title: { alignSelf: 'center' } }} />
       )}
     </Tabs.TabPanel>
   );
@@ -47,6 +48,9 @@ export default () => {
     <ListView
       contentPadding={false}
       contentCenter={true}
+      style={{
+        backgroundColor: '#F5F5F6',
+      }}
       list={[
         {
           title: Strings.getLang('tabs_basic'),
@@ -83,19 +87,64 @@ export default () => {
           itemStyle: {
             marginTop: cx(40),
           },
+          contentStyle: {
+            display: 'flex',
+            flexDirection: 'row',
+          },
           content: (
-            <Tabs.TabContent
-              preload={false}
-              activeIndex={state.activeIndex}
-              onRelease={handleRelease}
-            >
-              {state.d1.map((data, idx) => (
-                <Panel
-                  key={idx}
-                  title={Strings.formatValue('tabs_tabcontentsin_page_sin', String(idx))}
-                />
-              ))}
-            </Tabs.TabContent>
+            <>
+              <TouchableOpacity
+                style={{
+                  position: 'absolute',
+                  zIndex: 1,
+                  left: cx(8),
+                  width: cx(24),
+                  height: cx(46),
+                  paddingTop: cx(18),
+                }}
+                onPress={() =>
+                  setState({ activeIndex: state.activeIndex > 0 ? state.activeIndex - 1 : 0 })
+                }
+              >
+                <IconFont name="backIos" size={cx(12)} />
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={{
+                  position: 'absolute',
+                  zIndex: 1,
+                  right: cx(8),
+                  width: cx(24),
+                  height: cx(46),
+                  paddingTop: cx(18),
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'flex-end',
+                }}
+                onPress={() =>
+                  setState({
+                    activeIndex:
+                      state.activeIndex < state.d1.length - 2
+                        ? state.activeIndex + 1
+                        : state.d1.length - 1,
+                  })
+                }
+              >
+                <IconFont name="arrow" />
+              </TouchableOpacity>
+
+              <Tabs.TabContent
+                preload={false}
+                activeIndex={state.activeIndex}
+                onRelease={handleRelease}
+              >
+                {state.d1.map((data, idx) => (
+                  <Panel
+                    key={idx}
+                    title={Strings.formatValue('tabs_tabcontentsin_page_sin', String(idx))}
+                  />
+                ))}
+              </Tabs.TabContent>
+            </>
           ),
         },
         {
@@ -109,25 +158,77 @@ export default () => {
               dataSource={state.d1}
               swipeable={true}
               onChange={tab => setState({ ...state, activeKey1: tab.value })}
+              style={{
+                borderBottomWidth: 1,
+                borderBottomColor: '#F5F5F5',
+              }}
             >
               <Tabs.TabPanel>
                 {new Array(2).fill(0).map((_, n) => (
-                  <TYListItem key={n} title={Strings.formatValue('tabs_tabcontenttab_1', `${n}`)} />
+                  <TYListItem
+                    style={{
+                      borderBottomWidth: 1,
+                      borderBottomColor: '#F5F5F5',
+                    }}
+                    key={n}
+                    title={Strings.formatValue('tabs_tabcontenttab_1', `${n}`)}
+                    styles={{
+                      title: {
+                        paddingLeft: cx(8),
+                      },
+                    }}
+                  />
                 ))}
               </Tabs.TabPanel>
               <Tabs.TabPanel>
                 {new Array(2).fill(0).map((_, n) => (
-                  <TYListItem key={n} title={Strings.formatValue('tabs_tabcontenttab_2', `${n}`)} />
+                  <TYListItem
+                    style={{
+                      borderBottomWidth: 1,
+                      borderBottomColor: '#F5F5F5',
+                    }}
+                    key={n}
+                    title={Strings.formatValue('tabs_tabcontenttab_2', `${n}`)}
+                    styles={{
+                      title: {
+                        paddingLeft: cx(8),
+                      },
+                    }}
+                  />
                 ))}
               </Tabs.TabPanel>
               <Tabs.TabPanel>
                 {new Array(2).fill(0).map((_, n) => (
-                  <TYListItem key={n} title={Strings.formatValue('tabs_tabcontenttab_3', `${n}`)} />
+                  <TYListItem
+                    style={{
+                      borderBottomWidth: 1,
+                      borderBottomColor: '#F5F5F5',
+                    }}
+                    key={n}
+                    title={Strings.formatValue('tabs_tabcontenttab_3', `${n}`)}
+                    styles={{
+                      title: {
+                        paddingLeft: cx(8),
+                      },
+                    }}
+                  />
                 ))}
               </Tabs.TabPanel>
               <Tabs.TabPanel>
                 {new Array(2).fill(0).map((_, n) => (
-                  <TYListItem key={n} title={Strings.formatValue('tabs_tabcontenttab_4', `${n}`)} />
+                  <TYListItem
+                    style={{
+                      borderBottomWidth: 1,
+                      borderBottomColor: '#F5F5F5',
+                    }}
+                    key={n}
+                    title={Strings.formatValue('tabs_tabcontenttab_4', `${n}`)}
+                    styles={{
+                      title: {
+                        paddingLeft: cx(8),
+                      },
+                    }}
+                  />
                 ))}
               </Tabs.TabPanel>
             </Tabs>
@@ -143,6 +244,10 @@ export default () => {
               activeKey={state.activeKey2}
               dataSource={state.d2}
               onChange={tab => setState({ ...state, activeKey2: tab.value })}
+              style={{
+                borderBottomWidth: 1,
+                borderBottomColor: '#F5F5F5',
+              }}
             >
               {state.d2.map((data, idx) => (
                 <Panel key={idx} title={data.label} />
@@ -163,15 +268,31 @@ export default () => {
               dataSource={state.d1}
               swipeable={false}
               onChange={tab => setState({ ...state, activeKey1: tab.value })}
+              style={{
+                borderTopWidth: 1,
+                borderTopColor: '#F5F5F5',
+              }}
             >
               <Tabs.TabPanel background="#fff">
                 <Tabs
                   activeKey={state.activeKey2}
                   dataSource={state.d2}
                   onChange={tab => setState({ ...state, activeKey2: tab.value })}
+                  style={{
+                    borderBottomWidth: 1,
+                    borderBottomColor: '#F5F5F5',
+                  }}
                 >
                   {state.d2.map((data, idx) => (
-                    <Panel key={idx} title={data.label} />
+                    <Panel
+                      style={{
+                        height: cx(188),
+                        display: 'flex',
+                        justifyContent: 'center',
+                      }}
+                      key={idx}
+                      title={data.label}
+                    />
                   ))}
                 </Tabs>
               </Tabs.TabPanel>
