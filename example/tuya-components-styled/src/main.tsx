@@ -45,16 +45,9 @@ interface Props {
   theme: GlobalTheme;
 }
 
-const Navigator = createNavigator<Props>(
-  {
-    router,
-    screenOptions: {},
-  },
-  {
-    onStateChange: state => {
-      console.log(state);
-    },
-  }
-);
+const Navigator = createNavigator<Props>({
+  router,
+  screenOptions: {},
+});
 
 export default composeLayout(store, Navigator);

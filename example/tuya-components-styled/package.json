@@ -58,8 +58,10 @@
     "style-equal": "^1.0.0",
     "styled-components": "3.4.10",
     "tuya-panel-kit": "link:.yalc/tuya-panel-kit",
-    "tuya-panel-utils": "link:.yalc/tuya-panel-utils",
-    "tuya-panel-theme": "link:.yalc/tuya-panel-theme"
+    "tuya-panel-style-button": "^0.0.1",
+    "tuya-panel-style-button-card": "^0.0.1",
+    "tuya-panel-theme": "link:.yalc/tuya-panel-theme",
+    "tuya-panel-utils": "link:.yalc/tuya-panel-utils"
   },
   "resolutions": {
     "react-native-web": "^0.11.7"

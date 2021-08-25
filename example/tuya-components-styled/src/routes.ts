@@ -1,19 +1,17 @@
 import Strings from '#i18n';
 
-// basic
-import Battery from './pages/basic/battery';
-import BrickButton from './pages/basic/brick-button';
+import Button from './pages/button';
+import ButtonCard from './pages/button-card';
 
 export const routes = [
-  // basic
   {
-    name: Strings.getLang('battery'),
-    href: '/basic/battery',
-    component: Battery,
+    name: Strings.getLang('button'),
+    href: '/button',
+    component: Button,
   },
   {
-    name: Strings.getLang('brick_button'),
-    href: '/basic/brick-button',
-    component: BrickButton,
+    name: Strings.getLang('button_card'),
+    href: '/button-card',
+    component: ButtonCard,
   },
 ];
