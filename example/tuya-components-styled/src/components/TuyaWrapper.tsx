@@ -12,6 +12,7 @@ import {
   TextProps,
   View,
   ViewProps,
+  ViewStyle,
 } from 'react-native';
 import { Provider } from 'react-redux';
 import {
@@ -272,7 +273,13 @@ export const TuyaWrapper = ({ onBack, children, hideTopbar, title }: TuyaWrapper
         showMenu={false}
         background="transparent"
         // @ts-ignore
-        topbarStyle={{ backgroundColor: 'transparent' }}
+        topbarStyle={
+          {
+            backgroundColor: 'transparent',
+            borderBottomColor: '#F5F5F6',
+            borderBottomWidth: 1,
+          } as StyleProp<ViewStyle>
+        }
         renderTopBar={null}
         hideTopbar={hideTopbar}
         onBack={onBack}
