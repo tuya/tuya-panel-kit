@@ -1,9 +1,8 @@
 import React from 'react';
-import { View } from 'react-native';
 import { Tips } from 'tuya-panel-kit';
-
 import { BlockList, Icons } from '#components';
 import Strings from '#i18n';
+
 import { useSetParticalState } from '../../../hooks/useSetParticalState';
 
 export default () => {
@@ -57,45 +56,78 @@ export default () => {
           },
         ]}
       />
-      <View
-        style={{
+      <Tips
+        show={state.topLeft}
+        contentStyle={bigTips}
+        tipStyle={{
           position: 'absolute',
-          bottom: '30%',
-          left: '50%',
+          top: -42,
+          left: 24,
+          zIndex: 100,
         }}
-      >
-        <Tips show={state.topLeft} contentStyle={bigTips} bgColor="#00f" cornerPosition="topLeft" />
-        <Tips
-          show={state.topCenter}
-          contentStyle={bigTips}
-          bgColor="#00f"
-          cornerPosition="topCenter"
-        />
-        <Tips
-          show={state.topRight}
-          contentStyle={bigTips}
-          bgColor="#00f"
-          cornerPosition="topRight"
-        />
-        <Tips
-          show={state.bottomLeft}
-          contentStyle={bigTips}
-          bgColor="#00f"
-          cornerPosition="bottomLeft"
-        />
-        <Tips
-          show={state.bottomCenter}
-          contentStyle={bigTips}
-          bgColor="#00f"
-          cornerPosition="bottomCenter"
-        />
-        <Tips
-          show={state.bottomRight}
-          contentStyle={bigTips}
-          bgColor="#00f"
-          cornerPosition="bottomRight"
-        />
-      </View>
+        bgColor="#333333"
+        cornerPosition="bottomLeft"
+      />
+      <Tips
+        tipStyle={{
+          position: 'absolute',
+          top: 4,
+          left: 143,
+          zIndex: 100,
+        }}
+        show={state.topCenter}
+        contentStyle={bigTips}
+        bgColor="#333333"
+        cornerPosition="bottomCenter"
+      />
+      <Tips
+        tipStyle={{
+          position: 'absolute',
+          left: 261,
+          zIndex: 100,
+          top: 56,
+        }}
+        show={state.topRight}
+        contentStyle={bigTips}
+        bgColor="#333333"
+        cornerPosition="bottomRight"
+      />
+      <Tips
+        tipStyle={{
+          position: 'absolute',
+          left: 24,
+          zIndex: 100,
+          top: 180,
+        }}
+        show={state.bottomLeft}
+        contentStyle={bigTips}
+        bgColor="#333333"
+        cornerPosition="topLeft"
+      />
+      <Tips
+        tipStyle={{
+          position: 'absolute',
+          left: 143,
+          zIndex: 100,
+          top: 230,
+        }}
+        show={state.bottomCenter}
+        contentStyle={bigTips}
+        bgColor="#333333"
+        cornerPosition="topCenter"
+      />
+      <Tips
+        tipStyle={{
+          position: 'absolute',
+          left: 261,
+          zIndex: 100,
+          top: 280,
+        }}
+        show={state.bottomRight}
+        contentStyle={bigTips}
+        bgColor="#333333"
+        cornerPosition="topRight"
+      />
     </>
   );
 };
