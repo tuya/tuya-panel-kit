@@ -9,7 +9,7 @@ export default () => {
   const [collapsed, setCollapsed] = React.useState(false);
 
   return (
-    <View style={{ flex: 1, backgroundColor: '#F5F5F6', height: cx(600) }}>
+    <View style={{ backgroundColor: '#F5F5F6', height: cx(600) }}>
       <Button
         stretch={true}
         onPress={() => setCollapsed(!collapsed)}

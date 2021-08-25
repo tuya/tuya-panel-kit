@@ -1,9 +1,10 @@
 import React from 'react';
-import { Tips } from 'tuya-panel-kit';
+import { Tips, Utils } from 'tuya-panel-kit';
 import { BlockList, Icons } from '#components';
 import Strings from '#i18n';
-
 import { useSetParticalState } from '../../../hooks/useSetParticalState';
+
+const { convertX: cx } = Utils.RatioUtils;
 
 export default () => {
   const [state, setState] = useSetParticalState({
@@ -61,8 +62,8 @@ export default () => {
         contentStyle={bigTips}
         tipStyle={{
           position: 'absolute',
-          top: -42,
-          left: 24,
+          top: -cx(42),
+          left: cx(24),
           zIndex: 100,
         }}
         bgColor="#333333"
@@ -71,8 +72,8 @@ export default () => {
       <Tips
         tipStyle={{
           position: 'absolute',
-          top: 4,
-          left: 143,
+          top: cx(4),
+          left: cx(143),
           zIndex: 100,
         }}
         show={state.topCenter}
@@ -83,8 +84,8 @@ export default () => {
       <Tips
         tipStyle={{
           position: 'absolute',
-          left: 261,
-          zIndex: 100,
+          left: cx(261),
+          zIndex: cx(100),
           top: 56,
         }}
         show={state.topRight}
@@ -95,8 +96,8 @@ export default () => {
       <Tips
         tipStyle={{
           position: 'absolute',
-          left: 24,
-          zIndex: 100,
+          left: cx(24),
+          zIndex: cx(100),
           top: 180,
         }}
         show={state.bottomLeft}
@@ -107,8 +108,8 @@ export default () => {
       <Tips
         tipStyle={{
           position: 'absolute',
-          left: 143,
-          zIndex: 100,
+          left: cx(143),
+          zIndex: cx(100),
           top: 230,
         }}
         show={state.bottomCenter}
@@ -119,8 +120,8 @@ export default () => {
       <Tips
         tipStyle={{
           position: 'absolute',
-          left: 261,
-          zIndex: 100,
+          left: cx(261),
+          zIndex: cx(100),
           top: 280,
         }}
         show={state.bottomRight}
