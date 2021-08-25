@@ -1,6 +1,5 @@
 import React from 'react';
 import { Dimensions, View } from 'react-native';
-import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 import { Motion } from 'tuya-panel-kit';
 import Strings from '#i18n';
 import { BlockList, Icons } from '#components';
@@ -13,15 +12,15 @@ export default () => {
   const [pullUpShow, setPullUpShow] = React.useState(false);
   const [scaleFadeInShow, setScaleFadeInShow] = React.useState(false);
   const contentStyles = {
-    width: 375,
+    width,
     height: 200,
-    backgroundColor: '#f0f',
+    backgroundColor: '#fff',
   };
   const [scalePullDownShow, setScalePullDownShow] = React.useState(false);
   const [pushDownShow, setPushDownShow] = React.useState(false);
   const [toastShow, setToastShow] = React.useState(false);
   return (
-    <>
+    <View style={{ height: height * 0.9 }}>
       <BlockList
         list={[
           {
@@ -62,7 +61,7 @@ export default () => {
         scalePullDownShow ||
         pushDownShow ||
         toastShow) && (
-        <TouchableWithoutFeedback
+        <View
           style={{
             width,
             height,
@@ -71,13 +70,14 @@ export default () => {
             left: 0,
             bottom: 0,
           }}
-          onPress={() => {
-            fadeShow && setFadeShow(!fadeShow);
-            pullUpShow && setPullUpShow(!pullUpShow);
-            scaleFadeInShow && setScaleFadeInShow(!scaleFadeInShow);
-            scalePullDownShow && setScalePullDownShow(!scalePullDownShow);
-            pushDownShow && setPushDownShow(!pushDownShow);
-            toastShow && setToastShow(!toastShow);
+          onStartShouldSetResponderCapture={() => true}
+          onResponderRelease={event => {
+            fadeShow && setFadeShow(false);
+            pullUpShow && setPullUpShow(false);
+            scaleFadeInShow && setScaleFadeInShow(false);
+            scalePullDownShow && setScalePullDownShow(false);
+            pushDownShow && setPushDownShow(false);
+            toastShow && setToastShow(false);
           }}
         />
       )}
@@ -121,6 +121,6 @@ export default () => {
       >
         <View style={contentStyles} />
       </Motion.Toast>
-    </>
+    </View>
   );
 };
