@@ -1,9 +1,8 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
 import React from 'react';
 import { TopBar, TYSdk, Utils } from 'tuya-panel-kit';
-
 import { ListView } from '#components';
 import Strings from '#i18n';
+/* eslint-disable @typescript-eslint/no-empty-function */
 
 const { convertX: cx } = Utils.RatioUtils;
 
@@ -41,12 +40,17 @@ export default ({ navigation }) => {
       }}
       style={{
         backgroundColor: '#F5F5F6',
+        flex: 1,
       }}
       list={[
         {
           title: Strings.getLang('topbar_basic_split'),
           content: (
-            <TopBar.Container background="#fff" style={{ flex: 1 }}>
+            <TopBar.Container
+              background="#fff"
+              style={{ flex: 1, height: 48 }}
+              contentStyle={{ height: 48, marginTop: 0 }}
+            >
               <TopBar.Action name="backIos" color="#4C4C4C" onPress={() => navigation.pop()} />
               <TopBar.Content />
               <TopBar.Action
@@ -61,7 +65,8 @@ export default ({ navigation }) => {
           title: Strings.getLang('topbar_basic_pack'),
           content: (
             <TopBar
-              style={{ flex: 1 }}
+              style={{ flex: 1, height: 48 }}
+              contentStyle={{ height: 48, marginTop: 0 }}
               background="#fff"
               title={Strings.getLang('topbar_title')}
               color="red"
@@ -89,7 +94,8 @@ export default ({ navigation }) => {
           title: Strings.getLang('topbar_rad_pack'),
           content: (
             <TopBar
-              style={{ flex: 1 }}
+              style={{ flex: 1, height: 48 }}
+              contentStyle={{ height: 48, marginTop: 0 }}
               background={radialBackground}
               title={Strings.getLang('topbar_title')}
               titleStyle={{ color: '#fff' }}
@@ -113,7 +119,11 @@ export default ({ navigation }) => {
         {
           title: Strings.getLang('topbar_line_split'),
           content: (
-            <TopBar.Container style={{ flex: 1 }} background={linearBackground}>
+            <TopBar.Container
+              style={{ flex: 1, height: 48 }}
+              contentStyle={{ height: 48, marginTop: 0 }}
+              background={linearBackground}
+            >
               <TopBar.Action name="backIos" color="#fff" onPress={() => navigation.pop()} />
               <TopBar.Content
                 title={Strings.getLang('topbar_title')}
@@ -129,8 +139,18 @@ export default ({ navigation }) => {
         },
         {
           title: Strings.getLang('topbar_mul_split'),
+          itemStyle: {
+            backgroundColor: '#F5F5F6',
+            marginTop: 0,
+            paddingTop: cx(40),
+            marginBottom: 0,
+          },
           content: (
-            <TopBar.Container style={{ flex: 1 }} background="#fff">
+            <TopBar.Container
+              style={{ flex: 1, height: 48 }}
+              contentStyle={{ height: 48, marginTop: 0 }}
+              background="#fff"
+            >
               <TopBar.Action name="backIos" onPress={() => navigation.pop()} />
               <TopBar.Action
                 source={Strings.getLang('topbar_back')}
@@ -165,9 +185,16 @@ export default ({ navigation }) => {
         },
         {
           title: Strings.getLang('topbar_mul_pack'),
+          itemStyle: {
+            backgroundColor: '#F5F5F6',
+            marginTop: 0,
+            paddingTop: cx(40),
+            paddingBottom: cx(40),
+          },
           content: (
             <TopBar
-              style={{ flex: 1 }}
+              style={{ flex: 1, height: 48 }}
+              contentStyle={{ height: 48, marginTop: 0 }}
               background="#fff"
               title={Strings.getLang('topbar_title')}
               subTitle={Strings.getLang('text_subTitle')}
