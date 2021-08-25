@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EnumButtonGroup Acrylic 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "borderRadius": 40,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 0,
+        "width": undefined,
+      },
+      undefined,
+    ]
+  }
+/>
+`;

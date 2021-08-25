@@ -29,8 +29,8 @@
   "scripts": {
     "prebuild": "rimraf lib/*",
     "build": "lerna run build",
-    "dev": "lerna run dev --parallel",
-    "test": "lerna run test",
+    "dev": "lerna run dev",
+    "test": "lerna run test --parallel",
     "test:kit": "cd packages/tuya-panel-kit && yarn test",
     "test:utils": "cd packages/tuya-panel-utils && yarn test",
     "commit": "git cz",
@@ -81,10 +81,15 @@
     "react-native-screens": "2.10.1",
     "react-native-svg": "5.5.1",
     "style-equal": "^1.0.0",
-    "styled-components": "^3.4.10"
+    "styled-components": "^3.4.10",
+    "@react-native-community/blur": "3.6.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
+    "@types/node": "^16.4.7",
+    "@types/react": "^17.0.15",
+    "@types/react-native": "^0.64.12",
+    "@types/tuya-panel-kit": "^4.0.8",
     "babel-eslint": "^8.2.1",
     "babel-jest": "^23.6.0",
     "commitizen": "^4.2.1",
@@ -110,7 +115,8 @@
     "standard-version": "^5.0.2",
     "ts-jest": "^23.6.0",
     "typescript": "^4.0.5",
-    "yorkie": "^2.0.0"
+    "yorkie": "^2.0.0",
+    "jsdom": "^16.6.0"
   },
   "peerDependencies": {
     "@types/tuya-panel-kit": "*",
