@@ -55,6 +55,7 @@ export const ListView = ({
 const styles = StyleSheet.create({
   list: {
     paddingVertical: convertX(24),
+    flex: 1,
   },
   list_item: {
     marginBottom: convertX(24),

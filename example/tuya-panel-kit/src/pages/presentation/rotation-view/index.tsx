@@ -1,9 +1,8 @@
 import React from 'react';
-import { Image, View } from 'react-native';
-import { IconFont, RotationView, TYText, Utils } from 'tuya-panel-kit';
-
-import { ListView } from '#components';
+import { Image } from 'react-native';
+import { RotationView, Utils } from 'tuya-panel-kit';
 import Strings from '#i18n';
+import { ListView } from '#components';
 
 const { convertX: cx } = Utils.RatioUtils;
 
@@ -12,7 +11,7 @@ export default () => {
     <ListView
       contentCenter={true}
       nthItemStyle={{
-        marginTop: cx(180),
+        marginTop: cx(24),
       }}
       style={{
         backgroundColor: '#F5F5F6',

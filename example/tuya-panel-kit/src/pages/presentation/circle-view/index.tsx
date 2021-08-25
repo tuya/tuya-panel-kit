@@ -1,7 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
-import { CircleView, TYText, Utils } from 'tuya-panel-kit';
-
+import { CircleView, IconFont, Utils } from 'tuya-panel-kit';
 import { ListView } from '#components';
 import Strings from '#i18n';
 
@@ -14,34 +12,27 @@ export default () => {
       nthItemStyle={{
         marginTop: cx(40),
       }}
+      style={{
+        backgroundColor: '#F5F5F5',
+      }}
       list={[
         {
           title: Strings.getLang('circleview_basic'),
-          content: <CircleView radius={30} color="red" />,
+          content: <CircleView radius={30} color="#F9825C" />,
         },
         {
           title: Strings.getLang('circleview_border'),
-          content: <CircleView radius={30} color="#ff0" borderWidth={4} borderColor="#00f" />,
+          content: <CircleView radius={30} color="#FCDC9D" borderWidth={2} borderColor="#B8B8B8" />,
         },
         {
           title: Strings.getLang('circleview_embedded'),
           content: (
             <CircleView
               radius={50}
-              color="#0f0"
+              color="#F98553"
               style={{ alignItems: 'center', justifyContent: 'center' }}
             >
-              <View
-                style={{
-                  backgroundColor: '#0ff',
-                  width: 45,
-                  height: 45,
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-              >
-                <TYText text="Hello, World" style={{ textAlign: 'center' }} />
-              </View>
+              <IconFont name="edit" size={24} />
             </CircleView>
           ),
         },
