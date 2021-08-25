@@ -1,3 +1,13 @@
+#### 1.0.4 (2021-08-25)
+
+##### Chores
+
+*  ignore useless files (b4aa1923)
+
+##### Bug Fixes
+
+* **jumpTo:**  jumpTo 方法如果是 http url 直接跳转浏览器_kit1.x (8a5b7f8c)
+
 #### 1.0.3 (2021-08-13)
 
 ##### Chores
