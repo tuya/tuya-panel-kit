@@ -10,7 +10,7 @@ export default () => {
   const sliderView = {
     width: 28,
     height: 28,
-    backgroundColor: '#57BCFB',
+    backgroundColor: '#F84803',
     borderRadius: 14,
     alignItems: 'center',
     justifyContent: 'center',
@@ -31,18 +31,18 @@ export default () => {
                   thumbSize: 26,
                   thumbRadius: 26,
                   thumbTintColor: '#FFF',
-                  minimumTrackTintColor: '#57BCFB',
+                  minimumTrackTintColor: '#F84803',
                   maximumTrackTintColor: '#E3E9EE',
                 }}
                 maximumValue={100}
                 minimumValue={0}
                 style={{ marginBottom: 10 }}
                 value={value}
-                renderThumb={() => (
-                  <View style={sliderView}>
-                    <TYText text={value} color="#fff" />
-                  </View>
-                )}
+                // renderThumb={() => (
+                //   <View style={sliderView}>
+                //     <TYText text={value} color="#fff" />
+                //   </View>
+                // )}
                 onSlidingComplete={v => setValue(Math.round(v))}
               />
             </View>
@@ -75,7 +75,7 @@ export default () => {
                     style={{
                       height: 30,
                       borderRadius: 15,
-                      backgroundColor: '#57BCFB',
+                      backgroundColor: '#F84803',
                       marginHorizontal: 3,
                     }}
                   />
@@ -97,7 +97,7 @@ export default () => {
                   trackHeight: 46,
                   thumbSize: 20,
                   thumbRadius: 20,
-                  thumbTintColor: '#57BCFB',
+                  thumbTintColor: '#F84803',
                   minimumTrackTintColor: '#E3E9EE',
                   maximumTrackTintColor: '#E3E9EE',
                 }}
@@ -123,7 +123,7 @@ export default () => {
                     style={{
                       height: 38,
                       borderRadius: 14,
-                      backgroundColor: '#57BCFB',
+                      backgroundColor: '#F84803',
                       marginHorizontal: 4,
                     }}
                   />
@@ -155,8 +155,8 @@ export default () => {
                   trackHeight: 46,
                   thumbSize: 20,
                   thumbRadius: 20,
-                  thumbTintColor: '#57BCFB',
-                  minimumTrackTintColor: '#57BCFB',
+                  thumbTintColor: '#F84803',
+                  minimumTrackTintColor: '#F84803',
                   maximumTrackTintColor: '#E3E9EE',
                 }}
                 value={value}
@@ -178,7 +178,8 @@ export default () => {
                 useNoun={true}
                 maximumValue={100}
                 minimumValue={0}
-                minNounStyle={{ backgroundColor: '#f0f' }}
+                minNounStyle={{ backgroundColor: 'white' }}
+                maxNounStyle={{ backgroundColor: '#F84803' }}
                 onSlidingComplete={v => setValue(Math.round(v))}
               />
             </View>
@@ -197,13 +198,14 @@ export default () => {
                   thumbSize: 26,
                   thumbRadius: 26,
                   thumbTintColor: '#FFF',
-                  minimumTrackTintColor: '#57BCFB',
+                  minimumTrackTintColor: '#F84803',
                   maximumTrackTintColor: '#E3E9EE',
                 }}
                 value={value}
                 stepValue={25}
                 useNoun={true}
-                minNounStyle={{ backgroundColor: '#f0f' }}
+                minNounStyle={{ backgroundColor: 'white' }}
+                maxNounStyle={{ backgroundColor: '#F84803' }}
                 maximumValue={100}
                 minimumValue={0}
                 onValueChange={value => setValue(value)}
@@ -221,18 +223,18 @@ export default () => {
                   thumbRadius: 26,
                   thumbTintColor: '#FFF',
                   minimumTrackTintColor: '#E3E9EE',
-                  maximumTrackTintColor: '#57BCFB',
+                  maximumTrackTintColor: '#F84803',
                 }}
                 maximumValue={100}
                 minimumValue={0}
                 reverseValue={true}
                 trackStyle={{ width: 6, height: 200, borderRadius: 3 }}
                 value={value}
-                renderThumb={() => (
-                  <View style={sliderView}>
-                    <TYText text={value} color="#fff" />
-                  </View>
-                )}
+                // renderThumb={() => (
+                //   <View style={sliderView}>
+                //     <TYText text={value} color="#fff" />
+                //   </View>
+                // )}
                 onSlidingComplete={v => setValue(Math.round(v))}
               />
               <Slider.Vertical
@@ -256,7 +258,7 @@ export default () => {
                     style={{
                       width: 30,
                       borderRadius: 15,
-                      backgroundColor: '#57BCFB',
+                      backgroundColor: '#F84803',
                       marginVertical: 3,
                       flex: 1,
                     }}
@@ -296,7 +298,7 @@ export default () => {
                     style={{
                       width: 38,
                       borderRadius: 14,
-                      backgroundColor: '#57BCFB',
+                      backgroundColor: '#F84803',
                       marginVertical: 4,
                       flex: 1,
                     }}
@@ -319,8 +321,8 @@ export default () => {
                 theme={{
                   thumbSize: 20,
                   thumbRadius: 20,
-                  thumbTintColor: '#57BCFB',
-                  minimumTrackTintColor: '#57BCFB',
+                  thumbTintColor: '#F84803',
+                  minimumTrackTintColor: '#F84803',
                   maximumTrackTintColor: '#E3E9EE',
                 }}
                 type="parcel"
@@ -344,7 +346,8 @@ export default () => {
                 }}
                 useNoun={true}
                 stepValue={25}
-                minNounStyle={{ backgroundColor: '#f0f' }}
+                minNounStyle={{ backgroundColor: 'white' }}
+                maxNounStyle={{ backgroundColor: '#F84803' }}
                 onSlidingComplete={v => setValue(Math.round(v))}
               />
               <Slider.Vertical
@@ -353,7 +356,7 @@ export default () => {
                   thumbRadius: 26,
                   thumbTintColor: '#FFF',
                   minimumTrackTintColor: '#E3E9EE',
-                  maximumTrackTintColor: '#57BCFB',
+                  maximumTrackTintColor: '#F84803',
                 }}
                 trackStyle={{ width: 6, height: 200, borderRadius: 3 }}
                 style={{ marginHorizontal: 15 }}
@@ -363,7 +366,8 @@ export default () => {
                 reverseValue={true}
                 useNoun={true}
                 stepValue={25}
-                minNounStyle={{ backgroundColor: '#f0f' }}
+                minNounStyle={{ backgroundColor: 'white' }}
+                maxNounStyle={{ backgroundColor: '#F84803' }}
                 onSlidingComplete={v => setValue(Math.round(v))}
               />
             </View>

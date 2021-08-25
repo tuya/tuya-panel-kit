@@ -1,0 +1,38 @@
+# This is a comment.
+# Each line is a file pattern followed by one or more owners.
+
+# These owners will be the default owners for everything in
+# the repo. Unless a later match takes precedence,
+# @youngjuning will be requested for review when someone opens a pull request.
+*       @youngjuning @ShinyLeee
+
+# In this example, @doctocat owns any files in the build/logs
+# directory at the root of the repository and any of its
+# subdirectories.
+
+# youngjuning@洛竹、Saber2pr@睦海、ZengBeauty@多肉、ShinyLeee@咕噜、Nfs-oh@Bryan、chechengyi@锐文
+/example/ @Saber2pr @youngjuning
+/packages/tuya-panel-kit/ @ZengBeauty
+/packages/tuya-panel-theme/ @ZengBeauty
+/packages/tuya-panel-utils/ @ZengBeauty
+/packages/tuya-panel-topbar-mall-indicator/ @Nfs-oh
+/packages/tuya-panel-acrylic-kit/ @ZengBeauty
+/packages/tuya-panel-classic-kit/ @ZengBeauty
+/packages/tuya-panel-nordic-kit/ @ZengBeauty
+/packages/tuya-panel-style-block-card/ @chechengyi
+/packages/tuya-panel-style-button/ @chechengyi
+/packages/tuya-panel-style-button-card/ @chechengyi
+/packages/tuya-panel-style-depict-card/ @ZengBeauty
+/packages/tuya-panel-style-display-card/ @ZengBeauty
+/packages/tuya-panel-style-enum-button-group/ @chechengyi
+/packages/tuya-panel-style-enum-card/ @chechengyi
+/packages/tuya-panel-style-enum-slider-card/ @chechengyi
+/packages/tuya-panel-style-enum-tabs-button-card/ @chechengyi
+/packages/tuya-panel-style-icon-background/ @chechengyi
+/packages/tuya-panel-style-icon-card/ @ZengBeauty
+/packages/tuya-panel-style-list-card/ @ZengBeauty
+/packages/tuya-panel-style-slider-card/ @chechengyi
+/packages/tuya-panel-style-step-card/ @ZengBeauty
+/packages/tuya-panel-style-switch-card/ @ZengBeauty
+
+

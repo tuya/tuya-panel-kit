@@ -7,7 +7,7 @@ import Strings from '#i18n';
 
 const { convertX: cx } = Utils.RatioUtils;
 
-export default () => {
+export default ({ navigation }) => {
   const radialBackground = {
     stops: [
       {
@@ -32,7 +32,7 @@ export default () => {
   return (
     <ListView
       contentPadding={false}
-      contentCenter={true}
+      contentCenter
       nthItemStyle={{
         marginTop: cx(40),
       }}
@@ -41,9 +41,13 @@ export default () => {
           title: Strings.getLang('topbar_basic_split'),
           content: (
             <TopBar.Container background="#000" style={{ flex: 1 }}>
-              <TopBar.Action name="backIos" color="red" onPress={TYSdk.Navigator.pop} />
+              <TopBar.Action name="backIos" color="red" onPress={() => navigation.pop()} />
               <TopBar.Content title="Title" />
-              <TopBar.Action name="pen" color="yellow" onPress={TYSdk.native.showDeviceMenu} />
+              <TopBar.Action
+                name="pen"
+                color="yellow"
+                onPress={() => TYSdk.native.showDeviceMenu()}
+              />
             </TopBar.Container>
           ),
         },
@@ -62,7 +66,7 @@ export default () => {
                   onPress: () => TYSdk.native.showDeviceMenu(),
                 },
               ]}
-              onBack={TYSdk.Navigator.pop}
+              onBack={() => navigation.pop()}
             />
           ),
         },
@@ -73,7 +77,7 @@ export default () => {
               style={{ flex: 1 }}
               background={radialBackground}
               title="Title"
-              onBack={TYSdk.Navigator.pop}
+              onBack={() => navigation.pop()}
             />
           ),
         },
@@ -81,7 +85,7 @@ export default () => {
           title: Strings.getLang('topbar_line_split'),
           content: (
             <TopBar.Container style={{ flex: 1 }} background={linearBackground}>
-              <TopBar.Action name="backIos" onPress={TYSdk.Navigator.pop} />
+              <TopBar.Action name="backIos" onPress={() => navigation.pop()} />
               <TopBar.Content title="Title" />
             </TopBar.Container>
           ),
@@ -90,7 +94,7 @@ export default () => {
           title: Strings.getLang('topbar_mul_split'),
           content: (
             <TopBar.Container style={{ flex: 1 }} background="blue">
-              <TopBar.Action name="backIos" onPress={TYSdk.Navigator.pop} />
+              <TopBar.Action name="backIos" onPress={() => navigation.pop()} />
               <TopBar.Action
                 source={Strings.getLang('topbar_timing')}
                 color="red"
@@ -132,7 +136,7 @@ export default () => {
               leftActions={[
                 {
                   name: 'backIos',
-                  onPress: TYSdk.Navigator.pop,
+                  onPress: () => navigation.pop(),
                 },
                 {
                   source: Strings.getLang('topbar_timing'),

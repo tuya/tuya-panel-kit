@@ -25,8 +25,8 @@ export default () => {
               x2="0%"
               y2="100%"
               stops={{
-                '0%': 'red',
-                '100%': 'yellow',
+                '0%': '#F99833',
+                '100%': '#F84803',
               }}
             >
               <Rect width={300} height={200} />
@@ -47,9 +47,9 @@ export default () => {
               x2="0%"
               y2="100%"
               stops={{
-                '0%': 'red',
-                '30%': 'blue',
-                '100%': 'yellow',
+                '0%': '#61FF00',
+                '60%': '#FFC600',
+                '100%': '#FF4800',
               }}
             >
               <Rect width={300} height={200} />

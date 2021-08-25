@@ -3,6 +3,69 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.7.6](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.7.5...tuya-panel-kit@4.7.6) (2021-08-24)
+
+
+### Features
+
+* **style-kit:** add more components ([#119](https://github.com/tuya/tuya-panel-kit/issues/119)) ([7f9aa2f](https://github.com/tuya/tuya-panel-kit/commit/7f9aa2fecf01c73760eeb88fcc09703ccef3afca))
+
+
+
+
+
+## [4.7.5](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.7.4...tuya-panel-kit@4.7.5) (2021-08-24)
+
+**Note:** Version bump only for package tuya-panel-kit
+
+
+
+
+
+## [4.7.4](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.7.3...tuya-panel-kit@4.7.4) (2021-08-14)
+
+
+### Bug Fixes
+
+* **NavigationContainer:** fix onBack of TopBar ([#117](https://github.com/tuya/tuya-panel-kit/issues/117)) ([09b352c](https://github.com/tuya/tuya-panel-kit/commit/09b352c90f9102df79677e3c344d6edbf97d8a42))
+
+
+
+
+
+## [4.7.3](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.7.2...tuya-panel-kit@4.7.3) (2021-08-13)
+
+**Note:** Version bump only for package tuya-panel-kit
+
+
+
+
+
+## [4.7.2](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.7.0...tuya-panel-kit@4.7.2) (2021-08-11)
+
+**Note:** Version bump only for package tuya-panel-kit
+
+
+
+
+
+# [4.7.0](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.6.6...tuya-panel-kit@4.7.0) (2021-08-11)
+
+
+### Bug Fixes
+
+* **wifiOffline:** Wifi offline on Iphone 12 system version 14.6 the font size of the pop-up box is inconsistent ([#102](https://github.com/tuya/tuya-panel-kit/issues/102)) ([6cb9c65](https://github.com/tuya/tuya-panel-kit/commit/6cb9c65236fa6388befb543f4e158816aefac0ad))
+
+
+### Features
+
+* **Navigation:** export navgationRef ([#111](https://github.com/tuya/tuya-panel-kit/issues/111)) ([bb1880e](https://github.com/tuya/tuya-panel-kit/commit/bb1880e3103b6ba8ebb36ff5273fe913e06f8486))
+* **Tabbar:** radiobutton use props textStyle ([#98](https://github.com/tuya/tuya-panel-kit/issues/98)) ([2e94a8a](https://github.com/tuya/tuya-panel-kit/commit/2e94a8ad1881c57ef44a9d5e62f5981db86db817))
+
+
+
+
+
 ## [4.6.6](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.6.5...tuya-panel-kit@4.6.6) (2021-07-31)
 
 

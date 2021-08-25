@@ -1,0 +1,44 @@
+name: Preview Build
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  build-preview:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: c-hive/gha-yarn-cache@v2
+
+      - name: build
+        run: |
+          NODE_OPTIONS='--max-old-space-size=4096'
+          cd example
+          yarn add tuya-panel-kit tuya-panel-utils tuya-panel-theme --registry=https://registry.npmjs.org
+          PREVIEW_PR=true DEV_MODE=umi yarn umi build
+
+      - run: |
+          cd example
+          zip -r dist.zip dist
+
+      - name: upload dist artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: dist
+          path: example/dist.zip
+          retention-days: 5
+
+      - name: Save PR number
+        if: ${{ always() }}
+        run: echo ${{ github.event.number }} > ./pr-id.txt
+
+      - name: Upload PR number
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: pr
+          path: ./pr-id.txt
