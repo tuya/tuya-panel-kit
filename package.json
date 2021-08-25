@@ -86,6 +86,10 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.4",
+    "@types/node": "^16.4.7",
+    "@types/react": "^17.0.15",
+    "@types/react-native": "^0.64.12",
+    "@types/tuya-panel-kit": "^4.0.8",
     "babel-eslint": "^8.2.1",
     "babel-jest": "^23.6.0",
     "commitizen": "^4.2.1",
