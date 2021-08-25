@@ -7,6 +7,7 @@ export const usePostedPush = () => {
   const history = useHistory();
   return (href: string) => {
     history.push(href);
+    self.scroll(0, 0);
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     const currentIsEN = Strings.language === 'en';

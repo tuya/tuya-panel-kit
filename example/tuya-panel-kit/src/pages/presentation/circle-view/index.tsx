@@ -12,9 +12,6 @@ export default () => {
       nthItemStyle={{
         marginTop: cx(40),
       }}
-      style={{
-        backgroundColor: '#F5F5F5',
-      }}
       list={[
         {
           title: Strings.getLang('circleview_basic'),
