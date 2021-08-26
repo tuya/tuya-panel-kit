@@ -4,7 +4,7 @@ export default {
     button: 'button',
 
     // button-card
-    button_card: 'button',
+    button_card: 'button card',
   },
   zh: {
     // button
