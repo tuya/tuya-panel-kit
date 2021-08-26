@@ -1,8 +1,6 @@
 import React from 'react';
 import * as StyledButtonCard from 'tuya-panel-style-button-card';
 import TuyaRNSvgs from 'tuya-panel-kit/lib/components/iconfont/svg/defaultSvg';
-import { ListView } from '#components';
-import Strings from '#i18n';
 /* eslint-disable prefer-destructuring */
 
 const ClassicButtonCard = StyledButtonCard.ClassicButtonCard;
@@ -35,25 +33,9 @@ export default () => {
   }));
 
   return (
-    <ListView
-      contentPadding={false}
-      list={[
-        {
-          title: Strings.getLang('button_card'),
-          content: (
-            <ClassicButtonCard
-              title="工作模式"
-              showIconBg={false}
-              icon={TuyaRNSvgs.power}
-              list={list}
-            />
-          ),
-        },
-        {
-          title: Strings.getLang('button_card'),
-          content: <NordicButtonCard title="工作" list={list} />,
-        },
-      ]}
-    />
+    <>
+      <ClassicButtonCard title="工作模式" showIconBg={false} icon={TuyaRNSvgs.power} list={list} />{' '}
+      <NordicButtonCard title="工作" list={list} />
+    </>
   );
 };
