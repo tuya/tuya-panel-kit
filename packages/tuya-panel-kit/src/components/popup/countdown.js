@@ -11,6 +11,7 @@ import {
   StyledOverview,
   StyledPickerUnitText,
   StyledCountdownContent,
+  StyledCountdownOnePickerContent
 } from './styled';
 
 const { toFixed } = CoreUtils;
@@ -215,7 +216,7 @@ class CountdownPopup extends React.Component {
               style={[countdownWrapperStyle, !switchValue && { opacity: 0.6 }]}
               pointerEvents={!switchValue ? 'none' : 'auto'}
             >
-              <StyledCountdownContent>
+              <StyledCountdownOnePickerContent>
                 <StyledOverview style={{ flex: 1 }}>
                   <Picker
                     theme={{ fontColor: countFontColor }}
@@ -235,7 +236,7 @@ class CountdownPopup extends React.Component {
                     text={minuteText}
                   />
                 </StyledOverview>
-              </StyledCountdownContent>
+              </StyledCountdownOnePickerContent>
             </StyledCountdownContainer>
           );
         }}
