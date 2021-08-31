@@ -11,9 +11,9 @@ const selectedPath =
   'M788.053333 276.053333a32 32 0 0 1 48.341334 41.642667l-3.114667 3.584-384 384a32 32 0 0 1-41.642667 3.114667l-3.584-3.114667-170.666666-170.666667a32 32 0 0 1 41.642666-48.341333l3.584 3.114667L426.666667 637.397333l361.386666-361.386666z';
 const { getTheme, ThemeConsumer } = ThemeUtils;
 
-let itemHeight = 56;
+const { viewWidth, convertX: cx } = RatioUtils;
 
-const { viewWidth } = RatioUtils;
+let itemHeight = cx(56);
 
 class ListPopup extends React.Component {
   static propTypes = {
@@ -98,10 +98,10 @@ class ListPopup extends React.Component {
   constructor(props) {
     super(props);
     const { selected, selectedArr } = this.calcSelected(props);
-    itemHeight = StyleSheet.flatten([props.listItemStyle]).height || 56;
     this.state = {
       selected,
       selectedArr,
+      itemHeight: StyleSheet.flatten([props.listItemStyle]).height || itemHeight,
     };
     props._onDataChange(props.value);
   }
@@ -145,13 +145,20 @@ class ListPopup extends React.Component {
     }
   };
 
+  _handleLayout = nativeEvent => {
+    const { height } = nativeEvent.layout;
+    this.setState({
+      itemHeight: height,
+    });
+  };
+
   renderSwitch = value => {
     const { selectedArr } = this.state;
     const { switchStyle } = this.props;
     const isActive = selectedArr.indexOf(value.toString()) !== -1;
     return (
       <StyledCheckout active={isActive} style={switchStyle}>
-        {isActive && <StyledIconFont d={selectedPath} color="#e5e5e5" size={16} />}
+        {isActive && <StyledIconFont d={selectedPath} color="#e5e5e5" size={cx(16)} />}
       </StyledCheckout>
     );
   };
@@ -159,7 +166,9 @@ class ListPopup extends React.Component {
   renderSelectIcon = value => {
     const { selectedIcon, iconTintColor } = this.props;
     if (this.state.selected === value) {
-      return selectedIcon || <StyledIconFont d={selectedPath} color={iconTintColor} size={26} />;
+      return (
+        selectedIcon || <StyledIconFont d={selectedPath} color={iconTintColor} size={cx(26)} />
+      );
     }
     return null;
   };
@@ -168,7 +177,8 @@ class ListPopup extends React.Component {
     const { type } = this.props;
     if (type === 'switch') {
       return this.renderSwitch(value);
-    } else if (type === 'radio') {
+    }
+    if (type === 'radio') {
       return this.renderSelectIcon(value);
     }
     return null;
@@ -210,8 +220,8 @@ class ListPopup extends React.Component {
               {
                 flex: 1,
                 alignItems: 'center',
-                paddingLeft: 24,
-                paddingRight: 24,
+                paddingLeft: cx(24),
+                paddingRight: cx(24),
               },
               styles.content,
             ],
@@ -221,17 +231,18 @@ class ListPopup extends React.Component {
                 fontSize: cellFontSize,
                 color: cellFontColor,
               },
-              !!contentCenter && { width: viewWidth - 48 },
+              !!contentCenter && { width: viewWidth - cx(48) },
               styles.title,
             ],
             contentRight: [
-              !!contentCenter && { position: 'absolute', right: 24 },
+              !!contentCenter && { position: 'absolute', right: cx(24) },
               styles.contentRight,
             ],
             contentLeft: [{ marginRight: 8 }, styles.contentLeft],
           };
           return (
             <TYFlatList.Item
+              onLayout={({ nativeEvent }) => this._handleLayout(nativeEvent)}
               key={`list_${index}`}
               activeOpacity={type === 'switch' ? 1 : 0.8}
               styles={itemStyle}
@@ -263,7 +274,7 @@ class ListPopup extends React.Component {
       ...FlatListProps
     } = this.props;
     const dataCount = dataSource.length > maxItemNum ? maxItemNum : dataSource.length;
-    const totalHeight = itemHeight * dataCount;
+    const totalHeight = this.state.itemHeight * dataCount;
     return (
       <View
         style={[listWrapperStyle, !switchValue && { opacity: 0.6 }, { height: totalHeight }]}
