@@ -237,6 +237,12 @@ export const StyledCountdownContent = styled(View)`
   background-color: ${cellBg};
 `;
 
+export const StyledCountdownOnePickerContent = styled(View)`
+  flex-direction: row;
+  align-items: center;
+  background-color: ${cellBg};
+`;
+
 export const StyledOverview = styled(View)`
   flex-direction: row;
   align-items: center;
