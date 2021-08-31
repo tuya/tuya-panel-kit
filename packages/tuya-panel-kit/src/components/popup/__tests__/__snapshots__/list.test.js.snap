@@ -249,6 +249,7 @@ exports[`List Component basic render 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -266,7 +267,7 @@ exports[`List Component basic render 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 36,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -292,8 +293,8 @@ exports[`List Component basic render 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -342,7 +343,7 @@ exports[`List Component basic render 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -372,7 +373,7 @@ exports[`List Component basic render 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 />
@@ -404,6 +405,7 @@ exports[`List Component basic render 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -421,7 +423,7 @@ exports[`List Component basic render 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 36,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -447,8 +449,8 @@ exports[`List Component basic render 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -497,7 +499,7 @@ exports[`List Component basic render 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -527,7 +529,7 @@ exports[`List Component basic render 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 />
@@ -559,6 +561,7 @@ exports[`List Component basic render 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -576,7 +579,7 @@ exports[`List Component basic render 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 36,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -602,8 +605,8 @@ exports[`List Component basic render 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -652,7 +655,7 @@ exports[`List Component basic render 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -682,7 +685,7 @@ exports[`List Component basic render 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 />
@@ -714,6 +717,7 @@ exports[`List Component basic render 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -731,7 +735,7 @@ exports[`List Component basic render 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 36,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -757,8 +761,8 @@ exports[`List Component basic render 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -807,7 +811,7 @@ exports[`List Component basic render 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -837,7 +841,7 @@ exports[`List Component basic render 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 >
@@ -848,8 +852,8 @@ exports[`List Component basic render 1`] = `
                           "flexDirection": "row",
                         },
                         Object {
-                          "height": 26,
-                          "width": 26,
+                          "height": 52,
+                          "width": 52,
                         },
                         false,
                         null,
@@ -870,8 +874,8 @@ exports[`List Component basic render 1`] = `
                           false,
                           Object {
                             "flex": 0,
-                            "height": 26,
-                            "width": 26,
+                            "height": 52,
+                            "width": 52,
                           },
                         ]
                       }
@@ -957,6 +961,7 @@ exports[`List Component basic render 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -974,7 +979,7 @@ exports[`List Component basic render 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 36,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -1000,8 +1005,8 @@ exports[`List Component basic render 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -1050,7 +1055,7 @@ exports[`List Component basic render 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -1080,7 +1085,7 @@ exports[`List Component basic render 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 />
@@ -1112,6 +1117,7 @@ exports[`List Component basic render 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1129,7 +1135,7 @@ exports[`List Component basic render 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 36,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -1155,8 +1161,8 @@ exports[`List Component basic render 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -1205,7 +1211,7 @@ exports[`List Component basic render 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -1235,7 +1241,7 @@ exports[`List Component basic render 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 />
@@ -1267,6 +1273,7 @@ exports[`List Component basic render 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1284,7 +1291,7 @@ exports[`List Component basic render 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 36,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -1310,8 +1317,8 @@ exports[`List Component basic render 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -1360,7 +1367,7 @@ exports[`List Component basic render 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -1390,7 +1397,7 @@ exports[`List Component basic render 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 />
@@ -1709,7 +1716,7 @@ exports[`List Component basic render 2`] = `
           null,
           false,
           Object {
-            "height": 392,
+            "height": 784,
           },
         ]
       }
@@ -1805,6 +1812,7 @@ exports[`List Component basic render 2`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1821,7 +1829,7 @@ exports[`List Component basic render 2`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 56,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -1847,8 +1855,8 @@ exports[`List Component basic render 2`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -1897,7 +1905,7 @@ exports[`List Component basic render 2`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -1927,7 +1935,7 @@ exports[`List Component basic render 2`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 >
@@ -1978,6 +1986,7 @@ exports[`List Component basic render 2`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1994,7 +2003,7 @@ exports[`List Component basic render 2`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 56,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -2020,8 +2029,8 @@ exports[`List Component basic render 2`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -2070,7 +2079,7 @@ exports[`List Component basic render 2`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -2100,7 +2109,7 @@ exports[`List Component basic render 2`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 >
@@ -2151,6 +2160,7 @@ exports[`List Component basic render 2`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -2167,7 +2177,7 @@ exports[`List Component basic render 2`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 56,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -2193,8 +2203,8 @@ exports[`List Component basic render 2`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -2243,7 +2253,7 @@ exports[`List Component basic render 2`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -2273,7 +2283,7 @@ exports[`List Component basic render 2`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 >
@@ -2324,6 +2334,7 @@ exports[`List Component basic render 2`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -2340,7 +2351,7 @@ exports[`List Component basic render 2`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 56,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -2366,8 +2377,8 @@ exports[`List Component basic render 2`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -2416,7 +2427,7 @@ exports[`List Component basic render 2`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -2446,7 +2457,7 @@ exports[`List Component basic render 2`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 >
@@ -2475,8 +2486,8 @@ exports[`List Component basic render 2`] = `
                             "flexDirection": "row",
                           },
                           Object {
-                            "height": 16,
-                            "width": 16,
+                            "height": 32,
+                            "width": 32,
                           },
                           false,
                           null,
@@ -2497,8 +2508,8 @@ exports[`List Component basic render 2`] = `
                             false,
                             Object {
                               "flex": 0,
-                              "height": 16,
-                              "width": 16,
+                              "height": 32,
+                              "width": 32,
                             },
                           ]
                         }
@@ -2585,6 +2596,7 @@ exports[`List Component basic render 2`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -2601,7 +2613,7 @@ exports[`List Component basic render 2`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 56,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -2627,8 +2639,8 @@ exports[`List Component basic render 2`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -2677,7 +2689,7 @@ exports[`List Component basic render 2`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -2707,7 +2719,7 @@ exports[`List Component basic render 2`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 >
@@ -2758,6 +2770,7 @@ exports[`List Component basic render 2`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -2774,7 +2787,7 @@ exports[`List Component basic render 2`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 56,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -2800,8 +2813,8 @@ exports[`List Component basic render 2`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -2850,7 +2863,7 @@ exports[`List Component basic render 2`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -2880,7 +2893,7 @@ exports[`List Component basic render 2`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 >
@@ -2931,6 +2944,7 @@ exports[`List Component basic render 2`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -2947,7 +2961,7 @@ exports[`List Component basic render 2`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 56,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -2973,8 +2987,8 @@ exports[`List Component basic render 2`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -3023,7 +3037,7 @@ exports[`List Component basic render 2`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -3053,7 +3067,7 @@ exports[`List Component basic render 2`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 >
@@ -3487,6 +3501,7 @@ exports[`List Component basic render 3`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -3504,7 +3519,7 @@ exports[`List Component basic render 3`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 36,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -3530,8 +3545,8 @@ exports[`List Component basic render 3`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -3580,7 +3595,7 @@ exports[`List Component basic render 3`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -3610,7 +3625,7 @@ exports[`List Component basic render 3`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 />
@@ -3642,6 +3657,7 @@ exports[`List Component basic render 3`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -3659,7 +3675,7 @@ exports[`List Component basic render 3`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 36,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -3685,8 +3701,8 @@ exports[`List Component basic render 3`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -3735,7 +3751,7 @@ exports[`List Component basic render 3`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -3765,7 +3781,7 @@ exports[`List Component basic render 3`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 >
@@ -3776,8 +3792,8 @@ exports[`List Component basic render 3`] = `
                           "flexDirection": "row",
                         },
                         Object {
-                          "height": 26,
-                          "width": 26,
+                          "height": 52,
+                          "width": 52,
                         },
                         false,
                         null,
@@ -3798,8 +3814,8 @@ exports[`List Component basic render 3`] = `
                           false,
                           Object {
                             "flex": 0,
-                            "height": 26,
-                            "width": 26,
+                            "height": 52,
+                            "width": 52,
                           },
                         ]
                       }
@@ -3885,6 +3901,7 @@ exports[`List Component basic render 3`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -3902,7 +3919,7 @@ exports[`List Component basic render 3`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 36,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -3928,8 +3945,8 @@ exports[`List Component basic render 3`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -3978,7 +3995,7 @@ exports[`List Component basic render 3`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -4008,7 +4025,7 @@ exports[`List Component basic render 3`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 />
@@ -4040,6 +4057,7 @@ exports[`List Component basic render 3`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -4057,7 +4075,7 @@ exports[`List Component basic render 3`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 36,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -4083,8 +4101,8 @@ exports[`List Component basic render 3`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -4133,7 +4151,7 @@ exports[`List Component basic render 3`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -4163,7 +4181,7 @@ exports[`List Component basic render 3`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 />
@@ -4195,6 +4213,7 @@ exports[`List Component basic render 3`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -4212,7 +4231,7 @@ exports[`List Component basic render 3`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 36,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -4238,8 +4257,8 @@ exports[`List Component basic render 3`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -4288,7 +4307,7 @@ exports[`List Component basic render 3`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -4318,7 +4337,7 @@ exports[`List Component basic render 3`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 />
@@ -4350,6 +4369,7 @@ exports[`List Component basic render 3`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -4367,7 +4387,7 @@ exports[`List Component basic render 3`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 36,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -4393,8 +4413,8 @@ exports[`List Component basic render 3`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -4443,7 +4463,7 @@ exports[`List Component basic render 3`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -4473,7 +4493,7 @@ exports[`List Component basic render 3`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 />
@@ -4505,6 +4525,7 @@ exports[`List Component basic render 3`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -4522,7 +4543,7 @@ exports[`List Component basic render 3`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 36,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -4548,8 +4569,8 @@ exports[`List Component basic render 3`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -4598,7 +4619,7 @@ exports[`List Component basic render 3`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -4628,7 +4649,7 @@ exports[`List Component basic render 3`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 />
@@ -4947,7 +4968,7 @@ exports[`List Component render with contentCenter 1`] = `
           null,
           false,
           Object {
-            "height": 392,
+            "height": 784,
           },
         ]
       }
@@ -5043,6 +5064,7 @@ exports[`List Component render with contentCenter 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -5059,7 +5081,7 @@ exports[`List Component render with contentCenter 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 56,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -5085,8 +5107,8 @@ exports[`List Component render with contentCenter 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -5135,7 +5157,7 @@ exports[`List Component render with contentCenter 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -5165,7 +5187,7 @@ exports[`List Component render with contentCenter 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 />
@@ -5197,6 +5219,7 @@ exports[`List Component render with contentCenter 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -5213,7 +5236,7 @@ exports[`List Component render with contentCenter 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 56,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -5239,8 +5262,8 @@ exports[`List Component render with contentCenter 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -5289,7 +5312,7 @@ exports[`List Component render with contentCenter 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -5319,7 +5342,7 @@ exports[`List Component render with contentCenter 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 />
@@ -5351,6 +5374,7 @@ exports[`List Component render with contentCenter 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -5367,7 +5391,7 @@ exports[`List Component render with contentCenter 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 56,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -5393,8 +5417,8 @@ exports[`List Component render with contentCenter 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -5443,7 +5467,7 @@ exports[`List Component render with contentCenter 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -5473,7 +5497,7 @@ exports[`List Component render with contentCenter 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 />
@@ -5505,6 +5529,7 @@ exports[`List Component render with contentCenter 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -5521,7 +5546,7 @@ exports[`List Component render with contentCenter 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 56,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -5547,8 +5572,8 @@ exports[`List Component render with contentCenter 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -5597,7 +5622,7 @@ exports[`List Component render with contentCenter 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -5627,7 +5652,7 @@ exports[`List Component render with contentCenter 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 />
@@ -5659,6 +5684,7 @@ exports[`List Component render with contentCenter 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -5675,7 +5701,7 @@ exports[`List Component render with contentCenter 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 56,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -5701,8 +5727,8 @@ exports[`List Component render with contentCenter 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -5751,7 +5777,7 @@ exports[`List Component render with contentCenter 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -5781,7 +5807,7 @@ exports[`List Component render with contentCenter 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 />
@@ -5813,6 +5839,7 @@ exports[`List Component render with contentCenter 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -5829,7 +5856,7 @@ exports[`List Component render with contentCenter 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 56,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -5855,8 +5882,8 @@ exports[`List Component render with contentCenter 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -5905,7 +5932,7 @@ exports[`List Component render with contentCenter 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -5935,7 +5962,7 @@ exports[`List Component render with contentCenter 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 />
@@ -5967,6 +5994,7 @@ exports[`List Component render with contentCenter 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -5983,7 +6011,7 @@ exports[`List Component render with contentCenter 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 56,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -6009,8 +6037,8 @@ exports[`List Component render with contentCenter 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -6059,7 +6087,7 @@ exports[`List Component render with contentCenter 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -6089,7 +6117,7 @@ exports[`List Component render with contentCenter 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 />
@@ -6396,7 +6424,7 @@ exports[`List Component render with listItemStyle 1`] = `
         null,
         false,
         Object {
-          "height": 392,
+          "height": 784,
         },
       ]
     }
@@ -6492,6 +6520,7 @@ exports[`List Component render with listItemStyle 1`] = `
           <View
             accessible={true}
             isTVSelectable={true}
+            onLayout={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -6508,7 +6537,7 @@ exports[`List Component render with listItemStyle 1`] = `
                 "marginLeft": 0,
                 "marginRight": 0,
                 "marginTop": 0,
-                "minHeight": 56,
+                "minHeight": 112,
                 "opacity": 1,
               }
             }
@@ -6534,8 +6563,8 @@ exports[`List Component render with listItemStyle 1`] = `
                       Object {
                         "alignItems": "center",
                         "flex": 1,
-                        "paddingLeft": 24,
-                        "paddingRight": 24,
+                        "paddingLeft": 48,
+                        "paddingRight": 48,
                       },
                       undefined,
                     ],
@@ -6584,7 +6613,7 @@ exports[`List Component render with listItemStyle 1`] = `
                               "textAlign": "center",
                             },
                             Object {
-                              "width": 702,
+                              "width": 654,
                             },
                             undefined,
                           ],
@@ -6614,7 +6643,7 @@ exports[`List Component render with listItemStyle 1`] = `
                     "marginLeft": 20,
                     "opacity": 1,
                     "position": "absolute",
-                    "right": 24,
+                    "right": 48,
                   }
                 }
               >
@@ -6665,6 +6694,7 @@ exports[`List Component render with listItemStyle 1`] = `
           <View
             accessible={true}
             isTVSelectable={true}
+            onLayout={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -6681,7 +6711,7 @@ exports[`List Component render with listItemStyle 1`] = `
                 "marginLeft": 0,
                 "marginRight": 0,
                 "marginTop": 0,
-                "minHeight": 56,
+                "minHeight": 112,
                 "opacity": 1,
               }
             }
@@ -6707,8 +6737,8 @@ exports[`List Component render with listItemStyle 1`] = `
                       Object {
                         "alignItems": "center",
                         "flex": 1,
-                        "paddingLeft": 24,
-                        "paddingRight": 24,
+                        "paddingLeft": 48,
+                        "paddingRight": 48,
                       },
                       undefined,
                     ],
@@ -6757,7 +6787,7 @@ exports[`List Component render with listItemStyle 1`] = `
                               "textAlign": "center",
                             },
                             Object {
-                              "width": 702,
+                              "width": 654,
                             },
                             undefined,
                           ],
@@ -6787,7 +6817,7 @@ exports[`List Component render with listItemStyle 1`] = `
                     "marginLeft": 20,
                     "opacity": 1,
                     "position": "absolute",
-                    "right": 24,
+                    "right": 48,
                   }
                 }
               >
@@ -6816,8 +6846,8 @@ exports[`List Component render with listItemStyle 1`] = `
                           "flexDirection": "row",
                         },
                         Object {
-                          "height": 16,
-                          "width": 16,
+                          "height": 32,
+                          "width": 32,
                         },
                         false,
                         null,
@@ -6838,8 +6868,8 @@ exports[`List Component render with listItemStyle 1`] = `
                           false,
                           Object {
                             "flex": 0,
-                            "height": 16,
-                            "width": 16,
+                            "height": 32,
+                            "width": 32,
                           },
                         ]
                       }
@@ -6926,6 +6956,7 @@ exports[`List Component render with listItemStyle 1`] = `
           <View
             accessible={true}
             isTVSelectable={true}
+            onLayout={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -6942,7 +6973,7 @@ exports[`List Component render with listItemStyle 1`] = `
                 "marginLeft": 0,
                 "marginRight": 0,
                 "marginTop": 0,
-                "minHeight": 56,
+                "minHeight": 112,
                 "opacity": 1,
               }
             }
@@ -6968,8 +6999,8 @@ exports[`List Component render with listItemStyle 1`] = `
                       Object {
                         "alignItems": "center",
                         "flex": 1,
-                        "paddingLeft": 24,
-                        "paddingRight": 24,
+                        "paddingLeft": 48,
+                        "paddingRight": 48,
                       },
                       undefined,
                     ],
@@ -7018,7 +7049,7 @@ exports[`List Component render with listItemStyle 1`] = `
                               "textAlign": "center",
                             },
                             Object {
-                              "width": 702,
+                              "width": 654,
                             },
                             undefined,
                           ],
@@ -7048,7 +7079,7 @@ exports[`List Component render with listItemStyle 1`] = `
                     "marginLeft": 20,
                     "opacity": 1,
                     "position": "absolute",
-                    "right": 24,
+                    "right": 48,
                   }
                 }
               >
@@ -7099,6 +7130,7 @@ exports[`List Component render with listItemStyle 1`] = `
           <View
             accessible={true}
             isTVSelectable={true}
+            onLayout={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -7115,7 +7147,7 @@ exports[`List Component render with listItemStyle 1`] = `
                 "marginLeft": 0,
                 "marginRight": 0,
                 "marginTop": 0,
-                "minHeight": 56,
+                "minHeight": 112,
                 "opacity": 1,
               }
             }
@@ -7141,8 +7173,8 @@ exports[`List Component render with listItemStyle 1`] = `
                       Object {
                         "alignItems": "center",
                         "flex": 1,
-                        "paddingLeft": 24,
-                        "paddingRight": 24,
+                        "paddingLeft": 48,
+                        "paddingRight": 48,
                       },
                       undefined,
                     ],
@@ -7191,7 +7223,7 @@ exports[`List Component render with listItemStyle 1`] = `
                               "textAlign": "center",
                             },
                             Object {
-                              "width": 702,
+                              "width": 654,
                             },
                             undefined,
                           ],
@@ -7221,7 +7253,7 @@ exports[`List Component render with listItemStyle 1`] = `
                     "marginLeft": 20,
                     "opacity": 1,
                     "position": "absolute",
-                    "right": 24,
+                    "right": 48,
                   }
                 }
               >
@@ -7272,6 +7304,7 @@ exports[`List Component render with listItemStyle 1`] = `
           <View
             accessible={true}
             isTVSelectable={true}
+            onLayout={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -7288,7 +7321,7 @@ exports[`List Component render with listItemStyle 1`] = `
                 "marginLeft": 0,
                 "marginRight": 0,
                 "marginTop": 0,
-                "minHeight": 56,
+                "minHeight": 112,
                 "opacity": 1,
               }
             }
@@ -7314,8 +7347,8 @@ exports[`List Component render with listItemStyle 1`] = `
                       Object {
                         "alignItems": "center",
                         "flex": 1,
-                        "paddingLeft": 24,
-                        "paddingRight": 24,
+                        "paddingLeft": 48,
+                        "paddingRight": 48,
                       },
                       undefined,
                     ],
@@ -7364,7 +7397,7 @@ exports[`List Component render with listItemStyle 1`] = `
                               "textAlign": "center",
                             },
                             Object {
-                              "width": 702,
+                              "width": 654,
                             },
                             undefined,
                           ],
@@ -7394,7 +7427,7 @@ exports[`List Component render with listItemStyle 1`] = `
                     "marginLeft": 20,
                     "opacity": 1,
                     "position": "absolute",
-                    "right": 24,
+                    "right": 48,
                   }
                 }
               >
@@ -7445,6 +7478,7 @@ exports[`List Component render with listItemStyle 1`] = `
           <View
             accessible={true}
             isTVSelectable={true}
+            onLayout={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -7461,7 +7495,7 @@ exports[`List Component render with listItemStyle 1`] = `
                 "marginLeft": 0,
                 "marginRight": 0,
                 "marginTop": 0,
-                "minHeight": 56,
+                "minHeight": 112,
                 "opacity": 1,
               }
             }
@@ -7487,8 +7521,8 @@ exports[`List Component render with listItemStyle 1`] = `
                       Object {
                         "alignItems": "center",
                         "flex": 1,
-                        "paddingLeft": 24,
-                        "paddingRight": 24,
+                        "paddingLeft": 48,
+                        "paddingRight": 48,
                       },
                       undefined,
                     ],
@@ -7537,7 +7571,7 @@ exports[`List Component render with listItemStyle 1`] = `
                               "textAlign": "center",
                             },
                             Object {
-                              "width": 702,
+                              "width": 654,
                             },
                             undefined,
                           ],
@@ -7567,7 +7601,7 @@ exports[`List Component render with listItemStyle 1`] = `
                     "marginLeft": 20,
                     "opacity": 1,
                     "position": "absolute",
-                    "right": 24,
+                    "right": 48,
                   }
                 }
               >
@@ -7618,6 +7652,7 @@ exports[`List Component render with listItemStyle 1`] = `
           <View
             accessible={true}
             isTVSelectable={true}
+            onLayout={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -7634,7 +7669,7 @@ exports[`List Component render with listItemStyle 1`] = `
                 "marginLeft": 0,
                 "marginRight": 0,
                 "marginTop": 0,
-                "minHeight": 56,
+                "minHeight": 112,
                 "opacity": 1,
               }
             }
@@ -7660,8 +7695,8 @@ exports[`List Component render with listItemStyle 1`] = `
                       Object {
                         "alignItems": "center",
                         "flex": 1,
-                        "paddingLeft": 24,
-                        "paddingRight": 24,
+                        "paddingLeft": 48,
+                        "paddingRight": 48,
                       },
                       undefined,
                     ],
@@ -7710,7 +7745,7 @@ exports[`List Component render with listItemStyle 1`] = `
                               "textAlign": "center",
                             },
                             Object {
-                              "width": 702,
+                              "width": 654,
                             },
                             undefined,
                           ],
@@ -7740,7 +7775,7 @@ exports[`List Component render with listItemStyle 1`] = `
                     "marginLeft": 20,
                     "opacity": 1,
                     "position": "absolute",
-                    "right": 24,
+                    "right": 48,
                   }
                 }
               >
@@ -8077,7 +8112,7 @@ exports[`List Component render with type 1`] = `
           null,
           false,
           Object {
-            "height": 392,
+            "height": 784,
           },
         ]
       }
@@ -8173,6 +8208,7 @@ exports[`List Component render with type 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -8189,7 +8225,7 @@ exports[`List Component render with type 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 56,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -8215,8 +8251,8 @@ exports[`List Component render with type 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -8265,7 +8301,7 @@ exports[`List Component render with type 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -8295,7 +8331,7 @@ exports[`List Component render with type 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 />
@@ -8327,6 +8363,7 @@ exports[`List Component render with type 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -8343,7 +8380,7 @@ exports[`List Component render with type 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 56,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -8369,8 +8406,8 @@ exports[`List Component render with type 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -8419,7 +8456,7 @@ exports[`List Component render with type 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -8449,7 +8486,7 @@ exports[`List Component render with type 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 />
@@ -8481,6 +8518,7 @@ exports[`List Component render with type 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -8497,7 +8535,7 @@ exports[`List Component render with type 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 56,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -8523,8 +8561,8 @@ exports[`List Component render with type 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -8573,7 +8611,7 @@ exports[`List Component render with type 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -8603,7 +8641,7 @@ exports[`List Component render with type 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 />
@@ -8635,6 +8673,7 @@ exports[`List Component render with type 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -8651,7 +8690,7 @@ exports[`List Component render with type 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 56,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -8677,8 +8716,8 @@ exports[`List Component render with type 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -8727,7 +8766,7 @@ exports[`List Component render with type 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -8757,7 +8796,7 @@ exports[`List Component render with type 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 />
@@ -8789,6 +8828,7 @@ exports[`List Component render with type 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -8805,7 +8845,7 @@ exports[`List Component render with type 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 56,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -8831,8 +8871,8 @@ exports[`List Component render with type 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -8881,7 +8921,7 @@ exports[`List Component render with type 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -8911,7 +8951,7 @@ exports[`List Component render with type 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 />
@@ -8943,6 +8983,7 @@ exports[`List Component render with type 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -8959,7 +9000,7 @@ exports[`List Component render with type 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 56,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -8985,8 +9026,8 @@ exports[`List Component render with type 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -9035,7 +9076,7 @@ exports[`List Component render with type 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -9065,7 +9106,7 @@ exports[`List Component render with type 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 />
@@ -9097,6 +9138,7 @@ exports[`List Component render with type 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
+              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -9113,7 +9155,7 @@ exports[`List Component render with type 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 56,
+                  "minHeight": 112,
                   "opacity": 1,
                 }
               }
@@ -9139,8 +9181,8 @@ exports[`List Component render with type 1`] = `
                         Object {
                           "alignItems": "center",
                           "flex": 1,
-                          "paddingLeft": 24,
-                          "paddingRight": 24,
+                          "paddingLeft": 48,
+                          "paddingRight": 48,
                         },
                         undefined,
                       ],
@@ -9189,7 +9231,7 @@ exports[`List Component render with type 1`] = `
                                 "textAlign": "center",
                               },
                               Object {
-                                "width": 702,
+                                "width": 654,
                               },
                               undefined,
                             ],
@@ -9219,7 +9261,7 @@ exports[`List Component render with type 1`] = `
                       "marginLeft": 20,
                       "opacity": 1,
                       "position": "absolute",
-                      "right": 24,
+                      "right": 48,
                     }
                   }
                 />
