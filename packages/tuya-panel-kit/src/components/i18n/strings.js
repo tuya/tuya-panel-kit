@@ -38,6 +38,10 @@ const lang = {
     offline_textLinkAfter:
       '4. Whether your device is too far away from the router, whether the signal is weak, or whether the data transmission is obstructed.',
     offline_textLinkMore: '',
+    offline_bleHelpTitle: 'View Related Help',
+    offline_bleNotConnect: 'Please try the following:',
+    offline_bleDetails:
+      '1. Ensure the network and gateway is working.\n\n2. Check your mobile device has Bluetooth turned on, and check your Bluetooth device has power [check for poor power supply, loose connection or a dead battery].\n\n3. Ensure the Bluetooth device is within adequate range (about 10 meters) to your mobile phone or other Bluetooth devices.',
   },
   zh: {
     offline: '设备暂时不可操作\n请稍后再试',
@@ -71,6 +75,10 @@ const lang = {
     offline_link: '重新连接',
     offline_textLinkAfter: '4. 您的设备是否离路由器过远、信号较差或有遮挡物',
     offline_textLinkMore: '',
+    offline_bleHelpTitle: '查看相关帮助',
+    offline_bleNotConnect: '无法连接蓝牙 Mesh 设备？',
+    offline_bleDetails:
+      '1. 您的设备可能断电了，可能的原因包括电池不足，插头不牢固或者家里停电等；\n\n2. 设备的蓝牙通信有效范围内（约 10 米），需要有其他正在工作的蓝牙设备，例如手机、网关或者其他使用了蓝牙 Mesh 技术的设备；\n\n3.如果您正在通过互联网对设备控制，请保持您的网络通常、网关正常工作。',
   },
 };
 
