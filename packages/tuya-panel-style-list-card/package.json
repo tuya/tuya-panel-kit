@@ -1,6 +1,6 @@
 {
   "name": "tuya-panel-style-list-card",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "tuya-panel-style-list-card",
   "author": "ZengBeauty <2497752603@qq.com>",
   "homepage": "https://github.com/tuya/tuya-panel-kit#readme",
@@ -17,8 +17,8 @@
     "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
-    "tuya-panel-kit": "^4.7.6",
-    "tuya-panel-style-icon-background": "^0.0.1",
+    "tuya-panel-kit": "^4.7.7",
+    "tuya-panel-style-icon-background": "^0.0.2",
     "tuya-panel-utils": "^0.1.0"
   },
   "repository": {
