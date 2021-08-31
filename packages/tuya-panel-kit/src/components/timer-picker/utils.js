@@ -30,14 +30,14 @@ export const getMinsSelections = () => {
   return minutes;
 };
 
-export const getTimePrefixSelections = () => [
+export const getTimePrefixSelections = (amText, pmText) => [
   {
     value: 'AM',
-    label: 'AM',
+    label: amText,
   },
   {
     value: 'PM',
-    label: 'PM',
+    label: pmText,
   },
 ];
 
