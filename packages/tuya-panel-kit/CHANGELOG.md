@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.7.7](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.7.6...tuya-panel-kit@4.7.7) (2021-08-31)
+
+
+### Bug Fixes
+
+* **Popup.countdown:** when onlyone is true, the picker is not center ([#127](https://github.com/tuya/tuya-panel-kit/issues/127)) ([b4acbc8](https://github.com/tuya/tuya-panel-kit/commit/b4acbc8c920e1b21da526e5b27aef7c8263af9cf))
+* **Popup.list:** When Popup.list is set to subtitle, it cannot be displayed normally ([#125](https://github.com/tuya/tuya-panel-kit/issues/125)) ([6001716](https://github.com/tuya/tuya-panel-kit/commit/600171621522fe9f1a2c82306c816049f528b3ef))
+
+
+### Features
+
+* **TimerPicker:** add amText and pmText to support custom ([#128](https://github.com/tuya/tuya-panel-kit/issues/128)) ([16df2ed](https://github.com/tuya/tuya-panel-kit/commit/16df2ed6f5d8658b18d302ef23712bd41c40e5ac))
+
+
+
+
+
 ## [4.7.6](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.7.5...tuya-panel-kit@4.7.6) (2021-08-24)
 
 
