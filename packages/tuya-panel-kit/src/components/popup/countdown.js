@@ -11,6 +11,7 @@ import {
   StyledOverview,
   StyledPickerUnitText,
   StyledCountdownContent,
+  StyledCountdownOnePickerContent
 } from './styled';
 
 const { toFixed } = CoreUtils;
@@ -20,6 +21,7 @@ const { getTheme, ThemeConsumer } = ThemeUtils;
 
 class CountdownPopup extends React.Component {
   static propTypes = {
+    ...Picker.PropTypes,
     /**
      * 外部样式
      */
@@ -203,6 +205,7 @@ class CountdownPopup extends React.Component {
       minuteText,
       minutePickerStyle,
       minuteUnitStyle,
+      ...rest
     } = this.props;
     return (
       <ThemeConsumer>
@@ -215,9 +218,10 @@ class CountdownPopup extends React.Component {
               style={[countdownWrapperStyle, !switchValue && { opacity: 0.6 }]}
               pointerEvents={!switchValue ? 'none' : 'auto'}
             >
-              <StyledCountdownContent>
+              <StyledCountdownOnePickerContent>
                 <StyledOverview style={{ flex: 1 }}>
                   <Picker
+                    {...rest}
                     theme={{ fontColor: countFontColor }}
                     accessibilityLabel="Popup_CountdownPicker_Minutes"
                     style={StyleSheet.flatten([{ width, height: 220 }, minutePickerStyle])}
@@ -235,7 +239,7 @@ class CountdownPopup extends React.Component {
                     text={minuteText}
                   />
                 </StyledOverview>
-              </StyledCountdownContent>
+              </StyledCountdownOnePickerContent>
             </StyledCountdownContainer>
           );
         }}
@@ -257,6 +261,7 @@ class CountdownPopup extends React.Component {
       hourUnitStyle,
       minutePickerStyle,
       minuteUnitStyle,
+      ...rest
     } = this.props;
     const isMaxHour = this.state.hour === parseInt(max / 60, 10);
     const isMinHour = this.state.hour === parseInt(min / 60, 10);
@@ -289,6 +294,7 @@ class CountdownPopup extends React.Component {
                   }}
                 >
                   <Picker
+                    {...rest}
                     theme={{ fontColor: countFontColor }}
                     accessibilityLabel="Popup_CountdownPicker_Hours"
                     style={StyleSheet.flatten([
@@ -318,6 +324,7 @@ class CountdownPopup extends React.Component {
 
                 <StyledOverview style={{ flex: 1 }}>
                   <Picker
+                    {...rest}
                     theme={{ fontColor: countFontColor }}
                     accessibilityLabel="Popup_CountdownPicker_Minutes"
                     selectedValue={this.state.minute}

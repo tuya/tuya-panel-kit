@@ -6116,10 +6116,6 @@ exports[`countdown Component render width onlyone 1`] = `
               "alignItems": "center",
               "backgroundColor": "#fff",
               "flexDirection": "row",
-              "marginBottom": 0,
-              "marginLeft": 30,
-              "marginRight": 30,
-              "marginTop": 0,
             },
             undefined,
           ]
