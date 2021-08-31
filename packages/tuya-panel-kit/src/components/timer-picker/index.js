@@ -74,6 +74,14 @@ export default class TimerPicker extends Component {
      * 是否支持 picker 循环滚动
      */
     loop: PropTypes.bool,
+    /**
+     * 上午文本
+     */
+    amText: PropTypes.string,
+    /**
+     * 下午文本
+     */
+    pmText: PropTypes.string,
   };
 
   static defaultProps = {
@@ -90,13 +98,15 @@ export default class TimerPicker extends Component {
     symbol: '—',
     pickerFontSize: cx(20),
     loop: true,
+    amText: 'AM',
+    pmText: 'PM',
   };
 
   constructor(props) {
     super(props);
     const hours = getHourSelections(props.is12Hours);
     this.minutes = getMinsSelections();
-    this.prefixs = getTimePrefixSelections();
+    this.prefixs = getTimePrefixSelections(props.amText, props.pmText);
     const [startHour, startMin] = parseTimer(props.startTime * 60)
       .split(':')
       .map(v => +v);
