@@ -48,6 +48,7 @@ export default () => {
     <ListView
       contentPadding={false}
       contentCenter={true}
+      fullVHeight={false}
       style={{
         backgroundColor: '#F5F5F6',
       }}
