@@ -17,7 +17,12 @@ export default () => {
         {
           title: Strings.getLang('slider_progress_uni'),
           content: (
-            <SliderProgress value={state.value} onValueChange={v => setState({ value: v })} />
+            <SliderProgress
+              activeColor="#F82B00"
+              inactiveColor="#D8D8D8"
+              value={state.value}
+              onValueChange={v => setState({ value: v })}
+            />
           ),
         },
         {
@@ -27,6 +32,8 @@ export default () => {
           },
           content: (
             <SliderProgress
+              activeColor="#F82B00"
+              inactiveColor="#D8D8D8"
               value={state.values}
               style={{ width: 300, height: 33 }}
               onValueChange={({ minValue, maxValue }) => {

@@ -1,13 +1,14 @@
 import React from 'react';
 import { View } from 'react-native';
-import { Tab, TYText } from 'tuya-panel-kit';
-
+import { Tab, TYText, Utils } from 'tuya-panel-kit';
 import Strings from '#i18n';
+
+const { height } = Utils.RatioUtils;
 
 export default () => {
   const [state, set] = React.useState({ tab: 'Tab 1' });
   const setState = value => set({ ...state, ...value });
-  const tabPaneArr = ['Tab 1', 'Tab 2', 'Tab 3', 'Tab 4'];
+  const tabPaneArr = [1, 2, 3, 4].map(n => Strings.formatValue('tab_text', n));
   const textArr = [
     Strings.getLang('tab_content_1'),
     Strings.getLang('tab_content_2'),
@@ -33,7 +34,7 @@ export default () => {
     <View
       style={{
         backgroundColor: '#F5F5F6',
-        flex: 1,
+        height,
       }}
     >
       <Tab
@@ -46,7 +47,7 @@ export default () => {
           backgroundColor: '#fff',
         }}
         tabBarBackgroundColor="#F5F5F6"
-        tabTextStyle={{ fontSize: 16 }}
+        tabTextStyle={{ fontSize: 16, color: '#A8ACB2' }}
         tabStyle={{
           height: 42,
           backgroundColor: '#fff',
@@ -59,6 +60,8 @@ export default () => {
         tabBarUnderlineStyle={{
           backgroundColor: '#FF4800',
           height: 2,
+          width: 40,
+          marginLeft: 26,
         }}
       >
         {tabPanes}
