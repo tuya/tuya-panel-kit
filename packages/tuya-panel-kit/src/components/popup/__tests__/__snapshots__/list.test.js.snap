@@ -162,6 +162,7 @@ exports[`List Component basic render 1`] = `
         ItemSeparatorComponent={[Function]}
         backIconColor={null}
         backText="Back"
+        checkIconColor="#e5e5e5"
         contentContainerStyle={
           Array [
             Object {
@@ -249,7 +250,6 @@ exports[`List Component basic render 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -267,7 +267,7 @@ exports[`List Component basic render 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 36,
                   "opacity": 1,
                 }
               }
@@ -405,7 +405,6 @@ exports[`List Component basic render 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -423,7 +422,7 @@ exports[`List Component basic render 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 36,
                   "opacity": 1,
                 }
               }
@@ -561,7 +560,6 @@ exports[`List Component basic render 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -579,7 +577,7 @@ exports[`List Component basic render 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 36,
                   "opacity": 1,
                 }
               }
@@ -717,7 +715,6 @@ exports[`List Component basic render 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -735,7 +732,7 @@ exports[`List Component basic render 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 36,
                   "opacity": 1,
                 }
               }
@@ -961,7 +958,6 @@ exports[`List Component basic render 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -979,7 +975,7 @@ exports[`List Component basic render 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 36,
                   "opacity": 1,
                 }
               }
@@ -1117,7 +1113,6 @@ exports[`List Component basic render 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1135,7 +1130,7 @@ exports[`List Component basic render 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 36,
                   "opacity": 1,
                 }
               }
@@ -1273,7 +1268,6 @@ exports[`List Component basic render 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1291,7 +1285,7 @@ exports[`List Component basic render 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 36,
                   "opacity": 1,
                 }
               }
@@ -1716,7 +1710,7 @@ exports[`List Component basic render 2`] = `
           null,
           false,
           Object {
-            "height": 784,
+            "height": 392,
           },
         ]
       }
@@ -1725,6 +1719,7 @@ exports[`List Component basic render 2`] = `
         ItemSeparatorComponent={[Function]}
         backIconColor={null}
         backText="Back"
+        checkIconColor="#e5e5e5"
         contentContainerStyle={
           Array [
             Object {
@@ -1812,7 +1807,6 @@ exports[`List Component basic render 2`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -1829,7 +1823,7 @@ exports[`List Component basic render 2`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -1986,7 +1980,6 @@ exports[`List Component basic render 2`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -2003,7 +1996,7 @@ exports[`List Component basic render 2`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -2160,7 +2153,6 @@ exports[`List Component basic render 2`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -2177,7 +2169,7 @@ exports[`List Component basic render 2`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -2334,7 +2326,6 @@ exports[`List Component basic render 2`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -2351,7 +2342,7 @@ exports[`List Component basic render 2`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -2596,7 +2587,6 @@ exports[`List Component basic render 2`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -2613,7 +2603,7 @@ exports[`List Component basic render 2`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -2770,7 +2760,6 @@ exports[`List Component basic render 2`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -2787,7 +2776,7 @@ exports[`List Component basic render 2`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -2944,7 +2933,6 @@ exports[`List Component basic render 2`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -2961,7 +2949,7 @@ exports[`List Component basic render 2`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -3414,6 +3402,7 @@ exports[`List Component basic render 3`] = `
         ItemSeparatorComponent={[Function]}
         backIconColor={null}
         backText="Back"
+        checkIconColor="#e5e5e5"
         contentContainerStyle={
           Array [
             Object {
@@ -3501,7 +3490,6 @@ exports[`List Component basic render 3`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -3519,7 +3507,7 @@ exports[`List Component basic render 3`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 36,
                   "opacity": 1,
                 }
               }
@@ -3657,7 +3645,6 @@ exports[`List Component basic render 3`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -3675,7 +3662,7 @@ exports[`List Component basic render 3`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 36,
                   "opacity": 1,
                 }
               }
@@ -3901,7 +3888,6 @@ exports[`List Component basic render 3`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -3919,7 +3905,7 @@ exports[`List Component basic render 3`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 36,
                   "opacity": 1,
                 }
               }
@@ -4057,7 +4043,6 @@ exports[`List Component basic render 3`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -4075,7 +4060,7 @@ exports[`List Component basic render 3`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 36,
                   "opacity": 1,
                 }
               }
@@ -4213,7 +4198,6 @@ exports[`List Component basic render 3`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -4231,7 +4215,7 @@ exports[`List Component basic render 3`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 36,
                   "opacity": 1,
                 }
               }
@@ -4369,7 +4353,6 @@ exports[`List Component basic render 3`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -4387,7 +4370,7 @@ exports[`List Component basic render 3`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 36,
                   "opacity": 1,
                 }
               }
@@ -4525,7 +4508,6 @@ exports[`List Component basic render 3`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -4543,7 +4525,7 @@ exports[`List Component basic render 3`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 36,
                   "opacity": 1,
                 }
               }
@@ -4968,7 +4950,7 @@ exports[`List Component render with contentCenter 1`] = `
           null,
           false,
           Object {
-            "height": 784,
+            "height": 392,
           },
         ]
       }
@@ -4977,6 +4959,7 @@ exports[`List Component render with contentCenter 1`] = `
         ItemSeparatorComponent={[Function]}
         backIconColor={null}
         backText="Back"
+        checkIconColor="#e5e5e5"
         contentContainerStyle={
           Array [
             Object {
@@ -5064,7 +5047,6 @@ exports[`List Component render with contentCenter 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -5081,7 +5063,7 @@ exports[`List Component render with contentCenter 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -5219,7 +5201,6 @@ exports[`List Component render with contentCenter 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -5236,7 +5217,7 @@ exports[`List Component render with contentCenter 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -5374,7 +5355,6 @@ exports[`List Component render with contentCenter 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -5391,7 +5371,7 @@ exports[`List Component render with contentCenter 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -5529,7 +5509,6 @@ exports[`List Component render with contentCenter 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -5546,7 +5525,7 @@ exports[`List Component render with contentCenter 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -5684,7 +5663,6 @@ exports[`List Component render with contentCenter 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -5701,7 +5679,7 @@ exports[`List Component render with contentCenter 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -5839,7 +5817,6 @@ exports[`List Component render with contentCenter 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -5856,7 +5833,7 @@ exports[`List Component render with contentCenter 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -5994,7 +5971,6 @@ exports[`List Component render with contentCenter 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -6011,7 +5987,7 @@ exports[`List Component render with contentCenter 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -6424,7 +6400,7 @@ exports[`List Component render with listItemStyle 1`] = `
         null,
         false,
         Object {
-          "height": 784,
+          "height": 392,
         },
       ]
     }
@@ -6433,6 +6409,7 @@ exports[`List Component render with listItemStyle 1`] = `
       ItemSeparatorComponent={[Function]}
       backIconColor={null}
       backText="Back"
+      checkIconColor="#e5e5e5"
       contentContainerStyle={
         Array [
           Object {
@@ -6520,7 +6497,6 @@ exports[`List Component render with listItemStyle 1`] = `
           <View
             accessible={true}
             isTVSelectable={true}
-            onLayout={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -6537,7 +6513,7 @@ exports[`List Component render with listItemStyle 1`] = `
                 "marginLeft": 0,
                 "marginRight": 0,
                 "marginTop": 0,
-                "minHeight": 112,
+                "minHeight": 56,
                 "opacity": 1,
               }
             }
@@ -6694,7 +6670,6 @@ exports[`List Component render with listItemStyle 1`] = `
           <View
             accessible={true}
             isTVSelectable={true}
-            onLayout={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -6711,7 +6686,7 @@ exports[`List Component render with listItemStyle 1`] = `
                 "marginLeft": 0,
                 "marginRight": 0,
                 "marginTop": 0,
-                "minHeight": 112,
+                "minHeight": 56,
                 "opacity": 1,
               }
             }
@@ -6956,7 +6931,6 @@ exports[`List Component render with listItemStyle 1`] = `
           <View
             accessible={true}
             isTVSelectable={true}
-            onLayout={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -6973,7 +6947,7 @@ exports[`List Component render with listItemStyle 1`] = `
                 "marginLeft": 0,
                 "marginRight": 0,
                 "marginTop": 0,
-                "minHeight": 112,
+                "minHeight": 56,
                 "opacity": 1,
               }
             }
@@ -7130,7 +7104,6 @@ exports[`List Component render with listItemStyle 1`] = `
           <View
             accessible={true}
             isTVSelectable={true}
-            onLayout={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -7147,7 +7120,7 @@ exports[`List Component render with listItemStyle 1`] = `
                 "marginLeft": 0,
                 "marginRight": 0,
                 "marginTop": 0,
-                "minHeight": 112,
+                "minHeight": 56,
                 "opacity": 1,
               }
             }
@@ -7304,7 +7277,6 @@ exports[`List Component render with listItemStyle 1`] = `
           <View
             accessible={true}
             isTVSelectable={true}
-            onLayout={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -7321,7 +7293,7 @@ exports[`List Component render with listItemStyle 1`] = `
                 "marginLeft": 0,
                 "marginRight": 0,
                 "marginTop": 0,
-                "minHeight": 112,
+                "minHeight": 56,
                 "opacity": 1,
               }
             }
@@ -7478,7 +7450,6 @@ exports[`List Component render with listItemStyle 1`] = `
           <View
             accessible={true}
             isTVSelectable={true}
-            onLayout={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -7495,7 +7466,7 @@ exports[`List Component render with listItemStyle 1`] = `
                 "marginLeft": 0,
                 "marginRight": 0,
                 "marginTop": 0,
-                "minHeight": 112,
+                "minHeight": 56,
                 "opacity": 1,
               }
             }
@@ -7652,7 +7623,6 @@ exports[`List Component render with listItemStyle 1`] = `
           <View
             accessible={true}
             isTVSelectable={true}
-            onLayout={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -7669,7 +7639,7 @@ exports[`List Component render with listItemStyle 1`] = `
                 "marginLeft": 0,
                 "marginRight": 0,
                 "marginTop": 0,
-                "minHeight": 112,
+                "minHeight": 56,
                 "opacity": 1,
               }
             }
@@ -8112,7 +8082,7 @@ exports[`List Component render with type 1`] = `
           null,
           false,
           Object {
-            "height": 784,
+            "height": 392,
           },
         ]
       }
@@ -8121,6 +8091,7 @@ exports[`List Component render with type 1`] = `
         ItemSeparatorComponent={[Function]}
         backIconColor={null}
         backText="Back"
+        checkIconColor="#e5e5e5"
         contentContainerStyle={
           Array [
             Object {
@@ -8208,7 +8179,6 @@ exports[`List Component render with type 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -8225,7 +8195,7 @@ exports[`List Component render with type 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -8363,7 +8333,6 @@ exports[`List Component render with type 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -8380,7 +8349,7 @@ exports[`List Component render with type 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -8518,7 +8487,6 @@ exports[`List Component render with type 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -8535,7 +8503,7 @@ exports[`List Component render with type 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -8673,7 +8641,6 @@ exports[`List Component render with type 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -8690,7 +8657,7 @@ exports[`List Component render with type 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -8828,7 +8795,6 @@ exports[`List Component render with type 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -8845,7 +8811,7 @@ exports[`List Component render with type 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -8983,7 +8949,6 @@ exports[`List Component render with type 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -9000,7 +8965,7 @@ exports[`List Component render with type 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
@@ -9138,7 +9103,6 @@ exports[`List Component render with type 1`] = `
             <View
               accessible={true}
               isTVSelectable={true}
-              onLayout={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
               onResponderRelease={[Function]}
@@ -9155,7 +9119,7 @@ exports[`List Component render with type 1`] = `
                   "marginLeft": 0,
                   "marginRight": 0,
                   "marginTop": 0,
-                  "minHeight": 112,
+                  "minHeight": 56,
                   "opacity": 1,
                 }
               }
