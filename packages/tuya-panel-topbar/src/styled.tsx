@@ -2,7 +2,8 @@ import React from 'react';
 import { View, Image, TouchableOpacity } from 'react-native';
 import styled from 'styled-components/native';
 import { Utils } from 'tuya-panel-utils';
-import { TYText, IconFont } from 'tuya-panel-kit';
+import { IconFont } from 'tuya-panel-kit';
+import TYText from 'tuya-panel-text';
 import { defaultTheme } from 'tuya-panel-theme';
 
 const { getTheme, ThemeConsumer } = Utils.ThemeUtils;

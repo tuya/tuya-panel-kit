@@ -6,7 +6,7 @@ import {
   GestureResponderEvent,
   ImageSourcePropType,
 } from 'react-native';
-import { IconFontProps } from 'tuya-panel-kit';
+import { IconFontProps, TYTextProps } from 'tuya-panel-kit';
 
 export interface StopsProps {
   offset: string;
@@ -178,7 +178,9 @@ export interface ITopBarContainerProps {
   children: React.ReactNode[];
 }
 
-export interface ITopBarActionProps extends Omit<IconFontProps, 'style'> {
+export interface ITopBarActionProps
+  extends Omit<IconFontProps, 'style'>,
+    Omit<TYTextProps, 'style'> {
   /**
    * @description.zh-CN 测试标识符
    * @description Test identifier
@@ -196,7 +198,7 @@ export interface ITopBarActionProps extends Omit<IconFontProps, 'style'> {
    * @description TopBar.Action content style, which can be pictures, text, or IconFont.
    * @default null
    */
-  contentStyle?: StyleProp<ViewStyle>;
+  contentStyle?: StyleProp<ViewStyle & TextStyle>;
   /**
    * @description.zh-CN TopBar.Action 的 IconFont 的尺寸
    * @description TopBar.Action IconFont size.
