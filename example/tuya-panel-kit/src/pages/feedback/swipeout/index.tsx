@@ -9,7 +9,6 @@ export default () => {
     <ListView
       style={{
         backgroundColor: '#F5F5F6',
-        flex: 1,
       }}
       contentPadding={false}
       dot={false}

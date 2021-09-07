@@ -80,7 +80,7 @@ export default () => {
     },
   ];
   return (
-    <View style={{ flex: 1, marginTop: 10 }}>
+    <View style={{ marginTop: 10 }}>
       <TYSectionList
         sections={sections}
         contentContainerStyle={{ backgroundColor: '#fff' }}
