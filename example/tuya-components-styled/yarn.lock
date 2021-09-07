@@ -9626,6 +9626,10 @@ tuya-panel-kit@^4.7.6:
   version "0.0.0"
   uid ""
 
+tuya-panel-kit@^4.7.7:
+  version "0.0.0"
+  uid ""
+
 "tuya-panel-kit@link:.yalc/tuya-panel-kit":
   version "0.0.0"
   uid ""
@@ -9653,6 +9657,23 @@ tuya-panel-style-icon-background@^0.0.1:
   integrity sha512-wkG7dkVLpHL8FTr6VfnV6FHf/zcC1xalmB+lHqkkRQIcP/As/YMcxD3PyTs9hS5TNFNH64GgKib5jTTFaogGZQ==
   dependencies:
     tuya-panel-kit "^4.7.6"
+    tuya-panel-utils "^0.1.0"
+
+tuya-panel-style-icon-background@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.nlark.com/tuya-panel-style-icon-background/download/tuya-panel-style-icon-background-0.0.2.tgz#ac492a2e288a874778323bbe0846b6538d82d0e1"
+  integrity sha1-rEkqLiiKh0d4Mju+CEa2U42C0OE=
+  dependencies:
+    tuya-panel-kit "^4.7.7"
+    tuya-panel-utils "^0.1.0"
+
+tuya-panel-style-switch-card@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.nlark.com/tuya-panel-style-switch-card/download/tuya-panel-style-switch-card-0.0.2.tgz#7e3ea09b7c12a208e17a6bbfb773ac90682c28d4"
+  integrity sha1-fj6gm3wSogjhemu/t3OskGgsKNQ=
+  dependencies:
+    tuya-panel-kit "^4.7.7"
+    tuya-panel-style-icon-background "^0.0.2"
     tuya-panel-utils "^0.1.0"
 
 tuya-panel-theme@^0.0.4:
