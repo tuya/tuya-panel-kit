@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.3](https://github.com/TuyaInc/tuya-panel-kit/compare/v2.1.2...v2.1.3) (2021-09-07)
+
+
+### Bug Fixes
+
+* **bleOffline:** fix requireNativeComponent crash ([cf92eba](https://github.com/TuyaInc/tuya-panel-kit/commit/cf92ebaf5d7d78f073a9095720ed592fabc320bf))
+
+
+
 ## [2.1.2](https://github.com/TuyaInc/tuya-panel-kit/compare/v2.1.1...v2.1.2) (2021-08-24)
 
 
