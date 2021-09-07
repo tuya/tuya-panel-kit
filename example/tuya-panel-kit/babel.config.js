@@ -4,6 +4,10 @@ var getRNAlias = () => {
     : {
         'tuya-panel-kit/lib/components/iconfont/svg/defaultSvg':
           '../../packages/tuya-panel-kit/src/components/iconfont/svg/defaultSvg',
+        'tuya-panel-kit/lib/components/dialog/styled':
+          '../../packages/tuya-panel-kit/src/components/dialog/styled',
+        'tuya-panel-kit/lib/components/dialog/custom':
+          '../../packages/tuya-panel-kit/src/components/dialog/custom',
         'tuya-panel-kit/lib/components/modal/portalOut':
           '../../packages/tuya-panel-kit/src/components/modal/portalOut',
         'tuya-panel-kit': '../../packages/tuya-panel-kit/src/index.js',
