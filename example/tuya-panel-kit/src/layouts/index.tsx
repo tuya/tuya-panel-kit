@@ -22,7 +22,15 @@ export default ({ children }) => {
         push('/');
       }}
     >
-      <ScrollView style={{ flex: 1, overflow: 'scroll' }}>{children}</ScrollView>
+      <ScrollView
+        style={{
+          flex: 1,
+          // @ts-ignore
+          overflowY: 'scroll',
+        }}
+      >
+        {children}
+      </ScrollView>
     </TuyaWrapper>
   );
 };

@@ -11,7 +11,7 @@ export default () => {
   return (
     <ListView
       contentPadding={false}
-      style={{ backgroundColor: '#F5F5F6', flex: 1 }}
+      style={{ backgroundColor: '#F5F5F6' }}
       dot={false}
       list={[
         {
