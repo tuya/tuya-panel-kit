@@ -251,9 +251,9 @@ class FullView extends Component<IFullViewProps, IFullViewState> {
   // 渲染Notification
   renderNotification() {
     return (
-      // @ts-ignore 已提 pr 至 @types
       <Notification
         onClose={() => this.setState({ showNotification: false })}
+        // @ts-ignore 已提 pr 至 @types
         motionConfig={{ dropHeight }}
         {...this.state.information}
         show={this.state.showNotification}
