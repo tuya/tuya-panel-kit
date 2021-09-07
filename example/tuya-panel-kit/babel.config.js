@@ -1,5 +1,7 @@
+const isUMI = process.env.DEV_MODE === 'umi';
+
 var getRNAlias = () => {
-  return process.env.DEV_MODE === 'umi'
+  return isUMI
     ? {}
     : {
         'tuya-panel-kit/lib/components/iconfont/svg/defaultSvg':
@@ -16,8 +18,9 @@ var getRNAlias = () => {
 };
 
 module.exports = {
-  presets: ['module:metro-react-native-babel-preset'],
+  presets: ['module:metro-react-native-babel-preset', ...(isUMI ? ['@babel/preset-flow'] : [])],
   plugins: [
+    ...(isUMI ? ['@babel/plugin-proposal-class-properties'] : []),
     ['@babel/plugin-proposal-decorators', { legacy: true }],
     [
       'module-resolver',
