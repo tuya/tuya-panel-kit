@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { StyleSheet, requireNativeComponent } from 'react-native';
+import { StyleSheet, NativeModules } from 'react-native';
 import TYSdk from '../../../../TYNativeApi';
 import Strings from '../../../../i18n/strings';
 import Modal from '../../../modal';
@@ -135,7 +135,7 @@ export default class BleOfflineView extends Component {
 
   openH5HelpWebView = () => {
     Modal.close();
-    if (requireNativeComponent('TYRCTNavManager', null)) {
+    if (NativeModules.TYRCTNavManager) {
       TYMobile.jumpSubPage({ uiId: '0000012lky' }, {});
     } else {
       TYDevice.getDeviceInfo()
