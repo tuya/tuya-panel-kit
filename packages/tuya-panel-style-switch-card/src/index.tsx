@@ -143,6 +143,10 @@ export const StyleSwitchCard: React.FC<ISwitchCardProps> = ({
           alignItems: 'center',
           justifyContent: 'space-around',
           flexDirection: 'row',
+          ...parseToStyle(
+            subText ? [cx(12), cx(24), cx(12), cx(20)] : [cx(24), cx(24), cx(24), cx(20)],
+            'padding'
+          ),
           ...parseToStyle(padding, 'padding'),
         },
         style,
