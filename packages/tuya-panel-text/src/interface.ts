@@ -3,44 +3,44 @@ import { TextProps } from 'react-native';
 
 export interface ITYTextProps extends TextProps {
   /**
-   * @description.zh-CN 字体类型
-   * @description Type of font
+   * @description.zh 字体类型
+   * @description.en Type of font
    * @default null
    */
   type?: 'heading' | 'title' | 'paragraph';
   /**
-   * @description.zh-CN 字体尺寸
-   * @description Size of font
+   * @description.zh 字体尺寸
+   * @description.en Size of font
    * @default null
    */
   size?: ('large' | 'normal' | 'small') | number;
   /**
-   * @description.zh-CN 字体对齐方式
-   * @description Font alignment
+   * @description.zh 字体对齐方式
+   * @description.en Font alignment
    * @default null
    */
   align?: 'left' | 'center' | 'right';
   /**
-   * @description.zh-CN 字体粗细
-   * @description Font weight
+   * @description.zh 字体粗细
+   * @description.en Font weight
    * @default null
    */
   weight?: number | string;
   /**
-   * @description.zh-CN 字体颜色
-   * @description Font color
+   * @description.zh 字体颜色
+   * @description.en Font color
    * @default null
    */
   color?: string;
   /**
-   * @description.zh-CN 文本
-   * @description Text
+   * @description.zh 文本
+   * @description.en Text
    * @default null
    */
   text?: string;
   /**
-   * @description.zh-CN 子节点
-   * @description children
+   * @description.zh 子节点
+   * @description.en children
    * @default null
    */
   children?: any;
