@@ -9622,13 +9622,30 @@ tunnel-agent@^0.6.0:
   dependencies:
     safe-buffer "^5.0.1"
 
-tuya-panel-kit@^4.7.6:
-  version "0.0.0"
-  uid ""
-
-tuya-panel-kit@^4.7.7:
-  version "0.0.0"
-  uid ""
+tuya-panel-kit@^4.7.6, tuya-panel-kit@^4.7.7:
+  version "4.7.7"
+  resolved "https://registry.nlark.com/tuya-panel-kit/download/tuya-panel-kit-4.7.7.tgz#7086220e94f2157a2e275a24d173b03e6192b6b6"
+  integrity sha1-cIYiDpTyFXouJ1ok0XOwPmGStrY=
+  dependencies:
+    "@react-native-community/masked-view" "0.1.10"
+    "@react-navigation/native" "5.7.3"
+    "@react-navigation/stack" "5.9.0"
+    babel-cli "^6.26.0"
+    color "^0.11.1"
+    events "^1.1.1"
+    hoist-non-react-statics "^3.3.0"
+    prop-types "^15.6.1"
+    react-addons-shallow-compare "^15.6.2"
+    react-native-deprecated-custom-components "0.1.2"
+    react-native-gesture-handler "1.8.0"
+    react-native-reanimated "1.13.0"
+    react-native-safe-area-context "3.1.7"
+    react-native-screens "2.10.1"
+    react-native-svg "5.5.1"
+    style-equal "^1.0.0"
+    styled-components "^3.4.10"
+    tuya-panel-theme "^0.0.4"
+    tuya-panel-utils "^0.1.0"
 
 "tuya-panel-kit@link:.yalc/tuya-panel-kit":
   version "0.0.0"
@@ -9665,6 +9682,15 @@ tuya-panel-style-icon-background@^0.0.2:
   integrity sha1-rEkqLiiKh0d4Mju+CEa2U42C0OE=
   dependencies:
     tuya-panel-kit "^4.7.7"
+    tuya-panel-utils "^0.1.0"
+
+tuya-panel-style-step-card@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.nlark.com/tuya-panel-style-step-card/download/tuya-panel-style-step-card-0.0.2.tgz#aa6a64a55d124b85276a14f27e6789f5c7008d29"
+  integrity sha1-qmpkpV0SS4UnahTyfmeJ9ccAjSk=
+  dependencies:
+    tuya-panel-kit "^4.7.7"
+    tuya-panel-style-icon-background "^0.0.2"
     tuya-panel-utils "^0.1.0"
 
 tuya-panel-style-switch-card@^0.0.2:

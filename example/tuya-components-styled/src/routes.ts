@@ -5,6 +5,7 @@ import ButtonCard from './pages/basic/button-card';
 import SwitchButton from './pages/bool/switch-card';
 import ItemCard from './pages/show/item-card';
 import ArrowCard from './pages/number/arrow-card';
+import StepCard from './pages/number/step-card';
 
 // 这里的路由href要和文档markdown的demo路径一致
 export const routes = [
@@ -35,5 +36,10 @@ export const routes = [
     name: Strings.getLang('arrow_card'),
     href: '/number/arrow-card',
     component: ArrowCard,
+  },
+  {
+    name: Strings.getLang('step_card'),
+    href: '/number/step-card',
+    component: StepCard,
   },
 ];
