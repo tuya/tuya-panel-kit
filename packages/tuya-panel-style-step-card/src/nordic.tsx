@@ -122,7 +122,10 @@ export class StyleNordicStepCard extends React.PureComponent<
             size={fontSize}
             color={fontColor}
             weight={fontWeight}
-            style={[{ marginLeft: showIcon ? cx(12) : 0, lineHeight: cx(24) }, textStyle]}
+            style={[
+              { marginLeft: showIcon ? cx(12) : 0, lineHeight: cx(24), height: cx(24) },
+              textStyle,
+            ]}
           />
         </View>
         <View
