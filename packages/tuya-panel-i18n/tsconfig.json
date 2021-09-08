@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "tuya-panel-utils": ["../tuya-panel-utils/lib"],
+    },
+    "allowJs": true,
+    "declaration": true,
+    "jsx": "react",
+    "module": "commonjs",
+    "target": "es2018",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true, // 与 allowjs冲突
+    "outDir": "./lib",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    // "allowUnreachableCode": true,
+    "lib": ["es5", "es6", "es2015", "es2016", "es2017", "es2018", "esnext"],
+    "typeRoots": ["./@types/"]
+  },
+  "include": ["./src/"],
+  "exclude": ["./node_modules"]
+}
