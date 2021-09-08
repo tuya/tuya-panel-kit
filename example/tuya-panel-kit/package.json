@@ -41,10 +41,11 @@
     "react": "16.8.3",
     "react-addons-shallow-compare": "^15.6.2",
     "react-native": "0.59.10",
-    "react-native-gesture-handler": "^1.10.3",
-    "react-native-safe-area-context": "3.1.7",
+    "react-native-gesture-handler": "1.3.0",
+    "react-native-reanimated": "1.9.0",
+    "react-native-safe-area-context": "3.0.7",
     "react-native-safe-area-view": "^1.1.1",
-    "react-native-screens": "2.10.1",
+    "react-native-screens": "2.9.0",
     "react-native-svg": "5.5.1",
     "react-redux": "^7.2.1",
     "rebound": "^0.1.0",
@@ -58,8 +59,8 @@
     "style-equal": "^1.0.0",
     "styled-components": "3.4.10",
     "tuya-panel-kit": "link:.yalc/tuya-panel-kit",
-    "tuya-panel-utils": "link:.yalc/tuya-panel-utils",
-    "tuya-panel-theme": "link:.yalc/tuya-panel-theme"
+    "tuya-panel-theme": "link:.yalc/tuya-panel-theme",
+    "tuya-panel-utils": "link:.yalc/tuya-panel-utils"
   },
   "resolutions": {
     "react-native-web": "^0.11.7"
@@ -81,6 +82,7 @@
     "babel-jest": "^22.1.0",
     "babel-plugin-import": "^1.11.0",
     "babel-plugin-module-resolver": "^4.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-plugin-transform-remove-console": "^6.9.4",
     "cross-env": "^7.0.3",
