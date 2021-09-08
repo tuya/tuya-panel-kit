@@ -12,6 +12,7 @@ export default {
     item_card: 'ItemCard',
     arrow_card: 'ArrowCard',
     step_card: 'StepCard',
+    block_card: 'BlockCard',
   },
   zh: {
     // button
@@ -26,5 +27,6 @@ export default {
     item_card: 'ItemCard 展示型卡片',
     arrow_card: 'ArrowCard 箭头型卡片',
     step_card: 'StepCard 步进器卡片',
+    block_card: 'BlockCard 块状布尔类型卡片',
   },
 };
