@@ -6,6 +6,7 @@ import SwitchButton from './pages/bool/switch-card';
 import ItemCard from './pages/show/item-card';
 import ArrowCard from './pages/number/arrow-card';
 import StepCard from './pages/number/step-card';
+import BlockCard from './pages/bool/block-card';
 
 // 这里的路由href要和文档markdown的demo路径一致
 export const routes = [
@@ -24,6 +25,11 @@ export const routes = [
     name: Strings.getLang('switch_card'),
     href: '/bool/switch-card',
     component: SwitchButton,
+  },
+  {
+    name: Strings.getLang('block_card'),
+    href: '/bool/block-card',
+    component: BlockCard,
   },
   // show
   {

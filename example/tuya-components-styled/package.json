@@ -62,6 +62,7 @@
     "tuya-panel-style-button-card": "^0.0.1",
     "tuya-panel-style-switch-card": "^0.0.2",
     "tuya-panel-style-step-card": "^0.0.2",
+    "tuya-panel-style-block-card": "^0.0.2",
     "tuya-panel-theme": "link:.yalc/tuya-panel-theme",
     "tuya-panel-utils": "link:.yalc/tuya-panel-utils"
   },

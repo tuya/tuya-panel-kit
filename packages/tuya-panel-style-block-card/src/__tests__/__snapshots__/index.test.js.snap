@@ -498,7 +498,7 @@ exports[`BlockCard NordicBlockCard 1`] = `
         "paddingLeft": 40,
         "paddingRight": 40,
         "paddingTop": 48,
-        "width": 368,
+        "width": 310,
       },
       undefined,
     ]
@@ -521,6 +521,7 @@ exports[`BlockCard NordicBlockCard 1`] = `
               "backgroundColor": "transparent",
               "color": "#000",
               "fontSize": 32,
+              "fontWeight": "400",
             },
             Array [
               Object {
@@ -535,7 +536,7 @@ exports[`BlockCard NordicBlockCard 1`] = `
     }
     text="Block Card"
     type={null}
-    weight={null}
+    weight={400}
   >
     Block Card
   </Text>
@@ -591,9 +592,9 @@ exports[`BlockCard NordicBlockCard 1`] = `
             "alignItems": "center",
             "alignSelf": "flex-start",
             "backgroundColor": "#fff",
-            "borderRadius": 20.8,
+            "borderRadius": 20,
             "elevation": 2,
-            "height": 41.6,
+            "height": 40,
             "justifyContent": "center",
             "position": "absolute",
             "shadowColor": "rgba(0, 0, 0, 0.3)",
@@ -605,10 +606,10 @@ exports[`BlockCard NordicBlockCard 1`] = `
             "shadowRadius": 3,
             "transform": Array [
               Object {
-                "translateX": 54.8,
+                "translateX": 57,
               },
             ],
-            "width": 41.6,
+            "width": 40,
           }
         }
       />

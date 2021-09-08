@@ -16,6 +16,7 @@ const NordicBlock: React.FC<INordicCardProps> = ({
   width,
   fontColor,
   fontSize,
+  fontWeight,
   textStyle,
   switchSize,
   switchIconSize,
@@ -39,6 +40,7 @@ const NordicBlock: React.FC<INordicCardProps> = ({
         text={text}
         color={fontColor}
         size={fontSize}
+        weight={fontWeight}
         style={[{ lineHeight: cx(24), marginBottom: cx(86) }, textStyle]}
       />
       <SwitchButton
