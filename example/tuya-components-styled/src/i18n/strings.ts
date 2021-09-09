@@ -13,6 +13,7 @@ export default {
     arrow_card: 'ArrowCard',
     step_card: 'StepCard',
     block_card: 'BlockCard',
+    depict_card: 'DepictCard',
   },
   zh: {
     // button
@@ -28,5 +29,6 @@ export default {
     arrow_card: 'ArrowCard 箭头型卡片',
     step_card: 'StepCard 步进器卡片',
     block_card: 'BlockCard 块状布尔类型卡片',
+    depict_card: 'DepictCard 块状文本显示卡片',
   },
 };

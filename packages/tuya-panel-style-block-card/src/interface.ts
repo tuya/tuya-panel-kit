@@ -65,9 +65,9 @@ export interface IStudioCardProps
    */
   style?: StyleProp<ViewStyle>;
   /**
-   * @description.en
-   * @description.zh
-   * @default
+   * @description.en Background Color
+   * @description.zh 背景色
+   * @default '#Fff'
    */
   backgroundColor?: string;
   /**
