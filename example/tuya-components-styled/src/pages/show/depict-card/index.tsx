@@ -1,11 +1,8 @@
 import React from 'react';
 import { View } from 'react-native';
-import {
-  ClassicDepictCard,
-  NordicDepictCard,
-  AcrylicDepictCard,
-  AcrylicDepictIconCard,
-} from 'tuya-panel-style-depict-card';
+import { ClassicDepictCard } from 'tuya-panel-classic-kit';
+import { NordicDepictCard } from 'tuya-panel-nordic-kit';
+import { AcrylicDepictCard, AcrylicDepictIconCard } from 'tuya-panel-acrylic-kit';
 import { Utils } from 'tuya-panel-utils';
 import TuyaRNSvgs from 'tuya-panel-kit/lib/components/iconfont/svg/defaultSvg';
 import { ListView } from '#components';

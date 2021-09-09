@@ -1,10 +1,8 @@
 import React from 'react';
 import { View } from 'react-native';
-import {
-  ClassicDisplayCard,
-  NordicDisplayCard,
-  AcrylicDisplayCard,
-} from 'tuya-panel-style-display-card';
+import { ClassicDisplayCard } from 'tuya-panel-classic-kit';
+import { NordicDisplayCard } from 'tuya-panel-nordic-kit';
+import { AcrylicDisplayCard } from 'tuya-panel-acrylic-kit';
 import { Utils } from 'tuya-panel-utils';
 import TuyaRNSvgs from 'tuya-panel-kit/lib/components/iconfont/svg/defaultSvg';
 import { ListView } from '#components';

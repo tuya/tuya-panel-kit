@@ -43,7 +43,7 @@ export const StyleDisplayCard: React.FC<IDisplayCardProps> = ({
           borderRadius: radius,
           width,
           alignItems: 'center',
-          justifyContent: 'center',
+          justifyContent: isAlignCenter ? 'center' : 'flex-start',
           flexDirection: 'row',
           ...parseToStyle(padding, 'padding'),
         },

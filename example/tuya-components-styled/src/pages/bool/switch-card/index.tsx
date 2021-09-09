@@ -1,10 +1,8 @@
 import React from 'react';
 import { View } from 'react-native';
-import {
-  ClassicSwitchCard,
-  NordicSwitchCard,
-  AcrylicSwitchCard,
-} from 'tuya-panel-style-switch-card';
+import { ClassicSwitchCard } from 'tuya-panel-classic-kit';
+import { NordicSwitchCard } from 'tuya-panel-nordic-kit';
+import { AcrylicSwitchCard } from 'tuya-panel-acrylic-kit';
 import { Utils } from 'tuya-panel-utils';
 import TuyaRNSvgs from 'tuya-panel-kit/lib/components/iconfont/svg/defaultSvg';
 import { ListView } from '#components';

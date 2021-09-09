@@ -1,5 +1,5 @@
 import React from 'react';
-import { NordicListCard } from 'tuya-panel-style-list-card';
+import { NordicListCard } from 'tuya-panel-nordic-kit';
 import { Utils } from 'tuya-panel-utils';
 import TuyaRNSvgs from 'tuya-panel-kit/lib/components/iconfont/svg/defaultSvg';
 import { ListView } from '#components';
