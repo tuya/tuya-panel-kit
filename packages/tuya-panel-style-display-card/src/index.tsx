@@ -59,7 +59,7 @@ export const StyleDisplayCard: React.FC<IDisplayCardProps> = ({
       <View style={{ alignItems: isAlignCenter ? 'center' : 'flex-start' }}>
         <View style={{ flexDirection: 'row', alignItems: isUnitInTop ? 'flex-start' : 'flex-end' }}>
           <TYText
-            text={value}
+            text={`${value}`}
             size={valueSize}
             color={valueColor}
             weight={valueWeight}
@@ -71,7 +71,7 @@ export const StyleDisplayCard: React.FC<IDisplayCardProps> = ({
               size={unitSize}
               color={unitColor}
               weight={unitWeight}
-              style={[{ lineHeight: cx(24), marginLeft: cx(5), marginTop: cx(10) }, unitStyle]}
+              style={[{ lineHeight: cx(24), marginLeft: cx(5), marginTop: cx(12) }, unitStyle]}
             />
           )}
         </View>

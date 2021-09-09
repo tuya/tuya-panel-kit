@@ -34,8 +34,8 @@ export interface IDepictCardProps extends Omit<IconBackgroundProps, 'style'> {
    */
   style?: StyleProp<ViewStyle>;
   /**
-   * @description.en Outermost container style
-   * @description.zh 最外层容器样式
+   * @description.en Icon style
+   * @description.zh 图标样式
    * @default null
    */
   iconStyle?: StyleProp<ViewStyle>;
@@ -120,7 +120,7 @@ export interface IDepictCardProps extends Omit<IconBackgroundProps, 'style'> {
   /**
    * @description.en Unit Color
    * @description.zh 单位颜色
-   * @default
+   * @default '#000'
    */
   unitColor?: string;
   /**

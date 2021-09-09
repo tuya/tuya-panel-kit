@@ -95,7 +95,7 @@ exports[`DisplayCard AcrylicDisplayCard 1`] = `
                   Object {
                     "lineHeight": 48,
                     "marginLeft": 10,
-                    "marginTop": 20,
+                    "marginTop": 24,
                   },
                   Object {
                     "lineHeight": 50,
@@ -246,7 +246,7 @@ exports[`DisplayCard ClassicDisplayCard 1`] = `
                   Object {
                     "lineHeight": 48,
                     "marginLeft": 10,
-                    "marginTop": 20,
+                    "marginTop": 24,
                   },
                   undefined,
                 ],
