@@ -84,7 +84,7 @@ export interface IDepictCardProps extends Omit<IconBackgroundProps, 'style'> {
   /**
    * @description.en Title
    * @description.zh 标题
-   * @default null 'Current Temp'
+   * @default 'Current Temp'
    */
   text?: string;
   /**

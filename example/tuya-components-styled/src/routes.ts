@@ -9,6 +9,7 @@ import StepCard from './pages/number/step-card';
 import BlockCard from './pages/bool/block-card';
 import DepictCard from './pages/show/depict-card';
 import DisplayCard from './pages/show/display-card';
+import IconCard from './pages/show/icon-card';
 
 // 这里的路由href要和文档markdown的demo路径一致
 export const routes = [
@@ -48,6 +49,11 @@ export const routes = [
     name: Strings.getLang('display_card'),
     href: '/show/display-card',
     component: DisplayCard,
+  },
+  {
+    name: Strings.getLang('icon_card'),
+    href: '/show/icon-card',
+    component: IconCard,
   },
   // number
   {
