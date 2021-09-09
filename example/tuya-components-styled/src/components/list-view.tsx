@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleProp, StyleSheet, View, ViewStyle } from 'react-native';
 import { TYText, Utils } from 'tuya-panel-kit';
 
-const { convertX } = Utils.RatioUtils;
+const { convertX, height } = Utils.RatioUtils;
 
 type ListItem = {
   title: string;
@@ -18,6 +18,7 @@ export interface ListViewProps {
   nthItemStyle?: StyleProp<ViewStyle>;
   dot?: boolean;
   style?: StyleProp<ViewStyle>;
+  fullVHeight?: boolean;
 }
 
 export const ListView = ({
@@ -27,9 +28,20 @@ export const ListView = ({
   contentCenter = false,
   nthItemStyle: itemStyle,
   dot = true,
+  fullVHeight = true,
 }: ListViewProps) => {
   return (
-    <View style={[styles.list, style]}>
+    <View
+      style={[
+        styles.list,
+        fullVHeight
+          ? {
+              height: height - 56,
+            }
+          : {},
+        style,
+      ]}
+    >
       {list.map((item, i) => (
         <View style={[styles.list_item, i > 0 ? itemStyle : {}, item.itemStyle]} key={item.title}>
           <TYText

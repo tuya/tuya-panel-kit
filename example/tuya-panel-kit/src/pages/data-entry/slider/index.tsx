@@ -213,13 +213,19 @@ export default () => {
                 stepValue={25}
                 useNoun={true}
                 thumbStyle={{ height: 22, width: 22 }}
-                minNounStyle={{ backgroundColor: 'white', height: 5, width: 5, borderRadius: 2.5 }}
+                minNounStyle={{
+                  backgroundColor: 'white',
+                  height: 5,
+                  width: 5,
+                  borderRadius: 2.5,
+                }}
                 maxNounStyle={{
                   backgroundColor: '#F84803',
                   height: 5,
                   width: 5,
                   borderRadius: 2.5,
                 }}
+                type="parcel"
                 maximumValue={100}
                 minimumValue={0}
                 onValueChange={value => setValue(value)}
@@ -369,8 +375,8 @@ export default () => {
                   thumbSize: 26,
                   thumbRadius: 26,
                   thumbTintColor: '#FFF',
-                  minimumTrackTintColor: '#E5E5E5',
-                  maximumTrackTintColor: '#F84803',
+                  minimumTrackTintColor: '#F84803',
+                  maximumTrackTintColor: '#E5E5E5',
                 }}
                 trackStyle={{ width: 12, height: 200, borderRadius: 8 }}
                 style={{ marginHorizontal: 15 }}
@@ -382,6 +388,7 @@ export default () => {
                 stepValue={25}
                 thumbStyle={{ height: 22, width: 22 }}
                 minNounStyle={{ backgroundColor: 'white', height: 5, width: 5, borderRadius: 2.5 }}
+                type="parcel"
                 maxNounStyle={{
                   backgroundColor: '#F84803',
                   height: 5,

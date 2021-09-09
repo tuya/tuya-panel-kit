@@ -1,8 +1,8 @@
 import React from 'react';
-import { StyleSheet, TouchableOpacity, View } from 'react-native';
+import { StyleProp, StyleSheet, TouchableOpacity, View, ViewStyle } from 'react-native';
 import { TYText, Utils } from 'tuya-panel-kit';
 
-const { convertX: cx } = Utils.RatioUtils;
+const { convertX: cx, height } = Utils.RatioUtils;
 
 type ListItem = {
   title: string;
@@ -16,11 +16,12 @@ type ListItem = {
 export interface BlockListProps {
   list: ListItem['list'];
   nowrap?: boolean;
+  style?: StyleProp<ViewStyle>;
 }
 
-export const BlockList = ({ list, nowrap = false }: BlockListProps) => {
+export const BlockList = ({ list, nowrap = false, style }: BlockListProps) => {
   const content = (
-    <View style={styles.block_list}>
+    <View style={[styles.block_list, style]}>
       {list.map((subItem, i) => {
         const inner = (
           <>
@@ -70,7 +71,7 @@ const styles = StyleSheet.create({
   container: {
     paddingTop: cx(24),
     backgroundColor: '#F5F5F5',
-    flex: 1,
+    height: height - 56,
   },
   block: {
     marginBottom: cx(16),

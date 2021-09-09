@@ -1,6 +1,6 @@
 {
   "name": "tuya-panel-style-enum-slider-card",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Stylized Components - EnumSliderCard",
   "author": "chechengyi <984593931@qq.com>",
   "homepage": "https://github.com/tuya/tuya-panel-kit#readme",
@@ -31,9 +31,9 @@
     "url": "https://github.com/tuya/tuya-panel-kit/issues"
   },
   "dependencies": {
-    "tuya-panel-kit": "^4.7.7",
-    "tuya-panel-style-slider-card": "^0.0.2",
-    "tuya-panel-utils": "^0.1.0"
+    "tuya-panel-kit": "^4.7.8",
+    "tuya-panel-style-slider-card": "^0.0.3",
+    "tuya-panel-utils": "^0.1.1"
   },
   "devDependencies": {
     "@types/tuya-panel-kit": "^4.0.5"

@@ -81,9 +81,9 @@ const isNil: (obj: any) => boolean = obj => obj === undefined || obj === null;
  * https://gist.github.com/dfkaye/59263b51cf1e0b633181c5f44ae2066a
  */
 const get: (
-  object: Record<string, unknown>,
+  object: Record<string, any>,
   pathString: string,
-  defaultValue?: string | number | Record<string, unknown>
+  defaultValue?: string | number | boolean | Record<string, any>
 ) => any = (object, pathString, defaultValue) => {
   // Coerce pathString to a string (even it turns into "[object Object]").
   const parts = `${pathString}`.split('.');
