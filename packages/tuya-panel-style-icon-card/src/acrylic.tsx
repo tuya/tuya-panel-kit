@@ -44,17 +44,20 @@ const AcrylicIconBlock: React.FC<IStudioIconCardProps> = ({
         style,
       ]}
     >
-      <ClassicIconBackground iconSize={cx(40)} showIcon {...rest} style={iconStyle} />
+      <ClassicIconBackground
+        iconSize={cx(40)}
+        showIcon
+        {...rest}
+        style={[{ marginBottom: cx(20) }, iconStyle]}
+      />
       <View
         style={{
           flexDirection: 'row',
-          marginBottom: cx(3),
-          marginTop: cx(20),
           alignItems: 'baseline',
         }}
       >
         <TYText
-          text={value}
+          text={`${value}`}
           weight={valueWeight}
           color={valueColor}
           size={valueSize}
@@ -73,7 +76,7 @@ const AcrylicIconBlock: React.FC<IStudioIconCardProps> = ({
         weight={fontWeight}
         color={fontColor}
         size={fontSize}
-        style={[{ lineHeight: cx(19) }, textStyle]}
+        style={[{ lineHeight: cx(19), marginTop: cx(3) }, textStyle]}
       />
     </View>
   );

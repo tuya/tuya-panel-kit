@@ -35,7 +35,12 @@ exports[`IconCard AcrylicIconBlockCard 1`] = `
             "overflow": "hidden",
             "width": 50,
           },
-          Object {},
+          Array [
+            Object {
+              "marginBottom": 40,
+            },
+            undefined,
+          ],
         ],
       ]
     }
@@ -133,8 +138,6 @@ exports[`IconCard AcrylicIconBlockCard 1`] = `
       Object {
         "alignItems": "baseline",
         "flexDirection": "row",
-        "marginBottom": 6,
-        "marginTop": 40,
       }
     }
   >
@@ -231,6 +234,7 @@ exports[`IconCard AcrylicIconBlockCard 1`] = `
             Array [
               Object {
                 "lineHeight": 38,
+                "marginTop": 6,
               },
               undefined,
             ],
@@ -634,11 +638,21 @@ exports[`IconCard NordicIconBlockCard 1`] = `
     Temp
   </Text>
   <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
       Object {
         "alignItems": "center",
+        "backgroundColor": "transparent",
         "flexDirection": "row",
         "justifyContent": "space-around",
+        "opacity": 1,
       }
     }
   >

@@ -275,7 +275,6 @@ exports[`BlockCard ClassicBlockCard 1`] = `
         "flex": 1,
         "flexDirection": "row",
         "justifyContent": "space-around",
-        "marginBottom": 70,
       }
     }
   >
@@ -471,6 +470,7 @@ exports[`BlockCard ClassicBlockCard 1`] = `
             Array [
               Object {
                 "lineHeight": 48,
+                "marginTop": 70,
               },
               undefined,
             ],
