@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.7.8](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.7.7...tuya-panel-kit@4.7.8) (2021-09-09)
+
+
+### Bug Fixes
+
+* **Popup.list:** fix the horizontal line disappearing due to the decimal point problem && add checkIconColor props ([#132](https://github.com/tuya/tuya-panel-kit/issues/132)) ([1200cc4](https://github.com/tuya/tuya-panel-kit/commit/1200cc4e2549ae9be00a9aae48470ee79b1650bd))
+
+
+### Features
+
+* lerna layout ([#134](https://github.com/tuya/tuya-panel-kit/issues/134)) ([7ee6c6f](https://github.com/tuya/tuya-panel-kit/commit/7ee6c6fd4f7a3f4131da3099b6b203ba9097fe1d))
+
+
+
+
+
 ## [4.7.7](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.7.6...tuya-panel-kit@4.7.7) (2021-08-31)
 
 
