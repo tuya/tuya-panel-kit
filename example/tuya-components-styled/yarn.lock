@@ -9660,6 +9660,15 @@ tuya-panel-style-button@^0.0.1:
     tuya-panel-kit "^4.7.6"
     tuya-panel-utils "^0.1.0"
 
+tuya-panel-style-depict-card@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.nlark.com/tuya-panel-style-depict-card/download/tuya-panel-style-depict-card-0.0.2.tgz#70be630c6d7b13fa4eed6fd741db117a9e6267bd"
+  integrity sha1-cL5jDG17E/pO7W/XQdsRep5iZ70=
+  dependencies:
+    tuya-panel-kit "^4.7.7"
+    tuya-panel-style-icon-background "^0.0.2"
+    tuya-panel-utils "^0.1.0"
+
 tuya-panel-style-icon-background@^0.0.1:
   version "0.0.1"
   resolved "https://registry.npmjs.org/tuya-panel-style-icon-background/-/tuya-panel-style-icon-background-0.0.1.tgz#a5fa7abffd502d08329e0f23984bf1d31dcff5f1"

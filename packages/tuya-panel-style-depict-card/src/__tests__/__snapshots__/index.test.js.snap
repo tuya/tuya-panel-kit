@@ -9,6 +9,7 @@ exports[`DepictCard AcrylicDepictCard 1`] = `
         "backgroundColor": "#fff",
         "borderRadius": 32,
         "flexDirection": "row",
+        "justifyContent": "flex-start",
         "paddingBottom": 18,
         "paddingLeft": 40,
         "paddingRight": 50,
@@ -162,6 +163,7 @@ exports[`DepictCard AcrylicDepictIconCard 1`] = `
         "backgroundColor": "#fff",
         "borderRadius": 32,
         "flexDirection": "row",
+        "justifyContent": "flex-start",
         "paddingBottom": 40,
         "paddingLeft": 40,
         "paddingRight": 40,
@@ -431,6 +433,7 @@ exports[`DepictCard ClassicDepictCard 1`] = `
         "backgroundColor": "#fff",
         "borderRadius": 28,
         "flexDirection": "row",
+        "justifyContent": "center",
         "paddingBottom": 36,
         "paddingLeft": 94,
         "paddingRight": 90,
@@ -488,7 +491,7 @@ exports[`DepictCard ClassicDepictCard 1`] = `
     <View
       style={
         Object {
-          "alignItems": "flex-start",
+          "alignItems": "center",
           "flexDirection": "row",
         }
       }
@@ -577,11 +580,12 @@ exports[`DepictCard NordicDepictCard 1`] = `
         "backgroundColor": "#fff",
         "borderRadius": 28,
         "flexDirection": "row",
-        "paddingBottom": 36,
-        "paddingLeft": 94,
-        "paddingRight": 90,
-        "paddingTop": 32,
-        "width": 516,
+        "justifyContent": "flex-start",
+        "paddingBottom": 18,
+        "paddingLeft": 40,
+        "paddingRight": 50,
+        "paddingTop": 30,
+        "width": 304,
       },
       undefined,
     ]
@@ -634,7 +638,7 @@ exports[`DepictCard NordicDepictCard 1`] = `
     <View
       style={
         Object {
-          "alignItems": "flex-start",
+          "alignItems": "center",
           "flexDirection": "row",
         }
       }
