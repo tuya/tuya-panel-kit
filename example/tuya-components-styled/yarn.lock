@@ -9703,6 +9703,15 @@ tuya-panel-style-icon-card@^0.0.2:
     tuya-panel-style-icon-background "^0.0.2"
     tuya-panel-utils "^0.1.0"
 
+tuya-panel-style-list-card@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.nlark.com/tuya-panel-style-list-card/download/tuya-panel-style-list-card-0.0.2.tgz#c08105d3b572bba44ffd092109e5efe68dfaf6c9"
+  integrity sha1-wIEF07Vyu6RP/QkhCeXv5o369sk=
+  dependencies:
+    tuya-panel-kit "^4.7.7"
+    tuya-panel-style-icon-background "^0.0.2"
+    tuya-panel-utils "^0.1.0"
+
 tuya-panel-style-step-card@^0.0.2:
   version "0.0.2"
   resolved "https://registry.nlark.com/tuya-panel-style-step-card/download/tuya-panel-style-step-card-0.0.2.tgz#aa6a64a55d124b85276a14f27e6789f5c7008d29"
