@@ -13,7 +13,7 @@ const { getTheme, ThemeConsumer } = ThemeUtils;
 
 const { viewWidth, convertX: cx } = RatioUtils;
 
-let itemHeight = cx(56);
+let itemHeight = 56;
 
 class ListPopup extends React.Component {
   static propTypes = {
@@ -78,6 +78,10 @@ class ListPopup extends React.Component {
      * 多选框的样式
      */
     switchStyle: ViewPropTypes.style,
+    /**
+     * 多选框的选中☑️的颜色
+     */
+    checkIconColor: PropTypes.string,
   };
 
   static defaultProps = {
@@ -87,6 +91,7 @@ class ListPopup extends React.Component {
     selectedIcon: null,
     type: 'radio',
     iconTintColor: '',
+    checkIconColor: '#e5e5e5',
     contentCenter: true,
     value: -1,
     listItemStyle: null,
@@ -145,20 +150,13 @@ class ListPopup extends React.Component {
     }
   };
 
-  _handleLayout = nativeEvent => {
-    const { height } = nativeEvent.layout;
-    this.setState({
-      itemHeight: height,
-    });
-  };
-
   renderSwitch = value => {
     const { selectedArr } = this.state;
-    const { switchStyle } = this.props;
+    const { switchStyle, checkIconColor } = this.props;
     const isActive = selectedArr.indexOf(value.toString()) !== -1;
     return (
       <StyledCheckout active={isActive} style={switchStyle}>
-        {isActive && <StyledIconFont d={selectedPath} color="#e5e5e5" size={cx(16)} />}
+        {isActive && <StyledIconFont d={selectedPath} color={checkIconColor} size={cx(16)} />}
       </StyledCheckout>
     );
   };
@@ -188,7 +186,7 @@ class ListPopup extends React.Component {
     const { styles = {}, type, contentCenter, listItemStyle, dataSource } = this.props;
     const containerStyle = {
       alignSelf: 'stretch',
-      minHeight: itemHeight,
+      minHeight: this.state.itemHeight,
       backgroundColor: '#fff',
     };
     let titleAlign;
@@ -242,7 +240,6 @@ class ListPopup extends React.Component {
           };
           return (
             <TYFlatList.Item
-              onLayout={({ nativeEvent }) => this._handleLayout(nativeEvent)}
               key={`list_${index}`}
               activeOpacity={type === 'switch' ? 1 : 0.8}
               styles={itemStyle}
