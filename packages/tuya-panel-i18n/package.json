@@ -1,0 +1,40 @@
+{
+  "name": "tuya-panel-i18n",
+  "version": "0.0.0",
+  "description": "Tuya I18N",
+  "author": "ZengBeauty <2497752603@qq.com>",
+  "homepage": "https://github.com/tuya/tuya-panel-kit#readme",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuya/tuya-panel-kit.git"
+  },
+  "scripts": {
+    "prebuild": "rimraf lib/*",
+    "build": "tsc -d",
+    "dev": "tsc -w",
+    "prepublishOnly": "yarn build"
+  },
+  "dependencies": {
+    "tuya-panel-utils": "^0.1.0",
+    "tuya-panel-core": "^0.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/tuya/tuya-panel-kit/issues"
+  },
+  "peerDependencies": {
+    "react": "16.8.3",
+    "react-native": "0.59.10"
+  }
+}

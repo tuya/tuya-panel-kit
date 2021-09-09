@@ -112,7 +112,7 @@ export const parseToCss = (values: number[], key: string): any[] => {
 export const getTheme = (
   props: { [key: string]: any },
   key: string,
-  defaultValue: string | number
+  defaultValue?: string | number
 ): any => {
   const [namespace, ...path] = key.split('.');
   const themeBasicPath = path.join('.');
