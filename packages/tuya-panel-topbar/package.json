@@ -1,0 +1,42 @@
+{
+  "name": "tuya-panel-topbar",
+  "version": "0.0.1",
+  "description": "tuya-panel-topbar",
+  "author": "ZengBeauty <2497752603@qq.com>",
+  "homepage": "https://github.com/tuya/tuya-panel-kit#readme",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuya/tuya-panel-kit.git"
+  },
+  "scripts": {
+    "prebuild": "rimraf lib/*",
+    "build": "tsc -d",
+    "dev": "tsc -w",
+    "test": "NODE_ENV=testing TZ=UTC jest -u --silent --forceExit",
+    "test:watch": "jest --watch",
+    "prepublishOnly": "yarn build"
+  },
+  "dependencies": {
+    "color": "^0.11.1",
+    "styled-components": "^3.4.10",
+    "tuya-panel-kit": "^4.7.8",
+    "tuya-panel-text": "^0.0.1",
+    "tuya-panel-theme": "^0.0.5",
+    "tuya-panel-utils": "^0.1.1"
+  },
+  "bugs": {
+    "url": "https://github.com/tuya/tuya-panel-kit/issues"
+  }
+}

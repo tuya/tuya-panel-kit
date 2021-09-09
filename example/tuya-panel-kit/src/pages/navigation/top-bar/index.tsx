@@ -40,7 +40,6 @@ export default ({ navigation }) => {
       }}
       style={{
         backgroundColor: '#F5F5F6',
-        flex: 1,
       }}
       list={[
         {

@@ -7,7 +7,7 @@ import Strings from '#i18n';
 export default () => {
   return (
     <ListView
-      style={{ backgroundColor: '#F5F5F6', flex: 1 }}
+      style={{ backgroundColor: '#F5F5F6' }}
       contentPadding={false}
       dot={false}
       list={[

@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleProp, StyleSheet, TouchableOpacity, View, ViewStyle } from 'react-native';
 import { TYText, Utils } from 'tuya-panel-kit';
 
-const { convertX: cx } = Utils.RatioUtils;
+const { convertX: cx, height } = Utils.RatioUtils;
 
 type ListItem = {
   title: string;
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
   container: {
     paddingTop: cx(24),
     backgroundColor: '#F5F5F5',
-    flex: 1,
+    height: height - 56,
   },
   block: {
     marginBottom: cx(16),

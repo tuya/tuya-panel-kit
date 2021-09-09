@@ -12,8 +12,6 @@ jobs:
         with:
           fetch-depth: 0
       - uses: actions/setup-node@v2
-        with:
-          node-version: '10.x'
       - run: yarn install --registry=https://registry.npmjs.org
       - name: Add dependencies for commitlint action
         env:
