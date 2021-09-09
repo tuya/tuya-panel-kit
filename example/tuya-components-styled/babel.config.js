@@ -7,6 +7,9 @@ var getRNAlias = () => {
         'tuya-panel-kit/lib/components/modal/portalOut':
           '../../packages/tuya-panel-kit/src/components/modal/portalOut',
         'tuya-panel-kit': '../../packages/tuya-panel-kit/src/index.js',
+        'tuya-panel-acrylic-kit': '../../packages/tuya-panel-acrylic-kit/src/index.ts',
+        'tuya-panel-classic-kit': '../../packages/tuya-panel-classic-kit/src/index.ts',
+        'tuya-panel-nordic-kit': '../../packages/tuya-panel-nordic-kit/src/index.ts',
         'react-native-gesture-handler': './node_modules/react-native-gesture-handler',
       };
 };

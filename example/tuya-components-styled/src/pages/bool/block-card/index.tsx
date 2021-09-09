@@ -1,6 +1,8 @@
 import React from 'react';
 import { View } from 'react-native';
-import { ClassicBlockCard, NordicBlockCard, AcrylicBlockCard } from 'tuya-panel-style-block-card';
+import { ClassicBlockCard } from 'tuya-panel-classic-kit';
+import { NordicBlockCard } from 'tuya-panel-nordic-kit';
+import { AcrylicBlockCard } from 'tuya-panel-acrylic-kit';
 import { Utils } from 'tuya-panel-utils';
 import TuyaRNSvgs from 'tuya-panel-kit/lib/components/iconfont/svg/defaultSvg';
 import { ListView } from '#components';

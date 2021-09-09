@@ -1,6 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
-import { ClassicStepCard, NordicStepCard } from 'tuya-panel-style-step-card';
+import { ClassicStepCard } from 'tuya-panel-classic-kit';
+import { NordicStepCard } from 'tuya-panel-nordic-kit';
 import { Utils } from 'tuya-panel-utils';
 import TuyaRNSvgs from 'tuya-panel-kit/lib/components/iconfont/svg/defaultSvg';
 import { ListView } from '#components';
