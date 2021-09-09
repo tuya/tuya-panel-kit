@@ -9669,6 +9669,15 @@ tuya-panel-style-depict-card@^0.0.2:
     tuya-panel-style-icon-background "^0.0.2"
     tuya-panel-utils "^0.1.0"
 
+tuya-panel-style-display-card@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.nlark.com/tuya-panel-style-display-card/download/tuya-panel-style-display-card-0.0.2.tgz#5ed89fbbd7e20e706979f947c11a74d9fda9c3e7"
+  integrity sha1-Xtifu9fiDnBpeflHwRp02f2pw+c=
+  dependencies:
+    tuya-panel-kit "^4.7.7"
+    tuya-panel-style-icon-background "^0.0.2"
+    tuya-panel-utils "^0.1.0"
+
 tuya-panel-style-icon-background@^0.0.1:
   version "0.0.1"
   resolved "https://registry.npmjs.org/tuya-panel-style-icon-background/-/tuya-panel-style-icon-background-0.0.1.tgz#a5fa7abffd502d08329e0f23984bf1d31dcff5f1"
