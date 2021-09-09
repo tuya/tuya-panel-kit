@@ -10,6 +10,7 @@ import BlockCard from './pages/bool/block-card';
 import DepictCard from './pages/show/depict-card';
 import DisplayCard from './pages/show/display-card';
 import IconCard from './pages/show/icon-card';
+import ListCard from './pages/enum/list-card';
 
 // 这里的路由href要和文档markdown的demo路径一致
 export const routes = [
@@ -65,5 +66,11 @@ export const routes = [
     name: Strings.getLang('step_card'),
     href: '/number/step-card',
     component: StepCard,
+  },
+  // enum
+  {
+    name: Strings.getLang('list_card'),
+    href: '/enum/list-card',
+    component: ListCard,
   },
 ];

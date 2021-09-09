@@ -16,6 +16,7 @@ export default {
     depict_card: 'DepictCard',
     display_card: 'DisplayCard',
     icon_card: 'IconCard',
+    list_card: 'ListCard',
   },
   zh: {
     // button
@@ -34,5 +35,6 @@ export default {
     depict_card: 'DepictCard 块状文本显示卡片',
     display_card: 'DisplayCard 文本描述卡片',
     icon_card: 'IconCard 图标文本块状卡片',
+    list_card: 'ListCard 列表类卡片',
   },
 };
