@@ -1,10 +1,5 @@
 export default {
   en: {
-    // button
-    button: 'button',
-
-    // button-card
-    button_card: 'button card',
     studio: 'Studio',
     nordic: 'Nordic',
     acrylic: 'Acrylic',
@@ -19,11 +14,6 @@ export default {
     list_card: 'ListCard',
   },
   zh: {
-    // button
-    button: '按钮',
-
-    // button-card
-    button_card: '按钮卡片',
     studio: 'Studio 风格',
     nordic: '北欧风格',
     acrylic: '亚克力风格',
