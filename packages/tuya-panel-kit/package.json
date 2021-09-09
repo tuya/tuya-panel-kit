@@ -1,6 +1,6 @@
 {
   "name": "tuya-panel-kit",
-  "version": "4.7.7",
+  "version": "4.7.8",
   "description": "a functional component library for developing tuya device panels!",
   "keywords": [
     "tuya",
@@ -55,8 +55,8 @@
     "react-native-svg": "5.5.1",
     "style-equal": "^1.0.0",
     "styled-components": "^3.4.10",
-    "tuya-panel-theme": "^0.0.4",
-    "tuya-panel-utils": "^0.1.0"
+    "tuya-panel-theme": "^0.0.5",
+    "tuya-panel-utils": "^0.1.1"
   },
   "peerDependencies": {
     "@types/tuya-panel-kit": "*",
