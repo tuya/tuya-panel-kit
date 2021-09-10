@@ -5964,10 +5964,10 @@ eslint-config-prettier@^6.11.0:
   dependencies:
     get-stdin "^6.0.0"
 
-eslint-config-tuya-panel@^0.2.4:
-  version "0.2.8"
-  resolved "https://registry.nlark.com/eslint-config-tuya-panel/download/eslint-config-tuya-panel-0.2.8.tgz#f32fc3ca564bd6986384a33377e1ef34a384089d"
-  integrity sha1-8y/DylZL1phjhKMzd+HvNKOECJ0=
+eslint-config-tuya-panel@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.nlark.com/eslint-config-tuya-panel/download/eslint-config-tuya-panel-0.4.1.tgz#ae833e68413585c424ab259d24bc3d19a1abe8d1"
+  integrity sha1-roM+aEE1hcQkqyWdJLw9GaGr6NE=
   dependencies:
     "@rushstack/eslint-patch" "^1.0.6"
     "@typescript-eslint/eslint-plugin" "4.8.2"
