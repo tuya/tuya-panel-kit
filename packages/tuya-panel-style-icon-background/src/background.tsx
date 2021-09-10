@@ -4,12 +4,14 @@ import { LinearGradient, RadialGradient } from 'tuya-panel-kit';
 import { Rect } from 'react-native-svg';
 import { getCoords, checkIsColor } from './utils';
 
-type PureColor = string;
-type LinearGradientBg = {
+export type PureColor = string;
+
+export type LinearGradientBg = {
   deg: number;
   stops: Record<string, PureColor>;
 };
-type RadiaGradientBg = {
+
+export type RadialGradientBg = {
   cx: string;
   cy: string;
   fx: string;
@@ -22,13 +24,38 @@ type RadiaGradientBg = {
     stopOpacity: string;
   }>;
 };
-export type BackgroundType = PureColor | LinearGradientBg | RadiaGradientBg;
+export type BackgroundType = PureColor | LinearGradientBg | RadialGradientBg;
 export interface IBackgroundProps {
+  /**
+   * @description.en background Pure color、Linear gradient、Radial gradient
+   * @description.zh 背景 纯颜色、线性渐变或者径向渐变
+   * @default
+   */
   background: BackgroundType;
+  /**
+   * @description.en width
+   * @description.zh 宽度
+   * @default
+   */
   width: number;
+  /**
+   * @description.en height
+   * @description.zh 高度
+   * @default
+   */
   height: number;
+  /**
+   * @description.en Outer container Style
+   * @description.zh 外层容器样式
+   * @default
+   */
   style?: StyleProp<ViewStyle>;
-  contentStyle?: StyleProp<ViewStyle>; // 当使用线性或者径向渐变时，里面的内容盒子
+  /**
+   * @description.en Content container Style
+   * @description.zh 内容容器样式
+   * @default
+   */
+  contentStyle?: StyleProp<ViewStyle>;
 }
 
 const Background: React.FC<IBackgroundProps> = ({
