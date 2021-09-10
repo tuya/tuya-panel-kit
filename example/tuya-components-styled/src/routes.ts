@@ -8,6 +8,7 @@ import DepictCard from './pages/show/depict-card';
 import DisplayCard from './pages/show/display-card';
 import IconCard from './pages/show/icon-card';
 import ListCard from './pages/enum/list-card';
+import IconBackground from './pages/show/icon-background';
 
 // 这里的路由href要和文档markdown的demo路径一致
 export const routes = [
@@ -42,6 +43,11 @@ export const routes = [
     name: Strings.getLang('icon_card'),
     href: '/show/icon-card',
     component: IconCard,
+  },
+  {
+    name: Strings.getLang('icon_background'),
+    href: '/show/icon-background',
+    component: IconBackground,
   },
   // number
   {

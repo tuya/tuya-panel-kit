@@ -3,5 +3,5 @@
 ## Usage
 
 ```jsx
-import { ClassicIconBackground } from 'tuya-panel-style-icon-background';
+import { IconBackground, Background } from 'tuya-panel-style-icon-background';
 ```
