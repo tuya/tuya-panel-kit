@@ -165,7 +165,6 @@ const ButtonCard: React.FC<IButtonCardProps> = ({
       </TouchableOpacity>
     );
   };
-
   return (
     <View
       style={[
@@ -193,7 +192,7 @@ const ButtonCard: React.FC<IButtonCardProps> = ({
           />
           <Text
             style={[
-              styles.titletextStyle,
+              styles.titleTextStyle,
               {
                 color: titleFontColor,
                 fontSize: titleFontSize,
@@ -206,11 +205,11 @@ const ButtonCard: React.FC<IButtonCardProps> = ({
           </Text>
         </View>
       )}
-      <View style={styles.contentBox}>
+      <View>
         {rangeData.map((rowData, rowIdx) => (
           /* eslint-disable */
           <View
-            style={[{ marginTop: rowIdx === 0 ? 0 : 14 }, styles.rowItem]}
+            style={[{ marginTop: rowIdx === 0 ? 0 : cx(14) }, styles.rowItem]}
             key={`row-${rowIdx}`}
           >
             {rowData.map((item, idx) => renderItem(item, idx))}
@@ -225,19 +224,15 @@ const ButtonCard: React.FC<IButtonCardProps> = ({
 ButtonCard.defaultProps = defaultProps;
 
 const styles = StyleSheet.create({
-  contentBox: {
-    flex: 1,
-  },
   titleBox: {
     alignItems: 'center',
     flexDirection: 'row',
     marginBottom: cx(20),
   },
-  titletextStyle: {
+  titleTextStyle: {
     marginLeft: cx(12),
   },
   rowItem: {
-    flex: 1,
     flexDirection: 'row',
   },
   buttonItem: {
