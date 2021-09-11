@@ -12,6 +12,7 @@ import IconBackground from './pages/basic/icon-background';
 import Button from './pages/basic/button';
 import EnumCard from './pages/enum/enum-card';
 import ButtonCard from './pages/enum/button-card';
+import SliderCard from './pages/number/slider-card';
 
 // 这里的路由href要和文档markdown的demo路径一致
 export const routes = [
@@ -68,6 +69,11 @@ export const routes = [
     name: Strings.getLang('step_card'),
     href: '/number/step-card',
     component: StepCard,
+  },
+  {
+    name: Strings.getLang('slider_card'),
+    href: '/number/slider-card',
+    component: SliderCard,
   },
   // enum
   {
