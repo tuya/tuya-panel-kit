@@ -21,6 +21,7 @@ export default {
     background: 'Background',
     button: 'Button',
     enum_card: 'EnumCard',
+    button_card: 'ButtonCard',
   },
   zh: {
     studio: 'Studio 风格',
@@ -44,5 +45,6 @@ export default {
     background: 'Background 背景',
     button: 'Button 按钮',
     enum_card: 'EnumCard 枚举型图标按钮卡片',
+    button_card: 'ButtonCard 枚举类型按钮卡片',
   },
 };

@@ -142,13 +142,7 @@ exports[`ButtonCard Classic 1`] = `
       工作模式
     </Text>
   </View>
-  <View
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
+  <View />
 </View>
 `;
 
@@ -209,13 +203,7 @@ exports[`ButtonCard Nordic 1`] = `
       工作
     </Text>
   </View>
-  <View
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  >
+  <View>
     <View
       style={
         Array [
@@ -223,7 +211,6 @@ exports[`ButtonCard Nordic 1`] = `
             "marginTop": 0,
           },
           Object {
-            "flex": 1,
             "flexDirection": "row",
           },
         ]
@@ -414,10 +401,9 @@ exports[`ButtonCard Nordic 1`] = `
       style={
         Array [
           Object {
-            "marginTop": 14,
+            "marginTop": 28,
           },
           Object {
-            "flex": 1,
             "flexDirection": "row",
           },
         ]
@@ -532,12 +518,6 @@ exports[`ButtonCard custom button render 1`] = `
     ]
   }
 >
-  <View
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
-  />
+  <View />
 </View>
 `;
