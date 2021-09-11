@@ -22,6 +22,7 @@ export default {
     button: 'Button',
     enum_card: 'EnumCard',
     button_card: 'ButtonCard',
+    slider_card: 'SliderCard',
   },
   zh: {
     studio: 'Studio 风格',
@@ -46,5 +47,6 @@ export default {
     button: 'Button 按钮',
     enum_card: 'EnumCard 枚举型图标按钮卡片',
     button_card: 'ButtonCard 枚举类型按钮卡片',
+    slider_card: 'SliderCard 滑动条卡片',
   },
 };

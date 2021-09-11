@@ -1,11 +1,23 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { I18N } from 'tuya-panel-kit';
 import TuyaRNSvgs from 'tuya-panel-kit/lib/components/iconfont/svg/defaultSvg';
-// import { ClassicButtonCard, NordicButtonCard } from 'tuya-panel-style-button-card';
 import { ClassicButtonCard } from 'tuya-panel-classic-kit';
 import { NordicButtonCard } from 'tuya-panel-nordic-kit';
 import { ClassicIconBackground } from 'tuya-panel-style-icon-background';
 import { ListView } from '#components';
+import Strings from '#i18n';
+
+const PrivateStrings = new I18N({
+  en: {
+    custom_button_render_method: 'Custom button rendering methods',
+    control_multiple_select: 'Controlled multiple selection',
+  },
+  zh: {
+    control_multiple_select: '受控制的多选',
+    custom_button_render_method: '自定义按钮渲染方法',
+  },
+});
 
 const list = [
   {
@@ -50,10 +62,10 @@ export default () => {
 
   return (
     <ListView
-      style={{ backgroundColor: '#f9f9f9', height: 3000 }}
+      style={{ backgroundColor: '#f9f9f9', height: 'auto' }}
       list={[
         {
-          title: 'Classic',
+          title: Strings.getLang('studio'),
           content: (
             <View>
               <ClassicButtonCard
@@ -63,7 +75,9 @@ export default () => {
                 list={list}
                 defaultActiveKeys={['1']}
               />
-              <Text style={{ marginTop: 20 }}>受控制的 多选：</Text>
+              <Text style={{ marginTop: 20, color: '#666' }}>
+                {PrivateStrings.getLang('control_multiple_select')}
+              </Text>
               <ClassicButtonCard
                 style={{ marginTop: 20 }}
                 title="工作模式"
@@ -87,7 +101,7 @@ export default () => {
           ),
         },
         {
-          title: 'Nordic',
+          title: Strings.getLang('nordic'),
           content: (
             <NordicButtonCard
               title="工作模式"
@@ -98,7 +112,7 @@ export default () => {
           ),
         },
         {
-          title: 'Custom button rendering methods',
+          title: PrivateStrings.getLang('custom_button_render_method'),
           content: (
             <NordicButtonCard
               title="工作模式"

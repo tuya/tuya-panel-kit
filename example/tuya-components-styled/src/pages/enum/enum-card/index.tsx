@@ -5,7 +5,7 @@ import { ClassicEnumCard } from 'tuya-panel-classic-kit';
 import { NordicEnumCard } from 'tuya-panel-nordic-kit';
 import { AcrylicEnumCard } from 'tuya-panel-acrylic-kit';
 import { ListView } from '#components';
-// import Strings from '#i18n';
+import Strings from '#i18n';
 
 const IMAGE =
   'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg==';
@@ -62,7 +62,7 @@ export default () => {
       style={{ backgroundColor: '#f9f9f9', minHeight: 200 }}
       list={[
         {
-          title: '经典风格',
+          title: Strings.getLang('studio'),
           content: (
             <View>
               <ClassicEnumCard
@@ -93,7 +93,7 @@ export default () => {
           ),
         },
         {
-          title: '北欧风格',
+          title: Strings.getLang('nordic'),
           content: (
             <View>
               <NordicEnumCard disabled title="工作模式" list={list} activeKey="0" />
@@ -109,7 +109,7 @@ export default () => {
           ),
         },
         {
-          title: '亚历克风格',
+          title: Strings.getLang('acrylic'),
           content: (
             <View>
               <AcrylicEnumCard title="工作模式" list={list} activeKey="0" />
