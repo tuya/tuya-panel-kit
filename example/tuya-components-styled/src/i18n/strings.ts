@@ -20,6 +20,7 @@ export default {
     background_gradient: 'Background gradient',
     background: 'Background',
     button: 'Button',
+    enum_card: 'EnumCard',
   },
   zh: {
     studio: 'Studio 风格',
@@ -42,5 +43,6 @@ export default {
     background_gradient: '背景渐变',
     background: 'Background 背景',
     button: 'Button 按钮',
+    enum_card: 'EnumCard 枚举型图标按钮卡片',
   },
 };

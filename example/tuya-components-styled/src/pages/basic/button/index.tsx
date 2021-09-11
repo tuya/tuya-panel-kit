@@ -43,7 +43,6 @@ export default () => {
                 onLongPress={() => console.log('long press')}
                 icon={TuyaRNSvgs.power}
                 text="开关"
-                iconColor="#158CFB"
               />
             </View>
           ),
