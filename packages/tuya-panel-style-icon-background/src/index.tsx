@@ -49,8 +49,8 @@ export interface IconBackgroundProps {
    */
   iconColor?: string;
   /**
-   * @description.en icon background color
-   * @description.zh 图标背景颜色
+   * @description.en icon background color, only rgb、rgba or hex
+   * @description.zh 图标背景颜色 只能设置 rgb、rgba 或者 hex
    * @default #158CFB
    */
   iconBgColor?: BackgroundType;
