@@ -3,7 +3,8 @@
     "baseUrl": "./",
     "paths": {
       "tuya-panel-kit": ["../tuya-panel-kit/lib"],
-      "tuya-panel-utils": ["../tuya-panel-utils/lib"]
+      "tuya-panel-utils": ["../tuya-panel-utils/lib"],
+      "tuya-panel-style-slider-card": ["../tuya-panel-style-slider-card/lib"]
     },
     "allowJs": true,
     "declaration": true,
