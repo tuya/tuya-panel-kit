@@ -1,7 +1,6 @@
 import React from 'react';
 import { ViewStyle, Image, StyleProp } from 'react-native';
 import { IconFont } from 'tuya-panel-kit';
-import { Utils } from 'tuya-panel-utils';
 import Background, { BackgroundType } from './background';
 
 export { default as Background } from './background';
@@ -74,13 +73,11 @@ export interface IconBackgroundProps {
   style?: StyleProp<ViewStyle>;
 }
 
-const { convertX: cx } = Utils.RatioUtils;
-
 const defaultProps = {
   icon: '',
-  iconBgSize: cx(50),
-  iconBgRadius: cx(50),
-  iconSize: cx(24),
+  iconBgSize: 50,
+  iconBgRadius: 50,
+  iconSize: 24,
   iconColor: '#fff',
   iconBgColor: '#158CFB',
   showIcon: true,

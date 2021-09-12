@@ -14,6 +14,7 @@ import EnumCard from './pages/enum/enum-card';
 import ButtonCard from './pages/enum/button-card';
 import SliderCard from './pages/number/slider-card';
 import EnumTabsButtonCard from './pages/enum/enum-tabs-button-card';
+import EnumSliderCard from './pages/enum/enum-slider-card';
 
 // 这里的路由href要和文档markdown的demo路径一致
 export const routes = [
@@ -96,5 +97,10 @@ export const routes = [
     name: Strings.getLang('enum_tabs_button_card'),
     href: '/enum/enum-tabs-button-card',
     component: EnumTabsButtonCard,
+  },
+  {
+    name: Strings.getLang('enum_slider_card'),
+    href: '/enum/enum-slider-card',
+    component: EnumSliderCard,
   },
 ];

@@ -24,6 +24,7 @@ export default {
     button_card: 'ButtonCard',
     slider_card: 'SliderCard',
     enum_tabs_button_card: 'EnumTabsButtonCard',
+    enum_slider_card: 'EnumSliderCard',
   },
   zh: {
     studio: 'Studio 风格',
@@ -50,5 +51,6 @@ export default {
     button_card: 'ButtonCard 枚举类型按钮卡片',
     slider_card: 'SliderCard 滑动条卡片',
     enum_tabs_button_card: 'EnumTabsButtonCard 枚举型选项按钮卡片',
+    enum_slider_card: 'EnumSliderCard 枚举行滑动条卡片',
   },
 };

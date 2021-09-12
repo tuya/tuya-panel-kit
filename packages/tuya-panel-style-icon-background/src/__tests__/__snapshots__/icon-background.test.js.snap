@@ -168,18 +168,18 @@ exports[`ClassicIconBackground icon and background 1`] = `
     Array [
       Object {
         "backgroundColor": "#158CFB",
-        "height": 100,
-        "width": 100,
+        "height": 50,
+        "width": 50,
       },
       Array [
         Object {
           "alignItems": "center",
           "borderRadius": 5,
           "display": "flex",
-          "height": 100,
+          "height": 50,
           "justifyContent": "center",
           "overflow": "hidden",
-          "width": 100,
+          "width": 50,
         },
         Object {},
       ],
@@ -193,8 +193,8 @@ exports[`ClassicIconBackground icon and background 1`] = `
           "flexDirection": "row",
         },
         Object {
-          "height": 48,
-          "width": 48,
+          "height": 24,
+          "width": 24,
         },
         false,
         null,
@@ -215,8 +215,8 @@ exports[`ClassicIconBackground icon and background 1`] = `
           false,
           Object {
             "flex": 0,
-            "height": 48,
-            "width": 48,
+            "height": 24,
+            "width": 24,
           },
         ]
       }
@@ -282,18 +282,18 @@ exports[`ClassicIconBackground image 1`] = `
     Array [
       Object {
         "backgroundColor": "#158CFB",
-        "height": 100,
-        "width": 100,
+        "height": 50,
+        "width": 50,
       },
       Array [
         Object {
           "alignItems": "center",
-          "borderRadius": 100,
+          "borderRadius": 50,
           "display": "flex",
-          "height": 100,
+          "height": 50,
           "justifyContent": "center",
           "overflow": "hidden",
-          "width": 100,
+          "width": 50,
         },
         Object {},
       ],
@@ -309,8 +309,8 @@ exports[`ClassicIconBackground image 1`] = `
     style={
       Object {
         "borderRadius": 0,
-        "height": 48,
-        "width": 48,
+        "height": 24,
+        "width": 24,
       }
     }
   />
@@ -327,8 +327,8 @@ exports[`ClassicIconBackground only icon 1`] = `
         "flexDirection": "row",
       },
       Object {
-        "height": 48,
-        "width": 48,
+        "height": 24,
+        "width": 24,
       },
       false,
       null,
@@ -349,8 +349,8 @@ exports[`ClassicIconBackground only icon 1`] = `
         false,
         Object {
           "flex": 0,
-          "height": 48,
-          "width": 48,
+          "height": 24,
+          "width": 24,
         },
       ]
     }

@@ -1,39 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { AcrylicSliderCard, SliderCardComponentProps } from 'tuya-panel-style-slider-card';
-import { Utils } from 'tuya-panel-utils';
+import { AcrylicSliderCard } from 'tuya-panel-style-slider-card';
+import { IEnumSliderCardProps, defaultProps } from './interface';
 
-const { convertX: cx } = Utils.RatioUtils;
-
-const defaultProps = {
-  sliderDotSize: cx(4),
-  sliderDotColor: 'rgba(255, 255, 255, 0.7)',
-  activeSliderDotColor: 'rgba(255, 255, 255, 0.4)',
-  canTouchTrack: true,
-};
-
-type EnumList = {
-  label: string;
-  key: string;
-};
-
-type omitProps =
-  | 'minimumValue'
-  | 'stepValue'
-  | 'maximumValue'
-  | 'handSlidingComplete'
-  | 'handValueChange';
-
-type Props = {
-  data: Array<EnumList>;
-  activeKey?: string;
-  sliderDotSize?: number;
-  sliderDotColor?: string; // 滑动块右边圆点的color
-  activeSliderDotColor?: string; // 滑动块左边圆点的color
-  handSlidingComplete?: (key: string, index: number) => void;
-  handValueChange?: (key: string, index: number) => void;
-} & Omit<SliderCardComponentProps, omitProps>;
-
-const AcrylicComponent: React.FC<Props> = props => {
+const AcrylicComponent: React.FC<IEnumSliderCardProps> = props => {
   const {
     data,
     sliderDotSize,
