@@ -7,10 +7,10 @@ exports[`EnumTabsCard Classic 1`] = `
       Object {
         "backgroundColor": "#fff",
         "borderRadius": 28,
-        "paddingBottom": 22,
-        "paddingLeft": 20,
-        "paddingRight": 20,
-        "paddingTop": 22,
+        "paddingBottom": 44,
+        "paddingLeft": 40,
+        "paddingRight": 40,
+        "paddingTop": 44,
       },
       Object {},
     ]
@@ -157,7 +157,7 @@ exports[`EnumTabsCard Classic 1`] = `
         Object {
           "alignItems": "center",
           "flexDirection": "row",
-          "marginLeft": 10,
+          "marginLeft": 20,
         }
       }
     >
@@ -183,7 +183,7 @@ exports[`EnumTabsCard Classic 1`] = `
                   "color": "#158CFB",
                   "fontSize": 30,
                   "fontWeight": "normal",
-                  "marginRight": 5,
+                  "marginRight": 10,
                 },
               ],
             ],
@@ -216,7 +216,7 @@ exports[`EnumTabsCard Classic 1`] = `
                   "color": "#158CFB",
                   "fontSize": 30,
                   "fontWeight": "normal",
-                  "marginRight": 5,
+                  "marginRight": 10,
                 },
               ],
             ],
@@ -248,7 +248,7 @@ exports[`EnumTabsCard Classic 1`] = `
             "backgroundColor": "#E3E9EE",
           },
           Object {
-            "paddingHorizontal": 8,
+            "paddingHorizontal": 16,
           },
         ]
       }
@@ -540,10 +540,10 @@ exports[`EnumTabsCard Classic set props 1`] = `
       Object {
         "backgroundColor": "#fff",
         "borderRadius": 28,
-        "paddingBottom": 22,
-        "paddingLeft": 20,
-        "paddingRight": 20,
-        "paddingTop": 22,
+        "paddingBottom": 44,
+        "paddingLeft": 40,
+        "paddingRight": 40,
+        "paddingTop": 44,
       },
       Object {},
     ]
@@ -617,7 +617,7 @@ exports[`EnumTabsCard Classic set props 1`] = `
         Object {
           "alignItems": "center",
           "flexDirection": "row",
-          "marginLeft": 10,
+          "marginLeft": 20,
         }
       }
     >
@@ -643,7 +643,7 @@ exports[`EnumTabsCard Classic set props 1`] = `
                   "color": "#158CFB",
                   "fontSize": 30,
                   "fontWeight": "normal",
-                  "marginRight": 5,
+                  "marginRight": 10,
                 },
               ],
             ],
@@ -676,7 +676,7 @@ exports[`EnumTabsCard Classic set props 1`] = `
                   "color": "#158CFB",
                   "fontSize": 30,
                   "fontWeight": "normal",
-                  "marginRight": 5,
+                  "marginRight": 10,
                 },
               ],
             ],
@@ -708,7 +708,7 @@ exports[`EnumTabsCard Classic set props 1`] = `
             "backgroundColor": "#E3E9EE",
           },
           Object {
-            "paddingHorizontal": 8,
+            "paddingHorizontal": 16,
           },
         ]
       }
