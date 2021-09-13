@@ -75,11 +75,8 @@ export default () => {
                 list={list}
                 defaultActiveKeys={['1']}
               />
-              <Text style={{ marginTop: 20, color: '#666' }}>
-                {PrivateStrings.getLang('control_multiple_select')}
-              </Text>
+              <Text style={styles.title}>{PrivateStrings.getLang('control_multiple_select')}</Text>
               <ClassicButtonCard
-                style={{ marginTop: 20 }}
                 title="工作模式"
                 icon={TuyaRNSvgs.power}
                 iconSize={14}
@@ -103,27 +100,27 @@ export default () => {
         {
           title: Strings.getLang('nordic'),
           content: (
-            <NordicButtonCard
-              title="工作模式"
-              showIconBg={false}
-              icon={TuyaRNSvgs.power}
-              list={list}
-            />
-          ),
-        },
-        {
-          title: PrivateStrings.getLang('custom_button_render_method'),
-          content: (
-            <NordicButtonCard
-              title="工作模式"
-              showIconBg={false}
-              icon={TuyaRNSvgs.power}
-              list={list1}
-              renderButtonItem={renderButtonItem}
-              rowCount={4}
-              showTitle={false}
-              backgroundColor="rgba(255, 255, 255, 0)"
-            />
+            <View>
+              <NordicButtonCard
+                title="工作模式"
+                showIconBg={false}
+                icon={TuyaRNSvgs.power}
+                list={list}
+              />
+              <Text style={styles.title}>
+                {PrivateStrings.getLang('custom_button_render_method')}
+              </Text>
+              <NordicButtonCard
+                title="工作模式"
+                showIconBg={false}
+                icon={TuyaRNSvgs.power}
+                list={list1}
+                renderButtonItem={renderButtonItem}
+                rowCount={4}
+                showTitle={false}
+                backgroundColor="rgba(255, 255, 255, 0)"
+              />
+            </View>
           ),
         },
       ]}
@@ -139,4 +136,5 @@ const styles = StyleSheet.create({
     height: 98,
     borderRadius: 98,
   },
+  title: { marginTop: 20, marginBottom: 20, color: '#333' },
 });
