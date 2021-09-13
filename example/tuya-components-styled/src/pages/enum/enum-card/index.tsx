@@ -59,31 +59,35 @@ export default () => {
 
   return (
     <ListView
-      style={{ backgroundColor: '#f9f9f9', minHeight: 200 }}
+      style={{ backgroundColor: '#f9f9f9', height: 'auto' }}
       list={[
         {
           title: Strings.getLang('studio'),
           content: (
             <View>
               <ClassicEnumCard
+                width={290}
                 title="工作模式"
-                list={list}
+                data={list}
+                // data={[]}
                 activeKey={activeKey1}
                 onActiveKeyChange={onActiveKeyChange}
               />
               <ClassicEnumCard
+                padding={[20, 20, 20, 20]}
                 style={{ marginTop: 20 }}
                 title="工作模式"
                 showTitle={false}
-                list={list.slice(0, 4)}
+                data={list.slice(0, 4)}
                 defaultActiveKey="1"
                 showIconBg={false}
                 activeIconColor="#ff6700"
                 activeTextColor="#ff6700"
               />
               <ClassicEnumCard
+                pageCount={3}
                 style={{ marginTop: 20 }}
-                list={list}
+                data={list}
                 defaultActiveKey="1"
                 showIconBg={false}
                 activeIconColor="#ff6700"
@@ -96,13 +100,13 @@ export default () => {
           title: Strings.getLang('nordic'),
           content: (
             <View>
-              <NordicEnumCard disabled title="工作模式" list={list} activeKey="0" />
+              <NordicEnumCard disabled title="工作模式" data={list} activeKey="0" />
               <NordicEnumCard
                 disabled
                 style={{ marginTop: 20 }}
                 title="传入图片"
                 showTitle={false}
-                list={list1.slice(0, 4)}
+                data={list1.slice(0, 4)}
                 defaultActiveKey="1"
               />
             </View>
@@ -112,12 +116,12 @@ export default () => {
           title: Strings.getLang('acrylic'),
           content: (
             <View>
-              <AcrylicEnumCard title="工作模式" list={list} activeKey="0" />
+              <AcrylicEnumCard title="工作模式" data={list} activeKey="0" />
               <AcrylicEnumCard
                 style={{ marginTop: 20 }}
                 title="传入图片"
                 showTitle={false}
-                list={list1.slice(0, 4)}
+                data={list1.slice(0, 4)}
                 defaultActiveKey="1"
               />
             </View>

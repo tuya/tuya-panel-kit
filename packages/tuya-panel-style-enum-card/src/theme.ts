@@ -4,7 +4,7 @@ import { IEnumCardProps } from './interface';
 const { convertX: cx } = Utils.RatioUtils;
 
 export const NordicDefaultProps: Partial<IEnumCardProps> = {
-  padding: [24, 20, 24, 20],
+  padding: [cx(24), cx(20), cx(10), cx(20)],
   iconBgSize: cx(52),
   iconBgRadius: cx(12),
   iconBgColor: 'rgba(16, 130, 254, 0.1)',
@@ -18,13 +18,13 @@ export const NordicDefaultProps: Partial<IEnumCardProps> = {
   textStyle: {
     marginTop: cx(11),
   },
-  carouselPageContent: {
-    paddingBottom: cx(12),
+  dotWrapperStyle: {
+    marginTop: cx(12),
   },
 };
 
 export const AcrylicDefaultProps: Partial<IEnumCardProps> = {
-  padding: [20, 20, 20, 20],
+  padding: [cx(20), cx(20), cx(10), cx(20)],
   titleColor: 'rgba(0, 0, 0, 0.87)',
   titleFontSize: cx(16),
   titleFontWeight: '500',
@@ -57,7 +57,7 @@ export const AcrylicDefaultProps: Partial<IEnumCardProps> = {
   titleContentStyle: {
     marginBottom: cx(20),
   },
-  carouselPageContent: {
-    paddingBottom: cx(16),
+  dotWrapperStyle: {
+    marginTop: cx(16),
   },
 };
