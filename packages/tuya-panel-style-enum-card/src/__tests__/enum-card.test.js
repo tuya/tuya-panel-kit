@@ -55,7 +55,7 @@ describe('EnumCard', () => {
     const wrap = mount(<ClassicEnumCard
       style={{ marginTop: 20 }}
       title="工作模式"
-      list={list}
+      data={list}
       defaultActiveKey="5"
       activeIconColor="#ff6700"
       activeTextColor="#ff6700"
@@ -71,54 +71,21 @@ describe('EnumCard', () => {
       style={{ marginTop: 20 }}
       title="传入图片"
       showTitle={false}
-      list={list1.slice(0, 4)}
+      data={list1.slice(0, 4)}
       defaultActiveKey="1"
     />).toJSON();
     expect(warp).toMatchSnapshot();
   });
 
   it('AcrylicEnumCard', () => {
-    const warp = renderer.create(<AcrylicEnumCard title="工作模式" list={list}/>).toJSON();
+    const warp = renderer.create(<AcrylicEnumCard title="工作模式" data={list}/>).toJSON();
     expect(warp).toMatchSnapshot();
-  });
-
-  it('in android carousel', () => {
-    jest.mock('Platform', () => {
-      const Platform = require.requireActual('Platform');
-      Platform.OS = 'android';
-      return Platform
-    });
-    const wrap = mount(<ClassicEnumCard
-      style={{ marginTop: 20 }}
-      title="工作模式"
-      list={list}
-      defaultActiveKey="1"
-      showText={false}
-      iconBgSize={40}
-    />);
-    expect(wrap.find('Carousel').at(0).props().style.height).toBe(80);  
-    // expect(wrap.find('Carousel').at(0).props().plat).toBe('android');  
-
-    expect(wrap).toMatchSnapshot();
-
-    const wrap1 = mount(<ClassicEnumCard
-      style={{ marginTop: 20 }}
-      title="工作模式"
-      list={list}
-      defaultActiveKey="5"
-      iconBgSize={40}
-      showIconBg={false}
-      iconSize={20}
-      textStyle={{ marginTop: 10, fontSize: 20 }}
-    />);
-    expect(wrap1.find('Carousel').at(0).props().style.height).toBe(90);
-    expect(wrap1).toMatchSnapshot();
   });
 
   it('hand key change controlled', () => {
     let activeKey = '0';
     const onActiveKeyChange = key => { activeKey = key };
-    const wrap = mount(<ClassicEnumCard list={list} activeKey={activeKey} activeIconBgColor="#888999" onActiveKeyChange={onActiveKeyChange} />);
+    const wrap = mount(<ClassicEnumCard data={list} activeKey={activeKey} activeIconBgColor="#888999" onActiveKeyChange={onActiveKeyChange} />);
     const touchInstance = wrap
       .find('TouchableOpacity')
       .at(1);
@@ -128,7 +95,7 @@ describe('EnumCard', () => {
 
   it('hand key change controlled and no onActiveKeyChange', () => {
     let activeKey = '0';
-    const wrap = mount(<ClassicEnumCard list={list} activeKey={activeKey} activeIconBgColor="#888999" />);
+    const wrap = mount(<ClassicEnumCard data={list} activeKey={activeKey} activeIconBgColor="#888999" />);
     const touchInstance = wrap
       .find('TouchableOpacity')
       .at(1);
@@ -140,7 +107,7 @@ describe('EnumCard', () => {
     const iconBgColor = "#222333";
     const activeIconBgColor = "#888999";
     const wrap = mount(<ClassicEnumCard 
-      list={list.slice(0,3)} 
+      data={list.slice(0,3)} 
       // defaultActiveKey="0" 
       iconBgColor={iconBgColor} 
       activeIconBgColor={activeIconBgColor} />);
