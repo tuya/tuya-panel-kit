@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Utils } from 'tuya-panel-utils';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, TouchableOpacity } from 'react-native';
+import { TYText } from 'tuya-panel-kit';
 import { ClassicIconBackground } from 'tuya-panel-style-icon-background';
 import { defaultProps, IButtonCardProps, RangeItem } from './interface';
 import { NordicDefaultProps } from './theme';
@@ -148,7 +149,7 @@ const ButtonCard: React.FC<IButtonCardProps> = ({
               styles.buttonItem,
             ]}
           >
-            <Text
+            <TYText
               style={[
                 {
                   color: realTextFontColor,
@@ -159,7 +160,7 @@ const ButtonCard: React.FC<IButtonCardProps> = ({
               ]}
             >
               {itemData.label}
-            </Text>
+            </TYText>
           </View>
         )}
       </TouchableOpacity>
@@ -190,7 +191,7 @@ const ButtonCard: React.FC<IButtonCardProps> = ({
             iconBgRadius={iconBgRadius}
             showIconBg={showIconBg}
           />
-          <Text
+          <TYText
             style={[
               styles.titleTextStyle,
               {
@@ -202,7 +203,7 @@ const ButtonCard: React.FC<IButtonCardProps> = ({
             ]}
           >
             {title}
-          </Text>
+          </TYText>
         </View>
       )}
       <View>
