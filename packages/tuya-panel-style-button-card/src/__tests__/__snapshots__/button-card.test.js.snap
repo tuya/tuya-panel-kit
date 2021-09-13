@@ -117,8 +117,11 @@ exports[`ButtonCard Classic 1`] = `
     </View>
     <Text
       accessible={true}
-      allowFontScaling={true}
+      align={null}
+      allowFontScaling={false}
+      color={null}
       ellipsizeMode="tail"
+      size={30}
       style={
         Array [
           false,
@@ -126,18 +129,27 @@ exports[`ButtonCard Classic 1`] = `
             false,
             Array [
               Object {
-                "marginLeft": 24,
-              },
-              Object {
-                "color": "#3d3d3d",
+                "backgroundColor": "transparent",
+                "color": "#333",
                 "fontSize": 30,
-                "fontWeight": "normal",
               },
-              Object {},
+              Array [
+                Object {
+                  "marginLeft": 24,
+                },
+                Object {
+                  "color": "#3d3d3d",
+                  "fontSize": 30,
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ],
             ],
           ],
         ]
       }
+      type={null}
+      weight={null}
     >
       工作模式
     </Text>
@@ -176,8 +188,11 @@ exports[`ButtonCard Nordic 1`] = `
   >
     <Text
       accessible={true}
-      allowFontScaling={true}
+      align={null}
+      allowFontScaling={false}
+      color={null}
       ellipsizeMode="tail"
+      size={30}
       style={
         Array [
           false,
@@ -185,20 +200,29 @@ exports[`ButtonCard Nordic 1`] = `
             false,
             Array [
               Object {
-                "marginLeft": 24,
-              },
-              Object {
-                "color": "rgba(0, 0, 0, 0.9)",
+                "backgroundColor": "transparent",
+                "color": "#333",
                 "fontSize": 30,
-                "fontWeight": "normal",
               },
-              Object {
-                "marginLeft": 16,
-              },
+              Array [
+                Object {
+                  "marginLeft": 24,
+                },
+                Object {
+                  "color": "rgba(0, 0, 0, 0.9)",
+                  "fontSize": 30,
+                  "fontWeight": "normal",
+                },
+                Object {
+                  "marginLeft": 16,
+                },
+              ],
             ],
           ],
         ]
       }
+      type={null}
+      weight={null}
     >
       工作
     </Text>
@@ -253,8 +277,11 @@ exports[`ButtonCard Nordic 1`] = `
         >
           <Text
             accessible={true}
-            allowFontScaling={true}
+            align={null}
+            allowFontScaling={false}
+            color={null}
             ellipsizeMode="tail"
+            size={28}
             style={
               Array [
                 false,
@@ -262,15 +289,24 @@ exports[`ButtonCard Nordic 1`] = `
                   false,
                   Array [
                     Object {
-                      "color": "rgba(0, 0, 0, 0.5)",
+                      "backgroundColor": "transparent",
+                      "color": "#333",
                       "fontSize": 28,
-                      "fontWeight": "normal",
                     },
-                    Object {},
+                    Array [
+                      Object {
+                        "color": "rgba(0, 0, 0, 0.5)",
+                        "fontSize": 28,
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ],
                   ],
                 ],
               ]
             }
+            type={null}
+            weight={null}
           >
             按钮1
           </Text>
@@ -313,8 +349,11 @@ exports[`ButtonCard Nordic 1`] = `
         >
           <Text
             accessible={true}
-            allowFontScaling={true}
+            align={null}
+            allowFontScaling={false}
+            color={null}
             ellipsizeMode="tail"
+            size={28}
             style={
               Array [
                 false,
@@ -322,15 +361,24 @@ exports[`ButtonCard Nordic 1`] = `
                   false,
                   Array [
                     Object {
-                      "color": "rgba(0, 0, 0, 0.5)",
+                      "backgroundColor": "transparent",
+                      "color": "#333",
                       "fontSize": 28,
-                      "fontWeight": "normal",
                     },
-                    Object {},
+                    Array [
+                      Object {
+                        "color": "rgba(0, 0, 0, 0.5)",
+                        "fontSize": 28,
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ],
                   ],
                 ],
               ]
             }
+            type={null}
+            weight={null}
           >
             按钮2
           </Text>
@@ -373,8 +421,11 @@ exports[`ButtonCard Nordic 1`] = `
         >
           <Text
             accessible={true}
-            allowFontScaling={true}
+            align={null}
+            allowFontScaling={false}
+            color={null}
             ellipsizeMode="tail"
+            size={28}
             style={
               Array [
                 false,
@@ -382,15 +433,24 @@ exports[`ButtonCard Nordic 1`] = `
                   false,
                   Array [
                     Object {
-                      "color": "rgba(0, 0, 0, 0.5)",
+                      "backgroundColor": "transparent",
+                      "color": "#333",
                       "fontSize": 28,
-                      "fontWeight": "normal",
                     },
-                    Object {},
+                    Array [
+                      Object {
+                        "color": "rgba(0, 0, 0, 0.5)",
+                        "fontSize": 28,
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ],
                   ],
                 ],
               ]
             }
+            type={null}
+            weight={null}
           >
             按钮3
           </Text>
@@ -446,8 +506,11 @@ exports[`ButtonCard Nordic 1`] = `
         >
           <Text
             accessible={true}
-            allowFontScaling={true}
+            align={null}
+            allowFontScaling={false}
+            color={null}
             ellipsizeMode="tail"
+            size={28}
             style={
               Array [
                 false,
@@ -455,15 +518,24 @@ exports[`ButtonCard Nordic 1`] = `
                   false,
                   Array [
                     Object {
-                      "color": "rgba(0, 0, 0, 0.5)",
+                      "backgroundColor": "transparent",
+                      "color": "#333",
                       "fontSize": 28,
-                      "fontWeight": "normal",
                     },
-                    Object {},
+                    Array [
+                      Object {
+                        "color": "rgba(0, 0, 0, 0.5)",
+                        "fontSize": 28,
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ],
                   ],
                 ],
               ]
             }
+            type={null}
+            weight={null}
           >
             按钮4
           </Text>
