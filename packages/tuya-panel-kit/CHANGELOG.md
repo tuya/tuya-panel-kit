@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.7.9](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.7.8...tuya-panel-kit@4.7.9) (2021-09-14)
+
+
+### Features
+
+* **Popup.numberSelector:** add valueStyle ([#139](https://github.com/tuya/tuya-panel-kit/issues/139)) ([af05004](https://github.com/tuya/tuya-panel-kit/commit/af05004901f05a083aee2f0915a926cec993e910))
+
+
+
+
+
 ## [4.7.8](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.7.7...tuya-panel-kit@4.7.8) (2021-09-09)
 
 
