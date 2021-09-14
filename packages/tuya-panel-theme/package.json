@@ -1,6 +1,6 @@
 {
   "name": "tuya-panel-theme",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "tuya-panel-theme",
   "author": "ZengBeauty<2497752603@qq.com>",
   "homepage": "https://github.com/tuya/tuya-panel-kit#readme",
@@ -30,7 +30,7 @@
     "url": "https://github.com/tuya/tuya-panel-kit/issues"
   },
   "dependencies": {
-    "tuya-panel-utils": "^0.1.1"
+    "tuya-panel-utils": "^0.1.2"
   },
   "peerDependencies": {
     "react": "16.8.3",
