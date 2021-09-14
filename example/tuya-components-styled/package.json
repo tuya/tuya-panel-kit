@@ -9,7 +9,7 @@
   "version": "1.0.1",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "prestart:umi": "yalc publish ../../packages/tuya-panel-kit && yalc publish ../../packages/tuya-panel-utils && yalc publish ../../packages/tuya-panel-theme && yalc update",
+    "prestart:umi": "sh scripts/yalc.sh",
     "start:umi": "cross-env DEV_MODE=umi umi dev",
     "build:umi": "cross-env DEV_MODE=umi umi build",
     "lint": "prettier --write '**/*.{js,jsx,ts,tsx}'",
@@ -57,9 +57,9 @@
     "rxjs-compat": "^6.3.1",
     "style-equal": "^1.0.0",
     "styled-components": "3.4.10",
-    "tuya-panel-kit": "link:.yalc/tuya-panel-kit",
     "tuya-panel-acrylic-kit": "^0.0.3",
     "tuya-panel-classic-kit": "^0.0.3",
+    "tuya-panel-kit": "link:.yalc/tuya-panel-kit",
     "tuya-panel-nordic-kit": "^0.0.3",
     "tuya-panel-theme": "link:.yalc/tuya-panel-theme",
     "tuya-panel-utils": "link:.yalc/tuya-panel-utils"
