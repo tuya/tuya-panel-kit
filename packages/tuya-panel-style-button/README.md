@@ -5,5 +5,5 @@ Stylized component - Button
 ## Usage
 
 ```jsx
-import { ClassicButton, NordicButton, AcrylicButton, PaintButton } from 'tuya-panel-style-button';
+import { ClassicButton, NordicButton, AcrylicButton } from 'tuya-panel-style-button';
 ```

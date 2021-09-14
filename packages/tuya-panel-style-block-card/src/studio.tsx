@@ -45,7 +45,6 @@ const StudioBlock: React.FC<IStudioCardProps> = ({
           justifyContent: 'space-around',
           flexDirection: 'row',
           flex: 1,
-          marginBottom: cx(35),
         }}
       >
         <ClassicIconBackground
@@ -72,7 +71,7 @@ const StudioBlock: React.FC<IStudioCardProps> = ({
         weight={fontWeight}
         color={fontColor}
         size={fontSize}
-        style={[{ lineHeight: cx(24) }, textStyle]}
+        style={[{ lineHeight: cx(24), marginTop: cx(35) }, textStyle]}
       />
     </View>
   );

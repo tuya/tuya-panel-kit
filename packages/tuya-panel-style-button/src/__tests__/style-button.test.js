@@ -32,13 +32,55 @@ describe('StyleButton', () => {
     expect(wrapper).toMatchSnapshot();
   });
   it('PaintButton', () => {
-    const wrapper = mount(<PaintButton icon={icon} onLongPress={() => console.log('hh')} />);
+    let flag1;
+    const wrapper = mount(<PaintButton icon={icon} onPress={() => (flag1 = 'onPress')} />);
+    const touchable = wrapper
+      .findWhere(c => c.name() === 'TouchableOpacity' && !!c.prop('onPressIn'))
+      .at(0);
+
+    touchable.props().onPress();
+    expect(flag1).toBe('onPress');
+  });
+  it('LongPress', done => {
+    let flag = '1',
+      flag1 = '1';
+    // 长按
+    const wrapper = mount(
+      <ClassicButton
+        onLongPress={() => (flag = 'flag')}
+        milliseconds={100}
+        icon={icon}
+        text="开关"
+        iconColor="#158CFB"
+      />
+    );
     const touchable = wrapper
       .findWhere(c => c.name() === 'TouchableOpacity' && !!c.prop('onPressIn'))
       .at(0);
 
     touchable.props().onPressIn();
-    touchable.props().onPressOut();
-    expect(wrapper).toMatchSnapshot();
+    setTimeout(() => {
+      touchable.props().onPressOut();
+      expect(flag).toBe('flag');
+      done();
+    }, 110);
+
+    // 长按不够时间
+    const wrapper1 = mount(
+      <ClassicButton
+        onLongPress={() => (flag1 = 'flag1')}
+        milliseconds={100}
+        icon={icon}
+        text="开关"
+        iconColor="#158CFB"
+      />
+    );
+    const touchable1 = wrapper1
+      .findWhere(c => c.name() === 'TouchableOpacity' && !!c.prop('onPressIn'))
+      .at(0);
+    touchable1.props().onPressIn();
+    touchable1.props().onPressIn();
+    touchable1.props().onPressOut();
+    expect(flag1).toBe('1');
   });
 });

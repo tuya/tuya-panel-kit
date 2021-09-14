@@ -9,4 +9,4 @@ export { ClassicIconBackground } from 'tuya-panel-style-icon-background';
 export { ClassicIconBlockCard } from 'tuya-panel-style-icon-card';
 export { ClassicSliderCard, ClassicLargeSliderCard } from 'tuya-panel-style-slider-card';
 export { ClassicStepCard } from 'tuya-panel-style-step-card';
-export { ClassicSwitchCard } from 'tuya-panel-style-switch-card';
+export { ClassicSwitchCard, ClassicItemCard, ClassicArrowCard } from 'tuya-panel-style-switch-card';

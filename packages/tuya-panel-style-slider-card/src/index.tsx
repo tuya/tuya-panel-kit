@@ -66,7 +66,6 @@ const SliderCard: React.FC<ISliderProps> = ({
   bottomPromptTextFontWeight,
   // slider两侧的图标
   bothSideIcons,
-  bothSideIconIsImage,
   bothSideIconSize,
   bothSideIconColor,
   canTouchTrack,
@@ -182,7 +181,7 @@ const SliderCard: React.FC<ISliderProps> = ({
               <View style={styles.valueBox}>
                 {/* eslint-disable */}
                 {/* @ts-ignore */}
-                <TYText style={{ color: valueFontColor, marginRight: 5 }}>·</TYText>
+                <TYText style={{ color: valueFontColor, marginRight: cx(5) }}>·</TYText>
                 {renderViewValue()}
               </View>
             </React.Fragment>
@@ -194,8 +193,8 @@ const SliderCard: React.FC<ISliderProps> = ({
           {bothSideIcons && Array.isArray(bothSideIcons) && (
             <View style={{marginRight: cx(8)}}>
               <ClassicIconBackground
-                icon={bothSideIconIsImage ? '' : bothSideIcons[0]}
-                image={bothSideIcons[0]}
+                icon={bothSideIcons[0].isImage ? '' : bothSideIcons[0].icon}
+                image={bothSideIcons[0].icon}
                 iconSize={bothSideIconSize}
                 iconColor={bothSideIconColor}
                 showIconBg={false}
@@ -235,8 +234,8 @@ const SliderCard: React.FC<ISliderProps> = ({
           {bothSideIcons && Array.isArray(bothSideIcons) && (
             <View style={{marginLeft: cx(8)}}>
               <ClassicIconBackground
-                icon={bothSideIconIsImage ? '' : bothSideIcons[1]}
-                image={bothSideIcons[1]}
+                icon={bothSideIcons[1].isImage ? '' : bothSideIcons[1].icon}
+                image={bothSideIcons[1].icon}
                 iconSize={bothSideIconSize}
                 iconColor={bothSideIconColor}
                 showIconBg={false}
@@ -266,10 +265,10 @@ const styles = StyleSheet.create({
   valueBox: {
     alignItems: 'center',
     flexDirection: 'row',
-    marginLeft: 10,
+    marginLeft: cx(10),
   },
   bottomPromptTextsBox: {
-    marginTop: 9,
+    marginTop: cx(9),
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -281,13 +280,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   sliderBox: {
-    flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
   },
 });
 
-export const ClassicSliderCard = props => <SliderCard {...props} />;
+export const ClassicSliderCard: React.FC<ISliderProps>  = props => <SliderCard {...props} />;
 
 export const ClassicLargeSliderCard: React.FC<ISliderProps> = props => (
   <SliderCard {...classicLargeSliderProps} {...props} />

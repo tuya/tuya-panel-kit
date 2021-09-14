@@ -98,7 +98,7 @@ const EnumTabsButtonCard: React.FC<IEnumTabsButtonCardProps> = ({
     onChange && onChange(item.key, item);
   };
 
-  const offset = (grooveHeight - thumbHeight) / 2;
+  const offset = Math.floor((grooveHeight - thumbHeight) / 2);
   return (
     <View
       style={[
@@ -146,7 +146,7 @@ const EnumTabsButtonCard: React.FC<IEnumTabsButtonCardProps> = ({
             <TYText
               style={{
                 color: valueFontColor,
-                marginRight: 5,
+                marginRight: cx(5),
                 fontSize: valueFontSize,
                 fontWeight: valueFontWeight,
               }}
@@ -156,7 +156,7 @@ const EnumTabsButtonCard: React.FC<IEnumTabsButtonCardProps> = ({
             <TYText
               style={{
                 color: valueFontColor,
-                marginRight: 5,
+                marginRight: cx(5),
                 fontSize: valueFontSize,
                 fontWeight: valueFontWeight,
               }}
@@ -171,8 +171,8 @@ const EnumTabsButtonCard: React.FC<IEnumTabsButtonCardProps> = ({
           type="radioCircle"
           tabs={tabRadiosCircle}
           activeColor={thumbBgColor}
-          tabStyle={{ width: 3, height: 3, overflow: 'hidden' }}
-          gutter={offset}
+          tabStyle={{ width: cx(3), height: cx(3), overflow: 'hidden' }}
+          gutter={cx(offset)}
           style={{ backgroundColor: grooveBgColor }}
           activeKey={_activeKey}
         />
@@ -189,7 +189,7 @@ const styles = StyleSheet.create({
   valueBox: {
     alignItems: 'center',
     flexDirection: 'row',
-    marginLeft: 10,
+    marginLeft: cx(10),
   },
 });
 

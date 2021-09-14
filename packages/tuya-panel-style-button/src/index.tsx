@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Utils } from 'tuya-panel-utils';
 import { TouchableOpacity, View, StyleSheet } from 'react-native';
-import { IconFont, TYText } from 'tuya-panel-kit';
+import { TYText } from 'tuya-panel-kit';
+import { ClassicIconBackground } from 'tuya-panel-style-icon-background';
 import { IButtonProps, IDefaultProps } from './interface';
 import { NordicDefaultProps, AcrylicDefaultProps, PaintDefaultProps } from './theme';
 
@@ -34,45 +35,39 @@ const StyleButton: React.FC<IButtonProps> = ({
   showIcon,
   showIconBg,
 }) => {
-  let timer;
-
+  const timer = useRef(null);
+  const prevPressTime = useRef(0);
   const _handlePressIn = () => {
     if (typeof onLongPress === 'function') {
-      onLongPress && onLongPress();
-      timer && clearInterval(timer);
-      timer = setInterval(() => {
+      timer.current && clearTimeout(timer.current);
+      prevPressTime.current = new Date().getTime();
+      timer.current = setTimeout(() => {
         onLongPress && onLongPress();
       }, milliseconds);
     }
   };
 
   const _handlePressOut = () => {
-    timer && clearInterval(timer);
-  };
-
-  const iconBgDefault = {
-    width: iconBgSize,
-    height: iconBgSize,
-    borderRadius: iconBgRadius,
+    const current = new Date().getTime();
+    if (current - prevPressTime.current < milliseconds) {
+      timer.current && clearTimeout(timer.current);
+    }
   };
 
   const renderIcon = () => {
     if (!showIcon) return null;
-    if (!showIconBg) return <IconFont d={icon} color={iconColor} size={iconSize} />;
     return (
-      <View
-        style={[
-          styles.center,
-          iconBgDefault,
-          {
-            overflow: 'hidden',
-            backgroundColor: iconBgColor,
-          },
-          iconBgStyle,
-        ]}
-      >
-        <IconFont d={icon} color={iconColor} size={iconSize} />
-      </View>
+      <ClassicIconBackground
+        style={iconBgStyle}
+        showIcon={showIcon}
+        showIconBg={showIconBg}
+        icon={icon}
+        iconColor={iconColor}
+        iconSize={iconSize}
+        iconBgSize={iconBgSize}
+        iconBgColor={iconBgColor}
+        iconBgRadius={iconBgRadius}
+      />
     );
   };
 
@@ -122,7 +117,13 @@ const styles = StyleSheet.create({
   },
 });
 
-export const ClassicButton = props => <StyleButton {...props} />;
-export const NordicButton = props => <StyleButton {...NordicDefaultProps} {...props} />;
-export const AcrylicButton = props => <StyleButton {...AcrylicDefaultProps} {...props} />;
-export const PaintButton = props => <StyleButton {...PaintDefaultProps} {...props} />;
+export const ClassicButton = (props: IButtonProps) => <StyleButton {...props} />;
+export const NordicButton = (props: IButtonProps) => (
+  <StyleButton {...NordicDefaultProps} {...props} />
+);
+export const AcrylicButton = (props: IButtonProps) => (
+  <StyleButton {...AcrylicDefaultProps} {...props} />
+);
+export const PaintButton = (props: IButtonProps) => (
+  <StyleButton {...PaintDefaultProps} {...props} />
+);

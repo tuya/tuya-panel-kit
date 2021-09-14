@@ -21,7 +21,6 @@ exports[`StyleListCard NordicListCard 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "flex": 1,
         "flexDirection": "row",
         "marginBottom": 40,
       }
@@ -358,7 +357,7 @@ exports[`StyleListCard NordicListCard 1`] = `
         style={
           Array [
             Object {
-              "backgroundColor": "#158CFB",
+              "backgroundColor": "#1082FE",
               "height": 72,
               "width": 72,
             },
@@ -474,7 +473,7 @@ exports[`StyleListCard NordicListCard 1`] = `
         accessible={true}
         align={null}
         allowFontScaling={false}
-        color="rgba(0, 0, 0, 0.5)"
+        color="rgba(0,0,0,0.5)"
         ellipsizeMode="tail"
         size={32}
         style={
@@ -485,7 +484,7 @@ exports[`StyleListCard NordicListCard 1`] = `
               Array [
                 Object {
                   "backgroundColor": "transparent",
-                  "color": "rgba(0, 0, 0, 0.5)",
+                  "color": "rgba(0,0,0,0.5)",
                   "fontSize": 32,
                   "fontWeight": "400",
                 },
@@ -531,7 +530,7 @@ exports[`StyleListCard NordicListCard 1`] = `
         style={
           Array [
             Object {
-              "backgroundColor": "#158CFB",
+              "backgroundColor": "#1082FE",
               "height": 72,
               "width": 72,
             },
@@ -647,7 +646,7 @@ exports[`StyleListCard NordicListCard 1`] = `
         accessible={true}
         align={null}
         allowFontScaling={false}
-        color="rgba(0, 0, 0, 0.5)"
+        color="rgba(0,0,0,0.5)"
         ellipsizeMode="tail"
         size={32}
         style={
@@ -658,7 +657,7 @@ exports[`StyleListCard NordicListCard 1`] = `
               Array [
                 Object {
                   "backgroundColor": "transparent",
-                  "color": "rgba(0, 0, 0, 0.5)",
+                  "color": "rgba(0,0,0,0.5)",
                   "fontSize": 32,
                   "fontWeight": "400",
                 },

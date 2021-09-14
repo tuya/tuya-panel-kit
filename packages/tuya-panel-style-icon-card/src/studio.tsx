@@ -63,7 +63,7 @@ const StudioIconBlock: React.FC<IStudioIconCardProps> = ({
       </View>
       <View style={{ flexDirection: 'row' }}>
         <TYText
-          text={value}
+          text={`${value}`}
           weight={valueWeight}
           color={valueColor}
           size={valueSize}

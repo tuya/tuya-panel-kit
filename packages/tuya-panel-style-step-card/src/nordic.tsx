@@ -115,7 +115,7 @@ export class StyleNordicStepCard extends React.PureComponent<
           style,
         ]}
       >
-        <View style={{ flexDirection: 'row', marginBottom: cx(20), flex: 1, alignItems: 'center' }}>
+        <View style={{ flexDirection: 'row', marginBottom: cx(20), alignItems: 'center' }}>
           <ClassicIconBackground {...rest} showIcon={showIcon} style={iconStyle} />
           <TYText
             text={text}

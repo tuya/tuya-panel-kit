@@ -43,7 +43,7 @@ export const StyleDisplayCard: React.FC<IDisplayCardProps> = ({
           borderRadius: radius,
           width,
           alignItems: 'center',
-          justifyContent: 'center',
+          justifyContent: isAlignCenter ? 'center' : 'flex-start',
           flexDirection: 'row',
           ...parseToStyle(padding, 'padding'),
         },
@@ -59,7 +59,7 @@ export const StyleDisplayCard: React.FC<IDisplayCardProps> = ({
       <View style={{ alignItems: isAlignCenter ? 'center' : 'flex-start' }}>
         <View style={{ flexDirection: 'row', alignItems: isUnitInTop ? 'flex-start' : 'flex-end' }}>
           <TYText
-            text={value}
+            text={`${value}`}
             size={valueSize}
             color={valueColor}
             weight={valueWeight}
@@ -71,7 +71,7 @@ export const StyleDisplayCard: React.FC<IDisplayCardProps> = ({
               size={unitSize}
               color={unitColor}
               weight={unitWeight}
-              style={[{ lineHeight: cx(24), marginLeft: cx(5), marginTop: cx(10) }, unitStyle]}
+              style={[{ lineHeight: cx(24), marginLeft: cx(5), marginTop: cx(12) }, unitStyle]}
             />
           )}
         </View>
@@ -89,8 +89,8 @@ export const StyleDisplayCard: React.FC<IDisplayCardProps> = ({
 
 StyleDisplayCard.defaultProps = IDefaultProps;
 
-export const ClassicDisplayCard = props => <StyleDisplayCard {...props} />;
-export const NordicDisplayCard = props => (
+export const ClassicDisplayCard = (props: IDisplayCardProps) => <StyleDisplayCard {...props} />;
+export const NordicDisplayCard = (props: IDisplayCardProps) => (
   <StyleDisplayCard
     showIcon
     iconSize={cx(22)}
@@ -109,7 +109,7 @@ export const NordicDisplayCard = props => (
     {...props}
   />
 );
-export const AcrylicDisplayCard = props => (
+export const AcrylicDisplayCard = (props: IDisplayCardProps) => (
   <StyleDisplayCard
     valueSize={cx(64)}
     valueWeight={600}

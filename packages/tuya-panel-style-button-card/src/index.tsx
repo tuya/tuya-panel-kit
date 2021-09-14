@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Utils } from 'tuya-panel-utils';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, TouchableOpacity } from 'react-native';
+import { TYText } from 'tuya-panel-kit';
 import { ClassicIconBackground } from 'tuya-panel-style-icon-background';
 import { defaultProps, IButtonCardProps, RangeItem } from './interface';
 import { NordicDefaultProps } from './theme';
@@ -148,7 +149,7 @@ const ButtonCard: React.FC<IButtonCardProps> = ({
               styles.buttonItem,
             ]}
           >
-            <Text
+            <TYText
               style={[
                 {
                   color: realTextFontColor,
@@ -159,13 +160,12 @@ const ButtonCard: React.FC<IButtonCardProps> = ({
               ]}
             >
               {itemData.label}
-            </Text>
+            </TYText>
           </View>
         )}
       </TouchableOpacity>
     );
   };
-
   return (
     <View
       style={[
@@ -191,9 +191,9 @@ const ButtonCard: React.FC<IButtonCardProps> = ({
             iconBgRadius={iconBgRadius}
             showIconBg={showIconBg}
           />
-          <Text
+          <TYText
             style={[
-              styles.titletextStyle,
+              styles.titleTextStyle,
               {
                 color: titleFontColor,
                 fontSize: titleFontSize,
@@ -203,14 +203,14 @@ const ButtonCard: React.FC<IButtonCardProps> = ({
             ]}
           >
             {title}
-          </Text>
+          </TYText>
         </View>
       )}
-      <View style={styles.contentBox}>
+      <View>
         {rangeData.map((rowData, rowIdx) => (
           /* eslint-disable */
           <View
-            style={[{ marginTop: rowIdx === 0 ? 0 : 14 }, styles.rowItem]}
+            style={[{ marginTop: rowIdx === 0 ? 0 : cx(14) }, styles.rowItem]}
             key={`row-${rowIdx}`}
           >
             {rowData.map((item, idx) => renderItem(item, idx))}
@@ -225,19 +225,15 @@ const ButtonCard: React.FC<IButtonCardProps> = ({
 ButtonCard.defaultProps = defaultProps;
 
 const styles = StyleSheet.create({
-  contentBox: {
-    flex: 1,
-  },
   titleBox: {
     alignItems: 'center',
     flexDirection: 'row',
     marginBottom: cx(20),
   },
-  titletextStyle: {
+  titleTextStyle: {
     marginLeft: cx(12),
   },
   rowItem: {
-    flex: 1,
     flexDirection: 'row',
   },
   buttonItem: {

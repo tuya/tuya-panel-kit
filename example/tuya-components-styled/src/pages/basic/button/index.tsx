@@ -1,44 +1,111 @@
 import React from 'react';
-import * as StyledButton from 'tuya-panel-style-button';
-import { View } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
+import { TYSdk, Utils, I18N } from 'tuya-panel-kit';
+import { ClassicButton, NordicButton, AcrylicButton } from 'tuya-panel-style-button';
+import TuyaRNSvgs from 'tuya-panel-kit/lib/components/iconfont/svg/defaultSvg';
 import { ListView } from '#components';
 import Strings from '#i18n';
-/* eslint-disable prefer-destructuring */
 
-const AcrylicButton = StyledButton.AcrylicButton;
-const ClassicButton = StyledButton.ClassicButton;
-const NordicButton = StyledButton.NordicButton;
-const PaintButton = StyledButton.PaintButton;
+const { get, compareVersion } = Utils.CoreUtils;
 
-const icon =
-  'M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z';
+const requireRnVersion = '5.31';
+
+const PrivateStrings = new I18N({
+  en: {
+    no_icon_or_background: 'No icon, no background',
+    set_padding: 'Set padding',
+  },
+  zh: {
+    no_icon_or_background: '没有图标、没有背景',
+    set_padding: '设置内边距',
+  },
+});
 
 export default () => {
+  const appRnVersion = get(TYSdk.mobile, 'mobileInfo.appRnVersion');
+  const isGreater = appRnVersion && compareVersion(appRnVersion, requireRnVersion);
+  const isShow = isGreater === 0 || isGreater === 1;
   return (
     <ListView
-      contentPadding={false}
+      style={{ backgroundColor: '#f8f8f8', height: 'auto' }}
       list={[
         {
-          title: Strings.getLang('button'),
-          content: <AcrylicButton isSupportAcrylic={true} icon={icon} />,
-        },
-        {
-          title: Strings.getLang('button'),
-          content: <ClassicButton icon={icon} text="开关" iconColor="#158CFB" />,
-        },
-        {
-          title: Strings.getLang('button'),
+          title: Strings.getLang('studio'),
           content: (
-            <NordicButton icon={icon}>
-              <View style={{ width: 25, height: 25, backgroundColor: '#ff0' }} />
-            </NordicButton>
+            <View
+              style={{
+                display: 'flex',
+                // flexDirection: 'row',
+                // justifyContent: 'flex-start',
+              }}
+            >
+              <ClassicButton
+                onLongPress={() => console.log('long press')}
+                icon={TuyaRNSvgs.power}
+                text="开关"
+              />
+              <Text style={styles.title}>{PrivateStrings.getLang('no_icon_or_background')}</Text>
+              <View style={{ flexDirection: 'row' }}>
+                <ClassicButton
+                  width={90}
+                  showIcon={false}
+                  icon={TuyaRNSvgs.power}
+                  text="开关"
+                  iconColor="#FFF"
+                  padding={[5, 0, 0, 5]}
+                />
+                <ClassicButton
+                  width={90}
+                  showIconBg={false}
+                  icon={TuyaRNSvgs.power}
+                  text="开关"
+                  iconColor="#158CFC"
+                  style={{ marginLeft: 10 }}
+                />
+              </View>
+              <Text style={styles.title}>{PrivateStrings.getLang('set_padding')}</Text>
+              <ClassicButton
+                icon={TuyaRNSvgs.power}
+                text="开关"
+                iconColor="#FFF"
+                style={{ marginLeft: 10 }}
+                padding={[10, 40, 0, 0]}
+              />
+            </View>
           ),
         },
         {
-          title: Strings.getLang('button'),
-          content: <PaintButton icon={icon} onLongPress={() => console.log('hh')} />,
+          title: Strings.getLang('nordic'),
+          content: (
+            <View
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'flex-start',
+              }}
+            >
+              <NordicButton icon={TuyaRNSvgs.power} text="开关" iconColor="#FFF" />
+            </View>
+          ),
+        },
+        {
+          title: Strings.getLang('acrylic'),
+          content: (
+            <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start' }}>
+              <AcrylicButton
+                icon={TuyaRNSvgs.power}
+                text="开关"
+                iconColor="#FFF"
+                isSupportAcrylic={isShow}
+              />
+            </View>
+          ),
         },
       ]}
     />
   );
 };
+
+const styles = StyleSheet.create({
+  title: { marginTop: 20, marginBottom: 20, color: '#333' },
+});

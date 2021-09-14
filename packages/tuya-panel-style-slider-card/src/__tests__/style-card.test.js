@@ -70,7 +70,7 @@ describe('SiderCard', () => {
             iconIsImage
             title="Function"
             icon={IMAGE}
-            bothSideIcons={[TuyaRNSvgs.power, TuyaRNSvgs.power]}
+            bothSideIcons={[{icon: TuyaRNSvgs.power}, {icon: TuyaRNSvgs.power}]}
             value={30}
             bottomPromptTexts={['最小', '最大']}
           />
@@ -91,7 +91,7 @@ describe('SiderCard', () => {
           iconIsImage
           title="Function"
           icon={IMAGE}
-          bothSideIcons={[TuyaRNSvgs.power, TuyaRNSvgs.power]}
+          bothSideIcons={[{icon: TuyaRNSvgs.power}, {icon: TuyaRNSvgs.power}]}
           value={30}
           bottomPromptTexts={['最小', '最大']}
           handSlidingComplete={setValue}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, TouchableOpacity } from 'react-native';
 import { Utils } from 'tuya-panel-utils';
 import { TYText, IconFont } from 'tuya-panel-kit';
 import { ClassicIconBackground } from 'tuya-panel-style-icon-background';
@@ -34,6 +34,7 @@ const NordicIconBlock: React.FC<INordicIconCardProps> = ({
   arrowColor,
   hasArrow,
   showIcon,
+  onPress,
   ...rest
 }) => {
   return (
@@ -71,10 +72,20 @@ const NordicIconBlock: React.FC<INordicIconCardProps> = ({
           textStyle,
         ]}
       />
-      <View style={{ flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center' }}>
+      <TouchableOpacity
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'space-around',
+          alignItems: 'center',
+          backgroundColor: 'transparent',
+        }}
+        disabled={!hasArrow}
+        onPress={onPress}
+        activeOpacity={0.8}
+      >
         <View style={{ flex: 1 }}>
           <TYText
-            text={value}
+            text={`${value}`}
             weight={valueWeight}
             color={valueColor}
             size={valueSize}
@@ -91,7 +102,7 @@ const NordicIconBlock: React.FC<INordicIconCardProps> = ({
           )}
         </View>
         {hasArrow && <IconFont name="arrow" size={arrowSize} color={arrowColor} />}
-      </View>
+      </TouchableOpacity>
     </View>
   );
 };

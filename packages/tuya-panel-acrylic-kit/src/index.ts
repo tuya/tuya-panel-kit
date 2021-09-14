@@ -7,4 +7,4 @@ export { AcrylicEnumCard } from 'tuya-panel-style-enum-card';
 export { AcrylicEnumSliderCard } from 'tuya-panel-style-enum-slider-card';
 export { AcrylicIconBlockCard } from 'tuya-panel-style-icon-card';
 export { AcrylicSliderCard } from 'tuya-panel-style-slider-card';
-export { AcrylicSwitchCard } from 'tuya-panel-style-switch-card';
+export { AcrylicSwitchCard, AcrylicItemCard, AcrylicArrowCard } from 'tuya-panel-style-switch-card';

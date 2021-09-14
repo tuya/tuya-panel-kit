@@ -4,8 +4,8 @@ const { convertX: cx } = Utils.RatioUtils;
 
 export const StudioItemDefaultProps = {
   backgroundColor: '#FFF',
-  padding: [cx(19), cx(24), cx(20), cx(25)],
-  width: cx(310),
+  padding: [cx(20), cx(20), cx(20), cx(20)],
+  width: cx(320),
   radius: cx(14),
   text: 'List Card',
   fontColor: '#3D3D3D',
@@ -21,8 +21,8 @@ export const StudioItemDefaultProps = {
 
 export const StudioArrowDefaultProps = {
   backgroundColor: '#FFF',
-  padding: [cx(19), cx(24), cx(20), cx(25)],
-  width: cx(310),
+  padding: [cx(24), cx(28), cx(24), cx(20)],
+  width: cx(312),
   radius: cx(14),
   text: 'List Card',
   fontColor: '#3D3D3D',
@@ -36,14 +36,13 @@ export const StudioArrowDefaultProps = {
   valueFontWeight: 400,
   arrowSize: cx(12),
   arrowColor: 'rgba(0, 0, 0, 0.5)',
-  type: 'arrow',
   valueStyle: { lineHeight: cx(24) },
   disabled: false,
 };
 
 export const NordicDefaultProps = {
   showIcon: false,
-  width: cx(278),
+  width: cx(282),
   radius: cx(16),
   fontSize: cx(16),
   fontColor: '#000',
@@ -55,14 +54,13 @@ export const NordicDefaultProps = {
   },
   textStyle: {
     lineHeight: cx(22),
-    marginLeft: cx(8),
   },
 };
 
 export const NordicItemDefaultProps = {
   backgroundColor: '#FFF',
-  padding: [cx(19), cx(24), cx(20), cx(25)],
-  width: cx(310),
+  padding: [cx(24), cx(20), cx(24), cx(20)],
+  width: cx(287),
   radius: cx(14),
   text: 'List Card',
   fontColor: '#3D3D3D',
@@ -85,8 +83,8 @@ export const NordicItemDefaultProps = {
 
 export const NordicArrowDefaultProps = {
   backgroundColor: '#FFF',
-  padding: [cx(19), cx(24), cx(20), cx(25)],
-  width: cx(310),
+  padding: [cx(24), cx(28), cx(24), cx(20)],
+  width: cx(280),
   radius: cx(14),
   text: 'List Card',
   fontColor: '#3D3D3D',
@@ -104,7 +102,6 @@ export const NordicArrowDefaultProps = {
   valueStyle: {
     lineHeight: cx(16),
   },
-  type: 'arrow',
   arrowSize: cx(12),
   arrowColor: 'rgba(0, 0, 0, 0.5)',
   textStyle: {
@@ -118,7 +115,7 @@ export const AcrylicDefaultProps = {
   iconSize: cx(40),
   onTintColor: '#FE7862',
   switchType: 'thumbMore',
-  width: cx(278),
+  width: cx(282),
   radius: cx(16),
   fontSize: cx(16),
   fontColor: 'rgba(0, 0, 0, 0.87)',
@@ -143,8 +140,8 @@ export const AcrylicDefaultProps = {
 
 export const AcrylicItemDefaultProps = {
   backgroundColor: '#FFF',
-  padding: [cx(19), cx(24), cx(20), cx(25)],
-  width: cx(310),
+  padding: [cx(24), cx(20), cx(24), cx(20)],
+  width: cx(287),
   radius: cx(14),
   text: 'List Card',
   fontColor: '#3D3D3D',
@@ -168,8 +165,8 @@ export const AcrylicItemDefaultProps = {
 
 export const AcrylicArrowDefaultProps = {
   backgroundColor: '#FFF',
-  padding: [cx(19), cx(24), cx(20), cx(25)],
-  width: cx(310),
+  padding: [cx(20), cx(28), cx(20), cx(20)],
+  width: cx(280),
   radius: cx(14),
   text: 'List Card',
   textStyle: {
@@ -184,7 +181,6 @@ export const AcrylicArrowDefaultProps = {
   subTextStyle: {
     lineHeight: cx(19),
   },
-  type: 'arrow',
   arrowSize: cx(12),
   arrowColor: 'rgba(0, 0, 0, 0.25)',
   disabled: false,

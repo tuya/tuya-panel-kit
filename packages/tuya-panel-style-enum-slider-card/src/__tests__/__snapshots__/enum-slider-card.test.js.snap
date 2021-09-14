@@ -116,7 +116,6 @@ exports[`EnumSliderCard Acrylic 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "flex": 1,
           "flexDirection": "row",
         }
       }
@@ -329,7 +328,7 @@ exports[`EnumSliderCard Acrylic 1`] = `
           "flex": 1,
           "flexDirection": "row",
           "justifyContent": "space-between",
-          "marginTop": 9,
+          "marginTop": 18,
         }
       }
     >
