@@ -91,7 +91,6 @@ export const AcrylicSliderCardProps: Partial<ISliderProps> = {
 
   // slider两边展示的图标
   // bothSideIcons: [string, string],
-  bothSideIconIsImage: false,
   bothSideIconSize: cx(12),
   bothSideIconColor: '#FE724C',
   radius: cx(16),

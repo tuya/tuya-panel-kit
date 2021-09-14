@@ -3,7 +3,8 @@
     "baseUrl": "./",
     "paths": {
       "tuya-panel-kit": ["../tuya-panel-kit/lib"],
-      "tuya-panel-utils": ["../tuya-panel-utils/lib"]
+      "tuya-panel-utils": ["../tuya-panel-utils/lib"],
+      "tuya-panel-style-icon-background": ["../tuya-panel-style-icon-background/lib"]
     },
     "allowJs": true,
     "declaration": true,
@@ -12,7 +13,7 @@
     "target": "es2018",
     "moduleResolution": "node",
     "noImplicitAny": false,
-    "removeComments": true,
+    "removeComments": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "outDir": "./lib",

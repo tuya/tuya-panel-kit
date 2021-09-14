@@ -29,10 +29,10 @@ exports[`StyleButton AcrylicButton 1`] = `
           "justifyContent": "center",
         },
         Object {
-          "paddingBottom": 12,
+          "paddingBottom": 24,
           "paddingLeft": 0,
           "paddingRight": 0,
-          "paddingTop": 12,
+          "paddingTop": 24,
         },
       ]
     }
@@ -41,19 +41,22 @@ exports[`StyleButton AcrylicButton 1`] = `
       style={
         Array [
           Object {
-            "alignItems": "center",
-            "justifyContent": "center",
-          },
-          Object {
-            "borderRadius": 64,
+            "backgroundColor": "#FE7862",
             "height": 128,
             "width": 128,
           },
-          Object {
-            "backgroundColor": "#FE7862",
-            "overflow": "hidden",
-          },
-          undefined,
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderRadius": 64,
+              "display": "flex",
+              "height": 128,
+              "justifyContent": "center",
+              "overflow": "hidden",
+              "width": 128,
+            },
+            Object {},
+          ],
         ]
       }
     >
@@ -99,9 +102,9 @@ exports[`StyleButton AcrylicButton 1`] = `
             fill={
               Array [
                 0,
-                0,
-                0,
-                0,
+                0.08235294117647059,
+                0.5490196078431373,
+                0.984313725490196,
                 1,
               ]
             }
@@ -128,9 +131,9 @@ exports[`StyleButton AcrylicButton 1`] = `
             stroke={
               Array [
                 0,
-                0,
-                0,
-                0,
+                0.08235294117647059,
+                0.5490196078431373,
+                0.984313725490196,
                 1,
               ]
             }
@@ -178,10 +181,10 @@ exports[`StyleButton ClassicButton 1`] = `
           "justifyContent": "center",
         },
         Object {
-          "paddingBottom": 12,
+          "paddingBottom": 24,
           "paddingLeft": 0,
           "paddingRight": 0,
-          "paddingTop": 12,
+          "paddingTop": 24,
         },
       ]
     }
@@ -190,19 +193,22 @@ exports[`StyleButton ClassicButton 1`] = `
       style={
         Array [
           Object {
-            "alignItems": "center",
-            "justifyContent": "center",
-          },
-          Object {
-            "borderRadius": 48,
+            "backgroundColor": "rgba(0, 159, 255, 0.1)",
             "height": 96,
             "width": 96,
           },
-          Object {
-            "backgroundColor": "transparent",
-            "overflow": "hidden",
-          },
-          undefined,
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderRadius": 48,
+              "display": "flex",
+              "height": 96,
+              "justifyContent": "center",
+              "overflow": "hidden",
+              "width": 96,
+            },
+            Object {},
+          ],
         ]
       }
     >
@@ -213,8 +219,8 @@ exports[`StyleButton ClassicButton 1`] = `
               "flexDirection": "row",
             },
             Object {
-              "height": 96,
-              "width": 96,
+              "height": 48,
+              "width": 48,
             },
             false,
             null,
@@ -235,8 +241,8 @@ exports[`StyleButton ClassicButton 1`] = `
               false,
               Object {
                 "flex": 0,
-                "height": 96,
-                "width": 96,
+                "height": 48,
+                "width": 48,
               },
             ]
           }
@@ -370,399 +376,13 @@ exports[`StyleButton NordicButton 1`] = `
           "justifyContent": "center",
         },
         Object {
-          "paddingBottom": 12,
+          "paddingBottom": 24,
           "paddingLeft": 0,
           "paddingRight": 0,
-          "paddingTop": 12,
+          "paddingTop": 24,
         },
       ]
     }
   />
 </View>
-`;
-
-exports[`StyleButton PaintButton 1`] = `
-<PaintButton
-  icon="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
-  onLongPress={[Function]}
->
-  <StyleButton
-    backgroundColor="#FFF"
-    disabled={false}
-    fontColor="#162236"
-    fontSize={24}
-    fontWeight="400"
-    height={216}
-    icon="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
-    iconBgColor="#76A6E4"
-    iconBgRadius={24}
-    iconBgSize={96}
-    iconSize={40}
-    milliseconds={200}
-    onLongPress={[Function]}
-    overlayColor="transparent"
-    padding={
-      Array [
-        12,
-        0,
-        12,
-        0,
-      ]
-    }
-    radius={24}
-    showIcon={true}
-    showIconBg={true}
-    width={328}
-  >
-    <TouchableOpacity
-      activeOpacity={0.8}
-      disabled={false}
-      onPressIn={[Function]}
-      onPressOut={[Function]}
-      style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "justifyContent": "center",
-          },
-          Object {
-            "backgroundColor": "#FFF",
-            "borderRadius": 24,
-            "width": 328,
-          },
-          undefined,
-        ]
-      }
-    >
-      <AnimatedComponent
-        accessible={true}
-        isTVSelectable={true}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Array [
-            Array [
-              Object {
-                "alignItems": "center",
-                "justifyContent": "center",
-              },
-              Object {
-                "backgroundColor": "#FFF",
-                "borderRadius": 24,
-                "width": 328,
-              },
-              undefined,
-            ],
-            Object {
-              "opacity": 1,
-            },
-          ]
-        }
-      >
-        <View
-          accessible={true}
-          isTVSelectable={true}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#FFF",
-              "borderRadius": 24,
-              "justifyContent": "center",
-              "opacity": 1,
-              "width": 328,
-            }
-          }
-        >
-          <View
-            accessible={true}
-            isTVSelectable={true}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#FFF",
-                "borderRadius": 24,
-                "justifyContent": "center",
-                "opacity": 1,
-                "width": 328,
-              }
-            }
-          >
-            <View
-              style={
-                Array [
-                  Object {
-                    "alignItems": "center",
-                    "justifyContent": "center",
-                  },
-                  Object {
-                    "paddingBottom": 12,
-                    "paddingLeft": 0,
-                    "paddingRight": 0,
-                    "paddingTop": 12,
-                  },
-                ]
-              }
-            >
-              <View
-                style={
-                  Array [
-                    Object {
-                      "alignItems": "center",
-                      "justifyContent": "center",
-                    },
-                    Object {
-                      "paddingBottom": 12,
-                      "paddingLeft": 0,
-                      "paddingRight": 0,
-                      "paddingTop": 12,
-                    },
-                  ]
-                }
-              >
-                <View
-                  style={
-                    Array [
-                      Object {
-                        "alignItems": "center",
-                        "justifyContent": "center",
-                      },
-                      Object {
-                        "borderRadius": 24,
-                        "height": 96,
-                        "width": 96,
-                      },
-                      Object {
-                        "backgroundColor": "#76A6E4",
-                        "overflow": "hidden",
-                      },
-                      undefined,
-                    ]
-                  }
-                >
-                  <View
-                    style={
-                      Array [
-                        Object {
-                          "alignItems": "center",
-                          "justifyContent": "center",
-                        },
-                        Object {
-                          "borderRadius": 24,
-                          "height": 96,
-                          "width": 96,
-                        },
-                        Object {
-                          "backgroundColor": "#76A6E4",
-                          "overflow": "hidden",
-                        },
-                        undefined,
-                      ]
-                    }
-                  >
-                    <Component
-                      d="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
-                      size={40}
-                    >
-                      <IconFont
-                        color="#000"
-                        d="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
-                        fill={null}
-                        hFlip={false}
-                        height={null}
-                        name={null}
-                        size={40}
-                        stroke={null}
-                        strokeCap="round"
-                        strokeDash={
-                          Array [
-                            0,
-                            0,
-                          ]
-                        }
-                        strokeJoin="round"
-                        strokeWidth={1}
-                        style={null}
-                        vFlip={false}
-                        viewBox="0 0 1024 1024"
-                        width={null}
-                      >
-                        <View
-                          style={
-                            Array [
-                              Object {
-                                "flexDirection": "row",
-                              },
-                              Object {
-                                "height": 40,
-                                "width": 40,
-                              },
-                              false,
-                              null,
-                            ]
-                          }
-                        >
-                          <View
-                            style={
-                              Array [
-                                Object {
-                                  "flexDirection": "row",
-                                },
-                                Object {
-                                  "height": 40,
-                                  "width": 40,
-                                },
-                                false,
-                                null,
-                              ]
-                            }
-                          >
-                            <Svg
-                              height={40}
-                              key="0"
-                              preserveAspectRatio="xMidYMid meet"
-                              viewBox="0 0 1024 1024"
-                              width={40}
-                            >
-                              <_class
-                                align="xMidYMid"
-                                meetOrSlice={0}
-                                minX={0}
-                                minY={0}
-                                style={
-                                  Array [
-                                    Object {
-                                      "backgroundColor": "transparent",
-                                    },
-                                    undefined,
-                                    false,
-                                    Object {
-                                      "flex": 0,
-                                      "height": 40,
-                                      "width": 40,
-                                    },
-                                  ]
-                                }
-                                vbHeight={1024}
-                                vbWidth={1024}
-                              >
-                                <RNSVGSvgView
-                                  align="xMidYMid"
-                                  meetOrSlice={0}
-                                  minX={0}
-                                  minY={0}
-                                  style={
-                                    Array [
-                                      Object {
-                                        "backgroundColor": "transparent",
-                                      },
-                                      undefined,
-                                      false,
-                                      Object {
-                                        "flex": 0,
-                                        "height": 40,
-                                        "width": 40,
-                                      },
-                                    ]
-                                  }
-                                  vbHeight={1024}
-                                  vbWidth={1024}
-                                >
-                                  <Path
-                                    d="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
-                                    fill="#000"
-                                    height={null}
-                                    stroke="#000"
-                                    strokeCap="round"
-                                    strokeDash={
-                                      Array [
-                                        0,
-                                        0,
-                                      ]
-                                    }
-                                    strokeJoin="round"
-                                    strokeWidth={1}
-                                    width={null}
-                                  >
-                                    <RNSVGPath
-                                      d="M512 0C794.760533 0 1024 229.239467 1024 512S794.760533 1024 512 1024 0 794.760533 0 512 229.239467 0 512 0z m185.048178 327.0656a26.988089 26.988089 0 0 0-38.183822 38.183822 207.712711 207.712711 0 1 1-293.728712 0 26.988089 26.988089 0 1 0-38.183822-38.183822c-102.172444 102.1952-102.172444 267.901156 0 370.096356 102.1952 102.172444 267.901156 102.172444 370.096356 0 102.172444-102.1952 102.172444-267.901156 0-370.096356zM511.886222 227.555556a27.079111 27.079111 0 0 0-26.919822 24.302933l-0.136533 2.776178v196.152889a27.079111 27.079111 0 0 0 53.998933 2.776177l0.136533-2.776177v-196.152889a27.079111 27.079111 0 0 0-27.079111-27.079111z"
-                                      fill={
-                                        Array [
-                                          0,
-                                          0,
-                                          0,
-                                          0,
-                                          1,
-                                        ]
-                                      }
-                                      fillOpacity={1}
-                                      fillRule={1}
-                                      matrix={
-                                        Array [
-                                          1,
-                                          0,
-                                          0,
-                                          1,
-                                          0,
-                                          0,
-                                        ]
-                                      }
-                                      opacity={1}
-                                      propList={
-                                        Array [
-                                          "stroke",
-                                          "strokeWidth",
-                                          "fill",
-                                        ]
-                                      }
-                                      stroke={
-                                        Array [
-                                          0,
-                                          0,
-                                          0,
-                                          0,
-                                          1,
-                                        ]
-                                      }
-                                      strokeDasharray={null}
-                                      strokeDashoffset={null}
-                                      strokeLinecap={0}
-                                      strokeLinejoin={0}
-                                      strokeMiterlimit={4}
-                                      strokeOpacity={1}
-                                      strokeWidth={1}
-                                    />
-                                  </Path>
-                                </RNSVGSvgView>
-                              </_class>
-                            </Svg>
-                          </View>
-                        </View>
-                      </IconFont>
-                    </Component>
-                  </View>
-                </View>
-              </View>
-            </View>
-          </View>
-        </View>
-      </AnimatedComponent>
-    </TouchableOpacity>
-  </StyleButton>
-</PaintButton>
 `;

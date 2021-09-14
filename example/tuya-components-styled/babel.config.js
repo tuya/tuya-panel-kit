@@ -1,5 +1,7 @@
+const isUMI = process.env.DEV_MODE === 'umi';
+
 var getRNAlias = () => {
-  return process.env.DEV_MODE === 'umi'
+  return isUMI
     ? {}
     : {
         'tuya-panel-kit/lib/components/iconfont/svg/defaultSvg':
@@ -7,13 +9,17 @@ var getRNAlias = () => {
         'tuya-panel-kit/lib/components/modal/portalOut':
           '../../packages/tuya-panel-kit/src/components/modal/portalOut',
         'tuya-panel-kit': '../../packages/tuya-panel-kit/src/index.js',
+        'tuya-panel-acrylic-kit': '../../packages/tuya-panel-acrylic-kit/src/index.ts',
+        'tuya-panel-classic-kit': '../../packages/tuya-panel-classic-kit/src/index.ts',
+        'tuya-panel-nordic-kit': '../../packages/tuya-panel-nordic-kit/src/index.ts',
         'react-native-gesture-handler': './node_modules/react-native-gesture-handler',
       };
 };
 
 module.exports = {
-  presets: ['module:metro-react-native-babel-preset'],
+  presets: ['module:metro-react-native-babel-preset', ...(isUMI ? ['@babel/preset-flow'] : [])],
   plugins: [
+    ...(isUMI ? ['@babel/plugin-proposal-class-properties'] : []),
     ['@babel/plugin-proposal-decorators', { legacy: true }],
     [
       'module-resolver',

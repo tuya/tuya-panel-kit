@@ -7,17 +7,69 @@ export { default as Background } from './background';
 export * from './background';
 
 export interface IconBackgroundProps {
+  /**
+   * @description.en icon svg path
+   * @description.zh 图标 svg path
+   */
   icon?: string;
-  image?: string; // 图标可以是图片，icon 优先级更高
-  size?: number;
+  /**
+   * @description.en image url，icon has a higher priority
+   * @description.zh 图片地址，图标的优先级更高
+   */
+  image?: string;
+  /**
+   * @description.en icon size
+   * @description.zh 图标尺寸
+   * @default cx(24)
+   */
   iconSize?: number;
+  /**
+   * @description.en icon background size
+   * @description.zh 组件背景尺寸
+   * @default cx(50)
+   */
   iconBgSize?: number;
+  /**
+   * @description.en Whether to display icon
+   * @description.zh 是否显示图标
+   * @default true
+   */
   showIcon?: boolean;
+  /**
+   * @description.en Whether to display icon background
+   * @description.zh 是否显示图标背景
+   * @default true
+   */
   showIconBg?: boolean;
+  /**
+   * @description.en icon color
+   * @description.zh 图标颜色
+   * @default #fff
+   */
   iconColor?: string;
+  /**
+   * @description.en icon background color, only rgb、rgba or hex
+   * @description.zh 图标背景颜色 只能设置 rgb、rgba 或者 hex
+   * @default #158CFB
+   */
   iconBgColor?: BackgroundType;
+  /**
+   * @description.en icon background radius
+   * @description.zh 图标背景圆角
+   * @default cx(50)
+   */
   iconBgRadius?: number;
+  /**
+   * @description.en image radius
+   * @description.zh 图片圆角
+   * @default 0
+   */
   imageRadius?: number;
+  /**
+   * @description.en component content styles
+   * @description.zh 组件容器样式
+   * @default null
+   */
   style?: StyleProp<ViewStyle>;
 }
 

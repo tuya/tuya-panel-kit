@@ -12,7 +12,7 @@
     "target": "es2018",
     "moduleResolution": "node",
     "noImplicitAny": false,
-    "removeComments": true,
+    "removeComments": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "outDir": "./lib",

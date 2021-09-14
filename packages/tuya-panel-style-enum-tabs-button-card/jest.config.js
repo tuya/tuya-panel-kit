@@ -11,7 +11,15 @@ module.exports = {
   ],
   coverageDirectory: '<rootDir>/packages/tuya-panel-style-enum-tabs-button-card/coverage/',
   collectCoverageFrom: ['<rootDir>/packages/tuya-panel-style-enum-tabs-button-card/src/index.tsx'],
+  globals: {
+    'ts-jest': {
+      diagnostics: {
+        ignoreCodes: ['TS2322', 'TS2532', 'TS7006'],
+      },
+    },
+  },
   transform: {
-    '^.+\\.(t|j)sx?$': 'babel-jest',
+    '^.+\\.(j|t)sx$': 'babel-jest',
+    '^.+\\.tsx?$': 'ts-jest',
   },
 };

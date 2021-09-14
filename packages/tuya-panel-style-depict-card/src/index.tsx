@@ -29,7 +29,7 @@ export const StyleDepictCard: React.FC<IDepictCardProps> = ({
   valueColor,
   valueWeight,
   valueStyle,
-  isUnitInTop,
+  isUnitInBottom,
   isAlignCenter,
   marginBottom,
   showIcon,
@@ -45,6 +45,7 @@ export const StyleDepictCard: React.FC<IDepictCardProps> = ({
           width,
           flexDirection: 'row',
           alignItems: 'center',
+          justifyContent: isAlignCenter ? 'center' : 'flex-start',
           ...parseToStyle(padding, 'padding'),
         },
         style,
@@ -66,9 +67,9 @@ export const StyleDepictCard: React.FC<IDepictCardProps> = ({
           weight={fontWeight}
           style={[{ lineHeight: cx(24), marginBottom }, textStyle]}
         />
-        <View style={{ flexDirection: 'row', alignItems: isUnitInTop ? 'flex-start' : 'flex-end' }}>
+        <View style={{ flexDirection: 'row', alignItems: isUnitInBottom ? 'flex-end' : 'center' }}>
           <TYText
-            text={value}
+            text={`${value}`}
             size={valueSize}
             color={valueColor}
             weight={valueWeight}
@@ -89,10 +90,14 @@ export const StyleDepictCard: React.FC<IDepictCardProps> = ({
 
 StyleDepictCard.defaultProps = IDefaultProps;
 
-export const ClassicDepictCard = (props: IDepictCardProps) => <StyleDepictCard {...props} />;
+export const ClassicDepictCard = (props: IDepictCardProps) => (
+  <StyleDepictCard width={cx(258)} {...props} />
+);
 export const NordicDepictCard = (props: IDepictCardProps) => (
   <StyleDepictCard
+    width={cx(152)}
     fontColor="rgba(0, 0, 0, 0.5)"
+    padding={[cx(15), cx(25), cx(9), cx(20)]}
     valueColor="#000"
     valueSize={cx(20)}
     valueWeight={500}
@@ -122,7 +127,7 @@ export const AcrylicDepictCard = (props: IDepictCardProps) => (
     text="Runtime total"
     fontWeight={500}
     textStyle={{ lineHeight: cx(16.3) }}
-    isUnitInTop={false}
+    isUnitInBottom
     isAlignCenter={false}
     {...props}
   />
@@ -147,7 +152,7 @@ export const AcrylicDepictIconCard = (props: IDepictCardProps) => (
     unitSize={cx(12)}
     unitWeight={400}
     fontWeight={400}
-    isUnitInTop={false}
+    isUnitInBottom
     isAlignCenter={false}
     {...props}
   />

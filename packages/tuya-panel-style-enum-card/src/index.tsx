@@ -1,28 +1,49 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Platform } from 'react-native';
+import React, { useState, useEffect, useRef } from 'react';
+import {
+  View,
+  StyleSheet,
+  TouchableOpacity,
+  Platform,
+  UIManager,
+  findNodeHandle,
+} from 'react-native';
 import { Utils } from 'tuya-panel-utils';
-import { Carousel } from 'tuya-panel-kit';
+import { Carousel, TYText } from 'tuya-panel-kit';
 import { ClassicIconBackground } from 'tuya-panel-style-icon-background';
 import { NordicDefaultProps, AcrylicDefaultProps } from './theme';
 import { defaultProps, IEnumCardProps } from './interface';
 
 function computedCurrentPageIndex(activeKey, list, maxCount): number {
-  if (list.length <= maxCount) return 0;
+  if (!list || list.length <= maxCount) return 0;
   let index = 0;
   for (let i = 0; i < list.length; i++) {
     const data = list[i];
     if (data.key === activeKey) {
-      index = Math.floor(i / MAX_PAGE_COUNT);
+      index = Math.floor(i / maxCount);
       return index;
     }
   }
   return index;
 }
 
-const MAX_PAGE_COUNT = 4;
+function getDataSource(data = [], pageCount) {
+  const ret = [];
+  let currentIndex = 0;
+  while (currentIndex < data.length) {
+    let pageData = data.slice(currentIndex, currentIndex + pageCount);
+    if (pageData.length < pageCount) {
+      pageData = pageData.concat(new Array(pageCount - pageData.length).fill(null));
+    }
+    ret.push(pageData);
+    currentIndex += pageCount;
+  }
+  return ret;
+}
+
 const { convertX: cx } = Utils.RatioUtils;
 const EnumCard: React.FC<IEnumCardProps> = ({
-  list = [],
+  data,
+  pageCount,
   width,
   style, // content容器 样式  优先级最高
   textStyle, // 枚举项里面文字样式 优先级最高
@@ -61,15 +82,22 @@ const EnumCard: React.FC<IEnumCardProps> = ({
   activeKey,
   defaultActiveKey,
   contentStyle,
-  carouselPageContent,
+  dotWrapperStyle,
   titleContentStyle = {},
   onActiveKeyChange,
   disabled = false,
 }) => {
+  const [_dataSource, _setDataSource] = useState([]);
   const [_activeKey, _setActiveKey] = useState(activeKey || defaultActiveKey || '');
-  const [pageIndex, setPageIndex] = useState(
-    computedCurrentPageIndex(_activeKey, list, MAX_PAGE_COUNT)
-  );
+  const [pageIndex, setPageIndex] = useState(computedCurrentPageIndex(_activeKey, data, pageCount));
+  const [carouselHeight, setCarouselHeight] = useState(0);
+  const carouselContentRef = useRef();
+
+  useEffect(() => {
+    const ret = getDataSource(data, pageCount);
+    _setDataSource(ret);
+  }, [data, pageCount]);
+
   useEffect(() => {
     if (activeKey !== undefined) {
       _setActiveKey(activeKey);
@@ -77,32 +105,17 @@ const EnumCard: React.FC<IEnumCardProps> = ({
   }, [activeKey]);
 
   useEffect(() => {
-    const index = computedCurrentPageIndex(_activeKey, list, MAX_PAGE_COUNT);
+    const index = computedCurrentPageIndex(_activeKey, data, pageCount);
     setPageIndex(index);
-  }, [list.length, _activeKey]);
+  }, [data.length, _activeKey]);
 
-  const renderPageCard = () => {
-    const pageCount = Math.ceil(list.length / MAX_PAGE_COUNT);
-    const ret = [];
-    const isCarousel = list.length > MAX_PAGE_COUNT;
-
-    for (let i = 0; i < pageCount; i++) {
-      const startIndex = i * MAX_PAGE_COUNT;
-      let endIndex = startIndex + MAX_PAGE_COUNT - 1;
-      endIndex = endIndex >= list.length ? list.length - 1 : endIndex;
-      const contentView = (
-        <View
-          style={[isCarousel ? carouselPageContent : {}, styles.pageBox, carouselPageContent]}
-          key={i}
-        >
-          {renderItem(startIndex, endIndex)}
-        </View>
-      );
-      ret.push(contentView);
-    }
-
-    return ret;
-  };
+  useEffect(() => {
+    const node = findNodeHandle(carouselContentRef.current);
+    if (!node || Platform.OS !== 'android') return;
+    UIManager.measure(node, (x, y, width, height) => {
+      setCarouselHeight(height);
+    });
+  }, [_dataSource]);
 
   const handClick = (key: string) => {
     if (activeKey === undefined) {
@@ -111,41 +124,22 @@ const EnumCard: React.FC<IEnumCardProps> = ({
     onActiveKeyChange && onActiveKeyChange(key);
   };
 
-  // 用于android下 计算轮播图的高度
-  const computedCarouselHeight = () => {
-    const iconContentSize = showIconBg ? iconBgSize : iconSize;
-    /* eslint-disable */
-    // @ts-ignored
-    let textMargin = textStyle.marginTop;
-    textMargin = typeof textMargin === 'number' ? textMargin : cx(8);
-    textMargin = showText ? textMargin : 0;
-    // @ts-ignored
-    let textSize = textStyle.fontSize;
-    /* eslint-enable */
-    textSize = typeof textSize === 'number' ? textSize : textFontSize;
-    textSize = showText ? textSize : 0;
-    // 20 是固定的轮播图区域底部的间距
-    return iconContentSize + textMargin + textSize + cx(20);
-  };
-
-  const renderItem = (startIndex, endIndex) => {
-    const ret = [];
-    for (let i = startIndex; i <= endIndex; i++) {
-      const data = list[i];
-      const realIconColor = data.key === _activeKey ? activeIconColor : iconColor;
-      const realIconBgColor = data.key === _activeKey ? activeIconBgColor : iconBgColor;
-      const realTextColor = data.key === _activeKey ? activeTextColor : textColor;
-      const item = (
+  const renderItem = (dataItem, idx) => {
+    if (!dataItem) return <View style={{ flex: 1, alignItems: 'center' }} key={idx} />;
+    const realIconColor = dataItem.key === _activeKey ? activeIconColor : iconColor;
+    const realIconBgColor = dataItem.key === _activeKey ? activeIconBgColor : iconBgColor;
+    const realTextColor = dataItem.key === _activeKey ? activeTextColor : textColor;
+    return (
+      <View style={{ flex: 1, alignItems: 'center' }} key={idx}>
         <TouchableOpacity
-          style={[(disabled || data.disabled) && { opacity: 0.5 }, styles.itemBox]}
-          key={i}
+          style={[(disabled || dataItem.disabled) && { opacity: 0.5 }, styles.itemBox]}
           activeOpacity={0.8}
-          onPress={() => handClick(data.key)}
-          disabled={disabled || data.disabled}
+          onPress={() => handClick(dataItem.key)}
+          disabled={disabled || dataItem.disabled}
         >
           <ClassicIconBackground
-            icon={data.isImage ? '' : data.icon}
-            image={data.icon}
+            icon={dataItem.isImage ? '' : dataItem.icon}
+            image={dataItem.icon}
             iconSize={iconSize}
             iconBgSize={iconBgSize}
             iconColor={realIconColor}
@@ -153,26 +147,24 @@ const EnumCard: React.FC<IEnumCardProps> = ({
             iconBgRadius={iconBgRadius}
             showIconBg={showIconBg}
           />
-          {data.label && showText && (
-            <Text
+          {dataItem.label && showText && (
+            <TYText
               style={[
                 { color: realTextColor, fontSize: textFontSize, fontWeight: textFontWeight },
                 styles.itemText,
                 textStyle,
               ]}
             >
-              {data.label}
-            </Text>
+              {dataItem.label}
+            </TYText>
           )}
         </TouchableOpacity>
-      );
-      ret.push(item);
-    }
-    return ret;
+      </View>
+    );
   };
 
   const renderDot = () => {
-    const pageCount = Math.ceil(list.length / MAX_PAGE_COUNT);
+    const pageCount = _dataSource.length;
     const contentWidth = pageCount * dotSize + (pageCount - 1) * cx(8);
     const dotList = [];
     for (let i = 0; i < pageCount; i++) {
@@ -214,35 +206,49 @@ const EnumCard: React.FC<IEnumCardProps> = ({
     >
       {showTitle && Boolean(title) && (
         <View style={titleContentStyle}>
-          <Text
+          <TYText
             style={[
               { fontSize: titleFontSize, color: titleColor, fontWeight: titleFontWeight },
               titleStyle,
             ]}
           >
             {title}
-          </Text>
+          </TYText>
         </View>
       )}
-      <View style={[styles.contentBox, contentStyle]}>
-        {list.length > MAX_PAGE_COUNT ? (
+      <View style={contentStyle}>
+        {_dataSource.length > 1 && (carouselHeight !== 0 || Platform.OS !== 'android') ? (
           <Carousel
             style={{
-              height: Platform.OS === 'android' ? computedCarouselHeight() : 'auto',
+              height: Platform.OS === 'android' ? carouselHeight : 'auto',
             }}
             selectedIndex={pageIndex}
             hasDots={false}
-            // dotActiveStyle={{ backgroundColor: activeDotColor }}
             carouselChange={onCarouselChange}
           >
-            {renderPageCard()}
+            {_dataSource.map((pageItem, pageIdx) => (
+              /* eslint-disable */
+              <View style={styles.pageBox} key={pageIdx}>
+                {pageItem.map((item, idx) => renderItem(item, idx))}
+              </View>
+              /* eslint-enable */
+            ))}
           </Carousel>
         ) : (
-          <View style={[styles.pageBox, { justifyContent: 'space-between' }]}>
-            {renderItem(0, list.length - 1)}
+          // Android下会先渲染这里，以获得实际内容区域的高度
+          <View
+            ref={carouselContentRef}
+            style={[styles.pageBox, { justifyContent: 'space-between' }]}
+          >
+            {pageIndex === 0
+              ? _dataSource[0] && _dataSource[0].map((item, idx) => renderItem(item, idx))
+              : _dataSource[pageIndex] &&
+                _dataSource[pageIndex].map((item, idx) => renderItem(item, idx))}
           </View>
         )}
-        {list.length > MAX_PAGE_COUNT && <View style={styles.center}>{renderDot()}</View>}
+        {_dataSource.length > 1 && (
+          <View style={[styles.center, dotWrapperStyle]}>{renderDot()}</View>
+        )}
       </View>
     </View>
   );
@@ -255,29 +261,28 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  contentBox: {
-    flex: 1,
-  },
   dotWarp: {
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
   itemBox: {
     alignItems: 'center',
-    display: 'flex',
-    flex: 1 / MAX_PAGE_COUNT,
   },
   itemText: {
     marginTop: cx(8),
   },
   pageBox: {
-    display: 'flex',
     flexDirection: 'row',
+    opacity: 1,
   },
 });
 
-export const ClassicEnumCard = props => <EnumCard {...props} />;
+export const ClassicEnumCard = (props: IEnumCardProps) => <EnumCard {...props} />;
 
-export const NordicEnumCard = props => <EnumCard {...props} {...NordicDefaultProps} />;
+export const NordicEnumCard = (props: IEnumCardProps) => (
+  <EnumCard {...NordicDefaultProps} {...props} />
+);
 
-export const AcrylicEnumCard = props => <EnumCard {...props} {...AcrylicDefaultProps} />;
+export const AcrylicEnumCard = (props: IEnumCardProps) => (
+  <EnumCard {...AcrylicDefaultProps} {...props} />
+);

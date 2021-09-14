@@ -98,7 +98,7 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
     "enzyme-to-json": "^3.6.1",
-    "eslint-config-tuya-panel": "^0.2.4",
+    "eslint-config-tuya-panel": "^0.4.1",
     "eslint-plugin-literal-check": "^0.1.2",
     "eslint-plugin-prettier": "^3.0.1",
     "jest": "^23.6.0",
