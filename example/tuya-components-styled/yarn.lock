@@ -9640,8 +9640,29 @@ tuya-panel-classic-kit@^0.0.3:
     tuya-panel-style-switch-card "^0.0.3"
 
 tuya-panel-kit@^4.7.8:
-  version "0.0.0"
-  uid ""
+  version "4.7.8"
+  resolved "https://registry.npmjs.org/tuya-panel-kit/-/tuya-panel-kit-4.7.8.tgz#a9ed3be868b91d29628d9812b9b2cb1aaa64fd88"
+  integrity sha512-G04pwML7s2TSMqa5USRXSqWwk0TMaBg49s2AS2hP3sWECmGfkpe7BxMmfTSkSTL8yZCh9+oX87mjW7p31eX4+Q==
+  dependencies:
+    "@react-native-community/masked-view" "0.1.10"
+    "@react-navigation/native" "5.7.3"
+    "@react-navigation/stack" "5.9.0"
+    babel-cli "^6.26.0"
+    color "^0.11.1"
+    events "^1.1.1"
+    hoist-non-react-statics "^3.3.0"
+    prop-types "^15.6.1"
+    react-addons-shallow-compare "^15.6.2"
+    react-native-deprecated-custom-components "0.1.2"
+    react-native-gesture-handler "1.3.0"
+    react-native-reanimated "1.9.0"
+    react-native-safe-area-context "3.0.7"
+    react-native-screens "2.9.0"
+    react-native-svg "5.5.1"
+    style-equal "^1.0.0"
+    styled-components "^3.4.10"
+    tuya-panel-theme "^0.0.5"
+    tuya-panel-utils "^0.1.1"
 
 "tuya-panel-kit@link:.yalc/tuya-panel-kit":
   version "0.0.0"

@@ -1,8 +1,8 @@
 import React from 'react';
 import { View } from 'react-native';
-import { ClassicItemCard } from 'tuya-panel-classic-kit';
-import { NordicItemCard } from 'tuya-panel-nordic-kit';
-import { AcrylicItemCard } from 'tuya-panel-acrylic-kit';
+import { ClassicEnumCard } from 'tuya-panel-classic-kit';
+import { NordicEnumCard } from 'tuya-panel-nordic-kit';
+import { AcrylicEnumCard } from 'tuya-panel-acrylic-kit';
 import { Utils } from 'tuya-panel-utils';
 import TuyaRNSvgs from 'tuya-panel-kit/lib/components/iconfont/svg/defaultSvg';
 import { ListView } from '#components';
@@ -19,8 +19,8 @@ export default () => {
           title: Strings.getLang('studio'),
           content: (
             <View>
-              <ClassicItemCard icon={TuyaRNSvgs.power} />
-              <ClassicItemCard
+              <ClassicEnumCard icon={TuyaRNSvgs.power} />
+              <ClassicEnumCard
                 icon={TuyaRNSvgs.power}
                 subText="switch card"
                 style={{ marginTop: 20 }}
@@ -31,11 +31,11 @@ export default () => {
         },
         {
           title: Strings.getLang('nordic'),
-          content: <NordicItemCard icon={TuyaRNSvgs.power} />,
+          content: <NordicEnumCard icon={TuyaRNSvgs.power} />,
         },
         {
           title: Strings.getLang('acrylic'),
-          content: <AcrylicItemCard icon={TuyaRNSvgs.power} />,
+          content: <AcrylicEnumCard icon={TuyaRNSvgs.power} />,
         },
       ]}
     />
