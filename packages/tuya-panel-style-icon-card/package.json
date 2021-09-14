@@ -11,8 +11,7 @@
     "test": "__tests__"
   },
   "files": [
-    "lib",
-    "src"
+    "lib"
   ],
   "dependencies": {
     "tuya-panel-kit": "^4.7.8",
