@@ -36,7 +36,6 @@ export const StudioArrowDefaultProps = {
   valueFontWeight: 400,
   arrowSize: cx(12),
   arrowColor: 'rgba(0, 0, 0, 0.5)',
-  type: 'arrow',
   valueStyle: { lineHeight: cx(24) },
   disabled: false,
 };
@@ -103,7 +102,6 @@ export const NordicArrowDefaultProps = {
   valueStyle: {
     lineHeight: cx(16),
   },
-  type: 'arrow',
   arrowSize: cx(12),
   arrowColor: 'rgba(0, 0, 0, 0.5)',
   textStyle: {
@@ -183,7 +181,6 @@ export const AcrylicArrowDefaultProps = {
   subTextStyle: {
     lineHeight: cx(19),
   },
-  type: 'arrow',
   arrowSize: cx(12),
   arrowColor: 'rgba(0, 0, 0, 0.25)',
   disabled: false,

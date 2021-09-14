@@ -104,7 +104,7 @@ export interface IDisplayCardProps extends Omit<IconBackgroundProps, 'style'> {
    * @description.zh 文本字重
    * @default 400
    */
-  fontWeight?: number;
+  fontWeight?: number | string;
   /**
    * @description.en Unit
    * @description.zh 单位
@@ -128,7 +128,7 @@ export interface IDisplayCardProps extends Omit<IconBackgroundProps, 'style'> {
    * @description.zh 单位字重
    * @default 500
    */
-  unitWeight?: number;
+  unitWeight?: number | string;
   /**
    * @description.en Value
    * @description.zh 具体值

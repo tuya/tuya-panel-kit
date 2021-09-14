@@ -13,7 +13,7 @@
     "target": "es2018",
     "moduleResolution": "node",
     "noImplicitAny": false,
-    "removeComments": true,
+    "removeComments": false,
     "preserveConstEnums": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
