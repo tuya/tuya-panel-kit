@@ -321,9 +321,12 @@ exports[`NumberSelector Component basic render 1`] = `
                   "textAlign": "center",
                   "width": 400,
                 },
-                Object {
-                  "opacity": 1,
-                },
+                Array [
+                  Object {
+                    "opacity": 1,
+                  },
+                  null,
+                ],
               ],
             ]
           }
@@ -817,9 +820,12 @@ exports[`NumberSelector Component basic render type 1`] = `
                   "textAlign": "center",
                   "width": 400,
                 },
-                Object {
-                  "opacity": 1,
-                },
+                Array [
+                  Object {
+                    "opacity": 1,
+                  },
+                  null,
+                ],
               ],
             ]
           }
