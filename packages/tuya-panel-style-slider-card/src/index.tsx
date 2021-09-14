@@ -285,7 +285,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export const ClassicSliderCard = props => <SliderCard {...props} />;
+export const ClassicSliderCard: React.FC<ISliderProps>  = props => <SliderCard {...props} />;
 
 export const ClassicLargeSliderCard: React.FC<ISliderProps> = props => (
   <SliderCard {...classicLargeSliderProps} {...props} />

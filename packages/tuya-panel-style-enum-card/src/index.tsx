@@ -277,8 +277,12 @@ const styles = StyleSheet.create({
   },
 });
 
-export const ClassicEnumCard = props => <EnumCard {...props} />;
+export const ClassicEnumCard = (props: IEnumCardProps) => <EnumCard {...props} />;
 
-export const NordicEnumCard = props => <EnumCard {...NordicDefaultProps} {...props} />;
+export const NordicEnumCard = (props: IEnumCardProps) => (
+  <EnumCard {...NordicDefaultProps} {...props} />
+);
 
-export const AcrylicEnumCard = props => <EnumCard {...AcrylicDefaultProps} {...props} />;
+export const AcrylicEnumCard = (props: IEnumCardProps) => (
+  <EnumCard {...AcrylicDefaultProps} {...props} />
+);

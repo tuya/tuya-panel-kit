@@ -199,25 +199,35 @@ export const StyleSwitchCard: React.FC<ISwitchCardProps> = ({
 
 StyleSwitchCard.defaultProps = IDefaultProps;
 
-export const ClassicSwitchCard = props => <StyleSwitchCard type="switch" {...props} />;
-export const NordicSwitchCard = props => (
+export const ClassicSwitchCard = (props: ISwitchCardProps) => (
+  <StyleSwitchCard type="switch" {...props} />
+);
+export const NordicSwitchCard = (props: ISwitchCardProps) => (
   <StyleSwitchCard type="switch" {...NordicDefaultProps} {...props} />
 );
-export const AcrylicSwitchCard = props => (
+export const AcrylicSwitchCard = (props: ISwitchCardProps) => (
   <StyleSwitchCard type="switch" {...AcrylicDefaultProps} {...props} />
 );
 export const PaintSwitchCard = props => (
   <StyleSwitchCard type="switch" {...PaintDefaultProps} {...props} />
 );
 
-export const ClassicItemCard = props => <StyleSwitchCard {...StudioItemDefaultProps} {...props} />;
-export const NordicItemCard = props => <StyleSwitchCard {...NordicItemDefaultProps} {...props} />;
-export const AcrylicItemCard = props => <StyleSwitchCard {...AcrylicItemDefaultProps} {...props} />;
-
-export const ClassicArrowCard = props => (
-  <StyleSwitchCard {...StudioArrowDefaultProps} {...props} />
+export const ClassicItemCard = (props: ISwitchCardProps) => (
+  <StyleSwitchCard {...StudioItemDefaultProps} {...props} />
 );
-export const NordicArrowCard = props => <StyleSwitchCard {...NordicArrowDefaultProps} {...props} />;
-export const AcrylicArrowCard = props => (
-  <StyleSwitchCard {...AcrylicArrowDefaultProps} {...props} />
+export const NordicItemCard = (props: ISwitchCardProps) => (
+  <StyleSwitchCard {...NordicItemDefaultProps} {...props} />
+);
+export const AcrylicItemCard = (props: ISwitchCardProps) => (
+  <StyleSwitchCard {...AcrylicItemDefaultProps} {...props} />
+);
+
+export const ClassicArrowCard = (props: ISwitchCardProps) => (
+  <StyleSwitchCard type="arrow" {...StudioArrowDefaultProps} {...props} />
+);
+export const NordicArrowCard = (props: ISwitchCardProps) => (
+  <StyleSwitchCard type="arrow" {...NordicArrowDefaultProps} {...props} />
+);
+export const AcrylicArrowCard = (props: ISwitchCardProps) => (
+  <StyleSwitchCard type="arrow" {...AcrylicArrowDefaultProps} {...props} />
 );

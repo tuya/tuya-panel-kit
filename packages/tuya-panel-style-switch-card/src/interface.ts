@@ -115,7 +115,7 @@ export interface ISwitchCardProps
    * @description.zh 副标题样式
    * @default null
    */
-  subTextStyle?: StyleProp<ViewStyle>;
+  subTextStyle?: StyleProp<TextStyle>;
   /**
    * @description.en Switch size
    * @description.zh 开关尺寸大小

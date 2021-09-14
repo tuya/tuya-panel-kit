@@ -117,7 +117,13 @@ const styles = StyleSheet.create({
   },
 });
 
-export const ClassicButton = props => <StyleButton {...props} />;
-export const NordicButton = props => <StyleButton {...NordicDefaultProps} {...props} />;
-export const AcrylicButton = props => <StyleButton {...AcrylicDefaultProps} {...props} />;
-export const PaintButton = props => <StyleButton {...PaintDefaultProps} {...props} />;
+export const ClassicButton = (props: IButtonProps) => <StyleButton {...props} />;
+export const NordicButton = (props: IButtonProps) => (
+  <StyleButton {...NordicDefaultProps} {...props} />
+);
+export const AcrylicButton = (props: IButtonProps) => (
+  <StyleButton {...AcrylicDefaultProps} {...props} />
+);
+export const PaintButton = (props: IButtonProps) => (
+  <StyleButton {...PaintDefaultProps} {...props} />
+);

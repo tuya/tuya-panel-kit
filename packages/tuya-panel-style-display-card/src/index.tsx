@@ -89,8 +89,8 @@ export const StyleDisplayCard: React.FC<IDisplayCardProps> = ({
 
 StyleDisplayCard.defaultProps = IDefaultProps;
 
-export const ClassicDisplayCard = props => <StyleDisplayCard {...props} />;
-export const NordicDisplayCard = props => (
+export const ClassicDisplayCard = (props: IDisplayCardProps) => <StyleDisplayCard {...props} />;
+export const NordicDisplayCard = (props: IDisplayCardProps) => (
   <StyleDisplayCard
     showIcon
     iconSize={cx(22)}
@@ -109,7 +109,7 @@ export const NordicDisplayCard = props => (
     {...props}
   />
 );
-export const AcrylicDisplayCard = props => (
+export const AcrylicDisplayCard = (props: IDisplayCardProps) => (
   <StyleDisplayCard
     valueSize={cx(64)}
     valueWeight={600}
