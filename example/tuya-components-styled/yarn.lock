@@ -9605,44 +9605,44 @@ tunnel-agent@^0.6.0:
   dependencies:
     safe-buffer "^5.0.1"
 
-tuya-panel-acrylic-kit@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.nlark.com/tuya-panel-acrylic-kit/download/tuya-panel-acrylic-kit-0.0.3.tgz#92ca554f442d96c865f3c54e3892dcf49bef7726"
-  integrity sha1-kspVT0Qtlshl88VOOJLc9JvvdyY=
+tuya-panel-acrylic-kit@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/tuya-panel-acrylic-kit/-/tuya-panel-acrylic-kit-0.0.4.tgz#4c7dcab89ff1c8ee9b51f8d9a025027b7f5267e8"
+  integrity sha512-K/Y0VDC1aeOHfHnacfXchUJQbWK2KvA58I0eOjEHUSJsmL7KLTVrp02BIAwG2j33fDqlwN/6BQrBtKW+n6tSQw==
   dependencies:
-    tuya-panel-style-block-card "^0.0.3"
-    tuya-panel-style-button "^0.0.3"
-    tuya-panel-style-depict-card "^0.0.3"
-    tuya-panel-style-display-card "^0.0.3"
-    tuya-panel-style-enum-button-group "^0.0.3"
-    tuya-panel-style-enum-card "^0.0.3"
-    tuya-panel-style-enum-slider-card "^0.0.3"
-    tuya-panel-style-icon-card "^0.0.3"
-    tuya-panel-style-slider-card "^0.0.3"
-    tuya-panel-style-switch-card "^0.0.3"
+    tuya-panel-style-block-card "^0.0.4"
+    tuya-panel-style-button "^0.0.4"
+    tuya-panel-style-depict-card "^0.0.4"
+    tuya-panel-style-display-card "^0.0.4"
+    tuya-panel-style-enum-button-group "^0.0.4"
+    tuya-panel-style-enum-card "^0.0.4"
+    tuya-panel-style-enum-slider-card "^0.0.4"
+    tuya-panel-style-icon-card "^0.0.4"
+    tuya-panel-style-slider-card "^0.0.4"
+    tuya-panel-style-switch-card "^0.0.4"
 
-tuya-panel-classic-kit@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.nlark.com/tuya-panel-classic-kit/download/tuya-panel-classic-kit-0.0.3.tgz#ded8b6902116ba87e3d36eb667df484468961e24"
-  integrity sha1-3ti2kCEWuofj0262Z99IRGiWHiQ=
+tuya-panel-classic-kit@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/tuya-panel-classic-kit/-/tuya-panel-classic-kit-0.0.4.tgz#63ba73dd405064077b95e745006a266d15677d44"
+  integrity sha512-3m1cxYyQVO6IpaXCF6llltf8IdT9dByz5xVxmNSGrlub6wkGIO164dcJDp01TXew85RPjGD+u2ojUQr6n0o15Q==
   dependencies:
-    tuya-panel-style-block-card "^0.0.3"
-    tuya-panel-style-button "^0.0.3"
-    tuya-panel-style-button-card "^0.0.3"
-    tuya-panel-style-depict-card "^0.0.3"
-    tuya-panel-style-display-card "^0.0.3"
-    tuya-panel-style-enum-card "^0.0.3"
-    tuya-panel-style-enum-tabs-button-card "^0.0.3"
-    tuya-panel-style-icon-background "^0.0.3"
-    tuya-panel-style-icon-card "^0.0.3"
-    tuya-panel-style-slider-card "^0.0.3"
-    tuya-panel-style-step-card "^0.0.3"
-    tuya-panel-style-switch-card "^0.0.3"
+    tuya-panel-style-block-card "^0.0.4"
+    tuya-panel-style-button "^0.0.4"
+    tuya-panel-style-button-card "^0.0.4"
+    tuya-panel-style-depict-card "^0.0.4"
+    tuya-panel-style-display-card "^0.0.4"
+    tuya-panel-style-enum-card "^0.0.4"
+    tuya-panel-style-enum-tabs-button-card "^0.0.4"
+    tuya-panel-style-icon-background "^0.0.4"
+    tuya-panel-style-icon-card "^0.0.4"
+    tuya-panel-style-slider-card "^0.0.4"
+    tuya-panel-style-step-card "^0.0.4"
+    tuya-panel-style-switch-card "^0.0.4"
 
-tuya-panel-kit@^4.7.8:
-  version "4.7.8"
-  resolved "https://registry.npmjs.org/tuya-panel-kit/-/tuya-panel-kit-4.7.8.tgz#a9ed3be868b91d29628d9812b9b2cb1aaa64fd88"
-  integrity sha512-G04pwML7s2TSMqa5USRXSqWwk0TMaBg49s2AS2hP3sWECmGfkpe7BxMmfTSkSTL8yZCh9+oX87mjW7p31eX4+Q==
+tuya-panel-kit@^4.7.9:
+  version "4.7.9"
+  resolved "https://registry.yarnpkg.com/tuya-panel-kit/-/tuya-panel-kit-4.7.9.tgz#7a44fb02995729da244823cf6d6b20fc420ecef2"
+  integrity sha512-HmKNPfkLLL04BUAKduQeoIr+maKG4FASUUTjFP30R738G/cIFpV5geEW7hxDaYbhau/+xdo7SCwHsum9GO4SZw==
   dependencies:
     "@react-native-community/masked-view" "0.1.10"
     "@react-navigation/native" "5.7.3"
@@ -9661,177 +9661,179 @@ tuya-panel-kit@^4.7.8:
     react-native-svg "5.5.1"
     style-equal "^1.0.0"
     styled-components "^3.4.10"
-    tuya-panel-theme "^0.0.5"
-    tuya-panel-utils "^0.1.1"
+    tuya-panel-theme "^0.0.6"
+    tuya-panel-utils "^0.1.2"
 
 "tuya-panel-kit@link:.yalc/tuya-panel-kit":
   version "0.0.0"
   uid ""
 
-tuya-panel-nordic-kit@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.nlark.com/tuya-panel-nordic-kit/download/tuya-panel-nordic-kit-0.0.3.tgz#517512a031267692fba0c6a8b5b9d10c03c053c0"
-  integrity sha1-UXUSoDEmdpL7oMaotbnRDAPAU8A=
+tuya-panel-nordic-kit@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/tuya-panel-nordic-kit/-/tuya-panel-nordic-kit-0.0.4.tgz#595b46303dda06257f09d576bf42ae959a04e252"
+  integrity sha512-2erEokscla8/aBQkOGEo/faqWQIWOK8JRXLAaXjWAVx6CNl/ZJdLun+7BaamviPiGEn0CFGMcueQqF8m9El8DA==
   dependencies:
-    tuya-panel-style-block-card "^0.0.3"
-    tuya-panel-style-button "^0.0.3"
-    tuya-panel-style-button-card "^0.0.3"
-    tuya-panel-style-depict-card "^0.0.3"
-    tuya-panel-style-enum-card "^0.0.3"
-    tuya-panel-style-icon-card "^0.0.3"
-    tuya-panel-style-list-card "^0.0.3"
-    tuya-panel-style-slider-card "^0.0.3"
-    tuya-panel-style-step-card "^0.0.3"
-    tuya-panel-style-switch-card "^0.0.3"
+    tuya-panel-style-block-card "^0.0.4"
+    tuya-panel-style-button "^0.0.4"
+    tuya-panel-style-button-card "^0.0.4"
+    tuya-panel-style-depict-card "^0.0.4"
+    tuya-panel-style-display-card "^0.0.4"
+    tuya-panel-style-enum-card "^0.0.4"
+    tuya-panel-style-icon-card "^0.0.4"
+    tuya-panel-style-list-card "^0.0.4"
+    tuya-panel-style-slider-card "^0.0.4"
+    tuya-panel-style-step-card "^0.0.4"
+    tuya-panel-style-switch-card "^0.0.4"
 
-tuya-panel-style-block-card@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.nlark.com/tuya-panel-style-block-card/download/tuya-panel-style-block-card-0.0.3.tgz#7cd1bb43679c3d947d5ad8f2c7ed0dbee2015ed6"
-  integrity sha1-fNG7Q2ecPZR9Wtjyx+0NvuIBXtY=
+tuya-panel-style-block-card@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/tuya-panel-style-block-card/-/tuya-panel-style-block-card-0.0.4.tgz#f87a333ff785547c17a4fa3c9681cfd273f8b067"
+  integrity sha512-yEgxDDo+j61oOH+lJkuYVWO/4vL5ASTnA1sVZ1WKwl3+SVb+OuVDZOObomkQgDkBvcVDQ38K75WWV0rTTeMCFQ==
   dependencies:
-    tuya-panel-kit "^4.7.8"
-    tuya-panel-style-icon-background "^0.0.3"
-    tuya-panel-utils "^0.1.1"
+    tuya-panel-kit "^4.7.9"
+    tuya-panel-style-icon-background "^0.0.4"
+    tuya-panel-utils "^0.1.2"
 
-tuya-panel-style-button-card@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.nlark.com/tuya-panel-style-button-card/download/tuya-panel-style-button-card-0.0.3.tgz#8b9b276d1de8afc428f63b0f323782692de699b3"
-  integrity sha1-i5snbR3or8Qo9jsPMjeCaS3mmbM=
+tuya-panel-style-button-card@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/tuya-panel-style-button-card/-/tuya-panel-style-button-card-0.0.4.tgz#00001cb6421632921b162e2545417d771b3ba40a"
+  integrity sha512-BJ1tKcuKR9WltkPiLOypa1BDr39R4F37L9Um41ee/8qQ7KCZWdwNtLKs5Ztk/tsnxCA6e8exKQwd7ezOUVvawg==
   dependencies:
-    tuya-panel-kit "^4.7.8"
-    tuya-panel-style-icon-background "^0.0.3"
-    tuya-panel-utils "^0.1.1"
+    tuya-panel-kit "^4.7.9"
+    tuya-panel-style-icon-background "^0.0.4"
+    tuya-panel-utils "^0.1.2"
 
-tuya-panel-style-button@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.nlark.com/tuya-panel-style-button/download/tuya-panel-style-button-0.0.3.tgz#5fa13b833fe2c0bfc9748e8ec0cf1512b9c9a341"
-  integrity sha1-X6E7gz/iwL/JdI6OwM8VErnJo0E=
+tuya-panel-style-button@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/tuya-panel-style-button/-/tuya-panel-style-button-0.0.4.tgz#2e8e32d12bf71d688a047c5f65b4d4f62a2584c1"
+  integrity sha512-qrALU++P5ZyoUS1tmvOXrUySeOGJut2SaTr9+vz2uFsK1TAg2mx7IbdqhQLiQCOE8tBeOE7kchYJz1Dt6tU8Jg==
   dependencies:
-    tuya-panel-kit "^4.7.8"
-    tuya-panel-utils "^0.1.1"
+    tuya-panel-kit "^4.7.9"
+    tuya-panel-style-icon-background "^0.0.4"
+    tuya-panel-utils "^0.1.2"
 
-tuya-panel-style-depict-card@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.nlark.com/tuya-panel-style-depict-card/download/tuya-panel-style-depict-card-0.0.3.tgz#49a0943099c904d01dfab7121fb2fd33fe5cbe9e"
-  integrity sha1-SaCUMJnJBNAd+rcSH7L9M/5cvp4=
+tuya-panel-style-depict-card@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/tuya-panel-style-depict-card/-/tuya-panel-style-depict-card-0.0.4.tgz#6d3c3cf8d4fc536117eff8508038e5547844b803"
+  integrity sha512-o6gHqP89xh3UfWCyrcl5bKZMh8rEi61AEKoJsCMHcXu9HCl9mOj4ycc/caB7RXdEsU3KFpNO05+w195neIGyxw==
   dependencies:
-    tuya-panel-kit "^4.7.8"
-    tuya-panel-style-icon-background "^0.0.3"
-    tuya-panel-utils "^0.1.1"
+    tuya-panel-kit "^4.7.9"
+    tuya-panel-style-icon-background "^0.0.4"
+    tuya-panel-utils "^0.1.2"
 
-tuya-panel-style-display-card@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.nlark.com/tuya-panel-style-display-card/download/tuya-panel-style-display-card-0.0.3.tgz#6cc0d60eb9e703b51a47e44c2f13ffff745da4e3"
-  integrity sha1-bMDWDrnnA7UaR+RMLxP//3RdpOM=
+tuya-panel-style-display-card@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/tuya-panel-style-display-card/-/tuya-panel-style-display-card-0.0.4.tgz#cbac7c2bb3b861932ec1c3b54c9eb64c62e890d0"
+  integrity sha512-END4TvcU4ycGC0HVo9oPT9B3P+aEBsfGBG3/JzB2745NyWaXay2KpiXjL7tq8N2IN9OHi4t389CeeWDGHoObTg==
   dependencies:
-    tuya-panel-kit "^4.7.8"
-    tuya-panel-style-icon-background "^0.0.3"
-    tuya-panel-utils "^0.1.1"
+    tuya-panel-kit "^4.7.9"
+    tuya-panel-style-icon-background "^0.0.4"
+    tuya-panel-utils "^0.1.2"
 
-tuya-panel-style-enum-button-group@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.nlark.com/tuya-panel-style-enum-button-group/download/tuya-panel-style-enum-button-group-0.0.3.tgz#7226f23bbd40d1f98ba79e35ba9292ea8fde7323"
-  integrity sha1-cibyO71A0fmLp541upKS6o/ecyM=
+tuya-panel-style-enum-button-group@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/tuya-panel-style-enum-button-group/-/tuya-panel-style-enum-button-group-0.0.4.tgz#222c03b7c61ada47785883535b3e3049530d36ea"
+  integrity sha512-0AkoUURjDsed5U6bI5wQfB4yMx8LZ/45FrEDhfRfNlKH3BlYX4kFlBs0jOPMffx5gJZiLiF690/bBAIbzFwH0g==
   dependencies:
-    tuya-panel-kit "^4.7.8"
-    tuya-panel-style-icon-background "^0.0.3"
-    tuya-panel-utils "^0.1.1"
+    tuya-panel-kit "^4.7.9"
+    tuya-panel-style-icon-background "^0.0.4"
+    tuya-panel-utils "^0.1.2"
 
-tuya-panel-style-enum-card@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.nlark.com/tuya-panel-style-enum-card/download/tuya-panel-style-enum-card-0.0.3.tgz#9fbc540d79c61f819ea4edb1d4a617a066333585"
-  integrity sha1-n7xUDXnGH4GepO2x1KYXoGYzNYU=
+tuya-panel-style-enum-card@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/tuya-panel-style-enum-card/-/tuya-panel-style-enum-card-0.0.4.tgz#449848bf7b53a1bd1628281ea32e6f5833346b0c"
+  integrity sha512-3DF0oZ+tjSuJILIt9R5ydmUvGe6sngHlBp7ESE1F9+AoAPvVt4MLSlsvy79+q+5KPzxFsFGN+7q8Wh2xhwZF9g==
   dependencies:
-    tuya-panel-kit "^4.7.8"
-    tuya-panel-style-icon-background "^0.0.3"
-    tuya-panel-utils "^0.1.1"
+    tuya-panel-kit "^4.7.9"
+    tuya-panel-style-icon-background "^0.0.4"
+    tuya-panel-utils "^0.1.2"
 
-tuya-panel-style-enum-slider-card@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.nlark.com/tuya-panel-style-enum-slider-card/download/tuya-panel-style-enum-slider-card-0.0.3.tgz#70f7b8e8325b42e941cb8d273ace15fea59b5521"
-  integrity sha1-cPe46DJbQulBy40nOs4V/qWbVSE=
+tuya-panel-style-enum-slider-card@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/tuya-panel-style-enum-slider-card/-/tuya-panel-style-enum-slider-card-0.0.4.tgz#818b64900261ccc205157488e7e754ced1e9cad4"
+  integrity sha512-BWNyPqD8psP7LAJi/CjynIdpi8VlI/55j2ALtQyTWTLCSCY0Iwi6IfcacOdXgDP6TZ54tigyMM6vk5W7bl7wwA==
   dependencies:
-    tuya-panel-kit "^4.7.8"
-    tuya-panel-style-slider-card "^0.0.3"
-    tuya-panel-utils "^0.1.1"
+    tuya-panel-kit "^4.7.9"
+    tuya-panel-style-slider-card "^0.0.4"
+    tuya-panel-utils "^0.1.2"
 
-tuya-panel-style-enum-tabs-button-card@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.nlark.com/tuya-panel-style-enum-tabs-button-card/download/tuya-panel-style-enum-tabs-button-card-0.0.3.tgz#a61470f0312f9c6d7861b5907fcb7692be9f0552"
-  integrity sha1-phRw8DEvnG14YbWQf8t2kr6fBVI=
+tuya-panel-style-enum-tabs-button-card@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/tuya-panel-style-enum-tabs-button-card/-/tuya-panel-style-enum-tabs-button-card-0.0.4.tgz#4d09f6b2b02489e417d4fdab5046843226029b72"
+  integrity sha512-KcsTjTLMhQcbePwmblmQDPrkXyu019fGo4wDRq0PFo1FQq2LtFuKyjQDHI3KsEas+F+eVTiXhaeNQVX26Pry7g==
   dependencies:
-    tuya-panel-kit "^4.7.8"
-    tuya-panel-style-icon-background "^0.0.3"
-    tuya-panel-utils "^0.1.1"
+    tuya-panel-kit "^4.7.9"
+    tuya-panel-style-icon-background "^0.0.4"
+    tuya-panel-utils "^0.1.2"
 
-tuya-panel-style-icon-background@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.nlark.com/tuya-panel-style-icon-background/download/tuya-panel-style-icon-background-0.0.3.tgz#686efe63cab565680d0c06be831ea52ecc758783"
-  integrity sha1-aG7+Y8q1ZWgNDAa+gx6lLsx1h4M=
+tuya-panel-style-icon-background@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/tuya-panel-style-icon-background/-/tuya-panel-style-icon-background-0.0.4.tgz#105f205911076a720486e3022074037775e45666"
+  integrity sha512-lxgjhJaxj3eFANoTjTqOo31QD5+6F9nBmKOk4jQAXjkG+OFfdAGrWbh7dc2uOGUQtnhZ8xTOClIlOq9EuC/xzg==
   dependencies:
-    tuya-panel-kit "^4.7.8"
-    tuya-panel-utils "^0.1.1"
+    tuya-panel-kit "^4.7.9"
+    tuya-panel-utils "^0.1.2"
 
-tuya-panel-style-icon-card@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.nlark.com/tuya-panel-style-icon-card/download/tuya-panel-style-icon-card-0.0.3.tgz#ae7746fdf2ac7f8026effe49f88c39d5213888e2"
-  integrity sha1-rndG/fKsf4Am7/5J+Iw51SE4iOI=
+tuya-panel-style-icon-card@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/tuya-panel-style-icon-card/-/tuya-panel-style-icon-card-0.0.4.tgz#fe91cb90dcd52f25339269bf2aa37f154dc98763"
+  integrity sha512-3IH2BmodUuj4/OcBZFvKgcubZpdQyHjnDx0Mu1JRJakDpJ0/LtSbsmBIbLtmUTd4rCSlkNUTjGEydrIYt3atMw==
   dependencies:
-    tuya-panel-kit "^4.7.8"
-    tuya-panel-style-icon-background "^0.0.3"
-    tuya-panel-utils "^0.1.1"
+    tuya-panel-kit "^4.7.9"
+    tuya-panel-style-icon-background "^0.0.4"
+    tuya-panel-utils "^0.1.2"
 
-tuya-panel-style-list-card@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.nlark.com/tuya-panel-style-list-card/download/tuya-panel-style-list-card-0.0.3.tgz#89553a4b7d3aabe682a0e5be0d50153031eb6ab4"
-  integrity sha1-iVU6S306q+aCoOW+DVAVMDHrarQ=
+tuya-panel-style-list-card@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/tuya-panel-style-list-card/-/tuya-panel-style-list-card-0.0.4.tgz#25fce2229a72048abfae70462075e2a2fd41e31d"
+  integrity sha512-K7cfvrS+23e4NoZ+RjxZWotMI0Zw2kGgo7bNe1X8DuKzKOanfiXd+jhN8prA5J9Bnk3aLKijZedtD3o+nE5aAw==
   dependencies:
-    tuya-panel-kit "^4.7.8"
-    tuya-panel-style-icon-background "^0.0.3"
-    tuya-panel-utils "^0.1.1"
+    tuya-panel-kit "^4.7.9"
+    tuya-panel-style-icon-background "^0.0.4"
+    tuya-panel-utils "^0.1.2"
 
-tuya-panel-style-slider-card@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.nlark.com/tuya-panel-style-slider-card/download/tuya-panel-style-slider-card-0.0.3.tgz#965abb10a279559557563fa03fb5bcc518b008f6"
-  integrity sha1-llq7EKJ5VZVXVj+gP7W8xRiwCPY=
+tuya-panel-style-slider-card@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/tuya-panel-style-slider-card/-/tuya-panel-style-slider-card-0.0.4.tgz#8ff10f6ad303666dce269af171b705a7a8878122"
+  integrity sha512-14ZypUMaeBsy28/G8RYt7r3WfLsFxb0iRnoyz5OZtWiHYNu7EYwOZDHhRJ0P+jrE43YOUzZmAv7HFpu/QZK64A==
   dependencies:
-    tuya-panel-kit "^4.7.8"
-    tuya-panel-style-icon-background "^0.0.3"
-    tuya-panel-utils "^0.1.1"
+    tuya-panel-kit "^4.7.9"
+    tuya-panel-style-icon-background "^0.0.4"
+    tuya-panel-utils "^0.1.2"
 
-tuya-panel-style-step-card@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.nlark.com/tuya-panel-style-step-card/download/tuya-panel-style-step-card-0.0.3.tgz#abb72bf3e081d5c265afbee400afa4be69f53d30"
-  integrity sha1-q7cr8+CB1cJlr77kAK+kvmn1PTA=
+tuya-panel-style-step-card@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/tuya-panel-style-step-card/-/tuya-panel-style-step-card-0.0.4.tgz#15b0afd69e9609349797ce1fe9d4be521a86ec33"
+  integrity sha512-s2fRUy0djY006O7Hmzg2iQcj8kW/3u9Ssq9mq9j0Y4/LVWq4TYM2KxB8TNIs+dEhVyAvqBpRafblLU5uGhERBw==
   dependencies:
-    tuya-panel-kit "^4.7.8"
-    tuya-panel-style-icon-background "^0.0.3"
-    tuya-panel-utils "^0.1.1"
+    tuya-panel-kit "^4.7.9"
+    tuya-panel-style-icon-background "^0.0.4"
+    tuya-panel-utils "^0.1.2"
 
-tuya-panel-style-switch-card@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.nlark.com/tuya-panel-style-switch-card/download/tuya-panel-style-switch-card-0.0.3.tgz#fd706e24b20bd6092b645fce0a7630e0f49145e3"
-  integrity sha1-/XBuJLIL1gkrZF/OCnYw4PSRReM=
+tuya-panel-style-switch-card@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/tuya-panel-style-switch-card/-/tuya-panel-style-switch-card-0.0.4.tgz#0591172505c5fba09d9af57eb2857ae038c19cd4"
+  integrity sha512-3KbpVu/RIMX+uSwQPKqvmQ08chxxsGa+PnJA40oSwL6eX0Cbqi7snLf1DnYoRo2+JTM1JYAnhqqPpOtdmHlsnA==
   dependencies:
-    tuya-panel-kit "^4.7.8"
-    tuya-panel-style-icon-background "^0.0.3"
-    tuya-panel-utils "^0.1.1"
+    tuya-panel-kit "^4.7.9"
+    tuya-panel-style-icon-background "^0.0.4"
+    tuya-panel-utils "^0.1.2"
 
-tuya-panel-theme@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.nlark.com/tuya-panel-theme/download/tuya-panel-theme-0.0.5.tgz#0ba589c0eb8e23325df0c37fdeba40e0b565918e"
-  integrity sha1-C6WJwOuOIzJd8MN/3rpA4LVlkY4=
+tuya-panel-theme@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/tuya-panel-theme/-/tuya-panel-theme-0.0.6.tgz#19a0be3fd223248d50b14686bb059265e95d240a"
+  integrity sha512-YaOVnVcjxNRmCvJP2WNEI3infkcp1C6PiG63sVXyoj2dvnAjjm6JP41vI/XAfR/ViWj9F+H9BD6VLxPFy/w6Dg==
   dependencies:
-    tuya-panel-utils "^0.1.1"
+    tuya-panel-utils "^0.1.2"
 
 "tuya-panel-theme@link:.yalc/tuya-panel-theme":
   version "0.0.0"
   uid ""
 
-tuya-panel-utils@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.nlark.com/tuya-panel-utils/download/tuya-panel-utils-0.1.1.tgz#d424c5dbbce247fb8a3fa0b438b6b85c694c547d"
-  integrity sha1-1CTF27ziR/uKP6C0OLa4XGlMVH0=
+tuya-panel-utils@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/tuya-panel-utils/-/tuya-panel-utils-0.1.2.tgz#fafec8ed28c5c042b95a92aca48de65aaeac954a"
+  integrity sha512-UW15le5VY2k7xxmpiJcm7IdHTCFKNW1WKOhHNq/PAHgceFITnCfRXouoL9LSuhyFPvAEoTgtb+fIRVJUP7V3RA==
 
 "tuya-panel-utils@link:.yalc/tuya-panel-utils":
   version "0.0.0"
