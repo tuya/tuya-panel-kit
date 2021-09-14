@@ -65,6 +65,11 @@ class NumberSelectorPopup extends Component {
      * @version 2.0.0-rc.7
      */
     isValueChangeUniform: PropTypes.bool,
+    /**
+     * 数值样式
+     * @version 4.7.9
+     */
+    valueStyle: ViewPropTypes.style,
   };
 
   static defaultProps = {
@@ -78,6 +83,7 @@ class NumberSelectorPopup extends Component {
     _onDataChange: () => {},
     valueChangeTime: 250,
     isValueChangeUniform: false,
+    valueStyle: null,
   };
 
   constructor(props) {
@@ -217,6 +223,7 @@ class NumberSelectorPopup extends Component {
       value,
       onValueChange,
       _onDataChange,
+      valueStyle,
       ...sliderProps
     } = this.props;
     const opacityStyle = { opacity: switchValue ? 1 : 0.6 };
@@ -235,7 +242,7 @@ class NumberSelectorPopup extends Component {
               style={[{ flexDirection: 'column' }, numberSelectorWrapperStyle]}
               flexDirection="column"
             >
-              <StyledDisplayText style={opacityStyle}>
+              <StyledDisplayText style={[opacityStyle, valueStyle]}>
                 {`${scaleNumber(scale, this.state.value)}`}
               </StyledDisplayText>
               <StyledSliderContainer>
@@ -260,7 +267,7 @@ class NumberSelectorPopup extends Component {
         content = (
           <StyledSliderContent style={numberSelectorWrapperStyle}>
             {this.renderMinusBtn()}
-            <StyledDisplayText style={opacityStyle}>
+            <StyledDisplayText style={[opacityStyle, valueStyle]}>
               {`${scaleNumber(scale, this.state.value)}`}
             </StyledDisplayText>
             {this.renderPlusBtn()}
