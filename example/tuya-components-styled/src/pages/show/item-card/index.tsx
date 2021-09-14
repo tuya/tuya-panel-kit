@@ -1,8 +1,8 @@
 import React from 'react';
 import { View } from 'react-native';
-import { ClassicEnumCard } from 'tuya-panel-classic-kit';
-import { NordicEnumCard } from 'tuya-panel-nordic-kit';
-import { AcrylicEnumCard } from 'tuya-panel-acrylic-kit';
+import { ClassicItemCard } from 'tuya-panel-classic-kit';
+import { NordicItemCard } from 'tuya-panel-nordic-kit';
+import { AcrylicItemCard } from 'tuya-panel-acrylic-kit';
 import { Utils } from 'tuya-panel-utils';
 import TuyaRNSvgs from 'tuya-panel-kit/lib/components/iconfont/svg/defaultSvg';
 import { ListView } from '#components';
@@ -19,23 +19,49 @@ export default () => {
           title: Strings.getLang('studio'),
           content: (
             <View>
-              <ClassicEnumCard icon={TuyaRNSvgs.power} />
-              <ClassicEnumCard
+              <ClassicItemCard
                 icon={TuyaRNSvgs.power}
-                subText="switch card"
+                text="Item Card"
+                onValueChange={() => {
+                  console.log('pppp');
+                }}
+              />
+              <ClassicItemCard
+                icon={TuyaRNSvgs.power}
+                subText="Item card"
                 style={{ marginTop: 20 }}
                 padding={[cx(12), cx(20), cx(12), cx(20)]}
+                text="Item Card"
+                onValueChange={() => {
+                  console.log('pppp');
+                }}
               />
             </View>
           ),
         },
         {
           title: Strings.getLang('nordic'),
-          content: <NordicEnumCard icon={TuyaRNSvgs.power} />,
+          content: (
+            <NordicItemCard
+              icon={TuyaRNSvgs.power}
+              text="Item Card"
+              onValueChange={() => {
+                console.log('pppp');
+              }}
+            />
+          ),
         },
         {
           title: Strings.getLang('acrylic'),
-          content: <AcrylicEnumCard icon={TuyaRNSvgs.power} />,
+          content: (
+            <AcrylicItemCard
+              icon={TuyaRNSvgs.power}
+              text="Item Card"
+              onValueChange={() => {
+                console.log('pppp');
+              }}
+            />
+          ),
         },
       ]}
     />

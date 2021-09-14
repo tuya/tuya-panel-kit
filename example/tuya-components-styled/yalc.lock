@@ -2,14 +2,14 @@
   "version": "v1",
   "packages": {
     "tuya-panel-kit": {
-      "signature": "76d61b279f044b5785cb5ec5b4e74b03",
+      "signature": "97e3545e018c774b3b835130699e739a",
       "replaced": "file:.yalc/tuya-panel-kit"
     },
     "tuya-panel-utils": {
-      "signature": "18ad03e2c6a96645a87fd36b36e56dc3"
+      "signature": "244d2542924531b60468e9aaac37e837"
     },
     "tuya-panel-theme": {
-      "signature": "9086bbb716261ad245bf8983b06269a9"
+      "signature": "26d2edf5c4fc30cd8d4ea13fd3ef1e62"
     }
   }
 }
