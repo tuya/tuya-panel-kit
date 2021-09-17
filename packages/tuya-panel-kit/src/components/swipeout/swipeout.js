@@ -262,7 +262,7 @@ class Swipeout extends React.Component {
   };
 
   handlePanResponderEnd = (e, gestureState) => {
-    const { disabled } = this.props;
+    const { disabled, onScrollEnd } = this.props;
     const {
       openedLeft,
       openedRight,
@@ -292,8 +292,8 @@ class Swipeout extends React.Component {
         this.onHide();
       }
     }
-    if (this.props.onScrollEnd) {
-      this.props.onScrollEnd();
+    if (typeof onScrollEnd === 'function' && onScrollEnd) {
+      onScrollEnd();
     }
   };
 
