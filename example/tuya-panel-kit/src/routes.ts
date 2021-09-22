@@ -46,8 +46,28 @@ import RotationView from './pages/presentation/rotation-view';
 import TYFlatList from './pages/presentation/tyflat-list';
 import TYListItem from './pages/presentation/tylist-item';
 import TYSectionList from './pages/presentation/tysection-list';
+// animation
+import Diffusion from './pages/animation/diffusion';
+import Drawer from './pages/animation/drawer';
+import Wave from './pages/animation/wave';
 
 export const routes = [
+  // animation
+  // {
+  //   name: Strings.getLang('diffusion'),
+  //   href: '/animation/diffusion',
+  //   component: Diffusion,
+  // },
+  // {
+  //   name: Strings.getLang('drawer'),
+  //   href: '/animation/drawer',
+  //   component: Drawer,
+  // },
+  // {
+  //   name: Strings.getLang('wave'),
+  //   href: '/animation/wave',
+  //   component: Wave,
+  // },
   // basic
   {
     name: Strings.getLang('battery'),
