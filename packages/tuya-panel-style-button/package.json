@@ -1,6 +1,6 @@
 {
   "name": "tuya-panel-style-button",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Stylized Components - StyleButton",
   "author": "ZengBeauty <2497752603@qq.com>",
   "homepage": "https://github.com/tuya/tuya-panel-kit#readme",
@@ -31,8 +31,8 @@
     "url": "https://github.com/tuya/tuya-panel-kit/issues"
   },
   "dependencies": {
-    "tuya-panel-kit": "^4.7.9",
-    "tuya-panel-style-icon-background": "^0.0.4",
+    "tuya-panel-kit": "^4.7.10",
+    "tuya-panel-style-icon-background": "^0.0.5",
     "tuya-panel-utils": "^0.1.2"
   },
   "devDependencies": {
