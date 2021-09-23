@@ -101,6 +101,10 @@ class Swipeout extends React.Component {
      */
     scroll: PropTypes.func,
     /**
+     * 滑动结束函数
+     */
+    onScrollEnd: PropTypes.func,
+    /**
      * 容器样式
      */
     style: ViewPropTypes.style,
@@ -258,7 +262,7 @@ class Swipeout extends React.Component {
   };
 
   handlePanResponderEnd = (e, gestureState) => {
-    const { disabled } = this.props;
+    const { disabled, onScrollEnd } = this.props;
     const {
       openedLeft,
       openedRight,
@@ -287,6 +291,9 @@ class Swipeout extends React.Component {
       } else {
         this.onHide();
       }
+    }
+    if (typeof onScrollEnd === 'function' && onScrollEnd) {
+      onScrollEnd();
     }
   };
 
@@ -378,12 +385,18 @@ class Swipeout extends React.Component {
 }
 
 const styles = StyleSheet.create({
+  colorDelete: {
+    backgroundColor: '#fb3d38',
+  },
+  colorPrimary: {
+    backgroundColor: '#006fff',
+  },
+  colorSecondary: {
+    backgroundColor: '#fd9427',
+  },
   swipeout: {
     backgroundColor: '#dbddde',
     overflow: 'hidden',
-  },
-  swipeoutBtnWrapperStyle: {
-    flex: 1,
   },
   swipeoutBtn: {
     alignItems: 'center',
@@ -396,6 +409,9 @@ const styles = StyleSheet.create({
     color: '#fff',
     textAlign: 'center',
   },
+  swipeoutBtnWrapperStyle: {
+    flex: 1,
+  },
   swipeoutBtns: {
     bottom: 0,
     flex: 1,
@@ -405,15 +421,6 @@ const styles = StyleSheet.create({
     top: 0,
   },
   swipeoutContent: {},
-  colorDelete: {
-    backgroundColor: '#fb3d38',
-  },
-  colorPrimary: {
-    backgroundColor: '#006fff',
-  },
-  colorSecondary: {
-    backgroundColor: '#fd9427',
-  },
 });
 
 export default Swipeout;
