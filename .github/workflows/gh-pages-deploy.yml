@@ -1,4 +1,4 @@
-name: github pages styled
+name: github pages deploy
 on:
   workflow_run:
     workflows: ["github pages kit", "github pages styled"]
