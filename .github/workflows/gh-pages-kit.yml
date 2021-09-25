@@ -1,0 +1,19 @@
+name: github pages kit
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master # default branch
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build tuya-panel-kit
+        run: |
+          project=tuya-panel-kit
+          cd example/$project
+          yarn add tuya-panel-kit tuya-panel-utils tuya-panel-theme --registry=https://registry.npmjs.org
+          DEV_MODE=umi yarn umi build
+          cp -r ./dist ../dist/$project
