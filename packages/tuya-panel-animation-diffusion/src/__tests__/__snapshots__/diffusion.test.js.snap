@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Diffusion components basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "height": 400,
+        "justifyContent": "center",
+        "width": 400,
+      },
+      Object {},
+    ]
+  }
+>
+  <AnimatedComponent
+    key="0"
+    style={
+      Array [
+        Object {
+          "borderColor": "#00FF00",
+          "borderWidth": 10,
+          "position": "absolute",
+        },
+        Object {
+          "borderRadius": 100,
+          "height": 200,
+          "opacity": 0,
+          "width": 200,
+        },
+      ]
+    }
+  />
+  <AnimatedComponent
+    key="1"
+    style={
+      Array [
+        Object {
+          "borderColor": "#00FF00",
+          "borderWidth": 10,
+          "position": "absolute",
+        },
+        Object {
+          "borderRadius": 100,
+          "height": 200,
+          "opacity": 0,
+          "width": 200,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 200,
+        "justifyContent": "center",
+        "width": 200,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#fff",
+          "borderRadius": 50,
+          "height": 100,
+          "width": 100,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Diffusion components componentWillReceiveProps render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "height": 400,
+        "justifyContent": "center",
+        "width": 400,
+      },
+      Object {},
+    ]
+  }
+>
+  <AnimatedComponent
+    key="0"
+    style={
+      Array [
+        Object {
+          "borderColor": "#00FF00",
+          "borderWidth": 10,
+          "position": "absolute",
+        },
+        Object {
+          "borderRadius": 100,
+          "height": 200,
+          "opacity": 1,
+          "width": 200,
+        },
+      ]
+    }
+  />
+  <AnimatedComponent
+    key="1"
+    style={
+      Array [
+        Object {
+          "borderColor": "#00FF00",
+          "borderWidth": 10,
+          "position": "absolute",
+        },
+        Object {
+          "borderRadius": 100,
+          "height": 200,
+          "opacity": 1,
+          "width": 200,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 200,
+        "justifyContent": "center",
+        "width": 200,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#fff",
+          "borderRadius": 50,
+          "height": 100,
+          "width": 100,
+        }
+      }
+    />
+  </View>
+</View>
+`;

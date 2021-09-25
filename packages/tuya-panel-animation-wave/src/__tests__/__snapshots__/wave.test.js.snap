@@ -1,0 +1,190 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WaveView components basic render 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderRadius": 60,
+      "height": 120,
+      "overflow": "hidden",
+      "width": 120,
+    }
+  }
+>
+  <AnimatedComponent
+    key="0"
+    preserveAspectRatio="xMinYMin meet"
+    style={
+      Object {
+        "bottom": 0,
+        "height": 87,
+        "left": 0,
+        "position": "absolute",
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+        "width": 360,
+      }
+    }
+    viewBox="0 0 360 87"
+  >
+    <Path
+      d="M 0 15 Q 30 30 60 15 T 120 15 T 180 15 T 240 15 T 300 15 T 360 15 V  87 H 0 Z"
+      fill="#bde1dd"
+    />
+  </AnimatedComponent>
+  <AnimatedComponent
+    key="1"
+    preserveAspectRatio="xMinYMin meet"
+    style={
+      Object {
+        "bottom": 0,
+        "height": 82,
+        "left": 0,
+        "position": "absolute",
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+        "width": 600,
+      }
+    }
+    viewBox="0 0 600 82"
+  >
+    <Path
+      d="M 0 10 Q 25 20 50 10 T 100 10 T 150 10 T 200 10 T 250 10 T 300 10 T 350 10 T 400 10 T 450 10 T 500 10 T 550 10 T 600 10 V  82 H 0 Z"
+      fill="#239c8e"
+    />
+  </AnimatedComponent>
+</View>
+`;
+
+exports[`WaveView components componentWillReceiveProps render 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderRadius": 60,
+      "height": 120,
+      "overflow": "hidden",
+      "width": 120,
+    }
+  }
+>
+  <AnimatedComponent
+    key="0"
+    preserveAspectRatio="xMinYMin meet"
+    style={
+      Object {
+        "bottom": 0,
+        "height": 87,
+        "left": 0,
+        "position": "absolute",
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+        "width": 360,
+      }
+    }
+    viewBox="0 0 360 87"
+  >
+    <Path
+      d="M 0 15 Q 30 30 60 15 T 120 15 T 180 15 T 240 15 T 300 15 T 360 15 V  87 H 0 Z"
+      fill="#bde1dd"
+    />
+  </AnimatedComponent>
+  <AnimatedComponent
+    key="1"
+    preserveAspectRatio="xMinYMin meet"
+    style={
+      Object {
+        "bottom": 0,
+        "height": 82,
+        "left": 0,
+        "position": "absolute",
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+        "width": 600,
+      }
+    }
+    viewBox="0 0 600 82"
+  >
+    <Path
+      d="M 0 10 Q 25 20 50 10 T 100 10 T 150 10 T 200 10 T 250 10 T 300 10 T 350 10 T 400 10 T 450 10 T 500 10 T 550 10 T 600 10 V  82 H 0 Z"
+      fill="#239c8e"
+    />
+  </AnimatedComponent>
+</View>
+`;
+
+exports[`WaveView components componentWillReceiveProps render 2`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "transparent",
+      "borderRadius": 60,
+      "height": 120,
+      "overflow": "hidden",
+      "width": 120,
+    }
+  }
+>
+  <AnimatedComponent
+    key="0"
+    preserveAspectRatio="xMinYMin meet"
+    style={
+      Object {
+        "bottom": 0,
+        "height": 87,
+        "left": 0,
+        "position": "absolute",
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+        "width": 360,
+      }
+    }
+    viewBox="0 0 360 87"
+  >
+    <Path
+      d="M 0 15 Q 30 30 60 15 T 120 15 T 180 15 T 240 15 T 300 15 T 360 15 V  87 H 0 Z"
+      fill="#bde1dd"
+    />
+  </AnimatedComponent>
+  <AnimatedComponent
+    key="1"
+    preserveAspectRatio="xMinYMin meet"
+    style={
+      Object {
+        "bottom": 0,
+        "height": 82,
+        "left": 0,
+        "position": "absolute",
+        "transform": Array [
+          Object {
+            "translateX": 0,
+          },
+        ],
+        "width": 600,
+      }
+    }
+    viewBox="0 0 600 82"
+  >
+    <Path
+      d="M 0 10 Q 25 20 50 10 T 100 10 T 150 10 T 200 10 T 250 10 T 300 10 T 350 10 T 400 10 T 450 10 T 500 10 T 550 10 T 600 10 V  82 H 0 Z"
+      fill="#239c8e"
+    />
+  </AnimatedComponent>
+</View>
+`;

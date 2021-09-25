@@ -1,5 +1,6 @@
 import { join } from 'path';
 import { defineConfig, IConfig } from 'umi';
+import routes from './read-routes'
 
 const isProd =
   process.env.NODE_ENV === 'production' && process.env.PREVIEW_PR !== 'true';
@@ -14,6 +15,7 @@ export default defineConfig({
   locale: {
     default: 'zh'
   },
+  routes,
   alias: {
     ...flatDep.reduce((acc, dep) => ({ ...acc, [dep]: join(__dirname, `node_modules`, dep) }), {}),
     "@modules": join(__dirname, "./src/modules"),

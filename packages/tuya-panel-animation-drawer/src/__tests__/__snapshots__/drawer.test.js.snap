@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Drawer components basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+      },
+      Object {},
+    ]
+  }
+>
+  <AnimatedComponent
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Array [
+        Object {
+          "top": 0,
+        },
+        Object {
+          "backgroundColor": "rgba(0,0,0,0.6)",
+          "height": 1334,
+          "position": "absolute",
+          "width": 750,
+        },
+        Object {
+          "left": 0,
+          "opacity": 1,
+        },
+      ]
+    }
+  />
+  <AnimatedComponent
+    style={
+      Object {
+        "flexDirection": "row",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#F8F8F8",
+          },
+          Object {
+            "height": 667,
+            "width": 125,
+          },
+        ]
+      }
+    />
+  </AnimatedComponent>
+</View>
+`;

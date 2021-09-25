@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
   container: {
     paddingTop: cx(24),
     backgroundColor: '#F5F5F5',
-    height: height - 56,
+    height,
   },
   block: {
     marginBottom: cx(16),
