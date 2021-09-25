@@ -343,6 +343,27 @@ export default {
     tysectionlist_switch_title: 'The situation where the title of the list is too long --- ',
     tysectionlist_switch_subTitle:
       'This is the case where the detailed information content of this list is too long',
+
+    // diffusion
+
+    diffusion: 'Diffusion',
+    diffusion_basic: 'Basic style',
+    diffusion_children: 'Custom children',
+
+    // drawer
+    drawer: 'Drawer',
+    drawer_left: 'Click to open the left drawer',
+    drawer_top: 'Click to open the top drawer',
+    drawer_right: 'Click to open the right drawer',
+    drawer_bottom: 'Click to open the bottom drawer',
+    drawer_withMask: 'I have a mask',
+    drawer_withoutMask: "I don't have a mask",
+
+    // wave
+
+    wave: 'Wave',
+    wave_basic: 'Basic pattern of water ripples',
+    wave_custom: 'Custom water ripple style',
   },
   zh: {
     // debug
@@ -687,5 +708,25 @@ export default {
     tysectionlist_switch_title: '列表标题过长的情况列表标题过长的情况列表标题过长的情况',
     tysectionlist_switch_subTitle:
       '这是这个列表的详细信息内容过长的情况这是这个列表的详细信息内容过长的情况',
+    // diffusion
+
+    diffusion: 'Diffusion 水波纹',
+    diffusion_basic: '基础样式',
+    diffusion_children: '自定义子组件',
+
+    //  drawer
+    drawer: 'Drawer 抽屉动画',
+    drawer_left: '点击打开左边抽屉',
+    drawer_top: '点击打开上边抽屉',
+    drawer_right: '点击打开右边抽屉',
+    drawer_bottom: '点击打开下边抽屉',
+    drawer_withMask: '我有遮罩',
+    drawer_withoutMask: '我没有遮罩',
+
+    // wave
+
+    wave: 'Wave 水波动画',
+    wave_basic: '水波纹基本样式',
+    wave_custom: '自定义水波纹样式',
   },
 } as const;
