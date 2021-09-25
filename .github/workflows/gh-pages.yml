@@ -28,7 +28,7 @@ jobs:
           project=tuya-components-styled
           cd example/$project
           yarn add tuya-panel-kit tuya-panel-utils tuya-panel-theme --registry=https://registry.npmjs.org
-          DEV_MODE=umi yarn umi build --max-old-space-size=4096
+          NODE_OPTIONS='--max-old-space-size=4096' DEV_MODE=umi yarn umi build
           cp -r ./dist ../dist/$project
         
       - name: Deploy
