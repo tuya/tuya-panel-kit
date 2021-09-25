@@ -27,17 +27,17 @@ const renderContent = (
   </View>
 );
 
-jest.mock('Animated', () => {                                                                                                                                                                         
-  const ActualAnimated = require.requireActual('Animated');                                                                                                                                           
-  return {                                                                                                                                                                                            
-    ...ActualAnimated,                                                                                                                                                                                
-    parallel: (value, config) => {                                                                                                                                                                      
-      return {                                                                                                                                                                                        
-        start: jest.fn(),                                                                                                                                                  
-      };                                                                                                                                                                                              
-    },                                                                                                                                                                                                
-  };                                                                                                                                                                                                  
-}); 
+jest.mock('Animated', () => {
+  const ActualAnimated = require.requireActual('Animated');
+  return {
+    ...ActualAnimated,
+    parallel: (value, config) => {
+      return {
+        start: jest.fn(),
+      };
+    },
+  };
+});
 
 describe('Drawer components', () => {
   it('basic render', () => {
