@@ -1,9 +1,12 @@
 import React from 'react';
 import { View } from 'react-native';
 import Diffusion from 'tuya-panel-animation-diffusion';
+import { Utils } from 'tuya-panel-kit';
 
 import { ListView } from '#components';
 import Strings from '#i18n';
+
+const { convertX: cx } = Utils.RatioUtils;
 
 export default () => {
   return (
@@ -15,8 +18,8 @@ export default () => {
           title: Strings.getLang('diffusion_basic'),
           content: <Diffusion />,
           itemStyle: {
-            width: 250,
-            height: 250,
+            width: cx(250),
+            height: cx(250),
           },
         },
         {
@@ -27,8 +30,8 @@ export default () => {
             </Diffusion>
           ),
           itemStyle: {
-            width: 250,
-            height: 250,
+            width: cx(250),
+            height: cx(250),
           },
         },
       ]}
