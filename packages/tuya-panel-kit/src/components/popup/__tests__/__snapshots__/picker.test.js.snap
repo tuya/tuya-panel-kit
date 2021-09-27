@@ -151,6 +151,7 @@ exports[`Picker Component basic render 1`] = `
         <View
           style={
             Object {
+              "backgroundColor": "#fff",
               "width": 690,
             }
           }
@@ -496,6 +497,7 @@ exports[`Picker Component basic render 2`] = `
         <View
           style={
             Object {
+              "backgroundColor": "#fff",
               "width": 230,
             }
           }
@@ -558,6 +560,7 @@ exports[`Picker Component basic render 2`] = `
         <View
           style={
             Object {
+              "backgroundColor": "#fff",
               "width": 230,
             }
           }
@@ -620,6 +623,7 @@ exports[`Picker Component basic render 2`] = `
         <View
           style={
             Object {
+              "backgroundColor": "#fff",
               "width": 230,
             }
           }
@@ -970,6 +974,7 @@ exports[`Picker Component basic render with label 1`] = `
         <View
           style={
             Object {
+              "backgroundColor": "#fff",
               "width": 230,
             }
           }
@@ -1032,6 +1037,7 @@ exports[`Picker Component basic render with label 1`] = `
         <View
           style={
             Object {
+              "backgroundColor": "#fff",
               "width": 230,
             }
           }
@@ -1094,6 +1100,7 @@ exports[`Picker Component basic render with label 1`] = `
         <View
           style={
             Object {
+              "backgroundColor": "#fff",
               "width": 230,
             }
           }

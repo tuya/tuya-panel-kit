@@ -1,7 +1,14 @@
 import { withTheme } from 'styled-components/native';
 import ThemeConsumer from './ThemeConsumer';
 import ThemeProvider from './ThemeProvider';
-import { parseToCss, parseToStyle, deepMerge, getTheme } from './utils';
+import {
+  parseToCss,
+  parseToStyle,
+  deepMerge,
+  getTheme,
+  getPropsFromStyle,
+  getValueFormObject,
+} from './utils';
 
 export default {
   withTheme,
@@ -11,4 +18,6 @@ export default {
   parseToStyle,
   deepMerge,
   getTheme,
+  getPropsFromStyle,
+  getValueFormObject,
 };

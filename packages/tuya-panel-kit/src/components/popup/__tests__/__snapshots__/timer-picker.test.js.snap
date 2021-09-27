@@ -165,6 +165,7 @@ exports[`TimerPicker Component basic render 1`] = `
             style={
               Array [
                 Object {
+                  "backgroundColor": "#fff",
                   "flex": 1,
                   "height": 432,
                   "justifyContent": "center",
@@ -210,6 +211,7 @@ exports[`TimerPicker Component basic render 1`] = `
             style={
               Array [
                 Object {
+                  "backgroundColor": "#fff",
                   "flex": 1,
                   "height": 432,
                   "justifyContent": "center",
@@ -6605,6 +6607,7 @@ exports[`TimerPicker Component basic render 1`] = `
             style={
               Array [
                 Object {
+                  "backgroundColor": "#fff",
                   "flex": 1,
                   "height": 432,
                   "justifyContent": "center",
@@ -12941,6 +12944,7 @@ exports[`TimerPicker Component basic render 1`] = `
           style={
             Array [
               Object {
+                "backgroundColor": "#fff",
                 "flex": 0,
                 "height": 432,
                 "justifyContent": "center",
@@ -12996,6 +13000,7 @@ exports[`TimerPicker Component basic render 1`] = `
             style={
               Array [
                 Object {
+                  "backgroundColor": "#fff",
                   "flex": 1,
                   "height": 432,
                   "justifyContent": "center",
@@ -19391,6 +19396,7 @@ exports[`TimerPicker Component basic render 1`] = `
             style={
               Array [
                 Object {
+                  "backgroundColor": "#fff",
                   "flex": 1,
                   "height": 432,
                   "justifyContent": "center",
@@ -25726,6 +25732,7 @@ exports[`TimerPicker Component basic render 1`] = `
             style={
               Array [
                 Object {
+                  "backgroundColor": "#fff",
                   "flex": 1,
                   "height": 432,
                   "justifyContent": "center",
