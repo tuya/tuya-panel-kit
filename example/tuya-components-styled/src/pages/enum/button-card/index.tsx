@@ -21,20 +21,20 @@ const PrivateStrings = new I18N({
 
 const list = [
   {
-    label: '按钮1',
+    label: 'Button1',
     key: '0',
     disabled: true,
   },
   {
-    label: '按钮2',
+    label: 'Button2',
     key: '1',
   },
   {
-    label: '按钮3',
+    label: 'Button3',
     key: '2',
   },
   {
-    label: '按钮4',
+    label: 'Button4',
     key: '3',
   },
 ];
@@ -69,7 +69,7 @@ export default () => {
           content: (
             <View>
               <ClassicButtonCard
-                title="工作模式"
+                title="Card Title"
                 showIconBg={false}
                 icon={TuyaRNSvgs.power}
                 list={list}
@@ -77,7 +77,7 @@ export default () => {
               />
               <Text style={styles.title}>{PrivateStrings.getLang('control_multiple_select')}</Text>
               <ClassicButtonCard
-                title="工作模式"
+                title="Card Title"
                 icon={TuyaRNSvgs.power}
                 iconSize={14}
                 showIconBg
@@ -102,7 +102,7 @@ export default () => {
           content: (
             <View>
               <NordicButtonCard
-                title="工作模式"
+                title="Card Title"
                 showIconBg={false}
                 icon={TuyaRNSvgs.power}
                 list={list}
@@ -111,7 +111,7 @@ export default () => {
                 {PrivateStrings.getLang('custom_button_render_method')}
               </Text>
               <NordicButtonCard
-                title="工作模式"
+                title="Card Title"
                 showIconBg={false}
                 icon={TuyaRNSvgs.power}
                 list={list1}

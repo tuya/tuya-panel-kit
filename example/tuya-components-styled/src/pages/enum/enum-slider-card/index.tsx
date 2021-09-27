@@ -6,19 +6,19 @@ import { ListView } from '#components';
 
 const data = [
   {
-    label: '关闭',
+    label: 'close',
     key: '0',
   },
   {
-    label: '一档',
+    label: 'one',
     key: '1',
   },
   {
-    label: '二档',
+    label: 'two',
     key: '2',
   },
   {
-    label: '三档',
+    label: 'three',
     key: '3',
   },
 ];
