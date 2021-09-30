@@ -4,7 +4,7 @@ import { Utils } from 'tuya-panel-kit';
 import { ListView } from '#components';
 import Strings from '#i18n';
 
-const { viewWidth } = Utils.RatioUtils;
+const { viewWidth, convertX: cx } = Utils.RatioUtils;
 
 export default () => {
   return (
@@ -17,7 +17,7 @@ export default () => {
           content: <Wave />,
           itemStyle: {
             width: viewWidth,
-            height: 180,
+            height: cx(180),
           },
         },
         {
@@ -35,7 +35,7 @@ export default () => {
           ),
           itemStyle: {
             width: viewWidth,
-            height: 180,
+            height: cx(180),
           },
         },
       ]}
