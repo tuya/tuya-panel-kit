@@ -103,3 +103,9 @@ export { default as Battery } from './components/battery';
 export { default as SliderProgress } from './components/slider-progress';
 
 export { default as SliderWithLine } from './components/slider-with-line';
+
+export { default as Diffusion } from 'tuya-panel-animation-diffusion';
+
+export { default as Wave } from 'tuya-panel-animation-wave';
+
+export { default as Drawer } from 'tuya-panel-animation-drawer';

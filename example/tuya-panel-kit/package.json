@@ -60,7 +60,10 @@
     "styled-components": "3.4.10",
     "tuya-panel-kit": "link:.yalc/tuya-panel-kit",
     "tuya-panel-theme": "link:.yalc/tuya-panel-theme",
-    "tuya-panel-utils": "link:.yalc/tuya-panel-utils"
+    "tuya-panel-utils": "link:.yalc/tuya-panel-utils",
+    "tuya-panel-animation-wave": "^0.1.0",
+    "tuya-panel-animation-drawer": "^0.1.0",
+    "tuya-panel-animation-diffusion": "^0.1.0"
   },
   "resolutions": {
     "react-native-web": "^0.11.7"
