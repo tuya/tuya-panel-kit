@@ -42,7 +42,7 @@ export default () => {
               <ClassicButton
                 onLongPress={() => console.log('long press')}
                 icon={TuyaRNSvgs.power}
-                text="开关"
+                text="switch"
               />
               <Text style={styles.title}>{PrivateStrings.getLang('no_icon_or_background')}</Text>
               <View style={{ flexDirection: 'row' }}>
@@ -50,7 +50,7 @@ export default () => {
                   width={90}
                   showIcon={false}
                   icon={TuyaRNSvgs.power}
-                  text="开关"
+                  text="switch"
                   iconColor="#FFF"
                   padding={[5, 0, 0, 5]}
                 />
@@ -58,7 +58,7 @@ export default () => {
                   width={90}
                   showIconBg={false}
                   icon={TuyaRNSvgs.power}
-                  text="开关"
+                  text="switch"
                   iconColor="#158CFC"
                   style={{ marginLeft: 10 }}
                 />
@@ -66,7 +66,7 @@ export default () => {
               <Text style={styles.title}>{PrivateStrings.getLang('set_padding')}</Text>
               <ClassicButton
                 icon={TuyaRNSvgs.power}
-                text="开关"
+                text="switch"
                 iconColor="#FFF"
                 style={{ marginLeft: 10 }}
                 padding={[10, 40, 0, 0]}
@@ -84,7 +84,7 @@ export default () => {
                 justifyContent: 'flex-start',
               }}
             >
-              <NordicButton icon={TuyaRNSvgs.power} text="开关" iconColor="#FFF" />
+              <NordicButton icon={TuyaRNSvgs.power} text="switch" iconColor="#FFF" />
             </View>
           ),
         },
@@ -94,7 +94,7 @@ export default () => {
             <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start' }}>
               <AcrylicButton
                 icon={TuyaRNSvgs.power}
-                text="开关"
+                text="switch"
                 iconColor="#FFF"
                 isSupportAcrylic={isShow}
               />

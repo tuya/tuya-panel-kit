@@ -13,7 +13,7 @@ const IMAGE =
 export default () => {
   const [value, setValue] = useState(20);
   const [value1, setValue1] = useState(10);
-  const [enumValue, setEnumValue] = useState(['无', '上', '下', '左', '右']);
+  const [enumValue, setEnumValue] = useState(['none', 'up', 'down', 'left', 'right']);
   return (
     <ListView
       style={{ backgroundColor: '#f9f9f9', height: 'auto' }}
@@ -24,7 +24,7 @@ export default () => {
             <View>
               <ClassicSliderCard
                 style={{ marginTop: 20 }}
-                title="滑动card"
+                title="Slider Card"
                 icon={TuyaRNSvgs.power}
                 value={value}
                 unit="%"
@@ -42,8 +42,8 @@ export default () => {
                   },
                 }}
                 style={{ marginTop: 20 }}
-                title="粗的滑动条"
-                unit="条"
+                title="Thick sliders"
+                unit="%"
                 value={value}
                 handSlidingComplete={setValue}
                 disabled
@@ -56,7 +56,7 @@ export default () => {
           content: (
             <View>
               <NordicLargeSliderCard
-                title="风速"
+                title="The wind speed"
                 icon={TuyaRNSvgs.power}
                 maximumValue={enumValue.length - 1}
                 minimumValue={0}
@@ -92,7 +92,7 @@ export default () => {
                 icon={IMAGE}
                 bothSideIcons={[{ icon: TuyaRNSvgs.power }, { icon: TuyaRNSvgs.power }]}
                 value={value1}
-                bottomPromptTexts={['最小', '最大']}
+                bottomPromptTexts={['min', 'max']}
                 handSlidingComplete={setValue1}
               />
               <AcrylicSliderCard
@@ -103,7 +103,7 @@ export default () => {
                 maximumValue={enumValue.length - 1}
                 minimumValue={0}
                 value={0}
-                bottomPromptTexts={['最小', '最大']}
+                bottomPromptTexts={['min', 'max']}
                 renderValue={value => enumValue[value]}
               />
             </View>
