@@ -21,6 +21,7 @@ export default defineConfig({
     "@hooks": join(__dirname, "./src/hooks"),
     "@i18n": join(__dirname, "./src/i18n")
   },
+  scripts: ['https://cdn.jsdelivr.net/gh/tuya/tuya-panel-kit-docs@gh-pages/js/HEARTBEAT.js'],
   fastRefresh: {},
   // code split
   ignoreMomentLocale: true,
