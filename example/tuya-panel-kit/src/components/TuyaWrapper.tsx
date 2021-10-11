@@ -265,8 +265,8 @@ export const TuyaWrapper = ({ onBack, children, hideTopbar, title }: TuyaWrapper
           // @ts-ignore
           overflow: 'hidden',
           scrollbarWidth: 'none' as const,
-          width,
-          height,
+          width: width || '100%',
+          height: height || '100%',
         }}
         title={title}
         showMenu={false}
