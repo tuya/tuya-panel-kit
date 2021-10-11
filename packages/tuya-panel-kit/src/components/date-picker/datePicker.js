@@ -5,9 +5,10 @@ import PropTypes from 'prop-types';
 import defaultLocale from './locale/en_US';
 import cnLocale from './locale/zh_CN';
 import Picker from '../picker-view';
-import { RatioUtils } from '../../utils';
+import { RatioUtils, ThemeUtils } from '../../utils';
 
 const { convertX: cx } = RatioUtils;
+const { getPropsFromStyle } = ThemeUtils;
 
 const DATETIME = 'datetime';
 const DATE = 'date';
@@ -260,6 +261,7 @@ class DatePicker extends React.Component {
     }
     return this.getRealDate(newValue);
   };
+
   // get time data
   getTimeColsData = date => {
     let minMinute = 0;
@@ -387,6 +389,7 @@ class DatePicker extends React.Component {
     }
     return date;
   };
+
   // get col data
   getDateColsData = () => {
     const { mode, maxDate, minDate, isPlusZero } = this.props;
@@ -433,6 +436,7 @@ class DatePicker extends React.Component {
 
     return [yearCol, monthCol, dayCol];
   };
+
   // get picker selectItems and currentValue
   getIndexAndCols = () => {
     const { mode, use12Hours, isAmpmFirst, isTimeFirst, dateSortKeys } = this.props;
@@ -547,13 +551,14 @@ class DatePicker extends React.Component {
       backgroundColor: '#fff',
       height: 216,
     };
+    const bgColor = getPropsFromStyle('backgroundColor', style);
     return (
       <View style={[multiStyle, style]}>
         {cols.map((pItem, pindex) => (
           <Picker
             theme={{ fontColor: pickerFontColor, fontSize: pickerFontSize }}
             {...PickerProps}
-            style={{ flex: 1 }}
+            style={{ flex: 1, backgroundColor: bgColor || '#fff' }}
             key={pItem.key}
             accessibilityLabel={`${accessibilityLabel}_${capitalized(pItem.key)}`}
             // disabled={disabled}

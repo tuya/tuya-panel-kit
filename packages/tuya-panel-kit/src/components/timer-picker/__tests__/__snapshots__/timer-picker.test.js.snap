@@ -38,6 +38,7 @@ exports[`TimerPicker Component render width prefixPosition === array 1`] = `
       style={
         Array [
           Object {
+            "backgroundColor": "#fff",
             "flex": 1,
             "height": 200,
             "justifyContent": "center",
@@ -83,6 +84,7 @@ exports[`TimerPicker Component render width prefixPosition === array 1`] = `
       style={
         Array [
           Object {
+            "backgroundColor": "#fff",
             "flex": 1,
             "height": 200,
             "justifyContent": "center",
@@ -6478,6 +6480,7 @@ exports[`TimerPicker Component render width prefixPosition === array 1`] = `
       style={
         Array [
           Object {
+            "backgroundColor": "#fff",
             "flex": 1,
             "height": 200,
             "justifyContent": "center",
@@ -12814,6 +12817,7 @@ exports[`TimerPicker Component render width prefixPosition === array 1`] = `
     style={
       Array [
         Object {
+          "backgroundColor": "#fff",
           "flex": 0,
           "height": 200,
           "justifyContent": "center",
@@ -12869,6 +12873,7 @@ exports[`TimerPicker Component render width prefixPosition === array 1`] = `
       style={
         Array [
           Object {
+            "backgroundColor": "#fff",
             "flex": 1,
             "height": 200,
             "justifyContent": "center",
@@ -19264,6 +19269,7 @@ exports[`TimerPicker Component render width prefixPosition === array 1`] = `
       style={
         Array [
           Object {
+            "backgroundColor": "#fff",
             "flex": 1,
             "height": 200,
             "justifyContent": "center",
@@ -25599,6 +25605,7 @@ exports[`TimerPicker Component render width prefixPosition === array 1`] = `
       style={
         Array [
           Object {
+            "backgroundColor": "#fff",
             "flex": 1,
             "height": 200,
             "justifyContent": "center",
@@ -25682,6 +25689,7 @@ exports[`TimerPicker Component render width prefixPosition === left 1`] = `
       style={
         Array [
           Object {
+            "backgroundColor": "#fff",
             "flex": 1,
             "height": 200,
             "justifyContent": "center",
@@ -25727,6 +25735,7 @@ exports[`TimerPicker Component render width prefixPosition === left 1`] = `
       style={
         Array [
           Object {
+            "backgroundColor": "#fff",
             "flex": 1,
             "height": 200,
             "justifyContent": "center",
@@ -32122,6 +32131,7 @@ exports[`TimerPicker Component render width prefixPosition === left 1`] = `
       style={
         Array [
           Object {
+            "backgroundColor": "#fff",
             "flex": 1,
             "height": 200,
             "justifyContent": "center",
@@ -38458,6 +38468,7 @@ exports[`TimerPicker Component render width prefixPosition === left 1`] = `
     style={
       Array [
         Object {
+          "backgroundColor": "#fff",
           "flex": 0,
           "height": 200,
           "justifyContent": "center",
@@ -38513,6 +38524,7 @@ exports[`TimerPicker Component render width prefixPosition === left 1`] = `
       style={
         Array [
           Object {
+            "backgroundColor": "#fff",
             "flex": 1,
             "height": 200,
             "justifyContent": "center",
@@ -38558,6 +38570,7 @@ exports[`TimerPicker Component render width prefixPosition === left 1`] = `
       style={
         Array [
           Object {
+            "backgroundColor": "#fff",
             "flex": 1,
             "height": 200,
             "justifyContent": "center",
@@ -44953,6 +44966,7 @@ exports[`TimerPicker Component render width prefixPosition === left 1`] = `
       style={
         Array [
           Object {
+            "backgroundColor": "#fff",
             "flex": 1,
             "height": 200,
             "justifyContent": "center",
@@ -51326,6 +51340,7 @@ exports[`TimerPicker Component render width prefixPosition === left 2`] = `
       style={
         Array [
           Object {
+            "backgroundColor": "#fff",
             "flex": 1,
             "height": 200,
             "justifyContent": "center",
@@ -51371,6 +51386,7 @@ exports[`TimerPicker Component render width prefixPosition === left 2`] = `
       style={
         Array [
           Object {
+            "backgroundColor": "#fff",
             "flex": 1,
             "height": 200,
             "justifyContent": "center",
@@ -57766,6 +57782,7 @@ exports[`TimerPicker Component render width prefixPosition === left 2`] = `
       style={
         Array [
           Object {
+            "backgroundColor": "#fff",
             "flex": 1,
             "height": 200,
             "justifyContent": "center",
@@ -64102,6 +64119,7 @@ exports[`TimerPicker Component render width prefixPosition === left 2`] = `
     style={
       Array [
         Object {
+          "backgroundColor": "#fff",
           "flex": 0,
           "height": 200,
           "justifyContent": "center",
@@ -64157,6 +64175,7 @@ exports[`TimerPicker Component render width prefixPosition === left 2`] = `
       style={
         Array [
           Object {
+            "backgroundColor": "#fff",
             "flex": 1,
             "height": 200,
             "justifyContent": "center",
@@ -64202,6 +64221,7 @@ exports[`TimerPicker Component render width prefixPosition === left 2`] = `
       style={
         Array [
           Object {
+            "backgroundColor": "#fff",
             "flex": 1,
             "height": 200,
             "justifyContent": "center",
@@ -70597,6 +70617,7 @@ exports[`TimerPicker Component render width prefixPosition === left 2`] = `
       style={
         Array [
           Object {
+            "backgroundColor": "#fff",
             "flex": 1,
             "height": 200,
             "justifyContent": "center",
@@ -76970,6 +76991,7 @@ exports[`TimerPicker Component render width singlePicker  1`] = `
       style={
         Array [
           Object {
+            "backgroundColor": "#fff",
             "flex": 1,
             "height": 200,
             "justifyContent": "center",
@@ -83365,6 +83387,7 @@ exports[`TimerPicker Component render width singlePicker  1`] = `
       style={
         Array [
           Object {
+            "backgroundColor": "#fff",
             "flex": 1,
             "height": 200,
             "justifyContent": "center",
@@ -89700,6 +89723,7 @@ exports[`TimerPicker Component render width singlePicker  1`] = `
       style={
         Array [
           Object {
+            "backgroundColor": "#fff",
             "flex": 1,
             "height": 200,
             "justifyContent": "center",
@@ -89746,6 +89770,7 @@ exports[`TimerPicker Component render width singlePicker  1`] = `
     style={
       Array [
         Object {
+          "backgroundColor": "#fff",
           "flex": 0,
           "height": 200,
           "justifyContent": "center",

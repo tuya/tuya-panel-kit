@@ -60,6 +60,7 @@ exports[`Picker Component basic render 2`] = `
   style={
     Array [
       Object {
+        "backgroundColor": "#fff",
         "height": 216,
       },
       undefined,
@@ -130,6 +131,7 @@ exports[`Picker Component should picker android value change 1`] = `
   style={
     Array [
       Object {
+        "backgroundColor": "#fff",
         "height": 216,
       },
       undefined,
@@ -165,6 +167,7 @@ exports[`Picker Component should picker android value change 2`] = `
   style={
     Array [
       Object {
+        "backgroundColor": "#fff",
         "height": 216,
       },
       undefined,
