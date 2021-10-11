@@ -145,6 +145,7 @@ exports[`DatePicker Component basic render 1`] = `
         <View
           style={
             Object {
+              "backgroundColor": "#fff",
               "flex": 1,
             }
           }
@@ -680,6 +681,7 @@ exports[`DatePicker Component basic render 1`] = `
         <View
           style={
             Object {
+              "backgroundColor": "#fff",
               "flex": 1,
             }
           }
@@ -770,6 +772,7 @@ exports[`DatePicker Component basic render 1`] = `
         <View
           style={
             Object {
+              "backgroundColor": "#fff",
               "flex": 1,
             }
           }
@@ -955,6 +958,7 @@ exports[`DatePicker Component basic render 1`] = `
         <View
           style={
             Object {
+              "backgroundColor": "#fff",
               "flex": 1,
             }
           }
@@ -1105,6 +1109,7 @@ exports[`DatePicker Component basic render 1`] = `
         <View
           style={
             Object {
+              "backgroundColor": "#fff",
               "flex": 1,
             }
           }
@@ -1816,6 +1821,7 @@ exports[`DatePicker Component basic render 2`] = `
         <View
           style={
             Object {
+              "backgroundColor": "#fff",
               "flex": 1,
             }
           }
@@ -2351,6 +2357,7 @@ exports[`DatePicker Component basic render 2`] = `
         <View
           style={
             Object {
+              "backgroundColor": "#fff",
               "flex": 1,
             }
           }
@@ -2441,6 +2448,7 @@ exports[`DatePicker Component basic render 2`] = `
         <View
           style={
             Object {
+              "backgroundColor": "#fff",
               "flex": 1,
             }
           }
@@ -2626,6 +2634,7 @@ exports[`DatePicker Component basic render 2`] = `
         <View
           style={
             Object {
+              "backgroundColor": "#fff",
               "flex": 1,
             }
           }
@@ -2776,6 +2785,7 @@ exports[`DatePicker Component basic render 2`] = `
         <View
           style={
             Object {
+              "backgroundColor": "#fff",
               "flex": 1,
             }
           }

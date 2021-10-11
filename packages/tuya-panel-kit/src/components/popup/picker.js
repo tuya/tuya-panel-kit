@@ -70,6 +70,7 @@ class PickerPopup extends React.PureComponent {
      */
     _onDataChange: PropTypes.func,
   };
+
   static defaultProps = {
     label: '',
     spacing: 60,
@@ -184,7 +185,10 @@ class PickerPopup extends React.PureComponent {
                   onValueChange={v => this.onValueChange(v, idx)}
                   style={StyleSheet.flatten([
                     pickerStyle,
-                    { width: (RatioUtils.winWidth - spacing) / pickerDatas.length },
+                    {
+                      width: (RatioUtils.winWidth - spacing) / pickerDatas.length,
+                      backgroundColor: getTheme(pickerTheme, 'popup.cellBg') || '#fff',
+                    },
                   ])}
                 >
                   {this.renderPickerItem(data, idx, pickerDatas)}

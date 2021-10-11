@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { StyleSheet, ViewPropTypes } from 'react-native';
-import { CoreUtils, TimeUtils, RatioUtils } from '../../utils';
+import { CoreUtils, TimeUtils, RatioUtils, ThemeUtils } from '../../utils';
 import Picker from '../picker-view';
 import { getHourSelections, getMinsSelections, getTimePrefixSelections, getPrefix } from './utils';
 import { StyledTimerPickerContainer, StyledTimerPickerRow } from '../popup/styled';
@@ -9,6 +9,7 @@ import { StyledTimerPickerContainer, StyledTimerPickerRow } from '../popup/style
 const { omit } = CoreUtils;
 const { parseTimer } = TimeUtils;
 const { convertX: cx } = RatioUtils;
+const { getPropsFromStyle } = ThemeUtils;
 
 const TIME_PICKER_PROPS = [
   'style',
@@ -219,6 +220,7 @@ export default class TimerPicker extends Component {
             flex: key === 'symbol' ? 0 : 1,
             height: style.height || 200,
             justifyContent: 'center',
+            backgroundColor: getPropsFromStyle('backgroundColor', style) || '#fff',
           },
           key === 'symbol' && {
             width: cx(48),

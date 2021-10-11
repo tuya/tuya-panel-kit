@@ -143,3 +143,31 @@ export const createGetTheme = (namespace: string) => (
   const themeKey = `${namespace}.${key}`;
   return getTheme({ theme: {} }, themeKey, defaultValue);
 };
+
+export const getValueFormObject = (
+  namespace: string,
+  object: Record<string, string | number>
+): string | number | null => {
+  const keys = Object.keys(object);
+  const values = Object.values(object);
+  const index = keys.indexOf(namespace);
+  if (index !== -1) return values[index];
+  return null;
+};
+
+type styleType = Record<string, string | number> & Record<string, string | number>[];
+
+export const getPropsFromStyle = (namespace: string, style: styleType): string | number | void => {
+  let result;
+  if (style instanceof Object) {
+    result = getValueFormObject(namespace, style);
+  }
+  if (style instanceof Array) {
+    style.forEach(item => {
+      if (isObject(item)) {
+        result = getValueFormObject(namespace, item);
+      }
+    });
+  }
+  return result;
+};

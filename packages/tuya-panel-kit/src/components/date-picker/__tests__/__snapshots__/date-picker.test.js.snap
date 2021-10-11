@@ -19,6 +19,7 @@ exports[`DatePicker Component basic render 1`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -204,6 +205,7 @@ exports[`DatePicker Component basic render 1`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -294,6 +296,7 @@ exports[`DatePicker Component basic render 1`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -498,6 +501,7 @@ exports[`DatePicker Component should picker mode is date 1`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -683,6 +687,7 @@ exports[`DatePicker Component should picker mode is date 1`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -773,6 +778,7 @@ exports[`DatePicker Component should picker mode is date 1`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -977,6 +983,7 @@ exports[`DatePicker Component should picker mode is date 2`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -1162,6 +1169,7 @@ exports[`DatePicker Component should picker mode is date 2`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -1252,6 +1260,7 @@ exports[`DatePicker Component should picker mode is date 2`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -1456,6 +1465,7 @@ exports[`DatePicker Component should picker mode is datetime 1`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -1781,6 +1791,7 @@ exports[`DatePicker Component should picker mode is datetime 1`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -1816,6 +1827,7 @@ exports[`DatePicker Component should picker mode is datetime 1`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -1946,6 +1958,7 @@ exports[`DatePicker Component should picker mode is datetime 1`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -1981,6 +1994,7 @@ exports[`DatePicker Component should picker mode is datetime 1`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -2035,6 +2049,7 @@ exports[`DatePicker Component should picker mode is datetime 2`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -2220,6 +2235,7 @@ exports[`DatePicker Component should picker mode is datetime 2`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -2310,6 +2326,7 @@ exports[`DatePicker Component should picker mode is datetime 2`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -2495,6 +2512,7 @@ exports[`DatePicker Component should picker mode is datetime 2`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -2645,6 +2663,7 @@ exports[`DatePicker Component should picker mode is datetime 2`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -2994,6 +3013,7 @@ exports[`DatePicker Component should picker mode is time 1`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -3029,6 +3049,7 @@ exports[`DatePicker Component should picker mode is time 1`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -3083,6 +3104,7 @@ exports[`DatePicker Component should picker mode is time 2`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -3233,6 +3255,7 @@ exports[`DatePicker Component should picker mode is time 2`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -3582,6 +3605,7 @@ exports[`DatePicker Component should picker which mode is date value change 1`] 
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -3767,6 +3791,7 @@ exports[`DatePicker Component should picker which mode is date value change 1`] 
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -3857,6 +3882,7 @@ exports[`DatePicker Component should picker which mode is date value change 1`] 
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -4061,6 +4087,7 @@ exports[`DatePicker Component should picker which mode is date value change 2`] 
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -4246,6 +4273,7 @@ exports[`DatePicker Component should picker which mode is date value change 2`] 
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -4336,6 +4364,7 @@ exports[`DatePicker Component should picker which mode is date value change 2`] 
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -4540,6 +4569,7 @@ exports[`DatePicker Component should picker which mode is maxDate 1`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -4725,6 +4755,7 @@ exports[`DatePicker Component should picker which mode is maxDate 1`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -4815,6 +4846,7 @@ exports[`DatePicker Component should picker which mode is maxDate 1`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -5019,6 +5051,7 @@ exports[`DatePicker Component should render picker which ampmFirst 1`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -5059,6 +5092,7 @@ exports[`DatePicker Component should render picker which ampmFirst 1`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -5149,6 +5183,7 @@ exports[`DatePicker Component should render picker which ampmFirst 1`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -5498,6 +5533,7 @@ exports[`DatePicker Component should render picker which locale is cn 1`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -5683,6 +5719,7 @@ exports[`DatePicker Component should render picker which locale is cn 1`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -5773,6 +5810,7 @@ exports[`DatePicker Component should render picker which locale is cn 1`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -5977,6 +6015,7 @@ exports[`DatePicker Component should render picker which locale is defaultValue 
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -6162,6 +6201,7 @@ exports[`DatePicker Component should render picker which locale is defaultValue 
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -6252,6 +6292,7 @@ exports[`DatePicker Component should render picker which locale is defaultValue 
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -6456,6 +6497,7 @@ exports[`DatePicker Component should render picker which locale is object 1`] = 
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -6641,6 +6683,7 @@ exports[`DatePicker Component should render picker which locale is object 1`] = 
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -6731,6 +6774,7 @@ exports[`DatePicker Component should render picker which locale is object 1`] = 
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -6935,6 +6979,7 @@ exports[`DatePicker Component should render picker which mode is datetime 1`] = 
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -7120,6 +7165,7 @@ exports[`DatePicker Component should render picker which mode is datetime 1`] = 
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -7210,6 +7256,7 @@ exports[`DatePicker Component should render picker which mode is datetime 1`] = 
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -7395,6 +7442,7 @@ exports[`DatePicker Component should render picker which mode is datetime 1`] = 
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -7545,6 +7593,7 @@ exports[`DatePicker Component should render picker which mode is datetime 1`] = 
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -7912,6 +7961,7 @@ exports[`DatePicker Component should render picker which mode is month 1`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -8097,6 +8147,7 @@ exports[`DatePicker Component should render picker which mode is month 1`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -8206,6 +8257,7 @@ exports[`DatePicker Component should render picker which mode is year 1`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -8410,6 +8462,7 @@ exports[`DatePicker Component should render picker which use12Hours 1`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -8445,6 +8498,7 @@ exports[`DatePicker Component should render picker which use12Hours 1`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }
@@ -8775,6 +8829,7 @@ exports[`DatePicker Component should render picker which use12Hours 1`] = `
   <View
     style={
       Object {
+        "backgroundColor": "#fff",
         "flex": 1,
       }
     }

@@ -116,12 +116,13 @@ export class PickerView extends Component {
   render() {
     const style = StyleSheet.flatten(this.props.style);
     const { loop } = this.props;
-
+    
     return (
       <Picker
         style={[
           {
             height,
+            backgroundColor: '#fff'
           },
           style,
         ]}

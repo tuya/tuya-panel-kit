@@ -15,8 +15,7 @@
   </a>&nbsp;
   <a href="https://codecov.io/gh/tuya/tuya-panel-kit" target="_blank">
     <img src="https://codecov.io/gh/tuya/tuya-panel-kit/branch/master/graph/badge.svg" />
-  </a>&nbsp;
-  <img src="https://github.com/tuya/tuya-panel-kit/workflows/Lint%20Code/badge.svg" />
+  </a>
 </p>
 </center>
 
