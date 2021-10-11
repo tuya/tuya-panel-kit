@@ -1,6 +1,6 @@
 {
   "name": "tuya-panel-style-button-card",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "> TODO: description",
   "author": "chechengyi <984593931@qq.com>",
   "homepage": "https://github.com/tuya/tuya-panel-kit#readme",
@@ -31,9 +31,9 @@
     "url": "https://github.com/tuya/tuya-panel-kit/issues"
   },
   "dependencies": {
-    "tuya-panel-kit": "^4.7.10",
-    "tuya-panel-style-icon-background": "^0.0.5",
-    "tuya-panel-utils": "^0.1.2"
+    "tuya-panel-kit": "^4.7.11",
+    "tuya-panel-style-icon-background": "^0.0.6",
+    "tuya-panel-utils": "^0.1.3"
   },
   "devDependencies": {
     "@types/tuya-panel-kit": "^4.0.5"

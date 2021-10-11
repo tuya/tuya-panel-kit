@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.3](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-utils@0.1.2...tuya-panel-utils@0.1.3) (2021-10-11)
+
+
+### Bug Fixes
+
+* **Picker:** Fixed Picker font interception on Huawei Honor V9 phone, fixed [#145](https://github.com/tuya/tuya-panel-kit/issues/145) ([#144](https://github.com/tuya/tuya-panel-kit/issues/144)) ([9ad6bcb](https://github.com/tuya/tuya-panel-kit/commit/9ad6bcbfe8a5b795efb4f1c04e439f5a7ac167f6))
+
+
+
+
+
 ## [0.1.2](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-utils@0.1.1...tuya-panel-utils@0.1.2) (2021-09-14)
 
 

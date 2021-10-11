@@ -1,6 +1,6 @@
 {
   "name": "tuya-panel-text",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "tuya-panel-text",
   "author": "ZengBeauty <2497752603@qq.com>",
   "homepage": "https://github.com/tuya/tuya-panel-kit#readme",
@@ -22,8 +22,8 @@
   },
   "dependencies": {
     "styled-components": "^3.4.10",
-    "tuya-panel-theme": "^0.0.6",
-    "tuya-panel-utils": "^0.1.2"
+    "tuya-panel-theme": "^0.0.7",
+    "tuya-panel-utils": "^0.1.3"
   },
   "scripts": {
     "prebuild": "rimraf lib/*",

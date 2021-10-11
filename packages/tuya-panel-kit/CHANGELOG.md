@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.7.11](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.7.10...tuya-panel-kit@4.7.11) (2021-10-11)
+
+
+### Bug Fixes
+
+* **Picker:** Fixed Picker font interception on Huawei Honor V9 phone, fixed [#145](https://github.com/tuya/tuya-panel-kit/issues/145) ([#144](https://github.com/tuya/tuya-panel-kit/issues/144)) ([9ad6bcb](https://github.com/tuya/tuya-panel-kit/commit/9ad6bcbfe8a5b795efb4f1c04e439f5a7ac167f6))
+
+
+### Features
+
+* **kit:** add wave、diffusion、drawer to kit ([#146](https://github.com/tuya/tuya-panel-kit/issues/146)) ([1af94e3](https://github.com/tuya/tuya-panel-kit/commit/1af94e36747b0da9e4f3ac2422bf02be300fc032))
+
+
+
+
+
 ## [4.7.10](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.7.9...tuya-panel-kit@4.7.10) (2021-09-23)
 
 **Note:** Version bump only for package tuya-panel-kit
