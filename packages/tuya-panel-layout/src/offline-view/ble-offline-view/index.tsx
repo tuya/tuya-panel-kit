@@ -72,6 +72,7 @@ export default class BleOfflineView extends Component<IBleOfflineViewProps, null
 
   componentWillUnmount() {
     Modal.close();
+    this.timer && clearTimeout(this.timer);
   }
 
   getTipText() {
@@ -90,6 +91,8 @@ export default class BleOfflineView extends Component<IBleOfflineViewProps, null
     }
     return tipText;
   }
+
+  timer: number;
 
   showOverlayModal = () => {
     const { bluetoothValue, deviceOnline, isBleOfflineOverlay } = this.props;
@@ -114,7 +117,7 @@ export default class BleOfflineView extends Component<IBleOfflineViewProps, null
           />,
           { mask: false }
         );
-        TYDevice.gotoBlePermissions();
+        this.timer = setTimeout(() => TYDevice.gotoBlePermissions(), 200);
       }
     } else if (!deviceOnline) {
       // 处理一直在 webView 页面弹框无法关闭 Toast 问题
