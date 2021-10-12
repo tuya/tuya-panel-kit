@@ -69,6 +69,7 @@ export default class BleOfflineView extends Component {
 
   componentWillUnmount() {
     Modal.close();
+    this.timer && clearTimeout(this.timer);
   }
 
   getTipText() {
@@ -111,7 +112,7 @@ export default class BleOfflineView extends Component {
           />,
           { mask: false }
         );
-        TYDevice.gotoBlePermissions();
+        this.timer = setTimeout(() => TYDevice.gotoBlePermissions(), 200);
       }
     } else if (!deviceOnline) {
       // 处理一直在 webView 页面弹框无法关闭 Toast 问题
