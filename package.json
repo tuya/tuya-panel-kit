@@ -37,17 +37,13 @@
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
     "format": "prettier --write src/**/*/*.{js,jsx,ts,tsx}",
     "prepublishOnly": "yarn build",
-    "version:pre": "yarn build && lerna version --canary --yes --pre-dist-tag=rc --preid=rc",
-    "version:prepatch": "yarn build && lerna version --canary patch --yes --pre-dist-tag=rc --preid=rc",
-    "version:preminor": "yarn build && lerna version --canary --yes --pre-dist-tag=rc --preid=rc",
-    "version:premajor": "yarn build && lerna version --canary --yes --pre-dist-tag=rc --preid=rc",
-    "version:patch": "yarn build && lerna version patch",
-    "version:minor": "yarn build && lerna version minor",
-    "version:major": "yarn build && lerna version major",
-    "version:next": "yarn build && lerna version prerelease --pre-dist-tag=next --preid=next",
-    "version:nextpatch": "yarn build && lerna version prepatch --pre-dist-tag=next --preid=next",
-    "version:nextminor": "yarn build && lerna version preminor --pre-dist-tag=next --preid=next",
-    "version:nextmajor": "yarn build && lerna version premajor --pre-dist-tag=next --preid=next"
+    "publish:pre": "yarn build && lerna publish --canary --yes --pre-dist-tag=rc --preid=rc",
+    "publish:prepatch": "yarn build && lerna publish --canary patch --yes --pre-dist-tag=rc --preid=rc",
+    "publish:preminor": "yarn build && lerna publish --canary --yes --pre-dist-tag=rc --preid=rc",
+    "publish:premajor": "yarn build && lerna publish --canary --yes --pre-dist-tag=rc --preid=rc",
+    "publish:patch": "yarn build && lerna publish patch",
+    "publish:minor": "yarn build && lerna publish minor",
+    "publish:major": "yarn build && lerna publish major"
   },
   "config": {
     "commitizen": {
