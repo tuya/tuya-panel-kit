@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.7](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-style-slider-card@0.0.6...tuya-panel-style-slider-card@0.0.7) (2021-10-12)
+
+**Note:** Version bump only for package tuya-panel-style-slider-card
+
+
+
+
+
 ## [0.0.6](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-style-slider-card@0.0.5...tuya-panel-style-slider-card@0.0.6) (2021-10-11)
 
 **Note:** Version bump only for package tuya-panel-style-slider-card
