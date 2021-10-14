@@ -53,21 +53,21 @@ import Wave from './pages/animation/wave';
 
 export const routes = [
   // animation
-  // {
-  //   name: Strings.getLang('diffusion'),
-  //   href: '/animation/diffusion',
-  //   component: Diffusion,
-  // },
-  // {
-  //   name: Strings.getLang('drawer'),
-  //   href: '/animation/drawer',
-  //   component: Drawer,
-  // },
-  // {
-  //   name: Strings.getLang('wave'),
-  //   href: '/animation/wave',
-  //   component: Wave,
-  // },
+  {
+    name: Strings.getLang('diffusion'),
+    href: '/animation/diffusion',
+    component: Diffusion,
+  },
+  {
+    name: Strings.getLang('drawer'),
+    href: '/animation/drawer',
+    component: Drawer,
+  },
+  {
+    name: Strings.getLang('wave'),
+    href: '/animation/wave',
+    component: Wave,
+  },
   // basic
   {
     name: Strings.getLang('battery'),

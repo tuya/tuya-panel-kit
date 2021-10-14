@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
-import { Utils } from 'tuya-panel-kit';
-import Drawer from 'tuya-panel-animation-drawer';
+import { Utils, Drawer } from 'tuya-panel-kit';
 import { BlockList, Icons } from '#components';
 import Strings from '#i18n';
 

@@ -725,8 +725,8 @@ export default {
 
     // wave
 
-    wave: 'Wave 水波动画',
-    wave_basic: '水波纹基本样式',
-    wave_custom: '自定义水波纹样式',
+    wave: 'Wave 波浪动画',
+    wave_basic: '波浪基本样式',
+    wave_custom: '自定义波浪样式',
   },
 } as const;

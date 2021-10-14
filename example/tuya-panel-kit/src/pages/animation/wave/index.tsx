@@ -1,6 +1,5 @@
 import React from 'react';
-import Wave from 'tuya-panel-animation-wave';
-import { Utils } from 'tuya-panel-kit';
+import { Utils, Wave } from 'tuya-panel-kit';
 import { ListView } from '#components';
 import Strings from '#i18n';
 

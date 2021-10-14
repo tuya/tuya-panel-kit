@@ -1,7 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import Diffusion from 'tuya-panel-animation-diffusion';
-import { Utils } from 'tuya-panel-kit';
+import { Utils, Diffusion } from 'tuya-panel-kit';
 
 import { ListView } from '#components';
 import Strings from '#i18n';
