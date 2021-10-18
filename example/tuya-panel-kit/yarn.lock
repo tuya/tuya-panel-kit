@@ -9649,48 +9649,48 @@ tunnel-agent@^0.6.0:
   dependencies:
     safe-buffer "^5.0.1"
 
-tuya-panel-animation-diffusion@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/tuya-panel-animation-diffusion/-/tuya-panel-animation-diffusion-0.1.0.tgz#6dee32eb86b79993612c4d5834fcb31be07938cf"
-  integrity sha512-oXEiZcbYpZi7bW6deHWYSeq8mt6Op6xowNLpkbR8ZSFqGU1/pIaBe15Y8LViuNt1WPzSlA0k9dBs4Ng3APluQw==
+tuya-panel-animation-diffusion@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/tuya-panel-animation-diffusion/-/tuya-panel-animation-diffusion-0.1.1.tgz#5fd4923ae2849be7070af60372e97bec49551686"
+  integrity sha512-5zXFTKJxRSYKJT+b3GcA2SyYwONpfVzEf9QjncEse64uuyEljd8/8XQOVmJN9I1rPdgnDbTTGvd0xM6+mEC7LQ==
   dependencies:
-    tuya-panel-utils "^0.1.2"
+    tuya-panel-utils "^0.1.3"
 
-tuya-panel-animation-drawer@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/tuya-panel-animation-drawer/-/tuya-panel-animation-drawer-0.1.0.tgz#cc9da8e193f100496063e76fe1d3549190b922f7"
-  integrity sha512-kZLXmI6Epl3ZbLq+wrGU8yyIBIad5MZoY0ZV5MFL3Y0hCwPnAbxMy68ax+I9D9asMatEmakCuLMcEzvgO8xvMA==
+tuya-panel-animation-drawer@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/tuya-panel-animation-drawer/-/tuya-panel-animation-drawer-0.1.1.tgz#a7aca1463e12ed1a83d64a68f9e47e8815d554bc"
+  integrity sha512-acSWYjaDJBlQ5l6dC+u6FBr/w7cuinOglnj1l3xbemBjFY5Gopb+psoIEfiGBdFMgNJyS5syYNoOaQXckgzB9g==
   dependencies:
     lodash "^4.17.21"
-    tuya-panel-utils "^0.1.2"
+    tuya-panel-utils "^0.1.3"
 
-tuya-panel-animation-wave@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/tuya-panel-animation-wave/-/tuya-panel-animation-wave-0.1.0.tgz#15a04a127f3a030ee560d20d345b249a39e08332"
-  integrity sha512-+34p+OAseLzAxDY7MJuf2AZJ4SVlO561N63I3BaSNZsOFovz91pRYQ8cnuLIPPA8Z8DH9HBh0dWq556IBMcbCQ==
+tuya-panel-animation-wave@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/tuya-panel-animation-wave/-/tuya-panel-animation-wave-0.1.1.tgz#ab338f32217406934eca9c5d4c21c0c12415bc5f"
+  integrity sha512-dDwCMAIYekCuO+YhHeY/0yxSWaQs4TqgcCbK4LCZ6RAbDWKviNLmPoQiYZTMG1qIyJKa69w6B+lgylcSnNPcLQ==
   dependencies:
     react-native-svg "5.5.1"
-    tuya-panel-utils "^0.1.2"
+    tuya-panel-utils "^0.1.3"
 
 "tuya-panel-kit@link:.yalc/tuya-panel-kit":
   version "0.0.0"
   uid ""
 
-tuya-panel-theme@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/tuya-panel-theme/-/tuya-panel-theme-0.0.6.tgz#19a0be3fd223248d50b14686bb059265e95d240a"
-  integrity sha512-YaOVnVcjxNRmCvJP2WNEI3infkcp1C6PiG63sVXyoj2dvnAjjm6JP41vI/XAfR/ViWj9F+H9BD6VLxPFy/w6Dg==
+tuya-panel-theme@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/tuya-panel-theme/-/tuya-panel-theme-0.0.7.tgz#2b7296f27f53458f98ed5b2300f94ee7bda20b97"
+  integrity sha512-Qwuo/N+y2pQcPqqcy573Ys9E6y1eNl1ldDt2YVqHzDKH7aqyTmtcaQlMoMdXfZfP6iFRD7FWcBUs3Ue5Xe1pVA==
   dependencies:
-    tuya-panel-utils "^0.1.2"
+    tuya-panel-utils "^0.1.3"
 
 "tuya-panel-theme@link:.yalc/tuya-panel-theme":
   version "0.0.0"
   uid ""
 
-tuya-panel-utils@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/tuya-panel-utils/-/tuya-panel-utils-0.1.2.tgz#fafec8ed28c5c042b95a92aca48de65aaeac954a"
-  integrity sha512-UW15le5VY2k7xxmpiJcm7IdHTCFKNW1WKOhHNq/PAHgceFITnCfRXouoL9LSuhyFPvAEoTgtb+fIRVJUP7V3RA==
+tuya-panel-utils@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/tuya-panel-utils/-/tuya-panel-utils-0.1.3.tgz#82f58a7824be6e8fc2b99ac609f6cf0f02fa2515"
+  integrity sha512-x7D0TjcwxOAJF0+d/geF4o7qkR3KzSxn0GCg/tpc0lH0Pw389nJ3SO8zvVCxT6RTINLjljLZb2wrogZ4tVDP8Q==
 
 "tuya-panel-utils@link:.yalc/tuya-panel-utils":
   version "0.0.0"
