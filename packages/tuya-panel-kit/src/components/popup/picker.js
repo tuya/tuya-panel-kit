@@ -130,7 +130,7 @@ class PickerPopup extends React.PureComponent {
     const realLabel = Array.isArray(label) ? label[idx] : label;
     const left = (width - 60) / (2 * allDatas.length) + labelOffset;
     return (
-      <StyledPickerUnit style={{ height, left }}>
+      <StyledPickerUnit style={{ height, left, zIndex: 2 }}>
         <StyledPickerUnitText pickerUnitColor={pickerUnitColor}>{realLabel}</StyledPickerUnitText>
       </StyledPickerUnit>
     );
