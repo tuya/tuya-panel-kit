@@ -1,6 +1,6 @@
 {
   "name": "tuya-panel-acrylic-kit",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Acrylic style component collection package",
   "author": "ZengBeauty <2497752603@qq.com>",
   "homepage": "https://github.com/tuya/tuya-panel-kit#readme",
@@ -29,15 +29,15 @@
     "url": "https://github.com/tuya/tuya-panel-kit/issues"
   },
   "dependencies": {
-    "tuya-panel-style-block-card": "^0.0.7",
-    "tuya-panel-style-button": "^0.0.7",
-    "tuya-panel-style-depict-card": "^0.0.7",
-    "tuya-panel-style-display-card": "^0.0.7",
-    "tuya-panel-style-enum-button-group": "^0.0.7",
-    "tuya-panel-style-enum-card": "^0.0.7",
-    "tuya-panel-style-enum-slider-card": "^0.0.7",
-    "tuya-panel-style-icon-card": "^0.0.7",
-    "tuya-panel-style-slider-card": "^0.0.7",
-    "tuya-panel-style-switch-card": "^0.0.7"
+    "tuya-panel-style-block-card": "^0.0.8",
+    "tuya-panel-style-button": "^0.0.8",
+    "tuya-panel-style-depict-card": "^0.0.8",
+    "tuya-panel-style-display-card": "^0.0.8",
+    "tuya-panel-style-enum-button-group": "^0.0.8",
+    "tuya-panel-style-enum-card": "^0.0.8",
+    "tuya-panel-style-enum-slider-card": "^0.0.8",
+    "tuya-panel-style-icon-card": "^0.0.8",
+    "tuya-panel-style-slider-card": "^0.0.8",
+    "tuya-panel-style-switch-card": "^0.0.8"
   }
 }
