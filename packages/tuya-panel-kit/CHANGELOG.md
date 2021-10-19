@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.7.13](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.7.11...tuya-panel-kit@4.7.13) (2021-10-19)
+
+
+### Bug Fixes
+
+* **ble:** fix the conflict between the Bluetooth prompt pop-up box and the Bluetooth permission application pop-up box, fixed [#142](https://github.com/tuya/tuya-panel-kit/issues/142) ([#148](https://github.com/tuya/tuya-panel-kit/issues/148)) ([c8e412a](https://github.com/tuya/tuya-panel-kit/commit/c8e412a0c6989cd99ac91b721346beb068a7ef1d))
+* **Popup.picker:** Fix popup.picker unit missing, fixed [#151](https://github.com/tuya/tuya-panel-kit/issues/151) ([#152](https://github.com/tuya/tuya-panel-kit/issues/152)) ([eb798b4](https://github.com/tuya/tuya-panel-kit/commit/eb798b4e564d3a0b997bdf5ae45d0d493767fe16))
+
+
+
+
+
 ## [4.7.12](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.7.11...tuya-panel-kit@4.7.12) (2021-10-12)
 
 

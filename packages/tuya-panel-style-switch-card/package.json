@@ -1,6 +1,6 @@
 {
   "name": "tuya-panel-style-switch-card",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "tuya-panel-switch-card",
   "author": "ZengBeauty <2497752603@qq.com>",
   "homepage": "https://github.com/tuya/tuya-panel-kit#readme",
@@ -31,8 +31,8 @@
     "url": "https://github.com/tuya/tuya-panel-kit/issues"
   },
   "dependencies": {
-    "tuya-panel-kit": "^4.7.12",
-    "tuya-panel-style-icon-background": "^0.0.7",
+    "tuya-panel-kit": "^4.7.13",
+    "tuya-panel-style-icon-background": "^0.0.8",
     "tuya-panel-utils": "^0.1.3"
   },
   "devDependencies": {
