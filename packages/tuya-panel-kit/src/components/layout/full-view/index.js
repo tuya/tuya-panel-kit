@@ -2,6 +2,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { View, Image, Dimensions, StyleSheet, ViewPropTypes, Platform, Text } from 'react-native';
+import { gestureHandlerRootHOC } from 'react-native-gesture-handler';
 import { Rect } from 'react-native-svg';
 import { TYSdk, Strings } from '../../../TYNativeApi';
 import TopBar from '../topbar';
@@ -383,4 +384,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default withTheme(FullView);
+export default withTheme(gestureHandlerRootHOC(FullView));
