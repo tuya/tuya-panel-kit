@@ -32,6 +32,7 @@ export default () => {
               minuteText: Strings.getLang('text_minute'),
               value: state.countdown,
               onMaskPress: ({ close }) => close(),
+              // useTYRCTPicker: true,
               onConfirm: (data, { close }) => {
                 setState({ countdown: data.hour * 60 + data.minute });
                 close();
