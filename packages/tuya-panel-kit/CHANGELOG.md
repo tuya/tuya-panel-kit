@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.7.14](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.7.13...tuya-panel-kit@4.7.14) (2021-10-26)
+
+
+### Bug Fixes
+
+* **Popup.countdowm:** fix minutes not being set to 0 when useTYRCTPicker is true and countdown clock is set to Max, fixes [#155](https://github.com/tuya/tuya-panel-kit/issues/155) ([#156](https://github.com/tuya/tuya-panel-kit/issues/156)) ([65ac365](https://github.com/tuya/tuya-panel-kit/commit/65ac365791f1fe21452af91f778912d90c583cb0))
+
+
+
+
+
 ## [4.7.13](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.7.11...tuya-panel-kit@4.7.13) (2021-10-19)
 
 

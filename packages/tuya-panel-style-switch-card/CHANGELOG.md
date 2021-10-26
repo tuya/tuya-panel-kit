@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.9](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-style-switch-card@0.0.8...tuya-panel-style-switch-card@0.0.9) (2021-10-26)
+
+**Note:** Version bump only for package tuya-panel-style-switch-card
+
+
+
+
+
 ## [0.0.8](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-style-switch-card@0.0.6...tuya-panel-style-switch-card@0.0.8) (2021-10-19)
 
 **Note:** Version bump only for package tuya-panel-style-switch-card
