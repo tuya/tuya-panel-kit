@@ -53,10 +53,7 @@ exports[`Stepper Component editable update 1`] = `
             "width": 32,
           },
           false,
-          Array [
-            Object {},
-            undefined,
-          ],
+          null,
         ]
       }
     >
@@ -204,10 +201,7 @@ exports[`Stepper Component editable update 1`] = `
             "width": 32,
           },
           false,
-          Array [
-            Object {},
-            undefined,
-          ],
+          null,
         ]
       }
     >
@@ -335,10 +329,7 @@ exports[`Stepper Component editable update 2`] = `
             "width": 32,
           },
           false,
-          Array [
-            Object {},
-            undefined,
-          ],
+          null,
         ]
       }
     >
@@ -486,10 +477,7 @@ exports[`Stepper Component editable update 2`] = `
             "width": 32,
           },
           false,
-          Array [
-            Object {},
-            undefined,
-          ],
+          null,
         ]
       }
     >
@@ -585,10 +573,11 @@ exports[`Stepper basic render with TextInput 1 1`] = `
       ]
     }
   >
-    <Styled(Component)
+    <Component
       fill="#333"
       fillOpacity={1}
       name="minus"
+      size={32}
     />
   </Styled(TouchableOpacity)>
   <Styled(TextInput)
@@ -640,10 +629,11 @@ exports[`Stepper basic render with TextInput 1 1`] = `
       ]
     }
   >
-    <Styled(Component)
+    <Component
       fill="#333"
       fillOpacity={1}
       name="plus"
+      size={32}
     />
   </Styled(TouchableOpacity)>
 </Styled(View)>
@@ -664,10 +654,11 @@ exports[`Stepper basic render with TextInput 2 1`] = `
       ]
     }
   >
-    <Styled(Component)
+    <Component
       fill="#333"
       fillOpacity={0.4}
       name="minus"
+      size={32}
     />
   </Styled(TouchableOpacity)>
   <Styled(TextInput)
@@ -719,10 +710,11 @@ exports[`Stepper basic render with TextInput 2 1`] = `
       ]
     }
   >
-    <Styled(Component)
+    <Component
       fill="#333"
       fillOpacity={1}
       name="plus"
+      size={32}
     />
   </Styled(TouchableOpacity)>
 </Styled(View)>
@@ -741,10 +733,11 @@ exports[`Stepper basic render with TextInput 3 1`] = `
       ]
     }
   >
-    <Styled(Component)
+    <Component
       fill="#333"
       fillOpacity={1}
       name="minus"
+      size={32}
     />
   </Styled(TouchableOpacity)>
   <Styled(TextInput)
@@ -783,10 +776,11 @@ exports[`Stepper basic render with TextInput 3 1`] = `
       ]
     }
   >
-    <Styled(Component)
+    <Component
       fill="#333"
       fillOpacity={0.4}
       name="plus"
+      size={32}
     />
   </Styled(TouchableOpacity)>
 </Styled(View)>
@@ -805,10 +799,11 @@ exports[`Stepper basic render with TextInput 4 1`] = `
       ]
     }
   >
-    <Styled(Component)
+    <Component
       fill="#333"
       fillOpacity={1}
       name="minus"
+      size={32}
     />
   </Styled(TouchableOpacity)>
   <Styled(TextInput)
@@ -845,10 +840,11 @@ exports[`Stepper basic render with TextInput 4 1`] = `
       ]
     }
   >
-    <Styled(Component)
+    <Component
       fill="#333"
       fillOpacity={1}
       name="plus"
+      size={32}
     />
   </Styled(TouchableOpacity)>
 </Styled(View)>
@@ -867,10 +863,11 @@ exports[`Stepper basic render with TextInput 5 1`] = `
       ]
     }
   >
-    <Styled(Component)
+    <Component
       fill="#333"
       fillOpacity={1}
       name="minus"
+      size={32}
     />
   </Styled(TouchableOpacity)>
   <Styled(TextInput)
@@ -907,10 +904,11 @@ exports[`Stepper basic render with TextInput 5 1`] = `
       ]
     }
   >
-    <Styled(Component)
+    <Component
       fill="#333"
       fillOpacity={1}
       name="plus"
+      size={32}
     />
   </Styled(TouchableOpacity)>
 </Styled(View)>
@@ -929,10 +927,11 @@ exports[`Stepper basic render with TextInput 6 1`] = `
       ]
     }
   >
-    <Styled(Component)
+    <Component
       fill="#333"
       fillOpacity={1}
       name="minus"
+      size={32}
     />
   </Styled(TouchableOpacity)>
   <Styled(TextInput)
@@ -969,10 +968,11 @@ exports[`Stepper basic render with TextInput 6 1`] = `
       ]
     }
   >
-    <Styled(Component)
+    <Component
       fill="#333"
       fillOpacity={1}
       name="plus"
+      size={32}
     />
   </Styled(TouchableOpacity)>
 </Styled(View)>

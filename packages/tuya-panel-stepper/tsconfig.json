@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "tuya-panel-kit": ["../tuya-panel-kit/lib"],
+      "tuya-panel-icon": ["../tuya-panel-icon/lib"],
       "tuya-panel-utils": ["../tuya-panel-utils/lib"],
     },
     "allowJs": true,

@@ -1,6 +1,5 @@
 import { View, TouchableOpacity, TextInput, StyleSheet } from 'react-native';
 import styled from 'styled-components/native';
-import { IconFont } from 'tuya-panel-kit';
 import { Utils } from 'tuya-panel-utils';
 
 const { convertX: cx } = Utils.RatioUtils;
@@ -65,7 +64,3 @@ export const StyledInput = styled(TextInput).attrs({
   padding: 0px;
   text-align: center;
 `;
-
-export const StyledIconFont = styled(IconFont).attrs({
-  size: cx(16),
-})``;
