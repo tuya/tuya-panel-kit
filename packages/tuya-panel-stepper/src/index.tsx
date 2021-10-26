@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react';
 import { NativeModules } from 'react-native';
 import { Utils } from 'tuya-panel-utils';
+import IconFont from 'tuya-panel-icon';
 import {
   BigButton,
   TouchableOpacityView,
-  StyledIconFont,
   StyledInput,
   RightView,
   TouchableThreeView,
@@ -12,6 +12,8 @@ import {
 import { IStepperProps, IStepperState, IDefaultStepperProps } from './interface';
 
 const { inMaxMin, add, subtract } = Utils.NumberUtils;
+
+const { convertX: cx } = Utils.RatioUtils;
 
 export default class Stepper extends PureComponent<IStepperProps, IStepperState> {
   static defaultProps = IDefaultStepperProps;
@@ -155,9 +157,9 @@ export default class Stepper extends PureComponent<IStepperProps, IStepperState>
           onPressOut={this._handlePressOut}
           onPressIn={this._handlePressIn(true)}
         >
-          <StyledIconFont
+          <IconFont
             fill={ellipseIconColor}
-            // @ts-ignore
+            size={cx(16)}
             fillOpacity={disabled || value === min ? 0.4 : 1}
             name="minus"
           />
@@ -183,9 +185,9 @@ export default class Stepper extends PureComponent<IStepperProps, IStepperState>
           onPressOut={this._handlePressOut}
           onPressIn={this._handlePressIn(false)}
         >
-          <StyledIconFont
+          <IconFont
             fill={ellipseIconColor}
-            // @ts-ignore
+            size={cx(16)}
             fillOpacity={disabled || value === max ? 0.4 : 1}
             name="plus"
           />
@@ -218,9 +220,9 @@ export default class Stepper extends PureComponent<IStepperProps, IStepperState>
           onPressOut={this._handlePressOut}
           onPressIn={this._handlePressIn(true)}
         >
-          <StyledIconFont
+          <IconFont
             fill={triangleIconColor}
-            // @ts-ignore
+            size={cx(16)}
             fillOpacity={disabled || value === min ? 0.4 : 1}
             d={iconMinusPath}
           />
@@ -246,9 +248,9 @@ export default class Stepper extends PureComponent<IStepperProps, IStepperState>
           onPressOut={this._handlePressOut}
           onPressIn={this._handlePressIn(false)}
         >
-          <StyledIconFont
+          <IconFont
             fill={triangleIconColor}
-            // @ts-ignore
+            size={cx(16)}
             fillOpacity={disabled || value === max ? 0.4 : 1}
             d={iconPlusPath}
           />
