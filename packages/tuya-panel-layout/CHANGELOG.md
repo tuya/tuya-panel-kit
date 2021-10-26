@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.7](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-layout@0.0.6...tuya-panel-layout@0.0.7) (2021-10-26)
+
+**Note:** Version bump only for package tuya-panel-layout
+
+
+
+
+
 ## [0.0.6](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-layout@0.0.4...tuya-panel-layout@0.0.6) (2021-10-19)
 
 
