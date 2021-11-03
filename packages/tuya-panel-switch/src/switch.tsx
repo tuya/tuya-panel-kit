@@ -10,7 +10,7 @@ import {
 import { Rect } from 'react-native-svg';
 import IconFont from 'tuya-panel-icon';
 import TYText from 'tuya-panel-text';
-import LinearGradient from 'tuya-panel-kit/lib/components/gradient/linear-gradient';
+import LinearGradient from 'tuya-panel-linear-gradient';
 import { ISwitchProps, switchDefaults, ISwitchState } from './interface';
 import { DEFAULT_SIZE, DEFAULT_GRADIENT_SIZE, EXTRA_WIDTH, EXTRA_HEIGHT } from './constants';
 
