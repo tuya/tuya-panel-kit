@@ -2,7 +2,10 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "*": ["*"]
+      "tuya-panel-linear-gradient": ["../tuya-panel-linear-gradient/lib"],
+      "tuya-panel-utils": ["../tuya-panel-utils/lib"],
+      "tuya-panel-text": ["../tuya-panel-text/lib"],
+      "tuya-panel-icon": ["../tuya-panel-icon/lib"]
     },
     "allowJs": true,
     "declaration": true,

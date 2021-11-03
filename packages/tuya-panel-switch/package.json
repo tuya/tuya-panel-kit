@@ -24,7 +24,7 @@
 		"tuya-panel-icon": "^0.0.0",
 		"tuya-panel-utils": "^0.1.3",
 		"tuya-panel-text": "^0.0.3",
-		"tuya-panel-kit": "^4.7.13"
+		"tuya-panel-linear-gradient": "^0.0.0"
 	},
 	"scripts": {
 		"prebuild": "rimraf lib/*",
