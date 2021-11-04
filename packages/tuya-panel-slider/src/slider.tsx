@@ -6,6 +6,7 @@ import {
   PanResponderInstance,
   View,
   Easing,
+  NativeModules,
 } from 'react-native';
 import _ from 'lodash';
 import { Utils } from 'tuya-panel-utils';
@@ -350,9 +351,15 @@ export default class Slider extends Component<ISliderProps, ISliderState> {
   }
 
   _fireChangeEvent(event) {
+    const { isVibration, minimumValue, maximumValue } = this.props;
     const value = this._getCurrentValue();
     const newValue = this._testValue(value, this.props);
     if (this.props[event]) {
+      if (event === 'onSlidingComplete' && NativeModules.TYRCTHapticsManager && isVibration) {
+        if (newValue === minimumValue || newValue === maximumValue) {
+          NativeModules.TYRCTHapticsManager.impact('Heavy');
+        }
+      }
       this.props[event](newValue);
     }
     if (this.props.onScrollEvent) {
