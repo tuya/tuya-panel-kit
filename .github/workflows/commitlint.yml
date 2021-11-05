@@ -2,7 +2,7 @@ name: commitlint
 on:
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   commitlint:
