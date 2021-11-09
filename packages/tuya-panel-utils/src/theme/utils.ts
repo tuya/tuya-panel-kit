@@ -116,7 +116,10 @@ export const getTheme = (
 ): any => {
   const [namespace, ...path] = key.split('.');
   const themeBasicPath = path.join('.');
-  const themeType = get(props.theme, `${namespace}.type`) || get(props.theme, 'type', 'light');
+  const themeType =
+    get(props.theme, `${namespace}.type`) || get(props.theme, 'type', 'light') === 'dark'
+      ? 'dark'
+      : 'light';
   let themeValue;
   let themeTypePath;
   if (themeType) {
