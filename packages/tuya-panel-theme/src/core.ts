@@ -11,7 +11,7 @@ export const getBrandColor = (props: { [key: string]: any }): string =>
 export const getDividerColor = (props: { [key: string]: any }): string =>
   get(props, 'theme.global.dividerColor', baseTheme.global.dividerColor);
 export const getTypedFontColor = (props: { [key: string]: any }, reverse = false): string => {
-  let type: 'light' | 'dark' = get(props.theme, 'type', 'light');
+  let type: 'light' | 'dark' = get(props.theme, 'type', 'light') === 'dark' ? 'dark' : 'light';
   if (reverse) type = type === 'light' ? 'dark' : 'light';
   const path = `global.text.${type}`;
   return get(props.theme, path, baseTheme.global.text[type]);
