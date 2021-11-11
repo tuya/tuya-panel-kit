@@ -1,0 +1,637 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs Component TabContent.render 1`] = `[Function]`;
+
+exports[`Tabs Component Tabs + Panel 1`] = `[Function]`;
+
+exports[`Tabs Component Tabs + Tabs.TabPanel + Tabs 1`] = `[Function]`;
+
+exports[`Tabs Component Tabs.TabPanel 1`] = `[Function]`;
+
+exports[`Tabs Component basic.render 1`] = `[Function]`;
+
+exports[`Tabs Component render with TabContent 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "flex": 1,
+        "overflow": "hidden",
+      },
+      null,
+    ]
+  }
+>
+  <TabContent
+    accessibilityLabel="Tabs"
+    animationConfig={
+      Object {
+        "delay": 0,
+        "duration": 200,
+        "easing": [Function],
+        "isInteraction": true,
+        "useNativeDriver": true,
+      }
+    }
+    disabled={true}
+    key="TabContent"
+    onMove={[Function]}
+    onRelease={[Function]}
+    preload={true}
+    preloadTimeout={375}
+    renderPlaceholder={[Function]}
+    style={
+      Array [
+        null,
+        Object {
+          "width": 750,
+        },
+      ]
+    }
+    velocityThreshold={0.5}
+  >
+    <TabPanel
+      background="#fff"
+      style={null}
+    >
+      <Tabs
+        accessibilityLabel="Tabs"
+        activeKey="3"
+        animationConfig={
+          Object {
+            "delay": 0,
+            "duration": 200,
+            "easing": [Function],
+            "isInteraction": true,
+            "useNativeDriver": false,
+          }
+        }
+        background="#fff"
+        dataSource={
+          Array [
+            Object {
+              "label": "姓名",
+              "value": "1",
+            },
+            Object {
+              "label": "年龄",
+              "value": "2",
+            },
+            Object {
+              "label": "家庭住址",
+              "value": "3",
+            },
+            Object {
+              "label": "房间",
+              "value": "4",
+            },
+            Object {
+              "label": "小区",
+              "value": "5",
+            },
+            Object {
+              "label": "单元",
+              "value": "6",
+            },
+            Object {
+              "label": "毕业院校",
+              "value": "7",
+            },
+            Object {
+              "label": "户籍",
+              "value": "8",
+            },
+          ]
+        }
+        defaultActiveKey={0}
+        disabled={false}
+        extraSpace={0}
+        maxItem={4}
+        preload={true}
+        preloadTimeout={375}
+        style={null}
+        swipeable={true}
+        tabActiveStyle={null}
+        tabActiveTextStyle={null}
+        tabContentStyle={null}
+        tabPosition="top"
+        tabStyle={null}
+        tabTextStyle={null}
+        underlineStyle={null}
+        velocityThreshold={0.5}
+        wrapperStyle={null}
+      >
+        <TabPanel
+          background="transparent"
+          key="0"
+          style={null}
+          title="姓名"
+        />
+        <TabPanel
+          background="transparent"
+          key="1"
+          style={null}
+          title="年龄"
+        />
+        <TabPanel
+          background="transparent"
+          key="2"
+          style={null}
+          title="家庭住址"
+        />
+        <TabPanel
+          background="transparent"
+          key="3"
+          style={null}
+          title="房间"
+        />
+        <TabPanel
+          background="transparent"
+          key="4"
+          style={null}
+          title="小区"
+        />
+        <TabPanel
+          background="transparent"
+          key="5"
+          style={null}
+          title="单元"
+        />
+        <TabPanel
+          background="transparent"
+          key="6"
+          style={null}
+          title="毕业院校"
+        />
+        <TabPanel
+          background="transparent"
+          key="7"
+          style={null}
+          title="户籍"
+        />
+      </Tabs>
+    </TabPanel>
+    <TabPanel
+      background="#fff"
+      style={null}
+    >
+      <TYListItem
+        Action={null}
+        Icon={null}
+        actionDisabled={false}
+        actionType="auto"
+        arrow={false}
+        arrowColor={null}
+        arrowUseIcon={false}
+        disabled={false}
+        iconColor={null}
+        iconSize={null}
+        iconType="auto"
+        imageFollowIconColor={true}
+        needUpdate={true}
+        onPress={null}
+        styles={Object {}}
+        subTitle={null}
+        theme={Object {}}
+        title="遥控器"
+        useART={false}
+      />
+    </TabPanel>
+    <TabPanel
+      background="#fff"
+      style={null}
+    >
+      <TYListItem
+        Action={null}
+        Icon={null}
+        actionDisabled={false}
+        actionType="auto"
+        arrow={false}
+        arrowColor={null}
+        arrowUseIcon={false}
+        disabled={false}
+        iconColor={null}
+        iconSize={null}
+        iconType="auto"
+        imageFollowIconColor={true}
+        needUpdate={true}
+        onPress={null}
+        styles={Object {}}
+        subTitle={null}
+        theme={Object {}}
+        title="模拟器"
+        useART={false}
+      />
+    </TabPanel>
+    <TabPanel
+      background="#fff"
+      style={null}
+    >
+      <TYListItem
+        Action={null}
+        Icon={null}
+        actionDisabled={false}
+        actionType="auto"
+        arrow={false}
+        arrowColor={null}
+        arrowUseIcon={false}
+        disabled={false}
+        iconColor={null}
+        iconSize={null}
+        iconType="auto"
+        imageFollowIconColor={true}
+        needUpdate={true}
+        onPress={null}
+        styles={Object {}}
+        subTitle={null}
+        theme={Object {}}
+        title="有限探测器"
+        useART={false}
+      />
+    </TabPanel>
+  </TabContent>
+  <Styled(View)
+    key="Tabs"
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    pointerEvents="box-only"
+    style={
+      Array [
+        null,
+        Object {
+          "backgroundColor": "#fff",
+          "width": 750,
+        },
+      ]
+    }
+  >
+    <Styled(View)
+      accessibilityLabel="Tabs_0"
+      key="0"
+      style={
+        Array [
+          Object {
+            "width": 187.5,
+          },
+          undefined,
+        ]
+      }
+      value="1"
+    >
+      <Styled(View)
+        onLayout={[Function]}
+        style={
+          Array [
+            false,
+            null,
+            false,
+          ]
+        }
+      >
+        <Styled(TYText)
+          isActive={false}
+          style={
+            Array [
+              null,
+              false,
+            ]
+          }
+          text="探测器"
+        />
+      </Styled(View)>
+    </Styled(View)>
+    <Styled(View)
+      accessibilityLabel="Tabs_1"
+      key="1"
+      style={
+        Array [
+          Object {
+            "width": 187.5,
+          },
+          undefined,
+        ]
+      }
+      value="2"
+    >
+      <Styled(View)
+        onLayout={[Function]}
+        style={
+          Array [
+            false,
+            null,
+            false,
+          ]
+        }
+      >
+        <Styled(TYText)
+          isActive={false}
+          style={
+            Array [
+              null,
+              false,
+            ]
+          }
+          text="遥控器"
+        />
+      </Styled(View)>
+    </Styled(View)>
+    <Styled(View)
+      accessibilityLabel="Tabs_2"
+      key="2"
+      style={
+        Array [
+          Object {
+            "width": 187.5,
+          },
+          undefined,
+        ]
+      }
+      value="3"
+    >
+      <Styled(View)
+        onLayout={[Function]}
+        style={
+          Array [
+            false,
+            null,
+            false,
+          ]
+        }
+      >
+        <Styled(TYText)
+          isActive={false}
+          style={
+            Array [
+              null,
+              false,
+            ]
+          }
+          text="RFID"
+        />
+      </Styled(View)>
+    </Styled(View)>
+    <Styled(View)
+      accessibilityLabel="Tabs_3"
+      key="3"
+      style={
+        Array [
+          Object {
+            "width": 187.5,
+          },
+          undefined,
+        ]
+      }
+      value="4"
+    >
+      <Styled(View)
+        onLayout={[Function]}
+        style={
+          Array [
+            false,
+            null,
+            false,
+          ]
+        }
+      >
+        <Styled(TYText)
+          isActive={false}
+          style={
+            Array [
+              null,
+              false,
+            ]
+          }
+          text="有限探测器"
+        />
+      </Styled(View)>
+    </Styled(View)>
+    <Styled(AnimatedComponent)
+      color="transparent"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+          },
+          false,
+          Object {
+            "transform": Array [
+              Object {
+                "translateX": NaN,
+              },
+            ],
+            "width": NaN,
+          },
+        ]
+      }
+    />
+    <Mask
+      color="#fff"
+      visible={false}
+    />
+  </Styled(View)>
+</View>
+`;
+
+exports[`Tabs Component render with shallow 1`] = `
+<Styled(View)
+  key="Tabs"
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  pointerEvents="box-only"
+  style={
+    Array [
+      null,
+      Object {
+        "backgroundColor": "#fff",
+        "width": 750,
+      },
+    ]
+  }
+>
+  <Styled(View)
+    accessibilityLabel="Tabs_0"
+    key="0"
+    style={
+      Array [
+        Object {
+          "width": 187.5,
+        },
+        undefined,
+      ]
+    }
+    value="1"
+  >
+    <Styled(View)
+      onLayout={[Function]}
+      style={
+        Array [
+          Object {
+            "width": 30,
+          },
+          null,
+          null,
+        ]
+      }
+    />
+    <Styled(TYText)
+      isActive={true}
+      style={
+        Array [
+          null,
+          null,
+        ]
+      }
+      text="探测器"
+    />
+  </Styled(View)>
+  <Styled(View)
+    accessibilityLabel="Tabs_1"
+    key="1"
+    style={
+      Array [
+        Object {
+          "width": 187.5,
+        },
+        undefined,
+      ]
+    }
+    value="2"
+  >
+    <Styled(View)
+      onLayout={[Function]}
+      style={
+        Array [
+          Object {
+            "width": 30,
+          },
+          null,
+          false,
+        ]
+      }
+    />
+    <Styled(TYText)
+      isActive={false}
+      style={
+        Array [
+          null,
+          false,
+        ]
+      }
+      text="遥控器"
+    />
+  </Styled(View)>
+  <Styled(View)
+    accessibilityLabel="Tabs_2"
+    key="2"
+    style={
+      Array [
+        Object {
+          "width": 187.5,
+        },
+        undefined,
+      ]
+    }
+    value="3"
+  >
+    <Styled(View)
+      onLayout={[Function]}
+      style={
+        Array [
+          Object {
+            "width": 30,
+          },
+          null,
+          false,
+        ]
+      }
+    />
+    <Styled(TYText)
+      isActive={false}
+      style={
+        Array [
+          null,
+          false,
+        ]
+      }
+      text="RFID"
+    />
+  </Styled(View)>
+  <Styled(View)
+    accessibilityLabel="Tabs_3"
+    key="3"
+    style={
+      Array [
+        Object {
+          "width": 187.5,
+        },
+        undefined,
+      ]
+    }
+    value="4"
+  >
+    <Styled(View)
+      onLayout={[Function]}
+      style={
+        Array [
+          Object {
+            "width": 30,
+          },
+          null,
+          false,
+        ]
+      }
+    />
+    <Styled(TYText)
+      isActive={false}
+      style={
+        Array [
+          null,
+          false,
+        ]
+      }
+      text="有限探测器"
+    />
+  </Styled(View)>
+  <Styled(AnimatedComponent)
+    style={
+      Array [
+        null,
+        false,
+        Object {
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
+          "width": 0,
+        },
+      ]
+    }
+  />
+  <Mask
+    color="#fff"
+    visible={false}
+  />
+</Styled(View)>
+`;
