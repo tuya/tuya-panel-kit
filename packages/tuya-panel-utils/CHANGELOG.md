@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.4](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-utils@0.1.3...tuya-panel-utils@0.1.4) (2021-11-11)
+
+
+### Bug Fixes
+
+* **theme:** Fixed crashes where the theme is not Light or Dark ([#157](https://github.com/tuya/tuya-panel-kit/issues/157)) ([cee1e9e](https://github.com/tuya/tuya-panel-kit/commit/cee1e9e7462698a285cdea1794818ae6d35a56fd))
+
+
+
+
+
 ## [0.1.3](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-utils@0.1.2...tuya-panel-utils@0.1.3) (2021-10-11)
 
 
