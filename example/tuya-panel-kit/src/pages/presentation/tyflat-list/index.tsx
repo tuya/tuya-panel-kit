@@ -1,8 +1,10 @@
 import React from 'react';
 import { View } from 'react-native';
-import { TYFlatList, TYText } from 'tuya-panel-kit';
+import { TYFlatList, TYText, Utils } from 'tuya-panel-kit';
 
 import Strings from '#i18n';
+
+const { height } = Utils.RatioUtils;
 
 export default () => {
   const data = [
@@ -79,7 +81,7 @@ export default () => {
   ];
   return (
     <TYFlatList
-      style={{ alignSelf: 'stretch', backgroundColor: '#f5f5f5', height: 591, borderRadius: 8 }}
+      style={{ alignSelf: 'stretch', backgroundColor: '#f5f5f5', height, borderRadius: 8 }}
       data={data}
     />
   );
