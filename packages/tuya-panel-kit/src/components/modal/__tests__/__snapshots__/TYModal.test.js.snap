@@ -31,6 +31,9 @@ exports[`TYModal Component renders correctly 1`] = `
         Object {
           "display": "none",
         },
+        Object {
+          "position": "absolute",
+        },
       ]
     }
   >
@@ -64,6 +67,9 @@ exports[`TYModal Component renders correctly 1`] = `
         ],
         Object {
           "display": "none",
+        },
+        Object {
+          "position": "absolute",
         },
       ]
     }
@@ -172,6 +178,9 @@ exports[`TYModal Component renders correctly with useKeyboardView 1`] = `
         Object {
           "display": "none",
         },
+        Object {
+          "position": "absolute",
+        },
       ]
     }
   >
@@ -218,6 +227,9 @@ exports[`TYModal Component renders correctly with useKeyboardView 1`] = `
         ],
         Object {
           "display": "none",
+        },
+        Object {
+          "position": "absolute",
         },
       ]
     }
