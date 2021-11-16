@@ -9651,14 +9651,14 @@ tunnel-agent@^0.6.0:
 
 tuya-panel-animation-diffusion@^0.1.2:
   version "0.1.2"
-  resolved "https://registry.npmjs.org/tuya-panel-animation-diffusion/-/tuya-panel-animation-diffusion-0.1.2.tgz#a7116b66444b4e9c05242ae68f94fa8843028f8e"
+  resolved "https://registry.npmmirror.com/tuya-panel-animation-diffusion/download/tuya-panel-animation-diffusion-0.1.2.tgz#a7116b66444b4e9c05242ae68f94fa8843028f8e"
   integrity sha512-I3kaMDlVfRj+bHJw/QmY/lGXZDcGwZwPzopB+0Z6NCni6tAplvMRj85xv3k7VnPY8is1ld+s3YkIC9BQtCbDrA==
   dependencies:
     tuya-panel-utils "^0.1.4"
 
 tuya-panel-animation-drawer@^0.1.2:
   version "0.1.2"
-  resolved "https://registry.npmjs.org/tuya-panel-animation-drawer/-/tuya-panel-animation-drawer-0.1.2.tgz#9ab99da14800583ace1247cbc023565264a060d2"
+  resolved "https://registry.npmmirror.com/tuya-panel-animation-drawer/download/tuya-panel-animation-drawer-0.1.2.tgz#9ab99da14800583ace1247cbc023565264a060d2"
   integrity sha512-J93vwd4M60DshY1/cEPV0L6wgRfR2Dxq+YyqmlKr7j+i/ivr8QpTVENFgIa26wjWX8wO4F0hs1Ltn6GiYrNMwA==
   dependencies:
     lodash "^4.17.21"
@@ -9666,7 +9666,7 @@ tuya-panel-animation-drawer@^0.1.2:
 
 tuya-panel-animation-wave@^0.1.2:
   version "0.1.2"
-  resolved "https://registry.npmjs.org/tuya-panel-animation-wave/-/tuya-panel-animation-wave-0.1.2.tgz#3553701f162c9f516b4baf76540b5bac6a9f16b6"
+  resolved "https://registry.npmmirror.com/tuya-panel-animation-wave/download/tuya-panel-animation-wave-0.1.2.tgz#3553701f162c9f516b4baf76540b5bac6a9f16b6"
   integrity sha512-Vb55l/YZBnMzCJNreaif56jgX8OdqKqNbV5dKUd02KF0M3LCg/MKHPNXiOO03aiJwCI4zzFTZ+5So4tHzzwjwA==
   dependencies:
     react-native-svg "5.5.1"
@@ -9678,7 +9678,7 @@ tuya-panel-animation-wave@^0.1.2:
 
 tuya-panel-theme@^0.0.8:
   version "0.0.8"
-  resolved "https://registry.npmjs.org/tuya-panel-theme/-/tuya-panel-theme-0.0.8.tgz#0fe122136f8850e9f122f52e23e27a6e530459c5"
+  resolved "https://registry.npmmirror.com/tuya-panel-theme/download/tuya-panel-theme-0.0.8.tgz#0fe122136f8850e9f122f52e23e27a6e530459c5"
   integrity sha512-xsyqGC6iVHyFiskN4x4toShu/sFzkRQykYIqGxbaRhNRNPBvFiz+YU7D1/Yv9sg3qOYiDqExYi5oHIEQxgKB4Q==
   dependencies:
     tuya-panel-utils "^0.1.4"

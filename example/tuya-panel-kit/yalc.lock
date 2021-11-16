@@ -2,7 +2,7 @@
   "version": "v1",
   "packages": {
     "tuya-panel-kit": {
-      "signature": "6b3f1dcb31e8301d2098eead44d2ca39",
+      "signature": "f67c5ae0795e36e20a9d96047d31b5fc",
       "link": true,
       "replaced": "file:.yalc/tuya-panel-kit"
     }
