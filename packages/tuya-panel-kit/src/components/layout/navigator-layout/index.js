@@ -74,6 +74,7 @@ export default class NavigatorLayout extends Component {
     }
     this.state = {
       modalVisible: false,
+      isMqttNoticeActive: false,
     };
   }
 
@@ -91,7 +92,8 @@ export default class NavigatorLayout extends Component {
     TYNativeModules.receiverMqttData(23);
     TYNativeModules.sendMqttData(22);
     TYSdk.DeviceEventEmitter.addListener('receiveMqttData', this._handleMqttSignal);
-    AppState.addEventListener('change', this._handleAppStateChange);
+    this.state.isMqttNoticeActive &&
+      AppState.addEventListener('change', this._handleAppStateChange);
   }
 
   componentWillUnmount() {
@@ -104,7 +106,6 @@ export default class NavigatorLayout extends Component {
 
     if (hideSignalPop || hideSignalPopProps) return;
 
-    Notification.hide();
     this.timer && clearTimeout(this.timer);
     TYSdk.DeviceEventEmitter.removeListener('receiveMqttData', this._handleMqttSignal);
     AppState.removeEventListener('change', this._handleAppStateChange);
@@ -165,6 +166,9 @@ export default class NavigatorLayout extends Component {
         const { value: rssi } = res;
         if (signal < rssi && AppState.currentState === 'active') {
           this.timer && clearTimeout(this.timer);
+          this.setState({
+            isMqttNoticeActive: true,
+          });
           Notification.show({
             message: Strings.getLang('location'),
             backIcon: moreIcon,
@@ -177,6 +181,9 @@ export default class NavigatorLayout extends Component {
           });
           this.timer = setTimeout(() => {
             Notification.hide();
+            this.setState({
+              isMqttNoticeActive: false,
+            });
           }, 3000);
         }
       });
