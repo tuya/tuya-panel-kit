@@ -1,6 +1,6 @@
 {
   "name": "tuya-panel-style-step-card",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "tuya-panel-style-step-card",
   "author": "ZengBeauty <2497752603@qq.com>",
   "homepage": "https://github.com/tuya/tuya-panel-kit#readme",
@@ -14,9 +14,9 @@
     "lib"
   ],
   "dependencies": {
-    "tuya-panel-kit": "^4.7.15",
-    "tuya-panel-style-icon-background": "^0.0.10",
-    "tuya-panel-utils": "^0.1.4"
+    "tuya-panel-kit": "^4.7.16",
+    "tuya-panel-style-icon-background": "^0.0.11",
+    "tuya-panel-utils": "^0.1.5"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"

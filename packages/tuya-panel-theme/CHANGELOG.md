@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.9](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-theme@0.0.8...tuya-panel-theme@0.0.9) (2021-11-18)
+
+
+### Bug Fixes
+
+* **Dialog && Popup:** fix theme = basic in Dialog or Popup ([#162](https://github.com/tuya/tuya-panel-kit/issues/162)) ([450c6e5](https://github.com/tuya/tuya-panel-kit/commit/450c6e590f315b310effc3b3c5c8358d02eefec9))
+
+
+
+
+
 ## [0.0.8](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-theme@0.0.7...tuya-panel-theme@0.0.8) (2021-11-11)
 
 

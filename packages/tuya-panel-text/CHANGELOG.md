@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.5](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-text@0.0.4...tuya-panel-text@0.0.5) (2021-11-18)
+
+**Note:** Version bump only for package tuya-panel-text
+
+
+
+
+
 ## [0.0.4](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-text@0.0.3...tuya-panel-text@0.0.4) (2021-11-11)
 
 **Note:** Version bump only for package tuya-panel-text
