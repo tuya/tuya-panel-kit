@@ -147,6 +147,7 @@ export type DpType = 'bool' | 'value' | 'enum' | 'raw' | 'string' | 'bitmap';
 
 export interface INavigatorState {
   modalVisible: boolean;
+  isMqttNoticeActive: boolean;
 }
 
 export interface INavigatorProps {
