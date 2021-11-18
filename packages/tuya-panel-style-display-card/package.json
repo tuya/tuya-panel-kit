@@ -1,6 +1,6 @@
 {
   "name": "tuya-panel-style-display-card",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "tuya-panel-style-display-card",
   "author": "ZengBeauty <2497752603@qq.com>",
   "homepage": "https://github.com/tuya/tuya-panel-kit#readme",
@@ -28,9 +28,9 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "tuya-panel-kit": "^4.7.15",
-    "tuya-panel-style-icon-background": "^0.0.10",
-    "tuya-panel-utils": "^0.1.4"
+    "tuya-panel-kit": "^4.7.16",
+    "tuya-panel-style-icon-background": "^0.0.11",
+    "tuya-panel-utils": "^0.1.5"
   },
   "devDependencies": {
     "@types/tuya-panel-kit": "^4.0.5"

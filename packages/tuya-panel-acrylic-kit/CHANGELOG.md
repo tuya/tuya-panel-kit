@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.11](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-acrylic-kit@0.0.10...tuya-panel-acrylic-kit@0.0.11) (2021-11-18)
+
+**Note:** Version bump only for package tuya-panel-acrylic-kit
+
+
+
+
+
 ## [0.0.10](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-acrylic-kit@0.0.9...tuya-panel-acrylic-kit@0.0.10) (2021-11-11)
 
 **Note:** Version bump only for package tuya-panel-acrylic-kit

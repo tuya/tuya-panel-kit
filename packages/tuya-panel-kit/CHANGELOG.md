@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.7.16](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.7.15...tuya-panel-kit@4.7.16) (2021-11-18)
+
+
+### Bug Fixes
+
+* **Modal:** Fixed an issue with Popup and Dialog combining content overlay on Android,fixed [#158](https://github.com/tuya/tuya-panel-kit/issues/158) ([#160](https://github.com/tuya/tuya-panel-kit/issues/160)) ([151625f](https://github.com/tuya/tuya-panel-kit/commit/151625f262274c1306d06bdec6b39349438b318f))
+* **Notification:** Fixed an issue where Notification was automatically destroyed in the background, fixed [#159](https://github.com/tuya/tuya-panel-kit/issues/159) ([#161](https://github.com/tuya/tuya-panel-kit/issues/161)) ([5e4cba2](https://github.com/tuya/tuya-panel-kit/commit/5e4cba201339418b05b77dffa667c6ab85ec3724))
+
+
+
+
+
 ## [4.7.15](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.7.14...tuya-panel-kit@4.7.15) (2021-11-11)
 
 **Note:** Version bump only for package tuya-panel-kit
