@@ -1,0 +1,1024 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabbar Component basic render 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+      },
+      Object {},
+    ]
+  }
+>
+  <RCTScrollView
+    horizontal={true}
+    showsHorizontalScrollIndicator={false}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-around",
+            },
+            Object {},
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onLayout={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "height": 43,
+              "justifyContent": "center",
+              "opacity": 1,
+              "width": 160,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            align={null}
+            allowFontScaling={false}
+            color={null}
+            ellipsizeMode="tail"
+            size={16}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "#333",
+                  "fontSize": 16,
+                },
+                Array [
+                  Object {
+                    "color": "#333",
+                    "fontSize": 16,
+                  },
+                  Object {},
+                  Object {
+                    "color": "#000",
+                  },
+                  false,
+                  false,
+                  false,
+                ],
+              ]
+            }
+            type={null}
+            weight={null}
+          >
+            Tab1
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onLayout={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "height": 43,
+              "justifyContent": "center",
+              "opacity": 1,
+              "width": 160,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            align={null}
+            allowFontScaling={false}
+            color={null}
+            ellipsizeMode="tail"
+            size={16}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "#333",
+                  "fontSize": 16,
+                },
+                Array [
+                  Object {
+                    "color": "#333",
+                    "fontSize": 16,
+                  },
+                  Object {},
+                  Object {
+                    "color": "#000",
+                  },
+                  Object {
+                    "color": "#108ee9",
+                  },
+                  Object {},
+                  Object {
+                    "color": "#f0f",
+                  },
+                ],
+              ]
+            }
+            type={null}
+            weight={null}
+          >
+            Tab2
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onLayout={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "height": 43,
+              "justifyContent": "center",
+              "opacity": 1,
+              "width": 160,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            align={null}
+            allowFontScaling={false}
+            color={null}
+            ellipsizeMode="tail"
+            size={16}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "#333",
+                  "fontSize": 16,
+                },
+                Array [
+                  Object {
+                    "color": "#333",
+                    "fontSize": 16,
+                  },
+                  Object {},
+                  Object {
+                    "color": "#000",
+                  },
+                  false,
+                  false,
+                  false,
+                ],
+              ]
+            }
+            type={null}
+            weight={null}
+          >
+            Tab3
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onLayout={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "height": 43,
+              "justifyContent": "center",
+              "opacity": 1,
+              "width": 160,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            align={null}
+            allowFontScaling={false}
+            color={null}
+            ellipsizeMode="tail"
+            size={16}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "#333",
+                  "fontSize": 16,
+                },
+                Array [
+                  Object {
+                    "color": "#333",
+                    "fontSize": 16,
+                  },
+                  Object {},
+                  Object {
+                    "color": "#000",
+                  },
+                  false,
+                  false,
+                  false,
+                ],
+              ]
+            }
+            type={null}
+            weight={null}
+          >
+            Tab4
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onLayout={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "height": 43,
+              "justifyContent": "center",
+              "opacity": 1,
+              "width": 160,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            align={null}
+            allowFontScaling={false}
+            color={null}
+            ellipsizeMode="tail"
+            size={16}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "#333",
+                  "fontSize": 16,
+                },
+                Array [
+                  Object {
+                    "color": "#333",
+                    "fontSize": 16,
+                  },
+                  Object {},
+                  Object {
+                    "color": "#000",
+                  },
+                  false,
+                  false,
+                  false,
+                ],
+              ]
+            }
+            type={null}
+            weight={null}
+          >
+            Tab5
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onLayout={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "height": 43,
+              "justifyContent": "center",
+              "opacity": 1,
+              "width": 160,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            align={null}
+            allowFontScaling={false}
+            color={null}
+            ellipsizeMode="tail"
+            size={16}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "#333",
+                  "fontSize": 16,
+                },
+                Array [
+                  Object {
+                    "color": "#333",
+                    "fontSize": 16,
+                  },
+                  Object {},
+                  Object {
+                    "color": "#000",
+                  },
+                  false,
+                  false,
+                  false,
+                ],
+              ]
+            }
+            type={null}
+            weight={null}
+          >
+            Tab6
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onLayout={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "height": 43,
+              "justifyContent": "center",
+              "opacity": 1,
+              "width": 160,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            align={null}
+            allowFontScaling={false}
+            color={null}
+            ellipsizeMode="tail"
+            size={16}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "#333",
+                  "fontSize": 16,
+                },
+                Array [
+                  Object {
+                    "color": "#333",
+                    "fontSize": 16,
+                  },
+                  Object {},
+                  Object {
+                    "color": "#000",
+                  },
+                  false,
+                  false,
+                  false,
+                ],
+              ]
+            }
+            type={null}
+            weight={null}
+          >
+            Tab7
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onLayout={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "height": 43,
+              "justifyContent": "center",
+              "opacity": 1,
+              "width": 160,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            align={null}
+            allowFontScaling={false}
+            color={null}
+            ellipsizeMode="tail"
+            size={16}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "#333",
+                  "fontSize": 16,
+                },
+                Array [
+                  Object {
+                    "color": "#333",
+                    "fontSize": 16,
+                  },
+                  Object {},
+                  Object {
+                    "color": "#000",
+                  },
+                  false,
+                  false,
+                  false,
+                ],
+              ]
+            }
+            type={null}
+            weight={null}
+          >
+            Tab8
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onLayout={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "height": 43,
+              "justifyContent": "center",
+              "opacity": 1,
+              "width": 160,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            align={null}
+            allowFontScaling={false}
+            color={null}
+            ellipsizeMode="tail"
+            size={16}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "#333",
+                  "fontSize": 16,
+                },
+                Array [
+                  Object {
+                    "color": "#333",
+                    "fontSize": 16,
+                  },
+                  Object {},
+                  Object {
+                    "color": "#000",
+                  },
+                  false,
+                  false,
+                  false,
+                ],
+              ]
+            }
+            type={null}
+            weight={null}
+          >
+            Tab9
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onLayout={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "height": 43,
+              "justifyContent": "center",
+              "opacity": 1,
+              "width": 160,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            align={null}
+            allowFontScaling={false}
+            color={null}
+            ellipsizeMode="tail"
+            size={16}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "#333",
+                  "fontSize": 16,
+                },
+                Array [
+                  Object {
+                    "color": "#333",
+                    "fontSize": 16,
+                  },
+                  Object {},
+                  Object {
+                    "color": "#000",
+                  },
+                  false,
+                  false,
+                  false,
+                ],
+              ]
+            }
+            type={null}
+            weight={null}
+          >
+            Tab10
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#108ee9",
+            "bottom": 0,
+            "height": 2,
+            "left": 0,
+            "position": "absolute",
+            "width": 20,
+          }
+        }
+      />
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
+exports[`Tabbar Component type radio 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#E3E9EE",
+        "borderColor": "#fff",
+        "borderRadius": 30,
+        "height": 60,
+        "justifyContent": "center",
+      },
+      Object {
+        "backgroundColor": "#000",
+        "borderColor": "red",
+        "borderRadius": 27,
+        "height": 54,
+        "marginTop": 10,
+      },
+      Object {
+        "paddingHorizontal": 2,
+      },
+    ]
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": 0,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        size={16}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 16,
+            },
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#9CA3A9",
+                "fontSize": 14,
+                "fontWeight": "400",
+                "textAlign": "center",
+              },
+              Array [
+                Array [
+                  Object {
+                    "opacity": 0,
+                  },
+                ],
+                Object {
+                  "color": "#F84803",
+                },
+                Object {
+                  "fontSize": 16,
+                },
+              ],
+              false,
+              false,
+            ],
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        Tab1
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": 0,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        size={16}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 16,
+            },
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#9CA3A9",
+                "fontSize": 14,
+                "fontWeight": "400",
+                "textAlign": "center",
+              },
+              Array [
+                Array [
+                  Object {
+                    "opacity": 0,
+                  },
+                ],
+                Object {
+                  "color": "#F84803",
+                },
+                Object {
+                  "fontSize": 16,
+                },
+              ],
+              Object {
+                "color": "#57BCFB",
+                "fontWeight": "500",
+              },
+              Object {
+                "color": "#F84803",
+              },
+            ],
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        Tab2
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": 0,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        size={16}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 16,
+            },
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#9CA3A9",
+                "fontSize": 14,
+                "fontWeight": "400",
+                "textAlign": "center",
+              },
+              Array [
+                Array [
+                  Object {
+                    "opacity": 0,
+                  },
+                ],
+                Object {
+                  "color": "#F84803",
+                },
+                Object {
+                  "fontSize": 16,
+                },
+              ],
+              false,
+              false,
+            ],
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        Tab3
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Tabbar Component type radioCircle 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#E3E9EE",
+        "borderColor": "#fff",
+        "borderRadius": 30,
+        "height": 60,
+        "justifyContent": "center",
+      },
+      Object {},
+      Object {
+        "paddingHorizontal": 2,
+      },
+    ]
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": 0,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#57BCFB",
+              "borderRadius": 2,
+              "height": 4,
+              "width": 4,
+            },
+            Object {
+              "backgroundColor": "#F84803",
+            },
+          ]
+        }
+      />
+    </View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": 0,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        align={null}
+        allowFontScaling={false}
+        color={null}
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        size={16}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333",
+              "fontSize": 16,
+            },
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "#9CA3A9",
+                "fontSize": 14,
+                "fontWeight": "400",
+                "textAlign": "center",
+              },
+              Array [
+                Array [
+                  Object {
+                    "opacity": 0,
+                  },
+                ],
+                Object {
+                  "color": "#F84803",
+                },
+                Object {
+                  "fontSize": 16,
+                },
+              ],
+              Object {
+                "color": "#57BCFB",
+                "fontWeight": "500",
+              },
+              Object {
+                "color": "#F84803",
+              },
+            ],
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        Tab2
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": 0,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#57BCFB",
+              "borderRadius": 2,
+              "height": 4,
+              "width": 4,
+            },
+            Object {
+              "backgroundColor": "#F84803",
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
