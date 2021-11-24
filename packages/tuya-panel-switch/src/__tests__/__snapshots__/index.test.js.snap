@@ -23,6 +23,7 @@ exports[`SwitchButton Component  render width no value 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "backgroundColor": "transparent",
         "height": NaN,
         "justifyContent": "center",
         "opacity": 1,
@@ -100,6 +101,7 @@ exports[`SwitchButton Component  render width no value 2`] = `
     style={
       Object {
         "alignItems": "center",
+        "backgroundColor": "transparent",
         "height": NaN,
         "justifyContent": "center",
         "opacity": 1,
@@ -179,6 +181,7 @@ exports[`SwitchButton Component SwitchButton render width onTintColor 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "backgroundColor": "transparent",
         "height": NaN,
         "justifyContent": "center",
         "opacity": 1,
@@ -368,6 +371,7 @@ exports[`SwitchButton Component SwitchButton render width onTintColor 2`] = `
     style={
       Object {
         "alignItems": "center",
+        "backgroundColor": "transparent",
         "height": NaN,
         "justifyContent": "center",
         "opacity": 1,
@@ -555,6 +559,7 @@ exports[`SwitchButton Component SwitchButton size&theme conflict 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "backgroundColor": "transparent",
         "height": 63,
         "justifyContent": "center",
         "opacity": 1,
@@ -632,6 +637,7 @@ exports[`SwitchButton Component basic render 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "backgroundColor": "transparent",
         "height": NaN,
         "justifyContent": "center",
         "opacity": 1,
@@ -709,6 +715,7 @@ exports[`SwitchButton Component basic render 2`] = `
     style={
       Object {
         "alignItems": "center",
+        "backgroundColor": "transparent",
         "height": NaN,
         "justifyContent": "center",
         "opacity": 1,
@@ -806,7 +813,7 @@ exports[`SwitchButton Component onSwitchChange disabled = true 1`] = `
                     "width": undefined,
                   }
                 }
-                smallThumbStyle={null}
+                smallThumbStyle={Object {}}
                 switchType={null}
                 thumbStyle={null}
                 thumbTintColor="#fff"
@@ -842,6 +849,7 @@ exports[`SwitchButton Component onSwitchChange disabled = true 1`] = `
                       style={
                         Object {
                           "alignItems": "center",
+                          "backgroundColor": "transparent",
                           "height": NaN,
                           "justifyContent": "center",
                           "width": NaN,
@@ -862,6 +870,7 @@ exports[`SwitchButton Component onSwitchChange disabled = true 1`] = `
                           Array [
                             Object {
                               "alignItems": "center",
+                              "backgroundColor": "transparent",
                               "height": NaN,
                               "justifyContent": "center",
                               "width": NaN,
@@ -885,6 +894,7 @@ exports[`SwitchButton Component onSwitchChange disabled = true 1`] = `
                           style={
                             Object {
                               "alignItems": "center",
+                              "backgroundColor": "transparent",
                               "height": NaN,
                               "justifyContent": "center",
                               "opacity": 1,
@@ -905,6 +915,7 @@ exports[`SwitchButton Component onSwitchChange disabled = true 1`] = `
                             style={
                               Object {
                                 "alignItems": "center",
+                                "backgroundColor": "transparent",
                                 "height": NaN,
                                 "justifyContent": "center",
                                 "opacity": 1,
@@ -1093,7 +1104,7 @@ exports[`SwitchButton Component onSwitchChange disabled=false 1`] = `
                     "width": undefined,
                   }
                 }
-                smallThumbStyle={null}
+                smallThumbStyle={Object {}}
                 switchType={null}
                 thumbStyle={null}
                 thumbTintColor="#fff"
@@ -1125,6 +1136,7 @@ exports[`SwitchButton Component onSwitchChange disabled=false 1`] = `
                       style={
                         Object {
                           "alignItems": "center",
+                          "backgroundColor": "transparent",
                           "height": NaN,
                           "justifyContent": "center",
                           "width": NaN,
@@ -1145,6 +1157,7 @@ exports[`SwitchButton Component onSwitchChange disabled=false 1`] = `
                           Array [
                             Object {
                               "alignItems": "center",
+                              "backgroundColor": "transparent",
                               "height": NaN,
                               "justifyContent": "center",
                               "width": NaN,
@@ -1168,6 +1181,7 @@ exports[`SwitchButton Component onSwitchChange disabled=false 1`] = `
                           style={
                             Object {
                               "alignItems": "center",
+                              "backgroundColor": "transparent",
                               "height": NaN,
                               "justifyContent": "center",
                               "opacity": 1,
@@ -1188,6 +1202,7 @@ exports[`SwitchButton Component onSwitchChange disabled=false 1`] = `
                             style={
                               Object {
                                 "alignItems": "center",
+                                "backgroundColor": "transparent",
                                 "height": NaN,
                                 "justifyContent": "center",
                                 "opacity": 1,
@@ -1357,6 +1372,7 @@ exports[`SwitchButton Component render width Text 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "backgroundColor": "transparent",
         "height": NaN,
         "justifyContent": "center",
         "opacity": 1,
@@ -1530,6 +1546,7 @@ exports[`SwitchButton Component render width disabled 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "backgroundColor": "transparent",
         "height": NaN,
         "justifyContent": "center",
         "opacity": 1,
@@ -1607,6 +1624,7 @@ exports[`SwitchButton Component render width thumbMore 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "backgroundColor": "transparent",
         "height": NaN,
         "justifyContent": "center",
         "opacity": 1,

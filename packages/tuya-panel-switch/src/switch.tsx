@@ -21,13 +21,9 @@ export default class SwitchButton extends React.PureComponent<ISwitchProps, ISwi
     super(props);
     const { value, defaultValue, smallThumbStyle } = props;
     this.value = 'value' in props ? value : defaultValue;
-    let height;
-    if (smallThumbStyle && smallThumbStyle.height) {
-      [height] = smallThumbStyle;
-    }
+    const { height } = smallThumbStyle;
     const left = this.calcLeft(this.value);
     this.state = {
-      height,
       thumbLeft: new Animated.Value(left),
       leftThumbHeight: new Animated.Value(this.value ? height || 16 : 0.2 * (height || 16)),
       rightThumbHeight: new Animated.Value(this.value ? 0.2 * (height || 16) : height || 16),
@@ -83,8 +79,9 @@ export default class SwitchButton extends React.PureComponent<ISwitchProps, ISwi
   };
 
   valueChange = value => {
-    const { useNativeDriver, switchType } = this.props;
-    const { height } = this.state;
+    const { useNativeDriver, switchType, smallThumbStyle } = this.props;
+    // @ts-ignore
+    const { height } = smallThumbStyle;
     const color = this.calcColor(value);
     const borderColor = this.calcColor(value, 'border');
     const thumbColor = this.calcColor(value, 'thumb');
@@ -195,6 +192,7 @@ export default class SwitchButton extends React.PureComponent<ISwitchProps, ISwi
       height: Math.max(activeSize, height) + EXTRA_HEIGHT,
       alignItems: 'center',
       justifyContent: 'center',
+      backgroundColor: 'transparent',
     };
     const thumbStyle = [
       {
