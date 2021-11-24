@@ -669,7 +669,7 @@ export default {
     rotationview_round: '绕边缘转圈形式',
     rotationview_circle: '绕中心转圈',
     // tyflat-list
-    tyflatlist: 'TYFlatList',
+    tyflatlist: 'TYFlatList 列表',
     tyflatlist_0_title: '基础列表',
     tyflatlist_0_value: '详细信息',
     tyflatlist_1_title: '这里是正标题',

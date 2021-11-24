@@ -108,7 +108,7 @@ export class PickerView extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this._stateFromProps(nextProps);
+    this.setState(this._stateFromProps(nextProps));
   }
 
   _stateFromProps = props => {
