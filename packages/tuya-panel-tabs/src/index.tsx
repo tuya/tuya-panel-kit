@@ -6,6 +6,7 @@ import {
   StyleSheet,
   PanResponder,
   PanResponderInstance,
+  NativeModules,
 } from 'react-native';
 import { Utils } from 'tuya-panel-utils';
 import { FRICTION_LEVEL, DECELERATION } from './constant';
@@ -69,6 +70,7 @@ export default class Tabs extends Component<TabsProps, ITabsState> {
       isInteraction: true,
       useNativeDriver: false,
     },
+    isVibration: true,
   };
 
   constructor(props) {
@@ -298,7 +300,7 @@ export default class Tabs extends Component<TabsProps, ITabsState> {
   };
 
   _handleTabChange = (tab, idx) => {
-    const { dataSource, activeKey, onChange } = this.props;
+    const { dataSource, activeKey, onChange, isVibration } = this.props;
     if (idx > dataSource.length - 1 || (tab && tab.disabled)) {
       return;
     }
@@ -306,6 +308,9 @@ export default class Tabs extends Component<TabsProps, ITabsState> {
       this.setState({ activeIndex: idx }, () => {
         this._startUnderlineAnimation(idx);
       });
+    }
+    if (NativeModules.TYRCTHapticsManager && isVibration) {
+      NativeModules.TYRCTHapticsManager.selection();
     }
     typeof onChange === 'function' && this.props.onChange(tab, idx);
   };

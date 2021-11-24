@@ -220,6 +220,12 @@ export interface TabsProps {
     isInteraction?: boolean;
     useNativeDriver?: boolean;
   };
+  /**
+   * @description.en Whether to support click vibration
+   * @description.zh 是否支持点按震动
+   * @default true
+   */
+  isVibration?: boolean;
 }
 export interface TabContentProps {
   /**

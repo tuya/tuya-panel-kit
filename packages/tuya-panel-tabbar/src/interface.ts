@@ -54,6 +54,12 @@ export interface TabBarProps extends Omit<IGroupProps, 'style' | 'onChange'> {
    * @default () => {}
    */
   onChange?: (index: string) => void;
+  /**
+   * @description.en Whether to support click vibration
+   * @description.zh 是否支持点按震动
+   * @default true
+   */
+  isVibration?: boolean;
 }
 
 export interface ITabBarState {
