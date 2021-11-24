@@ -281,4 +281,5 @@ export const sliderDefault = {
   useNoun: false,
   maxNounStyle: null,
   minNounStyle: null,
+  isVibration: true,
 };

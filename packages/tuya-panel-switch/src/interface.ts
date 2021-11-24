@@ -204,6 +204,6 @@ export const switchDefaults = {
   iconSize: 18,
   iconColor: null,
   switchType: null,
-  smallThumbStyle: null,
+  smallThumbStyle: {},
   isVibration: true,
 };

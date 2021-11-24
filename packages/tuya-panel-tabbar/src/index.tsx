@@ -169,12 +169,12 @@ class TabBar extends React.PureComponent<TabBarProps, ITabBarState> {
       this.underlineLeftAnimation = Animated.timing(this.state.underlineLeft, {
         toValue: left,
         duration: 200,
-        useNativeDriver: true,
+        useNativeDriver: false,
       });
       this.underlineWidthAnimation = Animated.timing(this.state.underlineWidth, {
         toValue: width,
         duration: 200,
-        useNativeDriver: true,
+        useNativeDriver: false,
       });
       this.underlineLeftAnimation.start();
       this.underlineWidthAnimation.start();

@@ -72,7 +72,7 @@ class Group extends React.PureComponent<IGroupProps, IGroupState> {
     const currentLeft = index * this.state.everyWidth + gutter;
     Animated.spring(this.state.activeLeft, {
       toValue: currentLeft,
-      useNativeDriver: true,
+      useNativeDriver: false,
     }).start();
     this.setState({
       activeIndex: index,

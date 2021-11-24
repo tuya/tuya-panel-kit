@@ -22,9 +22,9 @@ export { default as CircleView } from './components/circle-view';
 
 export { default as Checkbox } from './components/checkbox';
 
-export { default as Slider } from './components/slider';
+export { default as Slider } from 'tuya-panel-slider';
 
-export { default as SwitchButton } from './components/switch-button';
+export { default as SwitchButton } from 'tuya-panel-switch';
 
 export { default as BrickButton } from './components/button-brick';
 
@@ -32,7 +32,7 @@ export { default as Button } from './components/button';
 
 export { default as Divider } from './components/divider';
 
-export { default as LinearGradient } from './components/gradient/linear-gradient';
+export { default as LinearGradient } from 'tuya-panel-linear-gradient';
 
 export { default as Motion } from './components/motion';
 
@@ -42,7 +42,7 @@ export { default as TYSectionList } from './components/TYLists/lists';
 
 export { default as TYFlatList } from './components/TYLists/list';
 
-export { default as Stepper } from './components/stepper';
+export { default as Stepper } from 'tuya-panel-stepper';
 
 export { default as TYListItem } from './components/TYLists/list-item';
 
@@ -52,7 +52,7 @@ export { default as Tips } from './components/tips';
 
 export { default as RotationView } from './components/rotation-view';
 
-export { default as IconFont } from './components/iconfont';
+export { default as IconFont } from 'tuya-panel-icon';
 
 export { default as UnitText } from './components/unit-text';
 
@@ -74,11 +74,11 @@ export { default as Modal } from './components/modal';
 
 export { default as Collapsible } from './components/collapsible';
 
-export { default as Tab } from './components/tab';
+export { default as Tab } from 'tuya-panel-tab';
 
-export { default as Tabs } from './components/tabs';
+export { default as Tabs } from 'tuya-panel-tabs';
 
-export { default as TabBar } from './components/tabbar';
+export { default as TabBar } from 'tuya-panel-tabbar';
 
 export { default as Carousel } from './components/carousel';
 

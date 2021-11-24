@@ -277,7 +277,7 @@ export default class Tabs extends Component<TabsProps, ITabsState> {
         Animated.decay(this.state.scrollX, {
           velocity: vx,
           deceleration: DECELERATION,
-          useNativeDriver: true,
+          useNativeDriver: false,
         }).start(() => {
           // @ts-ignore
           this._curDeltaX = this.state.scrollX._value;
