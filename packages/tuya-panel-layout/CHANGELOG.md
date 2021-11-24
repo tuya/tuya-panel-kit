@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.9](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-layout@0.0.8...tuya-panel-layout@0.0.9) (2021-11-18)
+
+
+### Bug Fixes
+
+* **Notification:** Fixed an issue where Notification was automatically destroyed in the background, fixed [#159](https://github.com/tuya/tuya-panel-kit/issues/159) ([#161](https://github.com/tuya/tuya-panel-kit/issues/161)) ([5e4cba2](https://github.com/tuya/tuya-panel-kit/commit/5e4cba201339418b05b77dffa667c6ab85ec3724))
+
+
+
+
+
+## [0.0.8](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-layout@0.0.7...tuya-panel-layout@0.0.8) (2021-11-11)
+
+**Note:** Version bump only for package tuya-panel-layout
+
+
+
+
+
+## [0.0.7](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-layout@0.0.6...tuya-panel-layout@0.0.7) (2021-10-26)
+
+**Note:** Version bump only for package tuya-panel-layout
+
+
+
+
+
 ## [0.0.6](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-layout@0.0.4...tuya-panel-layout@0.0.6) (2021-10-19)
 
 

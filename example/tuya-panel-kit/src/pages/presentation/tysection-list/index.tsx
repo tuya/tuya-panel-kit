@@ -1,8 +1,10 @@
 import React from 'react';
 import { View } from 'react-native';
-import { TYSectionList, TYText } from 'tuya-panel-kit';
+import { TYSectionList, TYText, Utils } from 'tuya-panel-kit';
 
 import Strings from '#i18n';
+
+const { height } = Utils.RatioUtils;
 
 export default () => {
   const [state, set] = React.useState({
@@ -100,10 +102,12 @@ export default () => {
   ];
 
   return (
-    <TYSectionList
-      style={{ alignSelf: 'stretch' }}
-      sections={sections as any}
-      renderItem={({ item }) => <TYSectionList.CheckboxItem {...(item as any)} />}
-    />
+    <View style={{ height, backgroundColor: '#F8F8F8' }}>
+      <TYSectionList
+        style={{ alignSelf: 'stretch' }}
+        sections={sections as any}
+        renderItem={({ item }) => <TYSectionList.CheckboxItem {...(item as any)} />}
+      />
+    </View>
   );
 };

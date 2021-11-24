@@ -3,13 +3,13 @@ import { View } from 'react-native';
 import { Button, Collapsible, Utils } from 'tuya-panel-kit';
 import Strings from '#i18n';
 
-const { convertX: cx } = Utils.RatioUtils;
+const { convertX: cx, height } = Utils.RatioUtils;
 
 export default () => {
   const [collapsed, setCollapsed] = React.useState(false);
 
   return (
-    <View style={{ backgroundColor: '#F5F5F6', height: cx(600) }}>
+    <View style={{ backgroundColor: '#F5F5F6', height }}>
       <Button
         stretch={true}
         onPress={() => setCollapsed(!collapsed)}
