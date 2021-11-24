@@ -107,6 +107,7 @@ exports[`Tabs Component render with TabContent 1`] = `
         defaultActiveKey={0}
         disabled={false}
         extraSpace={0}
+        isVibration={true}
         maxItem={4}
         preload={true}
         preloadTimeout={375}

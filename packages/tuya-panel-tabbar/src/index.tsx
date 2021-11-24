@@ -1,5 +1,12 @@
 import React from 'react';
-import { View, ScrollView, Animated, StyleSheet, TouchableOpacity } from 'react-native';
+import {
+  View,
+  ScrollView,
+  Animated,
+  StyleSheet,
+  TouchableOpacity,
+  NativeModules,
+} from 'react-native';
 import { Utils } from 'tuya-panel-utils';
 import TYText from 'tuya-panel-text';
 import wrapper from './tabHoc';
@@ -20,6 +27,7 @@ class TabBar extends React.PureComponent<TabBarProps, ITabBarState> {
     style: {},
     onChange: null,
     isUnderlineCenter: true,
+    isVibration: true,
   };
 
   constructor(props) {
@@ -45,11 +53,14 @@ class TabBar extends React.PureComponent<TabBarProps, ITabBarState> {
   }
 
   onTabClick = (key, callback) => {
-    const { onChange } = this.props;
+    const { onChange, isVibration } = this.props;
     if (!('activeKey' in this.props)) {
       this.setState({ activeKey: key }, () => {
         this.updateView(false);
       });
+    }
+    if (NativeModules.TYRCTHapticsManager && isVibration) {
+      NativeModules.TYRCTHapticsManager.selection();
     }
     onChange && onChange(key);
     callback && callback(key);

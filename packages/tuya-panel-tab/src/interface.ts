@@ -26,6 +26,12 @@ export interface TabProps
    * @default undefined
    */
   tabContentStyle?: StyleProp<ViewStyle>;
+  /**
+   * @description.en Whether to support click vibration
+   * @description.zh 是否支持点按震动
+   * @default true
+   */
+  isVibration?: boolean;
 }
 
 export interface TabState {

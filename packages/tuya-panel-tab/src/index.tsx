@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Dimensions, StyleSheet, Animated } from 'react-native';
+import { View, Dimensions, StyleSheet, Animated, NativeModules } from 'react-native';
 
 import TabContent from './tabContent';
 import TabBar from './tabNav';
@@ -16,6 +16,7 @@ class Tabs extends React.Component<TabProps, TabState> {
     tabBarPosition: 'top',
     tabNavAccessibilityLabel: 'TabNav',
     useViewPagerOnAndroid: true,
+    isVibration: true,
   };
 
   constructor(props) {
@@ -73,6 +74,7 @@ class Tabs extends React.Component<TabProps, TabState> {
   };
 
   setActiveTab = activeIndex => {
+    const { isVibration } = this.props;
     // @ts-ignore
     const activeKey = Utils.toArray(this.props.children)[activeIndex].key;
     if (this.state.activeKey !== activeKey) {
@@ -80,6 +82,9 @@ class Tabs extends React.Component<TabProps, TabState> {
         this.setState({
           activeKey,
         });
+      }
+      if (NativeModules.TYRCTHapticsManager && isVibration) {
+        NativeModules.TYRCTHapticsManager.selection();
       }
       this.props.onChange && this.props.onChange(activeKey);
     }
