@@ -38,7 +38,7 @@ export default () => {
                 minimumValue={0}
                 style={{ marginBottom: 10 }}
                 value={value}
-                onSlidingComplete={v => setValue(Math.round(v))}
+                onValueChange={v => setValue(Math.round(v))}
               />
             </View>
           ),
