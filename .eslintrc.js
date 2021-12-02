@@ -6,5 +6,6 @@ module.exports = {
     'no-shadow': 'off',
     'no-bitwise': 'off',
     'prefer-spread': 'off',
+    '@typescript-eslint/ban-ts-comment': 0,
   },
 };
