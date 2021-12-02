@@ -339,10 +339,16 @@ export default class Slider extends Component<ISliderProps, ISliderState> {
   }
 
   _fireValueChange() {
+    const { isVibration, minimumValue, maximumValue } = this.props;
     const value = this._getCurrentValue();
     const newValue = this._testValue(value, this.props);
     if (this.props.onValueChange && this.oldValue !== value) {
       this.oldValue = value;
+      if (NativeModules.TYRCTHapticsManager && isVibration) {
+        if (newValue === minimumValue || newValue === maximumValue) {
+          NativeModules.TYRCTHapticsManager.impact('Heavy');
+        }
+      }
       this.props.onValueChange(newValue);
     }
     if (this.props.onScrollEvent) {
@@ -351,15 +357,9 @@ export default class Slider extends Component<ISliderProps, ISliderState> {
   }
 
   _fireChangeEvent(event) {
-    const { isVibration, minimumValue, maximumValue } = this.props;
     const value = this._getCurrentValue();
     const newValue = this._testValue(value, this.props);
     if (this.props[event]) {
-      if (event === 'onSlidingComplete' && NativeModules.TYRCTHapticsManager && isVibration) {
-        if (newValue === minimumValue || newValue === maximumValue) {
-          NativeModules.TYRCTHapticsManager.impact('Heavy');
-        }
-      }
       this.props[event](newValue);
     }
     if (this.props.onScrollEvent) {
