@@ -1,6 +1,6 @@
 {
   "name": "tuya-panel-i18n",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Tuya I18N",
   "author": "ZengBeauty <2497752603@qq.com>",
   "homepage": "https://github.com/tuya/tuya-panel-kit#readme",
@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "tuya-panel-core": "^0.0.1",
-    "tuya-panel-utils": "^0.1.5"
+    "tuya-panel-utils": "^0.2.0"
   },
   "bugs": {
     "url": "https://github.com/tuya/tuya-panel-kit/issues"
