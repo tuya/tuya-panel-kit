@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.1 (2021-12-07)
+
+
+### Features
+
+* **Components:** Tabs、Tab、SwitchButton... support vibration. ([#163](https://github.com/tuya/tuya-panel-kit/issues/163)) ([2fc80b3](https://github.com/tuya/tuya-panel-kit/commit/2fc80b3924890e9f5076475472ac5d5b41f17f33))
+* **tuya-panel-tabs:** add Tabs ([65b03ec](https://github.com/tuya/tuya-panel-kit/commit/65b03ec7a7eb6db2a7b03f8135a68c750e40f837))
+
+
+
+
+
 # 0.1.0 (2021-12-02)
 
 
