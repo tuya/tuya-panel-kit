@@ -60,6 +60,12 @@ export interface TabBarProps extends Omit<IGroupProps, 'style' | 'onChange'> {
    * @default true
    */
   isVibration?: boolean;
+  /**
+   * @description.en Whether scrolling is supported
+   * @description.zh 是否支持滚动
+   * @default true
+   */
+  scrollEnabled?: boolean;
 }
 
 export interface ITabBarState {
