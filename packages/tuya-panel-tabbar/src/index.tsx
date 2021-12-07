@@ -28,6 +28,7 @@ class TabBar extends React.PureComponent<TabBarProps, ITabBarState> {
     onChange: null,
     isUnderlineCenter: true,
     isVibration: true,
+    scrollEnabled: true,
   };
 
   constructor(props) {
@@ -210,12 +211,17 @@ class TabBar extends React.PureComponent<TabBarProps, ITabBarState> {
   };
 
   render() {
-    const { wrapperStyle, style } = this.props;
+    const { wrapperStyle, style, scrollEnabled } = this.props;
     const cWrapperStyle = [styles.tabContainerStyle, wrapperStyle];
     const cStyle = [styles.tabWrapperStyle, style];
     return (
       <View style={cStyle} onLayout={this.tabBarContainerLayout}>
-        <ScrollView ref={this.setRef} showsHorizontalScrollIndicator={false} horizontal>
+        <ScrollView
+          scrollEnabled={scrollEnabled}
+          ref={this.setRef}
+          showsHorizontalScrollIndicator={false}
+          horizontal
+        >
           <View onLayout={this.tabBarLayout} style={cWrapperStyle}>
             {this.getTabs()}
           </View>
