@@ -1,6 +1,6 @@
 {
   "name": "tuya-panel-layout",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "tuya-panel-layout",
   "author": "ZengBeauty <2497752603@qq.com>",
   "homepage": "https://github.com/tuya/tuya-panel-kit#readme",
@@ -39,11 +39,11 @@
     "react-native-svg": "5.5.1",
     "styled-components": "^3.4.10",
     "tuya-panel-core": "^0.0.1",
-    "tuya-panel-i18n": "^0.1.0",
-    "tuya-panel-kit": "^4.8.0",
-    "tuya-panel-theme": "^0.1.0",
-    "tuya-panel-topbar": "^0.1.0",
-    "tuya-panel-utils": "^0.2.0"
+    "tuya-panel-i18n": "^0.1.1",
+    "tuya-panel-kit": "^4.8.1",
+    "tuya-panel-theme": "^0.1.1",
+    "tuya-panel-topbar": "^0.1.1",
+    "tuya-panel-utils": "^0.2.1"
   },
   "bugs": {
     "url": "https://github.com/tuya/tuya-panel-kit/issues"
