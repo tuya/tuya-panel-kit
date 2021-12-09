@@ -14,14 +14,16 @@ export default () => {
   const contentStyles = {
     width,
     height: 200,
-    backgroundColor: '#fff',
+    backgroundColor: 'rgba(0, 0, 0, 0.3)',
   };
   const [scalePullDownShow, setScalePullDownShow] = React.useState(false);
   const [pushDownShow, setPushDownShow] = React.useState(false);
   const [toastShow, setToastShow] = React.useState(false);
+
   return (
     <View style={{ height: height * 0.9 }}>
       <BlockList
+        nowrap={true}
         list={[
           {
             name: Strings.getLang('motion_fade'),
@@ -55,7 +57,7 @@ export default () => {
           },
         ]}
       />
-      {(fadeShow ||
+      {/* {(fadeShow ||
         pullUpShow ||
         scaleFadeInShow ||
         scalePullDownShow ||
@@ -80,7 +82,7 @@ export default () => {
             toastShow && setToastShow(false);
           }}
         />
-      )}
+      )} */}
       <Motion.Fade
         style={{ position: 'absolute', bottom: 0 }}
         show={fadeShow}
