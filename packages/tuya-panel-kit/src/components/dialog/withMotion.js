@@ -23,12 +23,12 @@ const withMotion = WrapperComponent => {
     };
 
     static defaultProps = {
-      ...WrapperComponent.defaultProps,
       motionType: 'ScaleFadeIn',
       motionConfig: {
         initScale: 0.8,
         finalScale: 0.9,
       },
+      ...WrapperComponent.defaultProps,
     };
 
     constructor(props) {

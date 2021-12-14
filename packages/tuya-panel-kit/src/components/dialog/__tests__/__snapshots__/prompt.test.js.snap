@@ -10,10 +10,10 @@ exports[`Prompt Component basic render defaultValue 1`] = `
       "useNativeDriver": true,
     }
   }
-  finalScale={0.9}
+  finalScale={1}
   height={null}
   hideDuration={250}
-  initScale={0.8}
+  initScale={1}
   isAlign={true}
   onHide={[Function]}
   onShow={[Function]}
@@ -36,8 +36,8 @@ exports[`Prompt Component basic render defaultValue 1`] = `
     inputWrapperStyle={null}
     motionConfig={
       Object {
-        "finalScale": 0.9,
-        "initScale": 0.8,
+        "finalScale": 1,
+        "initScale": 1,
       }
     }
     motionType="ScaleFadeIn"
@@ -64,7 +64,7 @@ exports[`Prompt Component basic render value 1`] = `
       "opacity": 0,
       "transform": Array [
         Object {
-          "scale": 0.8,
+          "scale": 1,
         },
       ],
     }
@@ -162,8 +162,8 @@ exports[`Prompt Component basic render value 1`] = `
           autoFocus={true}
           motionConfig={
             Object {
-              "finalScale": 0.9,
-              "initScale": 0.8,
+              "finalScale": 1,
+              "initScale": 1,
             }
           }
           motionType="ScaleFadeIn"
@@ -175,7 +175,7 @@ exports[`Prompt Component basic render value 1`] = `
           style={
             Array [
               Object {
-                "color": "rgba(0, 0, 0, 0.5)",
+                "color": "rgba(0, 0, 0, 0.7)",
                 "fontSize": 16,
                 "paddingBottom": 0,
                 "paddingLeft": 0,
