@@ -101,6 +101,10 @@ class Prompt extends Component {
     confirmAccessibilityLabel: 'Dialog.Confirm',
     onCancel: null,
     onConfirm: null,
+    motionConfig: {
+      initScale: 1,
+      finalScale: 1,
+    },
   };
 
   constructor(props) {

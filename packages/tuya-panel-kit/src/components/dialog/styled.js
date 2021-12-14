@@ -138,7 +138,7 @@ export const StyledInput = styled(TextInput).attrs({
   underlineColorAndroid: 'transparent',
 })`
   font-size: 16;
-  color: ${subTitleFontColor};
+  color: ${cancelFontColor};
   padding: 0px;
 `;
 
