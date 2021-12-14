@@ -80,8 +80,4 @@ TYNative.receiverMqttData = protocol => {
   });
 };
 
-TYNative.getContentRouter = () => {
-  return TYSdk.apiRequest('tuya.open.content.rooter', { scene: 'net_set' }, '1.0');
-};
-
 export default TYNative;
