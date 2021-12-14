@@ -24,8 +24,6 @@ const requireRnVersion = '5.23';
 
 const requireWifiRnVersion = '5.30';
 
-const jumpToRequireRnVersion = '5.54';
-
 export default class OfflineView extends Component {
   static propTypes = {
     style: ViewPropTypes.style,
@@ -103,18 +101,9 @@ export default class OfflineView extends Component {
     return isJumpToWifi && (role === 1 || role === 2);
   };
 
-  // 判断App RN版本是否为3.34.5及以上离线才能跳转知识库页面
-  _handleVersionJumpToKnowledge = () => {
-    const appRnVersion = get(TYNative, 'mobileInfo.appRnVersion');
-    const isGreater = appRnVersion && compareVersion(appRnVersion, jumpToRequireRnVersion);
-    const isAllowJumpTo = isGreater === 0 || isGreater === 1;
-    return isAllowJumpTo;
-  };
-
   _handleMoreHelp = () => {
     const { reconnectTextStyle } = this.props;
     const isJumpToWifi = this._handleVersionToJump();
-    const isAllowJumpTo = this._handleVersionJumpToKnowledge();
     let linkJumpStyle;
     if (isJumpToWifi) {
       linkJumpStyle = [
@@ -130,36 +119,17 @@ export default class OfflineView extends Component {
         color: '#999',
       };
     }
-
-    if (isAllowJumpTo) {
-      TYNative.getContentRouter()
-        .then(result => {
-          const { devId } = TYSdk.devInfo;
-          const { href } = result;
-          TYNative.jumpTo(`${href}?type=net_set&deviceId=${devId}`);
-        })
-        .catch(() => {
-          TYMobile.jumpSubPage(
-            { uiId: '000000cg8b' },
-            {
-              textLinkStyle: linkJumpStyle,
-            }
-          );
-        });
-    } else {
-      TYMobile.jumpSubPage(
-        { uiId: '000000cg8b' },
-        {
-          textLinkStyle: linkJumpStyle,
-        }
-      );
-    }
+    TYMobile.jumpSubPage(
+      { uiId: '000000cg8b' },
+      {
+        textLinkStyle: linkJumpStyle,
+      }
+    );
   };
 
   renderBleView() {
     const { deviceOnline, capability, isBleOfflineOverlay, renderBleOfflineView } = this.props;
     const isJumpToWifi = this._handleVersionToJump();
-    const isAllowJumpTo = this._handleVersionJumpToKnowledge();
     // 在蓝牙状态未获取到之前不渲染该页面
     if (typeof this.state.bluetoothStatus !== 'boolean') {
       return null;
@@ -174,7 +144,6 @@ export default class OfflineView extends Component {
         capability={capability}
         isBleOfflineOverlay={isBleOfflineOverlay}
         isJumpToWifi={isJumpToWifi}
-        isAllowJumpTo={isAllowJumpTo}
         onLinkPress={this._handleLinkPress}
       />
     );
@@ -192,7 +161,6 @@ export default class OfflineView extends Component {
     const isShowNewOffline = isGreater === 0 || isGreater === 1;
     const showOldOffline = get(TYSdk, 'devInfo.panelConfig.fun.showOldOffline', false);
     const isJumpToWifi = this._handleVersionToJump();
-    const isAllowJumpTo = this._handleVersionJumpToKnowledge();
     return !showOldOffline && isShowNewOffline ? (
       <NewOfflineView
         show={show}
@@ -202,7 +170,6 @@ export default class OfflineView extends Component {
         onHelpPress={this._handleMoreHelp}
         maskColor={maskColor}
         isJumpToWifi={isJumpToWifi}
-        isAllowJumpTo={isAllowJumpTo}
         reconnectTextStyle={reconnectTextStyle}
       />
     ) : (
