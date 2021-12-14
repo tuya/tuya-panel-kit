@@ -41,6 +41,10 @@ export default class NewOfflineView extends PureComponent {
     isJumpToWifi: PropTypes.bool,
     // wifi 离线的时候用户不想要重新连接跳转
     reconnectTextStyle: Text.propTypes.style,
+    /**
+     * 判断App RN版本是否为3.34.5及以上离线才能跳转知识库页面
+     */
+    isAllowJumpTo: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -120,6 +124,7 @@ export default class NewOfflineView extends PureComponent {
       onHelpPress,
       isJumpToWifi,
       reconnectTextStyle,
+      isAllowJumpTo,
     } = this.props;
     const { value, show } = this.state;
     const textLineBefore = Strings.getLang('offline_textLinkBefore');
@@ -187,7 +192,7 @@ export default class NewOfflineView extends PureComponent {
                   <RefText style={[styles.firstLine, { marginBottom: 0 }]} text={textLineAfter} />
                 )}
               </View>
-              {!!textLineMore && (
+              {(isAllowJumpTo || !!textLineMore) && (
                 <TouchableOpacity
                   style={styles.confirmTouchable}
                   activeOpacity={0.8}
