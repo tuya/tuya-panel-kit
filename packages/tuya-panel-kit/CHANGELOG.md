@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.8.2](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.8.1...tuya-panel-kit@4.8.2) (2021-12-14)
+
+
+### Features
+
+* **ble:** The offline jump link was changed to the knowledge base H5 link ([#167](https://github.com/tuya/tuya-panel-kit/issues/167)) ([207cc08](https://github.com/tuya/tuya-panel-kit/commit/207cc086051bc3a7bb83c96f81946c02ca2f3fca))
+* **Prompt:** animation optimization ([#168](https://github.com/tuya/tuya-panel-kit/issues/168)) ([78c32b8](https://github.com/tuya/tuya-panel-kit/commit/78c32b8e51e887c3c99ab81de70f58aeeff32ad5))
+
+
+### Reverts
+
+* Revert "feat(ble): The offline jump link was changed to the knowledge base H5 link (#167)" (#170) ([63099e1](https://github.com/tuya/tuya-panel-kit/commit/63099e1dd8b4a95a02e860cf4089ccdf4f14e3fe)), closes [#167](https://github.com/tuya/tuya-panel-kit/issues/167) [#170](https://github.com/tuya/tuya-panel-kit/issues/170)
+
+
+
+
+
 ## [4.8.1](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.7.16...tuya-panel-kit@4.8.1) (2021-12-07)
 
 
