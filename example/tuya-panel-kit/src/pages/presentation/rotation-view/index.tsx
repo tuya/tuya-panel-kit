@@ -28,8 +28,7 @@ export default () => {
                   resizeMode: 'contain',
                 }}
                 source={{
-                  uri:
-                    'https://cdn.jsdelivr.net/gh/TuyaInc/tuya-panel-kit-docs@gh-pages/assets/rotate-view-3.png',
+                  uri: 'https://panel-docs.tuyacn.com/assets/rotate-view-3.png',
                 }}
               />
             </RotationView>
@@ -46,8 +45,7 @@ export default () => {
                   resizeMode: 'contain',
                 }}
                 source={{
-                  uri:
-                    'https://cdn.jsdelivr.net/gh/TuyaInc/tuya-panel-kit-docs@gh-pages/assets/rotate-view-4.png',
+                  uri: 'https://panel-docs.tuyacn.com/assets/rotate-view-4.png',
                 }}
               />
             </RotationView>
