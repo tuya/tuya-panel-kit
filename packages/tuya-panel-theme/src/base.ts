@@ -15,7 +15,7 @@ export interface IStyle {
 /**
  * 全局颜色变量
  */
-const global = {
+const globalVariable = {
   brand: '#FF4800', // 品牌色
   background: '#f8f8f8', // 背景色
   fontSizeBase: 1, // 字体基准比例
@@ -440,7 +440,7 @@ const popup = {
 
 export default {
   type: 'light',
-  global,
+  global: globalVariable,
   text,
   picker,
   button,
