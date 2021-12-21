@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.3](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-topbar-mall-indicator@0.2.2...tuya-panel-topbar-mall-indicator@0.2.3) (2021-12-21)
+
+**Note:** Version bump only for package tuya-panel-topbar-mall-indicator
+
+
+
+
+
 ## [0.2.2](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-topbar-mall-indicator@0.2.1...tuya-panel-topbar-mall-indicator@0.2.2) (2021-12-14)
 
 **Note:** Version bump only for package tuya-panel-topbar-mall-indicator

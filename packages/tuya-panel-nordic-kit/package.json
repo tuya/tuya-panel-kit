@@ -1,6 +1,6 @@
 {
   "name": "tuya-panel-nordic-kit",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Nordic style component collection package",
   "author": "ZengBeauty <2497752603@qq.com>",
   "homepage": "https://github.com/tuya/tuya-panel-kit#readme",
@@ -29,16 +29,16 @@
     "url": "https://github.com/tuya/tuya-panel-kit/issues"
   },
   "dependencies": {
-    "tuya-panel-style-block-card": "^0.1.2",
-    "tuya-panel-style-button": "^0.1.2",
-    "tuya-panel-style-button-card": "^0.1.2",
-    "tuya-panel-style-depict-card": "^0.1.2",
-    "tuya-panel-style-display-card": "^0.1.2",
-    "tuya-panel-style-enum-card": "^0.1.2",
-    "tuya-panel-style-icon-card": "^0.1.2",
-    "tuya-panel-style-list-card": "^0.1.2",
-    "tuya-panel-style-slider-card": "^0.1.2",
-    "tuya-panel-style-step-card": "^0.1.2",
-    "tuya-panel-style-switch-card": "^0.1.2"
+    "tuya-panel-style-block-card": "^0.1.3",
+    "tuya-panel-style-button": "^0.1.3",
+    "tuya-panel-style-button-card": "^0.1.3",
+    "tuya-panel-style-depict-card": "^0.1.3",
+    "tuya-panel-style-display-card": "^0.1.3",
+    "tuya-panel-style-enum-card": "^0.1.3",
+    "tuya-panel-style-icon-card": "^0.1.3",
+    "tuya-panel-style-list-card": "^0.1.3",
+    "tuya-panel-style-slider-card": "^0.1.3",
+    "tuya-panel-style-step-card": "^0.1.3",
+    "tuya-panel-style-switch-card": "^0.1.3"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "tuya-panel-kit",
-  "version": "4.8.2",
+  "version": "4.8.3",
   "description": "a functional component library for developing tuya device panels!",
   "keywords": [
     "tuya",
@@ -62,11 +62,11 @@
     "tuya-panel-linear-gradient": "^0.1.1",
     "tuya-panel-slider": "^0.1.1",
     "tuya-panel-stepper": "^0.1.1",
-    "tuya-panel-switch": "^0.1.1",
+    "tuya-panel-switch": "^0.1.2",
     "tuya-panel-tab": "^0.1.1",
-    "tuya-panel-tabbar": "^0.1.1",
-    "tuya-panel-tabs": "^0.1.1",
-    "tuya-panel-theme": "^0.1.1",
+    "tuya-panel-tabbar": "^0.1.2",
+    "tuya-panel-tabs": "^0.1.2",
+    "tuya-panel-theme": "^0.1.2",
     "tuya-panel-utils": "^0.2.1"
   },
   "peerDependencies": {
