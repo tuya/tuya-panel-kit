@@ -8,7 +8,7 @@ import BleToastModal from './ble-toast-modal'; // 安卓开启蓝牙Toast提示�
 import BleTipModal from './ble-tip-modal'; // IOS开启蓝牙弹窗提示框
 import BleOfflineModal from './ble-offline-modal';
 import Strings from '../../../i18n/strings';
-import { RatioUtils } from '../../../../utils';
+import { RatioUtils, CoreUtils } from '../../../../utils';
 import { StyledTitle, StyledCancelText } from './styled';
 import { StyledFooter, StyledButton, StyledConfirmText } from '../../../dialog/styled';
 
@@ -16,6 +16,8 @@ const { isIos } = RatioUtils;
 
 const TYDevice = TYSdk.device;
 const TYNative = TYSdk.native;
+
+const { compareVersion, get } = CoreUtils;
 
 const Res = {
   arrow: require('../../../res/arrow.png'),
@@ -44,6 +46,10 @@ export default class BleOfflineView extends Component {
      * 跳转链接
      */
     onLinkPress: PropTypes.func,
+    /**
+     * 判断App RN版本是否为3.34.5及以上离线才能跳转知识库页面
+     */
+    isAllowJumpTo: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -185,9 +191,22 @@ export default class BleOfflineView extends Component {
   };
 
   openH5HelpWebView = () => {
+    const { isAllowJumpTo } = this.props;
     Modal.close();
-    // 蓝牙离线二级页面
-    TYSdk.mobile.jumpSubPage({ uiId: '0000012lky' }, {});
+    // 如果满足App 版本 大于等于 3.34.5， 跳转知识库链接，否则蓝牙离线二级页面
+    if (isAllowJumpTo) {
+      TYNative.getContentRouter()
+        .then(result => {
+          const { devId } = TYSdk.devInfo;
+          const { href } = result;
+          TYNative.jumpTo(`${href}?type=net_set&deviceId=${devId}`);
+        })
+        .catch(() => {
+          TYSdk.mobile.jumpSubPage({ uiId: '0000012lky' }, {});
+        });
+    } else {
+      TYSdk.mobile.jumpSubPage({ uiId: '0000012lky' }, {});
+    }
   };
 
   _handleToastPress = () => {
