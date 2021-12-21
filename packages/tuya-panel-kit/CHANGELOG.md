@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.8.3](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.8.2...tuya-panel-kit@4.8.3) (2021-12-21)
+
+
+### Features
+
+* **ble:** The offline jump link was changed to the knowledge base H5 link ([#171](https://github.com/tuya/tuya-panel-kit/issues/171)) ([211d86e](https://github.com/tuya/tuya-panel-kit/commit/211d86e5623ef0747413ebaad785eeea07b95706))
+
+
+
+
+
 ## [4.8.2](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.8.1...tuya-panel-kit@4.8.2) (2021-12-14)
 
 
