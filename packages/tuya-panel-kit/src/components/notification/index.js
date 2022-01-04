@@ -138,7 +138,12 @@ export default class Notification extends PureComponent {
                     {imageSource ? (
                       <StyledImage source={imageSource} style={imageStyle} />
                     ) : (
-                      <StyledIconFont d={iconPath} color={iconColor} size={20} />
+                      <StyledIconFont
+                        d={iconPath}
+                        color={iconColor}
+                        size={20}
+                        enableClose={enableClose}
+                      />
                     )}
                     {children || (
                       <StyledTitle
