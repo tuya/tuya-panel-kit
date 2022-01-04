@@ -1,7 +1,9 @@
 import React from 'react';
 import { View, TouchableOpacity } from 'react-native';
 import { Utils } from 'tuya-panel-utils';
-import { TYText, SwitchButton, IconFont } from 'tuya-panel-kit';
+import SwitchButton from 'tuya-panel-switch';
+import TYText from 'tuya-panel-text';
+import IconFont from 'tuya-panel-icon';
 import { ClassicIconBackground } from 'tuya-panel-style-icon-background';
 import { ISwitchCardProps, IDefaultProps } from './interface';
 import {
@@ -85,9 +87,10 @@ export const StyleSwitchCard: React.FC<ISwitchCardProps> = ({
         <SwitchButton
           onTintColor="#1082FE"
           {...rest}
+          // @ts-ignore
+          value={value}
           style={switchStyle}
           size={switchSize}
-          // @ts-ignore
           iconSize={switchIconSize}
           iconColor={switchIconColor}
         />

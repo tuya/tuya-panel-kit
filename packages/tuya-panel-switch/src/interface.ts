@@ -11,12 +11,8 @@ export interface IThemeSwitchProps extends ISwitchProps {
     height?: number;
     thumbSize?: number;
     margin?: number | number[];
-    tintColor?:
-      | string
-      | {
-          [key: string]: string;
-        };
-    onTintColor?: string;
+    tintColor?: ColorValue;
+    onTintColor?: ColorValue;
     thumbTintColor?: string;
     onThumbTintColor?: string;
   };

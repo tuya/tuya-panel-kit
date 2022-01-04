@@ -17,7 +17,7 @@ describe('SwitchCard', () => {
     const wrapper = renderer
       .create(
         <ThemeProvider>
-          <ClassicSwitchCard icon={icon} subText="switch card" />
+          <ClassicSwitchCard icon={icon} subText="switch card" value={true} />
         </ThemeProvider>
       )
       .toJSON();
@@ -39,7 +39,7 @@ describe('SwitchCard', () => {
     const wrapper = renderer
       .create(
         <ThemeProvider>
-          <NordicSwitchCard icon={icon} />
+          <NordicSwitchCard icon={icon} value={true} />
         </ThemeProvider>
       )
       .toJSON();
@@ -57,7 +57,7 @@ describe('SwitchCard', () => {
     const wrapper = renderer
       .create(
         <ThemeProvider>
-          <AcrylicSwitchCard icon={icon} subText="switch card" />
+          <AcrylicSwitchCard icon={icon} subText="switch card" value={true} />
         </ThemeProvider>
       )
       .toJSON();
@@ -80,7 +80,7 @@ describe('SwitchCard', () => {
   it('PaintSwitchCard', () => {
     const wrapper = mount(
       <ThemeProvider>
-        <PaintSwitchCard icon={icon} />
+        <PaintSwitchCard icon={icon} value={true} />
       </ThemeProvider>
     );
     expect(wrapper).toMatchSnapshot();

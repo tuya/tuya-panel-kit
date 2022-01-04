@@ -54,3 +54,4 @@ ThemedSwitchButton.defaultProps = {
 };
 
 export default ThemedSwitchButton;
+export type SwitchProps = IThemeSwitchProps;

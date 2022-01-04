@@ -1,6 +1,6 @@
 import { StyleProp, TextStyle, ViewStyle } from 'react-native';
 import { Utils } from 'tuya-panel-utils';
-import { SwitchButtonProps } from 'tuya-panel-kit';
+import { SwitchProps } from 'tuya-panel-switch';
 import { IconBackgroundProps } from 'tuya-panel-style-icon-background';
 import React from 'react';
 
@@ -25,7 +25,7 @@ export const IDefaultProps = {
 
 export interface ISwitchCardProps
   extends Omit<IconBackgroundProps, 'style'>,
-    Omit<SwitchButtonProps, 'style' | 'iconSize' | 'iconColor' | 'size' | 'value' | 'disabled'> {
+    Omit<SwitchProps, 'style' | 'iconSize' | 'iconColor' | 'size' | 'value' | 'disabled'> {
   /**
    * @description.en Outermost container style
    * @description.zh 最外层容器样式
@@ -61,7 +61,7 @@ export interface ISwitchCardProps
    * @description.zh 标题
    * @default 'Switch Card'
    */
-  text: string;
+  text?: string;
   /**
    * @description.en The title color
    * @description.zh 标题颜色

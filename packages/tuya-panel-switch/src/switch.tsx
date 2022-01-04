@@ -126,7 +126,7 @@ export default class SwitchButton extends React.PureComponent<ISwitchProps, ISwi
     const wrapperStyle: StyleProp<ViewStyle> = {
       width,
       height,
-      borderRadius: borderRadius || (15.5 / 28) * height,
+      borderRadius: typeof borderRadius === 'number' ? borderRadius : (15.5 / 28) * height,
       justifyContent: 'center',
     };
     const color = this.value ? onTintColor : tintColor;
