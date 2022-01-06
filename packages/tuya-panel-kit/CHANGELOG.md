@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.8.4](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.8.3...tuya-panel-kit@4.8.4) (2022-01-06)
+
+
+### Bug Fixes
+
+* **Notification:** Fixed Notification not centered in IOS ([#176](https://github.com/tuya/tuya-panel-kit/issues/176)) ([303095a](https://github.com/tuya/tuya-panel-kit/commit/303095a49bbe76e83e18092e5fb76d6b63ba8fd5))
+
+
+
+
+
 ## [4.8.3](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.8.2...tuya-panel-kit@4.8.3) (2021-12-21)
 
 

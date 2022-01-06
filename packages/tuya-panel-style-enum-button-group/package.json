@@ -1,6 +1,6 @@
 {
   "name": "tuya-panel-style-enum-button-group",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Stylized Components - EnumButtonGroup",
   "author": "chechengyi <984593931@qq.com>",
   "homepage": "https://github.com/tuya/tuya-panel-kit#readme",
@@ -31,8 +31,8 @@
     "url": "https://github.com/tuya/tuya-panel-kit/issues"
   },
   "dependencies": {
-    "tuya-panel-kit": "^4.8.3",
-    "tuya-panel-style-icon-background": "^0.1.3",
+    "tuya-panel-kit": "^4.8.4",
+    "tuya-panel-style-icon-background": "^0.1.4",
     "tuya-panel-utils": "^0.2.1"
   },
   "devDependencies": {

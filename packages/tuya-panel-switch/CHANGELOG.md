@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.3](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-switch@0.1.2...tuya-panel-switch@0.1.3) (2022-01-06)
+
+
+### Bug Fixes
+
+* **Switch:** fixed Switch controlled and borderRadius ([#175](https://github.com/tuya/tuya-panel-kit/issues/175)) ([b29d6e5](https://github.com/tuya/tuya-panel-kit/commit/b29d6e55f84513bac861db3df46102948959e543))
+
+
+
+
+
 ## [0.1.2](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-switch@0.1.1...tuya-panel-switch@0.1.2) (2021-12-21)
 
 **Note:** Version bump only for package tuya-panel-switch
