@@ -40,7 +40,7 @@ export const StyledTitle = styled(TYText)`
 
 export const StyledIconFont = styled(IconFont)`
   position: absolute;
-  top: ${cx(3)}px;
+  top: ${props => (props.enableClose ? cx(2) : 0)}px;
 `;
 
 export const StyledImage = styled(Image)`
