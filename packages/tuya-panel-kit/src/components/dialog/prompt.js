@@ -84,6 +84,10 @@ class Prompt extends Component {
      * 确认回调函数
      */
     onConfirm: PropTypes.func,
+    /**
+     * 当输入内容为空时，确认按钮置灰，默认不置灰
+     */
+    confirmDisabled: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -105,6 +109,7 @@ class Prompt extends Component {
       initScale: 1,
       finalScale: 1,
     },
+    confirmDisabled: false,
   };
 
   constructor(props) {
@@ -167,11 +172,15 @@ class Prompt extends Component {
       cancelTextStyle,
       cancelAccessibilityLabel,
       onCancel,
+      confirmDisabled: confirmDisabledProps,
       ...TextInputProps
     } = this.props;
     const confirmDisabled =
-      (typeof value !== 'undefined' && this.state.value) ||
-      (typeof defaultValue !== 'undefined' && this.state.unControlledValue);
+      confirmDisabledProps &&
+      !(
+        (typeof value !== 'undefined' && this.state.value) ||
+        (typeof defaultValue !== 'undefined' && this.state.unControlledValue)
+      );
     return (
       <StyledContainer style={style}>
         <StyledContent
@@ -207,14 +216,14 @@ class Prompt extends Component {
         <Footer
           style={footerWrapperStyle}
           cancelTextStyle={cancelTextStyle}
-          confirmTextStyle={[{ opacity: confirmDisabled ? 1 : 0.3 }, confirmTextStyle]}
+          confirmTextStyle={[{ opacity: confirmDisabled ? 0.3 : 1 }, confirmTextStyle]}
           cancelText={cancelText}
           confirmText={confirmText}
           cancelAccessibilityLabel={cancelAccessibilityLabel}
           confirmAccessibilityLabel={confirmAccessibilityLabel}
           onCancel={onCancel}
           onConfirm={this._handleConfirm}
-          confirmDisabled={!confirmDisabled}
+          confirmDisabled={confirmDisabled}
         />
       </StyledContainer>
     );
