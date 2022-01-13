@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.9.0](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.8.4...tuya-panel-kit@4.9.0) (2022-01-13)
+
+
+### Features
+
+* **Dialog:** The dialog.prompt confirmation button is highlighted by default, and new properties support changing the highlighted properties ([#177](https://github.com/tuya/tuya-panel-kit/issues/177)) ([41fbb1e](https://github.com/tuya/tuya-panel-kit/commit/41fbb1e519039495a71e6dfb4f62f788f582891f))
+
+
+
+
+
 ## [4.8.4](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.8.3...tuya-panel-kit@4.8.4) (2022-01-06)
 
 
