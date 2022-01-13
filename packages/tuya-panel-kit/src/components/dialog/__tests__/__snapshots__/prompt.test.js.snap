@@ -27,6 +27,7 @@ exports[`Prompt Component basic render defaultValue 1`] = `
     cancelText="取消"
     cancelTextStyle={null}
     confirmAccessibilityLabel="Dialog.Confirm"
+    confirmDisabled={false}
     confirmText="确认"
     confirmTextStyle={null}
     contentStyle={null}
@@ -411,7 +412,7 @@ exports[`Prompt Component basic render value 1`] = `
                 },
                 Array [
                   Object {
-                    "opacity": 0.3,
+                    "opacity": 1,
                   },
                   null,
                 ],
