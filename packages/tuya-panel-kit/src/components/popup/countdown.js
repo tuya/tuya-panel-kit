@@ -224,7 +224,7 @@ class CountdownPopup extends React.Component {
                     {...rest}
                     theme={{ fontColor: countFontColor }}
                     accessibilityLabel="Popup_CountdownPicker_Minutes"
-                    style={StyleSheet.flatten([{ width, height: 220 }, minutePickerStyle])}
+                    style={StyleSheet.flatten([{ width, height: 220, backgroundColor: getTheme(countdownTheme, 'popup.cellBg', '#FFF') }, minutePickerStyle])}
                     selectedValue={this.state.minute}
                     onValueChange={this.handleMinuteChange}
                   >
@@ -301,6 +301,7 @@ class CountdownPopup extends React.Component {
                       {
                         width: isIos ? width * (7 / 10) - 60 : width * (1 / 2),
                         marginRight: isIos ? 0 : cx(20),
+                        backgroundColor: getTheme(countdownTheme, 'popup.cellBg', '#FFF')
                       },
                       hourPickerStyle,
                     ])}
@@ -340,6 +341,7 @@ class CountdownPopup extends React.Component {
                             width: width * (1 / 2),
                             marginRight: cx(40),
                           },
+                          { backgroundColor: getTheme(countdownTheme, 'popup.cellBg', '#FFF') },
                       minutePickerStyle,
                     ])}
                   >
