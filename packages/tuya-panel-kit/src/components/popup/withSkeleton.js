@@ -257,10 +257,11 @@ const withSkeleton = (WrappedComponent, withModal = false) => {
     _handleCancelPress = () => {
       const { onCancel } = this.props;
       if (this.hasMotion) {
-        this.setState({ show: false });
-        this.actionTypeFn = () => {
-          typeof onCancel === 'function' && onCancel();
-        };
+        this.setState({ show: false }, () => {
+          this.actionTypeFn = () => {
+            typeof onCancel === 'function' && onCancel();
+          };
+        });
       } else {
         typeof onCancel === 'function' && onCancel();
       }
