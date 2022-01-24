@@ -104,7 +104,7 @@ export interface SVGProps {
    * @description.en Icon path and svg path
    * @default ''
    */
-  d?: string;
+  d?: string | string[];
   /**
    * @description.zh 此道具指定颜色的不透明度或填充当前对象的内容。
    * @description.en This prop specifies the opacity of the color or the content the current object is filled with.
