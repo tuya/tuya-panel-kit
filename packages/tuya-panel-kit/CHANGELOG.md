@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.9.1](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.9.0...tuya-panel-kit@4.9.1) (2022-01-25)
+
+
+### Bug Fixes
+
+* **Popup.countdown:** When type = dark, the popup. countdown background color is white and looks blank ([#180](https://github.com/tuya/tuya-panel-kit/issues/180)) ([dfa362c](https://github.com/tuya/tuya-panel-kit/commit/dfa362cb9214bd22a29b595c8737a648292b3b86))
+
+
+### Performance Improvements
+
+* **Popup:** Optimize the order of asynchronous events, fixed [#178](https://github.com/tuya/tuya-panel-kit/issues/178) ([#179](https://github.com/tuya/tuya-panel-kit/issues/179)) ([e9217cd](https://github.com/tuya/tuya-panel-kit/commit/e9217cdd3342459fcb42523a55e72420d6e52474))
+
+
+
+
+
 # [4.9.0](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.8.4...tuya-panel-kit@4.9.0) (2022-01-13)
 
 

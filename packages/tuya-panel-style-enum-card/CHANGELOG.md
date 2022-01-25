@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.6](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-style-enum-card@0.1.5...tuya-panel-style-enum-card@0.1.6) (2022-01-25)
+
+
+### Performance Improvements
+
+* **IconFont:** IconFont supports array PATH interaction ([#181](https://github.com/tuya/tuya-panel-kit/issues/181)) ([dcb2657](https://github.com/tuya/tuya-panel-kit/commit/dcb265796730e79c0671ad485ea45458193fba11))
+
+
+
+
+
 ## [0.1.5](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-style-enum-card@0.1.4...tuya-panel-style-enum-card@0.1.5) (2022-01-13)
 
 **Note:** Version bump only for package tuya-panel-style-enum-card

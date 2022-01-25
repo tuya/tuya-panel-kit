@@ -1,6 +1,6 @@
 {
   "name": "tuya-panel-style-depict-card",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "tuya-panel-style-depict-card",
   "author": "ZengBeauty <2497752603@qq.com>",
   "homepage": "https://github.com/tuya/tuya-panel-kit#readme",
@@ -28,8 +28,8 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "tuya-panel-kit": "^4.9.0",
-    "tuya-panel-style-icon-background": "^0.1.5",
+    "tuya-panel-kit": "^4.9.1",
+    "tuya-panel-style-icon-background": "^0.1.6",
     "tuya-panel-utils": "^0.2.1"
   },
   "bugs": {
