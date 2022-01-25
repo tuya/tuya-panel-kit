@@ -250,6 +250,7 @@ exports[`countdown Component basic render 1`] = `
           <View
             style={
               Object {
+                "backgroundColor": "#FFF",
                 "marginRight": 0,
                 "width": 465,
               }
@@ -452,6 +453,7 @@ exports[`countdown Component basic render 1`] = `
           <View
             style={
               Object {
+                "backgroundColor": "#FFF",
                 "marginLeft": -225,
                 "width": 600,
               }
@@ -1218,6 +1220,7 @@ exports[`countdown Component basic render 2`] = `
           <View
             style={
               Object {
+                "backgroundColor": "#FFF",
                 "marginRight": 0,
                 "width": 465,
               }
@@ -1420,6 +1423,7 @@ exports[`countdown Component basic render 2`] = `
           <View
             style={
               Object {
+                "backgroundColor": "#FFF",
                 "marginLeft": -225,
                 "width": 600,
               }
@@ -2184,6 +2188,7 @@ exports[`countdown Component basic update 1`] = `
           <View
             style={
               Object {
+                "backgroundColor": "#FFF",
                 "marginRight": 0,
                 "width": 465,
               }
@@ -2386,6 +2391,7 @@ exports[`countdown Component basic update 1`] = `
           <View
             style={
               Object {
+                "backgroundColor": "#FFF",
                 "marginLeft": -225,
                 "width": 600,
               }
@@ -3150,6 +3156,7 @@ exports[`countdown Component basic update 2`] = `
           <View
             style={
               Object {
+                "backgroundColor": "#FFF",
                 "marginRight": 0,
                 "width": 465,
               }
@@ -3352,6 +3359,7 @@ exports[`countdown Component basic update 2`] = `
           <View
             style={
               Object {
+                "backgroundColor": "#FFF",
                 "marginLeft": -225,
                 "width": 600,
               }
@@ -4035,6 +4043,7 @@ exports[`countdown Component render width hour 1`] = `
           <View
             style={
               Object {
+                "backgroundColor": "#FFF",
                 "marginRight": 0,
                 "width": 465,
               }
@@ -4117,6 +4126,7 @@ exports[`countdown Component render width hour 1`] = `
           <View
             style={
               Object {
+                "backgroundColor": "#FFF",
                 "marginLeft": -225,
                 "width": 600,
               }
@@ -4750,6 +4760,7 @@ exports[`countdown Component render width hour 2`] = `
           <View
             style={
               Object {
+                "backgroundColor": "#FFF",
                 "marginRight": 0,
                 "width": 465,
               }
@@ -4837,6 +4848,7 @@ exports[`countdown Component render width hour 2`] = `
           <View
             style={
               Object {
+                "backgroundColor": "#FFF",
                 "marginLeft": -225,
                 "width": 600,
               }
@@ -5420,6 +5432,7 @@ exports[`countdown Component render width hour 3`] = `
           <View
             style={
               Object {
+                "backgroundColor": "#FFF",
                 "marginRight": 0,
                 "width": 465,
               }
@@ -5507,6 +5520,7 @@ exports[`countdown Component render width hour 3`] = `
           <View
             style={
               Object {
+                "backgroundColor": "#FFF",
                 "marginLeft": -225,
                 "width": 600,
               }
@@ -6138,6 +6152,7 @@ exports[`countdown Component render width onlyone 1`] = `
           <View
             style={
               Object {
+                "backgroundColor": "#FFF",
                 "height": 220,
                 "width": 750,
               }
