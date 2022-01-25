@@ -53,8 +53,9 @@ const withMotion = WrapperComponent => {
 
     _handleCancel = () => {
       const { onCancel } = this.props;
-      this.setState({ show: false });
-      this.actionFn = () => typeof onCancel === 'function' && onCancel();
+      this.setState({ show: false }, () => {
+        this.actionFn = () => typeof onCancel === 'function' && onCancel();
+      });
     };
 
     _handleConfirm = value => {
