@@ -133,20 +133,20 @@ export default class IconFont extends Component {
         style={[
           styles.row,
           {
-            width: width * count,
+            width: width,
             height,
           },
           transform.length > 0 && { transform },
           style,
         ]}
       >
-        {paths.map((pathData, i) => {
-          return (
-            <Svg key={i} width={width} height={height} viewBox={viewBox}>
-              <Path {...pathProps} fill={fill} stroke={stroke} d={pathData} />
-            </Svg>
-          );
-        })}
+        <Svg width={width} height={height} viewBox={viewBox}>
+          {paths.map((pathData, i) => {
+            return (
+              <Path key={`${pathData}`} {...pathProps} fill={fill} stroke={stroke} d={pathData} />
+            );
+          })}
+        </Svg>
       </View>
     );
   }

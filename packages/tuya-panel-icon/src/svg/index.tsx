@@ -47,7 +47,7 @@ export default class IconFont extends Component<SVGProps> {
         style={[
           styles.row,
           {
-            width: width * count,
+            width,
             height,
           },
           transform.length > 0 && { transform },
