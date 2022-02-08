@@ -1,6 +1,6 @@
 {
 	"name": "tuya-panel-stepper",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"description": "tuya-panel-stepper",
 	"author": "ZengBeauty<2497752603@qq.com>",
 	"homepage": "https://github.com/tuya/tuya-panel-kit#readme",
@@ -22,7 +22,7 @@
 	},
 	"dependencies": {
 		"styled-components": "^3.4.10",
-		"tuya-panel-icon": "^0.1.2",
+		"tuya-panel-icon": "^0.1.3",
 		"tuya-panel-utils": "^0.2.1"
 	},
 	"scripts": {

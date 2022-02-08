@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.3](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-icon@0.1.2...tuya-panel-icon@0.1.3) (2022-02-08)
+
+
+### Features
+
+* **IconFont:** IconFont supports multi-path icon adaptation ([#182](https://github.com/tuya/tuya-panel-kit/issues/182)) ([7ab8064](https://github.com/tuya/tuya-panel-kit/commit/7ab8064d49ef2475e62d34d8a6568ecf0f872640))
+
+
+
+
+
 ## [0.1.2](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-icon@0.1.1...tuya-panel-icon@0.1.2) (2022-01-25)
 
 
