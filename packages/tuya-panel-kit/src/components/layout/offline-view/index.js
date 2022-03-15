@@ -12,7 +12,7 @@ const TYNative = TYSdk.native;
 const TYDevice = TYSdk.device;
 const TYEvent = TYSdk.event;
 
-const { convert } = RatioUtils;
+const { convert, isIos } = RatioUtils;
 const { compareVersion, get } = CoreUtils;
 const OFFLINE_API_SUPPORT = TYMobile.verSupported('2.91');
 
@@ -87,9 +87,14 @@ export default class OfflineView extends Component {
     const { devId } = TYSdk.devInfo;
     const isJumpToWifi = this._handleVersionToJump();
     if (isJumpToWifi) {
-      // 为了处理安卓的生命周期问题（可能会导致进入不了配网页面）
-      TYNative.jumpTo(`tuyaSmart://device_offline_reconnect?device_id=${devId}`);
-      TYMobile.back();
+      if (isIos) {
+        TYMobile.back();
+        TYNative.jumpTo(`tuyaSmart://device_offline_reconnect?device_id=${devId}`);
+      } else {
+        // 为了处理安卓的生命周期问题（可能会导致进入不了配网页面）
+        TYNative.jumpTo(`tuyaSmart://device_offline_reconnect?device_id=${devId}`);
+        TYMobile.back();
+      }
     }
   };
 
@@ -236,7 +241,8 @@ export default class OfflineView extends Component {
       const isWifiDevice = capability === 1;
       if (isWifiDevice || !appOnline) {
         return this.renderOldView();
-      } else if (isBleDevice) {
+      }
+      if (isBleDevice) {
         return this.renderBleView();
       }
     }
@@ -248,19 +254,19 @@ export default class OfflineView extends Component {
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
-    justifyContent: 'center',
     alignSelf: 'center',
     backgroundColor: `rgba(0, 0, 0, 0.8)`,
+    justifyContent: 'center',
   },
   icon: {
+    height: convert(81),
     resizeMode: 'stretch',
     width: convert(121),
-    height: convert(81),
   },
   tip: {
-    marginTop: convert(14),
-    fontSize: 16,
     color: 'white',
+    fontSize: 16,
+    marginTop: convert(14),
     textAlign: 'center',
   },
 });
