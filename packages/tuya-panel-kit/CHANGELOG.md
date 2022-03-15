@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.9.3](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.9.2...tuya-panel-kit@4.9.3) (2022-03-15)
+
+
+### Bug Fixes
+
+* **reconnect:** Fixed the reverse order of the IOS redirect page when the device is offline ([#187](https://github.com/tuya/tuya-panel-kit/issues/187)) ([eabf874](https://github.com/tuya/tuya-panel-kit/commit/eabf8742d67b38a517cb63d57844c6f94634f90b))
+
+
+
+
+
 ## [4.9.2](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.9.1...tuya-panel-kit@4.9.2) (2022-02-08)
 
 
