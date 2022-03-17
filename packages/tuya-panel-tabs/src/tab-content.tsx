@@ -198,7 +198,10 @@ export default class TabContent extends Component<TabContentProps, IState> {
     return this.state.cachedChildren.map((child, idx) => {
       if (React.isValidElement(child)) return children[idx];
       return (
-        <TabPanel key={child} accessibilityLabel={`${accessibilityLabel}_Placeholder_${idx}`}>
+        <TabPanel
+          key={`${child}_${idx}`}
+          accessibilityLabel={`${accessibilityLabel}_Placeholder_${idx}`}
+        >
           {renderPlaceholder(activeIndex, children[idx])}
         </TabPanel>
       );
