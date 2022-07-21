@@ -34,7 +34,6 @@ export default class Battery extends PureComponent {
     const { value } = this.props;
     // 电池为100%, top: 3,电量20%: 14.2 ,电量10%: 15.6,电量为0%，top: 17
     const top = 17 - ((17 - 3) * value) / 100;
-    console.log('[battery]', top);
     return top;
   };
 
