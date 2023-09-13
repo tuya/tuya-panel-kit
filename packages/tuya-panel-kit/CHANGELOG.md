@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.10.0](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.9.4...tuya-panel-kit@4.10.0) (2023-09-13)
+
+
+### Features
+
+* support bt methods ([fc6c141](https://github.com/tuya/tuya-panel-kit/commit/fc6c1415f28f20b6b765b33d4182c8ca8ae01093))
+
+
+
+
+
 ## [4.9.4](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.9.3...tuya-panel-kit@4.9.4) (2022-03-17)
 
 **Note:** Version bump only for package tuya-panel-kit
