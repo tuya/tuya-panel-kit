@@ -17,7 +17,7 @@ import {
   DefaultTheme,
 } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import 'react-native-gesture-handler';
+
 import { SlideFromRightIOS } from './TransitionPresets';
 import { TYSdk } from '../../../TYNativeApi';
 
