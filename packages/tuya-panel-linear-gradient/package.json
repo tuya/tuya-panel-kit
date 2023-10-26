@@ -22,7 +22,7 @@
 	},
 	"dependencies": {
 		"color": "^0.11.1",
-		"react-native-svg": "5.5.1",
+		"react-native-svg": "13.14.0",
 		"tuya-panel-utils": "^0.2.1"
 	},
 	"scripts": {

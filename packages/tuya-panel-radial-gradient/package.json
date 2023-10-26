@@ -21,7 +21,7 @@
 		"url": "git+https://github.com/tuya/tuya-panel-kit.git"
 	},
 	"dependencies": {
-		"react-native-svg": "5.5.1"
+		"react-native-svg": "13.14.0"
 	},
 	"scripts": {
 		"prebuild": "rimraf lib/*",

@@ -2287,6 +2287,11 @@
   resolved "https://registry.nlark.com/@react-native-community/masked-view/download/@react-native-community/masked-view-0.1.10.tgz?cache=0&sync_timestamp=1619440061429&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40react-native-community%2Fmasked-view%2Fdownload%2F%40react-native-community%2Fmasked-view-0.1.10.tgz#5dda643e19e587793bc2034dd9bf7398ad43d401"
   integrity sha1-XdpkPhnlh3k7wgNN2b9zmK1D1AE=
 
+"@react-native-community/masked-view@0.1.11":
+  version "0.1.11"
+  resolved "https://registry.yarnpkg.com/@react-native-community/masked-view/-/masked-view-0.1.11.tgz#2f4c6e10bee0786abff4604e39a37ded6f3980ce"
+  integrity sha512-rQfMIGSR/1r/SyN87+VD8xHHzDYeHaJq6elOSCAD+0iLagXkSI2pfA0LmSXP21uw5i3em7GkkRjfJ8wpqWXZNw==
+
 "@react-native-picker/picker@2.5.1":
   version "2.5.1"
   resolved "https://registry.npmmirror.com/@react-native-picker/picker/-/picker-2.5.1.tgz#dfa13d5b97bfbedf1f7e7c608181a82f1d58b351"
@@ -7728,7 +7733,7 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
-hoist-non-react-statics@^2.3.1, hoist-non-react-statics@^2.5.0:
+hoist-non-react-statics@^2.5.0:
   version "2.5.5"
   resolved "https://registry.nlark.com/hoist-non-react-statics/download/hoist-non-react-statics-2.5.5.tgz#c5903cf409c0dfd908f388e619d86b9c1174cb47"
   integrity sha1-xZA89AnA39kI84jmGdhrnBF0y0c=
@@ -12095,15 +12100,6 @@ react-native-deprecated-custom-components@0.1.2:
     react-timer-mixin "^0.13.2"
     rebound "^0.0.13"
 
-react-native-gesture-handler@1.3.0:
-  version "1.3.0"
-  resolved "https://registry.npm.taobao.org/react-native-gesture-handler/download/react-native-gesture-handler-1.3.0.tgz#d0386f565928ccc1849537f03f2e37fd5f6ad43f"
-  integrity sha1-0DhvVlkozMGElTfwPy43/V9q1D8=
-  dependencies:
-    hoist-non-react-statics "^2.3.1"
-    invariant "^2.2.2"
-    prop-types "^15.5.10"
-
 react-native-gesture-handler@1.8.0:
   version "1.8.0"
   resolved "https://registry.npm.taobao.org/react-native-gesture-handler/download/react-native-gesture-handler-1.8.0.tgz#18f61f51da50320f938957b0ee79bc58f47449dc"
@@ -12153,13 +12149,6 @@ react-native-reanimated@1.13.0:
   dependencies:
     fbjs "^1.0.0"
 
-react-native-reanimated@1.9.0:
-  version "1.9.0"
-  resolved "https://registry.nlark.com/react-native-reanimated/download/react-native-reanimated-1.9.0.tgz#38676c99dd585504fdc7331efb45e5f48ec7339a"
-  integrity sha1-OGdsmd1YVQT9xzMe+0Xl9I7HM5o=
-  dependencies:
-    fbjs "^1.0.0"
-
 react-native-reanimated@3.5.4:
   version "3.5.4"
   resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-3.5.4.tgz#a6c2b0c43b6dad246f5d276213974afedb8e3fc7"
@@ -12169,11 +12158,6 @@ react-native-reanimated@3.5.4:
     "@babel/preset-typescript" "^7.16.7"
     convert-source-map "^2.0.0"
     invariant "^2.2.4"
-
-react-native-safe-area-context@3.0.7:
-  version "3.0.7"
-  resolved "https://registry.nlark.com/react-native-safe-area-context/download/react-native-safe-area-context-3.0.7.tgz#0f53de7a30d626d82936000f3f6db374ecc4b800"
-  integrity sha1-D1PeejDWJtgpNgAPP22zdOzEuAA=
 
 react-native-safe-area-context@3.1.7:
   version "3.1.7"
@@ -12189,11 +12173,6 @@ react-native-screens@2.10.1:
   version "2.10.1"
   resolved "https://registry.nlark.com/react-native-screens/download/react-native-screens-2.10.1.tgz#06d22fae87ef0ce51c616c34a199726db1403b95"
   integrity sha1-BtIvrofvDOUcYWw0oZlybbFAO5U=
-
-react-native-screens@2.9.0:
-  version "2.9.0"
-  resolved "https://registry.nlark.com/react-native-screens/download/react-native-screens-2.9.0.tgz#ead2843107ba00fee259aa377582e457c74f1f3b"
-  integrity sha1-6tKEMQe6AP7iWao3dYLkV8dPHzs=
 
 react-native-screens@3.27.0:
   version "3.27.0"

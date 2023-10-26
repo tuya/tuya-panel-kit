@@ -32,7 +32,7 @@
     "url": "https://github.com/tuya/tuya-panel-kit/issues"
   },
   "dependencies": {
-    "react-native-svg": "5.5.1",
+    "react-native-svg": "13.14.0",
     "tuya-panel-utils": "^0.2.1"
   }
 }

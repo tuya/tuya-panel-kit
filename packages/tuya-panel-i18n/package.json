@@ -34,7 +34,7 @@
     "url": "https://github.com/tuya/tuya-panel-kit/issues"
   },
   "peerDependencies": {
-    "react": "16.8.3",
-    "react-native": "0.59.10"
+    "react": "^16.8.3",
+    "react-native": "^0.59.10"
   }
 }
