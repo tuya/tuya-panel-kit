@@ -14,7 +14,7 @@ const TYEvent = TYSdk.event;
 
 const { convert, isIos } = RatioUtils;
 const { compareVersion, get } = CoreUtils;
-const OFFLINE_API_SUPPORT = TYMobile.verSupported('2.91');
+const OFFLINE_API_SUPPORT = true;
 
 const Res = {
   offline: require('../../res/offline.png'),

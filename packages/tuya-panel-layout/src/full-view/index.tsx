@@ -138,20 +138,8 @@ class FullView extends Component<IFullViewProps, IFullViewState> {
       }
 
       if (isArray(stops)) {
-        if (TYMobile.verSupported('2.5')) {
-          return (
-            <RadialGradient
-              ref={ref => {
-                this.refBackground = ref;
-              }}
-              style={[styles.gradientStyle, backgroundStyle]}
-              {...others}
-              stops={stops}
-            />
-          );
-        }
         return (
-          <View
+          <RadialGradient
             ref={ref => {
               this.refBackground = ref;
             }}
@@ -163,26 +151,9 @@ class FullView extends Component<IFullViewProps, IFullViewState> {
       }
 
       const { x1, y1, x2, y2, ...ostops } = background;
-      if (TYMobile.verSupported('2.5')) {
-        return (
-          <LinearGradient
-            ref={ref => {
-              this.refBackground = ref;
-            }}
-            style={[styles.gradientStyle, backgroundStyle]}
-            // @ts-ignore
-            stops={ostops}
-            x1={x1}
-            y1={y1}
-            x2={x2}
-            y2={y2}
-          >
-            <Rect x="0" y="0" height={Screen.height} width={Screen.width} />
-          </LinearGradient>
-        );
-      }
+
       return (
-        <View
+        <LinearGradient
           ref={ref => {
             this.refBackground = ref;
           }}
@@ -195,7 +166,7 @@ class FullView extends Component<IFullViewProps, IFullViewState> {
           y2={y2}
         >
           <Rect x="0" y="0" height={Screen.height} width={Screen.width} />
-        </View>
+        </LinearGradient>
       );
     }
 

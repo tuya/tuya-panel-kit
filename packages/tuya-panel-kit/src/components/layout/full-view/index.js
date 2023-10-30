@@ -10,17 +10,12 @@ import { CoreUtils, ThemeUtils, RatioUtils } from '../../../utils';
 import Notification from '../../notification';
 import GlobalToast from '../../global-toast';
 
-let LinearGradient = View;
-let RadialGradient = View;
-
 const TYNative = TYSdk.native;
 const TYMobile = TYSdk.mobile;
 const TYEvent = TYSdk.event;
 
-if (TYMobile.verSupported('2.5')) {
-  LinearGradient = require('../../gradient/linear-gradient').default;
-  RadialGradient = require('../../gradient/radial-gradient').default;
-}
+const LinearGradient = require('../../gradient/linear-gradient').default;
+const RadialGradient = require('../../gradient/radial-gradient').default;
 
 const { get } = CoreUtils;
 const { withTheme } = ThemeUtils;
@@ -350,36 +345,36 @@ class FullView extends Component {
 }
 
 const styles = StyleSheet.create({
+  background: {
+    backgroundColor: 'transparent',
+    bottom: 0,
+    height: Screen.height,
+    left: 0,
+    position: 'absolute',
+    resizeMode: 'stretch',
+    right: 0,
+    top: 0,
+    width: Screen.width,
+  },
+
   container: {
     flex: 1,
   },
 
-  background: {
-    backgroundColor: 'transparent',
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    top: 0,
-    resizeMode: 'stretch',
-    width: Screen.width,
+  gradientStyle: {
     height: Screen.height,
+    width: Screen.width,
   },
 
   offlineStyle: {
-    width: Screen.width,
     height: Screen.height - TopBar.height,
     position: 'absolute',
     top: TopBar.height,
+    width: Screen.width,
   },
 
   offlineText: {
     paddingBottom: TopBar.height * 2,
-  },
-
-  gradientStyle: {
-    width: Screen.width,
-    height: Screen.height,
   },
 });
 
