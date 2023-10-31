@@ -1,6 +1,6 @@
 {
 	"name": "tuya-panel-stepper",
-	"version": "0.1.4-rn72.0",
+	"version": "0.1.5-rn72.0",
 	"description": "tuya-panel-stepper",
 	"author": "ZengBeauty<2497752603@qq.com>",
 	"homepage": "https://github.com/tuya/tuya-panel-kit#readme",
@@ -22,8 +22,8 @@
 	},
 	"dependencies": {
 		"styled-components": "^3.4.10",
-		"tuya-panel-icon": "^0.1.4-rn72.0",
-		"tuya-panel-utils": "^0.2.2-rn72.0"
+		"tuya-panel-icon": "^0.1.5-rn72.0",
+		"tuya-panel-utils": "^0.2.3-rn72.0"
 	},
 	"scripts": {
 		"prebuild": "rimraf lib/*",

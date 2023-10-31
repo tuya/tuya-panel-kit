@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.5-rn72.0](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-stepper@0.1.4-rn72.0...tuya-panel-stepper@0.1.5-rn72.0) (2023-10-31)
+
+**Note:** Version bump only for package tuya-panel-stepper
+
+
+
+
+
 ## [0.1.4-rn72.0](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-stepper@0.1.3...tuya-panel-stepper@0.1.4-rn72.0) (2023-10-31)
 
 **Note:** Version bump only for package tuya-panel-stepper

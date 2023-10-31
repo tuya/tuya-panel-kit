@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.4-rn72.0](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-radial-gradient@0.0.3-rn72.0...tuya-panel-radial-gradient@0.0.4-rn72.0) (2023-10-31)
+
+**Note:** Version bump only for package tuya-panel-radial-gradient
+
+
+
+
+
 ## [0.0.3-rn72.0](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-radial-gradient@0.0.2...tuya-panel-radial-gradient@0.0.3-rn72.0) (2023-10-31)
 
 **Note:** Version bump only for package tuya-panel-radial-gradient

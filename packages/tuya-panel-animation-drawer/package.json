@@ -1,6 +1,6 @@
 {
   "name": "tuya-panel-animation-drawer",
-  "version": "0.2.2-rn72.0",
+  "version": "0.2.3-rn72.0",
   "description": "tuya-panel-animation-drawer",
   "author": "ZengBeauty <2497752603@qq.com>",
   "homepage": "https://github.com/tuya/tuya-panel-kit#readme",
@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "lodash": "^4.17.21",
-    "tuya-panel-utils": "^0.2.2-rn72.0"
+    "tuya-panel-utils": "^0.2.3-rn72.0"
   },
   "gitHead": "010cba9f5a3136808203e5a342bcd164601063e7"
 }
