@@ -36,5 +36,6 @@
   "peerDependencies": {
     "react": "^16.8.3",
     "react-native": "^0.59.10"
-  }
+  },
+  "gitHead": "010cba9f5a3136808203e5a342bcd164601063e7"
 }

@@ -34,5 +34,6 @@
   "dependencies": {
     "react-native-svg": "13.14.0",
     "tuya-panel-utils": "^0.2.2-rn72.0"
-  }
+  },
+  "gitHead": "010cba9f5a3136808203e5a342bcd164601063e7"
 }

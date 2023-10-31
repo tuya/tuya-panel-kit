@@ -41,5 +41,6 @@
     "tuya-panel-style-slider-card": "^0.2.1-rn72.0",
     "tuya-panel-style-step-card": "^0.2.1-rn72.0",
     "tuya-panel-style-switch-card": "^0.2.1-rn72.0"
-  }
+  },
+  "gitHead": "010cba9f5a3136808203e5a342bcd164601063e7"
 }
