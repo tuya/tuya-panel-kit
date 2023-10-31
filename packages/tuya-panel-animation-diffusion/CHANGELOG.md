@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2-rn72.0](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-animation-diffusion@0.2.1...tuya-panel-animation-diffusion@0.2.2-rn72.0) (2023-10-31)
+
+**Note:** Version bump only for package tuya-panel-animation-diffusion
+
+
+
+
+
 ## [0.2.1](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-animation-diffusion@0.1.3...tuya-panel-animation-diffusion@0.2.1) (2021-12-07)
 
 **Note:** Version bump only for package tuya-panel-animation-diffusion

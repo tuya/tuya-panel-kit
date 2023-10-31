@@ -1,6 +1,6 @@
 {
 	"name": "tuya-panel-switch",
-	"version": "0.1.5",
+	"version": "0.1.6-rn72.0",
 	"description": "tuya-panel-switch",
 	"author": "ZengBeauty <2497752603@qq.com>",
 	"homepage": "https://github.com/tuya/tuya-panel-kit#readme",
@@ -21,10 +21,10 @@
 		"url": "git+https://github.com/tuya/tuya-panel-kit.git"
 	},
 	"dependencies": {
-		"tuya-panel-icon": "^0.1.3",
-		"tuya-panel-linear-gradient": "^0.1.1",
-		"tuya-panel-text": "^0.1.2",
-		"tuya-panel-utils": "^0.2.1"
+		"tuya-panel-icon": "^0.1.4-rn72.0",
+		"tuya-panel-linear-gradient": "^0.1.2-rn72.0",
+		"tuya-panel-text": "^0.1.3-rn72.0",
+		"tuya-panel-utils": "^0.2.2-rn72.0"
 	},
 	"scripts": {
 		"prebuild": "rimraf lib/*",

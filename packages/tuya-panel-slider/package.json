@@ -1,6 +1,6 @@
 {
 	"name": "tuya-panel-slider",
-	"version": "0.1.1",
+	"version": "0.1.2-rn72.0",
 	"description": "tuya-panel-slider",
 	"author": "ZengBeauty <2497752603@qq.com>",
 	"homepage": "https://github.com/tuya/tuya-panel-kit#readme",
@@ -24,7 +24,7 @@
 		"lodash": "^4.17.21",
 		"react-addons-shallow-compare": "^15.6.2",
 		"style-equal": "^1.0.0",
-		"tuya-panel-utils": "^0.2.1"
+		"tuya-panel-utils": "^0.2.2-rn72.0"
 	},
 	"scripts": {
 		"prebuild": "rimraf lib/*",

@@ -1,6 +1,6 @@
 {
   "name": "tuya-panel-animation-wave",
-  "version": "0.2.1",
+  "version": "0.2.2-rn72.0",
   "description": "tuya-panel-animation-wave",
   "author": "ZengBeauty <2497752603@qq.com>",
   "homepage": "https://github.com/tuya/tuya-panel-kit#readme",
@@ -33,6 +33,6 @@
   },
   "dependencies": {
     "react-native-svg": "13.14.0",
-    "tuya-panel-utils": "^0.2.1"
+    "tuya-panel-utils": "^0.2.2-rn72.0"
   }
 }
