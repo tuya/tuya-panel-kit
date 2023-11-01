@@ -39,9 +39,9 @@
     "@types/tuya-panel-kit": "^4.0.5"
   },
   "peerDependencies": {
-    "react": "16.8.3",
-    "react-native": "0.59.10",
-    "react-native-svg": "5.5.1"
+    "react": "^16.8.3",
+    "react-native": "^0.59.10",
+    "react-native-svg": "^5.5.1"
   },
   "gitHead": "010cba9f5a3136808203e5a342bcd164601063e7"
 }
