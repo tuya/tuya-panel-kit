@@ -128,6 +128,7 @@ export default function createNavigator(
         isMqttNoticeActive: false,
       };
       this.navigationRef = null;
+      this._deviceRssiInfo = null;
     }
 
     componentDidMount() {
@@ -165,6 +166,7 @@ export default function createNavigator(
     navigationState: NavigationState;
     opts: any;
     fullViewRef: React.RefObject<IFullViewProps>;
+    _deviceRssiInfo: null | { value?: number; supported?: boolean };
 
     sendEventInfo(eventType, state) {
       const enablePageTrack = get(TYSdk, 'devInfo.panelConfig.fun.enablePageTrack', false);
@@ -207,6 +209,20 @@ export default function createNavigator(
       return false;
     };
 
+    _getRssiInfo = async () => {
+      if (this._deviceRssiInfo === null) {
+        return getRssi().then(res => {
+          if (!res) {
+            this._deviceRssiInfo = {};
+          } else {
+            this._deviceRssiInfo = res;
+          }
+          return this._deviceRssiInfo;
+        });
+      }
+      return this._deviceRssiInfo;
+    };
+
     _handleAppStateChange = nextAppState => {
       if (nextAppState === 'background') {
         Notification.hide();
@@ -230,11 +246,14 @@ export default function createNavigator(
       if (protocol === 23) {
         const { data: result } = data;
         const { signal } = result;
-        getRssi().then((res: { value: number }) => {
+        this._getRssiInfo().then((res: { value: number; supported: boolean }) => {
           if (!res) {
             return;
           }
-          const { value: rssi } = res;
+          const { value: rssi, supported } = res;
+          if (supported !== true) {
+            return;
+          }
           if (signal < rssi && AppState.currentState === 'active') {
             this.timer && clearTimeout(this.timer);
             this.setState({
