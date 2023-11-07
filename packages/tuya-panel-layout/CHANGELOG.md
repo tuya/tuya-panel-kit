@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.3-rn72.2](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-layout@0.2.3-rn72.1...tuya-panel-layout@0.2.3-rn72.2) (2023-11-07)
+
+
+### Bug Fixes
+
+* Pop-up dialog for unsupported device signal strength on certain newly added device type ([bab6cec](https://github.com/tuya/tuya-panel-kit/commit/bab6cec28694148e93738cdedf3cad7c023257fd))
+
+
+
+
+
 ## [0.2.3-rn72.1](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-layout@0.2.3-rn72.0...tuya-panel-layout@0.2.3-rn72.1) (2023-11-01)
 
 **Note:** Version bump only for package tuya-panel-layout
