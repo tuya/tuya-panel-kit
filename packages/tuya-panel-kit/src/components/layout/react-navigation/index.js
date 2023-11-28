@@ -121,6 +121,7 @@ export default function createNavigator({ router, screenOptions }, navigationCon
         isMqttNoticeActive: false,
       };
       this.navigationRef = null;
+      this._deviceRssiInfo = null;
     }
 
     componentDidMount() {
@@ -195,6 +196,20 @@ export default function createNavigator({ router, screenOptions }, navigationCon
       return false;
     };
 
+    _getRssiInfo = async () => {
+      if (this._deviceRssiInfo === null) {
+        return getRssi().then(res => {
+          if (!res) {
+            this._deviceRssiInfo = {};
+          } else {
+            this._deviceRssiInfo = res;
+          }
+          return this._deviceRssiInfo;
+        });
+      }
+      return this._deviceRssiInfo;
+    };
+
     _handleAppStateChange = nextAppState => {
       if (nextAppState === 'background') {
         Notification.hide();
@@ -213,11 +228,14 @@ export default function createNavigator({ router, screenOptions }, navigationCon
         const { data: result } = data;
         if (!result || result.signal === undefined) return;
         const { signal } = result;
-        getRssi().then(res => {
+        this._getRssiInfo().then(res => {
           if (!res) {
             return;
           }
-          const { value: rssi } = res;
+          const { value: rssi, supported } = res;
+          if (supported !== true) {
+            return;
+          }
           if (signal < rssi && AppState.currentState === 'active') {
             this.timer && clearTimeout(this.timer);
             this.setState({

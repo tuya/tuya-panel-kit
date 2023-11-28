@@ -73,6 +73,7 @@ export default class NavigatorLayout extends Component<INavigatorProps, INavigat
   constructor(props) {
     super(props);
 
+    this._deviceRssiInfo = null;
     this._sceneConfigs = this.__sceneConfigs.bind(this);
     this._renderScene = this.__renderScene.bind(this);
     this._onDidFocus = this.__onDidFocus.bind(this);
@@ -129,9 +130,24 @@ export default class NavigatorLayout extends Component<INavigatorProps, INavigat
     return false;
   }
 
+  _getRssiInfo = async () => {
+    if (this._deviceRssiInfo === null) {
+      return getRssi().then(res => {
+        if (!res) {
+          this._deviceRssiInfo = {};
+        } else {
+          this._deviceRssiInfo = res;
+        }
+        return this._deviceRssiInfo;
+      });
+    }
+    return this._deviceRssiInfo;
+  };
+
   timer: number;
   opts: any;
   fullViewRef: any;
+  _deviceRssiInfo: null | { value?: number; supported?: boolean };
   _onWillFocus: () => void;
   _renderScene: () => void;
   _sceneConfigs: () => void;
@@ -172,11 +188,14 @@ export default class NavigatorLayout extends Component<INavigatorProps, INavigat
     if (protocol === 23) {
       const { data: result } = data;
       const { signal } = result;
-      getRssi().then((res: { value: number }) => {
+      this._getRssiInfo().then((res: { value: number; supported: boolean }) => {
         if (!res) {
           return;
         }
-        const { value: rssi } = res;
+        const { value: rssi, supported } = res;
+        if (supported !== true) {
+          return;
+        }
         if (signal < rssi && AppState.currentState === 'active') {
           this.timer && clearTimeout(this.timer);
           this.setState({

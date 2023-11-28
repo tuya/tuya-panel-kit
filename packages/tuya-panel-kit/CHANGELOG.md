@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.10.1](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.10.0...tuya-panel-kit@4.10.1) (2023-11-07)
+
+
+### Bug Fixes
+
+* Pop-up dialog for unsupported device signal strength on certain newly added device type ([7235b0f](https://github.com/tuya/tuya-panel-kit/commit/7235b0fb393269f661273ac3e7b897f89a46b112))
+
+
+
+
+
 # [4.10.0](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.9.4...tuya-panel-kit@4.10.0) (2023-09-13)
 
 
