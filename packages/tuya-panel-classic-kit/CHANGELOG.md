@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.3-rn72.3](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-classic-kit@0.2.3-rn72.2...tuya-panel-classic-kit@0.2.3-rn72.3) (2023-11-28)
+
+**Note:** Version bump only for package tuya-panel-classic-kit
+
+
+
+
+
 ## [0.2.3-rn72.2](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-classic-kit@0.2.3-rn72.1...tuya-panel-classic-kit@0.2.3-rn72.2) (2023-11-07)
 
 **Note:** Version bump only for package tuya-panel-classic-kit
