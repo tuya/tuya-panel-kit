@@ -226,6 +226,7 @@ export default function createNavigator({ router, screenOptions }, navigationCon
       if (!data) return;
       if (protocol === 23) {
         const { data: result } = data;
+        if (!result || result.signal === undefined) return;
         const { signal } = result;
         this._getRssiInfo().then(res => {
           if (!res) {
