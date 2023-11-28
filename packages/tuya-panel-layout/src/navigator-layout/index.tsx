@@ -187,6 +187,7 @@ export default class NavigatorLayout extends Component<INavigatorProps, INavigat
     if (!data) return;
     if (protocol === 23) {
       const { data: result } = data;
+      if (!result || result.signal === undefined) return;
       const { signal } = result;
       this._getRssiInfo().then((res: { value: number; supported: boolean }) => {
         if (!res) {

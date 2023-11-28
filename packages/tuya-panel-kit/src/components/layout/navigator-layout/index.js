@@ -173,6 +173,7 @@ export default class NavigatorLayout extends Component {
     if (!data) return;
     if (protocol === 23) {
       const { data: result } = data;
+      if (!result || result.signal === undefined) return;
       const { signal } = result;
       this._getRssiInfo().then(res => {
         if (!res) {
