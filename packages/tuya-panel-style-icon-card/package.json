@@ -1,6 +1,6 @@
 {
   "name": "tuya-panel-style-icon-card",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "tuya-panel-style-icon-card",
   "author": "ZengBeauty <2497752603@qq.com>",
   "homepage": "https://github.com/tuya/tuya-panel-kit#readme",
@@ -14,8 +14,8 @@
     "lib"
   ],
   "dependencies": {
-    "tuya-panel-kit": "^4.10.1",
-    "tuya-panel-style-icon-background": "^0.2.1",
+    "tuya-panel-kit": "^4.10.2",
+    "tuya-panel-style-icon-background": "^0.2.2",
     "tuya-panel-utils": "^0.2.1"
   },
   "publishConfig": {

@@ -1,6 +1,6 @@
 {
   "name": "tuya-panel-style-icon-background",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "IconBackground Components - IconBackground",
   "author": "chechengyi <984593931@qq.com>",
   "homepage": "https://github.com/tuya/tuya-panel-kit#readme",
@@ -31,7 +31,7 @@
     "url": "https://github.com/tuya/tuya-panel-kit/issues"
   },
   "dependencies": {
-    "tuya-panel-kit": "^4.10.1",
+    "tuya-panel-kit": "^4.10.2",
     "tuya-panel-utils": "^0.2.1"
   },
   "devDependencies": {
