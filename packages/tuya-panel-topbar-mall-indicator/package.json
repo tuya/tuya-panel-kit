@@ -1,6 +1,6 @@
 {
   "name": "tuya-panel-topbar-mall-indicator",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Tuya tool collection kit",
   "author": "lianghui<978702126@qq.com>",
   "homepage": "https://github.com/tuya/tuya-panel-kit#readme",
@@ -32,7 +32,7 @@
     "url": "https://github.com/tuya/tuya-panel-kit/issues"
   },
   "dependencies": {
-    "tuya-panel-kit": "^4.10.2"
+    "tuya-panel-kit": "^4.10.3"
   },
   "peerDependencies": {
     "react": "16.8.3",

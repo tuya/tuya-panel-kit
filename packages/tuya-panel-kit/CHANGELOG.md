@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.10.3](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.10.2...tuya-panel-kit@4.10.3) (2024-09-26)
+
+
+### Bug Fixes
+
+* exceptions where the compatible client cannot obtain device information ([acffd89](https://github.com/tuya/tuya-panel-kit/commit/acffd89793c6b5a82c1bf55bc707ce18263edbec))
+
+
+
+
+
 ## [4.10.2](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.10.1...tuya-panel-kit@4.10.2) (2023-11-28)
 
 **Note:** Version bump only for package tuya-panel-kit
