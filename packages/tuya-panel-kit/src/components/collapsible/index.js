@@ -120,7 +120,7 @@ class Collapsible extends React.PureComponent {
           // TODO: 不可能走到这里
           this.setState({ measuring: false }, () => callback(this.props.collapsedHeight));
         } else {
-          this.content.getNode().measure((x, y, width, height) => {
+          this.content.measure((x, y, width, height) => {
             this.setState(
               {
                 measuring: false,

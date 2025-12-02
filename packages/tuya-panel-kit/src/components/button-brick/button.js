@@ -187,6 +187,7 @@ export default class BrickButton extends React.PureComponent {
       layout: { width, height },
     },
   }) => {
+    if(this.state.init) return;
     // this.measureText();
     this.setState({
       layout: { ...this.state.layout, width, height },
