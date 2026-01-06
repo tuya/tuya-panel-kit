@@ -20,14 +20,14 @@ import { RatioUtils } from '../../utils';
 const { convertX: cx } = RatioUtils;
 
 const styles = StyleSheet.create({
-  wrapper: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'row',
-  },
-
   loading: {
     marginRight: cx(8),
+  },
+
+  wrapper: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'center',
   },
 });
 
@@ -326,7 +326,7 @@ export default class BrickButton extends React.PureComponent {
         disabled={disabled}
         underlayColor={underlayColor}
         {...events}
-        style={[style, { width: layout.width, height: layout.height }]}
+        style={[style, layout.width && layout.height && { width: layout.width, height: layout.height }]}
       >
         <View style={[wrapper, { backgroundColor, borderColor }]} onLayout={this.onLayout}>
           {type === 'primaryGradient' && !disabled && this.renderLinearGradient(radius)}
