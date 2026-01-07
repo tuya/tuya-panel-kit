@@ -46,6 +46,7 @@ class Collapsible extends React.PureComponent {
      */
     children: PropTypes.node,
   };
+
   static defaultProps = {
     align: 'top',
     collapsed: true,
@@ -56,6 +57,7 @@ class Collapsible extends React.PureComponent {
     children: null,
     style: null,
   };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -97,7 +99,7 @@ class Collapsible extends React.PureComponent {
     const { align } = this.props;
     if (measuring) {
       return { position: 'absolute', opacity: 0 };
-    } else if (align !== 'top') {
+    } if (align !== 'top') {
       return {
         transform: [
           {
@@ -120,7 +122,7 @@ class Collapsible extends React.PureComponent {
           // TODO: 不可能走到这里
           this.setState({ measuring: false }, () => callback(this.props.collapsedHeight));
         } else {
-          this.content.getNode().measure((x, y, width, height) => {
+          this.content.measure((x, y, width, height) => {
             this.setState(
               {
                 measuring: false,
@@ -136,6 +138,8 @@ class Collapsible extends React.PureComponent {
   };
 
   toggleCollapsed = collapsed => {
+    this.doIndex = ++this.doIndex || 0;
+    let {doIndex} = this;
     if (collapsed) {
       this.transitionToHeight(this.props.collapsedHeight);
     } else if (!this.content) {
@@ -144,7 +148,9 @@ class Collapsible extends React.PureComponent {
       }
     } else {
       this.measureContent(contentHeight => {
-        this.transitionToHeight(contentHeight);
+        if(doIndex === this.doIndex) {
+          this.transitionToHeight(contentHeight);
+        }
       });
     }
   };

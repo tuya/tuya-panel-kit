@@ -150,9 +150,16 @@ class TabContent extends React.Component<TabContentProps, TabContentState> {
     const { containerWidth } = this.props;
     if (containerWidth) {
       const offset = index * containerWidth;
-      if (this.scrollView && this.scrollView._component && this.scrollView._component.scrollTo) {
-        this.scrollView._component.scrollTo({ x: offset, animated });
+      if(this.scrollView) {
+        let scrollFunc = this.scrollView._component && this.scrollView._component.scrollTo
+        if(!scrollFunc) {
+          scrollFunc = this.scrollView.scrollTo
+        }
+        if (scrollFunc) {
+          scrollFunc({ x: offset, animated });
+        }
       }
+
     }
   };
 

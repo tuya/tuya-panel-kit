@@ -22,6 +22,7 @@ class TabContent extends React.Component {
     animated: true,
     useViewPagerOnAndroid: true,
   };
+
   static propTypes = {
     /**
      * 切换tab的距离
@@ -64,6 +65,7 @@ class TabContent extends React.Component {
      */
     style: ViewPropTypes.style,
   };
+
   constructor(props) {
     super(props);
     const activeIndex = Utils.getActiveIndex(props.panels, props.activeKey);
@@ -75,6 +77,7 @@ class TabContent extends React.Component {
     this.nextTab = activeIndex;
     this.distance = 0;
   }
+
   componentDidMount() {
     this.prevTab = this.state.activeIndex;
     this.state.scrollX.addListener(({ value }) => {
@@ -82,14 +85,17 @@ class TabContent extends React.Component {
       this.props.onScrollValueChange(scrollValue);
     });
   }
+
   componentWillReceiveProps(nextProps) {
     if (this.props.activeKey !== nextProps.activeKey && nextProps.activeKey !== undefined) {
       this.goToTab(Utils.getActiveIndex(nextProps.panels, nextProps.activeKey), true);
     }
   }
+
   componentDidUpdate() {
     this.prevTab = this.state.activeIndex;
   }
+
   onScroll = e => {
     if (e) {
       if (Platform.OS === 'android') {
@@ -100,6 +106,7 @@ class TabContent extends React.Component {
       }
     }
   };
+
   onMomentumScrollEnd = e => {
     const offsetX = e.nativeEvent.contentOffset.x;
     const page = this.getOffsetIndex(offsetX, this.props.containerWidth);
@@ -107,6 +114,7 @@ class TabContent extends React.Component {
       this.goToTab(page, false);
     }
   };
+
   onPageSelected = e => {
     const index = e.nativeEvent.position;
     this.setState(
@@ -119,10 +127,12 @@ class TabContent extends React.Component {
     );
     this.nextTab = index;
   };
+
   setScrollView = scrollView => {
     this.scrollView = scrollView;
     this.scrollTo(this.state.activeIndex);
   };
+
   getTabPanes = () => {
     const { panels, activeKey } = this.props;
     return React.Children.map(panels, (child, index) => {
@@ -136,6 +146,7 @@ class TabContent extends React.Component {
       return <View key={child.key || `tab_${index}`}>{pane}</View>;
     });
   };
+
   getOffsetIndex = (current, width, threshold = this.props.distanceToChangeTab) => {
     const ratio = Math.abs(current / width);
     const direction = ratio > this.state.activeIndex ? 'right' : 'left';
@@ -149,6 +160,7 @@ class TabContent extends React.Component {
         return Math.round(ratio);
     }
   };
+
   goToTab = (index, force) => {
     if (!force && this.nextTab === index) return;
     this.nextTab = index;
@@ -169,6 +181,7 @@ class TabContent extends React.Component {
       );
     }
   };
+
   scrollTo = (index, animated = true) => {
     if (Platform.OS === 'android' && this.props.useViewPagerOnAndroid) {
       if (this.viewPager) {
@@ -183,11 +196,16 @@ class TabContent extends React.Component {
     const { containerWidth } = this.props;
     if (containerWidth) {
       const offset = index * containerWidth;
-      if (this.scrollView && this.scrollView._component && this.scrollView._component.scrollTo) {
-        this.scrollView._component.scrollTo({ x: offset, animated });
+      let scrollToFunc = this.scrollView && this.scrollView._component && this.scrollView._component.scrollTo;
+      if(!scrollToFunc) {
+        scrollToFunc = this.scrollView.scrollTo;
+      }
+      if (scrollToFunc) {
+        scrollToFunc({ x: offset, animated });
       }
     }
   };
+
   render() {
     const { swipeable, style, useViewPagerOnAndroid } = this.props;
     if (Platform.OS === 'android' && useViewPagerOnAndroid) {

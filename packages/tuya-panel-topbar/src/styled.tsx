@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Image, TouchableOpacity } from 'react-native';
+import { View, Image, TouchableOpacity, Platform } from 'react-native';
 import styled from 'styled-components/native';
 import { Utils } from 'tuya-panel-utils';
 import { IconFont } from 'tuya-panel-kit';
@@ -8,6 +8,9 @@ import { defaultTheme } from 'tuya-panel-theme';
 
 const { getTheme, ThemeConsumer } = Utils.ThemeUtils;
 const { isIos, isIphoneX, statusBarHeight } = Utils.RatioUtils;
+
+// @ts-ignore
+const isHarmony = Platform.OS === 'harmony';
 
 const DEFAULT_THEME = defaultTheme.topbar.light;
 
@@ -18,7 +21,7 @@ const ALIGN_ITEMS_MAP = {
 };
 
 export const TOPBAR_MARGIN = 6;
-export const TOPBAR_HEIGHT = isIos ? (isIphoneX ? 88 : 64) : 56;
+export const TOPBAR_HEIGHT = isIos ? (isIphoneX ? 88 : 64) : isHarmony ? 88 : 56;
 export const TOPBAR_ACTION_WIDTH = 17;
 export const TOPBAR_ACTION_TEXT_WIDTH = 78;
 
@@ -32,8 +35,8 @@ export const StyledTopBar = styled(View)`
   align-self: stretch;
   align-items: center;
   justify-content: space-between;
-  height: ${isIos ? TOPBAR_HEIGHT - statusBarHeight : TOPBAR_HEIGHT};
-  margin-top: ${isIos ? statusBarHeight : 0};
+  height: ${isIos || isHarmony ? TOPBAR_HEIGHT - statusBarHeight : TOPBAR_HEIGHT};
+  margin-top: ${isIos || isHarmony ? statusBarHeight : 0};
 `;
 
 export const StyledTopBarContent = styled(View)`

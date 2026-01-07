@@ -1,7 +1,7 @@
 /* eslint-disable prefer-destructuring */
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { I18nManager, ColorPropType, Text, ViewPropTypes, StyleSheet } from 'react-native';
+import { I18nManager, ColorPropType, Text, ViewPropTypes, StyleSheet, Platform } from 'react-native';
 import PropTypes from 'prop-types';
 import Picker from '../picker-view';
 import { CoreUtils, NumberUtils, RatioUtils, ThemeUtils } from '../../utils';
@@ -18,6 +18,9 @@ const { toFixed } = CoreUtils;
 const { range, inMaxMin } = NumberUtils;
 const { isIos, width, convertX: cx } = RatioUtils;
 const { getTheme, ThemeConsumer } = ThemeUtils;
+
+// @ts-ignore
+const isHarmony = Platform.OS === 'harmony';
 
 class CountdownPopup extends React.Component {
   static propTypes = {
@@ -300,7 +303,7 @@ class CountdownPopup extends React.Component {
                     style={StyleSheet.flatten([
                       {
                         width: isIos ? width * (7 / 10) - 60 : width * (1 / 2),
-                        marginRight: isIos ? 0 : cx(20),
+                        marginRight: isIos ? 0 : isHarmony ? cx(16) : cx(20),
                         backgroundColor: getTheme(countdownTheme, 'popup.cellBg', '#FFF')
                       },
                       hourPickerStyle,
