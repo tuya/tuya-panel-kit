@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## 4.10.4（待发布）
+## [4.10.4](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.10.3...tuya-panel-kit@4.10.4) (2026-10-26)
 
 - 修复默认 `maxDate` 固定为 2030 年末的问题，改为使用时的本地当前年份加 10 年末（12 月 31 日 23:59:59）。
 - 显式 `maxDate` 优先，`minDate` 和其他输入兼容行为保持不变；跨年后在下一次渲染或交互时更新默认范围。
