@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.10.4（待发布）
+
+- 修复默认 `maxDate` 固定为 2030 年末的问题，改为使用时的本地当前年份加 10 年末（12 月 31 日 23:59:59）。
+- 显式 `maxDate` 优先，`minDate` 和其他输入兼容行为保持不变；跨年后在下一次渲染或交互时更新默认范围。
+- 本次仅修复存量面板的日期边界缺陷，不代表恢复 RN 功能迭代或新增长期维护承诺。
+- 相对公开稳定版 4.10.3 修复日期边界问题；恢复发布前自动构建，确保 npm 包包含最新编译产物。业务方需更新依赖并重新构建、发布面板。
+
 ## [4.10.3](https://github.com/tuya/tuya-panel-kit/compare/tuya-panel-kit@4.10.2...tuya-panel-kit@4.10.3) (2024-09-26)
 
 

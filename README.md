@@ -21,6 +21,14 @@
 
 English | [简体中文](./README-zh_CN.md)
 
+## Maintenance status
+
+Feature development for Tuya RN device panels has ended. This repository remains available for existing projects and reference; no new features are planned.
+
+Defects affecting existing projects may be evaluated for corrective patches on a case-by-case basis. Such fixes do not resume feature development or constitute a commitment to long-term maintenance or a regular release schedule.
+
+See the [change log](packages/tuya-panel-kit/CHANGELOG.md) for the scope of each release and upgrade notes. Publishing a package does not automatically update deployed panels. Applications must assess the upgrade, validate it, and rebuild and redeploy their panels.
+
 ## Feature
 
 - 30+ High-quality components in use directly

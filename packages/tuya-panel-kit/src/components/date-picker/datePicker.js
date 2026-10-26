@@ -142,7 +142,6 @@ class DatePicker extends React.Component {
     isTimeFirst: false,
     locale: 'en',
     minDate: new Date(2000, 0, 1, 0, 0, 0),
-    maxDate: new Date(2030, 11, 31, 23, 59, 59),
     onDateChange: () => {},
     onValueChange: () => {},
     pickerFontColor: '#333',
@@ -268,7 +267,8 @@ class DatePicker extends React.Component {
     let maxMinute = 59;
     let minHour = 0;
     let maxHour = 23;
-    const { mode, use12Hours, isPlusZero, isAmpmFirst, minDate, maxDate } = this.props;
+    const { mode, use12Hours, isPlusZero, isAmpmFirst, minDate } = this.props;
+    const maxDate = this.getMaxDate();
     const { locale } = this;
     const minDateMinute = minDate.getMinutes();
     const maxDateMinute = maxDate.getMinutes();
@@ -350,9 +350,16 @@ class DatePicker extends React.Component {
     return { cols, nowMinute, nowHour };
   };
 
+  // 未传 maxDate 时，在使用时计算本地当前年份 +10 年末。
+  getMaxDate = () =>
+    this.props.maxDate === undefined
+      ? new Date(new Date().getFullYear() + 10, 11, 31, 23, 59, 59)
+      : this.props.maxDate;
+
   // get the correct date for pciker
   getRealDate = date => {
-    const { mode, minDate, maxDate } = this.props;
+    const { mode, minDate } = this.props;
+    const maxDate = this.getMaxDate();
     switch (mode) {
       case DATETIME:
         if (date < minDate) {
@@ -392,7 +399,8 @@ class DatePicker extends React.Component {
 
   // get col data
   getDateColsData = () => {
-    const { mode, maxDate, minDate, isPlusZero } = this.props;
+    const { mode, minDate, isPlusZero } = this.props;
+    const maxDate = this.getMaxDate();
     const { locale } = this;
     const date = this.getDate();
     const nowYear = date.getFullYear();
